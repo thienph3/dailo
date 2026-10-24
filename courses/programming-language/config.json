@@ -1,0 +1,30 @@
+{
+  "_comment": "POLICY layer. Course-wide rules lessons inherit. Tune here without touching any content file.",
+  "version": 1,
+  "xp": {
+    "baseXpPerLesson": 10,
+    "perfectBonus": 5,
+    "_note": "A lesson awards baseXpPerLesson on completion; +perfectBonus if answered with no mistakes."
+  },
+  "exerciseTypes": {
+    "multipleChoice": { "payload": ["options"], "answer": "int index into options" },
+    "multiSelect": { "payload": ["options"], "answer": "array of int indices into options" },
+    "trueFalse": { "payload": [], "answer": "boolean" },
+    "fillBlank": { "payload": [], "answer": "string", "optional": ["acceptable"] },
+    "orderBlocks": { "payload": ["blocks"], "answer": "array of int indices (a permutation of blocks)" },
+    "matchPairs": { "payload": ["pairs"], "answer": "pairs carry left/right; engine shuffles" },
+    "tapTokens": { "payload": ["tokens"], "answer": "array of tokens in correct order" }
+  },
+  "beats": {
+    "MEET": "Thinking only, no/minimal syntax. Mostly identify-I/O, order-the-plan, spot-the-flaw.",
+    "TOOL": "Introduce one construct with visible runnable output. Still at least half thinking.",
+    "PRACTICE": "Many guided problems, each walked through UEPCC. The product's core value.",
+    "LOOP": "Interleaved review of this lap plus earlier laps. No new concept."
+  },
+  "authoring": {
+    "exercisesPerLesson": 10,
+    "lessonsPerUnit": 10,
+    "overlap": "~70% new material, ~30% review of prior units (spaced repetition).",
+    "thinkingFloor": "At least half of a CONTENT/TOOL unit's exercises must be about thinking, not syntax."
+  }
+}
