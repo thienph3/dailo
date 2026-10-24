@@ -1,0 +1,131 @@
+{
+  "unitId": "u64",
+  "lessonId": "u64l06",
+  "title": "Spot the search mistake",
+  "idea": "TOOL: common search bugs — missing found = False, using = vs ==, resetting the flag in the loop.",
+  "exercises": [
+    {
+      "type": "multipleChoice",
+      "prompt": "This crashes with 'name not defined'. Why?\n\nfor n in nums:\n    if n == target:\n        found = True\nprint(found)",
+      "options": [
+        "found was never created with found = False before the loop",
+        "nums is wrong",
+        "break is missing",
+        "target is zero"
+      ],
+      "answer": 0,
+      "explanation": "If no item matches, found is never assigned, so printing it fails. Always start found = False before the loop.",
+      "id": "u64l06e01"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "This always reports 'not found' even when the target is present. Why?\n\nfound = False\nfor n in nums:\n    found = False\n    if n == target:\n        found = True\nprint(found)",
+      "options": [
+        "found = False INSIDE the loop resets it every item, wiping an earlier match",
+        "the target is wrong",
+        "break is needed",
+        "nums is empty"
+      ],
+      "answer": 0,
+      "explanation": "Resetting found each pass erases a True from an earlier item. The found = False line belongs BEFORE the loop, once.",
+      "id": "u64l06e02"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Spot the bug:\n\nfor n in nums:\n    if n = target:\n        found = True",
+      "options": [
+        "= should be == when comparing",
+        "found should be a list",
+        "nums needs quotes",
+        "nothing is wrong"
+      ],
+      "answer": 0,
+      "explanation": "A single = assigns; comparing needs ==. 'if n == target:' is the correct test.",
+      "id": "u64l06e03"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "found = False must be set once, BEFORE the loop — not inside it.",
+      "answer": true,
+      "explanation": "Inside the loop it resets every item and forgets earlier matches. Before the loop, it sets the starting assumption once.",
+      "id": "u64l06e04"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Predict the output of this BUGGY code:\n\nnums = [8]\nfound = False\nfor n in nums:\n    found = False\n    if n == target:\n        found = True\nprint(found)\n\n(target is 8)",
+      "options": [
+        "True",
+        "False",
+        "8",
+        "an error"
+      ],
+      "answer": 0,
+      "explanation": "Here it happens to work because 8 is the LAST (only) item — but on [8, 2] it would wrongly report False. The reset is still a bug.",
+      "id": "u64l06e05"
+    },
+    {
+      "type": "orderBlocks",
+      "prompt": "Arrange a CORRECT search (flag set up once, before the loop).",
+      "blocks": [
+        "found = False",
+        "for n in nums:",
+        "    if n == target:",
+        "        found = True"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "Flag before the loop, loop over items, compare with ==, and set True on a match.",
+      "id": "u64l06e06"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "A search returns True when the target is absent. Most likely cause?",
+      "options": [
+        "the if test is wrong — maybe comparing to the wrong value or using != by mistake",
+        "Python is broken",
+        "the list is too short",
+        "found is spelled right"
+      ],
+      "answer": 0,
+      "explanation": "A wrong-way answer points at the comparison. Re-check that the if really tests n == target.",
+      "id": "u64l06e07"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Using = instead of == in the search test is a real, common bug.",
+      "answer": true,
+      "explanation": "= assigns and == compares. Mixing them up is a classic slip; the search needs the comparison ==.",
+      "id": "u64l06e08"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Why is 'set the flag once before the loop' the safe habit?",
+      "options": [
+        "so one real match is remembered for the whole scan",
+        "so the loop runs faster",
+        "so nums is deleted",
+        "so break is not needed"
+      ],
+      "answer": 0,
+      "explanation": "Setting it once lets a single True survive to the end. Resetting inside the loop throws matches away.",
+      "id": "u64l06e09"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Which is a correct membership search (not a filter)?",
+      "options": [
+        "found = False ; loop ; if n == target: found = True",
+        "result = [] ; loop ; if n == target: result.append(n)",
+        "total = 0 ; loop ; total = total + n",
+        "print(nums)"
+      ],
+      "answer": 0,
+      "explanation": "The found-flag loop answers yes/no. The second builds a list (filter); the third is a sum.",
+      "id": "u64l06e10"
+    }
+  ]
+}

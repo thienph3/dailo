@@ -1,0 +1,138 @@
+{
+  "unitId": "u77",
+  "lessonId": "u77l09",
+  "title": "Trace a call, step by step",
+  "idea": "TOOL. Trace a call step by step to see each call make fresh private notes and return one answer.",
+  "exercises": [
+    {
+      "type": "multipleChoice",
+      "prompt": "Trace:\n\ndef f(n):\n    step = n + 5\n    return step\n\nprint(f(2))\n\nWhat value does step hold during the call?",
+      "options": [
+        "7",
+        "2",
+        "5",
+        "step"
+      ],
+      "answer": 0,
+      "explanation": "Inside the call, step = 2 + 5 = 7, which is returned and printed.",
+      "id": "u77l09e01"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "In that same code, when does step stop existing?",
+      "options": [
+        "When f finishes",
+        "Never",
+        "Before f starts",
+        "When we print n"
+      ],
+      "answer": 0,
+      "explanation": "Private variables vanish when the function returns.",
+      "id": "u77l09e02"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Trace:\n\ndef g():\n    a = 2\n    a = a + 3\n    return a\n\nprint(g())",
+      "options": [
+        "5",
+        "2",
+        "3",
+        "error"
+      ],
+      "answer": 0,
+      "explanation": "a starts 2, becomes 5 (reassignment, a review tool), returned as 5.",
+      "id": "u77l09e03"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Reassigning a private variable inside a function is fine — it stays private.",
+      "answer": true,
+      "explanation": "Yes — reassignment works on the function's own copy.",
+      "id": "u77l09e04"
+    },
+    {
+      "type": "orderBlocks",
+      "prompt": "Trace order: put these events in the order they happen for print(f(2)) above.",
+      "blocks": [
+        "f(2) is called with n = 2",
+        "step becomes 7",
+        "f returns 7",
+        "print shows 7"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "Call, compute privately, return, print.",
+      "id": "u77l09e05"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Trace:\n\ndef h(x):\n    y = x * x\n    return y\n\nr = h(3)\nprint(r)",
+      "options": [
+        "9",
+        "3",
+        "y",
+        "error"
+      ],
+      "answer": 0,
+      "explanation": "y = 9 is returned and stored in r, then printed.",
+      "id": "u77l09e06"
+    },
+    {
+      "type": "fillBlank",
+      "prompt": "Complete the trace: h(3) returns ____ (for h above).",
+      "answer": "9",
+      "acceptable": [
+        "9"
+      ],
+      "explanation": "3 * 3 = 9.",
+      "id": "u77l09e07"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "After r = h(3), which names exist in the main code?",
+      "options": [
+        "r (and h)",
+        "y",
+        "x",
+        "all of them"
+      ],
+      "answer": 0,
+      "explanation": "Only r and the function name h; x and y were private to h.",
+      "id": "u77l09e08"
+    },
+    {
+      "type": "multiSelect",
+      "prompt": "TRUE statements about the trace? (choose all)",
+      "options": [
+        "step/ y are private",
+        "the returned value is stored outside",
+        "private names vanish after the call",
+        "private names persist after the call"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "First three true; private names do not persist.",
+      "id": "u77l09e09"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Tracing helps you see that...",
+      "options": [
+        "each call makes fresh private notes and returns one answer",
+        "variables leak everywhere",
+        "functions share all notes",
+        "return is optional"
+      ],
+      "answer": 0,
+      "explanation": "A call is a fresh, private little world that hands back one result.",
+      "id": "u77l09e10"
+    }
+  ]
+}

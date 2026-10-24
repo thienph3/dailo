@@ -1,0 +1,146 @@
+{
+  "unitId": "u71",
+  "lessonId": "u71l05",
+  "title": "Call it again, and again",
+  "idea": "TOOL: define a sub-plan once, call it many times; the body runs fresh on each call.",
+  "exercises": [
+    {
+      "id": "u71l05e01",
+      "type": "multipleChoice",
+      "prompt": "Program:\n\ndef line():\n    print(\"----\")\nline()\nline()\n\nWhat prints?",
+      "options": [
+        "----\n----",
+        "----",
+        "Nothing",
+        "----\n----\n----"
+      ],
+      "answer": 0,
+      "explanation": "Defined once, called twice, so '----' prints twice. Each call runs the body again."
+    },
+    {
+      "id": "u71l05e02",
+      "type": "multipleChoice",
+      "prompt": "You want a star border above AND below a title. Using def line() that prints stars, the main plan should...",
+      "options": [
+        "call line(), print the title, call line() again",
+        "define line twice",
+        "call line once only",
+        "never call line"
+      ],
+      "answer": 0,
+      "explanation": "Call line() for the top border, show the title, call line() again for the bottom. One def, two calls."
+    },
+    {
+      "id": "u71l05e03",
+      "type": "orderBlocks",
+      "prompt": "Order a program that frames a title:\n\n(def line already prints '***')",
+      "blocks": [
+        "line()  # bottom border",
+        "line()  # top border",
+        "print(\"Title\")"
+      ],
+      "answer": [
+        1,
+        2,
+        0
+      ],
+      "explanation": "Top border, title, bottom border. The single line() sub-plan is reused with two calls."
+    },
+    {
+      "id": "u71l05e04",
+      "type": "multipleChoice",
+      "prompt": "Why is calling the SAME sub-plan twice better than typing the stars twice?",
+      "options": [
+        "One definition to read and fix; both borders stay in sync",
+        "It prints faster",
+        "It uses more lines",
+        "Copies never drift"
+      ],
+      "answer": 0,
+      "explanation": "Change the border once (inside line) and every call updates. Copied code would each need fixing - and drift."
+    },
+    {
+      "id": "u71l05e05",
+      "type": "trueFalse",
+      "prompt": "If you change the body of line(), every future call to line() shows the new version.",
+      "answer": true,
+      "explanation": "Yes. There's one definition. Edit it once and all calls use the updated steps. That's the reuse payoff."
+    },
+    {
+      "id": "u71l05e06",
+      "type": "multipleChoice",
+      "prompt": "A program defines greet() and farewell(), then calls greet(), farewell(). What prints (greet='Hi', farewell='Bye')?",
+      "options": [
+        "Hi\nBye",
+        "Bye\nHi",
+        "Hi",
+        "Bye"
+      ],
+      "answer": 0,
+      "explanation": "Two sub-plans, each called once in order: greet shows 'Hi', farewell shows 'Bye'."
+    },
+    {
+      "id": "u71l05e07",
+      "type": "multiSelect",
+      "prompt": "Which are TRUE about calling a sub-plan more than once? (Pick all.)",
+      "options": [
+        "The body runs again each call",
+        "It was still defined only once",
+        "Each call can appear anywhere in the main plan",
+        "Calling twice needs two defs"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "One def, many calls; the body re-runs each call; calls can go anywhere. You do NOT re-define per call."
+    },
+    {
+      "id": "u71l05e08",
+      "type": "matchPairs",
+      "prompt": "Match each program to how many lines of output it makes (border() prints one line).",
+      "pairs": [
+        {
+          "left": "border() once",
+          "right": "1 line"
+        },
+        {
+          "left": "border() then border()",
+          "right": "2 lines"
+        },
+        {
+          "left": "border() three times",
+          "right": "3 lines"
+        }
+      ],
+      "explanation": "Each call adds one run of the body. Count the calls to count the output - the def itself prints nothing."
+    },
+    {
+      "id": "u71l05e09",
+      "type": "multipleChoice",
+      "prompt": "REVIEW: another tool that repeats the same steps is a loop. A loop vs calling a sub-plan by hand:",
+      "options": [
+        "a loop repeats automatically; calls are placed where you choose",
+        "they are identical in every way",
+        "loops can't repeat",
+        "calls can't repeat"
+      ],
+      "answer": 0,
+      "explanation": "A loop repeats over a sequence; hand-written calls run the job at the exact spots you pick. Both reuse work."
+    },
+    {
+      "id": "u71l05e10",
+      "type": "multipleChoice",
+      "prompt": "The reuse rule in code:",
+      "options": [
+        "define once, call as many times as you need",
+        "define every time you call",
+        "call only once ever",
+        "never call"
+      ],
+      "answer": 0,
+      "explanation": "Write the sub-plan once; call it wherever and however often you need. One source, many runs."
+    }
+  ]
+}

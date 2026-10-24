@@ -1,0 +1,162 @@
+{
+  "unitId": "u31",
+  "lessonId": "u31l06",
+  "title": "Solve it: two typed numbers, show the larger",
+  "idea": "GUIDED. UEPCC reading two inputs and comparing them, incl. the tie case.",
+  "problem": "Ask for two numbers. Print the larger one, or 'Equal' if they are the same.",
+  "exercises": [
+    {
+      "id": "u31l06e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: read two numbers, print the larger, or 'Equal' if the same.\n\nWhat is the OUTPUT?",
+      "options": [
+        "The larger number, or 'Equal'",
+        "The sum of the two",
+        "The count of numbers",
+        "Always 'Equal'"
+      ],
+      "answer": 0,
+      "explanation": "The output is either the bigger number or the word 'Equal'. Three outcomes to cover."
+    },
+    {
+      "id": "u31l06e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "How many inputs does this problem have?",
+      "options": [
+        "Two numbers",
+        "One number",
+        "Three numbers",
+        "No inputs"
+      ],
+      "answer": 0,
+      "explanation": "Two numbers are read, each with its own input() and int(). Both drive the comparison."
+    },
+    {
+      "id": "u31l06e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Work it by hand: first 8, second 3. What prints?",
+      "options": [
+        "8",
+        "3",
+        "Equal",
+        "11"
+      ],
+      "answer": 0,
+      "explanation": "8 is larger than 3, so 8. Clear case first."
+    },
+    {
+      "id": "u31l06e04",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "The tie by hand: first 5, second 5. What prints?",
+      "options": [
+        "Equal",
+        "5",
+        "0",
+        "10"
+      ],
+      "answer": 0,
+      "explanation": "They are equal, so 'Equal'. The tie is the easy-to-miss case; handle it explicitly."
+    },
+    {
+      "id": "u31l06e05",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Plan the three checks in order.",
+      "blocks": [
+        "If a is bigger -> print a",
+        "Otherwise if b is bigger -> print b",
+        "Otherwise -> print 'Equal'"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Test a > b, then b > a, else they must be equal. Three branches cover every case."
+    },
+    {
+      "id": "u31l06e06",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Why does the final 'Equal' branch not need its own comparison?",
+      "options": [
+        "Because else catches the only case left: they're equal",
+        "Because 'Equal' is always printed",
+        "Because else needs a condition",
+        "Because ties are impossible"
+      ],
+      "answer": 0,
+      "explanation": "If neither a > b nor b > a is true, the only remaining possibility is a == b, so else covers it."
+    },
+    {
+      "id": "u31l06e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Arrange the code to match the plan.",
+      "blocks": [
+        "a = int(input(\"First: \"))",
+        "b = int(input(\"Second: \"))",
+        "if a > b:",
+        "    print(a)",
+        "elif b > a:",
+        "    print(b)",
+        "else:",
+        "    print(\"Equal\")"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "explanation": "Read both numbers, compare, and print accordingly with an if/elif/else chain."
+    },
+    {
+      "id": "u31l06e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Complete the second test:\n\nif a > b:\n    print(a)\n____ b > a:\n    print(b)\nelse:\n    print(\"Equal\")",
+      "answer": "elif",
+      "acceptable": [
+        "elif"
+      ],
+      "explanation": "elif adds the 'b is bigger' test only when a > b already failed."
+    },
+    {
+      "id": "u31l06e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check with the first example: a=8, b=3. What prints?",
+      "options": [
+        "8",
+        "3",
+        "Equal",
+        "11"
+      ],
+      "answer": 0,
+      "explanation": "8 > 3 is True, so print(a) shows 8 — matching your hand answer."
+    },
+    {
+      "id": "u31l06e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Re-check the tie: a=5, b=5. What prints?",
+      "options": [
+        "Equal",
+        "5",
+        "0",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "5 > 5 is False and 5 > 5 is False, so the else runs: 'Equal'. The tie is handled."
+    }
+  ]
+}

@@ -1,0 +1,118 @@
+{
+  "unitId": "u02",
+  "lessonId": "u02l08",
+  "title": "Spot the mismatch",
+  "idea": "An output should fit its task. Learn to notice when the output doesn't match what was asked.",
+  "exercises": [
+    {
+      "id": "u02l08e01",
+      "type": "multipleChoice",
+      "prompt": "Task: 'Show the number of apples.' The output is the word Banana. Is that right?",
+      "options": [
+        "No — the output should be a number of apples",
+        "Yes — any output is fine",
+        "Yes — bananas are like apples",
+        "Can't tell"
+      ],
+      "answer": 0,
+      "explanation": "The output doesn't match the task. A count of apples should be a number, not a fruit name."
+    },
+    {
+      "id": "u02l08e02",
+      "type": "trueFalse",
+      "prompt": "An output is correct only if it matches what the task asked for.",
+      "answer": true,
+      "explanation": "The right output answers the task. If it doesn't fit, something went wrong."
+    },
+    {
+      "id": "u02l08e03",
+      "type": "multipleChoice",
+      "prompt": "Task: 'Show a friendly greeting.' Which output does NOT match?",
+      "options": [
+        "The number 7",
+        "Hello",
+        "Welcome",
+        "Good morning"
+      ],
+      "answer": 0,
+      "explanation": "A greeting should be a friendly message, not a lone number. The number 7 doesn't fit."
+    },
+    {
+      "id": "u02l08e04",
+      "type": "multipleChoice",
+      "prompt": "Task: 'Show the word Cat.' The program is print(\"Dog\"). What's wrong?",
+      "options": [
+        "The output is Dog, but the task asked for Cat",
+        "print is spelled wrong",
+        "The brackets are missing",
+        "Nothing is wrong"
+      ],
+      "answer": 0,
+      "explanation": "The code runs fine, but the output (Dog) doesn't match the task (Cat). Right shape, wrong value."
+    },
+    {
+      "id": "u02l08e05",
+      "type": "multipleChoice",
+      "prompt": "Task: 'Count the people (expecting a number).' Which output looks right?",
+      "options": [
+        "5",
+        "Maybe a few",
+        "People",
+        "Red"
+      ],
+      "answer": 0,
+      "explanation": "A count should be a clear number, like 5. The others don't fit the task."
+    },
+    {
+      "id": "u02l08e06",
+      "type": "trueFalse",
+      "prompt": "A program can run without errors and still give the wrong output.",
+      "answer": true,
+      "explanation": "Running is not the same as being correct. Always check the output against the task."
+    },
+    {
+      "id": "u02l08e07",
+      "type": "multiSelect",
+      "prompt": "Task: 'Show the word Win.' Which outputs do NOT match? (Choose all.)",
+      "options": [
+        "Lose",
+        "Win",
+        "100",
+        "winner"
+      ],
+      "answer": [0, 2, 3],
+      "explanation": "Only Win matches exactly. Lose, 100, and winner are all different from what was asked."
+    },
+    {
+      "id": "u02l08e08",
+      "type": "matchPairs",
+      "prompt": "Match each task to an output that FITS it.",
+      "pairs": [
+        { "left": "Show a greeting", "right": "Hello" },
+        { "left": "Show how many pens", "right": "3" },
+        { "left": "Show the word Stop", "right": "Stop" }
+      ],
+      "explanation": "A fitting output answers the task directly — a greeting, a count, or the exact word asked for."
+    },
+    {
+      "id": "u02l08e09",
+      "type": "multipleChoice",
+      "prompt": "You expected the output Hello but the screen shows nothing. What does that tell you?",
+      "options": [
+        "The output doesn't match — something needs fixing",
+        "The task is complete",
+        "Blank is the same as Hello",
+        "You should change the task"
+      ],
+      "answer": 0,
+      "explanation": "Nothing is not Hello. A mismatch means there's a problem to find and fix."
+    },
+    {
+      "id": "u02l08e10",
+      "type": "trueFalse",
+      "prompt": "Comparing the real output to the expected output is a kind of checking.",
+      "answer": true,
+      "explanation": "Yes — checking means comparing what you got to what you wanted. You'll practice this more in a later unit."
+    }
+  ]
+}

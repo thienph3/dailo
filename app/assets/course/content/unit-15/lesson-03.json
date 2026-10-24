@@ -1,0 +1,143 @@
+{
+  "unitId": "u15",
+  "lessonId": "u15l03",
+  "title": "Minding the spaces",
+  "idea": "+ joins with no gap. To get a space, you must add it yourself as part of a string.",
+  "exercises": [
+    {
+      "id": "u15l03e01",
+      "type": "multipleChoice",
+      "prompt": "What will this show?\n\nprint(\"Harry\" + \"Lee\")",
+      "options": [
+        "HarryLee",
+        "Harry Lee",
+        "Harry  Lee",
+        "Harry+Lee"
+      ],
+      "answer": 0,
+      "explanation": "+ adds no space. The words crash together: HarryLee. We have to add a space on purpose."
+    },
+    {
+      "id": "u15l03e02",
+      "type": "multipleChoice",
+      "prompt": "How do we get a space between the words?\n\nprint(\"Harry\" + ____ + \"Lee\")",
+      "options": [
+        "\" \"",
+        "space",
+        "+",
+        "-"
+      ],
+      "answer": 0,
+      "explanation": "A space is just text! \" \" is a string with one space inside. Join it in the middle."
+    },
+    {
+      "id": "u15l03e03",
+      "type": "multipleChoice",
+      "prompt": "What will this show?\n\nprint(\"Harry\" + \" \" + \"Lee\")",
+      "options": [
+        "Harry Lee",
+        "HarryLee",
+        "Harry  Lee",
+        "Harry Lee "
+      ],
+      "answer": 0,
+      "explanation": "The \" \" in the middle is a one-space string. Now you get: Harry Lee."
+    },
+    {
+      "id": "u15l03e04",
+      "type": "trueFalse",
+      "prompt": "A space \" \" counts as text (a string), so you can join it with +.",
+      "answer": true,
+      "explanation": "A space is a character, so \" \" is a real string. You can join it just like any word."
+    },
+    {
+      "id": "u15l03e05",
+      "type": "multipleChoice",
+      "prompt": "What will this show?\n\nfirst = \"Good\"\nsecond = \"day\"\nprint(first + \" \" + second)",
+      "options": [
+        "Good day",
+        "Goodday",
+        "Good  day",
+        "first second"
+      ],
+      "answer": 0,
+      "explanation": "The values are \"Good\" and \"day\", with a space string between: Good day."
+    },
+    {
+      "id": "u15l03e06",
+      "type": "multipleChoice",
+      "prompt": "Another way to add the space: put it inside a word. What will this show?\n\nprint(\"Hello \" + \"Sam\")",
+      "options": [
+        "Hello Sam",
+        "HelloSam",
+        "Hello  Sam",
+        "Hello+Sam"
+      ],
+      "answer": 0,
+      "explanation": "The space is tucked inside \"Hello \" (after the o). So joining gives: Hello Sam."
+    },
+    {
+      "id": "u15l03e07",
+      "type": "fillBlank",
+      "prompt": "Fill the blank so this shows: tea time\n\nprint(\"tea\" + ____ + \"time\")",
+      "answer": "\" \"",
+      "acceptable": [
+        "\" \"",
+        "' '"
+      ],
+      "explanation": "A one-space string \" \" sits between the two words to make: tea time."
+    },
+    {
+      "id": "u15l03e08",
+      "type": "tapTokens",
+      "prompt": "Build a line that prints: red car (join red, a space, and car).",
+      "tokens": [
+        "print",
+        "(",
+        "\"red\"",
+        "+",
+        "\" \"",
+        "+",
+        "\"car\"",
+        ")"
+      ],
+      "answer": [
+        "print",
+        "(",
+        "\"red\"",
+        "+",
+        "\" \"",
+        "+",
+        "\"car\"",
+        ")"
+      ],
+      "explanation": "\"red\" + \" \" + \"car\" gives red car. The middle piece is the space."
+    },
+    {
+      "id": "u15l03e09",
+      "type": "multipleChoice",
+      "prompt": "Spot the problem:\n\nprint(\"Thank\" + \"you\")",
+      "options": [
+        "There's no space, so it shows Thankyou",
+        "It will error",
+        "It shows Thank you",
+        "+ cannot join text"
+      ],
+      "answer": 0,
+      "explanation": "The words run together: Thankyou. The fix is to add a space string between them."
+    },
+    {
+      "id": "u15l03e10",
+      "type": "multipleChoice",
+      "prompt": "Why does joining strings so often forget spaces?",
+      "options": [
+        "Because + joins exactly, and a space is just more text you must include",
+        "Because + deletes spaces",
+        "Because strings hate spaces",
+        "Because print removes spaces"
+      ],
+      "answer": 0,
+      "explanation": "The computer only joins what you give it. If you want a space, you must put it in. Exact, as always."
+    }
+  ]
+}

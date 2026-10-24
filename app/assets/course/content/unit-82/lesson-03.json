@@ -1,0 +1,162 @@
+{
+  "unitId": "u82",
+  "lessonId": "u82l03",
+  "title": "Solve it together: average, split into total and count",
+  "idea": "GUIDED (UEPCC). Decompose average into two helpers — total(nums) and a count via len — then divide, with an empty-list guard. Edge case is part of the plan.",
+  "problem": "Readings are [4, 8, 6]. Show the average, using a total(nums) helper, and return 0 if the list is empty.",
+  "exercises": [
+    {
+      "id": "u82l03e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: readings [4, 8, 6]. Show the average using total(nums); return 0 if empty.\n\nOUTPUT?",
+      "options": [
+        "One number: the average of the readings",
+        "The sum only",
+        "The count only",
+        "The biggest reading"
+      ],
+      "answer": 0,
+      "explanation": "Output = the average. We'll build it from a sum and a count."
+    },
+    {
+      "id": "u82l03e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "INPUTS, including the tricky one?",
+      "options": [
+        "The list of readings — and we must handle the EMPTY list too",
+        "Only [4, 8, 6], no edge cases",
+        "The word average",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "Inputs are the readings. The empty list is the edge case we planned for on purpose."
+    },
+    {
+      "id": "u82l03e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example — by hand. Sum of [4, 8, 6] is 18, over 3 readings. Average?",
+      "options": [
+        "6",
+        "18",
+        "3",
+        "9"
+      ],
+      "answer": 0,
+      "explanation": "18 / 3 = 6. Hand answer = 6. The empty-list answer, by our rule, is 0."
+    },
+    {
+      "id": "u82l03e04",
+      "type": "trueFalse",
+      "uepcc": "E",
+      "prompt": "total([4, 8, 6]) should return 18 by adding the items with a running total starting at 0.",
+      "answer": true,
+      "explanation": "Yes — total accumulates: 0+4+8+6 = 18. No sum() builtin; we add them ourselves."
+    },
+    {
+      "id": "u82l03e05",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Plan — decompose the average. Which TWO pieces do we need?",
+      "options": [
+        "The total of the list, and how many items there are",
+        "Only the total",
+        "Only the count",
+        "The biggest and smallest"
+      ],
+      "answer": 0,
+      "explanation": "Average = total / count. Two sub-answers, then one division (guarded for empty)."
+    },
+    {
+      "id": "u82l03e06",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Order the plan, edge case first.",
+      "blocks": [
+        "If the list is empty, return 0",
+        "Compute the total with total(nums)",
+        "Count the items with len(nums)",
+        "Divide total by count and show it"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "Guard empty first, then total, then count, then divide. Edge case is step one, not an afterthought."
+    },
+    {
+      "id": "u82l03e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code it.",
+      "blocks": [
+        "def total(nums):",
+        "    running = 0",
+        "    for n in nums:",
+        "        running = running + n",
+        "    return running",
+        "readings = [4, 8, 6]",
+        "if len(readings) == 0:",
+        "    print(0)",
+        "else:",
+        "    print(total(readings) / len(readings))"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "explanation": "A total helper (accumulate from 0), then guard empty, else divide total by len. The guard keeps us off the divide-by-zero."
+    },
+    {
+      "id": "u82l03e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Complete the empty guard:\n\nif len(readings) ____ 0:\n    print(0)",
+      "answer": "==",
+      "acceptable": [
+        "=="
+      ],
+      "explanation": "We check whether the count equals 0. Use == to compare (not =, which assigns)."
+    },
+    {
+      "id": "u82l03e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check — the code prints 6.0; your hand example was 6. Verdict?",
+      "options": [
+        "Passes — 6.0 equals 6, division just shows a decimal",
+        "Fails — 6.0 is wrong",
+        "Unknown",
+        "Rewrite example"
+      ],
+      "answer": 0,
+      "explanation": "6.0 and 6 are the same value; / gives a decimal form. The average is correct."
+    },
+    {
+      "id": "u82l03e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Re-check the edge: readings = [] (empty). What does the code show?",
+      "options": [
+        "0 — the guard caught the empty list",
+        "It crashes",
+        "6",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "The guard returns 0 for empty, avoiding divide-by-zero. Planning the edge made the code safe."
+    }
+  ]
+}

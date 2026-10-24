@@ -1,0 +1,131 @@
+{
+  "unitId": "u95",
+  "lessonId": "u95l05",
+  "title": "Extracting a helper function",
+  "idea": "MEET (thinking): when the same CALCULATION appears in several spots, give it a name by pulling it into a function. One place to read, one place to fix.",
+  "exercises": [
+    {
+      "id": "u95l05e01",
+      "type": "multipleChoice",
+      "prompt": "This code computes a 10% tip in two places:\n\nbill_a = 50\ntip_a = bill_a * 10 / 100\nbill_b = 80\ntip_b = bill_b * 10 / 100\n\nWhat repeats?",
+      "options": [
+        "The tip calculation 'bill * 10 / 100'",
+        "The number 50",
+        "Nothing",
+        "The word print"
+      ],
+      "answer": 0,
+      "explanation": "The SAME formula appears twice. A repeated calculation is a perfect candidate to extract into a helper function."
+    },
+    {
+      "id": "u95l05e02",
+      "type": "orderBlocks",
+      "prompt": "Arrange a helper function that returns a 10% tip for a bill.",
+      "blocks": [
+        "def tip(bill):",
+        "    return bill * 10 / 100"
+      ],
+      "answer": [0, 1],
+      "explanation": "def names the sub-plan 'tip'; it takes a bill and RETURNS the tip. Now the formula lives in exactly one place."
+    },
+    {
+      "id": "u95l05e03",
+      "type": "multipleChoice",
+      "prompt": "Using the helper, the code becomes:\n\ntip_a = tip(50)\ntip_b = tip(80)\n\nWhat is tip(50)?",
+      "options": [
+        "5.0",
+        "50",
+        "10",
+        "500"
+      ],
+      "answer": 0,
+      "explanation": "tip(50) = 50 * 10 / 100 = 5.0. The call reads like plain English, and the formula is written just once inside the function."
+    },
+    {
+      "id": "u95l05e04",
+      "type": "trueFalse",
+      "prompt": "Extracting the formula into tip() changes the tip amounts that get computed.",
+      "answer": false,
+      "explanation": "No. tip(50) still gives 5.0 and tip(80) still gives 8.0 - the same numbers as before. Only the SHAPE of the code improved."
+    },
+    {
+      "id": "u95l05e05",
+      "type": "multipleChoice",
+      "prompt": "The BIG payoff of the helper: suppose tips change from 10% to 15%. With the function, how many lines do you edit?",
+      "options": [
+        "One - the formula inside tip()",
+        "Two - both tip calculations",
+        "Every line that mentions a bill",
+        "None - it updates itself"
+      ],
+      "answer": 0,
+      "explanation": "One edit inside the helper updates every caller at once. Without the function, you'd hunt down each copy - and risk missing one."
+    },
+    {
+      "id": "u95l05e06",
+      "type": "matchPairs",
+      "prompt": "Match each piece of a helper to its job.",
+      "pairs": [
+        {
+          "left": "def tip(bill):",
+          "right": "Names the sub-plan and its input"
+        },
+        {
+          "left": "return bill * 10 / 100",
+          "right": "Computes and hands back the result"
+        },
+        {
+          "left": "tip(50)",
+          "right": "Uses the sub-plan with a value"
+        }
+      ],
+      "explanation": "A helper has a name + input (def line), a result (return), and call sites that use it. Extracting = moving a repeated formula into this shape."
+    },
+    {
+      "id": "u95l05e07",
+      "type": "multipleChoice",
+      "prompt": "Why is a helper better than a loop here?",
+      "options": [
+        "The bills aren't a simple repeat - the same FORMULA is just reused in different spots",
+        "Loops can't do math",
+        "Functions are always faster",
+        "A loop would print the wrong thing"
+      ],
+      "answer": 0,
+      "explanation": "Loops remove repeated ACTIONS over items; functions remove repeated LOGIC reused across the program. Here the logic (the tip formula) is the duplicate."
+    },
+    {
+      "id": "u95l05e08",
+      "type": "trueFalse",
+      "prompt": "A good helper usually does ONE clear job that its name describes.",
+      "answer": true,
+      "explanation": "Yes. tip() computes a tip - nothing else. A small, well-named, single-purpose helper is easy to read, reuse, and trust."
+    },
+    {
+      "id": "u95l05e09",
+      "type": "multipleChoice",
+      "prompt": "Predict:\n\ndef tip(bill):\n    return bill * 10 / 100\n\nprint(tip(50) + tip(80))",
+      "options": [
+        "13.0",
+        "130",
+        "5.0",
+        "An error"
+      ],
+      "answer": 0,
+      "explanation": "tip(50)=5.0, tip(80)=8.0, and 5.0 + 8.0 = 13.0. Composing the helper's results reads cleanly - that's the clarity win."
+    },
+    {
+      "id": "u95l05e10",
+      "type": "multipleChoice",
+      "prompt": "Summarize the 'extract a helper' refactor.",
+      "options": [
+        "Move a repeated calculation into one named function, then call it",
+        "Copy the calculation to even more places",
+        "Delete the calculation",
+        "Rename the output file"
+      ],
+      "answer": 0,
+      "explanation": "Pull the duplicated logic out, give it a clear name, call it where needed. Same answers, one source of truth, far easier to maintain."
+    }
+  ]
+}

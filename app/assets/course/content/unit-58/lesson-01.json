@@ -1,0 +1,134 @@
+{
+  "unitId": "u58",
+  "lessonId": "u58l01",
+  "title": "Counting how many fit a rule",
+  "idea": "Opener: 'how many?' means keeping a count that goes up by 1 only when a value matches a rule. Thinking first.",
+  "exercises": [
+    {
+      "id": "u58l01e01",
+      "type": "multipleChoice",
+      "prompt": "A teacher goes through a stack of tests and makes a tally mark for every test that passed. What is the tally counting?",
+      "options": [
+        "How many tests passed — the ones that fit the rule",
+        "Every test, pass or fail",
+        "The highest score",
+        "The total of all scores"
+      ],
+      "answer": 0,
+      "explanation": "A tally goes up only for matching items. 'How many fit the rule' is this unit's job."
+    },
+    {
+      "id": "u58l01e02",
+      "type": "trueFalse",
+      "prompt": "Counting 'how many fit a rule' means adding 1 each time a value matches, and nothing when it doesn't.",
+      "answer": true,
+      "explanation": "The count grows only on matches. Non-matches leave it unchanged."
+    },
+    {
+      "id": "u58l01e03",
+      "type": "multipleChoice",
+      "prompt": "Before you start counting, what should the count be?",
+      "options": [
+        "0 — you've counted nothing yet",
+        "1",
+        "The list length",
+        "The first value"
+      ],
+      "answer": 0,
+      "explanation": "Start at 0 and add 1 per match. Counting nothing is 0."
+    },
+    {
+      "id": "u58l01e04",
+      "type": "multipleChoice",
+      "prompt": "How is COUNTING different from TOTALLING (the last unit)?",
+      "options": [
+        "Count adds 1 per match; total adds the value",
+        "They are identical",
+        "Count multiplies",
+        "Count subtracts"
+      ],
+      "answer": 0,
+      "explanation": "A total sums the values; a count adds 1 for each matching item. Same accumulator shape, different amount."
+    },
+    {
+      "id": "u58l01e05",
+      "type": "orderBlocks",
+      "prompt": "Count how many of [2, 5, 8, 1] are greater than 3, by hand. Put the count after each item in order (start 0).",
+      "blocks": [
+        "2 is not > 3, count stays 0",
+        "5 is > 3, count 1",
+        "8 is > 3, count 2",
+        "1 is not > 3, count stays 2"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "Only 5 and 8 beat 3, so the count ends at 2. It rises only on matches."
+    },
+    {
+      "id": "u58l01e06",
+      "type": "multipleChoice",
+      "prompt": "How many values in [2, 5, 8, 1] are greater than 3?",
+      "options": [
+        "2",
+        "3",
+        "4",
+        "1"
+      ],
+      "answer": 0,
+      "explanation": "5 and 8 match — that's 2."
+    },
+    {
+      "id": "u58l01e07",
+      "type": "multiSelect",
+      "prompt": "Which questions are 'how many fit a rule'? (pick all)",
+      "options": [
+        "How many scores are 50 or more?",
+        "How many days had rain?",
+        "What is the total rainfall?",
+        "How many names start the list?"
+      ],
+      "answer": [
+        0,
+        1
+      ],
+      "explanation": "Passing scores and rainy days are counts of matches. Total rainfall is a sum, not a count."
+    },
+    {
+      "id": "u58l01e08",
+      "type": "trueFalse",
+      "prompt": "If no value matches the rule, the count stays 0.",
+      "answer": true,
+      "explanation": "No matches means no +1s, so the count never leaves its start value of 0."
+    },
+    {
+      "id": "u58l01e09",
+      "type": "multipleChoice",
+      "prompt": "The 'add 1 each pass' counter you met in Lap 3 counts EVERY item. What makes a conditional count different?",
+      "options": [
+        "The +1 is guarded by an if, so only matches count",
+        "It adds the value",
+        "It never adds",
+        "It resets each pass"
+      ],
+      "answer": 0,
+      "explanation": "Put the +1 inside an if, and only matching values increase the count."
+    },
+    {
+      "id": "u58l01e10",
+      "type": "multipleChoice",
+      "prompt": "This unit's tool is...",
+      "options": [
+        "Count how many values in a list fit a rule",
+        "Total the values",
+        "Sort the list",
+        "Make a new list"
+      ],
+      "answer": 0,
+      "explanation": "Next you'll write a counter guarded by an if to answer 'how many?'."
+    }
+  ]
+}

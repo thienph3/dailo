@@ -1,0 +1,126 @@
+{
+  "unitId": "u53",
+  "lessonId": "u53l07",
+  "title": "len tells a loop how far to go",
+  "idea": "Pair len() with range() from Lap 3: range(len(list)) gives exactly the valid positions. Reviews for+range while using the new tool.",
+  "exercises": [
+    {
+      "id": "u53l07e01",
+      "type": "multipleChoice",
+      "prompt": "Review: range(3) produces which numbers?",
+      "options": [
+        "0, 1, 2",
+        "1, 2, 3",
+        "0, 1, 2, 3",
+        "3"
+      ],
+      "answer": 0,
+      "explanation": "range(3) gives 0, 1, 2 — three numbers starting at 0. These are exactly the positions of a 3-item list."
+    },
+    {
+      "id": "u53l07e02",
+      "type": "multipleChoice",
+      "prompt": "If a list has len 3, then range(len(list)) is the same as range(3), which gives...",
+      "options": [
+        "0, 1, 2 — every valid position",
+        "1, 2, 3",
+        "0, 1, 2, 3",
+        "just 3"
+      ],
+      "answer": 0,
+      "explanation": "len is 3, so range(len(list)) is range(3) = 0, 1, 2. Those are precisely the positions that exist."
+    },
+    {
+      "id": "u53l07e03",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nn = [40, 50, 60]\nfor i in range(len(n)):\n    print(n[i])",
+      "options": [
+        "40 then 50 then 60",
+        "0 then 1 then 2",
+        "3 three times",
+        "60 then 50 then 40"
+      ],
+      "answer": 0,
+      "explanation": "len(n) is 3, so i goes 0, 1, 2, and n[i] prints 40, 50, 60. range(len(n)) visits every position safely."
+    },
+    {
+      "id": "u53l07e04",
+      "type": "trueFalse",
+      "prompt": "range(len(list)) is handy because it always matches the list's real positions, even if the list changes length.",
+      "answer": true,
+      "explanation": "Because it's built from len, it never goes past the end or stops short. It adapts to whatever length the list has."
+    },
+    {
+      "id": "u53l07e05",
+      "type": "fillBlank",
+      "prompt": "Fill in so the loop visits every position of items:\n\nitems = [2, 4, 6, 8]\nfor i in range(____(items)):\n    print(items[i])",
+      "answer": "len",
+      "acceptable": ["len"],
+      "explanation": "range(len(items)) is range(4) = 0, 1, 2, 3 — all four positions. The loop prints 2, 4, 6, 8."
+    },
+    {
+      "id": "u53l07e06",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nn = [5, 6]\nfor i in range(len(n)):\n    print(i)",
+      "options": [
+        "0 then 1",
+        "5 then 6",
+        "1 then 2",
+        "2"
+      ],
+      "answer": 0,
+      "explanation": "len(n) is 2, so range gives 0, 1. Here we print the POSITIONS i, not the items — so 0 then 1."
+    },
+    {
+      "id": "u53l07e07",
+      "type": "orderBlocks",
+      "prompt": "Arrange a loop that prints each price in a list, using len to set the range.",
+      "blocks": [
+        "prices = [3, 7, 9]",
+        "for i in range(len(prices)):",
+        "    print(prices[i])"
+      ],
+      "answer": [0, 1, 2],
+      "explanation": "len(prices) is 3, i goes 0, 1, 2, and prices[i] prints 3, 7, 9. A classic 'walk every position' loop."
+    },
+    {
+      "id": "u53l07e08",
+      "type": "multipleChoice",
+      "prompt": "Why is range(len(n)) safer than typing range(3) by hand?",
+      "options": [
+        "If n's length changes, the loop still matches it",
+        "range(3) is always wrong",
+        "len makes loops faster",
+        "You can't type numbers in range"
+      ],
+      "answer": 0,
+      "explanation": "Hardcoding 3 breaks if the list grows or shrinks. range(len(n)) always fits the actual list — a sturdier habit."
+    },
+    {
+      "id": "u53l07e09",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nn = [100]\nfor i in range(len(n)):\n    print(n[i])",
+      "options": [
+        "100",
+        "0",
+        "1",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "len(n) is 1, so range gives just 0. The loop runs once, printing n[0] = 100."
+    },
+    {
+      "id": "u53l07e10",
+      "type": "multipleChoice",
+      "prompt": "For an empty list e = [], what does for i in range(len(e)) do?",
+      "options": [
+        "Nothing — range(0) produces no numbers, so the loop body never runs",
+        "Runs once",
+        "Causes an error",
+        "Runs forever"
+      ],
+      "answer": 0,
+      "explanation": "len(e) is 0, so range(0) is empty and the loop skips its body entirely. Empty lists loop zero times — no special guard needed."
+    }
+  ]
+}

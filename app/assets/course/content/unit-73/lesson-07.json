@@ -1,0 +1,134 @@
+{
+  "unitId": "u73",
+  "lessonId": "u73l07",
+  "title": "Spot the return mistake",
+  "idea": "TOOL: common return bugs - printing instead of returning, or putting work after the return.",
+  "exercises": [
+    {
+      "id": "u73l07e01",
+      "type": "multipleChoice",
+      "prompt": "Someone wanted a usable total but wrote:\n\ndef add(a, b):\n    print(a + b)\n\nx = add(2, 3)\n\nWhat's wrong?",
+      "options": [
+        "It prints but returns nothing, so x is None",
+        "It adds wrong",
+        "It needs a loop",
+        "Nothing is wrong"
+      ],
+      "answer": 0,
+      "explanation": "They used print where they needed return. The sum shows on screen but x gets None. Swap print for return."
+    },
+    {
+      "id": "u73l07e02",
+      "type": "multipleChoice",
+      "prompt": "Fix it. Which line makes x hold 5?",
+      "options": [
+        "return a + b",
+        "print(a + b)",
+        "a + b",
+        "loop a + b"
+      ],
+      "answer": 0,
+      "explanation": "'return a + b' hands the 5 back so x = 5. Returning, not printing, is what gives a usable value."
+    },
+    {
+      "id": "u73l07e03",
+      "type": "multipleChoice",
+      "prompt": "def f(n):\n    return n\n    n = n + 100\n\nWhat does f(5) return?",
+      "options": [
+        "5",
+        "105",
+        "100",
+        "None"
+      ],
+      "answer": 0,
+      "explanation": "return n ends the sub-plan with 5. The 'n = n + 100' line is after the return and never runs."
+    },
+    {
+      "id": "u73l07e04",
+      "type": "trueFalse",
+      "prompt": "Putting the return as the LAST useful line avoids accidentally skipping work.",
+      "answer": true,
+      "explanation": "Usually yes. Since return ends the sub-plan, any work you still need must come BEFORE the return."
+    },
+    {
+      "id": "u73l07e05",
+      "type": "multipleChoice",
+      "prompt": "def total(a, b):\n    result = a + b\n\nWhy does total(2, 3) hand back None?",
+      "options": [
+        "There is no return line",
+        "a + b is wrong",
+        "It prints",
+        "b is missing"
+      ],
+      "answer": 0,
+      "explanation": "The sum is computed into result but never returned. Add 'return result' to hand the value back."
+    },
+    {
+      "id": "u73l07e06",
+      "type": "orderBlocks",
+      "prompt": "Repair the order so the sub-plan computes THEN returns.",
+      "blocks": [
+        "result = a + b",
+        "return result"
+      ],
+      "answer": [
+        0,
+        1
+      ],
+      "explanation": "Compute first, return second. If return came first it would end the sub-plan before the math ran."
+    },
+    {
+      "id": "u73l07e07",
+      "type": "multipleChoice",
+      "prompt": "def price(n):\n    discounted = n - 1\n    return discounted\n    discounted = n - 5\n\nWhat does price(10) return?",
+      "options": [
+        "9",
+        "5",
+        "10",
+        "None"
+      ],
+      "answer": 0,
+      "explanation": "discounted = 9, then return hands back 9. The line after the return (discounted = n - 5) never runs."
+    },
+    {
+      "id": "u73l07e08",
+      "type": "matchPairs",
+      "prompt": "Match each bug to its fix.",
+      "pairs": [
+        {
+          "left": "Used print, wanted a value",
+          "right": "Change print to return"
+        },
+        {
+          "left": "Work after the return",
+          "right": "Move it before the return"
+        },
+        {
+          "left": "No return at all",
+          "right": "Add a return line"
+        }
+      ],
+      "explanation": "These are the three classic return bugs. Each has a simple fix: return instead of print, reorder, or add the return."
+    },
+    {
+      "id": "u73l07e09",
+      "type": "multipleChoice",
+      "prompt": "REVIEW: a missing return leaving you with None is like which earlier bug?",
+      "options": [
+        "Forgetting to store a result in a variable",
+        "A missing quote",
+        "A wrong loop range",
+        "An extra space"
+      ],
+      "answer": 0,
+      "explanation": "Both are 'the work happened but the value was lost' bugs. return is how a sub-plan keeps its result."
+    },
+    {
+      "id": "u73l07e10",
+      "type": "trueFalse",
+      "prompt": "If a call gives None when you expected a number, a missing or misplaced return is a likely cause.",
+      "answer": true,
+      "explanation": "Yes. None usually means nothing was handed back - check that the sub-plan actually returns the value."
+    }
+  ]
+}

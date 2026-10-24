@@ -1,0 +1,126 @@
+{
+  "unitId": "u08",
+  "lessonId": "u08l06",
+  "title": "Predict what the screen shows",
+  "idea": "Read a short program and predict the output line by line. Boxes hold their value; print reads them in order.",
+  "exercises": [
+    {
+      "id": "u08l06e01",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nlevel = 2\nprint(level)\nprint(\"Done\")",
+      "options": [
+        "2, then Done",
+        "Done, then 2",
+        "level, then Done",
+        "2, then level"
+      ],
+      "answer": 0,
+      "explanation": "print(level) shows the value 2; the next line shows the text Done."
+    },
+    {
+      "id": "u08l06e02",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nprint(\"Score:\")\nscore = 8\nprint(score)",
+      "options": [
+        "Score:, then 8",
+        "8, then Score:",
+        "Score:, then score",
+        "Score: 8"
+      ],
+      "answer": 0,
+      "explanation": "First the text Score:, then we store 8, then print(score) shows 8."
+    },
+    {
+      "id": "u08l06e03",
+      "type": "trueFalse",
+      "prompt": "In this program, print(gold) shows 50.\n\ngold = 50\nprint(gold)",
+      "answer": true,
+      "explanation": "The box gold holds 50, so print(gold) shows 50. True."
+    },
+    {
+      "id": "u08l06e04",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\na = 1\nb = 2\nprint(b)\nprint(a)\nprint(b)",
+      "options": [
+        "2, then 1, then 2",
+        "1, then 2, then 1",
+        "2, then 2, then 2",
+        "1, then 1, then 1"
+      ],
+      "answer": 0,
+      "explanation": "Read the names in order: b is 2, a is 1, b is 2 again. Boxes keep their values."
+    },
+    {
+      "id": "u08l06e05",
+      "type": "multipleChoice",
+      "prompt": "Which line is the ODD one out — it shows text, not a stored value?\n\ndays = 7\nprint(days)\nprint(\"days\")",
+      "options": [
+        "print(\"days\") — quotes make it text",
+        "print(days) — it shows text",
+        "days = 7 — it shows text",
+        "None of them show text"
+      ],
+      "answer": 0,
+      "explanation": "Quotes mean plain text. print(\"days\") shows the word days, not the value 7."
+    },
+    {
+      "id": "u08l06e06",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nprice = 9\nprint(price)\nprice2 = 4\nprint(price2)",
+      "options": [
+        "9, then 4",
+        "4, then 9",
+        "9, then 9",
+        "price, then price2"
+      ],
+      "answer": 0,
+      "explanation": "Two separate boxes: price holds 9, price2 holds 4. Shown in order: 9 then 4."
+    },
+    {
+      "id": "u08l06e07",
+      "type": "trueFalse",
+      "prompt": "A variable must be given a value BEFORE you can print it.",
+      "answer": true,
+      "explanation": "Yes. You can't open a box that was never filled. Store first, then print."
+    },
+    {
+      "id": "u08l06e08",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nhp = 100\nprint(\"Health\")\nprint(hp)\nprint(hp)",
+      "options": [
+        "Health, then 100, then 100",
+        "Health, then 100",
+        "100, then Health, then 100",
+        "Health, then hp, then hp"
+      ],
+      "answer": 0,
+      "explanation": "Text Health, then the value 100 twice. The box keeps its value for both reads."
+    },
+    {
+      "id": "u08l06e09",
+      "type": "multipleChoice",
+      "prompt": "Someone expected this to show 6, but it shows the word six. Why?\n\nnumber = 6\nprint(\"number\")",
+      "options": [
+        "They used quotes, so it shows text — they wanted print(number)",
+        "The box is empty",
+        "6 is not a valid value",
+        "print cannot show numbers"
+      ],
+      "answer": 0,
+      "explanation": "Wait — print(\"number\") shows the word number, not 6. Dropping the quotes, print(number), shows 6."
+    },
+    {
+      "id": "u08l06e10",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nleft = 3\nright = 3\nprint(left)\nprint(right)",
+      "options": [
+        "3, then 3",
+        "6",
+        "left, then right",
+        "3 only once"
+      ],
+      "answer": 0,
+      "explanation": "Two boxes can hold the same value. Each print shows 3. (We don't add them in this unit.)"
+    }
+  ]
+}

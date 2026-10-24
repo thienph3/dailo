@@ -1,0 +1,157 @@
+{
+  "unitId": "u87",
+  "lessonId": "u87l09",
+  "title": "Match each part to its pattern (rapid practice)",
+  "idea": "MEET: fast practice at pattern selection across varied sub-problems, building the instinct that links a part to its tool.",
+  "exercises": [
+    {
+      "type": "matchPairs",
+      "prompt": "Match each sub-problem to its pattern.",
+      "pairs": [
+        {
+          "left": "combined weight of all parcels",
+          "right": "running total"
+        },
+        {
+          "left": "how many parcels over 5kg",
+          "right": "count with condition"
+        },
+        {
+          "left": "the heaviest parcel",
+          "right": "track the biggest"
+        }
+      ],
+      "explanation": "Combined -> total; how many -> count; heaviest -> biggest. The words pick the pattern.",
+      "id": "u87l09e01"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Sub-problem: 'is any score above 95?' Pattern?",
+      "options": [
+        "Search (yes/no)",
+        "Running total",
+        "Average",
+        "Track the smallest"
+      ],
+      "answer": 0,
+      "explanation": "'Is any...' asks about presence of a match — a search, giving a yes/no.",
+      "id": "u87l09e02"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Sub-problem: 'average rainfall over the week.' First pattern needed?",
+      "options": [
+        "running total (to get the sum before dividing)",
+        "search",
+        "filter",
+        "track the biggest"
+      ],
+      "answer": 0,
+      "explanation": "Average = total then divide by count. The first pattern is the running total.",
+      "id": "u87l09e03"
+    },
+    {
+      "type": "multiSelect",
+      "prompt": "Select the sub-problems that are conditional counts.",
+      "options": [
+        "how many days above 30 degrees",
+        "number of failing students",
+        "total marks scored",
+        "count the sold-out items"
+      ],
+      "answer": [
+        0,
+        1,
+        3
+      ],
+      "explanation": "Three ask 'how many match a rule'. 'Total marks' is a running total.",
+      "id": "u87l09e04"
+    },
+    {
+      "type": "matchPairs",
+      "prompt": "Match each sub-problem to its pattern.",
+      "pairs": [
+        {
+          "left": "the cheapest flight",
+          "right": "track the smallest"
+        },
+        {
+          "left": "only the direct flights",
+          "right": "filter"
+        },
+        {
+          "left": "is flight 404 listed?",
+          "right": "search"
+        }
+      ],
+      "explanation": "Cheapest -> smallest; only the... -> filter; is it listed -> search.",
+      "id": "u87l09e05"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Sub-problem: 'the average of the flights under 200.' How many patterns, in order?",
+      "options": [
+        "filter, then running total + count, then divide",
+        "just one: average",
+        "just search",
+        "two running totals"
+      ],
+      "answer": 0,
+      "explanation": "A subset average: filter the cheap flights, total and count them, then divide. Several patterns in order.",
+      "id": "u87l09e06"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "'Total of the list' and 'how many in the list' use the same pattern.",
+      "answer": false,
+      "explanation": "No — total adds each value (running total); 'how many' adds 1 per item or per match (count).",
+      "id": "u87l09e07"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Sub-problem: 'the longest word's length' where you track the biggest len() seen. Pattern?",
+      "options": [
+        "track the biggest",
+        "running total",
+        "search",
+        "filter"
+      ],
+      "answer": 0,
+      "explanation": "Keeping the largest length seen is track-the-biggest, comparing each len() to the best so far.",
+      "id": "u87l09e08"
+    },
+    {
+      "type": "matchPairs",
+      "prompt": "Match each phrase to its pattern family.",
+      "pairs": [
+        {
+          "left": "'altogether / combined'",
+          "right": "running total"
+        },
+        {
+          "left": "'how many / number of'",
+          "right": "count with condition"
+        },
+        {
+          "left": "'is there / contains'",
+          "right": "search"
+        }
+      ],
+      "explanation": "Phrase families map to patterns. Spotting the family is instant pattern selection.",
+      "id": "u87l09e09"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "The big idea:",
+      "options": [
+        "Each sub-problem's wording points to one pattern; practice makes the match instant",
+        "Every problem needs a new pattern",
+        "Pattern choice is random",
+        "Only totals have patterns"
+      ],
+      "answer": 0,
+      "explanation": "The words carry the pattern. The more you match, the faster selection becomes automatic.",
+      "id": "u87l09e10"
+    }
+  ]
+}

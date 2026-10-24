@@ -1,0 +1,146 @@
+{
+  "unitId": "u100",
+  "lessonId": "u100l04",
+  "title": "Grand finale: the full FizzBuzz, 1 to n",
+  "idea": "GUIDED FINALE. The famous whole FizzBuzz now: loop 1..n and apply the per-number rule you reasoned out earlier. Loop + decisions together.",
+  "problem": "Print FizzBuzz for 1 to 5: 1, 2, Fizz, 4, Buzz.",
+  "exercises": [
+    {
+      "id": "u100l04e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: FizzBuzz for 1 to 5. OUTPUT is...",
+      "options": [
+        "A line per number: Fizz/Buzz/FizzBuzz or the number",
+        "One final value",
+        "A count",
+        "A list sorted"
+      ],
+      "answer": 0,
+      "explanation": "Output is one result per number. We loop the range and apply the single-number FizzBuzz rule to each."
+    },
+    {
+      "id": "u100l04e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "How does this extend the earlier single-number FizzBuzz?",
+      "options": [
+        "We wrap the same if/elif logic in a loop over 1..n",
+        "It's a brand new rule",
+        "We only check 3",
+        "We skip the decisions"
+      ],
+      "answer": 0,
+      "explanation": "Same per-number logic, now repeated by a loop. Decomposition: the hard part (the rule) was solved before."
+    },
+    {
+      "id": "u100l04e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example by hand for 1..5: 1->1, 2->2, 3->Fizz, 4->4, 5->?",
+      "options": [
+        "Buzz",
+        "Fizz",
+        "FizzBuzz",
+        "5"
+      ],
+      "answer": 0,
+      "explanation": "5 is divisible by 5 only, so Buzz. Full expected output: 1, 2, Fizz, 4, Buzz."
+    },
+    {
+      "id": "u100l04e04",
+      "type": "trueFalse",
+      "uepcc": "E",
+      "prompt": "Inside the loop, we still check 'divisible by BOTH 3 and 5' first, for the same reason as before.",
+      "answer": true,
+      "explanation": "Yes — the 'both' case must be tested before the single cases, or a multiple of 15 would wrongly stop at Fizz."
+    },
+    {
+      "id": "u100l04e05",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Plan it. Order the steps.",
+      "blocks": [
+        "For each number apply the Fizz/Buzz/FizzBuzz rule",
+        "Loop numbers 1 to n",
+        "The loop prints each result"
+      ],
+      "answer": [
+        1,
+        0,
+        2
+      ],
+      "explanation": "Loop the range, apply the decision rule per number, print each. The loop is the only new piece."
+    },
+    {
+      "id": "u100l04e06",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Which range prints numbers 1 through 5?",
+      "options": [
+        "range(1, 6)",
+        "range(1, 5)",
+        "range(5)",
+        "range(0, 5)"
+      ],
+      "answer": 0,
+      "explanation": "range(1, 6) gives 1..5 (exclusive stop). The off-by-one habit from earlier units pays off again."
+    },
+    {
+      "id": "u100l04e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code the loop header and the FIRST (both) branch. Arrange the lines.",
+      "blocks": [
+        "        print(\"FizzBuzz\")",
+        "for number in range(1, 6):",
+        "    if number % 3 == 0 and number % 5 == 0:"
+      ],
+      "answer": [
+        1,
+        2,
+        0
+      ],
+      "explanation": "Loop 1..5, and the first test inside is the combined 'divisible by both'. The rest (elif Fizz, elif Buzz, else number) follows."
+    },
+    {
+      "id": "u100l04e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Complete the loop stop so it covers 1..5:\n\nfor number in range(1, ____):\n    # apply FizzBuzz rule to number",
+      "answer": "6",
+      "acceptable": [
+        "6"
+      ],
+      "explanation": "Stop at 6 so the last number printed is 5. range stops BEFORE its stop value."
+    },
+    {
+      "id": "u100l04e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Run it: prints 1, 2, Fizz, 4, Buzz. Hand matched. Verdict?",
+      "options": [
+        "Passes",
+        "Fails",
+        "Unknown",
+        "Rewrite example"
+      ],
+      "answer": 0,
+      "explanation": "Matches! The classic FizzBuzz, solved by reasoning and composition — not memorized. This is a milestone."
+    },
+    {
+      "id": "u100l04e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Extend to 1..15 (range(1, 16)). What prints for 15?",
+      "options": [
+        "FizzBuzz",
+        "Fizz",
+        "Buzz",
+        "15"
+      ],
+      "answer": 0,
+      "explanation": "15 is divisible by both 3 and 5, so FizzBuzz — caught by the 'both' branch we tested first. The whole thing scales!"
+    }
+  ]
+}

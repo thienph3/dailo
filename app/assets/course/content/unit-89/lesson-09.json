@@ -1,0 +1,134 @@
+{
+  "unitId": "u89",
+  "lessonId": "u89l09",
+  "title": "Wrap a multi-state loop in a function",
+  "idea": "TOOL + review: put a multi-state loop inside a function and RETURN the results, reusing the def/return tools.",
+  "exercises": [
+    {
+      "type": "multipleChoice",
+      "prompt": "You wrote a loop that finds a total and a count. How do you make it REUSABLE for any list?",
+      "options": [
+        "Put it in a function that takes the list as a parameter and returns the results",
+        "Copy it everywhere",
+        "Only use it once",
+        "Functions can't hold loops"
+      ],
+      "answer": 0,
+      "explanation": "A function with the list as a parameter lets you reuse the multi-state loop on any data. This reuses def/parameters/return from earlier in this lap.",
+      "id": "u89l09e01"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\ndef total_and_count(nums):\n    total = 0\n    count = 0\n    for n in nums:\n        total = total + n\n        count = count + 1\n    return total + count\n\nprint(total_and_count([2, 3, 5]))",
+      "options": [
+        "13",
+        "10",
+        "3",
+        "15"
+      ],
+      "answer": 0,
+      "explanation": "total = 10, count = 3; the function returns total + count = 13. (A real version would return both, shown next.)",
+      "id": "u89l09e02"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "The running variables (total, count) live INSIDE the function and start fresh each call.",
+      "answer": true,
+      "explanation": "True. They're local to the function, so every call starts them at 0 - a clean slate per call. That's scope, from earlier in this lap.",
+      "id": "u89l09e03"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "A function can return TWO results like this: return total, count. Predict:\n\ndef stats(nums):\n    total = 0\n    count = 0\n    for n in nums:\n        total = total + n\n        count = count + 1\n    return total, count\n\nt, c = stats([4, 6])\nprint(t, c)",
+      "options": [
+        "10 2",
+        "2 10",
+        "10",
+        "6 2"
+      ],
+      "answer": 0,
+      "explanation": "total = 10, count = 2, returned as a pair and unpacked into t and c. One call hands back both running values.",
+      "id": "u89l09e04"
+    },
+    {
+      "type": "fillBlank",
+      "prompt": "Complete the function so it returns both running values:\n\ndef stats(nums):\n    total = 0\n    count = 0\n    for n in nums:\n        total = total + n\n        count = count + 1\n    return total, ____\n",
+      "answer": "count",
+      "acceptable": [
+        "count"
+      ],
+      "explanation": "Return both running values: total, count. The caller receives the pair.",
+      "id": "u89l09e05"
+    },
+    {
+      "type": "orderBlocks",
+      "prompt": "Arrange a function that returns the total and count of a list.",
+      "blocks": [
+        "def stats(nums):",
+        "    total = 0",
+        "    count = 0",
+        "    for n in nums:",
+        "        total = total + n",
+        "        count = count + 1",
+        "    return total, count"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "explanation": "Header, start both running values, walk updating both, return the pair. A reusable multi-state helper.",
+      "id": "u89l09e06"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Why return the results instead of printing them inside the function?",
+      "options": [
+        "A returned value can be used in more code; a print is just shown and gone",
+        "print is broken",
+        "return is faster",
+        "You can't print in functions"
+      ],
+      "answer": 0,
+      "explanation": "return hands the values back so the caller can compute further (like an average). print only displays. This is the return-vs-print idea from earlier.",
+      "id": "u89l09e07"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Putting a multi-state loop in a function uses tools you already learned - no new syntax here.",
+      "answer": true,
+      "explanation": "True. def, parameters, return, and the loop are all prior tools. The NEW idea of this unit is only the multiple running values.",
+      "id": "u89l09e08"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\ndef stats(nums):\n    total = 0\n    count = 0\n    for n in nums:\n        total = total + n\n        count = count + 1\n    return total, count\n\nt, c = stats([])\nprint(t, c)",
+      "options": [
+        "0 0",
+        "Error",
+        "0",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "An empty list means the loop never runs, so both running values stay at their starts: 0 and 0.",
+      "id": "u89l09e09"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "The combined idea:",
+      "options": [
+        "A function can hold a multi-state loop and return several running values",
+        "Functions only return one number",
+        "Loops can't go in functions",
+        "You must print inside the loop"
+      ],
+      "answer": 0,
+      "explanation": "Multiple state + functions = a reusable summary tool. You'll lean on this in the practice unit.",
+      "id": "u89l09e10"
+    }
+  ]
+}

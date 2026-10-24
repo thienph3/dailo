@@ -1,0 +1,136 @@
+{
+  "unitId": "u69",
+  "lessonId": "u69l08",
+  "title": "A plan that's hard to read",
+  "idea": "MEET: see why an un-split tangle is hard, and how naming jobs fixes it. No code.",
+  "exercises": [
+    {
+      "id": "u69l08e01",
+      "type": "multipleChoice",
+      "prompt": "Imagine a plan written as 30 steps in a row with no groups and no names. What's the main problem?",
+      "options": [
+        "It's hard to see where each job begins and ends",
+        "It's too short",
+        "It has too many names",
+        "It runs backwards"
+      ],
+      "answer": 0,
+      "explanation": "A long unnamed list hides its structure. You can't tell the jobs apart, so finding anything is slow."
+    },
+    {
+      "id": "u69l08e02",
+      "type": "multipleChoice",
+      "prompt": "You split that 30-step plan into four named jobs. What improves?",
+      "options": [
+        "You can read, find, and fix one job at a time",
+        "The steps vanish",
+        "It becomes random",
+        "Nothing changes"
+      ],
+      "answer": 0,
+      "explanation": "Named jobs give structure. Now each job is a small, labelled chunk you can read and fix on its own."
+    },
+    {
+      "id": "u69l08e03",
+      "type": "trueFalse",
+      "prompt": "A clear name for a sub-job tells a reader what it does without reading every step.",
+      "answer": true,
+      "explanation": "Yes. A good name like 'print the banner' summarises the job. Names make a plan skimmable."
+    },
+    {
+      "id": "u69l08e04",
+      "type": "multiSelect",
+      "prompt": "Which names clearly describe a sub-job? (Pick all the GOOD names.)",
+      "options": [
+        "print the banner",
+        "total the basket",
+        "do stuff",
+        "x"
+      ],
+      "answer": [
+        0,
+        1
+      ],
+      "explanation": "'print the banner' and 'total the basket' say what the job does. 'do stuff' and 'x' tell you nothing."
+    },
+    {
+      "id": "u69l08e05",
+      "type": "multipleChoice",
+      "prompt": "Why is 'do the thing' a poor name for a sub-job?",
+      "options": [
+        "It doesn't say what the job actually does",
+        "It is too long",
+        "It uses numbers",
+        "It repeats a word"
+      ],
+      "answer": 0,
+      "explanation": "A name should describe the job. Vague names force the reader to decode every step anyway."
+    },
+    {
+      "id": "u69l08e06",
+      "type": "matchPairs",
+      "prompt": "Match each vague name to a clearer one for the same job.",
+      "pairs": [
+        {
+          "left": "do it",
+          "right": "print the receipt"
+        },
+        {
+          "left": "handle",
+          "right": "total the prices"
+        },
+        {
+          "left": "go",
+          "right": "show the menu"
+        }
+      ],
+      "explanation": "Clear names echo the job's purpose. The reader understands the plan at a glance."
+    },
+    {
+      "id": "u69l08e07",
+      "type": "multipleChoice",
+      "prompt": "REVIEW: naming things clearly is a habit you also use for...",
+      "options": [
+        "variables, like ticket_price instead of p",
+        "nothing else",
+        "only loops",
+        "only numbers"
+      ],
+      "answer": 0,
+      "explanation": "Same habit as good variable names. A name - for a value or a job - should make the code read like the plan."
+    },
+    {
+      "id": "u69l08e08",
+      "type": "trueFalse",
+      "prompt": "Splitting and naming jobs makes a plan EASIER to read, not harder.",
+      "answer": true,
+      "explanation": "Right. Short named jobs beat one long tangle. Readability is a big reason we decompose."
+    },
+    {
+      "id": "u69l08e09",
+      "type": "multipleChoice",
+      "prompt": "A reviewer reads your plan of named jobs and instantly understands it. That's because...",
+      "options": [
+        "each job has a clear name that states its purpose",
+        "the plan is very long",
+        "there are no jobs",
+        "it uses big numbers"
+      ],
+      "answer": 0,
+      "explanation": "Clear names let a reader follow the plan without decoding every step. That's the payoff of naming jobs."
+    },
+    {
+      "id": "u69l08e10",
+      "type": "multipleChoice",
+      "prompt": "The takeaway:",
+      "options": [
+        "split into jobs AND give each a clear, descriptive name",
+        "never name anything",
+        "use one giant list",
+        "shorter names are always worse"
+      ],
+      "answer": 0,
+      "explanation": "Decomposition plus clear names makes plans readable and fixable. Both halves matter."
+    }
+  ]
+}

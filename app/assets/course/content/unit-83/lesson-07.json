@@ -1,0 +1,155 @@
+{
+  "unitId": "u83",
+  "lessonId": "u83l07",
+  "title": "Fix it together: the search that gave up too soon",
+  "idea": "GUIDED (UEPCC), bug-focused. contains() has 'return False' INSIDE the loop, so it quits on the first non-match. Move the False out so the whole list is searched.",
+  "problem": "contains(nums, target) should return True if the target is anywhere in the list. But 'return False' is inside the loop, so contains([1, 2, 3], 3) wrongly returns False. Fix it.",
+  "exercises": [
+    {
+      "id": "u83l07e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: contains([1, 2, 3], 3) wrongly returns False because 'return False' is inside the loop. What SHOULD it return?",
+      "options": [
+        "True — 3 is in the list",
+        "False",
+        "Only if 3 is first",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "3 is in the list, so the answer is True. The bug makes it quit before reaching the 3."
+    },
+    {
+      "id": "u83l07e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "Understand — why does 'return False' inside the loop cause this?",
+      "options": [
+        "It returns False on the very first item that doesn't match, never reaching the rest",
+        "It skips the first item",
+        "It doubles the loop",
+        "It prints twice"
+      ],
+      "answer": 0,
+      "explanation": "On item 1 (not the target), the inner 'return False' ends the helper immediately — items 2 and 3 are never checked."
+    },
+    {
+      "id": "u83l07e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example — by hand. Is 3 in [1, 2, 3]?",
+      "options": [
+        "Yes — it's the last item",
+        "No",
+        "Only if sorted",
+        "Can't tell"
+      ],
+      "answer": 0,
+      "explanation": "3 is right there at the end. The correct answer is True; the buggy helper never looks that far."
+    },
+    {
+      "id": "u83l07e04",
+      "type": "trueFalse",
+      "uepcc": "E",
+      "prompt": "Returning True on a match is correct — the bug is only the EARLY 'return False'.",
+      "answer": true,
+      "explanation": "Yes — True-on-match is right. The mistake is returning False too soon, before the whole list is seen."
+    },
+    {
+      "id": "u83l07e05",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Plan the fix. Where must 'return False' go?",
+      "options": [
+        "AFTER the loop — only false if nothing matched the WHOLE list",
+        "Inside the loop, earlier",
+        "Before the loop",
+        "Inside the print"
+      ],
+      "answer": 0,
+      "explanation": "False belongs after the loop, so it's returned only when the entire list had no match."
+    },
+    {
+      "id": "u83l07e06",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Order the fix-it routine.",
+      "blocks": [
+        "Hand-check: 3 IS in the list, so True",
+        "See it returns False on item 1",
+        "Move 'return False' outside the loop",
+        "Re-check: now it returns True"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "Hand answer, spot the early False, move it out, re-check. The False must be the last line."
+    },
+    {
+      "id": "u83l07e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code the fixed helper (return False OUTSIDE the loop).",
+      "blocks": [
+        "def contains(nums, target):",
+        "    for n in nums:",
+        "        if n == target:",
+        "            return True",
+        "    return False"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "explanation": "Return True on a match inside the loop; return False only AFTER the loop ends with no match. Placement is the whole fix."
+    },
+    {
+      "id": "u83l07e08",
+      "type": "multipleChoice",
+      "uepcc": "C",
+      "prompt": "Which line must sit OUTSIDE (after) the loop?",
+      "options": [
+        "return False",
+        "return True",
+        "if n == target:",
+        "for n in nums:"
+      ],
+      "answer": 0,
+      "explanation": "return True stays inside (fires on a match); return False moves out, so it only runs when the whole list missed."
+    },
+    {
+      "id": "u83l07e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check — the fixed contains([1, 2, 3], 3) returns True; hand answer was True. Verdict?",
+      "options": [
+        "Passes",
+        "Fails",
+        "Unknown",
+        "Rewrite example"
+      ],
+      "answer": 0,
+      "explanation": "Output (True) matches the hand answer. Moving 'return False' out let the full list be searched."
+    },
+    {
+      "id": "u83l07e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Re-check: contains([1, 2, 3], 9). What does the fixed helper return?",
+      "options": [
+        "False — 9 isn't there, loop ends, then return False",
+        "True",
+        "It crashes",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "9 is absent, so no match fires and the after-loop 'return False' runs. Both outcomes now work. You fixed a search bug!"
+    }
+  ]
+}

@@ -1,0 +1,142 @@
+{
+  "unitId": "u16",
+  "lessonId": "u16l09",
+  "title": "Predict: add or join?",
+  "idea": "Read the quotes and the conversions, then predict whether a line adds numbers or joins text.",
+  "exercises": [
+    {
+      "id": "u16l09e01",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nprint(2 + 2 + 2)",
+      "options": [
+        "6",
+        "222",
+        "2 2 2",
+        "Error"
+      ],
+      "answer": 0,
+      "explanation": "All numbers, so + adds every time: 2 + 2 + 2 = 6."
+    },
+    {
+      "id": "u16l09e02",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nprint(\"2\" + \"2\" + \"2\")",
+      "options": [
+        "222",
+        "6",
+        "2 2 2",
+        "Error"
+      ],
+      "answer": 0,
+      "explanation": "All text, so + joins every time: 222."
+    },
+    {
+      "id": "u16l09e03",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nprint(int(\"2\") + int(\"2\") + int(\"2\"))",
+      "options": [
+        "6",
+        "222",
+        "\"6\"",
+        "Error"
+      ],
+      "answer": 0,
+      "explanation": "int() turns each text into the number 2, so they add to 6."
+    },
+    {
+      "id": "u16l09e04",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nprint(\"Pts: \" + str(3 + 4))",
+      "options": [
+        "Pts: 7",
+        "Pts: 34",
+        "Pts: 3 + 4",
+        "Error"
+      ],
+      "answer": 0,
+      "explanation": "Inside, 3 + 4 adds to 7 (numbers), then str(7) joins onto the label: Pts: 7. Math first, then convert to show."
+    },
+    {
+      "id": "u16l09e05",
+      "type": "trueFalse",
+      "prompt": "Predict: print(\"10\" + \"5\") shows 15.",
+      "answer": false,
+      "explanation": "No — text joins to 105. To get 15 you'd convert: int(\"10\") + int(\"5\")."
+    },
+    {
+      "id": "u16l09e06",
+      "type": "multiSelect",
+      "prompt": "Select EVERY line that prints 8.",
+      "options": [
+        "print(4 + 4)",
+        "print(int(\"4\") + int(\"4\"))",
+        "print(\"4\" + \"4\")",
+        "print(str(4) + str(4))"
+      ],
+      "answer": [
+        0,
+        1
+      ],
+      "explanation": "Numbers add to 8 in the first two. The quoted/str versions join to 44."
+    },
+    {
+      "id": "u16l09e07",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nx = \"6\"\nprint(int(x) * 2)",
+      "options": [
+        "12",
+        "66",
+        "\"12\"",
+        "Error"
+      ],
+      "answer": 0,
+      "explanation": "int(x) is the number 6, times 2 is 12. Convert, then multiply."
+    },
+    {
+      "id": "u16l09e08",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nx = \"6\"\nprint(x + x)",
+      "options": [
+        "66",
+        "12",
+        "6 6",
+        "Error"
+      ],
+      "answer": 0,
+      "explanation": "x is text \"6\", so + joins: 66. No conversion was used, so no adding happened."
+    },
+    {
+      "id": "u16l09e09",
+      "type": "matchPairs",
+      "prompt": "Match each line to its output.",
+      "pairs": [
+        {
+          "left": "print(1 + 1)",
+          "right": "2"
+        },
+        {
+          "left": "print(\"1\" + \"1\")",
+          "right": "11"
+        },
+        {
+          "left": "print(\"n = \" + str(1 + 1))",
+          "right": "n = 2"
+        }
+      ],
+      "explanation": "Numbers add (2). Text joins (11). And math-then-str builds the message n = 2."
+    },
+    {
+      "id": "u16l09e10",
+      "type": "multipleChoice",
+      "prompt": "Before running any line, what one thing should you read to predict add-vs-join?",
+      "options": [
+        "Whether the values are numbers or text (quotes? conversions?)",
+        "How long the line is",
+        "The name of the variable",
+        "Whether it's the first line"
+      ],
+      "answer": 0,
+      "explanation": "The TYPE of the values decides it. Spot quotes and int()/float()/str() calls, and you can predict the result."
+    }
+  ]
+}

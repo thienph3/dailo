@@ -1,0 +1,149 @@
+{
+  "unitId": "u44",
+  "lessonId": "u44l08",
+  "title": "while vs for: when to use which",
+  "idea": "Use for for a known count; use while when a condition decides when to stop.",
+  "exercises": [
+    {
+      "type": "multipleChoice",
+      "prompt": "You know you need exactly 6 repeats. Which loop is cleaner?",
+      "options": [
+        "for with range(6)",
+        "while",
+        "neither",
+        "a single if"
+      ],
+      "answer": 0,
+      "explanation": "A known count is a for-loop job: for i in range(6) runs exactly six times, no control value to manage.",
+      "id": "u44l08e01"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "You repeat until the user guesses the right number. Which loop?",
+      "options": [
+        "while",
+        "for with range",
+        "no loop",
+        "an if"
+      ],
+      "answer": 0,
+      "explanation": "The number of guesses is unknown; a condition ends it. That's a while loop.",
+      "id": "u44l08e02"
+    },
+    {
+      "type": "matchPairs",
+      "prompt": "Match each problem to the loop that fits best.",
+      "pairs": [
+        {
+          "left": "Print 1 to 100",
+          "right": "for with range"
+        },
+        {
+          "left": "Keep asking until input is valid",
+          "right": "while"
+        },
+        {
+          "left": "Repeat exactly 4 times",
+          "right": "for with range"
+        },
+        {
+          "left": "Subtract until a balance hits 0",
+          "right": "while"
+        }
+      ],
+      "explanation": "Known count -> for. A condition decides the end -> while. Matching the tool avoids bugs.",
+      "id": "u44l08e03"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Every for-loop over a fixed range could be written as a while loop, but for is usually clearer when the count is known.",
+      "answer": true,
+      "explanation": "True. for hides the control value and update inside range, so there's less to get wrong for a known count.",
+      "id": "u44l08e04"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Which problem NEEDS a while loop, not a for-loop?",
+      "options": [
+        "Keep halving a number until it's below 1",
+        "Print the numbers 1 to 10",
+        "Repeat a message 3 times",
+        "Add 1 to 5"
+      ],
+      "answer": 0,
+      "explanation": "'Until it's below 1' is a condition, with an unknown number of steps. That's the while case.",
+      "id": "u44l08e05"
+    },
+    {
+      "type": "orderBlocks",
+      "prompt": "Order the steps to decide which loop to use.",
+      "blocks": [
+        "Ask: is the number of repeats known?",
+        "If known -> for with range",
+        "If not -> while with a condition",
+        "Check the loop can stop"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "Decide by whether you know the count. Known -> for. Unknown, condition-driven -> while.",
+      "id": "u44l08e06"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Rewrite this while as a for-loop header that prints 0,1,2,3,4:\n\ni = 0\nwhile i < 5:\n    print(i)\n    i = i + 1",
+      "options": [
+        "for i in range(5): print(i)",
+        "for i in range(4): print(i)",
+        "while i < 5: print(i)",
+        "print(i)"
+      ],
+      "answer": 0,
+      "explanation": "A known count of 5 is cleaner as for i in range(5). The while just re-creates range by hand.",
+      "id": "u44l08e07"
+    },
+    {
+      "type": "fillBlank",
+      "prompt": "Fill the range count so this for-loop matches 'while i < 3' starting at 0:\n\nfor i in range(____):\n    print(i)",
+      "answer": "3",
+      "acceptable": [
+        "3"
+      ],
+      "explanation": "range(3) gives 0,1,2 -- the same values as while i < 3 starting at 0.",
+      "id": "u44l08e08"
+    },
+    {
+      "type": "multiSelect",
+      "prompt": "Which are good reasons to pick while over for?",
+      "options": [
+        "The number of repeats isn't known ahead of time",
+        "A condition decides when to stop",
+        "You're waiting for valid input",
+        "You want exactly 10 repeats"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "while shines when a condition -- not a known count -- ends the loop. A fixed 10 repeats is a for job.",
+      "id": "u44l08e09"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "The one-line rule:",
+      "options": [
+        "Known count -> for; condition decides -> while",
+        "Always use while",
+        "Always use for",
+        "It doesn't matter"
+      ],
+      "answer": 0,
+      "explanation": "Pick the loop that matches the problem: a count you know is for; a condition that ends it is while.",
+      "id": "u44l08e10"
+    }
+  ]
+}

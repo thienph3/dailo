@@ -1,0 +1,138 @@
+{
+  "unitId": "u24",
+  "lessonId": "u24l10",
+  "title": "Review: the edge-case habit",
+  "idea": "Pull the unit together: spot empty/zero/impossible cases, guard the divisor, and handle the edge before the normal work. Mostly thinking.",
+  "exercises": [
+    {
+      "id": "u24l10e01",
+      "type": "multipleChoice",
+      "prompt": "The question to ask for EVERY problem is...",
+      "options": [
+        "What if there's nothing, or it's zero?",
+        "How fast is it?",
+        "How long is the code?",
+        "Which word is longest?"
+      ],
+      "answer": 0,
+      "explanation": "That one question surfaces most edge cases. It is the habit this whole unit built."
+    },
+    {
+      "id": "u24l10e02",
+      "type": "multipleChoice",
+      "prompt": "Which computation can crash on a bad value?",
+      "options": [
+        "total / count when count is 0",
+        "a + b",
+        "n * 3",
+        "price + tax"
+      ],
+      "answer": 0,
+      "explanation": "Division by a zero count crashes. Addition and multiplication are always safe."
+    },
+    {
+      "id": "u24l10e03",
+      "type": "trueFalse",
+      "prompt": "A guard is just an if/else aimed at the edge case - no new syntax.",
+      "answer": true,
+      "explanation": "Right. You already know if/else; a guard is simply using it to handle the empty/zero/impossible case."
+    },
+    {
+      "id": "u24l10e04",
+      "type": "matchPairs",
+      "prompt": "Match each problem to its edge case.",
+      "pairs": [
+        {
+          "left": "bill / diners",
+          "right": "zero diners"
+        },
+        {
+          "left": "first score",
+          "right": "no scores"
+        },
+        {
+          "left": "accept a count",
+          "right": "negative count"
+        }
+      ],
+      "explanation": "Division fears a zero divisor; 'first of' fears empty; accepting input fears impossible values."
+    },
+    {
+      "id": "u24l10e05",
+      "type": "multipleChoice",
+      "prompt": "What prints?\n\ncount = 0\nif count == 0:\n    print(\"No data\")\nelse:\n    print(\"Computing\")",
+      "options": [
+        "No data",
+        "Computing",
+        "0",
+        "error"
+      ],
+      "answer": 0,
+      "explanation": "count is 0, so the guard fires: No data. The risky step is skipped."
+    },
+    {
+      "id": "u24l10e06",
+      "type": "orderBlocks",
+      "prompt": "Order the safe shape for any edge-case problem.",
+      "blocks": [
+        "Check the edge case first",
+        "If it is the edge case, handle it specially",
+        "Otherwise do the normal work",
+        "Show the result"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "Edge case first, normal work in the else. The same shape fits every guarded problem."
+    },
+    {
+      "id": "u24l10e07",
+      "type": "multipleChoice",
+      "prompt": "Which value is NOT usually an edge case?",
+      "options": [
+        "a typical middle value like 5",
+        "zero",
+        "an empty group",
+        "a negative count"
+      ],
+      "answer": 0,
+      "explanation": "A normal middle value is the easy case. Zero, empty, and impossible values are the edges."
+    },
+    {
+      "id": "u24l10e08",
+      "type": "trueFalse",
+      "prompt": "Some problems need no guard at all.",
+      "answer": true,
+      "explanation": "Yes. Pure addition or multiplication is always safe. Guard only where a bad value is actually possible."
+    },
+    {
+      "id": "u24l10e09",
+      "type": "multipleChoice",
+      "prompt": "What prints?\n\nstock = 0\nif stock == 0:\n    print(\"Sold out\")\nelse:\n    print(\"In stock\")",
+      "options": [
+        "Sold out",
+        "In stock",
+        "0",
+        "error"
+      ],
+      "answer": 0,
+      "explanation": "stock is 0, so the guard reports Sold out - a clear message for the empty case."
+    },
+    {
+      "id": "u24l10e10",
+      "type": "multipleChoice",
+      "prompt": "After this unit, the skill you carry forward is...",
+      "options": [
+        "Spotting and guarding the empty/zero/impossible case",
+        "Writing the longest code",
+        "Ignoring rare cases",
+        "Only handling big numbers"
+      ],
+      "answer": 0,
+      "explanation": "Spot the edge case and guard it. Next, elif will let one decision sort into many outcomes."
+    }
+  ]
+}

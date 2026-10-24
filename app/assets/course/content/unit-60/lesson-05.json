@@ -1,0 +1,139 @@
+{
+  "unitId": "u60",
+  "lessonId": "u60l05",
+  "title": "Using min on real lists",
+  "idea": "TOOL applied: read smallest-so-far code for everyday 'which is smallest/cheapest/coldest' questions.",
+  "exercises": [
+    {
+      "id": "u60l05e01",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nprices = [8, 5, 9, 3, 7]\ncheapest = prices[0]\nfor p in prices:\n    if p < cheapest:\n        cheapest = p\nprint(cheapest)",
+      "options": [
+        "3",
+        "9",
+        "8",
+        "32"
+      ],
+      "answer": 0,
+      "explanation": "The cheapest item costs 3. The smallest-so-far drops to 3 and nothing is smaller."
+    },
+    {
+      "id": "u60l05e02",
+      "type": "multipleChoice",
+      "prompt": "Which variable name reads most clearly for the smallest temperature?",
+      "options": [
+        "coldest",
+        "x",
+        "thing",
+        "n2"
+      ],
+      "answer": 0,
+      "explanation": "A descriptive name like coldest makes the code read like the problem. The bare 'best' is fine too, but a clear name helps."
+    },
+    {
+      "id": "u60l05e03",
+      "type": "fillBlank",
+      "prompt": "Finish the start line so this finds the shortest trip:\n\ntrips = [40, 25, 33]\nshortest = trips[____]\nfor t in trips:\n    if t < shortest:\n        shortest = t",
+      "answer": "0",
+      "acceptable": [
+        "0"
+      ],
+      "explanation": "Start shortest at trips[0] — the same safe start you used for max — then compare the rest. It lands on 25."
+    },
+    {
+      "id": "u60l05e04",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nwaits = [12, 7, 7, 20]\nbest = waits[0]\nfor w in waits:\n    if w < best:\n        best = w\nprint(best)",
+      "options": [
+        "7",
+        "12",
+        "20",
+        "46"
+      ],
+      "answer": 0,
+      "explanation": "The shortest wait is 7 (it appears twice). The loop reports 7 as the single smallest."
+    },
+    {
+      "id": "u60l05e05",
+      "type": "orderBlocks",
+      "prompt": "Arrange a program that prints the lowest score in a list called scores.",
+      "answer": [
+        1,
+        0,
+        3,
+        2,
+        4
+      ],
+      "blocks": [
+        "for s in scores:",
+        "lowest = scores[0]",
+        "        lowest = s",
+        "    if s < lowest:",
+        "print(lowest)"
+      ],
+      "explanation": "Start lowest at the first score, loop, replace when smaller, print. Identical to the max layout with < instead of >."
+    },
+    {
+      "id": "u60l05e06",
+      "type": "trueFalse",
+      "prompt": "If you already know how to find the biggest, you can find the smallest by changing one comparison.",
+      "answer": true,
+      "explanation": "That is the transfer: the smallest is one flipped sign away from the biggest."
+    },
+    {
+      "id": "u60l05e07",
+      "type": "multipleChoice",
+      "prompt": "A weather log shows temps [2, -1, 4, -3, 0]. The min loop returns -3. What does -3 mean?",
+      "options": [
+        "The coldest reading was -3",
+        "There were -3 days",
+        "The total was -3",
+        "-3 days were cold"
+      ],
+      "answer": 0,
+      "explanation": "Min gives the single smallest value — here, the coldest temperature in the log."
+    },
+    {
+      "id": "u60l05e08",
+      "type": "multipleChoice",
+      "prompt": "You need the CHEAPEST price from [71, 88, 65]. Which pattern fits?",
+      "options": [
+        "Find the smallest (min)",
+        "Add them all (total)",
+        "Count how many (count)",
+        "Find the biggest (max)"
+      ],
+      "answer": 0,
+      "explanation": "'Cheapest' is the single smallest value — a min problem."
+    },
+    {
+      "id": "u60l05e09",
+      "type": "multiSelect",
+      "prompt": "Which problems call for the min pattern? (pick all)",
+      "options": [
+        "The record low temperature",
+        "The fewest goals in one game",
+        "The most goals in one game",
+        "The total goals"
+      ],
+      "answer": [
+        0,
+        1
+      ],
+      "explanation": "Record low and fewest-in-one-game want the single smallest value. 'Most' is max; 'total' is sum."
+    },
+    {
+      "id": "u60l05e10",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nn = [50]\nbest = n[0]\nfor x in n:\n    if x < best:\n        best = x\nprint(best)",
+      "options": [
+        "50",
+        "0",
+        "1",
+        "An error"
+      ],
+      "answer": 0,
+      "explanation": "With one value, best is 50 and nothing is smaller. The min of a one-item list is that item — same as max."
+    }
+  ]
+}

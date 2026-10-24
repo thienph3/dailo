@@ -1,0 +1,123 @@
+{
+  "unitId": "u64",
+  "lessonId": "u64l09",
+  "title": "Search edge cases",
+  "idea": "TOOL: predict a search on tricky inputs — empty list, target absent, target appears many times.",
+  "exercises": [
+    {
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nnums = []\ntarget = 5\nfound = False\nfor n in nums:\n    if n == target:\n        found = True\nprint(found)",
+      "options": [
+        "False",
+        "True",
+        "an error",
+        "5"
+      ],
+      "answer": 0,
+      "explanation": "The list is empty, so the loop never runs and found stays False. Searching empty safely says 'not found'.",
+      "id": "u64l09e01"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Searching an empty list is safe and always reports 'not found' (False).",
+      "answer": true,
+      "explanation": "With no items there is nothing to match, so found keeps its starting value False.",
+      "id": "u64l09e02"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nnums = [9, 9, 9]\ntarget = 9\nfound = False\nfor n in nums:\n    if n == target:\n        found = True\nprint(found)",
+      "options": [
+        "True",
+        "False",
+        "3",
+        "[9, 9, 9]"
+      ],
+      "answer": 0,
+      "explanation": "9 is present (many times), so found is True. A yes/no does not care how many times it appears.",
+      "id": "u64l09e03"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nnums = [1, 2, 3]\ntarget = 4\nfound = False\nfor n in nums:\n    if n == target:\n        found = True\nprint(found)",
+      "options": [
+        "False",
+        "True",
+        "4",
+        "[]"
+      ],
+      "answer": 0,
+      "explanation": "No item equals 4, so found is never flipped and stays False — the value is absent.",
+      "id": "u64l09e04"
+    },
+    {
+      "type": "multiSelect",
+      "prompt": "Which results are POSSIBLE from a yes/no search? (pick all)",
+      "options": [
+        "True (present)",
+        "False (absent)",
+        "a list of matches",
+        "a count of matches"
+      ],
+      "answer": [
+        0,
+        1
+      ],
+      "explanation": "A plain search answers only True or False. Lists and counts come from filter and counter tools.",
+      "id": "u64l09e05"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "If the target appears once or a hundred times, a yes/no search gives the same answer: True.",
+      "answer": true,
+      "explanation": "Presence is presence. The found flag flips to True on the first match and that is the whole answer.",
+      "id": "u64l09e06"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "You search for 0 in [0, 1, 2]. The result is...",
+      "options": [
+        "True — 0 is present",
+        "False — 0 means not found",
+        "an error",
+        "-1"
+      ],
+      "answer": 0,
+      "explanation": "0 is a normal value here and it IS in the list, so found becomes True. 0 as data is fine.",
+      "id": "u64l09e07"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "A position search ends with where = -1. That means...",
+      "options": [
+        "the target was not found",
+        "the target is at the end",
+        "the list was sorted",
+        "an error"
+      ],
+      "answer": 0,
+      "explanation": "-1 was the 'not found' marker, and it was never overwritten, so the target is absent.",
+      "id": "u64l09e08"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "A search on an empty list and a search where nothing matches both report False — for slightly different reasons.",
+      "answer": true,
+      "explanation": "Both give False: one never ran the loop, the other ran it but found no match. Same safe answer.",
+      "id": "u64l09e09"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Why is it reassuring that searching an empty list does not crash?",
+      "options": [
+        "real lists are sometimes empty, and the search should calmly say 'not found'",
+        "empty lists are illegal",
+        "it speeds up the loop",
+        "it deletes the target"
+      ],
+      "answer": 0,
+      "explanation": "Empty data happens. A search handles it gracefully, returning False with no error.",
+      "id": "u64l09e10"
+    }
+  ]
+}

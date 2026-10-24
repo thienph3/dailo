@@ -1,0 +1,141 @@
+{
+  "unitId": "u58",
+  "lessonId": "u58l08",
+  "title": "Counting in real problems",
+  "idea": "Apply the count tool to everyday framings: passes, rainy days, in-stock items. Review-leaning.",
+  "exercises": [
+    {
+      "id": "u58l08e01",
+      "type": "multipleChoice",
+      "prompt": "A shop has stock counts [0, 3, 0, 5]. How many items are OUT of stock (equal to 0)?",
+      "options": [
+        "2",
+        "1",
+        "4",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "Two values are 0 — count 2. Rule: if stock == 0: count += 1."
+    },
+    {
+      "id": "u58l08e02",
+      "type": "orderBlocks",
+      "prompt": "Arrange: count how many days had rain (mm > 0) and print the count.",
+      "blocks": [
+        "print(count)",
+        "        count = count + 1",
+        "    if mm > 0:",
+        "for mm in rain:",
+        "count = 0",
+        "rain = [0, 5, 0, 2]"
+      ],
+      "answer": [
+        5,
+        4,
+        3,
+        2,
+        1,
+        0
+      ],
+      "explanation": "List, start count, loop, if (indent 1), +1 (indent 2), print. Rainy days: 5 and 2 -> 2."
+    },
+    {
+      "id": "u58l08e03",
+      "type": "multipleChoice",
+      "prompt": "votes = [1, 1, 2, 1]\ncount = 0\nfor v in votes:\n    if v == 1:\n        count = count + 1\nprint(count)\n\nHow many voted 1?",
+      "options": [
+        "3",
+        "1",
+        "4",
+        "2"
+      ],
+      "answer": 0,
+      "explanation": "Three of the four votes are 1. Count 3."
+    },
+    {
+      "id": "u58l08e04",
+      "type": "multipleChoice",
+      "prompt": "Which value must appear as a named variable (value-mapping habit)?",
+      "options": [
+        "The threshold in the rule (e.g. the pass mark 50)",
+        "Only the first item",
+        "None — hardcode",
+        "Only the count"
+      ],
+      "answer": 0,
+      "explanation": "Stated numbers like the pass mark become named variables so the code reads like the problem."
+    },
+    {
+      "id": "u58l08e05",
+      "type": "multipleChoice",
+      "prompt": "temps = [31, 29, 35, 30]\ncount = 0\nfor t in temps:\n    if t > 30:\n        count = count + 1\nprint(count)\n\nHow many days above 30?",
+      "options": [
+        "2",
+        "3",
+        "1",
+        "4"
+      ],
+      "answer": 0,
+      "explanation": "31 and 35 are above 30; 29 and 30 are not. Count 2."
+    },
+    {
+      "id": "u58l08e06",
+      "type": "trueFalse",
+      "prompt": "'How many pass?' is a count; 'what is the total score?' is a sum. Different tools.",
+      "answer": true,
+      "explanation": "Count for 'how many', sum for 'how much'. Choosing the right one is the skill."
+    },
+    {
+      "id": "u58l08e07",
+      "type": "multipleChoice",
+      "prompt": "A class has scores. You want how many FAILED (below 50). Which rule?",
+      "options": [
+        "if score < 50: count += 1",
+        "if score >= 50: count += 1",
+        "if score == 50: count += 1",
+        "count += score"
+      ],
+      "answer": 0,
+      "explanation": "'Failed' is below 50: score < 50."
+    },
+    {
+      "id": "u58l08e08",
+      "type": "multipleChoice",
+      "prompt": "sizes = [40, 42, 38, 42]\ncount = 0\nfor s in sizes:\n    if s == 42:\n        count = count + 1\nprint(count)\n\nHow many size 42?",
+      "options": [
+        "2",
+        "1",
+        "4",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "Two values equal 42. Count 2."
+    },
+    {
+      "id": "u58l08e09",
+      "type": "multipleChoice",
+      "prompt": "Why is counting-with-a-rule so common?",
+      "options": [
+        "Lots of questions are 'how many of these match?'",
+        "It only works for scores",
+        "It needs input()",
+        "It sorts data"
+      ],
+      "answer": 0,
+      "explanation": "Passes, defects, rainy days, in-stock items — all are 'how many match?' questions."
+    },
+    {
+      "id": "u58l08e10",
+      "type": "multipleChoice",
+      "prompt": "The three parts of a conditional count are...",
+      "options": [
+        "count = 0, a for-each loop with an if, count = count + 1 inside the if",
+        "print, input, if",
+        "range, append, len",
+        "a total only"
+      ],
+      "answer": 0,
+      "explanation": "Initialise, walk with a rule, add 1 per match."
+    }
+  ]
+}

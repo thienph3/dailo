@@ -1,0 +1,135 @@
+{
+  "unitId": "u21",
+  "lessonId": "u21l04",
+  "title": "The = vs == trap",
+  "idea": "Inside an if condition you must COMPARE with ==, not STORE with =. This classic trap gets its own lesson. Lots of careful thinking.",
+  "exercises": [
+    {
+      "id": "u21l04e01",
+      "type": "multipleChoice",
+      "prompt": "Inside an if condition, to check 'does x equal 5?', you write...",
+      "options": [
+        "if x == 5:",
+        "if x = 5:",
+        "if x := 5:",
+        "if x is 5"
+      ],
+      "answer": 0,
+      "explanation": "Use == (two signs) to compare inside a condition. One = would try to store, which is not allowed here."
+    },
+    {
+      "id": "u21l04e02",
+      "type": "multipleChoice",
+      "prompt": "What does one = mean (as in x = 5)?",
+      "options": [
+        "store 5 into x",
+        "ask if x equals 5",
+        "x is bigger than 5",
+        "x is not 5"
+      ],
+      "answer": 0,
+      "explanation": "One = STORES a value. To compare, you need two: ==."
+    },
+    {
+      "id": "u21l04e03",
+      "type": "multipleChoice",
+      "prompt": "What does two == mean (as in x == 5)?",
+      "options": [
+        "ask if x equals 5",
+        "store 5 into x",
+        "add 5 to x",
+        "print x"
+      ],
+      "answer": 0,
+      "explanation": "Two == COMPARES - it asks a yes/no question and gives a boolean."
+    },
+    {
+      "id": "u21l04e04",
+      "type": "trueFalse",
+      "prompt": "Writing if x = 5: is a mistake - a condition needs a comparison, so it should be ==.",
+      "answer": true,
+      "explanation": "Yes. = stores, == compares. An if condition must ask a question, so it needs ==."
+    },
+    {
+      "id": "u21l04e05",
+      "type": "fillBlank",
+      "prompt": "Fix the condition so it CHECKS whether level equals 10:\n\nif level ____ 10:\n    print(\"Max level\")",
+      "answer": "==",
+      "acceptable": [
+        "=="
+      ],
+      "explanation": "Use == to compare. One = would be a store, which doesn't belong in a condition."
+    },
+    {
+      "id": "u21l04e06",
+      "type": "matchPairs",
+      "prompt": "Match each line to its job.",
+      "pairs": [
+        {
+          "left": "x = 5",
+          "right": "stores 5 into x"
+        },
+        {
+          "left": "if x == 5:",
+          "right": "checks if x equals 5"
+        }
+      ],
+      "explanation": "The number of equals signs decides the job: one stores, two compares."
+    },
+    {
+      "id": "u21l04e07",
+      "type": "multipleChoice",
+      "prompt": "A learner writes:\n\nif pin = 1234:\n    print(\"Open\")\n\nWhat's wrong?",
+      "options": [
+        "The condition needs == to compare, not = to store",
+        "Nothing is wrong",
+        "print is misspelled",
+        "1234 is too big"
+      ],
+      "answer": 0,
+      "explanation": "A condition must compare. They need if pin == 1234:. One = tries to store and is a mistake here."
+    },
+    {
+      "id": "u21l04e08",
+      "type": "multipleChoice",
+      "prompt": "What does this print?\n\nx = 7\nif x == 7:\n    print(\"match\")",
+      "options": [
+        "match",
+        "nothing",
+        "7",
+        "True"
+      ],
+      "answer": 0,
+      "explanation": "First x = 7 stores 7. Then x == 7 compares: 7 == 7 is True, so match prints."
+    },
+    {
+      "id": "u21l04e09",
+      "type": "multiSelect",
+      "prompt": "Select ALL lines that COMPARE (ask a question).",
+      "options": [
+        "if a == b:",
+        "a = b",
+        "if a != b:",
+        "count = 0"
+      ],
+      "answer": [
+        0,
+        2
+      ],
+      "explanation": "== and != compare. A single = (a = b, count = 0) stores a value instead."
+    },
+    {
+      "id": "u21l04e10",
+      "type": "multipleChoice",
+      "prompt": "Why is the = vs == trap worth extra care?",
+      "options": [
+        "They look almost identical but do opposite jobs: store vs compare",
+        "They are truly the same",
+        "== never works",
+        "= is banned everywhere"
+      ],
+      "answer": 0,
+      "explanation": "One tiny extra = flips storing into comparing. Keeping them straight prevents a very common bug."
+    }
+  ]
+}

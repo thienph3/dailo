@@ -1,0 +1,140 @@
+{
+  "unitId": "u86",
+  "lessonId": "u86l03",
+  "title": "Some sub-problems feed others",
+  "idea": "MEET: sub-problems are not always independent — one often needs the RESULT of another, and that dependency decides the order.",
+  "exercises": [
+    {
+      "type": "multipleChoice",
+      "prompt": "PROBLEM: 'Average the scores.' Split into 'total the scores' and 'divide by the count'. Which depends on which?",
+      "options": [
+        "'divide by the count' needs the total first",
+        "'total the scores' needs the average first",
+        "They don't depend on each other",
+        "Neither can be done"
+      ],
+      "answer": 0,
+      "explanation": "You can't divide to get the average until you HAVE the total. The divide step depends on the total step.",
+      "id": "u86l03e01"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Some sub-problems need the result of an earlier sub-problem before they can run.",
+      "answer": true,
+      "explanation": "Yes — that's a dependency. The average needs the total; the final bill needs the subtotal. Order follows the dependency.",
+      "id": "u86l03e02"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "PROBLEM: 'Show the subtotal, then add a 5% fee to get the final.' The 'add fee' sub-problem...",
+      "options": [
+        "needs the subtotal first",
+        "needs the final first",
+        "needs nothing",
+        "comes before the subtotal"
+      ],
+      "answer": 0,
+      "explanation": "You can only add a fee once you know the subtotal. 'Add fee' depends on 'compute subtotal'.",
+      "id": "u86l03e03"
+    },
+    {
+      "type": "multiSelect",
+      "prompt": "Select the pairs where the SECOND sub-problem depends on the FIRST.",
+      "options": [
+        "total the list -> divide to get the average",
+        "compute subtotal -> add a fee to it",
+        "filter the big orders -> count the filtered ones",
+        "total the list -> count the list"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "The first three feed a result forward. The last two (total, count) are independent — neither needs the other's result.",
+      "id": "u86l03e04"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Why does a dependency decide the ORDER of sub-problems?",
+      "options": [
+        "A step that needs another's result must come AFTER it",
+        "Order never matters",
+        "The computer picks randomly",
+        "Dependencies make order impossible"
+      ],
+      "answer": 0,
+      "explanation": "If step B uses step A's result, A must run first. Dependencies turn a list of parts into an ordered list.",
+      "id": "u86l03e05"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Two sub-problems that don't share any results can be done in either order.",
+      "answer": true,
+      "explanation": "Yes — if neither needs the other's result, either order works. Only a shared result (a dependency) forces one to come first.",
+      "id": "u86l03e06"
+    },
+    {
+      "type": "matchPairs",
+      "prompt": "Match each sub-problem to what it needs first.",
+      "pairs": [
+        {
+          "left": "divide to get the average",
+          "right": "the total and the count"
+        },
+        {
+          "left": "add a fee",
+          "right": "the subtotal"
+        },
+        {
+          "left": "decide pass/fail",
+          "right": "the average"
+        }
+      ],
+      "explanation": "Each 'later' sub-problem needs an 'earlier' result. Spotting that is how you order the list.",
+      "id": "u86l03e07"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "PROBLEM: 'Average the passing scores.' Which must come LAST?",
+      "options": [
+        "divide the passing total by the passing count",
+        "filter the passing scores",
+        "total the passing scores",
+        "count the passing scores"
+      ],
+      "answer": 0,
+      "explanation": "You can only divide once you have BOTH the passing total and the passing count — so the divide is last.",
+      "id": "u86l03e08"
+    },
+    {
+      "type": "orderBlocks",
+      "prompt": "Order these sub-problems for 'average the passing scores'.",
+      "blocks": [
+        "Filter out the passing scores",
+        "Total the passing scores (and count them)",
+        "Divide the total by the count"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Filter first (you need the passers), total/count them, then divide. Each step feeds the next.",
+      "id": "u86l03e09"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "The big idea:",
+      "options": [
+        "A sub-problem that needs another's result must come after it — dependencies set the order",
+        "All sub-problems are independent",
+        "Order never matters",
+        "Later steps come first"
+      ],
+      "answer": 0,
+      "explanation": "Decomposition isn't just a list — it's an ORDERED list, and dependencies decide that order.",
+      "id": "u86l03e10"
+    }
+  ]
+}

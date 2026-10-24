@@ -1,0 +1,121 @@
+{
+  "unitId": "u34",
+  "lessonId": "u34l05",
+  "title": "Loop back: edge cases and guards",
+  "idea": "LOOP. No new concept. Review the edge-case habit: zero, empty, and boundary values handled with a guard before the main logic.",
+  "exercises": [
+    {
+      "id": "u34l05e01",
+      "type": "multipleChoice",
+      "prompt": "What prints?\n\ncount = 0\nif count == 0:\n    print(\"Nothing to show\")\nelse:\n    print(\"Showing items\")",
+      "options": [
+        "Nothing to show",
+        "Showing items",
+        "0",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "count is 0, so the guard runs first and prints the special message. (Review of zero guards.)"
+    },
+    {
+      "id": "u34l05e02",
+      "type": "trueFalse",
+      "prompt": "Handling the zero or empty case first is a good habit before the main calculation.",
+      "answer": true,
+      "explanation": "A guard catches the tricky edge up front so the main logic stays simple. (Review of edge-case habit.)"
+    },
+    {
+      "id": "u34l05e03",
+      "type": "multipleChoice",
+      "prompt": "Why guard against dividing when a count is 0?",
+      "options": [
+        "Dividing by zero is an error, so you handle 0 separately",
+        "Zero is a large number",
+        "Division is always wrong",
+        "There is no reason"
+      ],
+      "answer": 0,
+      "explanation": "You cannot divide by zero, so the 0 case needs its own branch. (Review of guards.)"
+    },
+    {
+      "id": "u34l05e04",
+      "type": "multipleChoice",
+      "prompt": "A shop gives free shipping for 'spend 50 or more'. For exactly 50, which test is correct?",
+      "options": [
+        "total >= 50",
+        "total > 50",
+        "total == 50 only",
+        "total < 50"
+      ],
+      "answer": 0,
+      "explanation": "'50 or more' includes 50, so >=. Using > would wrongly charge the exact-50 cart. (Review of boundaries.)"
+    },
+    {
+      "id": "u34l05e05",
+      "type": "fillBlank",
+      "prompt": "Fill the guard so a 0 apple order is handled first:\n\nif apples ____ 0:\n    print(\"No apples\")\nelse:\n    print(\"Some apples\")",
+      "answer": "==",
+      "acceptable": ["=="],
+      "explanation": "== 0 catches the empty order before the main case. (Review of == and guards.)"
+    },
+    {
+      "id": "u34l05e06",
+      "type": "multipleChoice",
+      "prompt": "What prints?\n\nn = 12\nif n % 2 == 0:\n    print(\"Even\")\nelse:\n    print(\"Odd\")",
+      "options": [
+        "Even",
+        "Odd",
+        "12",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "12 % 2 is 0, so 'Even'. (Review of % for even/odd.)"
+    },
+    {
+      "id": "u34l05e07",
+      "type": "multipleChoice",
+      "prompt": "Which value is the trickiest to test for a '% 2 == 0' even check?",
+      "options": [
+        "0 - make sure 0 is treated as even",
+        "1000",
+        "7",
+        "99"
+      ],
+      "answer": 0,
+      "explanation": "0 % 2 is 0, so 0 is even - an easy edge to overlook. Test it on purpose. (Review of edge testing.)"
+    },
+    {
+      "id": "u34l05e08",
+      "type": "trueFalse",
+      "prompt": "A program that works for typical inputs is guaranteed to work for edge values like 0 or the exact boundary.",
+      "answer": false,
+      "explanation": "Edges often behave differently. Always test 0, empty, and boundary values. (Review of edge-case habit.)"
+    },
+    {
+      "id": "u34l05e09",
+      "type": "multipleChoice",
+      "prompt": "What prints?\n\nstock = 3\nif stock <= 0:\n    print(\"Out of stock\")\nelse:\n    print(f\"{stock} left\")",
+      "options": [
+        "3 left",
+        "Out of stock",
+        "stock left",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "3 is not <= 0, so the else uses an f-string: '3 left'. The guard protects the empty case. (Review of guards + f-strings.)"
+    },
+    {
+      "id": "u34l05e10",
+      "type": "multipleChoice",
+      "prompt": "For the stock code above, what prints when stock = 0?",
+      "options": [
+        "Out of stock",
+        "0 left",
+        "An error",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "0 <= 0 is true, so the guard runs: 'Out of stock'. The edge is handled correctly. (Review of boundary guards.)"
+    }
+  ]
+}

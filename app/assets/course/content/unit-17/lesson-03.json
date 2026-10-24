@@ -1,0 +1,133 @@
+{
+  "unitId": "u17",
+  "lessonId": "u17l03",
+  "title": "Report the change from a payment",
+  "idea": "GUIDED PROBLEM. Subtract in the right order, then present the change as a clear message. Walked through UEPCC.",
+  "problem": "A toy costs 7. A child pays with 10. Show a message like: Your change is 3.",
+  "exercises": [
+    {
+      "id": "u17l03e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: a toy costs 7, paid with 10. Show a message like 'Your change is 3.'\n\nUnderstand. What is the OUTPUT?",
+      "options": [
+        "A message showing the change owed back",
+        "The price of the toy only",
+        "How much was paid only",
+        "The word 'change'"
+      ],
+      "answer": 0,
+      "explanation": "The output is a message with the change. Start by naming what you must produce."
+    },
+    {
+      "id": "u17l03e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "What are the INPUTS?",
+      "options": [
+        "The toy's price (7) and the amount paid (10)",
+        "Only the number 3",
+        "The word 'toy'",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "Inputs are the price and the amount paid. Both numbers from the problem become named values."
+    },
+    {
+      "id": "u17l03e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example by hand. Paid 10 for a 7 toy. What change comes back?",
+      "options": ["3", "17", "-3", "70"],
+      "answer": 0,
+      "explanation": "10 - 7 = 3. This is your check value, and the order (paid minus price) matters."
+    },
+    {
+      "id": "u17l03e04",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Plan. Change is 'paid minus price' — NOT 'price minus paid'. Why does the order matter here?",
+      "options": [
+        "Subtraction is not reversible: 10 - 7 is 3, but 7 - 10 is -3",
+        "Subtraction gives the same answer either way",
+        "The order never matters for any operation",
+        "Because 7 is smaller than 10"
+      ],
+      "answer": 0,
+      "explanation": "For subtraction, order flips the sign. paid - price gives the real change; price - paid gives a wrong negative."
+    },
+    {
+      "id": "u17l03e05",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Order the plain-English steps.",
+      "blocks": [
+        "Subtract the price from the amount paid to get the change",
+        "Remember the price and the amount paid",
+        "Show a message with the change"
+      ],
+      "answer": [1, 0, 2],
+      "explanation": "Remember the values, subtract in the right order, then present the change."
+    },
+    {
+      "id": "u17l03e06",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code. Arrange the lines to match the plan.",
+      "blocks": [
+        "change = paid - toy_price",
+        "toy_price = 7",
+        "paid = 10",
+        "print(f\"Your change is {change}.\")"
+      ],
+      "answer": [1, 2, 0, 3],
+      "explanation": "Store the price, store the paid amount, compute change as paid - toy_price, then print it."
+    },
+    {
+      "id": "u17l03e07",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Fill the blank so change is 3:\n\ntoy_price = 7\npaid = 10\nchange = ____ - toy_price\nprint(f\"Your change is {change}.\")",
+      "answer": "paid",
+      "acceptable": ["paid"],
+      "explanation": "paid - toy_price = 10 - 7 = 3. Correct order gives the right change."
+    },
+    {
+      "id": "u17l03e08",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "A classmate wrote change = toy_price - paid. With price 7 and paid 10, what prints?",
+      "options": [
+        "Your change is -3. — wrong, the order is backwards",
+        "Your change is 3. — correct",
+        "Your change is 17. — correct",
+        "Nothing prints"
+      ],
+      "answer": 0,
+      "explanation": "7 - 10 = -3. The subtraction is flipped. Checking against the hand example (3) catches this instantly."
+    },
+    {
+      "id": "u17l03e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Your correct code prints 'Your change is 3.' Hand example said 3. Verdict?",
+      "options": ["Passes", "Fails", "Unknown", "Rewrite the example"],
+      "answer": 0,
+      "explanation": "Output matches the hand example, so the solution is correct."
+    },
+    {
+      "id": "u17l03e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "New inputs: toy_price = 6, paid = 20. What message prints from change = paid - toy_price?",
+      "options": [
+        "Your change is 14.",
+        "Your change is -14.",
+        "Your change is 26.",
+        "Your change is 6."
+      ],
+      "answer": 0,
+      "explanation": "20 - 6 = 14. Works for new numbers, so the solution generalizes."
+    }
+  ]
+}

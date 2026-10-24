@@ -1,0 +1,129 @@
+{
+  "unitId": "u29",
+  "lessonId": "u29l04",
+  "title": "Which word is it? a chain of matches",
+  "idea": "Use if/elif/else to react differently to each of several possible words. Predict which branch a given word triggers.",
+  "exercises": [
+    {
+      "id": "u29l04e01",
+      "type": "multipleChoice",
+      "prompt": "To react differently to \"red\", \"green\", or \"yellow\", the natural structure is...",
+      "options": [
+        "if color == \"red\" ... elif color == \"green\" ... elif color == \"yellow\" ... else",
+        "a single ==",
+        "one if with and",
+        "no if at all"
+      ],
+      "answer": 0,
+      "explanation": "Each word gets its own branch in an if/elif chain, with else catching anything unexpected."
+    },
+    {
+      "id": "u29l04e02",
+      "type": "multipleChoice",
+      "prompt": "What does this print?\n\ncolor = \"green\"\nif color == \"red\":\n    print(\"Stop\")\nelif color == \"green\":\n    print(\"Go\")\nelse:\n    print(\"Wait\")",
+      "options": [
+        "Go",
+        "Stop",
+        "Wait",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "\"green\" fails the red test but matches the green elif, so \"Go\" prints."
+    },
+    {
+      "id": "u29l04e03",
+      "type": "multipleChoice",
+      "prompt": "Same code, color = \"blue\". What prints?",
+      "options": [
+        "Wait",
+        "Stop",
+        "Go",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "\"blue\" matches neither named branch, so the else catches it: \"Wait\"."
+    },
+    {
+      "id": "u29l04e04",
+      "type": "multipleChoice",
+      "prompt": "Why is the else branch important here?",
+      "options": [
+        "It handles any word you did not expect, so the program always responds",
+        "It is just decoration",
+        "It speeds things up",
+        "It is never reached"
+      ],
+      "answer": 0,
+      "explanation": "Users can type anything. The else is a safety net for words outside your known list."
+    },
+    {
+      "id": "u29l04e05",
+      "type": "orderBlocks",
+      "prompt": "Arrange a command handler: \"go\" prints \"Moving\", \"stop\" prints \"Halting\", anything else prints \"Unknown\".",
+      "blocks": [
+        "if cmd == \"go\":",
+        "    print(\"Moving\")",
+        "elif cmd == \"stop\":",
+        "    print(\"Halting\")",
+        "else:",
+        "    print(\"Unknown\")"
+      ],
+      "answer": [0, 1, 2, 3, 4, 5],
+      "explanation": "One branch per command, else for anything unrecognized. The chain reacts to which word it got."
+    },
+    {
+      "id": "u29l04e06",
+      "type": "fillBlank",
+      "prompt": "Fill the keyword so the \"stop\" test only runs if \"go\" did not match:\n\nif cmd == \"go\":\n    print(\"Moving\")\n____ cmd == \"stop\":\n    print(\"Halting\")",
+      "answer": "elif",
+      "acceptable": ["elif"],
+      "explanation": "'elif' chains the next word test, running only when the earlier one failed."
+    },
+    {
+      "id": "u29l04e07",
+      "type": "multipleChoice",
+      "prompt": "For the command handler, cmd = \"stop\" prints...",
+      "options": [
+        "Halting",
+        "Moving",
+        "Unknown",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "\"stop\" fails the \"go\" test but matches the \"stop\" elif, so \"Halting\" prints."
+    },
+    {
+      "id": "u29l04e08",
+      "type": "trueFalse",
+      "prompt": "An if/elif chain on words stops at the first word that matches.",
+      "answer": true,
+      "explanation": "Yes - like any if/elif chain, the first true branch runs and the rest are skipped. Only one message appears."
+    },
+    {
+      "id": "u29l04e09",
+      "type": "multipleChoice",
+      "prompt": "If two branches test the same word, which runs?",
+      "options": [
+        "Only the first one - the chain stops there",
+        "Both",
+        "The second",
+        "Neither"
+      ],
+      "answer": 0,
+      "explanation": "The chain stops at the first match, so a duplicate later branch is unreachable - a sign to clean up the logic."
+    },
+    {
+      "id": "u29l04e10",
+      "type": "multipleChoice",
+      "prompt": "The main idea:",
+      "options": [
+        "Chain word tests with if/elif/else to react to each possible word, else for the rest",
+        "Use only one ==",
+        "Words cannot be chained",
+        "Always use and"
+      ],
+      "answer": 0,
+      "explanation": "A word menu maps cleanly onto an if/elif/else chain, with else as the catch-all. That is how programs read commands."
+    }
+  ]
+}

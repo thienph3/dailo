@@ -1,0 +1,123 @@
+{
+  "unitId": "u05",
+  "lessonId": "u05l02",
+  "title": "Reading the expected output",
+  "idea": "Before you check, you need a clear expected output — the exact lines you want to see.",
+  "exercises": [
+    {
+      "id": "u05l02e01",
+      "type": "multipleChoice",
+      "prompt": "Your expected output is written as:\n\nHello\nWorld\n\nHow many lines did you expect?",
+      "options": [
+        "2 lines",
+        "1 line",
+        "3 lines",
+        "0 lines"
+      ],
+      "answer": 0,
+      "explanation": "Hello on one line, World on the next. Two lines expected."
+    },
+    {
+      "id": "u05l02e02",
+      "type": "multipleChoice",
+      "prompt": "A task says 'print your name, then your city'. Which expected output fits?\n\n(Your name is Sam, your city is Hue.)",
+      "options": [
+        "Sam\nHue",
+        "Hue\nSam",
+        "Sam Hue",
+        "SamHue"
+      ],
+      "answer": 0,
+      "explanation": "Name first, then city, each on its own line: Sam, then Hue. That's your expected output."
+    },
+    {
+      "id": "u05l02e03",
+      "type": "trueFalse",
+      "prompt": "The expected output should say exactly which lines you want, in order.",
+      "answer": true,
+      "explanation": "A clear expected output lists the exact lines, in the exact order. That's what you compare against."
+    },
+    {
+      "id": "u05l02e04",
+      "type": "multipleChoice",
+      "prompt": "This code is meant to run:\n\nprint(\"Ready\")\nprint(\"Set\")\nprint(\"Go\")\n\nWhat is the expected output?",
+      "options": [
+        "Ready\nSet\nGo",
+        "Go\nSet\nReady",
+        "Ready Set Go",
+        "ReadySetGo"
+      ],
+      "answer": 0,
+      "explanation": "Three prints, three lines, top to bottom: Ready, Set, Go."
+    },
+    {
+      "id": "u05l02e05",
+      "type": "orderBlocks",
+      "prompt": "The expected output is: One, then Two, then Three. Arrange the print lines to produce it.",
+      "blocks": [
+        "print(\"One\")",
+        "print(\"Two\")",
+        "print(\"Three\")"
+      ],
+      "answer": [0, 1, 2],
+      "explanation": "Lines print top to bottom, so order them One, Two, Three to match the expected output."
+    },
+    {
+      "id": "u05l02e06",
+      "type": "trueFalse",
+      "prompt": "If you don't know the expected output, you can't do the Check.",
+      "answer": true,
+      "explanation": "The Check compares real output to expected output. No expected output, nothing to compare."
+    },
+    {
+      "id": "u05l02e07",
+      "type": "multipleChoice",
+      "prompt": "Expected output:\n\nApple\nBanana\n\nWhich print lines match it?",
+      "options": [
+        "print(\"Apple\")\nprint(\"Banana\")",
+        "print(\"Banana\")\nprint(\"Apple\")",
+        "print(\"Apple Banana\")",
+        "print(\"Fruit\")"
+      ],
+      "answer": 0,
+      "explanation": "Apple first, Banana second, each its own line. The first option matches exactly."
+    },
+    {
+      "id": "u05l02e08",
+      "type": "multipleChoice",
+      "prompt": "Why write the expected output down before running the code?",
+      "options": [
+        "So you have something clear to compare the real output against",
+        "To make the code run",
+        "To skip the Check",
+        "Because print needs it"
+      ],
+      "answer": 0,
+      "explanation": "A written expected output gives you a target. Then the Check is just 'does the real output match this?'"
+    },
+    {
+      "id": "u05l02e09",
+      "type": "matchPairs",
+      "prompt": "Match each code line to the expected line it produces.",
+      "pairs": [
+        { "left": "print(\"Cat\")", "right": "Cat" },
+        { "left": "print(\"Dog\")", "right": "Dog" },
+        { "left": "print()", "right": "(a blank line)" }
+      ],
+      "explanation": "Each print produces one line. print() with nothing gives a blank line. This is how you predict expected output."
+    },
+    {
+      "id": "u05l02e10",
+      "type": "multipleChoice",
+      "prompt": "A friend says 'the expected output is whatever the program prints.' Are they right?",
+      "options": [
+        "No — expected output is what you WANT; real output is what the program prints",
+        "Yes, they are the same thing",
+        "Only for blank lines",
+        "Only on the first run"
+      ],
+      "answer": 0,
+      "explanation": "They're different. Expected = what you want. Real = what actually happened. Mixing them up defeats the Check."
+    }
+  ]
+}

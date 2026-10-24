@@ -1,0 +1,136 @@
+{
+  "unitId": "u89",
+  "lessonId": "u89l04",
+  "title": "Two counters: passes and fails",
+  "idea": "TOOL: keep two counters driven by a condition - one counts the yes group, one the no group.",
+  "exercises": [
+    {
+      "type": "multipleChoice",
+      "prompt": "You walk a list of scores and want how many PASS (>= 50) and how many FAIL. What do you keep?",
+      "options": [
+        "Two counters - passes and fails - updated by an if/else",
+        "One counter for everything",
+        "A total only",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "Each item is either a pass or a fail, so an if/else bumps the matching counter. Two running counts.",
+      "id": "u89l04e01"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\npasses = 0\nfails = 0\nfor s in [80, 30, 60]:\n    if s >= 50:\n        passes = passes + 1\n    else:\n        fails = fails + 1\nprint(passes, fails)",
+      "options": [
+        "2 1",
+        "1 2",
+        "3 0",
+        "2 2"
+      ],
+      "answer": 0,
+      "explanation": "80 and 60 pass (2), 30 fails (1). The if/else sends each score to exactly one counter.",
+      "id": "u89l04e02"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "With an if/else, each item adds to exactly ONE of the two counters, never both.",
+      "answer": true,
+      "explanation": "True. else runs only when if did not, so each item lands in one group. passes + fails equals the item count.",
+      "id": "u89l04e03"
+    },
+    {
+      "type": "fillBlank",
+      "prompt": "Complete the fail counter:\n\npasses = 0\nfails = 0\nfor s in [40, 90]:\n    if s >= 50:\n        passes = passes + 1\n    else:\n        fails = ____ + 1\nprint(passes, fails)",
+      "answer": "fails",
+      "acceptable": [
+        "fails"
+      ],
+      "explanation": "fails = fails + 1 grows the fail counter. Output here: 1 1.",
+      "id": "u89l04e04"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "If you used two separate 'if' statements instead of if/else, when could that go wrong?",
+      "options": [
+        "If the two conditions could both be true, an item might get counted twice",
+        "It never matters",
+        "Two ifs are always wrong",
+        "if/else is slower"
+      ],
+      "answer": 0,
+      "explanation": "if/else guarantees exactly one branch. Two overlapping ifs could count one item in both groups. For pass/fail, if/else keeps them exclusive.",
+      "id": "u89l04e05"
+    },
+    {
+      "type": "orderBlocks",
+      "prompt": "Arrange a loop that counts passes (>=50) and fails in [55, 20].",
+      "blocks": [
+        "passes = 0",
+        "fails = 0",
+        "for s in [55, 20]:",
+        "    if s >= 50:",
+        "        passes = passes + 1",
+        "    else:",
+        "        fails = fails + 1",
+        "print(passes, fails)"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "explanation": "Start both at 0, branch each score, print. Output: 1 1.",
+      "id": "u89l04e06"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\npasses = 0\nfails = 0\nfor s in [100, 100, 100]:\n    if s >= 50:\n        passes = passes + 1\n    else:\n        fails = fails + 1\nprint(passes, fails)",
+      "options": [
+        "3 0",
+        "0 3",
+        "3 3",
+        "1 0"
+      ],
+      "answer": 0,
+      "explanation": "All three pass, so passes = 3 and fails stays 0. The else branch never runs.",
+      "id": "u89l04e07"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "What is a quick sanity check on your two counters after the loop?",
+      "options": [
+        "passes + fails should equal how many items you walked",
+        "passes should equal fails",
+        "Both should be 0",
+        "The total should be bigger than both"
+      ],
+      "answer": 0,
+      "explanation": "Every item went to exactly one group, so the two counters must add up to the item count. A mismatch means a bug.",
+      "id": "u89l04e08"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Two counters are just two running variables, each updated when its own condition holds.",
+      "answer": true,
+      "explanation": "True. It is the same multiple-state idea: more than one running value, each with its own update rule.",
+      "id": "u89l04e09"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "The pattern this lesson teaches:",
+      "options": [
+        "Split items into groups with if/else and count each group separately",
+        "Count everything with one variable",
+        "Avoid else",
+        "Sort before counting"
+      ],
+      "answer": 0,
+      "explanation": "Grouped counting with if/else and two counters is an everyday use of multiple state variables.",
+      "id": "u89l04e10"
+    }
+  ]
+}

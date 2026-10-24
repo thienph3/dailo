@@ -1,0 +1,139 @@
+{
+  "unitId": "u71",
+  "lessonId": "u71l09",
+  "title": "Make it print what we want",
+  "idea": "TOOL: given a target output, define and/or call sub-plans to produce it. Thinking + a little code.",
+  "exercises": [
+    {
+      "id": "u71l09e01",
+      "type": "multipleChoice",
+      "prompt": "GOAL: print 'Hi' then 'Bye'. You have def greet() (prints 'Hi') and def bye() (prints 'Bye'). What calls do you add?",
+      "options": [
+        "greet() then bye()",
+        "bye() then greet()",
+        "only greet()",
+        "no calls"
+      ],
+      "answer": 0,
+      "explanation": "Call greet() first for 'Hi', then bye() for 'Bye'. Call order controls output order."
+    },
+    {
+      "id": "u71l09e02",
+      "type": "orderBlocks",
+      "prompt": "Arrange calls to print the target:\nHi\nHi\nBye\n(greet prints 'Hi', bye prints 'Bye')",
+      "blocks": [
+        "bye()",
+        "greet()",
+        "greet()"
+      ],
+      "answer": [
+        1,
+        2,
+        0
+      ],
+      "explanation": "Two greet() calls make 'Hi' twice, then bye() makes 'Bye'. Match the calls to the target lines."
+    },
+    {
+      "id": "u71l09e03",
+      "type": "multipleChoice",
+      "prompt": "GOAL: a star border, a title, a star border. You have def line() (prints '****'). What's the cleanest way?",
+      "options": [
+        "call line(), print the title, call line() again",
+        "define line twice then call once",
+        "print stars by hand each time",
+        "call line() once only"
+      ],
+      "answer": 0,
+      "explanation": "Reuse the one line() sub-plan: call it, show the title, call it again. Define once, call twice."
+    },
+    {
+      "id": "u71l09e04",
+      "type": "fillBlank",
+      "prompt": "You defined greet (prints 'Hi') but nothing showed. Add the missing line:\n\ndef greet():\n    print(\"Hi\")\n____",
+      "answer": "greet()",
+      "acceptable": [
+        "greet()"
+      ],
+      "explanation": "The call greet() was missing. Defining alone prints nothing - the call runs the body and shows 'Hi'."
+    },
+    {
+      "id": "u71l09e05",
+      "type": "multipleChoice",
+      "prompt": "GOAL: print 'Hi' three times, but you must only DEFINE greet once. How?",
+      "options": [
+        "call greet() three times",
+        "define greet three times",
+        "call greet() once",
+        "use three different names"
+      ],
+      "answer": 0,
+      "explanation": "One def, three calls. 'Define once, call many' gives three 'Hi's without repeating the definition."
+    },
+    {
+      "id": "u71l09e06",
+      "type": "trueFalse",
+      "prompt": "To change the border text everywhere, you edit the body of line() once.",
+      "answer": true,
+      "explanation": "Yes. One definition means one place to edit. Every call to line() then shows the updated border."
+    },
+    {
+      "id": "u71l09e07",
+      "type": "multipleChoice",
+      "prompt": "A program prints 'Bye' then 'Hi' but you wanted 'Hi' then 'Bye'. The fix is to...",
+      "options": [
+        "swap the order of the two calls",
+        "delete the defs",
+        "add a loop",
+        "rename greet"
+      ],
+      "answer": 0,
+      "explanation": "Output order follows call order. Swap the calls so greet() runs before bye() to get 'Hi' then 'Bye'."
+    },
+    {
+      "id": "u71l09e08",
+      "type": "matchPairs",
+      "prompt": "Match each target to the calls that produce it (hi->'Hi', bo->border line).",
+      "pairs": [
+        {
+          "left": "Hi",
+          "right": "hi()"
+        },
+        {
+          "left": "border, Hi, border",
+          "right": "bo(), hi(), bo()"
+        },
+        {
+          "left": "Hi, Hi",
+          "right": "hi(), hi()"
+        }
+      ],
+      "explanation": "Design the calls to match the target output. Reuse one sub-plan with repeated calls where lines repeat."
+    },
+    {
+      "id": "u71l09e09",
+      "type": "multipleChoice",
+      "prompt": "Your program's output doesn't match the goal. The FIRST thing to check is...",
+      "options": [
+        "whether every sub-plan is actually called, in the right order",
+        "the colour of the screen",
+        "the file name",
+        "the size of numbers"
+      ],
+      "answer": 0,
+      "explanation": "Check the calls: present? right order? right count? Most mismatches are a missing or mis-ordered call."
+    },
+    {
+      "id": "u71l09e10",
+      "type": "multipleChoice",
+      "prompt": "You can now take a target output and...",
+      "options": [
+        "choose which sub-plans to call, and in what order, to produce it",
+        "only define, never call",
+        "avoid sub-plans",
+        "print randomly"
+      ],
+      "answer": 0,
+      "explanation": "Given a goal, you define the jobs and arrange the calls to hit it. That's using def and call to solve a task."
+    }
+  ]
+}

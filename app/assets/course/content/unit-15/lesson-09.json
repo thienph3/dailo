@@ -1,0 +1,132 @@
+{
+  "unitId": "u15",
+  "lessonId": "u15l09",
+  "title": "Spot the string bug",
+  "idea": "The common string mistakes: missing f, missing braces, quotes on a variable, lost spaces.",
+  "exercises": [
+    {
+      "id": "u15l09e01",
+      "type": "multipleChoice",
+      "prompt": "This should show Hi Mia but doesn't. What's wrong?\n\nname = \"Mia\"\nprint(\"Hi {name}\")",
+      "options": [
+        "The f is missing, so {name} shows as plain text",
+        "Missing a bracket",
+        "name should be a number",
+        "Nothing is wrong"
+      ],
+      "answer": 0,
+      "explanation": "Without the f, braces are just characters: Hi {name}. Add the f: print(f\"Hi {name}\")."
+    },
+    {
+      "id": "u15l09e02",
+      "type": "multipleChoice",
+      "prompt": "This should show Hi Mia but doesn't. What's wrong?\n\nname = \"Mia\"\nprint(f\"Hi name\")",
+      "options": [
+        "name needs braces around it",
+        "The f should be removed",
+        "Missing a quote",
+        "Nothing is wrong"
+      ],
+      "answer": 0,
+      "explanation": "The f is there, but there are no braces, so 'name' is plain text: Hi name. Wrap it: {name}."
+    },
+    {
+      "id": "u15l09e03",
+      "type": "multipleChoice",
+      "prompt": "This should show Hello Mia but shows Hello name. What's wrong?\n\nname = \"Mia\"\nprint(\"Hello \" + \"name\")",
+      "options": [
+        "The quotes around name make it plain text, not the variable",
+        "Missing a space",
+        "The + is wrong",
+        "Nothing is wrong"
+      ],
+      "answer": 0,
+      "explanation": "\"name\" in quotes is the literal word. Drop the quotes: \"Hello \" + name to use the stored value."
+    },
+    {
+      "id": "u15l09e04",
+      "type": "multipleChoice",
+      "prompt": "This shows HelloMia but should show Hello Mia. What's missing?\n\nname = \"Mia\"\nprint(\"Hello\" + name)",
+      "options": [
+        "A space, either in \"Hello \" or as \" \" between",
+        "The f",
+        "A bracket",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "+ joins exactly. Add the space: \"Hello \" + name, or \"Hello\" + \" \" + name."
+    },
+    {
+      "id": "u15l09e05",
+      "type": "trueFalse",
+      "prompt": "Forgetting the f before the quote is one of the most common f-string mistakes.",
+      "answer": true,
+      "explanation": "No f means no magic — the braces just print as text. Always check for the f first."
+    },
+    {
+      "id": "u15l09e06",
+      "type": "multipleChoice",
+      "prompt": "What does this actually show?\n\nscore = 10\nprint(\"Score: {score}\")",
+      "options": [
+        "Score: {score}",
+        "Score: 10",
+        "Score: score",
+        "10"
+      ],
+      "answer": 0,
+      "explanation": "No f, so the braces are literal: Score: {score}. With the f it would be Score: 10."
+    },
+    {
+      "id": "u15l09e07",
+      "type": "fillBlank",
+      "prompt": "Fix this so it shows Score: 10. Add the missing letter.\n\nscore = 10\nprint(____\"Score: {score}\")",
+      "answer": "f",
+      "acceptable": [
+        "f"
+      ],
+      "explanation": "The f switches on the braces: f\"Score: {score}\" shows Score: 10."
+    },
+    {
+      "id": "u15l09e08",
+      "type": "multipleChoice",
+      "prompt": "Which line is correct for showing Hi Mia?\n\nname = \"Mia\"",
+      "options": [
+        "print(f\"Hi {name}\")",
+        "print(\"Hi {name}\")",
+        "print(f\"Hi name\")",
+        "print(f\"Hi\" {name})"
+      ],
+      "answer": 0,
+      "explanation": "f on, braces around name: f\"Hi {name}\". The others miss the f, the braces, or the quotes."
+    },
+    {
+      "id": "u15l09e09",
+      "type": "multiSelect",
+      "prompt": "name holds \"Mia\". Which of these show the exact text: Hi, name (the literal word name, not Mia)? (pick all)",
+      "options": [
+        "print(\"Hi, name\")",
+        "print(f\"Hi, name\")",
+        "print(f\"Hi, {name}\")",
+        "print(\"Hi, \" + name)"
+      ],
+      "answer": [
+        0,
+        1
+      ],
+      "explanation": "Both of those have no braces around a variable, so 'name' stays literal text. The last two show Hi, Mia."
+    },
+    {
+      "id": "u15l09e10",
+      "type": "multipleChoice",
+      "prompt": "Best habit for catching string bugs before running?",
+      "options": [
+        "Read it out loud and check each space, quote, brace, and the f",
+        "Run it many times quickly",
+        "Add more + signs",
+        "Remove all spaces"
+      ],
+      "answer": 0,
+      "explanation": "Slow reading catches most of these. The computer shows exactly what you wrote — so check exactly what you wrote."
+    }
+  ]
+}

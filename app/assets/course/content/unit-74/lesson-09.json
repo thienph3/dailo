@@ -1,0 +1,128 @@
+{
+  "unitId": "u74",
+  "lessonId": "u74l09",
+  "title": "Rewriting a print-sub-plan to return",
+  "idea": "return vs print: practice converting a show-only sub-plan into a compute-and-return one, then printing in the main plan.",
+  "exercises": [
+    {
+      "id": "u74l09e01",
+      "type": "multipleChoice",
+      "prompt": "Start:\n\ndef area(w, h):\n    print(w * h)\n\nYou now need the area to add a border later. First change?",
+      "options": [
+        "Replace 'print(w * h)' with 'return w * h'",
+        "Add another print",
+        "Rename area to border",
+        "Delete the parameters"
+      ],
+      "answer": 0,
+      "explanation": "Switch print to return so the area comes back as a value you can add to. That's the core conversion."
+    },
+    {
+      "id": "u74l09e02",
+      "type": "orderBlocks",
+      "prompt": "Arrange the converted program: area RETURNS w * h, store area(5, 2), add border 3, print the result.",
+      "blocks": [
+        "def area(w, h):",
+        "    return w * h",
+        "room = area(5, 2)",
+        "with_border = room + 3",
+        "print(with_border)"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "explanation": "Now area returns 10 into room; add 3 to get 13; print it. Converting print->return made the value reusable."
+    },
+    {
+      "id": "u74l09e03",
+      "type": "fillBlank",
+      "prompt": "Convert the body to return instead of print:\n\ndef area(w, h):\n    ____ w * h",
+      "answer": "return",
+      "acceptable": ["return"],
+      "explanation": "return w * h hands the area back. The main plan can then store or print it."
+    },
+    {
+      "id": "u74l09e04",
+      "type": "trueFalse",
+      "prompt": "After converting to return, you must add a print in the MAIN plan if you still want the value shown.",
+      "answer": true,
+      "explanation": "Yes. return is silent, so if a human should see the value, the main plan prints the returned result."
+    },
+    {
+      "id": "u74l09e05",
+      "type": "multipleChoice",
+      "prompt": "Predict (converted version):\n\ndef area(w, h):\n    return w * h\n\nprint(area(5, 2))",
+      "options": [
+        "10",
+        "None",
+        "52",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "area returns 10; the main plan's print shows it. Same visible result as before, but now the value is reusable."
+    },
+    {
+      "id": "u74l09e06",
+      "type": "multipleChoice",
+      "prompt": "A classmate converts to return but forgets the main-plan print:\n\ndef area(w, h):\n    return w * h\n\narea(5, 2)\n\nWhat appears on screen?",
+      "options": [
+        "Nothing — the returned value isn't printed",
+        "10",
+        "None",
+        "52"
+      ],
+      "answer": 0,
+      "explanation": "The value 10 is handed back but nobody prints it, so the screen is blank. Add print(area(5, 2)) to show it."
+    },
+    {
+      "id": "u74l09e07",
+      "type": "multipleChoice",
+      "prompt": "REVIEW: why is the returning version better here?",
+      "options": [
+        "The area can be added to (border) AND printed — reusable",
+        "it types faster",
+        "print is illegal",
+        "it isn't better"
+      ],
+      "answer": 0,
+      "explanation": "Returning keeps the value in play for the border math and for printing. The print-only version threw the value away."
+    },
+    {
+      "id": "u74l09e08",
+      "type": "multipleChoice",
+      "prompt": "Convert this too:\n\ndef greet_count(n):\n    print(n * 2)\n\nYou need the result to compare with 10 later. Best change?",
+      "options": [
+        "Use 'return n * 2' so the result can be compared",
+        "Add a second print",
+        "Compare inside with print",
+        "Leave it — print is fine"
+      ],
+      "answer": 0,
+      "explanation": "To compare the result with 10 later, you need it as a value, so return it. Then 'if greet_count(x) > 10:' works."
+    },
+    {
+      "id": "u74l09e09",
+      "type": "trueFalse",
+      "prompt": "Converting print to return does NOT change what the sub-plan computes — only whether the value is handed back.",
+      "answer": true,
+      "explanation": "Right. The math is the same; return just makes the result usable instead of only visible."
+    },
+    {
+      "id": "u74l09e10",
+      "type": "multipleChoice",
+      "prompt": "The idea of this lesson:",
+      "options": [
+        "To make a value reusable, convert print to return — then print in the main plan if needed",
+        "never convert anything",
+        "return breaks the math",
+        "always keep print inside"
+      ],
+      "answer": 0,
+      "explanation": "Swap print for return to free the value for reuse; add a main-plan print only when a human needs to see it."
+    }
+  ]
+}

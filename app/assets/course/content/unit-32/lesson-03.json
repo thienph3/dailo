@@ -1,0 +1,135 @@
+{
+  "unitId": "u32",
+  "lessonId": "u32l03",
+  "title": "The order of an if/elif chain",
+  "idea": "A chain stops at the FIRST true branch. Put a broad test first and the specific ones below it never run.",
+  "exercises": [
+    {
+      "id": "u32l03e01",
+      "type": "multipleChoice",
+      "prompt": "In an if/elif/else chain, how many branches run for one trip through?",
+      "options": [
+        "Exactly one: the first True branch",
+        "All of them",
+        "All the True ones",
+        "None of them"
+      ],
+      "answer": 0,
+      "explanation": "Exactly one — the first whose condition is True. The rest are skipped, even if they were also True."
+    },
+    {
+      "id": "u32l03e02",
+      "type": "multipleChoice",
+      "prompt": "Chain: if score >= 50: print('Pass') elif score >= 90: print('Top'). Score 95 prints what?",
+      "options": [
+        "Pass — but 'Top' was intended",
+        "Top",
+        "Both",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "95 >= 50 is True first, so it prints 'Pass' and never reaches 'Top'. The broad test shadows the specific one."
+    },
+    {
+      "id": "u32l03e03",
+      "type": "multipleChoice",
+      "prompt": "What is the reasoning flaw above?",
+      "options": [
+        "The broad condition is listed before the specific one",
+        "90 is not a number",
+        "elif cannot follow if",
+        "print is misspelled"
+      ],
+      "answer": 0,
+      "explanation": "The broad band (>= 50) comes before the specific band (>= 90), so the specific branch is unreachable."
+    },
+    {
+      "id": "u32l03e04",
+      "type": "orderBlocks",
+      "prompt": "Reorder the plain-English bands so the chain works (most specific / highest first).",
+      "blocks": [
+        "If score >= 90 -> Top",
+        "Else if score >= 50 -> Pass",
+        "Else -> Fail"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Test the highest band first; each elif then handles what is left below it."
+    },
+    {
+      "id": "u32l03e05",
+      "type": "multipleChoice",
+      "prompt": "After reordering (90+ first), score 95 now prints what?",
+      "options": [
+        "Top",
+        "Pass",
+        "Fail",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "95 >= 90 is True first, so 'Top' prints. Ordering highest-first fixes the shadowing."
+    },
+    {
+      "id": "u32l03e06",
+      "type": "trueFalse",
+      "prompt": "Putting the most general condition first is a common order bug.",
+      "answer": true,
+      "explanation": "True. A general test like 'score >= 50' swallows everything above it, hiding the specific branches."
+    },
+    {
+      "id": "u32l03e07",
+      "type": "multipleChoice",
+      "prompt": "Chain for shipping: if weight > 0: print('Standard') elif weight > 10: print('Heavy'). A 15 kg box prints what?",
+      "options": [
+        "Standard — but it should be Heavy",
+        "Heavy",
+        "Both",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "15 > 0 is True first, so 'Standard' prints; 'Heavy' is never reached. Broad-before-specific again."
+    },
+    {
+      "id": "u32l03e08",
+      "type": "multipleChoice",
+      "prompt": "How would you reorder the shipping chain so heavy boxes are caught?",
+      "options": [
+        "Check weight > 10 (Heavy) before the lighter branch",
+        "Check weight > 0 twice",
+        "Remove the elif",
+        "Swap print for input"
+      ],
+      "answer": 0,
+      "explanation": "Test the heavier, more specific band first: weight > 10 -> Heavy, then the lighter else branch."
+    },
+    {
+      "id": "u32l03e09",
+      "type": "multipleChoice",
+      "prompt": "Why does reordering fix it without changing any number?",
+      "options": [
+        "The bug was the order, not the values",
+        "Numbers are always wrong",
+        "elif deletes numbers",
+        "Reordering doubles the values"
+      ],
+      "answer": 0,
+      "explanation": "The numbers were fine; only their ORDER was wrong. The first matching branch wins, so order decides the result."
+    },
+    {
+      "id": "u32l03e10",
+      "type": "multipleChoice",
+      "prompt": "Rule of thumb for an if/elif chain with overlapping bands?",
+      "options": [
+        "Most specific first, then broader",
+        "Alphabetical order",
+        "Longest line first",
+        "Order never matters"
+      ],
+      "answer": 0,
+      "explanation": "List the most specific / most restrictive condition first, then widen downward. That way no branch is shadowed."
+    }
+  ]
+}

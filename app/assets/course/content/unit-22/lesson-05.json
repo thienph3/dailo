@@ -1,0 +1,136 @@
+{
+  "unitId": "u22",
+  "lessonId": "u22l05",
+  "title": "Flip the condition, swap the branches",
+  "idea": "Many if/else problems can be written two ways by flipping the condition and swapping the branches. Understanding this deepens the model. Thinking-heavy.",
+  "exercises": [
+    {
+      "id": "u22l05e01",
+      "type": "multipleChoice",
+      "prompt": "These two do the same thing. True or false - they give the same outputs?\n\nA: if n > 0:\n    print(\"pos\")\nelse:\n    print(\"not pos\")\n\nB: if n <= 0:\n    print(\"not pos\")\nelse:\n    print(\"pos\")",
+      "options": [
+        "Yes, they behave the same",
+        "No, A is broken",
+        "No, B is broken",
+        "They both error"
+      ],
+      "answer": 0,
+      "explanation": "Flipping > 0 to <= 0 and swapping the branches gives identical behavior. Both label positives 'pos'."
+    },
+    {
+      "id": "u22l05e02",
+      "type": "multipleChoice",
+      "prompt": "The opposite of the condition n > 0 is...",
+      "options": [
+        "n <= 0",
+        "n < 0",
+        "n >= 0",
+        "n == 0"
+      ],
+      "answer": 0,
+      "explanation": "The opposite of 'greater than 0' is 'less than OR equal to 0': n <= 0. The equal case flips sides."
+    },
+    {
+      "id": "u22l05e03",
+      "type": "matchPairs",
+      "prompt": "Match each condition to its opposite.",
+      "pairs": [
+        {
+          "left": "x >= 50",
+          "right": "x < 50"
+        },
+        {
+          "left": "x == 5",
+          "right": "x != 5"
+        },
+        {
+          "left": "x > 10",
+          "right": "x <= 10"
+        }
+      ],
+      "explanation": "Flipping a condition swaps the boundary case too: >= becomes <, > becomes <=, == becomes !=."
+    },
+    {
+      "id": "u22l05e04",
+      "type": "multipleChoice",
+      "prompt": "The opposite of score >= 50 is...",
+      "options": [
+        "score < 50",
+        "score > 50",
+        "score <= 50",
+        "score == 50"
+      ],
+      "answer": 0,
+      "explanation": "'50 or more' flips to 'less than 50': score < 50. Watch the boundary - 50 itself now falls on the other side."
+    },
+    {
+      "id": "u22l05e05",
+      "type": "multipleChoice",
+      "prompt": "Rewrite with the opposite condition and swapped branches:\n\nif paid:\n    print(\"Thanks\")\nelse:\n    print(\"Please pay\")",
+      "options": [
+        "if not-paid: print \"Please pay\" else print \"Thanks\"",
+        "if paid: print \"Please pay\" else print \"Thanks\"",
+        "leave it exactly the same",
+        "delete the else"
+      ],
+      "answer": 0,
+      "explanation": "Flip the condition to the False case and swap the two messages - the behavior stays the same."
+    },
+    {
+      "id": "u22l05e06",
+      "type": "trueFalse",
+      "prompt": "If you flip the condition but forget to swap the branches, the behavior changes.",
+      "answer": true,
+      "explanation": "Yes - flipping the condition alone reverses which message each case gets. You must swap the branches too."
+    },
+    {
+      "id": "u22l05e07",
+      "type": "multipleChoice",
+      "prompt": "The opposite of n == 5 is...",
+      "options": [
+        "n != 5",
+        "n > 5",
+        "n < 5",
+        "n == 0"
+      ],
+      "answer": 0,
+      "explanation": "'Equal to 5' flips to 'not equal to 5': n != 5."
+    },
+    {
+      "id": "u22l05e08",
+      "type": "multipleChoice",
+      "prompt": "Why might you prefer one wording over the other?",
+      "options": [
+        "To put the more common or clearer case in the if branch",
+        "Because only one wording works",
+        "Because else must be first",
+        "There is never a reason"
+      ],
+      "answer": 0,
+      "explanation": "Both work, so you choose the version that reads more clearly - often the common case in the if."
+    },
+    {
+      "id": "u22l05e09",
+      "type": "fillBlank",
+      "prompt": "Write the opposite of n < 10:\n\nn ____ 10",
+      "answer": ">=",
+      "acceptable": [
+        ">="
+      ],
+      "explanation": "The opposite of 'less than 10' is 'greater than or equal to 10': n >= 10. The boundary 10 switches sides."
+    },
+    {
+      "id": "u22l05e10",
+      "type": "multipleChoice",
+      "prompt": "What is the big idea of this lesson?",
+      "options": [
+        "A two-way choice can be written two equivalent ways by flipping and swapping",
+        "Conditions can't be flipped",
+        "else must come first",
+        "Branches never swap"
+      ],
+      "answer": 0,
+      "explanation": "Seeing that if/else can be flipped shows you understand the choice, not just the syntax."
+    }
+  ]
+}

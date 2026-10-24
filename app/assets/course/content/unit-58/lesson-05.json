@@ -1,0 +1,126 @@
+{
+  "unitId": "u58",
+  "lessonId": "u58l05",
+  "title": "Spot the count mistake",
+  "idea": "Recognise counting bugs: no init, +1 outside the if, adding the value instead of 1, resetting inside.",
+  "exercises": [
+    {
+      "id": "u58l05e01",
+      "type": "multipleChoice",
+      "prompt": "This counts ALL items, not just matches. Why?\n\ncount = 0\nfor n in nums:\n    if n > 5:\n        pass\n    count = count + 1",
+      "options": [
+        "The +1 is outside the if, so every pass counts",
+        "Nothing is wrong",
+        "The if is wrong",
+        "nums is empty"
+      ],
+      "answer": 0,
+      "explanation": "The +1 must be INSIDE the if to count only matches. Here it runs every pass."
+    },
+    {
+      "id": "u58l05e02",
+      "type": "multipleChoice",
+      "prompt": "This totals instead of counting. Spot the bug:\n\ncount = 0\nfor n in nums:\n    if n > 5:\n        count = count + n",
+      "options": [
+        "It adds the value n, not 1",
+        "It adds 1 twice",
+        "count starts wrong",
+        "the if is wrong"
+      ],
+      "answer": 0,
+      "explanation": "To COUNT matches, add 1, not the value: count = count + 1. Adding n sums them."
+    },
+    {
+      "id": "u58l05e03",
+      "type": "multipleChoice",
+      "prompt": "What's missing?\n\nfor n in nums:\n    if n > 5:\n        count = count + 1\nprint(count)",
+      "options": [
+        "count = 0 before the loop",
+        "the if",
+        "the print",
+        "the loop"
+      ],
+      "answer": 0,
+      "explanation": "Without initialising count to 0 first, the first +1 has no starting value."
+    },
+    {
+      "id": "u58l05e04",
+      "type": "trueFalse",
+      "prompt": "Resetting count = 0 INSIDE the loop makes the final count at most 1.",
+      "answer": true,
+      "explanation": "Zeroing it every pass throws away earlier matches, so it can never climb past 1. Initialise once, outside."
+    },
+    {
+      "id": "u58l05e05",
+      "type": "multipleChoice",
+      "prompt": "nums = [6, 7]\ncount = 0\nfor n in nums:\n    if n > 5:\n        count = count + n\nprint(count)\n\nWhat prints, and why is it wrong for a count?",
+      "options": [
+        "13 — it summed the values instead of counting",
+        "2 — correct",
+        "0",
+        "1"
+      ],
+      "answer": 0,
+      "explanation": "Both match, but adding n gives 6 + 7 = 13. A count should add 1 each time, giving 2."
+    },
+    {
+      "id": "u58l05e06",
+      "type": "multipleChoice",
+      "prompt": "Which is the correct count-a-match line, placed inside the if?",
+      "options": [
+        "count = count + 1",
+        "count = count + n",
+        "count = n",
+        "count = 1"
+      ],
+      "answer": 0,
+      "explanation": "Add exactly 1 per match."
+    },
+    {
+      "id": "u58l05e07",
+      "type": "trueFalse",
+      "prompt": "The +1 line must be indented inside BOTH the loop and the if.",
+      "answer": true,
+      "explanation": "It counts matches found while looping, so it sits two levels in."
+    },
+    {
+      "id": "u58l05e08",
+      "type": "multipleChoice",
+      "prompt": "A learner put the +1 outside the if and got count = 5 for a 5-item list, regardless of the rule. What's the fix?",
+      "options": [
+        "Move count = count + 1 inside the if",
+        "Start count at 1",
+        "Add n instead",
+        "Remove the loop"
+      ],
+      "answer": 0,
+      "explanation": "Indent the +1 under the if so only matches count."
+    },
+    {
+      "id": "u58l05e09",
+      "type": "multipleChoice",
+      "prompt": "Where does 'count = 0' belong?",
+      "options": [
+        "Before the loop, once",
+        "Inside the if",
+        "After the loop",
+        "Inside the loop, before the if"
+      ],
+      "answer": 0,
+      "explanation": "Initialise once before the loop so the count can accumulate across passes."
+    },
+    {
+      "id": "u58l05e10",
+      "type": "multipleChoice",
+      "prompt": "Count vs total, in one line of code each:",
+      "options": [
+        "count: count = count + 1 | total: total = total + value",
+        "both add the value",
+        "both add 1",
+        "count adds value, total adds 1"
+      ],
+      "answer": 0,
+      "explanation": "Count adds 1 per match; total adds the value. Mixing them up is the classic slip."
+    }
+  ]
+}

@@ -1,0 +1,126 @@
+{
+  "unitId": "u49",
+  "lessonId": "u49l06",
+  "title": "Solve it: keep halving until 1",
+  "idea": "GUIDED PROBLEM. A repeat-until job with an unknown count - while plus a counter. Why the count is unknown is the key insight of the Plan step.",
+  "problem": "Start with 40. Keep halving it (integer division by 2) until it reaches 1. How many halvings does that take? Show the count.",
+  "exercises": [
+    {
+      "id": "u49l06e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: Start at 40, keep halving (whole-number divide by 2) until it reaches 1. How many halvings?\n\nUnderstand. What is the OUTPUT?",
+      "options": [
+        "The number of halvings",
+        "The final value",
+        "The starting value",
+        "The number 2"
+      ],
+      "answer": 0,
+      "explanation": "The output is a count of how many halving steps it takes. 'How many' signals a counter."
+    },
+    {
+      "id": "u49l06e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "Understand. What does 'halve with whole-number division' do to 40?",
+      "options": [
+        "40 // 2 = 20 (and keeps using // each time)",
+        "40 - 2 = 38",
+        "40 + 2 = 42",
+        "40 * 2 = 80"
+      ],
+      "answer": 0,
+      "explanation": "// divides and drops any fraction. 40 // 2 = 20. We'll keep applying // 2 to shrink the number."
+    },
+    {
+      "id": "u49l06e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example by hand. Halve 40 repeatedly: 40 -> 20 -> 10 -> 5 -> ? What comes after 5?",
+      "options": ["2 (5 // 2 = 2)", "3", "2.5", "1"],
+      "answer": 0,
+      "explanation": "5 // 2 = 2 (the fraction is dropped). So the sequence is 40, 20, 10, 5, 2, then 1 next."
+    },
+    {
+      "id": "u49l06e04",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Count the halvings: 40 -> 20 -> 10 -> 5 -> 2 -> 1. How many halving steps was that?",
+      "options": ["5", "6", "4", "40"],
+      "answer": 0,
+      "explanation": "Each arrow is one halving: 40->20, 20->10, 10->5, 5->2, 2->1. That's 5 steps. Check value: 5."
+    },
+    {
+      "id": "u49l06e05",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Plan - choose the loop. Did we know it would take 5 steps BEFORE starting?",
+      "options": [
+        "No - we only found 5 by halving until we reached 1 - so a while loop",
+        "Yes - always 5 - so a for loop",
+        "Yes - always 40 steps",
+        "No loop is needed"
+      ],
+      "answer": 0,
+      "explanation": "The number of steps depends on the starting value and only shows up as we go. Unknown count -> while loop."
+    },
+    {
+      "id": "u49l06e06",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Plan - what two things change each pass, and what stops the loop?",
+      "options": [
+        "The value halves and the counter goes up; stop when the value reaches 1",
+        "Nothing changes; it never stops",
+        "Only the counter changes",
+        "The value doubles"
+      ],
+      "answer": 0,
+      "explanation": "Each pass: value = value // 2 and count = count + 1. The loop runs while value > 1, so it stops at 1."
+    },
+    {
+      "id": "u49l06e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code it. Arrange the lines to match the plan.",
+      "blocks": [
+        "value = 40",
+        "count = 0",
+        "while value > 1:",
+        "    value = value // 2",
+        "    count = count + 1",
+        "print(count)"
+      ],
+      "answer": [0, 1, 2, 3, 4, 5],
+      "explanation": "Start value at 40 and count at 0, loop while above 1, halve and count each pass, print the count. value shrinks so the loop ends."
+    },
+    {
+      "id": "u49l06e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Complete the halving step with whole-number division:\n\nwhile value > 1:\n    value = value ____ 2\n    count = count + 1",
+      "answer": "//",
+      "acceptable": ["//"],
+      "explanation": "// divides and drops the fraction, keeping value a whole number. That's what 'halve with whole-number division' needs."
+    },
+    {
+      "id": "u49l06e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "The code prints 5; your hand example was 5. Verdict?",
+      "options": ["Passes", "Fails", "Unknown", "Rewrite the example"],
+      "answer": 0,
+      "explanation": "5 matches 5. The while loop counted exactly the halvings it took to reach 1. Passing Check."
+    },
+    {
+      "id": "u49l06e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "New start: 8 instead of 40 (8 -> 4 -> 2 -> 1). How many halvings?",
+      "options": ["3", "4", "2", "8"],
+      "answer": 0,
+      "explanation": "8->4, 4->2, 2->1 is 3 steps. The same while loop handles a new start - the count simply changes."
+    }
+  ]
+}

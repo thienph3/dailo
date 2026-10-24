@@ -1,0 +1,124 @@
+{
+  "unitId": "u38",
+  "lessonId": "u38l04",
+  "title": "Print 1 to N using the loop variable",
+  "idea": "The classic use: print each number from 1 up to N. Put range(1, N+1) together with print(i). Build and trace it.",
+  "exercises": [
+    {
+      "id": "u38l04e01",
+      "type": "multipleChoice",
+      "prompt": "To print 1, 2, 3, 4, 5, which loop?",
+      "options": [
+        "for i in range(1, 6):\n    print(i)",
+        "for i in range(1, 5):\n    print(i)",
+        "for i in range(5):\n    print(i)",
+        "for i in range(0, 5):\n    print(i)"
+      ],
+      "answer": 0,
+      "explanation": "range(1, 6) is 1, 2, 3, 4, 5 (stop 6 excludes itself). Printing i shows each number."
+    },
+    {
+      "id": "u38l04e02",
+      "type": "multipleChoice",
+      "prompt": "What shows?\n\nfor i in range(1, 4):\n    print(i)",
+      "options": [
+        "1\n2\n3",
+        "0\n1\n2",
+        "1\n2\n3\n4",
+        "3"
+      ],
+      "answer": 0,
+      "explanation": "range(1, 4) counts 1, 2, 3. Each pass prints the current i."
+    },
+    {
+      "id": "u38l04e03",
+      "type": "fillBlank",
+      "prompt": "Fill the stop to print 1 through 10:\n\nfor i in range(1, ____):\n    print(i)",
+      "answer": "11",
+      "acceptable": [
+        "11"
+      ],
+      "explanation": "To include 10, stop is 11 (one past). range(1, 11) prints 1 through 10."
+    },
+    {
+      "id": "u38l04e04",
+      "type": "orderBlocks",
+      "prompt": "Arrange a loop that prints 1, 2, 3.",
+      "blocks": [
+        "for i in range(1, 4):",
+        "    print(i)"
+      ],
+      "answer": [
+        0,
+        1
+      ],
+      "explanation": "Header range(1, 4) first, then the indented print(i). That prints 1, 2, 3."
+    },
+    {
+      "id": "u38l04e05",
+      "type": "multipleChoice",
+      "prompt": "What shows?\n\nn = 3\nfor i in range(1, n + 1):\n    print(i)",
+      "options": [
+        "1\n2\n3",
+        "1\n2\n3\n4",
+        "0\n1\n2",
+        "3\n3\n3"
+      ],
+      "answer": 0,
+      "explanation": "n is 3, so range(1, n + 1) is range(1, 4): 1, 2, 3. Using n + 1 as stop makes it count 1 through n."
+    },
+    {
+      "id": "u38l04e06",
+      "type": "trueFalse",
+      "prompt": "range(1, n + 1) counts from 1 up to and including n.",
+      "answer": true,
+      "explanation": "Because stop is excluded, you add 1 to n so n itself is included. A very common pattern for '1 to n'."
+    },
+    {
+      "id": "u38l04e07",
+      "type": "multipleChoice",
+      "prompt": "You wrote range(1, n) to print 1 to n but it stops one short. The fix?",
+      "options": [
+        "Use range(1, n + 1) so n is included",
+        "Use range(n)",
+        "Remove print(i)",
+        "Add a colon"
+      ],
+      "answer": 0,
+      "explanation": "Stop is excluded, so range(1, n) misses n. Add 1: range(1, n + 1). Classic off-by-one fix."
+    },
+    {
+      "id": "u38l04e08",
+      "type": "multipleChoice",
+      "prompt": "What shows?\n\nfor i in range(1, 6):\n    print(f\"Round {i}\")",
+      "options": [
+        "Round 1\nRound 2\nRound 3\nRound 4\nRound 5",
+        "Round i (five times)",
+        "Round 0 ... Round 4",
+        "Round 1 ... Round 6"
+      ],
+      "answer": 0,
+      "explanation": "The f-string drops in i each pass: Round 1 through Round 5. The loop variable makes each line different."
+    },
+    {
+      "id": "u38l04e09",
+      "type": "trueFalse",
+      "prompt": "Putting i inside an f-string lets each pass show its own number.",
+      "answer": true,
+      "explanation": "Yes — f\"Round {i}\" uses the current i, so lines read Round 1, Round 2, and so on. f-strings plus the loop variable are a great pair."
+    },
+    {
+      "id": "u38l04e10",
+      "type": "multipleChoice",
+      "prompt": "A countdown screen needs labels Step 1 to Step 4. Which loop?",
+      "options": [
+        "for i in range(1, 5):\n    print(f\"Step {i}\")",
+        "for i in range(1, 4):\n    print(f\"Step {i}\")",
+        "for i in range(4):\n    print(\"Step\")",
+        "for i in range(0, 4):\n    print(f\"Step {i}\")"
+      ],
+      "answer": 0,
+      "explanation": "range(1, 5) gives 1, 2, 3, 4, and the f-string labels each: Step 1 through Step 4."
+    }
+  ]
+}

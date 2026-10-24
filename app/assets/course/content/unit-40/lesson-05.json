@@ -1,0 +1,134 @@
+{
+  "unitId": "u40",
+  "lessonId": "u40l05",
+  "title": "Tracing a counter pass by pass",
+  "idea": "Follow a counter's value on each pass to predict the final count.",
+  "exercises": [
+    {
+      "id": "u40l05e01",
+      "type": "multipleChoice",
+      "prompt": "Trace:\n\ncount = 0\nfor i in range(3):\n    count += 1\n\nWhat is count after the FIRST pass?",
+      "options": [
+        "1",
+        "0",
+        "2",
+        "3"
+      ],
+      "answer": 0,
+      "explanation": "It started at 0 and gained 1, so after pass one it is 1."
+    },
+    {
+      "id": "u40l05e02",
+      "type": "multipleChoice",
+      "prompt": "Same loop. What is count after the SECOND pass?",
+      "options": [
+        "2",
+        "1",
+        "3",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "After pass one it was 1; pass two adds another 1, making 2."
+    },
+    {
+      "id": "u40l05e03",
+      "type": "multipleChoice",
+      "prompt": "Same loop. What is count after the THIRD (last) pass?",
+      "options": [
+        "3",
+        "2",
+        "4",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "1, 2, then 3 — three passes, three additions from 0."
+    },
+    {
+      "id": "u40l05e04",
+      "type": "orderBlocks",
+      "prompt": "Put the counter's values in the order they occur for range(3), starting from its start value.",
+      "blocks": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "The counter is 0 before the loop, then 1, 2, 3 after each of the three passes."
+    },
+    {
+      "id": "u40l05e05",
+      "type": "multipleChoice",
+      "prompt": "Trace with a condition:\n\ncount = 0\nfor i in range(1, 5):\n    if i > 2:\n        count += 1\n\nAfter i = 1 and i = 2, what is count?",
+      "options": [
+        "0",
+        "1",
+        "2",
+        "4"
+      ],
+      "answer": 0,
+      "explanation": "Neither 1 nor 2 is greater than 2, so the counter has not moved — it is still 0."
+    },
+    {
+      "id": "u40l05e06",
+      "type": "multipleChoice",
+      "prompt": "Same conditional loop. After i = 3, what is count?",
+      "options": [
+        "1",
+        "0",
+        "2",
+        "3"
+      ],
+      "answer": 0,
+      "explanation": "3 > 2 is true, so the counter finally goes up by 1 to 1."
+    },
+    {
+      "id": "u40l05e07",
+      "type": "multipleChoice",
+      "prompt": "Same conditional loop. What is the FINAL count after i = 4?",
+      "options": [
+        "2",
+        "1",
+        "4",
+        "3"
+      ],
+      "answer": 0,
+      "explanation": "3 and 4 both pass i > 2, so the counter ends at 2."
+    },
+    {
+      "id": "u40l05e08",
+      "type": "trueFalse",
+      "prompt": "Tracing a counter means writing down its value after each pass.",
+      "answer": true,
+      "explanation": "True. A trace is a pass-by-pass record — it makes the final value easy to predict and check."
+    },
+    {
+      "id": "u40l05e09",
+      "type": "fillBlank",
+      "prompt": "Trace and fill the final value:\n\ncount = 0\nfor i in range(4):\n    count += 1\nprint(count)  # prints ____",
+      "answer": "4",
+      "acceptable": [
+        "4"
+      ],
+      "explanation": "Four passes from 0, +1 each, ends at 4."
+    },
+    {
+      "id": "u40l05e10",
+      "type": "multipleChoice",
+      "prompt": "Why trace a counter before trusting the output?",
+      "options": [
+        "To predict and verify the final count",
+        "To make it run faster",
+        "It is required syntax",
+        "To avoid loops"
+      ],
+      "answer": 0,
+      "explanation": "A pass-by-pass trace catches a counter that starts wrong or moves on the wrong passes."
+    }
+  ]
+}

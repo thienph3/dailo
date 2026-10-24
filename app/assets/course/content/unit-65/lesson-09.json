@@ -1,0 +1,153 @@
+{
+  "unitId": "u65",
+  "lessonId": "u65l09",
+  "title": "Solve it: keep values in a range (two conditions)",
+  "idea": "GUIDED PROBLEM (filter with a combined test). Keep items that pass TWO conditions joined by 'and' \u2014 a value within a low/high range. Reviews and/comparisons while deepening filter practice.",
+  "problem": "Survey ages are [12, 25, 40, 19, 67, 30]. You want working-age adults: 18 to 60 inclusive. Build a list of the ages in that range.",
+  "exercises": [
+    {
+      "id": "u65l09e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: ages are [12, 25, 40, 19, 67, 30]; keep ages from 18 to 60 inclusive. Build a list of those ages.\n\nOUTPUT?",
+      "options": [
+        "A new list of the ages between 18 and 60 (inclusive)",
+        "The oldest age",
+        "How many ages there are",
+        "The average age"
+      ],
+      "answer": 0,
+      "explanation": "Keep-only task with a range: the output is a filtered list of the in-range ages."
+    },
+    {
+      "id": "u65l09e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "INPUTS?",
+      "options": [
+        "The list of ages, the low limit (18), and the high limit (60)",
+        "Only the list of ages",
+        "Only the two limits",
+        "The word 'adult'"
+      ],
+      "answer": 0,
+      "explanation": "Three inputs: the ages and both limits. Each limit becomes its own named variable \u2014 nothing hardcoded."
+    },
+    {
+      "id": "u65l09e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example. By hand, keep ages 18\u201360 (inclusive) from [12, 25, 40, 19, 67, 30]. Which stay?",
+      "options": [
+        "25, 40, 19, 30",
+        "12, 67",
+        "25, 40, 30",
+        "all six"
+      ],
+      "answer": 0,
+      "explanation": "12 too young, 67 too old; 25, 40, 19, and 30 are all within 18\u201360. Kept list is [25, 40, 19, 30] \u2014 your check value."
+    },
+    {
+      "id": "u65l09e04",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Plan. An age is kept only if it clears BOTH limits. How do you join the two tests?",
+      "options": [
+        "age >= low and age <= high",
+        "age >= low or age <= high",
+        "age >= low",
+        "age <= high"
+      ],
+      "answer": 0,
+      "explanation": "Both must be true, so you join them with 'and'. 'or' would wrongly keep almost everything, and a single test ignores one limit."
+    },
+    {
+      "id": "u65l09e05",
+      "type": "trueFalse",
+      "uepcc": "P",
+      "prompt": "Using 'or' instead of 'and' here would keep ages that are too young OR too old \u2014 the opposite of what we want.",
+      "answer": true,
+      "explanation": "'or' is true when either side is true, so nearly every age would pass. The range needs BOTH tests true, which is 'and'."
+    },
+    {
+      "id": "u65l09e06",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code it. Arrange the lines (limits, empty list, loop + combined test + append, show).",
+      "blocks": [
+        "low = 18",
+        "high = 60",
+        "ages = [12, 25, 40, 19, 67, 30]",
+        "in_range = []",
+        "for age in ages:",
+        "    if age >= low and age <= high:",
+        "        in_range.append(age)",
+        "print(in_range)"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "explanation": "Store both limits and the ages, start in_range empty, keep each age that clears low AND high, then print. Both limits are named variables."
+    },
+    {
+      "id": "u65l09e07",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Complete the combined test so BOTH limits must hold:\n\nfor age in ages:\n    if age >= low ____ age <= high:\n        in_range.append(age)",
+      "answer": "and",
+      "acceptable": [
+        "and"
+      ],
+      "explanation": "'and' requires both sides true, so only ages inside the whole range are kept."
+    },
+    {
+      "id": "u65l09e08",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check. The code prints [25, 40, 19, 30]; your hand example matched. Verdict?",
+      "options": [
+        "Passes",
+        "Fails",
+        "Unknown",
+        "Rewrite the example"
+      ],
+      "answer": 0,
+      "explanation": "Output matches the by-hand list, so the two-condition filter is correct."
+    },
+    {
+      "id": "u65l09e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Same plan, new inputs: low = 10, high = 20, ages = [5, 10, 15, 20, 25]. What prints?",
+      "options": [
+        "[10, 15, 20]",
+        "[15]",
+        "[5, 25]",
+        "[10, 20]"
+      ],
+      "answer": 0,
+      "explanation": "10 and 20 (both limits, inclusive) and 15 are in range; 5 and 25 are out. So [10, 15, 20]. The >= / <= pair keeps both endpoints."
+    },
+    {
+      "id": "u65l09e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "If you wanted to EXCLUDE the endpoints (strictly between low and high), what single change fits?",
+      "options": [
+        "Use age > low and age < high",
+        "Swap 'and' for 'or'",
+        "Remove the empty list",
+        "Append low instead of age"
+      ],
+      "answer": 0,
+      "explanation": "Switching >= to > and <= to < drops the exact endpoints. The filter shape is unchanged \u2014 only the comparisons tighten."
+    }
+  ]
+}

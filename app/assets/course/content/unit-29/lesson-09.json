@@ -1,0 +1,127 @@
+{
+  "unitId": "u29",
+  "lessonId": "u29l09",
+  "title": "Spot the wrong word logic",
+  "idea": "Debug the APPROACH of word-based decisions: unreachable branches, wrong joiner for 'either word', and case mismatches. Fix the reasoning.",
+  "exercises": [
+    {
+      "id": "u29l09e01",
+      "type": "multipleChoice",
+      "prompt": "Meant to accept \"yes\" OR \"y\". Someone wrote:\n\nif answer == \"yes\" and answer == \"y\":\n    print(\"Confirmed\")\n\nWhat is wrong?",
+      "options": [
+        "'and' can never be true - a word cannot be both \"yes\" and \"y\" at once",
+        "Nothing",
+        "== should be =",
+        "The quotes are wrong"
+      ],
+      "answer": 0,
+      "explanation": "One variable holds one word. 'and' demands it equal both at the same time - impossible. It should be 'or'."
+    },
+    {
+      "id": "u29l09e02",
+      "type": "fillBlank",
+      "prompt": "Fix the joiner so either word confirms:\n\nif answer == \"yes\" ____ answer == \"y\":\n    print(\"Confirmed\")",
+      "answer": "or",
+      "acceptable": ["or"],
+      "explanation": "'or' is true when either matches. Now both \"yes\" and \"y\" confirm."
+    },
+    {
+      "id": "u29l09e03",
+      "type": "multipleChoice",
+      "prompt": "This chain has an unreachable branch:\n\nif grade == \"A\":\n    print(\"Top\")\nelif grade == \"A\":\n    print(\"Also top\")\n\nWhy does the second branch never run?",
+      "options": [
+        "The chain stops at the first match, and both test the same word",
+        "\"A\" is not a word",
+        "elif is broken",
+        "It does run"
+      ],
+      "answer": 0,
+      "explanation": "An if/elif stops at the first true branch. A duplicate test below it can never be reached - a logic smell to fix."
+    },
+    {
+      "id": "u29l09e04",
+      "type": "multipleChoice",
+      "prompt": "A login check uses:\n\nif name == \"admin\":\n\nbut a user typed \"Admin\" and got denied. The reasoning bug is...",
+      "options": [
+        "case sensitivity - \"Admin\" does not equal \"admin\"",
+        "name is a number",
+        "== is wrong",
+        "there is no bug"
+      ],
+      "answer": 0,
+      "explanation": "Exact match includes case. To accept \"Admin\" too you would test both, or decide on one agreed capitalization."
+    },
+    {
+      "id": "u29l09e05",
+      "type": "multipleChoice",
+      "prompt": "Meant: do something for any command EXCEPT \"quit\". Someone wrote 'if cmd == \"quit\"'. What should it be?",
+      "options": [
+        "if cmd != \"quit\"",
+        "if cmd == \"quit\"",
+        "if cmd and \"quit\"",
+        "if \"quit\""
+      ],
+      "answer": 0,
+      "explanation": "'Everything except quit' is 'not equal to quit' - that is !=. Using == reverses the intent."
+    },
+    {
+      "id": "u29l09e06",
+      "type": "trueFalse",
+      "prompt": "A word-comparison program can run fine yet give the wrong answer because of a wrong joiner or a case mismatch.",
+      "answer": true,
+      "explanation": "Yes - these are reasoning bugs, not crashes. Checking against expected words catches them."
+    },
+    {
+      "id": "u29l09e07",
+      "type": "multipleChoice",
+      "prompt": "To catch a case bug, which test input helps most?",
+      "options": [
+        "The same word with different capitalization (\"Yes\" vs \"yes\")",
+        "A number",
+        "An empty program",
+        "The exact word only"
+      ],
+      "answer": 0,
+      "explanation": "Testing a differently-capitalized version exposes whether your check is too strict about case."
+    },
+    {
+      "id": "u29l09e08",
+      "type": "multipleChoice",
+      "prompt": "A handler puts the catch-all else BEFORE the specific words:\n\nif cmd != \"go\":\n    print(\"Unknown\")\nelif cmd == \"go\":\n    print(\"Moving\")\n\nWith cmd = \"go\", what prints?",
+      "options": [
+        "Moving - here it happens to work, but the structure is confusing and fragile",
+        "Unknown",
+        "both",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "\"go\" makes the first test (!= \"go\") false, so it falls to the elif and prints \"Moving\". But a broad test first often swallows specific cases - order carefully."
+    },
+    {
+      "id": "u29l09e09",
+      "type": "multipleChoice",
+      "prompt": "General fix for unreachable or mis-ordered word branches?",
+      "options": [
+        "Put specific word tests first and a single catch-all else last",
+        "Put the else first",
+        "Duplicate the branches",
+        "Remove the else"
+      ],
+      "answer": 0,
+      "explanation": "Specific-first, catch-all-last keeps every named word reachable and the fallback clear."
+    },
+    {
+      "id": "u29l09e10",
+      "type": "multipleChoice",
+      "prompt": "The debugging lesson for words:",
+      "options": [
+        "Watch for impossible 'and', duplicate branches, wrong !=/==, and case mismatches",
+        "Words never have bugs",
+        "Only numbers have logic bugs",
+        "Always use and"
+      ],
+      "answer": 0,
+      "explanation": "Word logic has its own classic traps. Reading the intent aloud and testing real inputs catches them."
+    }
+  ]
+}

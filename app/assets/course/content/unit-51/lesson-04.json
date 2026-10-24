@@ -1,0 +1,119 @@
+{
+  "unitId": "u51",
+  "lessonId": "u51l04",
+  "title": "Lists of numbers, lists of words",
+  "idea": "A list can hold numbers OR strings. Recognizing the two common kinds. Still no indexing.",
+  "exercises": [
+    {
+      "id": "u51l04e01",
+      "type": "multipleChoice",
+      "prompt": "Lists can hold numbers or words (strings). Which of these is a list of WORDS?",
+      "options": [
+        "[\"cat\", \"dog\", \"fish\"]",
+        "[1, 2, 3]",
+        "[10, 20]",
+        "[0]"
+      ],
+      "answer": 0,
+      "explanation": "Words go in quotes: [\"cat\", \"dog\", \"fish\"] is a list of three strings. The others are lists of numbers."
+    },
+    {
+      "id": "u51l04e02",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\npets = [\"cat\", \"dog\"]\nprint(pets)",
+      "options": [
+        "['cat', 'dog']",
+        "cat dog",
+        "catdog",
+        "2"
+      ],
+      "answer": 0,
+      "explanation": "Printing the whole list shows it with brackets and quotes: ['cat', 'dog']. A list of words is still just one list value."
+    },
+    {
+      "id": "u51l04e03",
+      "type": "trueFalse",
+      "prompt": "A list of words uses quotes around each word, just like a single string does.",
+      "answer": true,
+      "explanation": "Each word is a string, so each keeps its quotes: [\"red\", \"blue\"]. The quotes are what make them words, not names."
+    },
+    {
+      "id": "u51l04e04",
+      "type": "multiSelect",
+      "prompt": "Which of these are valid lists (pick all that apply)?",
+      "options": [
+        "[5, 10, 15]",
+        "[\"Mon\", \"Tue\"]",
+        "[\"a\", \"b\", \"c\"]",
+        "5, 10, 15"
+      ],
+      "answer": [0, 1, 2],
+      "explanation": "The first three use square brackets, so they're lists (of numbers or words). The last has no brackets, so it isn't written as a list."
+    },
+    {
+      "id": "u51l04e05",
+      "type": "matchPairs",
+      "prompt": "Match each real-world group to the kind of list that fits it.",
+      "pairs": [
+        { "left": "Daily step counts", "right": "list of numbers" },
+        { "left": "Shopping item names", "right": "list of words" },
+        { "left": "Test scores", "right": "list of numbers" }
+      ],
+      "explanation": "Counts and scores are numbers; names are words. Pick the kind of value that matches the real thing."
+    },
+    {
+      "id": "u51l04e06",
+      "type": "multipleChoice",
+      "prompt": "You want a list of the colors red, green, and blue. Which is correct?",
+      "options": [
+        "colors = [\"red\", \"green\", \"blue\"]",
+        "colors = [red, green, blue]",
+        "colors = red, green, blue",
+        "colors = (red green blue)"
+      ],
+      "answer": 0,
+      "explanation": "Words need quotes and the list needs brackets. Without quotes, red would look like a variable name, not the word 'red'."
+    },
+    {
+      "id": "u51l04e07",
+      "type": "multipleChoice",
+      "prompt": "How many items are in [\"one\", \"two\", \"three\", \"four\"]?",
+      "options": [
+        "4",
+        "3",
+        "1",
+        "10"
+      ],
+      "answer": 0,
+      "explanation": "Four quoted words, separated by commas — four items. The words' meanings don't change the count."
+    },
+    {
+      "id": "u51l04e08",
+      "type": "tapTokens",
+      "prompt": "Arrange tokens to make a list of the two words \"yes\" and \"no\", stored in choices.",
+      "tokens": ["choices", "=", "[", "\"yes\"", ",", "\"no\"", "]"],
+      "answer": ["choices", "=", "[", "\"yes\"", ",", "\"no\"", "]"],
+      "explanation": "choices = [\"yes\", \"no\"] is a two-item list of words. Quotes on each word, comma between, brackets around."
+    },
+    {
+      "id": "u51l04e09",
+      "type": "trueFalse",
+      "prompt": "Printing a whole list of words does NOT join them into one word — it shows them as separate items.",
+      "answer": true,
+      "explanation": "print(pets) shows ['cat', 'dog'], not 'catdog'. The list keeps the items separate."
+    },
+    {
+      "id": "u51l04e10",
+      "type": "multipleChoice",
+      "prompt": "Whether a list holds numbers or words, what stays the same about it?",
+      "options": [
+        "It's one container holding many items, in order, in square brackets",
+        "It always holds exactly three items",
+        "It must be printed to exist",
+        "It sorts its items"
+      ],
+      "answer": 0,
+      "explanation": "The shape is always the same: brackets, comma-separated items, order kept. Numbers or words, a list is a list."
+    }
+  ]
+}

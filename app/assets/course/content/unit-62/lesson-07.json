@@ -1,0 +1,155 @@
+{
+  "unitId": "u62",
+  "lessonId": "u62l07",
+  "title": "Building a safe average",
+  "idea": "TOOL: assemble the sum + count + guard + divide program piece by piece.",
+  "exercises": [
+    {
+      "id": "u62l07e01",
+      "type": "tapTokens",
+      "prompt": "Tap the tokens to get the count of nums.",
+      "answer": [
+        "count",
+        "=",
+        "len",
+        "(",
+        "nums",
+        ")"
+      ],
+      "tokens": [
+        "count",
+        "=",
+        "len",
+        "(",
+        "nums",
+        ")"
+      ],
+      "explanation": "count = len(nums) gives how many values there are — the number you'll divide by."
+    },
+    {
+      "id": "u62l07e02",
+      "type": "fillBlank",
+      "prompt": "Write the guard test for the empty list:\n\nif count ____ 0:\n    print(\"No average\")",
+      "answer": "==",
+      "acceptable": [
+        "=="
+      ],
+      "explanation": "Check count == 0 to catch the empty list before dividing."
+    },
+    {
+      "id": "u62l07e03",
+      "type": "fillBlank",
+      "prompt": "Inside the else, write the division:\n\n    average = total ____ count",
+      "answer": "/",
+      "acceptable": [
+        "/"
+      ],
+      "explanation": "Average is the sum divided by the count, so use /."
+    },
+    {
+      "id": "u62l07e04",
+      "type": "orderBlocks",
+      "prompt": "Put the whole safe-average program in order.",
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "blocks": [
+        "count = len(nums)",
+        "if count == 0:",
+        "    print(\"No average\")",
+        "else:",
+        "    total = 0",
+        "    for n in nums:",
+        "        total = total + n",
+        "    print(total / count)"
+      ],
+      "explanation": "Count, guard the empty case, else sum then divide. The divide lives safely inside the else."
+    },
+    {
+      "id": "u62l07e05",
+      "type": "multipleChoice",
+      "prompt": "You assembled it for nums = [2, 4, 6]. What prints?",
+      "options": [
+        "4.0",
+        "12",
+        "3",
+        "No average"
+      ],
+      "answer": 0,
+      "explanation": "count 3 (not 0), sum 12, 12 / 3 = 4.0. The else branch runs."
+    },
+    {
+      "id": "u62l07e06",
+      "type": "multipleChoice",
+      "prompt": "You run the same program on nums = []. What prints?",
+      "options": [
+        "No average",
+        "0.0",
+        "An error",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "count is 0, so the guard prints 'No average' and skips the divide."
+    },
+    {
+      "id": "u62l07e07",
+      "type": "tapTokens",
+      "prompt": "Tap the tokens to add the current value n into total.",
+      "answer": [
+        "total",
+        "=",
+        "total",
+        "+",
+        "n"
+      ],
+      "tokens": [
+        "total",
+        "=",
+        "total",
+        "+",
+        "n"
+      ],
+      "explanation": "total = total + n is the familiar accumulator step that builds the sum."
+    },
+    {
+      "id": "u62l07e08",
+      "type": "multipleChoice",
+      "prompt": "Where must the division sit so it never runs on an empty list?",
+      "options": [
+        "Inside the else (after the count == 0 check)",
+        "Before the if",
+        "Inside the if count == 0 branch",
+        "At the very top"
+      ],
+      "answer": 0,
+      "explanation": "The else only runs when count is NOT 0, so the divide there is always safe."
+    },
+    {
+      "id": "u62l07e09",
+      "type": "trueFalse",
+      "prompt": "The safe average is just sum + count + an edge-case guard + one divide — all tools you already knew, combined.",
+      "answer": true,
+      "explanation": "That is the whole unit: no new syntax, just a new combination with a familiar guard."
+    },
+    {
+      "id": "u62l07e10",
+      "type": "multipleChoice",
+      "prompt": "After building it, what is the best check?",
+      "options": [
+        "Trace a small list AND an empty list by hand, and compare to the output",
+        "Only test one list",
+        "Skip testing",
+        "Only test the empty list"
+      ],
+      "answer": 0,
+      "explanation": "Test both a normal list and the empty list. The empty case is exactly what the guard exists for."
+    }
+  ]
+}

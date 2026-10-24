@@ -1,0 +1,125 @@
+{
+  "unitId": "u88",
+  "lessonId": "u88l09",
+  "title": "Solve it: who can be paired?",
+  "idea": "TOOL: apply nested loops to a real 'every pair' problem, from read to predict. Thinking-heavy, with visible output.",
+  "exercises": [
+    {
+      "id": "u88l09e01",
+      "type": "multipleChoice",
+      "prompt": "PROBLEM: 'A list holds each player's skill number. Print every pair of players whose skills are EQUAL, so they can play a fair match.' What makes this a nested-loop problem?",
+      "options": [
+        "It compares each player against every other player",
+        "It only needs one value",
+        "It never compares anything",
+        "It prints a single number"
+      ],
+      "answer": 0,
+      "explanation": "'Each player against every other' is the signal for nested loops — one list compared with itself."
+    },
+    {
+      "id": "u88l09e02",
+      "type": "multipleChoice",
+      "prompt": "What is the OUTPUT of this problem?",
+      "options": [
+        "Every pair of players with equal skill",
+        "The average skill",
+        "The number of players",
+        "The single best player"
+      ],
+      "answer": 0,
+      "explanation": "The output is the set of equal-skill pairs. Naming it first (a u85 habit) tells you what the loops must produce."
+    },
+    {
+      "id": "u88l09e03",
+      "type": "orderBlocks",
+      "prompt": "Arrange the plan for this problem.",
+      "blocks": [
+        "For each player a (outer loop)",
+        "For each player b (inner loop)",
+        "If a and b have equal skill, print the pair"
+      ],
+      "answer": [0, 1, 2],
+      "explanation": "Outer over players, inner over players, and an if for the equal-skill rule. The nested-loop plan for an 'every pair' problem."
+    },
+    {
+      "id": "u88l09e04",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nskills = [5, 5, 7]\nfor a in skills:\n    for b in skills:\n        if a == b:\n            print(a, b)\n\nHow many lines print?",
+      "options": [
+        "5 (the two fives pair in both orders plus each self-pair, and 7 with itself)",
+        "1",
+        "3",
+        "9"
+      ],
+      "answer": 0,
+      "explanation": "Equal pairs among [5,5,7]: (5,5) happens for first-first, first-second, second-first, second-second = 4, plus (7,7) = 5 lines total."
+    },
+    {
+      "id": "u88l09e05",
+      "type": "trueFalse",
+      "prompt": "This output includes a player paired with THEMSELF, which may not be a real 'match'.",
+      "answer": true,
+      "explanation": "Yes — self-pairs appear. If a player can't match themselves, you'd add a guard. Spotting this is careful edge-case thinking."
+    },
+    {
+      "id": "u88l09e06",
+      "type": "multipleChoice",
+      "prompt": "To avoid self-pairs AND avoid listing each pair twice, which if-condition is best?",
+      "options": [
+        "Use indexes with if i < j (keep one ordering, skip self)",
+        "if a == b only",
+        "if a > 0",
+        "no condition"
+      ],
+      "answer": 0,
+      "explanation": "Looping by index with 'if i < j' gives each distinct pair once and never pairs an item with itself. A clean 'every unordered pair' trick."
+    },
+    {
+      "id": "u88l09e07",
+      "type": "multipleChoice",
+      "prompt": "Predict the output of the index version:\n\nskills = [5, 5, 7]\nfor i in range(len(skills)):\n    for j in range(len(skills)):\n        if i < j and skills[i] == skills[j]:\n            print(i, j)",
+      "options": [
+        "0 1 (only the two equal fives, as one pair)",
+        "every pair",
+        "nothing",
+        "0 0, 1 1, 2 2"
+      ],
+      "answer": 0,
+      "explanation": "Only i<j equal-skill pairs: positions 0 and 1 (both 5). Output is a single line '0 1'. len() gives the size; indexing reads each skill."
+    },
+    {
+      "id": "u88l09e08",
+      "type": "multipleChoice",
+      "prompt": "Why loop over range(len(skills)) and index with skills[i] instead of 'for a in skills'?",
+      "options": [
+        "Indexes let you compare positions, so 'i < j' can skip repeats and self-pairs",
+        "It is always faster",
+        "You can't loop a list directly",
+        "Indexes print nicer"
+      ],
+      "answer": 0,
+      "explanation": "Positions (i, j) let you say 'i < j' to get each pair once. With plain values you can't tell a self-pair from a true duplicate as cleanly."
+    },
+    {
+      "id": "u88l09e09",
+      "type": "trueFalse",
+      "prompt": "Hand-working a tiny input like [5, 5, 7] before trusting the loop is a good check.",
+      "answer": true,
+      "explanation": "Always. A small hand example tells you the expected pairs, so you can confirm the loop prints exactly those. The old check habit still rules."
+    },
+    {
+      "id": "u88l09e10",
+      "type": "multipleChoice",
+      "prompt": "What did this lesson show nested loops can do?",
+      "options": [
+        "Solve a real 'every pair' problem, with an if and index trick to control which pairs count",
+        "Only print grids",
+        "Replace all single loops",
+        "Avoid comparisons"
+      ],
+      "answer": 0,
+      "explanation": "Nested loops plus an if (and i<j indexing) solve pairing problems precisely — each valid pair once, self-pairs skipped."
+    }
+  ]
+}

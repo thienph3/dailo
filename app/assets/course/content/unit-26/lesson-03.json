@@ -1,0 +1,136 @@
+{
+  "unitId": "u26",
+  "lessonId": "u26l03",
+  "title": "Meet 'not': flip true and false",
+  "idea": "'not' reverses a condition: not True is False, not False is True. Great for 'unless' rules. Meet it with visible output.",
+  "exercises": [
+    {
+      "id": "u26l03e01",
+      "type": "multipleChoice",
+      "prompt": "What does 'not' do to a condition?",
+      "options": [
+        "Flips it: True becomes False, False becomes True",
+        "Doubles it",
+        "Deletes it",
+        "Adds one"
+      ],
+      "answer": 0,
+      "explanation": "'not' is a flip. It turns a True into False and a False into True."
+    },
+    {
+      "id": "u26l03e02",
+      "type": "multipleChoice",
+      "prompt": "What is the value of this?\n\nnot True",
+      "options": [
+        "False",
+        "True",
+        "neither",
+        "an error"
+      ],
+      "answer": 0,
+      "explanation": "not flips True to False."
+    },
+    {
+      "id": "u26l03e03",
+      "type": "multipleChoice",
+      "prompt": "What is the value of this?\n\nnot False",
+      "options": [
+        "True",
+        "False",
+        "neither",
+        "an error"
+      ],
+      "answer": 0,
+      "explanation": "not flips False to True."
+    },
+    {
+      "id": "u26l03e04",
+      "type": "multipleChoice",
+      "prompt": "What does this print?\n\nis_raining = False\nif not is_raining:\n    print(\"Go outside\")\nelse:\n    print(\"Stay in\")",
+      "options": [
+        "Go outside",
+        "Stay in",
+        "both",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "is_raining is False, so 'not is_raining' is True, and 'Go outside' prints."
+    },
+    {
+      "id": "u26l03e05",
+      "type": "multipleChoice",
+      "prompt": "Same code, but is_raining = True. What prints?",
+      "options": [
+        "Stay in",
+        "Go outside",
+        "both",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "'not True' is False, so the else runs: 'Stay in'."
+    },
+    {
+      "id": "u26l03e06",
+      "type": "trueFalse",
+      "prompt": "'not' lets you act when something is NOT true, like 'unless it is raining'.",
+      "answer": true,
+      "explanation": "Yes - 'not' reads like 'unless'. 'if not is_raining' means 'unless it is raining'."
+    },
+    {
+      "id": "u26l03e07",
+      "type": "matchPairs",
+      "prompt": "Match each 'not' expression to its value.",
+      "pairs": [
+        {
+          "left": "not True",
+          "right": "False"
+        },
+        {
+          "left": "not False",
+          "right": "True"
+        },
+        {
+          "left": "not (5 > 3)",
+          "right": "False"
+        }
+      ],
+      "explanation": "not flips the value. 5 > 3 is True, so 'not (5 > 3)' is False."
+    },
+    {
+      "id": "u26l03e08",
+      "type": "fillBlank",
+      "prompt": "Act unless the gate is locked. Fill the blank:\n\nif ____ is_locked:\n    print(\"Open the gate\")",
+      "answer": "not",
+      "acceptable": [
+        "not"
+      ],
+      "explanation": "'not is_locked' is True when is_locked is False - exactly 'unless it is locked'."
+    },
+    {
+      "id": "u26l03e09",
+      "type": "multipleChoice",
+      "prompt": "'not (age >= 18)' is the same as which comparison?",
+      "options": [
+        "age < 18",
+        "age > 18",
+        "age == 18",
+        "age >= 18"
+      ],
+      "answer": 0,
+      "explanation": "Flipping 'age >= 18' gives 'age < 18' - the opposite of 'at least 18'."
+    },
+    {
+      "id": "u26l03e10",
+      "type": "multipleChoice",
+      "prompt": "The big idea of 'not' is...",
+      "options": [
+        "reverse a condition to handle 'unless' or 'is NOT' rules",
+        "add two conditions",
+        "require both",
+        "pick either"
+      ],
+      "answer": 0,
+      "explanation": "'not' flips a condition, which is perfect for 'unless' and 'is not' phrasing."
+    }
+  ]
+}

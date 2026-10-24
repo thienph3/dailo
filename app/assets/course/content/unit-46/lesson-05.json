@@ -1,0 +1,137 @@
+{
+  "unitId": "u46",
+  "lessonId": "u46l05",
+  "title": "break vs continue",
+  "idea": "Tell break and continue apart by their effect: break ENDS the loop; continue SKIPS one pass. Predict outputs.",
+  "exercises": [
+    {
+      "id": "u46l05e01",
+      "type": "multipleChoice",
+      "prompt": "The big difference: break ___ the loop, continue ___ one pass.",
+      "explanation": "break ends the whole loop; continue only skips the current pass and keeps looping.",
+      "options": [
+        "ends; skips",
+        "skips; ends",
+        "starts; ends",
+        "ends; ends"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u46l05e02",
+      "type": "multipleChoice",
+      "prompt": "Loop A uses break at i == 3; Loop B uses continue at i == 3, over range(1, 6), printing i otherwise. Which prints MORE numbers?",
+      "explanation": "break stops at 3 (prints 1,2). continue skips only 3 (prints 1,2,4,5). B prints more.",
+      "options": [
+        "B (continue) prints more",
+        "A (break) prints more",
+        "They print the same",
+        "Both print nothing"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u46l05e03",
+      "type": "multipleChoice",
+      "prompt": "What prints?\n\nfor i in range(1, 6):\n    if i == 3:\n        break\n    print(i)",
+      "explanation": "break at i == 3 ends the loop after printing 1 and 2.",
+      "options": [
+        "1\n2",
+        "1\n2\n4\n5",
+        "1\n2\n3",
+        "nothing"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u46l05e04",
+      "type": "multipleChoice",
+      "prompt": "What prints?\n\nfor i in range(1, 6):\n    if i == 3:\n        continue\n    print(i)",
+      "explanation": "continue at i == 3 skips only 3, printing 1, 2, 4, 5.",
+      "options": [
+        "1\n2\n4\n5",
+        "1\n2",
+        "1\n2\n3\n4\n5",
+        "3"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u46l05e05",
+      "type": "matchPairs",
+      "prompt": "Match each situation to the right keyword.",
+      "explanation": "Found what you need -> break. Just want to skip some -> continue.",
+      "pairs": [
+        {
+          "left": "Found the answer, stop looking",
+          "right": "break"
+        },
+        {
+          "left": "Ignore this value, keep going",
+          "right": "continue"
+        },
+        {
+          "left": "Quit the loop entirely",
+          "right": "break"
+        },
+        {
+          "left": "Skip even numbers only",
+          "right": "continue"
+        }
+      ]
+    },
+    {
+      "id": "u46l05e06",
+      "type": "trueFalse",
+      "prompt": "After break, the code after the loop runs; after continue, the loop runs its next pass.",
+      "explanation": "True - break moves on past the loop; continue moves on to the next pass within the loop.",
+      "answer": true
+    },
+    {
+      "id": "u46l05e07",
+      "type": "fillBlank",
+      "prompt": "You want to STOP the loop at the first negative-style trigger. Fill the keyword:\n\nif n == 0:\n    ____",
+      "explanation": "To stop the whole loop you use break.",
+      "answer": "break",
+      "acceptable": [
+        "break"
+      ]
+    },
+    {
+      "id": "u46l05e08",
+      "type": "fillBlank",
+      "prompt": "You want to SKIP just this pass. Fill the keyword:\n\nif n % 2 == 0:\n    ____",
+      "explanation": "To skip one pass and keep going you use continue.",
+      "answer": "continue",
+      "acceptable": [
+        "continue"
+      ]
+    },
+    {
+      "id": "u46l05e09",
+      "type": "multipleChoice",
+      "prompt": "Which keyword would make a loop print FEWER total passes of work when a match is common?",
+      "explanation": "break ends everything at the first match, so far fewer passes run than continue, which keeps looping.",
+      "options": [
+        "break",
+        "continue",
+        "they are equal",
+        "neither affects passes"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u46l05e10",
+      "type": "multipleChoice",
+      "prompt": "Pick the right tool: 'print all scores except the zeros'.",
+      "explanation": "You skip zeros but keep going through the rest, so continue is the fit - break would stop too early.",
+      "options": [
+        "continue (skip zeros, keep going)",
+        "break (stop at the first zero)",
+        "neither",
+        "both at once"
+      ],
+      "answer": 0
+    }
+  ]
+}

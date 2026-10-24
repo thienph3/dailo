@@ -1,0 +1,136 @@
+{
+  "unitId": "u57",
+  "lessonId": "u57l09",
+  "title": "Put the total to work",
+  "idea": "Combine summing with earlier tools (if, f-strings) in small end-to-end tasks. Review-leaning.",
+  "exercises": [
+    {
+      "id": "u57l09e01",
+      "type": "multipleChoice",
+      "prompt": "Total the scores, then print 'win' if the total is 100 or more. Which order is right?",
+      "options": [
+        "Loop to total first, then check the total with an if",
+        "Check before looping",
+        "Check inside the loop each pass",
+        "Never check"
+      ],
+      "answer": 0,
+      "explanation": "You need the full total before you can judge it, so loop first, then test after."
+    },
+    {
+      "id": "u57l09e02",
+      "type": "orderBlocks",
+      "prompt": "Arrange: total the list, then print 'win' if total >= 100.",
+      "blocks": [
+        "    print(\"win\")",
+        "if total >= 100:",
+        "    total = total + s",
+        "for s in scores:",
+        "total = 0"
+      ],
+      "answer": [
+        4,
+        3,
+        2,
+        1,
+        0
+      ],
+      "explanation": "Start total, loop + add, then an if AFTER the loop decides 'win'."
+    },
+    {
+      "id": "u57l09e03",
+      "type": "multipleChoice",
+      "prompt": "scores = [60, 50]\ntotal = 0\nfor s in scores:\n    total = total + s\nif total >= 100:\n    print(\"win\")\nelse:\n    print(\"try again\")\n\nWhat prints?",
+      "options": [
+        "win",
+        "try again",
+        "110",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "Total is 110, which is >= 100, so 'win' prints."
+    },
+    {
+      "id": "u57l09e04",
+      "type": "fillBlank",
+      "prompt": "Show the total in a sentence:\n\nprint(f\"Total spent: {____}\")",
+      "answer": "total",
+      "acceptable": [
+        "total"
+      ],
+      "explanation": "The variable name in braces shows its value."
+    },
+    {
+      "id": "u57l09e05",
+      "type": "multipleChoice",
+      "prompt": "nums = [2, 4, 6]\ntotal = 0\nfor n in nums:\n    total = total + n\nprint(total // 3)\n\nWhat prints (total shared 3 ways, whole number)?",
+      "options": [
+        "4",
+        "12",
+        "3",
+        "6"
+      ],
+      "answer": 0,
+      "explanation": "Total 12, 12 // 3 = 4. You can use the total in further math — here just the total shared three ways."
+    },
+    {
+      "id": "u57l09e06",
+      "type": "trueFalse",
+      "prompt": "You can test the total with an if only AFTER the loop finishes, when it holds the full sum.",
+      "answer": true,
+      "explanation": "Mid-loop the total is partial. Judge it once it's complete."
+    },
+    {
+      "id": "u57l09e07",
+      "type": "multipleChoice",
+      "prompt": "spent = [20, 20, 20]\ntotal = 0\nfor s in spent:\n    total = total + s\nprint(f\"You spent {total}\")\n\nWhat prints?",
+      "options": [
+        "You spent 60",
+        "You spent 20",
+        "You spent 3",
+        "60"
+      ],
+      "answer": 0,
+      "explanation": "20 x 3 = 60, labelled by the f-string."
+    },
+    {
+      "id": "u57l09e08",
+      "type": "multipleChoice",
+      "prompt": "Total only the positive numbers in a list. Which goes inside the loop?",
+      "options": [
+        "if n > 0: total = total + n",
+        "total = total + n (always)",
+        "if n > 0: print(n)",
+        "total = n"
+      ],
+      "answer": 0,
+      "explanation": "Guard the accumulate with a test so only positives are added."
+    },
+    {
+      "id": "u57l09e09",
+      "type": "multipleChoice",
+      "prompt": "items = [9, 9, 9]\ntotal = 0\nfor i in items:\n    total = total + i\nprint(total)\n\nWhat prints?",
+      "options": [
+        "27",
+        "9",
+        "3",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "9 added three times is 27."
+    },
+    {
+      "id": "u57l09e10",
+      "type": "multipleChoice",
+      "prompt": "Best description of this unit's tool?",
+      "options": [
+        "Walk a list, adding each value into one running total",
+        "Make a new list",
+        "Print each value",
+        "Sort a list"
+      ],
+      "answer": 0,
+      "explanation": "The accumulator sums a whole list into one result."
+    }
+  ]
+}

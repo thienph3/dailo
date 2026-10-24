@@ -1,0 +1,146 @@
+{
+  "unitId": "u15",
+  "lessonId": "u15l10",
+  "title": "Put it together",
+  "idea": "Review of Unit 15 strings, mixed with variables and math from earlier units — compute then report.",
+  "exercises": [
+    {
+      "id": "u15l10e01",
+      "type": "multipleChoice",
+      "prompt": "What will this show?\n\nprint(\"Hello \" + \"there\")",
+      "options": [
+        "Hello there",
+        "Hellothere",
+        "Hello  there",
+        "Hello + there"
+      ],
+      "answer": 0,
+      "explanation": "The space inside \"Hello \" means they join as: Hello there. Concatenation from this unit."
+    },
+    {
+      "id": "u15l10e02",
+      "type": "multipleChoice",
+      "prompt": "What will this show?\n\nname = \"Lee\"\nprint(f\"Welcome, {name}!\")",
+      "options": [
+        "Welcome, Lee!",
+        "Welcome, name!",
+        "Welcome, {name}!",
+        "Lee"
+      ],
+      "answer": 0,
+      "explanation": "The f-string drops the value of name in: Welcome, Lee!"
+    },
+    {
+      "id": "u15l10e03",
+      "type": "multipleChoice",
+      "prompt": "Mixing math (earlier units) with an f-string. What will this show?\n\na = 6\nb = 2\nprint(f\"Answer: {a * b}\")",
+      "options": [
+        "Answer: 12",
+        "Answer: a * b",
+        "Answer: 62",
+        "Answer: 8"
+      ],
+      "answer": 0,
+      "explanation": "a * b is 6 * 2 = 12, worked out in the braces: Answer: 12. Compute, then report."
+    },
+    {
+      "id": "u15l10e04",
+      "type": "multipleChoice",
+      "prompt": "Review of reassignment (earlier unit). What does the second print show?\n\ngreeting = \"hi\"\ngreeting = \"bye\"\nprint(greeting)",
+      "options": [
+        "bye",
+        "hi",
+        "greeting",
+        "hi bye"
+      ],
+      "answer": 0,
+      "explanation": "The second line replaces the value. A variable holds its most recent value: bye."
+    },
+    {
+      "id": "u15l10e05",
+      "type": "multipleChoice",
+      "prompt": "Precedence review inside an f-string. What will this show?\n\nprint(f\"{10 - 2 * 3}\")",
+      "options": [
+        "4",
+        "24",
+        "8",
+        "6"
+      ],
+      "answer": 0,
+      "explanation": "Times first: 2 * 3 is 6, then 10 - 6 is 4. Old rules, new wrapper."
+    },
+    {
+      "id": "u15l10e06",
+      "type": "fillBlank",
+      "prompt": "Finish so it prints: Price is 50\n\nprice = 50\nprint(f\"Price is {____}\")",
+      "answer": "price",
+      "acceptable": [
+        "price"
+      ],
+      "explanation": "The variable price goes in the braces: {price} becomes 50. Price is 50."
+    },
+    {
+      "id": "u15l10e07",
+      "type": "orderBlocks",
+      "prompt": "Arrange a tiny program: store a count, store a price, then report the bill in a sentence.",
+      "blocks": [
+        "count = 4",
+        "price = 25",
+        "print(f\"Bill: {count * price}\")"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Store the values first, then the last line computes count * price (100) and reports: Bill: 100. Store, compute, report!"
+    },
+    {
+      "id": "u15l10e08",
+      "type": "tapTokens",
+      "prompt": "Build a line that prints: Hi Mia using an f-string (name holds \"Mia\").",
+      "tokens": [
+        "print",
+        "(",
+        "f\"Hi {name}\"",
+        ")"
+      ],
+      "answer": [
+        "print",
+        "(",
+        "f\"Hi {name}\"",
+        ")"
+      ],
+      "explanation": "f\"Hi {name}\" shows Hi Mia. You've got f-strings down!"
+    },
+    {
+      "id": "u15l10e09",
+      "type": "multiSelect",
+      "prompt": "name holds \"Mia\". Which lines correctly show Hi, Mia? (pick all)",
+      "options": [
+        "print(f\"Hi, {name}\")",
+        "print(\"Hi, \" + name)",
+        "print(\"Hi, \" + \"name\")",
+        "print(\"Hi, {name}\")"
+      ],
+      "answer": [
+        0,
+        1
+      ],
+      "explanation": "f-string with braces, or + with the bare variable. The other two print the literal word 'name'."
+    },
+    {
+      "id": "u15l10e10",
+      "type": "multipleChoice",
+      "prompt": "You finished Unit 15! What can you now do?",
+      "options": [
+        "Solve problems about text and report any value inside a clear sentence",
+        "Only print single words",
+        "Only add numbers",
+        "Nothing new"
+      ],
+      "answer": 0,
+      "explanation": "You can store and join text, and use f-strings to report words and computed numbers in a readable sentence. Next: telling text and numbers apart, and converting between them."
+    }
+  ]
+}

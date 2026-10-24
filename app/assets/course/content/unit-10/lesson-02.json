@@ -1,0 +1,86 @@
+{
+  "unitId": "u10",
+  "lessonId": "u10l02",
+  "title": "Subtracting with -",
+  "idea": "The - sign takes one number away from another. print(10 - 3) shows 7.",
+  "exercises": [
+    {
+      "id": "u10l02e01",
+      "type": "multipleChoice",
+      "prompt": "What will this show?\n\nprint(10 - 3)",
+      "options": ["7", "13", "10 - 3", "3"],
+      "answer": 0,
+      "explanation": "The - sign means subtract. 10 take away 3 is 7."
+    },
+    {
+      "id": "u10l02e02",
+      "type": "multipleChoice",
+      "prompt": "What will this show?\n\nprint(8 - 8)",
+      "options": ["0", "88", "8 - 8", "16"],
+      "answer": 0,
+      "explanation": "8 take away 8 leaves nothing: 0."
+    },
+    {
+      "id": "u10l02e03",
+      "type": "trueFalse",
+      "prompt": "Order matters with subtraction: 10 - 3 and 3 - 10 are different.",
+      "answer": true,
+      "explanation": "10 - 3 is 7. 3 - 10 is below zero. Unlike adding, the order changes the answer."
+    },
+    {
+      "id": "u10l02e04",
+      "type": "multipleChoice",
+      "prompt": "You had 20 and spent 5. Which instruction shows what's left?",
+      "options": ["print(20 - 5)", "print(20 + 5)", "print(5 - 20)", "print(\"20 - 5\")"],
+      "answer": 0,
+      "explanation": "Spending means taking away, so subtract: print(20 - 5) shows 15."
+    },
+    {
+      "id": "u10l02e05",
+      "type": "fillBlank",
+      "prompt": "Fill the blank so the screen shows 6:\n\nprint(9 ____ 3)",
+      "answer": "-",
+      "acceptable": ["-"],
+      "explanation": "9 - 3 is 6. The - sign tells the computer to subtract."
+    },
+    {
+      "id": "u10l02e06",
+      "type": "multipleChoice",
+      "prompt": "What will this show?\n\nprint(100 - 1)",
+      "options": ["99", "101", "100 - 1", "1"],
+      "answer": 0,
+      "explanation": "100 take away 1 is 99."
+    },
+    {
+      "id": "u10l02e07",
+      "type": "tapTokens",
+      "prompt": "Build an instruction that subtracts 4 from 15 and shows the result.",
+      "tokens": ["print", "(", "15", "-", "4", ")"],
+      "answer": ["print", "(", "15", "-", "4", ")"],
+      "explanation": "print(15 - 4) shows 11. The bigger number goes first here because we take 4 away from 15."
+    },
+    {
+      "id": "u10l02e08",
+      "type": "multipleChoice",
+      "prompt": "Which instruction shows the result of taking 7 away from 7?",
+      "options": ["print(7 - 7)", "print(7 + 7)", "print(\"7 - 7\")", "print(77)"],
+      "answer": 0,
+      "explanation": "print(7 - 7) does the math and shows 0."
+    },
+    {
+      "id": "u10l02e09",
+      "type": "trueFalse",
+      "prompt": "print(\"50 - 10\") shows 40.",
+      "answer": false,
+      "explanation": "It has quotes, so it's text — shown exactly as 50 - 10. Only without quotes would it do the math and show 40."
+    },
+    {
+      "id": "u10l02e10",
+      "type": "fillBlank",
+      "prompt": "Write a full instruction that subtracts 12 from 30 and shows the result.",
+      "answer": "print(30 - 12)",
+      "acceptable": ["print(30 - 12)", "print(30-12)"],
+      "explanation": "print(30 - 12) shows 18."
+    }
+  ]
+}

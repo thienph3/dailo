@@ -1,0 +1,135 @@
+{
+  "unitId": "u60",
+  "lessonId": "u60l03",
+  "title": "Tracing the smallest",
+  "idea": "TOOL practice: trace the smallest-so-far step by step. Thinking-heavy, mirrors the max tracing lesson.",
+  "exercises": [
+    {
+      "id": "u60l03e01",
+      "type": "orderBlocks",
+      "prompt": "Trace [8, 2, 5, 1] for the smallest. Put the smallest-so-far after each value in order (start 8).",
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "blocks": [
+        "Start best = 8",
+        "2 < 8, best = 2",
+        "5 is not < 2, best stays 2",
+        "1 < 2, best = 1"
+      ],
+      "explanation": "best goes 8 -> 2 -> 2 -> 1. The final smallest is 1."
+    },
+    {
+      "id": "u60l03e02",
+      "type": "multipleChoice",
+      "prompt": "Final smallest of [8, 2, 5, 1]?",
+      "options": [
+        "1",
+        "2",
+        "8",
+        "16"
+      ],
+      "answer": 0,
+      "explanation": "1 is the last and smallest. best ends at 1."
+    },
+    {
+      "id": "u60l03e03",
+      "type": "multipleChoice",
+      "prompt": "Trace [3, 7, 9] for the smallest. What is best after the whole loop?",
+      "options": [
+        "3",
+        "9",
+        "7",
+        "19"
+      ],
+      "answer": 0,
+      "explanation": "best starts at 3 and nothing is smaller. The first value was already the smallest."
+    },
+    {
+      "id": "u60l03e04",
+      "type": "trueFalse",
+      "prompt": "Just like the biggest, the smallest value can appear first, in the middle, or last.",
+      "answer": true,
+      "explanation": "Position does not matter. Start at the first value and compare every item — same as max."
+    },
+    {
+      "id": "u60l03e05",
+      "type": "multipleChoice",
+      "prompt": "Trace [5, 4, 3, 2, 1] for the smallest. How many times does best change after the start?",
+      "options": [
+        "Four — every value is smaller than the last",
+        "Once",
+        "Never",
+        "Two"
+      ],
+      "answer": 0,
+      "explanation": "A falling list updates the smallest on every step: 5->4->3->2->1. (For max, the SAME list never changed — that is the flip.)"
+    },
+    {
+      "id": "u60l03e06",
+      "type": "multipleChoice",
+      "prompt": "Trace [1, 2, 3, 4, 5] for the smallest. How many times does best change after the start?",
+      "options": [
+        "Never — best is 1 the whole time",
+        "Four",
+        "Once",
+        "Five"
+      ],
+      "answer": 0,
+      "explanation": "A rising list never finds anything smaller than the first value, 1. (For max, this same list changed every step — mirror image.)"
+    },
+    {
+      "id": "u60l03e07",
+      "type": "multiSelect",
+      "prompt": "Which lists have 2 as their smallest value? (pick all)",
+      "options": [
+        "[2, 5, 9]",
+        "[7, 2, 4]",
+        "[2, 2, 8]",
+        "[1, 2, 3]"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "The first three bottom out at 2. The last one has a 1, so its smallest is 1, not 2."
+    },
+    {
+      "id": "u60l03e08",
+      "type": "multipleChoice",
+      "prompt": "You trace for the smallest and best never changes from its start. What does that mean?",
+      "options": [
+        "The first value was the smallest",
+        "The list was empty",
+        "An error happened",
+        "The list was all big numbers"
+      ],
+      "answer": 0,
+      "explanation": "Nothing beat the starting value, so the first item was already the minimum. Same reasoning as max, flipped."
+    },
+    {
+      "id": "u60l03e09",
+      "type": "multipleChoice",
+      "prompt": "For the SAME list [5, 4, 3, 2, 1], max changed best never and min changed it four times. Why the difference?",
+      "options": [
+        "The list falls, so each value beats the min's best but never the max's",
+        "Min and max are unrelated",
+        "The list is special",
+        "min runs twice"
+      ],
+      "answer": 0,
+      "explanation": "A falling list is 'all new smallests' for min and 'no new biggests' for max. The flip in comparison flips which values win."
+    },
+    {
+      "id": "u60l03e10",
+      "type": "trueFalse",
+      "prompt": "Tracing min by hand, like tracing max, gives you an expected answer to check your code against.",
+      "answer": true,
+      "explanation": "Hand-work the example first, then compare the code's output. Same Check habit as always."
+    }
+  ]
+}

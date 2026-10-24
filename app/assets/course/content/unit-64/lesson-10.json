@@ -1,0 +1,139 @@
+{
+  "unitId": "u64",
+  "lessonId": "u64l10",
+  "title": "Search wrap-up and review",
+  "idea": "TOOL wrap-up (review-heavy): recall the search pattern and mix in filter, sum, len from earlier units.",
+  "exercises": [
+    {
+      "type": "orderBlocks",
+      "prompt": "From memory, arrange the found-flag search.",
+      "blocks": [
+        "found = False",
+        "for n in nums:",
+        "    if n == target:",
+        "        found = True",
+        "print(found)"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "explanation": "Assume not found, loop every item, compare with ==, flip to True on a match, then report. The core search shape.",
+      "id": "u64l10e01"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nnums = [4, 5, 6]\ntarget = 5\nfound = False\nfor n in nums:\n    if n == target:\n        found = True\nprint(found)",
+      "options": [
+        "True",
+        "False",
+        "5",
+        "[5]"
+      ],
+      "answer": 0,
+      "explanation": "5 is present, so found is True. The search confirms the value is there.",
+      "id": "u64l10e02"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "REVIEW (Unit 63): what does this FILTER print?\n\nnums = [2, 7, 4]\nresult = []\nfor n in nums:\n    if n > 3:\n        result.append(n)\nprint(result)",
+      "options": [
+        "[7, 4]",
+        "True",
+        "2",
+        "[2]"
+      ],
+      "answer": 0,
+      "explanation": "The filter keeps 7 and 4. Filter builds a LIST of matches; search just checks presence.",
+      "id": "u64l10e03"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "REVIEW (Unit 57): what is sum([1, 2, 3, 4])?",
+      "options": [
+        "10",
+        "4",
+        "24",
+        "1234"
+      ],
+      "answer": 0,
+      "explanation": "sum adds the items: 1 + 2 + 3 + 4 = 10. A core list tool you still use alongside search.",
+      "id": "u64l10e04"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "REVIEW (Unit 58): what is len([8, 8])?",
+      "options": [
+        "2",
+        "8",
+        "16",
+        "1"
+      ],
+      "answer": 0,
+      "explanation": "len counts the items: 2. You use len(nums) to drive a position search with range(len(nums)).",
+      "id": "u64l10e05"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Which tool answers 'is the value present?' with the least work?",
+      "options": [
+        "a found flag (search)",
+        "a filter then len",
+        "a sum",
+        "the average"
+      ],
+      "answer": 0,
+      "explanation": "A found flag is the simplest yes/no. The other tools compute more than the presence question needs.",
+      "id": "u64l10e06"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "REVIEW: break stops a loop early — handy once a search has found its match.",
+      "answer": true,
+      "explanation": "break ends the loop immediately. Once found is True, the yes/no answer cannot change, so you may break.",
+      "id": "u64l10e07"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Which ONE line is the heart of a search — the part that records a hit?",
+      "options": [
+        "found = True inside the if",
+        "found = False",
+        "print(found)",
+        "for n in nums:"
+      ],
+      "answer": 0,
+      "explanation": "found = True on a match is where presence is recorded. The rest sets up and reports the search.",
+      "id": "u64l10e08"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nnums = [3, 1, 3]\ntarget = 3\nwhere = -1\nfor i in range(len(nums)):\n    if nums[i] == target:\n        where = i\n        break\nprint(where)",
+      "options": [
+        "0",
+        "2",
+        "-1",
+        "3"
+      ],
+      "answer": 0,
+      "explanation": "The first 3 is at index 0; break stops there, so where is 0 — the FIRST position.",
+      "id": "u64l10e09"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "You now can solve 'is it in there / where?' problems. What is the general recipe?",
+      "options": [
+        "assume not found, loop and compare each item, flip a flag (or record the index) on a match",
+        "add everything up",
+        "sort then stop",
+        "find the average"
+      ],
+      "answer": 0,
+      "explanation": "Start with 'not found', scan the items, and record a match with a flag or an index. That is searching.",
+      "id": "u64l10e10"
+    }
+  ]
+}

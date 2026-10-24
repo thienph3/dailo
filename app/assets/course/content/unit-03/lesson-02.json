@@ -1,0 +1,113 @@
+{
+  "unitId": "u03",
+  "lessonId": "u03l02",
+  "title": "Solve it: an about-me card",
+  "idea": "GUIDED PROBLEM. Report three personal facts across three lines. Reinforces that each fact is its own print line and the order you choose is the order shown.",
+  "problem": "Show an about-me card on three lines: a name (Ada), a favorite color (blue), and a hobby (drawing).",
+  "exercises": [
+    {
+      "id": "u03l02e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: Show an about-me card — name Ada, color blue, hobby drawing — one fact per line.\n\nWhat is the OUTPUT?",
+      "options": [
+        "Three lines: Ada, blue, drawing",
+        "One line mixing them together",
+        "Just the name",
+        "A math result"
+      ],
+      "answer": 0,
+      "explanation": "Output is three lines, one fact each. Name the output first, always."
+    },
+    {
+      "id": "u03l02e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "What are the three facts to report?",
+      "options": [
+        "Ada, blue, drawing",
+        "Ada only",
+        "blue and drawing only",
+        "the word card"
+      ],
+      "answer": 0,
+      "explanation": "The three facts are the name, the color, and the hobby. You print each one."
+    },
+    {
+      "id": "u03l02e03",
+      "type": "orderBlocks",
+      "uepcc": "E",
+      "prompt": "Example. Work the expected output by hand in the order the problem lists the facts (name, color, hobby).",
+      "blocks": ["Ada", "blue", "drawing"],
+      "answer": [0, 1, 2],
+      "explanation": "By hand: Ada, then blue, then drawing. This is your check value."
+    },
+    {
+      "id": "u03l02e04",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Plan: how many print lines does a three-fact card need?",
+      "options": ["Three", "One", "Two", "Six"],
+      "answer": 0,
+      "explanation": "One print per fact, three facts, so three prints. The plan sizes the job before coding."
+    },
+    {
+      "id": "u03l02e05",
+      "type": "trueFalse",
+      "uepcc": "P",
+      "prompt": "Plan check: the order you print the lines decides the order they appear on screen.",
+      "answer": true,
+      "explanation": "Yes. The computer shows lines in the exact order you write the prints."
+    },
+    {
+      "id": "u03l02e06",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code. Arrange the lines to match your plan (name, color, hobby).",
+      "blocks": ["print(\"drawing\")", "print(\"Ada\")", "print(\"blue\")"],
+      "answer": [1, 2, 0],
+      "explanation": "Ada first, blue second, drawing third — the same order as the plan and the hand example."
+    },
+    {
+      "id": "u03l02e07",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Complete the color line so it shows blue:\n\nprint(\"Ada\")\n____(\"blue\")\nprint(\"drawing\")",
+      "answer": "print",
+      "acceptable": ["print"],
+      "explanation": "Every show-a-line instruction uses print. So the middle line is print(\"blue\")."
+    },
+    {
+      "id": "u03l02e08",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check. The code shows:\n\nAda\nblue\ndrawing\n\nDoes it match your hand example?",
+      "options": [
+        "Yes — same lines, same order",
+        "No — a line is missing",
+        "No — wrong order",
+        "Can't tell"
+      ],
+      "answer": 0,
+      "explanation": "All three lines appear in the planned order. Check passes."
+    },
+    {
+      "id": "u03l02e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "A friend's card has name Ben, color green, hobby running. Using the same plan (three prints, same order), the first line shows?",
+      "options": ["Ben", "green", "running", "Ada"],
+      "answer": 0,
+      "explanation": "The plan generalizes: new facts, same shape. Name comes first, so the first line is Ben."
+    },
+    {
+      "id": "u03l02e10",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "Review from Unit 1: what does print(\"blue\") show?",
+      "options": ["blue", "\"blue\"", "print blue", "Blue"],
+      "answer": 0,
+      "explanation": "Exactly the text in the quotes: blue. The quotes themselves are not shown."
+    }
+  ]
+}

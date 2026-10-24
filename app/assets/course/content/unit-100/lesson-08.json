@@ -1,0 +1,146 @@
+{
+  "unitId": "u100",
+  "lessonId": "u100l08",
+  "title": "Grand finale: keep asking until the input is valid",
+  "idea": "GUIDED FINALE. Input validation with a while loop: reject bad values and loop until a good one arrives.",
+  "problem": "Keep asking for an age until it is a positive number (reject 0 or negative, accept the first valid one).",
+  "exercises": [
+    {
+      "id": "u100l08e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: keep asking for an age until it's positive. OUTPUT is...",
+      "options": [
+        "A valid (positive) age, once accepted",
+        "Every rejected value",
+        "A count",
+        "True/False"
+      ],
+      "answer": 0,
+      "explanation": "Output is the first valid age. We loop, rejecting bad input, until a good value arrives."
+    },
+    {
+      "id": "u100l08e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "What makes an age INVALID here?",
+      "options": [
+        "Zero or negative (age <= 0)",
+        "Any even number",
+        "Anything over 100",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "A valid age is positive, so age <= 0 is invalid. The guard rejects those and asks again."
+    },
+    {
+      "id": "u100l08e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example by hand: the user types 0, then -4, then 25. Which is the first ACCEPTED value?",
+      "options": [
+        "25 — the first positive one",
+        "0",
+        "-4",
+        "none"
+      ],
+      "answer": 0,
+      "explanation": "0 and -4 are rejected; 25 is positive, so it's accepted and the loop ends. Check value: 25."
+    },
+    {
+      "id": "u100l08e04",
+      "type": "trueFalse",
+      "uepcc": "E",
+      "prompt": "A while loop lets us re-ask as many times as needed, however many bad values come first.",
+      "answer": true,
+      "explanation": "Yes — we don't know how many tries it'll take, so while (not a fixed range) is right. It stops on the first valid age."
+    },
+    {
+      "id": "u100l08e05",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Plan the retry. Order the steps.",
+      "blocks": [
+        "While the age is not valid, ask again",
+        "Ask for an age once to start",
+        "Once valid, use the age"
+      ],
+      "answer": [
+        1,
+        0,
+        2
+      ],
+      "explanation": "Ask first, then loop while invalid, re-asking each pass. The loop ends when a valid value is entered."
+    },
+    {
+      "id": "u100l08e06",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Which loop condition means 'keep asking while the age is invalid'?",
+      "options": [
+        "while age <= 0",
+        "while age > 0",
+        "while age == 0",
+        "while age < 100"
+      ],
+      "answer": 0,
+      "explanation": "Loop WHILE the value is still bad (age <= 0). A valid positive age makes the condition false and exits."
+    },
+    {
+      "id": "u100l08e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code the retry (input returns a number here). Arrange the lines.",
+      "blocks": [
+        "while age <= 0:",
+        "    age = int(input(\"Age? \"))",
+        "age = int(input(\"Age? \"))"
+      ],
+      "answer": [
+        2,
+        0,
+        1
+      ],
+      "explanation": "Ask once, then loop while invalid, asking again inside. int() turns the typed text into a number to compare."
+    },
+    {
+      "id": "u100l08e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Complete the condition so it repeats on invalid (non-positive) ages:\n\nage = int(input(\"Age? \"))\nwhile age ____ 0:\n    age = int(input(\"Age? \"))\nprint(age)",
+      "answer": "<=",
+      "acceptable": [
+        "<="
+      ],
+      "explanation": "Loop while age <= 0 (zero or negative). The first positive value ends the loop and gets printed."
+    },
+    {
+      "id": "u100l08e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "User enters 0, -4, then 25. The program prints 25. Hand said 25. Verdict?",
+      "options": [
+        "Passes",
+        "Fails",
+        "Unknown",
+        "Rewrite example"
+      ],
+      "answer": 0,
+      "explanation": "Matches. Bad inputs were rejected and re-asked; the first valid one was accepted. Real input validation!"
+    },
+    {
+      "id": "u100l08e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "If the user enters 25 right away (first try), how many times does the WHILE body run?",
+      "options": [
+        "0 — 25 is already valid, so the loop body is skipped",
+        "1",
+        "25",
+        "forever"
+      ],
+      "answer": 0,
+      "explanation": "25 is valid immediately, so age <= 0 is false and the body never runs. A while loop can run zero times — a key insight."
+    }
+  ]
+}

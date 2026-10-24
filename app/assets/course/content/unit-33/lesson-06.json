@@ -1,0 +1,145 @@
+{
+  "unitId": "u33",
+  "lessonId": "u33l06",
+  "title": "Fix it: = used in a condition",
+  "idea": "GUIDED BUG. A yes/no check uses a single = in the if. Fix the meaning to a comparison ==.",
+  "problem": "Rule: if the answer is 'yes', print 'Go'; otherwise 'Stop'. Broken: if answer = 'yes': print('Go') else: print('Stop').",
+  "exercises": [
+    {
+      "id": "u33l06e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: 'Go' when answer is 'yes', else 'Stop'.\n\nWhat is the OUTPUT?",
+      "options": [
+        "'Go' or 'Stop'",
+        "The answer typed",
+        "A number",
+        "Always 'Go'"
+      ],
+      "answer": 0,
+      "explanation": "One of two labels based on matching a word. A condition must ASK a question."
+    },
+    {
+      "id": "u33l06e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "A condition must be a question (True/False). Which operator ASKS 'are these equal?'",
+      "options": [
+        "==",
+        "=",
+        "+",
+        "%"
+      ],
+      "answer": 0,
+      "explanation": "== asks the equality question and returns True/False. A single = stores a value instead."
+    },
+    {
+      "id": "u33l06e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Work it by hand: answer = yes. The CORRECT result is?",
+      "options": [
+        "Go",
+        "Stop",
+        "yes",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "yes matches, so 'Go'. Check value."
+    },
+    {
+      "id": "u33l06e04",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "What is the reasoning problem with if answer = 'yes'?",
+      "options": [
+        "= stores a value; a condition needs the == question",
+        "'yes' is misspelled",
+        "answer is a number",
+        "Go should be Stop"
+      ],
+      "answer": 0,
+      "explanation": "= stores, it does not compare. A condition needs a question, so the meaning is wrong: it should be ==."
+    },
+    {
+      "id": "u33l06e05",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Plan the fix: replace = with what?",
+      "options": [
+        "==",
+        "else",
+        "and",
+        "int()"
+      ],
+      "answer": 0,
+      "explanation": "Replace = with == so the if asks whether answer equals 'yes'."
+    },
+    {
+      "id": "u33l06e06",
+      "type": "trueFalse",
+      "uepcc": "P",
+      "prompt": "Outside an if, answer = 'yes' would be a perfectly fine way to STORE a value.",
+      "answer": true,
+      "explanation": "True. = is only wrong here because a condition needs a comparison. Context decides which you want."
+    },
+    {
+      "id": "u33l06e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Arrange the FIXED code.",
+      "blocks": [
+        "if answer == \"yes\":",
+        "    print(\"Go\")",
+        "else:",
+        "    print(\"Stop\")"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "Use == in the condition to compare answer with 'yes'."
+    },
+    {
+      "id": "u33l06e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Write the fixed comparison operator:\n\nif answer ____ \"yes\":\n    print(\"Go\")\nelse:\n    print(\"Stop\")",
+      "answer": "==",
+      "acceptable": [
+        "=="
+      ],
+      "explanation": "== asks the equality question the condition needs."
+    },
+    {
+      "id": "u33l06e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check with the fix: answer = yes. What prints?",
+      "options": [
+        "Go",
+        "Stop",
+        "yes",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "answer == 'yes' is True -> 'Go'. Matches the hand answer. Fixed."
+    },
+    {
+      "id": "u33l06e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Re-check a fresh value: answer = no. What prints?",
+      "options": [
+        "Stop",
+        "Go",
+        "no",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "answer == 'yes' is False -> 'Stop'. Correct for a non-yes answer."
+    }
+  ]
+}

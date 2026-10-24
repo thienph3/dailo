@@ -1,0 +1,92 @@
+{
+  "unitId": "u48",
+  "lessonId": "u48l10",
+  "title": "Tracing checkpoint",
+  "idea": "Wrap up tracing with a mixed review: loop variable, counter, accumulator, while, break/continue, off-by-one, and predict-then-confirm. Review-heavy.",
+  "exercises": [
+    {
+      "id": "u48l10e01",
+      "type": "multipleChoice",
+      "prompt": "Trace: for i in range(5). The values of i are:",
+      "options": ["0, 1, 2, 3, 4", "1, 2, 3, 4, 5", "0, 1, 2, 3, 4, 5", "5"],
+      "answer": 0,
+      "explanation": "range(5) is 0 through 4 - stops before 5. Five passes."
+    },
+    {
+      "id": "u48l10e02",
+      "type": "multipleChoice",
+      "prompt": "Trace:\n\ncount = 0\nfor i in range(4):\n    count = count + 1\n\nFinal count?",
+      "options": ["4", "3", "5", "0"],
+      "answer": 0,
+      "explanation": "Four passes, +1 each. The counter ends at 4."
+    },
+    {
+      "id": "u48l10e03",
+      "type": "multipleChoice",
+      "prompt": "Trace:\n\ntotal = 0\nfor i in range(1, 4):\n    total = total + i\n\nFinal total?",
+      "options": ["6", "3", "10", "4"],
+      "answer": 0,
+      "explanation": "1 + 2 + 3 = 6. The accumulator sums i = 1, 2, 3."
+    },
+    {
+      "id": "u48l10e04",
+      "type": "multipleChoice",
+      "prompt": "Trace:\n\nn = 0\nwhile n < 3:\n    n = n + 1\n\nHow many passes?",
+      "options": ["3", "2", "4", "forever"],
+      "answer": 0,
+      "explanation": "n is 0, 1, 2 while the body runs, then becomes 3 and stops. Three passes."
+    },
+    {
+      "id": "u48l10e05",
+      "type": "multipleChoice",
+      "prompt": "Trace:\n\nfor i in range(6):\n    if i == 3:\n        break\n    print(i)\n\nWhat prints?",
+      "options": ["0, 1, 2", "0, 1, 2, 3", "0 to 5", "nothing"],
+      "answer": 0,
+      "explanation": "break stops the loop at i = 3 before printing, so only 0, 1, 2 appear."
+    },
+    {
+      "id": "u48l10e06",
+      "type": "multipleChoice",
+      "prompt": "Trace:\n\nfor i in range(5):\n    if i == 1:\n        continue\n    print(i)\n\nWhat prints?",
+      "options": ["0, 2, 3, 4", "0, 1, 2, 3, 4", "1", "0"],
+      "answer": 0,
+      "explanation": "continue skips printing when i is 1. Output: 0, 2, 3, 4."
+    },
+    {
+      "id": "u48l10e07",
+      "type": "multipleChoice",
+      "prompt": "Review off-by-one: to print 1 through 10, which range is correct?",
+      "options": ["range(1, 11)", "range(1, 10)", "range(10)", "range(0, 10)"],
+      "answer": 0,
+      "explanation": "The stop number isn't included, so 11 is needed to reach 10. range(1, 11) gives 1..10."
+    },
+    {
+      "id": "u48l10e08",
+      "type": "trueFalse",
+      "prompt": "Review: a while loop whose body never changes the condition runs forever.",
+      "answer": true,
+      "explanation": "No progress toward false means the condition stays true endlessly. Tracing reveals the missing update."
+    },
+    {
+      "id": "u48l10e09",
+      "type": "multipleChoice",
+      "prompt": "Predict:\n\ntotal = 0\nfor i in range(1, 5):\n    total = total + i\nprint(total)",
+      "options": ["10", "6", "15", "4"],
+      "answer": 0,
+      "explanation": "1 + 2 + 3 + 4 = 10. Predict by tracing the accumulator, then confirm."
+    },
+    {
+      "id": "u48l10e10",
+      "type": "multipleChoice",
+      "prompt": "You finished the unit. What can you now do?",
+      "options": [
+        "Hand-trace any loop to predict its result and catch bugs before running",
+        "Write loops with no thinking",
+        "Avoid tracing forever",
+        "Only read for loops"
+      ],
+      "answer": 0,
+      "explanation": "Tracing is a superpower: you can predict and verify any loop on paper. Next unit, you'll put choosing and tracing together on real problems."
+    }
+  ]
+}

@@ -1,0 +1,134 @@
+{
+  "unitId": "u08",
+  "lessonId": "u08l09",
+  "title": "Saving a value for a later step",
+  "idea": "Plan 2-3 steps: store a value early, do other things, then use the saved value later. The box remembers for you.",
+  "exercises": [
+    {
+      "id": "u08l09e01",
+      "type": "multipleChoice",
+      "prompt": "A 3-step plan: (1) store a lucky number, (2) show a greeting, (3) show the lucky number. Which program follows it?",
+      "options": [
+        "lucky = 7\nprint(\"Hello!\")\nprint(lucky)",
+        "print(\"Hello!\")\nprint(lucky)\nlucky = 7",
+        "print(lucky)\nprint(\"Hello!\")\nlucky = 7",
+        "lucky = 7\nprint(lucky)\nprint(lucky)"
+      ],
+      "answer": 0,
+      "explanation": "Store first, greet, then show the saved value. The box held 7 until step 3 needed it."
+    },
+    {
+      "id": "u08l09e02",
+      "type": "trueFalse",
+      "prompt": "A variable can hold a value through several other lines and still be there when you need it later.",
+      "answer": true,
+      "explanation": "Yes — that's the whole power. The box keeps its value until you use it."
+    },
+    {
+      "id": "u08l09e03",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nfavorite = 5\nprint(\"Welcome\")\nprint(\"Your number is:\")\nprint(favorite)",
+      "options": [
+        "Welcome, then Your number is:, then 5",
+        "5, then Welcome, then Your number is:",
+        "Welcome, then 5, then Your number is:",
+        "Your number is:, then 5, then Welcome"
+      ],
+      "answer": 0,
+      "explanation": "Lines run top to bottom. The saved value 5 shows last, exactly when the plan calls for it."
+    },
+    {
+      "id": "u08l09e04",
+      "type": "orderBlocks",
+      "prompt": "Arrange a plan: store the score, print a title, then show the saved score.",
+      "blocks": [
+        "score = 42",
+        "print(\"Final Score\")",
+        "print(score)"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Save the value, show the title, then reveal the saved value. Store early, use later."
+    },
+    {
+      "id": "u08l09e05",
+      "type": "multipleChoice",
+      "prompt": "Why store the value at the START even though you only show it at the END?",
+      "options": [
+        "So it's ready and remembered when the later step needs it",
+        "So the program runs backwards",
+        "So the value disappears",
+        "So you never have to print it"
+      ],
+      "answer": 0,
+      "explanation": "Storing early means the box is ready. The later step just reads what's already saved."
+    },
+    {
+      "id": "u08l09e06",
+      "type": "tapTokens",
+      "prompt": "Step 3 of a plan: the variable prize was stored earlier. Build the line that shows it now.",
+      "tokens": [
+        "print",
+        "(",
+        "prize",
+        ")"
+      ],
+      "answer": [
+        "print",
+        "(",
+        "prize",
+        ")"
+      ],
+      "explanation": "print(prize) reads the value saved in step 1. The box remembered it for you."
+    },
+    {
+      "id": "u08l09e07",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nage = 9\nprint(age)\nprint(\"Happy Birthday\")\nprint(age)",
+      "options": [
+        "9, then Happy Birthday, then 9",
+        "9, then 9, then Happy Birthday",
+        "Happy Birthday, then 9, then 9",
+        "9 only once"
+      ],
+      "answer": 0,
+      "explanation": "The saved value 9 shows, a greeting shows, then 9 shows again. The box kept its value the whole time."
+    },
+    {
+      "id": "u08l09e08",
+      "type": "trueFalse",
+      "prompt": "Storing a value early and using it in a later step is a good plan when a value is needed more than once.",
+      "answer": true,
+      "explanation": "Exactly. Store it once, trust the box, reuse it whenever a later step needs it."
+    },
+    {
+      "id": "u08l09e09",
+      "type": "multipleChoice",
+      "prompt": "A plan says: remember 3 for later. Which line remembers it?",
+      "options": [
+        "remembered = 3",
+        "print(\"3\")",
+        "print(remembered)",
+        "3 = remembered"
+      ],
+      "answer": 0,
+      "explanation": "remembered = 3 stores the value in a box. Now a later step can print(remembered)."
+    },
+    {
+      "id": "u08l09e10",
+      "type": "multipleChoice",
+      "prompt": "You stored a value, did two other steps, then showed it — and the right value appeared. What does that prove?",
+      "options": [
+        "The variable remembered the value across the later steps",
+        "Printing changes the value",
+        "The box empties after one line",
+        "Variables only work on the first line"
+      ],
+      "answer": 0,
+      "explanation": "The box held its value the whole way through. That's remembering a value for a later step!"
+    }
+  ]
+}

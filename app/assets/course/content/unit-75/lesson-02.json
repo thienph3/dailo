@@ -1,0 +1,150 @@
+{
+  "unitId": "u75",
+  "lessonId": "u75l02",
+  "title": "Solve it: a sub-plan that returns a total bill",
+  "idea": "GUIDED PROBLEM (UEPCC). A sub-plan with two parameters returns a total (count times price). Every stated number becomes a named parameter.",
+  "problem": "Write a sub-plan bill(count, price) that hands back count times price. Use it to show the bill for 3 coffees at 4 each.",
+  "exercises": [
+    {
+      "id": "u75l02e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: bill(count, price) hands back count * price; show the bill for 3 coffees at 4 each.\n\nWhat is the OUTPUT the sub-plan hands back?",
+      "options": [
+        "The total bill (count times price)",
+        "The number of coffees",
+        "The price of one coffee",
+        "The change"
+      ],
+      "answer": 0,
+      "explanation": "Output is the total bill, returned so the main plan can show or reuse it."
+    },
+    {
+      "id": "u75l02e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "What are the INPUTS, and how many parameters does that mean?",
+      "options": [
+        "count and price — two parameters",
+        "just price — one parameter",
+        "just count — one parameter",
+        "no parameters"
+      ],
+      "answer": 0,
+      "explanation": "Both the count (3) and the price (4) are inputs, so the sub-plan needs two parameters: count and price."
+    },
+    {
+      "id": "u75l02e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example by hand — 3 coffees at 4 each costs...",
+      "options": [
+        "12",
+        "7",
+        "34",
+        "1"
+      ],
+      "answer": 0,
+      "explanation": "3 * 4 = 12. This is the value you'll check the returned result against."
+    },
+    {
+      "id": "u75l02e04",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Both numbers from the problem (3 and 4) must become named inputs. Which naming matches the plan best?",
+      "options": [
+        "count = 3, price = 4",
+        "x = 3, y = 4",
+        "a = 3 (drop the 4)",
+        "count = 12"
+      ],
+      "answer": 0,
+      "explanation": "Use descriptive names that echo the problem: count and price. Don't drop a value or hardcode the 12."
+    },
+    {
+      "id": "u75l02e05",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Plan the sub-plan in plain English.",
+      "blocks": [
+        "Name the sub-plan bill with inputs count and price",
+        "Multiply count by price",
+        "Hand the total back"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Define with two inputs, multiply, then return the total. Plan before coding."
+    },
+    {
+      "id": "u75l02e06",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Which operation gives the total for 'many of the same item'?",
+      "options": [
+        "Multiply (count * price)",
+        "Add (count + price)",
+        "Subtract",
+        "Divide"
+      ],
+      "answer": 0,
+      "explanation": "Several of the same item means multiply: count * price. Choosing the right operation IS the plan."
+    },
+    {
+      "id": "u75l02e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code it: define bill, return count * price, then print bill(3, 4).",
+      "blocks": [
+        "def bill(count, price):",
+        "    return count * price",
+        "print(bill(3, 4))"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Define with both parameters, return the product, call with 3 and 4 inside print. Matches the plan exactly."
+    },
+    {
+      "id": "u75l02e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Complete the body:\n\ndef bill(count, price):\n    return count ____ price",
+      "answer": "*",
+      "acceptable": ["*"],
+      "explanation": "Multiply: count * price. For 3 and 4 that's 12."
+    },
+    {
+      "id": "u75l02e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check — it prints 12 and your hand example was 12. Verdict?",
+      "options": [
+        "Passes",
+        "Fails",
+        "Unknown",
+        "Rewrite the example"
+      ],
+      "answer": 0,
+      "explanation": "Output matches the hand example (12), so the sub-plan is correct."
+    },
+    {
+      "id": "u75l02e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Re-check with new inputs: bill(5, 2). What comes back?",
+      "options": [
+        "10",
+        "12",
+        "7",
+        "52"
+      ],
+      "answer": 0,
+      "explanation": "5 * 2 = 10. The same sub-plan handles any count and price — that's why we gave it parameters."
+    }
+  ]
+}

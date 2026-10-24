@@ -1,0 +1,130 @@
+{
+  "unitId": "u20",
+  "lessonId": "u20l04",
+  "title": "Are they different? The != test",
+  "idea": "!= asks 'are these two values NOT the same?'. It is the opposite of ==.",
+  "exercises": [
+    {
+      "id": "u20l04e01",
+      "type": "multipleChoice",
+      "prompt": "What does != ask?",
+      "options": [
+        "Are the two values different?",
+        "Are they equal?",
+        "Is the left bigger?",
+        "Store a value"
+      ],
+      "answer": 0,
+      "explanation": "!= means 'not equal' - it asks whether the two sides are different."
+    },
+    {
+      "id": "u20l04e02",
+      "type": "multipleChoice",
+      "prompt": "What does this print?\n\nprint(4 != 5)",
+      "options": [
+        "True",
+        "False",
+        "4",
+        "5"
+      ],
+      "answer": 0,
+      "explanation": "4 and 5 are different, so 4 != 5 is True."
+    },
+    {
+      "id": "u20l04e03",
+      "type": "multipleChoice",
+      "prompt": "What does this print?\n\nprint(7 != 7)",
+      "options": [
+        "False",
+        "True",
+        "7",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "7 and 7 are the same, so 'not equal' is False."
+    },
+    {
+      "id": "u20l04e04",
+      "type": "trueFalse",
+      "prompt": "!= is the opposite of ==.",
+      "answer": true,
+      "explanation": "Yes. When == is True, != is False, and the other way around."
+    },
+    {
+      "id": "u20l04e05",
+      "type": "multipleChoice",
+      "prompt": "3 == 3 is True. What is 3 != 3?",
+      "options": [
+        "False",
+        "True",
+        "3",
+        "error"
+      ],
+      "answer": 0,
+      "explanation": "Since 3 equals 3, 'not equal' must be False. They always disagree."
+    },
+    {
+      "id": "u20l04e06",
+      "type": "fillBlank",
+      "prompt": "Complete so it checks that pin is different from 1234:\n\npin = 1111\nprint(pin ____ 1234)   # shows: True",
+      "answer": "!=",
+      "acceptable": [
+        "!="
+      ],
+      "explanation": "pin is 1111, which is different from 1234, so pin != 1234 is True."
+    },
+    {
+      "id": "u20l04e07",
+      "type": "multipleChoice",
+      "prompt": "What does this print?\n\nx = 2\ny = 8\nprint(x != y)",
+      "options": [
+        "True",
+        "False",
+        "2",
+        "8"
+      ],
+      "answer": 0,
+      "explanation": "2 and 8 are different, so x != y is True."
+    },
+    {
+      "id": "u20l04e08",
+      "type": "matchPairs",
+      "prompt": "Match each comparison to its result.",
+      "pairs": [
+        {
+          "left": "5 != 5",
+          "right": "False"
+        },
+        {
+          "left": "5 != 6",
+          "right": "True"
+        },
+        {
+          "left": "5 == 6",
+          "right": "False"
+        }
+      ],
+      "explanation": "!= is True only when the values differ; == is True only when they match."
+    },
+    {
+      "id": "u20l04e09",
+      "type": "trueFalse",
+      "prompt": "If a == b is False, then a != b is True.",
+      "answer": true,
+      "explanation": "Exactly. They are opposites: one is True precisely when the other is False."
+    },
+    {
+      "id": "u20l04e10",
+      "type": "multipleChoice",
+      "prompt": "When might 'are they different?' be the exact question a problem needs?",
+      "options": [
+        "Like checking a typed password does NOT match the real one",
+        "Only when adding numbers",
+        "Never",
+        "Only with text"
+      ],
+      "answer": 0,
+      "explanation": "Problems often hinge on 'is this different?' - a wrong code, a changed value. != captures that directly."
+    }
+  ]
+}

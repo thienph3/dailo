@@ -1,0 +1,106 @@
+{
+  "unitId": "u50",
+  "lessonId": "u50l04",
+  "title": "Loop back: while loops",
+  "idea": "REVIEW. Revisit the while loop and termination, mixed with comparisons from Lap 2. No new concepts.",
+  "exercises": [
+    {
+      "id": "u50l04e01",
+      "type": "multipleChoice",
+      "prompt": "Trace:\n\nn = 0\nwhile n < 4:\n    n = n + 1\n\nFinal n?",
+      "options": ["4", "3", "5", "0"],
+      "answer": 0,
+      "explanation": "n climbs 0, 1, 2, 3 while running, then becomes 4 and the condition n < 4 is false. Final 4."
+    },
+    {
+      "id": "u50l04e02",
+      "type": "multipleChoice",
+      "prompt": "How many passes does that loop run?",
+      "options": ["4", "3", "5", "0"],
+      "answer": 0,
+      "explanation": "The body runs while n is 0, 1, 2, 3 - four passes - then stops at 4."
+    },
+    {
+      "id": "u50l04e03",
+      "type": "orderBlocks",
+      "prompt": "Order how one pass of a while loop works.",
+      "blocks": [
+        "Check the condition",
+        "If true, run the body",
+        "Return to check the condition again"
+      ],
+      "answer": [0, 1, 2],
+      "explanation": "Check, run, check again. A while loop tests its condition before every pass."
+    },
+    {
+      "id": "u50l04e04",
+      "type": "trueFalse",
+      "prompt": "A while loop can run zero times if its condition is false at the start.",
+      "answer": true,
+      "explanation": "It checks before the first pass. If already false, the body never runs. Always trace that first check."
+    },
+    {
+      "id": "u50l04e05",
+      "type": "multipleChoice",
+      "prompt": "Trace the danger:\n\nn = 0\nwhile n < 3:\n    print(n)\n\nWhat happens?",
+      "options": [
+        "It prints 0 forever - n never changes",
+        "It prints 0, 1, 2",
+        "It prints nothing",
+        "It prints 0 once"
+      ],
+      "answer": 0,
+      "explanation": "Nothing updates n, so n < 3 stays true forever - an infinite loop. The body must make progress."
+    },
+    {
+      "id": "u50l04e06",
+      "type": "multipleChoice",
+      "prompt": "What must happen in a while body so it eventually stops?",
+      "options": [
+        "Something must change toward making the condition false",
+        "It must print each pass",
+        "It must use range",
+        "It must call input"
+      ],
+      "answer": 0,
+      "explanation": "A while loop ends only when its condition turns false, so the body must move a value in that direction."
+    },
+    {
+      "id": "u50l04e07",
+      "type": "multipleChoice",
+      "prompt": "Trace:\n\nx = 10\nwhile x > 5:\n    x = x - 2\n\nFinal x?",
+      "options": ["4", "5", "6", "10"],
+      "answer": 0,
+      "explanation": "x drops 10, 8, 6, 4. At 4 the condition x > 5 is false, so it stops. Final 4."
+    },
+    {
+      "id": "u50l04e08",
+      "type": "fillBlank",
+      "prompt": "Fill the keyword for a condition-controlled loop:\n\nfuel = 3\n____ fuel > 0:\n    fuel = fuel - 1",
+      "answer": "while",
+      "acceptable": ["while"],
+      "explanation": "Repeat-until-a-condition uses while. It keeps looping as long as fuel is above 0."
+    },
+    {
+      "id": "u50l04e09",
+      "type": "multipleChoice",
+      "prompt": "Trace:\n\ntotal = 0\nn = 1\nwhile total < 10:\n    total = total + n\n    n = n + 1\n\nHow many passes?",
+      "options": ["4 (total: 1, 3, 6, 10)", "3", "5", "10"],
+      "answer": 0,
+      "explanation": "total becomes 1, 3, 6, 10; once it reaches 10 the loop stops. Four passes. Trace both total and n."
+    },
+    {
+      "id": "u50l04e10",
+      "type": "multipleChoice",
+      "prompt": "A while loop is the natural choice when...",
+      "options": [
+        "You don't know the count ahead - you repeat until a condition changes",
+        "You know exactly how many times",
+        "You want to print once",
+        "You need no repetition"
+      ],
+      "answer": 0,
+      "explanation": "Unknown count, condition-based stop -> while. That's the pattern-choice summary for while."
+    }
+  ]
+}

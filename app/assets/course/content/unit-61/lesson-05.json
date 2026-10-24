@@ -1,0 +1,151 @@
+{
+  "unitId": "u61",
+  "lessonId": "u61l05",
+  "title": "Which pattern does this need?",
+  "idea": "GUIDED via UEPCC on pattern CHOICE. Read wording and pick sum, count, max, or min before any code.",
+  "problem": "You are given several list questions. For each, decide which of sum/count/max/min solves it.",
+  "exercises": [
+    {
+      "id": "u61l05e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "Understand the toolbox. You have four list patterns. Which one produces a COUNT of matching items?",
+      "options": [
+        "Count (counter + if)",
+        "Sum",
+        "Max",
+        "Min"
+      ],
+      "answer": 0,
+      "explanation": "Count adds 1 per match. Knowing what each tool produces lets you choose correctly."
+    },
+    {
+      "id": "u61l05e02",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "'What is the total rainfall this week?' Which pattern?",
+      "options": [
+        "Sum",
+        "Count",
+        "Max",
+        "Min"
+      ],
+      "answer": 0,
+      "explanation": "'Total' means add every value — the sum pattern."
+    },
+    {
+      "id": "u61l05e03",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "'Which day was the hottest?' Which pattern?",
+      "options": [
+        "Max",
+        "Min",
+        "Sum",
+        "Count"
+      ],
+      "answer": 0,
+      "explanation": "'Hottest' is the single biggest value — max."
+    },
+    {
+      "id": "u61l05e04",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "'Which day was the coldest?' Which pattern?",
+      "options": [
+        "Min",
+        "Max",
+        "Sum",
+        "Count"
+      ],
+      "answer": 0,
+      "explanation": "'Coldest' is the single smallest value — min (max flipped)."
+    },
+    {
+      "id": "u61l05e05",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "'How many days had rain?' Which pattern?",
+      "options": [
+        "Count",
+        "Sum",
+        "Max",
+        "Min"
+      ],
+      "answer": 0,
+      "explanation": "'How many fit a rule' is the count pattern."
+    },
+    {
+      "id": "u61l05e06",
+      "type": "matchPairs",
+      "uepcc": "P",
+      "prompt": "Match each question to its pattern.",
+      "pairs": [
+        {
+          "left": "Total of all sales",
+          "right": "Sum"
+        },
+        {
+          "left": "Biggest single sale",
+          "right": "Max"
+        },
+        {
+          "left": "Smallest single sale",
+          "right": "Min"
+        },
+        {
+          "left": "How many sales over 100",
+          "right": "Count"
+        }
+      ],
+      "explanation": "Total->sum, biggest->max, smallest->min, how-many->count. The wording picks the tool."
+    },
+    {
+      "id": "u61l05e07",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Work an example. For prices [6, 2, 9], the sum is 17, the max is 9, the min is 2. What is the COUNT of prices over 5?",
+      "options": [
+        "2",
+        "1",
+        "3",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "6 and 9 are over 5 — a count of 2. Notice each tool gives a DIFFERENT answer from the same list."
+    },
+    {
+      "id": "u61l05e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "You chose SUM for 'total'. Finish the update line:\n\ntotal = 0\nfor n in nums:\n    total = total ____ n",
+      "answer": "+",
+      "acceptable": [
+        "+"
+      ],
+      "explanation": "Sum adds each value into the total, so the operator is +."
+    },
+    {
+      "id": "u61l05e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check your choices. 'The most goals in a game' — did you pick max? Why is that right?",
+      "options": [
+        "Yes — 'most' is the single biggest value",
+        "No — it should be sum",
+        "No — it should be count",
+        "No — it should be min"
+      ],
+      "answer": 0,
+      "explanation": "'Most' in one game is the biggest single value, so max is the right choice."
+    },
+    {
+      "id": "u61l05e10",
+      "type": "trueFalse",
+      "uepcc": "Check",
+      "prompt": "Picking the right pattern BEFORE coding saves you from writing a loop that answers the wrong question.",
+      "answer": true,
+      "explanation": "Choosing sum vs count vs max vs min up front is the key planning step for list problems."
+    }
+  ]
+}

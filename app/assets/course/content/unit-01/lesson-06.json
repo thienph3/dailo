@@ -1,0 +1,134 @@
+{
+  "unitId": "u01",
+  "lessonId": "u01l06",
+  "title": "A common mistake: forgetting a bracket",
+  "idea": "print needs an opening ( and a closing ). Leaving one off is the most common beginner slip.",
+  "exercises": [
+    {
+      "id": "u01l06e01",
+      "type": "multipleChoice",
+      "prompt": "What is missing here?\n\nprint(\"Hi\"",
+      "options": [
+        "The closing bracket )",
+        "The word print",
+        "The quotes",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "It opens with ( but never closes. Every ( needs a matching )."
+    },
+    {
+      "id": "u01l06e02",
+      "type": "multipleChoice",
+      "prompt": "What is missing here?\n\nprint \"Hi\")",
+      "options": [
+        "The opening bracket (",
+        "The closing bracket )",
+        "The quotes",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "There's no ( after print. The text to show must sit inside ( )."
+    },
+    {
+      "id": "u01l06e03",
+      "type": "trueFalse",
+      "prompt": "Every opening ( must have a matching closing ).",
+      "answer": true,
+      "explanation": "Brackets come in pairs. One open needs one close."
+    },
+    {
+      "id": "u01l06e04",
+      "type": "fillBlank",
+      "prompt": "Add what's missing:\n\nprint(\"done\"____",
+      "answer": ")",
+      "acceptable": [
+        ")"
+      ],
+      "explanation": "Close the bracket: print(\"done\")."
+    },
+    {
+      "id": "u01l06e05",
+      "type": "multipleChoice",
+      "prompt": "Which instruction is complete and correct?",
+      "options": [
+        "print(\"go\")",
+        "print(\"go\"",
+        "print\"go\")",
+        "print \"go\""
+      ],
+      "answer": 0,
+      "explanation": "Both brackets and both quotes are present and matched."
+    },
+    {
+      "id": "u01l06e06",
+      "type": "orderBlocks",
+      "prompt": "Arrange these pieces into a correct instruction.",
+      "blocks": [
+        "print",
+        "(",
+        "\"win\"",
+        ")"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "print, then (, then the text, then ). Order: print(\"win\")."
+    },
+    {
+      "id": "u01l06e07",
+      "type": "multiSelect",
+      "prompt": "Which of these are missing a bracket? (pick all)",
+      "options": [
+        "print(\"a\"",
+        "print\"a\")",
+        "print(\"a\")",
+        "print(\"b\")"
+      ],
+      "answer": [
+        0,
+        1
+      ],
+      "explanation": "The first is missing ), the second is missing (. The last two are complete."
+    },
+    {
+      "id": "u01l06e08",
+      "type": "tapTokens",
+      "prompt": "Build a complete, correct instruction to show: yes!",
+      "tokens": [
+        "print",
+        "(",
+        "\"yes!\"",
+        ")"
+      ],
+      "answer": [
+        "print",
+        "(",
+        "\"yes!\"",
+        ")"
+      ],
+      "explanation": "All four pieces, in order, both brackets present."
+    },
+    {
+      "id": "u01l06e09",
+      "type": "trueFalse",
+      "prompt": "print(\"hi\") has everything it needs: print, brackets, and matching quotes.",
+      "answer": true,
+      "explanation": "That's a complete, correct instruction. Nothing missing."
+    },
+    {
+      "id": "u01l06e10",
+      "type": "fillBlank",
+      "prompt": "Write a full, correct instruction to show the word: finish",
+      "answer": "print(\"finish\")",
+      "acceptable": [
+        "print(\"finish\")",
+        "print('finish')"
+      ],
+      "explanation": "print(\"finish\") — brackets matched, quotes matched. You're spotting mistakes like a programmer now."
+    }
+  ]
+}

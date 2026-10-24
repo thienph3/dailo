@@ -1,0 +1,130 @@
+{
+  "unitId": "u73",
+  "lessonId": "u73l04",
+  "title": "return a computed result",
+  "idea": "TOOL: a sub-plan can do several steps, then return the final computed value.",
+  "exercises": [
+    {
+      "id": "u73l04e01",
+      "type": "multipleChoice",
+      "prompt": "def total_cost(price, count):\n    cost = price * count\n    return cost\n\nWhat does total_cost(3, 4) return?",
+      "options": [
+        "12",
+        "7",
+        "3",
+        "cost"
+      ],
+      "answer": 0,
+      "explanation": "cost = 3 * 4 = 12, then return cost hands back 12. The sub-plan computes, then returns the result."
+    },
+    {
+      "id": "u73l04e02",
+      "type": "trueFalse",
+      "prompt": "A sub-plan can compute into a variable first, then return that variable.",
+      "answer": true,
+      "explanation": "Yes. 'cost = price * count' then 'return cost' is common - do the work, store it, then hand it back."
+    },
+    {
+      "id": "u73l04e03",
+      "type": "multipleChoice",
+      "prompt": "def area(w, h):\n    return w * h\n\ndef perimeter(w, h):\n    return 2 * (w + h)\n\nWhat does area(5, 3) return?",
+      "options": [
+        "15",
+        "16",
+        "8",
+        "area"
+      ],
+      "answer": 0,
+      "explanation": "area returns w * h = 5 * 3 = 15. Each sub-plan hands back its own computed result."
+    },
+    {
+      "id": "u73l04e04",
+      "type": "multipleChoice",
+      "prompt": "Same code. What does perimeter(5, 3) return?",
+      "options": [
+        "16",
+        "15",
+        "8",
+        "30"
+      ],
+      "answer": 0,
+      "explanation": "perimeter returns 2 * (5 + 3) = 2 * 8 = 16. Parentheses group the add before the multiply."
+    },
+    {
+      "id": "u73l04e05",
+      "type": "orderBlocks",
+      "prompt": "Order the body of total_cost(price, count) that returns price * count.",
+      "blocks": [
+        "cost = price * count",
+        "return cost"
+      ],
+      "answer": [
+        0,
+        1
+      ],
+      "explanation": "First compute the cost, then return it. You can also write 'return price * count' in one line."
+    },
+    {
+      "id": "u73l04e06",
+      "type": "multipleChoice",
+      "prompt": "def net_pay(hours, rate):\n    gross = hours * rate\n    return gross\n\nWhat does net_pay(10, 8) return?",
+      "options": [
+        "80",
+        "18",
+        "2",
+        "gross"
+      ],
+      "answer": 0,
+      "explanation": "gross = 10 * 8 = 80, then return gross hands back 80. Descriptive names make the steps clear."
+    },
+    {
+      "id": "u73l04e07",
+      "type": "fillBlank",
+      "prompt": "Fill the blank to hand back the computed total:\n\ndef total(a, b):\n    result = a + b\n    ____ result",
+      "answer": "return",
+      "acceptable": [
+        "return"
+      ],
+      "explanation": "'return result' hands the computed value back to the caller. Compute first, then return."
+    },
+    {
+      "id": "u73l04e08",
+      "type": "multipleChoice",
+      "prompt": "Why return a computed value instead of printing it inside the sub-plan?",
+      "options": [
+        "So the caller can use the result in more math",
+        "Printing is illegal",
+        "Return is faster to type",
+        "There is no reason"
+      ],
+      "answer": 0,
+      "explanation": "A returned result can be stored and combined further. A printed one is just shown and then gone."
+    },
+    {
+      "id": "u73l04e09",
+      "type": "multipleChoice",
+      "prompt": "REVIEW: 'bill = price * count' uses which operator you learned long ago?",
+      "options": [
+        "* for multiply",
+        "+ for add",
+        "/ for divide",
+        "% for remainder"
+      ],
+      "answer": 0,
+      "explanation": "* multiplies. A returning sub-plan still uses the same arithmetic you have known since the early units."
+    },
+    {
+      "id": "u73l04e10",
+      "type": "multipleChoice",
+      "prompt": "def discounted(price):\n    final = price - 2\n    return final\n\nx = discounted(10)\nprint(x)\n\nWhat prints?",
+      "options": [
+        "8",
+        "10",
+        "2",
+        "final"
+      ],
+      "answer": 0,
+      "explanation": "final = 10 - 2 = 8, returned into x, then printed. The sub-plan computes then hands back 8."
+    }
+  ]
+}

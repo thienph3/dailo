@@ -1,0 +1,131 @@
+{
+  "unitId": "u17",
+  "lessonId": "u17l08",
+  "title": "Report a time in hours and minutes",
+  "idea": "GUIDED PROBLEM. Convert total minutes into hours and minutes with // and %, then present a clear message. Walked through UEPCC.",
+  "problem": "A video is 125 minutes long. Show a message like: That is 2 hours and 5 minutes.",
+  "exercises": [
+    {
+      "id": "u17l08e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: a video is 125 minutes. Show 'That is 2 hours and 5 minutes.'\n\nUnderstand. What two numbers must the OUTPUT contain?",
+      "options": [
+        "The number of whole hours and the leftover minutes",
+        "Only the total minutes",
+        "Only the number of hours",
+        "The word 'video'"
+      ],
+      "answer": 0,
+      "explanation": "The message reports hours AND leftover minutes. Two values to produce from one input."
+    },
+    {
+      "id": "u17l08e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "What is the INPUT, and what fixed number do you need to split by?",
+      "options": [
+        "Input is total minutes (125); you split by 60 minutes per hour",
+        "Input is 2; you split by 5",
+        "Input is hours; you split by minutes",
+        "There is no input"
+      ],
+      "answer": 0,
+      "explanation": "The input is the total minutes. 60 (minutes in an hour) is the number you divide by. Both become named values."
+    },
+    {
+      "id": "u17l08e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example by hand. How many whole hours and leftover minutes are in 125 minutes?",
+      "options": [
+        "2 hours and 5 minutes",
+        "1 hour and 25 minutes",
+        "2 hours and 0 minutes",
+        "12 hours and 5 minutes"
+      ],
+      "answer": 0,
+      "explanation": "60 goes into 125 twice (120 minutes), leaving 5. So 2 hours and 5 minutes. This is your check."
+    },
+    {
+      "id": "u17l08e04",
+      "type": "matchPairs",
+      "uepcc": "P",
+      "prompt": "Plan. Match each output value to the operator that finds it.",
+      "pairs": [
+        { "left": "Whole hours", "right": "// 60 (floor divide)" },
+        { "left": "Leftover minutes", "right": "% 60 (remainder)" }
+      ],
+      "explanation": "// 60 gives whole hours; % 60 gives the minutes left over. Same //-and-% pattern as sharing slices."
+    },
+    {
+      "id": "u17l08e05",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Which expression finds the LEFTOVER minutes in 125?",
+      "options": [
+        "125 % 60",
+        "125 // 60",
+        "125 * 60",
+        "125 - 60"
+      ],
+      "answer": 0,
+      "explanation": "% gives the remainder: 125 % 60 = 5. // would give the whole hours instead."
+    },
+    {
+      "id": "u17l08e06",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code. Arrange the lines to match the plan.",
+      "blocks": [
+        "total_minutes = 125",
+        "minutes_per_hour = 60",
+        "hours = total_minutes // minutes_per_hour",
+        "minutes = total_minutes % minutes_per_hour",
+        "print(f\"That is {hours} hours and {minutes} minutes.\")"
+      ],
+      "answer": [0, 1, 2, 3, 4],
+      "explanation": "Store the total and the 60, compute hours with //, minutes with %, then present both in the message."
+    },
+    {
+      "id": "u17l08e07",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Fill the blank to compute whole hours:\n\ntotal_minutes = 125\nminutes_per_hour = 60\nhours = total_minutes ____ minutes_per_hour",
+      "answer": "//",
+      "acceptable": ["//"],
+      "explanation": "// gives whole hours: 125 // 60 = 2."
+    },
+    {
+      "id": "u17l08e08",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check. The code prints 'That is 2 hours and 5 minutes.' Hand example said the same. Verdict?",
+      "options": ["Passes", "Fails", "Unknown", "Rewrite the example"],
+      "answer": 0,
+      "explanation": "Both numbers match the hand example, so the solution is correct."
+    },
+    {
+      "id": "u17l08e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "New input: total_minutes = 200. What message prints?",
+      "options": [
+        "That is 3 hours and 20 minutes.",
+        "That is 2 hours and 0 minutes.",
+        "That is 3 hours and 0 minutes.",
+        "That is 20 hours and 3 minutes."
+      ],
+      "answer": 0,
+      "explanation": "200 // 60 = 3 and 200 % 60 = 20. Works for new numbers — the solution generalizes."
+    },
+    {
+      "id": "u17l08e10",
+      "type": "trueFalse",
+      "uepcc": "Check",
+      "prompt": "Hardcoding 60 into the message text instead of using minutes_per_hour would make the code harder to reuse and read.",
+      "answer": true,
+      "explanation": "Yes — naming 60 as minutes_per_hour makes the plan visible in the code and keeps every value mapped to a variable."
+    }
+  ]
+}

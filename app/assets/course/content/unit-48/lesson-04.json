@@ -1,0 +1,97 @@
+{
+  "unitId": "u48",
+  "lessonId": "u48l04",
+  "title": "Tracing an accumulator",
+  "idea": "Follow a running total across passes. Watch total grow by a changing amount each pass, and predict the final sum. Deepens the accumulator tool through tracing.",
+  "exercises": [
+    {
+      "id": "u48l04e01",
+      "type": "multipleChoice",
+      "prompt": "Trace:\n\ntotal = 0\nfor i in range(1, 4):\n    total = total + i\n\nFinal total?",
+      "options": ["6 (1 + 2 + 3)", "3", "7", "0"],
+      "answer": 0,
+      "explanation": "i is 1, 2, 3. total grows 1, then 3, then 6. The accumulator adds the loop variable each pass."
+    },
+    {
+      "id": "u48l04e02",
+      "type": "multipleChoice",
+      "prompt": "Same loop. What is total after the FIRST pass (i = 1)?",
+      "options": ["1", "0", "3", "6"],
+      "answer": 0,
+      "explanation": "0 + 1 = 1 after the first pass. Tracing one pass at a time keeps the running total clear."
+    },
+    {
+      "id": "u48l04e03",
+      "type": "multipleChoice",
+      "prompt": "Same loop. What is total after the SECOND pass (i = 2)?",
+      "options": ["3", "1", "2", "6"],
+      "answer": 0,
+      "explanation": "1 + 2 = 3 after the second pass. One more pass (i = 3) will bring it to 6."
+    },
+    {
+      "id": "u48l04e04",
+      "type": "multipleChoice",
+      "prompt": "Trace:\n\ntotal = 0\nfor i in range(1, 6):\n    total = total + i\n\nFinal total?",
+      "options": ["15 (1+2+3+4+5)", "10", "5", "6"],
+      "answer": 0,
+      "explanation": "1 + 2 + 3 + 4 + 5 = 15. The accumulator sums every value of the loop variable."
+    },
+    {
+      "id": "u48l04e05",
+      "type": "multipleChoice",
+      "prompt": "Trace an accumulator that adds a fixed amount:\n\ntotal = 0\nfor i in range(4):\n    total = total + 10\n\nFinal total?",
+      "options": ["40", "10", "4", "14"],
+      "answer": 0,
+      "explanation": "Four passes, +10 each: 10, 20, 30, 40. The amount added can be a constant, not just the loop variable."
+    },
+    {
+      "id": "u48l04e06",
+      "type": "trueFalse",
+      "prompt": "An accumulator, like a counter, must start before the loop - usually at 0 for a sum.",
+      "answer": true,
+      "explanation": "Start the total at 0 before the loop. Put it inside and it resets every pass, losing the sum. A classic trace check."
+    },
+    {
+      "id": "u48l04e07",
+      "type": "multipleChoice",
+      "prompt": "Trace with an if inside:\n\ntotal = 0\nfor i in range(1, 6):\n    if i % 2 == 1:\n        total = total + i\n\nFinal total?",
+      "options": ["9 (1 + 3 + 5)", "15", "6", "5"],
+      "answer": 0,
+      "explanation": "Odd i values are 1, 3, 5, so total adds only those: 1 + 3 + 5 = 9. Trace which passes trigger the add."
+    },
+    {
+      "id": "u48l04e08",
+      "type": "multipleChoice",
+      "prompt": "What is the difference between a counter and an accumulator when you trace them?",
+      "options": [
+        "A counter always goes up by 1; an accumulator adds a value that can vary",
+        "They are exactly the same",
+        "A counter uses while only",
+        "An accumulator can't start at 0"
+      ],
+      "answer": 0,
+      "explanation": "A counter answers 'how many' (+1 each time); an accumulator answers 'what's the total' (+ some value). Tracing shows the contrast."
+    },
+    {
+      "id": "u48l04e09",
+      "type": "fillBlank",
+      "prompt": "Trace:\n\ntotal = 0\nfor i in range(1, 5):\n    total = total + i\n\nFinal total? (a number)",
+      "answer": "10",
+      "acceptable": ["10"],
+      "explanation": "1 + 2 + 3 + 4 = 10. The accumulator sums i = 1, 2, 3, 4."
+    },
+    {
+      "id": "u48l04e10",
+      "type": "multipleChoice",
+      "prompt": "Tracing the accumulator lets you check the result against...",
+      "options": [
+        "A hand-worked example you did before coding",
+        "The current weather",
+        "The length of the file",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "If your hand example said 10 and the trace also gives 10, you've confirmed the loop. Trace and example agreeing is a passing Check."
+    }
+  ]
+}

@@ -1,0 +1,156 @@
+{
+  "unitId": "u82",
+  "lessonId": "u82l09",
+  "title": "Solve it together: total after a per-item discount",
+  "idea": "GUIDED (UEPCC). Decompose into a discounted(price) helper (knock 2 off each) and a sum-over-list accumulate. Helper-in-a-loop applied to a real problem.",
+  "problem": "Item prices are [10, 7, 5]. Each item gets 2 off. Show the total paid, using a discounted(price) helper.",
+  "exercises": [
+    {
+      "id": "u82l09e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: prices [10, 7, 5], each 2 off. Show the TOTAL paid, using discounted(price).\n\nOUTPUT?",
+      "options": [
+        "The total paid after each item's discount",
+        "The total before discount",
+        "The count of items",
+        "The cheapest item"
+      ],
+      "answer": 0,
+      "explanation": "Output = the discounted total. Each item loses 2, then we add them up."
+    },
+    {
+      "id": "u82l09e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "INPUTS?",
+      "options": [
+        "The list of prices and the discount amount (2)",
+        "Only the number 16",
+        "The word discount",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "Inputs are the prices and the per-item discount, 2."
+    },
+    {
+      "id": "u82l09e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example — by hand. Discounted prices are 8, 5, 3. Their total?",
+      "options": [
+        "16",
+        "22",
+        "6",
+        "10"
+      ],
+      "answer": 0,
+      "explanation": "(10-2)+(7-2)+(5-2) = 8+5+3 = 16. Hand answer = 16, our check value."
+    },
+    {
+      "id": "u82l09e04",
+      "type": "trueFalse",
+      "uepcc": "E",
+      "prompt": "discounted(price) should return price - 2.",
+      "answer": true,
+      "explanation": "Yes — the per-item job is subtracting the discount: discounted(10) = 8."
+    },
+    {
+      "id": "u82l09e05",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Plan — how do the helper and the loop work together?",
+      "options": [
+        "Call discounted(price) on each item, and add each result to a running total",
+        "Add all prices, then subtract 2 once",
+        "Only use the helper, no loop",
+        "Only use the loop, no helper"
+      ],
+      "answer": 0,
+      "explanation": "Helper-in-a-loop: discount each item, accumulate the results. (Subtracting 2 once would be wrong — every item gets the discount.)"
+    },
+    {
+      "id": "u82l09e06",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Order the plan.",
+      "blocks": [
+        "Make discounted(price) return price - 2",
+        "Start a running total at 0",
+        "For each price, add discounted(price) to the total",
+        "Show the total"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "Helper, total at 0, add each discounted price, show. The helper runs once per item."
+    },
+    {
+      "id": "u82l09e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code it.",
+      "blocks": [
+        "def discounted(price):",
+        "    return price - 2",
+        "prices = [10, 7, 5]",
+        "total = 0",
+        "for price in prices:",
+        "    total = total + discounted(price)",
+        "print(total)"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "explanation": "Define discounted, store prices, accumulate discounted(price) for each item, print. The helper is reused every pass."
+    },
+    {
+      "id": "u82l09e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Complete the accumulate step:\n\nfor price in prices:\n    total = total + ____(price)",
+      "answer": "discounted",
+      "acceptable": [
+        "discounted"
+      ],
+      "explanation": "We add each item's DISCOUNTED price, so we call discounted(price) inside the loop."
+    },
+    {
+      "id": "u82l09e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check — the code prints 16; hand example was 16. Verdict?",
+      "options": [
+        "Passes",
+        "Fails",
+        "Unknown",
+        "Rewrite example"
+      ],
+      "answer": 0,
+      "explanation": "Output (16) matches 16. The helper-in-a-loop plus accumulate is correct."
+    },
+    {
+      "id": "u82l09e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Re-check: prices [20, 10], each 2 off. Total paid?",
+      "options": [
+        "26",
+        "30",
+        "28",
+        "18"
+      ],
+      "answer": 0,
+      "explanation": "(20-2)+(10-2) = 18+8 = 26. The same plan handles new prices. You used a helper inside a loop!"
+    }
+  ]
+}

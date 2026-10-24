@@ -1,0 +1,114 @@
+{
+  "unitId": "u04",
+  "lessonId": "u04l03",
+  "title": "Finding the output of a tiny task",
+  "idea": "For any task, first ask: what should appear on the screen? That answer is your expected output.",
+  "exercises": [
+    {
+      "id": "u04l03e01",
+      "type": "multipleChoice",
+      "prompt": "Task: 'greet the user with Hello'. What is the expected output?",
+      "options": [
+        "Hello",
+        "greet",
+        "user",
+        "Hi there friend"
+      ],
+      "answer": 0,
+      "explanation": "The task says greet with Hello, so the screen should show: Hello. Match the task's words exactly."
+    },
+    {
+      "id": "u04l03e02",
+      "type": "multipleChoice",
+      "prompt": "Task: 'show your name, Sam'. What appears on the screen?",
+      "options": [
+        "Sam",
+        "your name",
+        "name",
+        "Sam?"
+      ],
+      "answer": 0,
+      "explanation": "The expected output is just: Sam. Read the task for the exact text it wants shown."
+    },
+    {
+      "id": "u04l03e03",
+      "type": "trueFalse",
+      "prompt": "The output is the thing you see on the screen after the program runs.",
+      "answer": true,
+      "explanation": "Output = what shows up. For these tasks, it's the text or number that gets printed."
+    },
+    {
+      "id": "u04l03e04",
+      "type": "fillBlank",
+      "prompt": "Task: 'show the word Yes'. Write the exact expected output (just the text):",
+      "answer": "Yes",
+      "acceptable": ["Yes", "yes"],
+      "explanation": "The screen should show: Yes. The expected output is simply that word."
+    },
+    {
+      "id": "u04l03e05",
+      "type": "multipleChoice",
+      "prompt": "Task: 'show the price 5'. Which is the expected output?",
+      "options": [
+        "5",
+        "price",
+        "$5.00",
+        "five dollars"
+      ],
+      "answer": 0,
+      "explanation": "The task says the price is 5, so the output is 5. Don't add extras the task never asked for."
+    },
+    {
+      "id": "u04l03e06",
+      "type": "multiSelect",
+      "prompt": "Task: 'show the word Go'. Which outputs would be WRONG? (pick all)",
+      "options": [
+        "GO",
+        "Go",
+        "go now",
+        "Going"
+      ],
+      "answer": [0, 2, 3],
+      "explanation": "Only 'Go' matches exactly. GO, 'go now', and 'Going' all differ, so they're wrong outputs."
+    },
+    {
+      "id": "u04l03e07",
+      "type": "matchPairs",
+      "prompt": "Match each tiny task to its expected output.",
+      "pairs": [
+        { "left": "Show the word Cat", "right": "Cat" },
+        { "left": "Show the number 9", "right": "9" },
+        { "left": "Show the word Stop", "right": "Stop" }
+      ],
+      "explanation": "Each task names exactly what to show. The expected output copies that text or number."
+    },
+    {
+      "id": "u04l03e08",
+      "type": "trueFalse",
+      "prompt": "Task: 'show the word red'. The expected output is 'red' — lowercase, nothing extra.",
+      "answer": true,
+      "explanation": "Match the task exactly: lowercase r-e-d, with no extra words or punctuation."
+    },
+    {
+      "id": "u04l03e09",
+      "type": "multipleChoice",
+      "prompt": "Task: 'print the number 100'. What's the exact output?",
+      "options": [
+        "100",
+        "one hundred",
+        "100%",
+        "number: 100"
+      ],
+      "answer": 0,
+      "explanation": "Just 100. The task didn't ask for words, a percent sign, or a label — only the number."
+    },
+    {
+      "id": "u04l03e10",
+      "type": "fillBlank",
+      "prompt": "Task: 'show the word Done'. Write the exact expected output:",
+      "answer": "Done",
+      "acceptable": ["Done", "done"],
+      "explanation": "The expected output is: Done. You read the task and copied exactly what it asks to show."
+    }
+  ]
+}

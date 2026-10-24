@@ -1,0 +1,134 @@
+{
+  "unitId": "u41",
+  "lessonId": "u41l04",
+  "title": "Totalling values the loop produces",
+  "idea": "Accumulate a value computed each pass (like i * price) into a running total.",
+  "exercises": [
+    {
+      "id": "u41l04e01",
+      "type": "multipleChoice",
+      "prompt": "Each item i costs i dollars (item 1 = $1, item 2 = $2, ...). For items 1 to 3, what is the total cost?",
+      "options": [
+        "6",
+        "3",
+        "9",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "1 + 2 + 3 = 6 dollars. The accumulator adds each item's cost."
+    },
+    {
+      "id": "u41l04e02",
+      "type": "multipleChoice",
+      "prompt": "What shows?\n\ntotal = 0\nfor i in range(1, 4):\n    total += i\nprint(total)",
+      "options": [
+        "6",
+        "3",
+        "0",
+        "9"
+      ],
+      "answer": 0,
+      "explanation": "Adds 1, 2, 3 to reach 6 — the total cost."
+    },
+    {
+      "id": "u41l04e03",
+      "type": "multipleChoice",
+      "prompt": "Now each pass adds 2 times i. For i = 1, 2, 3, what value is added each pass?",
+      "options": [
+        "2, then 4, then 6",
+        "1, 2, 3",
+        "2, 2, 2",
+        "6, 6, 6"
+      ],
+      "answer": 0,
+      "explanation": "2*1, 2*2, 2*3 = 2, 4, 6. You can accumulate a computed value, not just i."
+    },
+    {
+      "id": "u41l04e04",
+      "type": "multipleChoice",
+      "prompt": "What shows?\n\ntotal = 0\nfor i in range(1, 4):\n    total += 2 * i\nprint(total)",
+      "options": [
+        "12",
+        "6",
+        "9",
+        "3"
+      ],
+      "answer": 0,
+      "explanation": "Adds 2, 4, 6 — total 12."
+    },
+    {
+      "id": "u41l04e05",
+      "type": "trueFalse",
+      "prompt": "You can add a computed value like 2 * i to the total each pass.",
+      "answer": true,
+      "explanation": "True. Whatever value you compute each pass can be added onto the running total."
+    },
+    {
+      "id": "u41l04e06",
+      "type": "fillBlank",
+      "prompt": "Fill the amount added so the total of 3 * i over i = 1, 2, 3 reaches 18:\n\ntotal = 0\nfor i in range(1, 4):\n    total += 3 * ____\nprint(total)",
+      "answer": "i",
+      "acceptable": [
+        "i"
+      ],
+      "explanation": "3*1 + 3*2 + 3*3 = 3 + 6 + 9 = 18. The value added is 3 * i."
+    },
+    {
+      "id": "u41l04e07",
+      "type": "multipleChoice",
+      "prompt": "What final number prints?\n\ntotal = 0\nfor i in range(1, 4):\n    total += 3 * i\nprint(total)",
+      "options": [
+        "18",
+        "6",
+        "9",
+        "12"
+      ],
+      "answer": 0,
+      "explanation": "3 + 6 + 9 = 18."
+    },
+    {
+      "id": "u41l04e08",
+      "type": "orderBlocks",
+      "prompt": "Arrange a loop that totals i * i for i = 1, 2, 3 (1 + 4 + 9 = 14).",
+      "blocks": [
+        "    total += i * i",
+        "total = 0",
+        "print(total)",
+        "for i in range(1, 4):"
+      ],
+      "answer": [
+        1,
+        3,
+        0,
+        2
+      ],
+      "explanation": "Start total at 0, loop adding i * i, then print (14)."
+    },
+    {
+      "id": "u41l04e09",
+      "type": "multipleChoice",
+      "prompt": "For that i * i loop over 1, 2, 3, what prints?",
+      "options": [
+        "14",
+        "6",
+        "9",
+        "36"
+      ],
+      "answer": 0,
+      "explanation": "1 + 4 + 9 = 14."
+    },
+    {
+      "id": "u41l04e10",
+      "type": "multipleChoice",
+      "prompt": "Why is an accumulator more powerful than just printing each value?",
+      "options": [
+        "It combines many values into one total",
+        "It prints faster",
+        "It avoids loops",
+        "It only works for 3 values"
+      ],
+      "answer": 0,
+      "explanation": "Printing shows values one by one; the accumulator COMBINES them into a single total you can use."
+    }
+  ]
+}

@@ -1,0 +1,128 @@
+{
+  "unitId": "u77",
+  "lessonId": "u77l07",
+  "title": "Return it, then you can use it",
+  "idea": "TOOL. Return it, then you can store and reuse it — the normal way to use a sub-plan's answer.",
+  "exercises": [
+    {
+      "type": "multipleChoice",
+      "prompt": "Predict:\n\ndef cost(qty):\n    price = qty * 3\n    return price\n\nprint(cost(5))",
+      "options": [
+        "15",
+        "5",
+        "price",
+        "error"
+      ],
+      "answer": 0,
+      "explanation": "cost returns 5 * 3 = 15.",
+      "id": "u77l07e01"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "You want to reuse cost(5)'s answer twice. Best approach?",
+      "options": [
+        "Store it: c = cost(5), then use c",
+        "Read price from outside",
+        "Call cost differently",
+        "Guess 15"
+      ],
+      "answer": 0,
+      "explanation": "Store the returned value in a variable and reuse it.",
+      "id": "u77l07e02"
+    },
+    {
+      "type": "orderBlocks",
+      "prompt": "Arrange: store a returned value and use it twice.",
+      "blocks": [
+        "def cost(qty):",
+        "    return qty * 3",
+        "c = cost(5)",
+        "print(c + c)"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "c = 15; c + c = 30.",
+      "id": "u77l07e03"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Predict:\n\ndef f():\n    k = 4\n    return k\n\nc = f()\nprint(c * c)",
+      "options": [
+        "16",
+        "8",
+        "4",
+        "error"
+      ],
+      "answer": 0,
+      "explanation": "c = 4; c * c = 16.",
+      "id": "u77l07e04"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Once you store a returned value, you no longer need the function's private variable.",
+      "answer": true,
+      "explanation": "Right — the value is safely out; the private variable can be forgotten.",
+      "id": "u77l07e05"
+    },
+    {
+      "type": "fillBlank",
+      "prompt": "Store the result:\n\ndef f():\n    return 6\n\nr = ____()",
+      "answer": "f",
+      "acceptable": [
+        "f"
+      ],
+      "explanation": "r = f() stores the returned 6.",
+      "id": "u77l07e06"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "REVIEW (composing): a returned value can be fed straight into another call because...",
+      "options": [
+        "it is a real value",
+        "it is a function name",
+        "it is private",
+        "it is printed"
+      ],
+      "answer": 0,
+      "explanation": "Returned values are usable anywhere a value is expected.",
+      "id": "u77l07e07"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Spot the bug:\n\ndef f():\n    v = 2\n    return v\n\nprint(V)",
+      "options": [
+        "V (capital) is not defined; names are case-sensitive and v is private anyway",
+        "prints 2",
+        "no bug",
+        "prints v"
+      ],
+      "answer": 0,
+      "explanation": "V isn't v, and v is private — either way, error. Return and store the value properly.",
+      "id": "u77l07e08"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Storing cost(5) in a variable is the normal way to reuse a sub-plan's answer.",
+      "answer": true,
+      "explanation": "Yes — call once, store, reuse.",
+      "id": "u77l07e09"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Lesson point:",
+      "options": [
+        "Return a value, store it, then reuse it freely",
+        "Reuse private variables directly",
+        "Never store results",
+        "Call the function 10 times"
+      ],
+      "answer": 0,
+      "explanation": "Return, store, reuse.",
+      "id": "u77l07e10"
+    }
+  ]
+}

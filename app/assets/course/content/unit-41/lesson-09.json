@@ -1,0 +1,128 @@
+{
+  "unitId": "u41",
+  "lessonId": "u41l09",
+  "title": "Reporting the running total",
+  "idea": "Build a total, then report it with an f-string after the loop.",
+  "exercises": [
+    {
+      "id": "u41l09e01",
+      "type": "multipleChoice",
+      "prompt": "A total ends at 15. Which f-string reports it?",
+      "options": [
+        "print(f\"The total is {total}\")",
+        "print(\"The total is total\")",
+        "print(total + 15)",
+        "print(f\"The total\")"
+      ],
+      "answer": 0,
+      "explanation": "f\"The total is {total}\" drops 15 into the sentence: 'The total is 15'."
+    },
+    {
+      "id": "u41l09e02",
+      "type": "multipleChoice",
+      "prompt": "What shows?\n\ntotal = 0\nfor i in range(1, 5):\n    total += i\nprint(f\"Sum: {total}\")",
+      "options": [
+        "Sum: 10",
+        "Sum: total",
+        "Sum: 4",
+        "10"
+      ],
+      "answer": 0,
+      "explanation": "1 + 2 + 3 + 4 = 10, so it prints 'Sum: 10'."
+    },
+    {
+      "id": "u41l09e03",
+      "type": "trueFalse",
+      "prompt": "Inside an f-string, {total} is replaced by the running total's current value.",
+      "answer": true,
+      "explanation": "True. The braces pull in the value, so a total of 10 shows as 10."
+    },
+    {
+      "id": "u41l09e04",
+      "type": "multipleChoice",
+      "prompt": "Why report the total AFTER the loop?",
+      "options": [
+        "The total is only complete once the loop ends",
+        "f-strings don't work in loops",
+        "It runs faster",
+        "No reason"
+      ],
+      "answer": 0,
+      "explanation": "After the loop the sum is complete; inside, it is only a partial running total."
+    },
+    {
+      "id": "u41l09e05",
+      "type": "fillBlank",
+      "prompt": "Fill the blank so the message shows the total:\n\nprint(f\"Total: {____}\")",
+      "answer": "total",
+      "acceptable": [
+        "total"
+      ],
+      "explanation": "Put the variable name total in the braces to show its value."
+    },
+    {
+      "id": "u41l09e06",
+      "type": "multipleChoice",
+      "prompt": "What shows?\n\ntotal = 0\nfor i in range(3):\n    total += 10\nprint(f\"Score: {total}\")",
+      "options": [
+        "Score: 30",
+        "Score: 10",
+        "Score: total",
+        "30"
+      ],
+      "answer": 0,
+      "explanation": "Three passes of +10 reach 30, so it prints 'Score: 30'."
+    },
+    {
+      "id": "u41l09e07",
+      "type": "orderBlocks",
+      "prompt": "Arrange a loop that sums 1..4 and reports it in a message.",
+      "blocks": [
+        "    total += i",
+        "total = 0",
+        "print(f\"Total: {total}\")",
+        "for i in range(1, 5):"
+      ],
+      "answer": [
+        1,
+        3,
+        0,
+        2
+      ],
+      "explanation": "Start total, loop adding i, then print the f-string report after the loop."
+    },
+    {
+      "id": "u41l09e08",
+      "type": "multipleChoice",
+      "prompt": "If you forget the f: print(\"Total: {total}\"), what shows?",
+      "options": [
+        "Total: {total}",
+        "Total: 0",
+        "The real total",
+        "An error"
+      ],
+      "answer": 0,
+      "explanation": "Without the f, Python prints the braces literally: 'Total: {total}'."
+    },
+    {
+      "id": "u41l09e09",
+      "type": "trueFalse",
+      "prompt": "The f before the opening quote is what turns {total} into the real value.",
+      "answer": true,
+      "explanation": "True. No f means no substitution — the braces are shown as plain text."
+    },
+    {
+      "id": "u41l09e10",
+      "type": "multipleChoice",
+      "prompt": "A report says 'Total: 0' after a summing loop. Likely cause?",
+      "options": [
+        "The total never got added to (reset or wrong loop)",
+        "f-strings are broken",
+        "The message is wrong",
+        "range is always 0"
+      ],
+      "answer": 0,
+      "explanation": "A zero total usually means += never ran, or total = 0 was reset inside the loop."
+    }
+  ]
+}

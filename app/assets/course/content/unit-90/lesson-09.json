@@ -1,0 +1,134 @@
+{
+  "unitId": "u90",
+  "lessonId": "u90l09",
+  "title": "Re-ask inside a bigger loop",
+  "idea": "TOOL: a validation loop can sit INSIDE another loop - validate each item as you collect several.",
+  "exercises": [
+    {
+      "type": "multipleChoice",
+      "prompt": "You need to read 3 valid scores. You validate each one as it comes. What shape is that?",
+      "options": [
+        "An outer loop that repeats 3 times, with a validation loop inside it",
+        "One loop only",
+        "No loops",
+        "A function"
+      ],
+      "answer": 0,
+      "explanation": "The outer loop collects 3 values; inside, a validation loop makes sure each one is good. A loop inside a loop - nested, from earlier this lap.",
+      "id": "u90l09e01"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Predict how many VALID scores this collects:\n\ntotal = 0\nfor i in range(3):\n    s = int(input())\n    while s < 0:\n        s = int(input())\n    total = total + s\nprint(total)\n\nUser types: 5, then -1 then 2, then 8.",
+      "options": [
+        "3 scores; total = 15",
+        "2 scores",
+        "4 scores",
+        "total = 11"
+      ],
+      "answer": 0,
+      "explanation": "Turn 1: 5 (valid). Turn 2: -1 rejected, 2 accepted. Turn 3: 8 valid. Three valid scores: 5 + 2 + 8 = 15.",
+      "id": "u90l09e02"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "The inner validation loop runs fully (until valid) before the outer loop moves to the next item.",
+      "answer": true,
+      "explanation": "True. Just like any nested loop, the inner one finishes - here, gets a valid value - before the outer takes its next step.",
+      "id": "u90l09e03"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "In that code, why is 'total = total + s' OUTSIDE the inner while but INSIDE the for?",
+      "options": [
+        "You only add once per item, after it has been validated",
+        "It should be inside the while",
+        "It should be outside both loops",
+        "It never runs"
+      ],
+      "answer": 0,
+      "explanation": "Add each score once, after it passes validation. Inside the while you'd add every bad attempt; outside the for you'd add nothing.",
+      "id": "u90l09e04"
+    },
+    {
+      "type": "fillBlank",
+      "prompt": "Complete the outer loop to collect 3 valid values:\n\ntotal = 0\nfor i in range(____):\n    s = int(input())\n    while s < 0:\n        s = int(input())\n    total = total + s\nprint(total)",
+      "answer": "3",
+      "acceptable": [
+        "3"
+      ],
+      "explanation": "range(3) runs the collect-and-validate body three times, one per score.",
+      "id": "u90l09e05"
+    },
+    {
+      "type": "orderBlocks",
+      "prompt": "Arrange: collect 2 non-negative numbers and total them.",
+      "blocks": [
+        "total = 0",
+        "for i in range(2):",
+        "    n = int(input())",
+        "    while n < 0:",
+        "        n = int(input())",
+        "    total = total + n",
+        "print(total)"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "explanation": "Start the total, loop twice, validate each input, add it, then print. Validation nested in a collecting loop.",
+      "id": "u90l09e06"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "This combines which tools you've already met?",
+      "options": [
+        "A counting/for loop, a validation while loop, and an accumulator - all old tools",
+        "Only input",
+        "A brand-new loop type",
+        "Strings and lists"
+      ],
+      "answer": 0,
+      "explanation": "For loop + validation while + running total. No new syntax - just three familiar tools working together.",
+      "id": "u90l09e07"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Each item gets its own fresh validation because the inner while restarts every outer turn.",
+      "answer": true,
+      "explanation": "True. On each outer turn you read a new s and validate it from scratch. Every collected item is independently clean.",
+      "id": "u90l09e08"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Predict the total:\n\ntotal = 0\nfor i in range(2):\n    n = int(input())\n    while n < 0:\n        n = int(input())\n    total = total + n\nprint(total)\n\nUser types: -3, 4, then 6.",
+      "options": [
+        "10",
+        "7",
+        "1",
+        "-3"
+      ],
+      "answer": 0,
+      "explanation": "Turn 1: -3 rejected, 4 accepted. Turn 2: 6 accepted. total = 4 + 6 = 10. Bad values never reach the total.",
+      "id": "u90l09e09"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "The lesson:",
+      "options": [
+        "A validation loop nests neatly inside a collecting loop - validate every item",
+        "Validation can't be nested",
+        "You can only validate one input ever",
+        "Nesting breaks validation"
+      ],
+      "answer": 0,
+      "explanation": "Nest validation inside your collection loop and every gathered value is trustworthy. Combining loops is the lap's theme.",
+      "id": "u90l09e10"
+    }
+  ]
+}

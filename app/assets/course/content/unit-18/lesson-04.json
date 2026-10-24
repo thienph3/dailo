@@ -1,0 +1,118 @@
+{
+  "unitId": "u18",
+  "lessonId": "u18l04",
+  "title": "Loop back: leftover candies",
+  "idea": "REVIEW. Store->compute->report using % (remainder). Interleaves variables with the modulo operator from Lap 1.",
+  "problem": "You have 17 candies to share evenly among 5 kids. Report how many candies are left over.",
+  "exercises": [
+    {
+      "id": "u18l04e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: 17 candies shared evenly among 5 kids. Report how many are LEFT OVER.\n\nWhat is the OUTPUT?",
+      "options": [
+        "The number of leftover candies",
+        "The 17 candies",
+        "The 5 kids",
+        "The word candy"
+      ],
+      "answer": 0,
+      "explanation": "Output = the leftover count. Name it before solving."
+    },
+    {
+      "id": "u18l04e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "What are the INPUTS?",
+      "options": [
+        "The candy count (17) and the kid count (5)",
+        "Only 2",
+        "The word leftover",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "Two inputs: 17 candies and 5 kids."
+    },
+    {
+      "id": "u18l04e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example by hand. Share 17 candies among 5 kids — each gets 3 (that's 15), so how many are left?",
+      "options": ["2", "3", "5", "0"],
+      "answer": 0,
+      "explanation": "5 kids * 3 each = 15 used, 17 - 15 = 2 left over. Your check value is 2."
+    },
+    {
+      "id": "u18l04e04",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Plan. 'Leftover after even sharing' is exactly what one operator gives you. Which?",
+      "options": ["%", "//", "*", "+"],
+      "answer": 0,
+      "explanation": "% (modulo) gives the remainder after division — the leftover. The plan picks it before coding."
+    },
+    {
+      "id": "u18l04e05",
+      "type": "trueFalse",
+      "uepcc": "P",
+      "prompt": "% gives the remainder, while // gives the whole-number quotient.",
+      "answer": true,
+      "explanation": "Right. 17 // 5 = 3 (each kid's share) and 17 % 5 = 2 (the leftover). They are partners."
+    },
+    {
+      "id": "u18l04e06",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code it. Arrange the lines (store, compute, report).",
+      "blocks": [
+        "leftover = candy_count % kid_count",
+        "candy_count = 17",
+        "kid_count = 5",
+        "print(f\"Left over: {leftover}\")"
+      ],
+      "answer": [1, 2, 0, 3],
+      "explanation": "Store both counts as named variables, compute leftover with %, then report it."
+    },
+    {
+      "id": "u18l04e07",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Complete the compute step:\n\ncandy_count = 17\nkid_count = 5\nleftover = candy_count ____ kid_count\nprint(f\"Left over: {leftover}\")",
+      "answer": "%",
+      "acceptable": ["%"],
+      "explanation": "Use % for the remainder. leftover becomes 2."
+    },
+    {
+      "id": "u18l04e08",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "It prints 'Left over: 2'. Your example said 2. Verdict?",
+      "options": ["Passes", "Fails", "Can't tell", "Change the example"],
+      "answer": 0,
+      "explanation": "Computed 2 matches the hand example 2 — correct."
+    },
+    {
+      "id": "u18l04e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "New inputs: candy_count = 20, kid_count = 5. What does it print?",
+      "options": [
+        "Left over: 0",
+        "Left over: 2",
+        "Left over: 4",
+        "Left over: 5"
+      ],
+      "answer": 0,
+      "explanation": "20 % 5 = 0 — 20 shares evenly, so nothing is left over. The solution generalizes."
+    },
+    {
+      "id": "u18l04e10",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "If instead the problem asked 'how many each kid gets,' which operator would the plan pick?",
+      "options": ["//", "%", "+", "-"],
+      "answer": 0,
+      "explanation": "'How many each' is the whole-number quotient, so //. Matching the operator to the question is the heart of planning."
+    }
+  ]
+}

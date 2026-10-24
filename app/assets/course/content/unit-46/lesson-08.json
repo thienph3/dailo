@@ -1,0 +1,124 @@
+{
+  "unitId": "u46",
+  "lessonId": "u46l08",
+  "title": "Spot the mistake: break and continue",
+  "idea": "Find common errors: using break when continue was meant (or the reverse), and placing the keyword so it does the wrong thing.",
+  "exercises": [
+    {
+      "id": "u46l08e01",
+      "type": "multipleChoice",
+      "prompt": "Goal: print every number 1..5 except 3. This is wrong:\n\nfor i in range(1, 6):\n    if i == 3:\n        break\n    print(i)\n\nWhat went wrong?",
+      "options": [
+        "break ends the loop at 3, so 4 and 5 never print — it should be continue",
+        "The range is too short",
+        "print is misplaced",
+        "Nothing is wrong"
+      ],
+      "answer": 0,
+      "explanation": "break stops everything, giving only 1, 2. To skip 3 but keep going, use continue."
+    },
+    {
+      "id": "u46l08e02",
+      "type": "fillBlank",
+      "prompt": "Fix it to skip 3 but print the rest:\n\nfor i in range(1, 6):\n    if i == 3:\n        ____\n    print(i)",
+      "answer": "continue",
+      "acceptable": ["continue"],
+      "explanation": "continue skips only 3, printing 1, 2, 4, 5 — the intended result."
+    },
+    {
+      "id": "u46l08e03",
+      "type": "multipleChoice",
+      "prompt": "Goal: stop at the first number over 3. This is wrong:\n\nfor i in range(1, 6):\n    if i > 3:\n        continue\n    print(i)\n\nWhat went wrong?",
+      "options": [
+        "continue only skips, so it never stops — it should be break",
+        "The condition is wrong",
+        "The range is too long",
+        "Nothing is wrong"
+      ],
+      "answer": 0,
+      "explanation": "continue skips 4 and 5 but keeps looping, printing 1, 2, 3. To STOP at the first over 3, use break."
+    },
+    {
+      "id": "u46l08e04",
+      "type": "fillBlank",
+      "prompt": "Fix it to stop at the first number over 3:\n\nfor i in range(1, 6):\n    if i > 3:\n        ____\n    print(i)",
+      "answer": "break",
+      "acceptable": ["break"],
+      "explanation": "break ends the loop at i = 4, so it prints 1, 2, 3 then stops — the intended 'stop at first over 3'."
+    },
+    {
+      "id": "u46l08e05",
+      "type": "multipleChoice",
+      "prompt": "This is meant to total 1..5 skipping 2, but gives the wrong total:\n\ntotal = 0\nfor i in range(1, 6):\n    total = total + i\n    if i == 2:\n        continue\nprint(total)",
+      "options": [
+        "continue is after the add, so 2 is already counted — total is 15, not 13",
+        "The range is wrong",
+        "total starts wrong",
+        "Nothing is wrong"
+      ],
+      "answer": 0,
+      "explanation": "The add runs before continue, so 2 is included. The skip must come BEFORE the add to leave 2 out."
+    },
+    {
+      "id": "u46l08e06",
+      "type": "orderBlocks",
+      "prompt": "Arrange the lines so 2 is actually skipped from the total.",
+      "blocks": [
+        "total = 0",
+        "for i in range(1, 6):",
+        "    if i == 2:",
+        "        continue",
+        "    total = total + i",
+        "print(total)"
+      ],
+      "answer": [0, 1, 2, 3, 4, 5],
+      "explanation": "Put the if/continue BEFORE the add. Now 2 is skipped and total is 1 + 3 + 4 + 5 = 13."
+    },
+    {
+      "id": "u46l08e07",
+      "type": "multipleChoice",
+      "prompt": "A 'while True' loop has no break inside. What is the problem?",
+      "options": [
+        "It runs forever — while True never ends on its own, so a break is required",
+        "It runs once",
+        "It prints nothing",
+        "Nothing is wrong"
+      ],
+      "answer": 0,
+      "explanation": "while True is always true, so without a break the loop never stops. Every while True needs a break to exit."
+    },
+    {
+      "id": "u46l08e08",
+      "type": "multipleChoice",
+      "prompt": "A learner indented break so it runs EVERY pass:\n\nfor i in range(1, 6):\n    print(i)\n    break\n\nWhat prints?",
+      "options": [
+        "1 — break ends the loop on the very first pass",
+        "1\n2\n3\n4\n5",
+        "nothing",
+        "5"
+      ],
+      "answer": 0,
+      "explanation": "With break not guarded by any if, it fires on pass one, after printing 1. The loop ends immediately."
+    },
+    {
+      "id": "u46l08e09",
+      "type": "trueFalse",
+      "prompt": "A break or continue usually belongs inside an if, so it only acts when a condition is met.",
+      "answer": true,
+      "explanation": "Yes — unguarded, they fire every pass. Putting them inside an if makes them act only on the passes you intend."
+    },
+    {
+      "id": "u46l08e10",
+      "type": "multipleChoice",
+      "prompt": "Which two questions catch most break/continue bugs?",
+      "options": [
+        "'Did I mean stop or skip?' and 'Is it before or after the action, and guarded by an if?'",
+        "'Is it fast?' and 'Is it short?'",
+        "'Does it print?' and 'Is it tidy?'",
+        "'Is it morning?' and 'Is it a number?'"
+      ],
+      "answer": 0,
+      "explanation": "Pick the right keyword (stop vs skip), and place it correctly (before/after the action, inside an if). Those cover the usual mistakes."
+    }
+  ]
+}

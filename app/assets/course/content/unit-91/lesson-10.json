@@ -1,0 +1,168 @@
+{
+  "unitId": "u91",
+  "lessonId": "u91l10",
+  "title": "Solve it: a small end-to-end report",
+  "idea": "GUIDED PROBLEM (review-heavy). A multi-part report pulling together validation, multiple state, and a guard - choosing each tool.",
+  "problem": "Read how many scores to enter (at least 1), read that many valid scores (0 or more each), then show the total and the average.",
+  "exercises": [
+    {
+      "id": "u91l10e01",
+      "uepcc": "U",
+      "type": "multipleChoice",
+      "prompt": "PROBLEM: read a count (>=1), then that many valid scores (>=0), show total AND average.\n\nHow many OUTPUTS at the end?",
+      "options": [
+        "Two - the total and the average",
+        "One",
+        "Three",
+        "None"
+      ],
+      "answer": 0,
+      "explanation": "Two final outputs: total and average. Several steps feed into them."
+    },
+    {
+      "id": "u91l10e02",
+      "uepcc": "U",
+      "type": "multipleChoice",
+      "prompt": "Name the THREE techniques this problem will need.",
+      "options": [
+        "Validation loops, multiple state (total+count), and a guarded division",
+        "Only a print",
+        "Only a list",
+        "Strings and files"
+      ],
+      "answer": 0,
+      "explanation": "Validate the inputs, keep total and count in one pass, then guard the average's division. All tools from this lap."
+    },
+    {
+      "id": "u91l10e03",
+      "uepcc": "E",
+      "type": "multipleChoice",
+      "prompt": "By hand: count is 3, scores are 4, 6, 2. The total is?",
+      "options": [
+        "12",
+        "10",
+        "3",
+        "6"
+      ],
+      "answer": 0,
+      "explanation": "4 + 6 + 2 = 12. Hand answer for the total."
+    },
+    {
+      "id": "u91l10e04",
+      "uepcc": "E",
+      "type": "multipleChoice",
+      "prompt": "By hand: total 12 over 3 scores gives an average of?",
+      "options": [
+        "4",
+        "12",
+        "3",
+        "6"
+      ],
+      "answer": 0,
+      "explanation": "12 / 3 = 4. Both checks ready: total 12, average 4."
+    },
+    {
+      "id": "u91l10e05",
+      "uepcc": "P",
+      "type": "orderBlocks",
+      "prompt": "Plan the whole thing.",
+      "blocks": [
+        "Read a count and re-ask until it is at least 1",
+        "Repeat that many times: read a score, re-ask until it is 0 or more, add to total and bump the count-of-scores",
+        "Average = total / number of scores, then show total and average"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Validate the count, collect-and-validate each score while accumulating, then divide and report. Each part names its tool."
+    },
+    {
+      "id": "u91l10e06",
+      "uepcc": "P",
+      "type": "multipleChoice",
+      "prompt": "Review: the condition on each validation loop should describe the ___ case.",
+      "options": [
+        "invalid",
+        "valid",
+        "empty",
+        "largest"
+      ],
+      "answer": 0,
+      "explanation": "Loop WHILE invalid - that's the validation rule from this unit, reused here."
+    },
+    {
+      "id": "u91l10e07",
+      "uepcc": "C",
+      "type": "orderBlocks",
+      "prompt": "Code the plan.",
+      "blocks": [
+        "how_many = int(input())",
+        "while how_many < 1:",
+        "    how_many = int(input())",
+        "total = 0",
+        "for i in range(how_many):",
+        "    score = int(input())",
+        "    while score < 0:",
+        "        score = int(input())",
+        "    total = total + score",
+        "average = total / how_many",
+        "print(total, average)"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "explanation": "Validate the count, start the total, loop that many times validating and accumulating each score, then divide by how_many and print both."
+    },
+    {
+      "id": "u91l10e08",
+      "uepcc": "C",
+      "type": "fillBlank",
+      "prompt": "Complete the average (number of scores is how_many):\n\ntotal = 12\nhow_many = 3\naverage = total ____ how_many\nprint(average)",
+      "answer": "/",
+      "acceptable": [
+        "/"
+      ],
+      "explanation": "Average divides the total by the count of scores: 12 / 3 = 4."
+    },
+    {
+      "id": "u91l10e09",
+      "uepcc": "Check",
+      "type": "multipleChoice",
+      "prompt": "Check: count 3, scores 4, 6, 2; code prints 12 and 4.0. Hand answers were 12 and 4. Verdict?",
+      "options": [
+        "Passes - every part matches",
+        "Fails",
+        "Unknown",
+        "Only total matters"
+      ],
+      "answer": 0,
+      "explanation": "Total 12 and average 4 match the hand example, with all inputs validated. The combined solution works."
+    },
+    {
+      "id": "u91l10e10",
+      "uepcc": "Check",
+      "type": "multipleChoice",
+      "prompt": "Why did validating how_many to be at least 1 ALSO protect the average step?",
+      "options": [
+        "A count of at least 1 means dividing by how_many is always safe",
+        "It makes scores larger",
+        "It skips the loop",
+        "It has no effect on the average"
+      ],
+      "answer": 0,
+      "explanation": "Because how_many can't be 0, the division total / how_many can never divide by zero. One validation guarded two later steps - the payoff of planning the parts together."
+    }
+  ]
+}

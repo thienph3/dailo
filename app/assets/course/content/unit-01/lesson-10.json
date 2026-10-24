@@ -1,0 +1,141 @@
+{
+  "unitId": "u01",
+  "lessonId": "u01l10",
+  "title": "Put it together",
+  "idea": "Review lesson: everything from Unit 1 mixed together, plus a tiny taste of writing a 2-line program.",
+  "exercises": [
+    {
+      "id": "u01l10e01",
+      "type": "multipleChoice",
+      "prompt": "Which instruction correctly shows the word Welcome?",
+      "options": [
+        "print(\"Welcome\")",
+        "print(Welcome)",
+        "Print(\"Welcome\")",
+        "print \"Welcome\""
+      ],
+      "answer": 0,
+      "explanation": "Lowercase print, matching quotes, both brackets. All the rules at once."
+    },
+    {
+      "id": "u01l10e02",
+      "type": "trueFalse",
+      "prompt": "A computer follows your instructions exactly, in order.",
+      "answer": true,
+      "explanation": "The core idea of the whole unit. Exactly, and in order."
+    },
+    {
+      "id": "u01l10e03",
+      "type": "multipleChoice",
+      "prompt": "What's wrong?\n\nprint(Hello)",
+      "options": [
+        "Missing quotes around Hello",
+        "Missing a bracket",
+        "print is capitalized",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "Hello is text, so it needs quotes."
+    },
+    {
+      "id": "u01l10e04",
+      "type": "multipleChoice",
+      "prompt": "What's wrong?\n\nprint(\"Hello\"",
+      "options": [
+        "Missing the closing bracket )",
+        "Missing quotes",
+        "print is wrong",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "Opens with ( but never closes. Needs a )."
+    },
+    {
+      "id": "u01l10e05",
+      "type": "tapTokens",
+      "prompt": "Build a correct instruction to show: Dailo rocks",
+      "tokens": [
+        "print",
+        "(",
+        "\"Dailo rocks\"",
+        ")"
+      ],
+      "answer": [
+        "print",
+        "(",
+        "\"Dailo rocks\"",
+        ")"
+      ],
+      "explanation": "The whole phrase in matching quotes, inside the brackets."
+    },
+    {
+      "id": "u01l10e06",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nprint(\"Hi\")\nprint(\"there\")",
+      "options": [
+        "Hi then there on two lines",
+        "Hi there",
+        "Hithere",
+        "there"
+      ],
+      "answer": 0,
+      "explanation": "Two prints, two lines."
+    },
+    {
+      "id": "u01l10e07",
+      "type": "multiSelect",
+      "prompt": "Which of these are fully correct? (pick all)",
+      "options": [
+        "print(\"ok\")",
+        "print(7)",
+        "print(ok)",
+        "print(\"ok\""
+      ],
+      "answer": [
+        0,
+        1
+      ],
+      "explanation": "Text in quotes (ok) is fine; a bare number (7) is fine. A bare word fails; a missing ) fails."
+    },
+    {
+      "id": "u01l10e08",
+      "type": "orderBlocks",
+      "prompt": "Arrange a program that shows: Start, then a blank line, then Done.",
+      "blocks": [
+        "print(\"Start\")",
+        "print()",
+        "print(\"Done\")"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Start, blank line, Done — in that order. Your first multi-line program!"
+    },
+    {
+      "id": "u01l10e09",
+      "type": "fillBlank",
+      "prompt": "Write a full, correct instruction to show the word: ready",
+      "answer": "print(\"ready\")",
+      "acceptable": [
+        "print(\"ready\")",
+        "print('ready')"
+      ],
+      "explanation": "print(\"ready\") — you've got every rule down."
+    },
+    {
+      "id": "u01l10e10",
+      "type": "multipleChoice",
+      "prompt": "You can now make a computer do what?",
+      "options": [
+        "Follow instructions in order and print messages",
+        "Only turn on and off",
+        "Read your mind",
+        "Nothing yet"
+      ],
+      "answer": 0,
+      "explanation": "You finished Unit 1! You can give ordered instructions and print text and numbers. Next: remembering values so a later step can use them."
+    }
+  ]
+}

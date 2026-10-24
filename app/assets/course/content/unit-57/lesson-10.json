@@ -1,0 +1,136 @@
+{
+  "unitId": "u57",
+  "lessonId": "u57l10",
+  "title": "Unit finale: the total of many values",
+  "idea": "Consolidate the sum tool and interleave earlier laps (for-each, if, f-strings, len). Review-heavy.",
+  "exercises": [
+    {
+      "id": "u57l10e01",
+      "type": "multipleChoice",
+      "prompt": "The three essential lines for summing a list are...",
+      "options": [
+        "total = 0; for x in list; total = total + x",
+        "for; print; input",
+        "total = x; print",
+        "range; append; len"
+      ],
+      "answer": 0,
+      "explanation": "Initialise to 0, loop, accumulate each value."
+    },
+    {
+      "id": "u57l10e02",
+      "type": "multipleChoice",
+      "prompt": "nums = [5, 5, 5]\ntotal = 0\nfor n in nums:\n    total = total + n\nprint(total)\n\nWhat prints?",
+      "options": [
+        "15",
+        "5",
+        "3",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "5 + 5 + 5 = 15."
+    },
+    {
+      "id": "u57l10e03",
+      "type": "trueFalse",
+      "prompt": "Summing an empty list gives 0 if you start the total at 0.",
+      "answer": true,
+      "explanation": "No values are added, so the total stays at its start value, 0."
+    },
+    {
+      "id": "u57l10e04",
+      "type": "orderBlocks",
+      "prompt": "Arrange: total a list and print 'Sum: <total>'.",
+      "blocks": [
+        "print(f\"Sum: {total}\")",
+        "    total = total + n",
+        "total = 0",
+        "for n in nums:",
+        "nums = [2, 8]"
+      ],
+      "answer": [
+        4,
+        2,
+        3,
+        1,
+        0
+      ],
+      "explanation": "List, start total, loop + add, labelled print. Shows 'Sum: 10'."
+    },
+    {
+      "id": "u57l10e05",
+      "type": "fillBlank",
+      "prompt": "Total only values of 10 or more:\n\ntotal = 0\nfor n in nums:\n    if n ____ 10:\n        total = total + n",
+      "answer": ">=",
+      "acceptable": [
+        ">="
+      ],
+      "explanation": "'10 or more' is >= 10, so 10 itself is included."
+    },
+    {
+      "id": "u57l10e06",
+      "type": "multipleChoice",
+      "prompt": "A learner's 'sum' of [10, 20] comes out as 2. What did they most likely write inside the loop?",
+      "options": [
+        "total = total + 1 (counting, not summing)",
+        "total = total + n",
+        "total += n",
+        "total = total + 20"
+      ],
+      "answer": 0,
+      "explanation": "Adding 1 counts items (2 of them). To sum, add the value n."
+    },
+    {
+      "id": "u57l10e07",
+      "type": "multipleChoice",
+      "prompt": "words = [\"aa\", \"b\", \"ccc\"]\ntotal = 0\nfor w in words:\n    total = total + len(w)\nprint(total)\n\nWhat prints?",
+      "options": [
+        "6",
+        "3",
+        "[2, 1, 3]",
+        "aabccc"
+      ],
+      "answer": 0,
+      "explanation": "2 + 1 + 3 = 6. You can sum computed amounts like lengths."
+    },
+    {
+      "id": "u57l10e08",
+      "type": "multipleChoice",
+      "prompt": "nums = [1, 2, 3, 4]\ntotal = 0\nfor n in nums:\n    if n % 2 == 0:\n        total = total + n\nprint(total)\n\nWhat prints?",
+      "options": [
+        "6",
+        "10",
+        "4",
+        "2"
+      ],
+      "answer": 0,
+      "explanation": "Sum of evens 2 and 4 is 6."
+    },
+    {
+      "id": "u57l10e09",
+      "type": "multipleChoice",
+      "prompt": "Why initialise the total BEFORE the loop?",
+      "options": [
+        "So the sum builds up across passes instead of resetting",
+        "To run faster",
+        "Because Python requires it there",
+        "To print it"
+      ],
+      "answer": 0,
+      "explanation": "One initialisation lets the accumulator grow. Resetting inside would wipe progress each pass."
+    },
+    {
+      "id": "u57l10e10",
+      "type": "multipleChoice",
+      "prompt": "You finished Unit 57! What's the new power?",
+      "options": [
+        "Add every value in a list into one total",
+        "Only make lists",
+        "Only loop words",
+        "Only sort"
+      ],
+      "answer": 0,
+      "explanation": "You can now total a whole list with an accumulator. Next: counting how many values fit a rule."
+    }
+  ]
+}

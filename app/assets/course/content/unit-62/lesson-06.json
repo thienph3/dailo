@@ -1,0 +1,146 @@
+{
+  "unitId": "u62",
+  "lessonId": "u62l06",
+  "title": "Average among the other tools",
+  "idea": "Choosing average vs sum/count/max/min; average reuses sum and count. ~30% review.",
+  "exercises": [
+    {
+      "id": "u62l06e01",
+      "type": "multipleChoice",
+      "prompt": "'What is the average score?' Which tool?",
+      "options": [
+        "Average (sum / count)",
+        "Sum",
+        "Max",
+        "Min"
+      ],
+      "answer": 0,
+      "explanation": "'Average' divides the total by the count. It builds on sum and count."
+    },
+    {
+      "id": "u62l06e02",
+      "type": "multipleChoice",
+      "prompt": "'What is the total score?' Which tool?",
+      "options": [
+        "Sum",
+        "Average",
+        "Max",
+        "Count"
+      ],
+      "answer": 0,
+      "explanation": "'Total' is just the running sum — no division."
+    },
+    {
+      "id": "u62l06e03",
+      "type": "matchPairs",
+      "prompt": "Match each question to its tool.",
+      "pairs": [
+        {
+          "left": "Total of all",
+          "right": "Sum"
+        },
+        {
+          "left": "Typical / mean value",
+          "right": "Average"
+        },
+        {
+          "left": "Biggest value",
+          "right": "Max"
+        },
+        {
+          "left": "How many fit a rule",
+          "right": "Count"
+        }
+      ],
+      "explanation": "Average is the new one; it reuses sum and count under the hood."
+    },
+    {
+      "id": "u62l06e04",
+      "type": "multipleChoice",
+      "prompt": "How does the average REUSE earlier tools?",
+      "options": [
+        "It takes the sum (Unit 57) and divides by the count (len, Unit 58)",
+        "It replaces them",
+        "It needs neither",
+        "It uses max and min"
+      ],
+      "answer": 0,
+      "explanation": "Average = sum / count. You are combining two tools you already own, plus one guard."
+    },
+    {
+      "id": "u62l06e05",
+      "type": "orderBlocks",
+      "prompt": "REVIEW (sum): total [3, 5, 2] by hand. Put the running total after each step in order (start 0).",
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "blocks": [
+        "0 + 3 = 3",
+        "3 + 5 = 8",
+        "8 + 2 = 10"
+      ],
+      "explanation": "Sum is 10. For the average you'd then divide by the count, 3 — giving about 3.33."
+    },
+    {
+      "id": "u62l06e06",
+      "type": "multipleChoice",
+      "prompt": "REVIEW (max/min): biggest and smallest of [3, 5, 2]?",
+      "options": [
+        "biggest 5, smallest 2",
+        "biggest 2, smallest 5",
+        "biggest 10, smallest 0",
+        "biggest 3, smallest 3"
+      ],
+      "answer": 0,
+      "explanation": "Max 5, min 2. (The average, by contrast, is a shared-out value between them.)"
+    },
+    {
+      "id": "u62l06e07",
+      "type": "multipleChoice",
+      "prompt": "The average of [3, 5, 2] is 10 / 3. Which is true?",
+      "options": [
+        "It is about 3.33 — a value between the smallest and biggest",
+        "It equals the biggest, 5",
+        "It equals the total, 10",
+        "It equals the count, 3"
+      ],
+      "answer": 0,
+      "explanation": "10 / 3 is roughly 3.33, sitting between min 2 and max 5. Averages land between the extremes."
+    },
+    {
+      "id": "u62l06e08",
+      "type": "trueFalse",
+      "prompt": "Only the average, out of sum/count/max/min, needs an empty-list guard.",
+      "answer": true,
+      "explanation": "Sum and count of an empty list are safely 0; max/min of empty is a different issue. Only the average DIVIDES by the count, so only it can divide by zero."
+    },
+    {
+      "id": "u62l06e09",
+      "type": "multipleChoice",
+      "prompt": "'Which player scored the most, and what was the team's average score?' How many tools?",
+      "options": [
+        "Two — max for the most, average for the mean",
+        "One — average does both",
+        "One — max does both",
+        "None"
+      ],
+      "answer": 0,
+      "explanation": "Two questions, two tools: max for the highest, average for the mean."
+    },
+    {
+      "id": "u62l06e10",
+      "type": "multipleChoice",
+      "prompt": "Why pick the tool from the wording first?",
+      "options": [
+        "'Average/typical/mean' -> average; 'total' -> sum; 'most' -> max — the words tell you the pattern",
+        "Wording never matters",
+        "Always use average",
+        "Always use sum"
+      ],
+      "answer": 0,
+      "explanation": "Reading what is asked points straight at the pattern. 'Mean' and 'typical' signal an average."
+    }
+  ]
+}

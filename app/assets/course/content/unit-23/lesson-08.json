@@ -1,0 +1,154 @@
+{
+  "unitId": "u23",
+  "lessonId": "u23l08",
+  "title": "Solve it: speeding or not",
+  "idea": "GUIDED. Decide 'Speeding' or 'OK' from a speed, and reason carefully about the boundary value.",
+  "problem": "The limit is 50. Show 'Speeding' when the speed is above 50, otherwise 'OK'.",
+  "exercises": [
+    {
+      "id": "u23l08e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: limit is 50; above it is Speeding. What is the OUTPUT?",
+      "options": [
+        "Speeding or OK",
+        "The speed",
+        "The limit 50",
+        "A number"
+      ],
+      "answer": 0,
+      "explanation": "Output is one of two labels based on the speed versus the limit."
+    },
+    {
+      "id": "u23l08e02",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "By hand: speed = 55 gives what?",
+      "options": [
+        "Speeding",
+        "OK",
+        "55",
+        "50"
+      ],
+      "answer": 0,
+      "explanation": "55 is above 50, so Speeding. Your check value."
+    },
+    {
+      "id": "u23l08e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "By hand, the tricky edge: speed = 50 (exactly the limit) gives what?",
+      "options": [
+        "OK",
+        "Speeding",
+        "50",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "50 is AT the limit, not above it, so OK. Edge values are where decisions go wrong, so work them by hand."
+    },
+    {
+      "id": "u23l08e04",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Which comparison means 'above 50'?",
+      "options": [
+        "speed > 50",
+        "speed >= 50",
+        "speed < 50",
+        "speed == 50"
+      ],
+      "answer": 0,
+      "explanation": "'Above' is strictly greater, so > 50. Using >= would wrongly flag exactly 50 as Speeding."
+    },
+    {
+      "id": "u23l08e05",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Why does the choice between > and >= matter here?",
+      "options": [
+        "It decides whether exactly 50 counts as Speeding",
+        "It changes the output words",
+        "It is just style",
+        "It does not matter"
+      ],
+      "answer": 0,
+      "explanation": "At the boundary, > and >= disagree. The problem says 'above', so 50 is OK - that forces >."
+    },
+    {
+      "id": "u23l08e06",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Plan the steps.",
+      "blocks": [
+        "Compare speed with 50",
+        "If above 50, show Speeding",
+        "Otherwise show OK"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Compare, then branch: Speeding on True, OK on the else."
+    },
+    {
+      "id": "u23l08e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Arrange the code.",
+      "blocks": [
+        "if speed > 50:",
+        "    print(\"Speeding\")",
+        "else:",
+        "    print(\"OK\")"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "Print Speeding when above the limit, OK otherwise."
+    },
+    {
+      "id": "u23l08e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Complete the comparison:\n\nif speed __ 50:\n    print(\"Speeding\")\nelse:\n    print(\"OK\")",
+      "answer": ">",
+      "acceptable": [
+        ">"
+      ],
+      "explanation": "Strictly greater, so >. The limit value 50 must count as OK, not Speeding."
+    },
+    {
+      "id": "u23l08e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Run with speed = 55. What prints?",
+      "options": [
+        "Speeding",
+        "OK",
+        "55",
+        "50"
+      ],
+      "answer": 0,
+      "explanation": "55 > 50 is True, so Speeding - matches the hand example."
+    },
+    {
+      "id": "u23l08e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Re-check the edge: speed = 50. What prints?",
+      "options": [
+        "OK",
+        "Speeding",
+        "50",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "50 > 50 is False, so the else runs: OK. The edge confirms > was correct."
+    }
+  ]
+}

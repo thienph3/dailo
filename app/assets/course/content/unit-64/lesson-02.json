@@ -1,0 +1,133 @@
+{
+  "unitId": "u64",
+  "lessonId": "u64l02",
+  "title": "The found-flag search pattern",
+  "idea": "TOOL: introduce found = False; for x in nums: if x == target: found = True. Visible, predictable output.",
+  "exercises": [
+    {
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nnums = [4, 8, 2, 9]\ntarget = 8\nfound = False\nfor n in nums:\n    if n == target:\n        found = True\nprint(found)",
+      "options": [
+        "True",
+        "False",
+        "8",
+        "[8]"
+      ],
+      "answer": 0,
+      "explanation": "8 is in the list, so when the loop reaches it, found flips to True. The final answer is True.",
+      "id": "u64l02e01"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Why start with found = False before the loop?",
+      "options": [
+        "You assume the value is absent until you actually see it",
+        "False is faster",
+        "to empty the list",
+        "so the loop never runs"
+      ],
+      "answer": 0,
+      "explanation": "You begin by assuming 'not found'. Only seeing a match flips it to True. If nothing matches, it stays False.",
+      "id": "u64l02e02"
+    },
+    {
+      "type": "fillBlank",
+      "prompt": "Finish the line that records a match:\n\nfound = False\nfor n in nums:\n    if n == target:\n        found = ____",
+      "answer": "True",
+      "acceptable": [
+        "True"
+      ],
+      "explanation": "When an item equals the target, you set found = True to record that the value is present.",
+      "id": "u64l02e03"
+    },
+    {
+      "type": "orderBlocks",
+      "prompt": "Arrange the found-flag search pattern.",
+      "blocks": [
+        "found = False",
+        "for n in nums:",
+        "    if n == target:",
+        "        found = True",
+        "print(found)"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "explanation": "Assume not found, loop every item, compare to the target, flip to True on a match, then report found.",
+      "id": "u64l02e04"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nnums = [1, 3, 5]\ntarget = 7\nfound = False\nfor n in nums:\n    if n == target:\n        found = True\nprint(found)",
+      "options": [
+        "False",
+        "True",
+        "7",
+        "[]"
+      ],
+      "answer": 0,
+      "explanation": "No item equals 7, so found is never flipped. It stays False — the value is absent.",
+      "id": "u64l02e05"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "found stays False if no item matches the target.",
+      "answer": true,
+      "explanation": "Nothing flips it, so it keeps its starting value. A False at the end means 'not present'.",
+      "id": "u64l02e06"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "What does the if compare inside a search?",
+      "options": [
+        "each item against the target value",
+        "each item against 0",
+        "the list length against the target",
+        "nothing — it always matches"
+      ],
+      "answer": 0,
+      "explanation": "You compare the current item to the target with n == target. A True means you found it.",
+      "id": "u64l02e07"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nnums = [5, 5, 5]\ntarget = 5\nfound = False\nfor n in nums:\n    if n == target:\n        found = True\nprint(found)",
+      "options": [
+        "True",
+        "False",
+        "3",
+        "[5, 5, 5]"
+      ],
+      "answer": 0,
+      "explanation": "The first 5 flips found to True; the others keep it True. The answer is True — the value is present.",
+      "id": "u64l02e08"
+    },
+    {
+      "type": "fillBlank",
+      "prompt": "Start the flag that assumes the value is NOT there yet:\n\n____ = False\nfor n in nums:\n    if n == target:\n        found = True",
+      "answer": "found",
+      "acceptable": [
+        "found"
+      ],
+      "explanation": "found = False is the starting assumption. The loop can only turn it True, never back to False.",
+      "id": "u64l02e09"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "A search's final answer (found) is a...",
+      "options": [
+        "boolean — True or False",
+        "list",
+        "number count",
+        "sum"
+      ],
+      "answer": 0,
+      "explanation": "Search produces a yes/no, which in code is a boolean: True if present, False if absent.",
+      "id": "u64l02e10"
+    }
+  ]
+}

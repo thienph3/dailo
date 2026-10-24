@@ -1,0 +1,151 @@
+{
+  "unitId": "u27",
+  "lessonId": "u27l06",
+  "title": "Solve it: free shipping rule",
+  "idea": "GUIDED. One problem through UEPCC combining 'or' with a comparison: free shipping if a member OR the order is big enough.",
+  "problem": "Shipping is free if the customer is a member OR the order total is 50 or more. Given is_member and total, print 'Free shipping' or 'Pay shipping'.",
+  "exercises": [
+    {
+      "id": "u27l06e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: Free shipping if member OR total >= 50. Print 'Free shipping' or 'Pay shipping'.\n\nWhat is the OUTPUT?",
+      "options": [
+        "The label 'Free shipping' or 'Pay shipping'",
+        "The order total",
+        "The member id",
+        "The number of items"
+      ],
+      "answer": 0,
+      "explanation": "A single shipping label is the output. Two inputs feed the decision."
+    },
+    {
+      "id": "u27l06e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "What are the INPUTS?",
+      "options": [
+        "is_member and the order total",
+        "Only the total",
+        "Only membership",
+        "The word 'Free'"
+      ],
+      "answer": 0,
+      "explanation": "Membership and the total both matter, because either one can earn free shipping."
+    },
+    {
+      "id": "u27l06e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "By hand: not a member, total 60. Free or Pay?",
+      "options": [
+        "Free shipping",
+        "Pay shipping",
+        "60",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "Not a member, but 60 >= 50 is True. With 'or', one true side is enough: 'Free shipping'."
+    },
+    {
+      "id": "u27l06e04",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "By hand: not a member, total 20. Free or Pay?",
+      "options": [
+        "Pay shipping",
+        "Free shipping",
+        "20",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "Not a member and 20 < 50, so both sides are false: 'Pay shipping'."
+    },
+    {
+      "id": "u27l06e05",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Plan: how do you write 'member OR total is 50+'?",
+      "options": [
+        "is_member or total >= 50",
+        "is_member and total >= 50",
+        "is_member or total > 50",
+        "not is_member or total >= 50"
+      ],
+      "answer": 0,
+      "explanation": "'or' joins the two ways to qualify, and >= 50 includes exactly 50. Either side true means free shipping."
+    },
+    {
+      "id": "u27l06e06",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "A customer could qualify in two different ways. Which tool captures 'either path works'?",
+      "options": [
+        "or",
+        "and",
+        "not",
+        "elif"
+      ],
+      "answer": 0,
+      "explanation": "'or' is exactly 'either path works'. Only when both paths fail do they pay."
+    },
+    {
+      "id": "u27l06e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Arrange the code.",
+      "blocks": [
+        "if is_member or total >= 50:",
+        "    print(\"Free shipping\")",
+        "else:",
+        "    print(\"Pay shipping\")"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "One 'or' condition combining the two ways to qualify, then the else for everyone else."
+    },
+    {
+      "id": "u27l06e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Complete the comparison so a total of exactly 50 qualifies:\n\nif is_member or total __ 50:\n    print(\"Free shipping\")",
+      "answer": ">=",
+      "acceptable": [
+        ">="
+      ],
+      "explanation": ">= 50 includes 50 itself. A plain > would wrongly charge someone with exactly a 50 order."
+    },
+    {
+      "id": "u27l06e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check the first example: not a member, total 60. What prints?",
+      "options": [
+        "Free shipping",
+        "Pay shipping",
+        "60",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "False or (60 >= 50 True) = True, so 'Free shipping' - matching your hand answer."
+    },
+    {
+      "id": "u27l06e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Fresh case: is a member, total 10. What prints?",
+      "options": [
+        "Free shipping",
+        "Pay shipping",
+        "10",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "Member side is True, so 'or' is True regardless of the small total: 'Free shipping'. Generalizes correctly."
+    }
+  ]
+}

@@ -1,0 +1,142 @@
+{
+  "unitId": "u38",
+  "lessonId": "u38l07",
+  "title": "Predict the values i takes",
+  "idea": "Given any range(start, stop, step), list the values the loop variable takes. Tracing the sequence is the Check skill for stepping loops.",
+  "exercises": [
+    {
+      "id": "u38l07e01",
+      "type": "multipleChoice",
+      "prompt": "List the values: range(1, 6)",
+      "options": [
+        "1, 2, 3, 4, 5",
+        "1, 2, 3, 4, 5, 6",
+        "0, 1, 2, 3, 4, 5",
+        "1, 6"
+      ],
+      "answer": 0,
+      "explanation": "Start 1, default step 1, stop before 6: 1, 2, 3, 4, 5."
+    },
+    {
+      "id": "u38l07e02",
+      "type": "multipleChoice",
+      "prompt": "List the values: range(0, 10, 3)",
+      "options": [
+        "0, 3, 6, 9",
+        "0, 3, 6, 9, 12",
+        "3, 6, 9",
+        "0, 3, 6"
+      ],
+      "answer": 0,
+      "explanation": "Start 0, step 3: 0, 3, 6, 9. Next is 12, past the stop of 10, so it stops at 9."
+    },
+    {
+      "id": "u38l07e03",
+      "type": "multipleChoice",
+      "prompt": "List the values: range(4, 0, -1)",
+      "options": [
+        "4, 3, 2, 1",
+        "4, 3, 2, 1, 0",
+        "1, 2, 3, 4",
+        "4, 0"
+      ],
+      "answer": 0,
+      "explanation": "Start 4, step -1, stop before 0: 4, 3, 2, 1."
+    },
+    {
+      "id": "u38l07e04",
+      "type": "multipleChoice",
+      "prompt": "How many passes? range(2, 12, 2)",
+      "options": [
+        "5 (values 2, 4, 6, 8, 10)",
+        "6",
+        "10",
+        "4"
+      ],
+      "answer": 0,
+      "explanation": "2, 4, 6, 8, 10 — five values. Next is 12, excluded. Five passes."
+    },
+    {
+      "id": "u38l07e05",
+      "type": "trueFalse",
+      "prompt": "range(3, 3) produces no values (it is empty).",
+      "answer": true,
+      "explanation": "Start equals stop, so there's nothing to count — zero passes. An empty range is valid and safe."
+    },
+    {
+      "id": "u38l07e06",
+      "type": "orderBlocks",
+      "prompt": "Put the output in order for:\n\nfor i in range(1, 4):\n    print(i)",
+      "blocks": [
+        "1",
+        "2",
+        "3"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "i takes 1, then 2, then 3, printing each in turn."
+    },
+    {
+      "id": "u38l07e07",
+      "type": "multipleChoice",
+      "prompt": "List the values: range(5, 20, 5)",
+      "options": [
+        "5, 10, 15",
+        "5, 10, 15, 20",
+        "0, 5, 10, 15",
+        "5, 15"
+      ],
+      "answer": 0,
+      "explanation": "Start 5, step 5: 5, 10, 15. Next is 20, which equals the stop and is excluded."
+    },
+    {
+      "id": "u38l07e08",
+      "type": "multipleChoice",
+      "prompt": "What is the LAST value i takes in range(1, 10, 2)?",
+      "options": [
+        "9",
+        "10",
+        "8",
+        "11"
+      ],
+      "answer": 0,
+      "explanation": "1, 3, 5, 7, 9 — the last is 9. The next, 11, is past the stop of 10."
+    },
+    {
+      "id": "u38l07e09",
+      "type": "matchPairs",
+      "prompt": "Match each range to its value list.",
+      "pairs": [
+        {
+          "left": "range(2, 6)",
+          "right": "2, 3, 4, 5"
+        },
+        {
+          "left": "range(0, 9, 3)",
+          "right": "0, 3, 6"
+        },
+        {
+          "left": "range(3, 0, -1)",
+          "right": "3, 2, 1"
+        }
+      ],
+      "explanation": "Start included, stop excluded, step controls the spacing and direction. Trace each one carefully."
+    },
+    {
+      "id": "u38l07e10",
+      "type": "multipleChoice",
+      "prompt": "Best way to be sure a tricky range does what you want?",
+      "options": [
+        "Write out the values by hand before trusting the loop",
+        "Assume it's right",
+        "Always use range(10)",
+        "Skip the step"
+      ],
+      "answer": 0,
+      "explanation": "Listing the values by hand catches off-by-one and wrong-step mistakes. Trace first, trust second."
+    }
+  ]
+}

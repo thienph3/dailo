@@ -1,0 +1,112 @@
+{
+  "unitId": "u03",
+  "lessonId": "u03l03",
+  "title": "Solve it: a morning schedule in order",
+  "idea": "GUIDED PROBLEM. Report a schedule where the ORDER of the facts is the whole point. Emphasizes output order as a decision, not an accident.",
+  "problem": "Show a morning schedule, each step on its own line and in the right order: wake up, eat breakfast, brush teeth.",
+  "exercises": [
+    {
+      "id": "u03l03e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: Show a morning schedule in order — wake up, eat breakfast, brush teeth.\n\nWhat is the OUTPUT?",
+      "options": [
+        "Three lines showing the steps in the right order",
+        "One line only",
+        "The number of steps",
+        "A reversed list"
+      ],
+      "answer": 0,
+      "explanation": "The output is the three steps, each on its own line, in the correct order."
+    },
+    {
+      "id": "u03l03e02",
+      "type": "trueFalse",
+      "uepcc": "U",
+      "prompt": "In a schedule, the order of the lines matters.",
+      "answer": true,
+      "explanation": "Yes — a schedule read out of order would be wrong. Order is part of the correct output."
+    },
+    {
+      "id": "u03l03e03",
+      "type": "orderBlocks",
+      "uepcc": "E",
+      "prompt": "Example. Work out the correct output by hand — put the real-life steps in the order they happen.",
+      "blocks": ["wake up", "eat breakfast", "brush teeth"],
+      "answer": [0, 1, 2],
+      "explanation": "You wake up, then eat, then brush. That real-life order is the output you must match."
+    },
+    {
+      "id": "u03l03e04",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Plan: how do you make the computer show the steps in that exact order?",
+      "options": [
+        "Write the print lines in that same order, top to bottom",
+        "Write them in any order — it sorts itself",
+        "Write only the first step",
+        "Use one print for all three"
+      ],
+      "answer": 0,
+      "explanation": "The computer runs lines top to bottom, so writing them in order is the plan."
+    },
+    {
+      "id": "u03l03e05",
+      "type": "trueFalse",
+      "uepcc": "P",
+      "prompt": "Plan check: the computer will reorder your lines to make sense on its own.",
+      "answer": false,
+      "explanation": "It will not. The computer shows lines in the exact order you write them — ordering is your job."
+    },
+    {
+      "id": "u03l03e06",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code. Arrange the print lines to match the schedule order.",
+      "blocks": ["print(\"brush teeth\")", "print(\"wake up\")", "print(\"eat breakfast\")"],
+      "answer": [1, 2, 0],
+      "explanation": "wake up, then eat breakfast, then brush teeth — matching the plan and the hand example."
+    },
+    {
+      "id": "u03l03e07",
+      "type": "tapTokens",
+      "uepcc": "C",
+      "prompt": "Build the first schedule line (it should show wake up).",
+      "tokens": ["print", "(", "\"wake up\"", ")"],
+      "answer": ["print", "(", "\"wake up\"", ")"],
+      "explanation": "print(\"wake up\") shows the whole phrase, spaces and all, on one line."
+    },
+    {
+      "id": "u03l03e08",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check. The output is:\n\nwake up\neat breakfast\nbrush teeth\n\nCompared to your hand example?",
+      "options": ["Passes — same steps, same order", "Fails — missing a step", "Fails — wrong order", "Can't tell"],
+      "answer": 0,
+      "explanation": "Every step appears in the right order. Check passes."
+    },
+    {
+      "id": "u03l03e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Suppose the output came out:\n\nbrush teeth\nwake up\neat breakfast\n\nWhat went wrong?",
+      "options": [
+        "The print lines were written in the wrong order",
+        "A word was misspelled",
+        "print was used too few times",
+        "Nothing — this is fine"
+      ],
+      "answer": 0,
+      "explanation": "All three steps are there, but out of order. The fix is to reorder the print lines."
+    },
+    {
+      "id": "u03l03e10",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "Review: how many lines does this show?\n\nprint(\"wake up\")\nprint(\"eat breakfast\")\nprint(\"brush teeth\")",
+      "options": ["3", "1", "2", "0"],
+      "answer": 0,
+      "explanation": "Each print makes its own line, so three prints give three lines. You remembered that from Unit 1!"
+    }
+  ]
+}

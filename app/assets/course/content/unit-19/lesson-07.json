@@ -1,0 +1,140 @@
+{
+  "unitId": "u19",
+  "lessonId": "u19l07",
+  "title": "Naming the fact before deciding",
+  "idea": "Once you spot the yes/no fact, store it in a well-named boolean variable. This bridges 'spot the fact' and 'store the fact'.",
+  "exercises": [
+    {
+      "id": "u19l07e01",
+      "type": "multipleChoice",
+      "prompt": "PROBLEM: 'Warn the user if the account is locked.' You store the fact. Best code?",
+      "options": [
+        "is_locked = True",
+        "locked = 5",
+        "is_locked = \"yes\"",
+        "account = True"
+      ],
+      "answer": 0,
+      "explanation": "is_locked = True names the yes/no fact clearly and stores a real boolean. The name reads like the question."
+    },
+    {
+      "id": "u19l07e02",
+      "type": "multipleChoice",
+      "prompt": "Which variable name reads most like a yes/no question?",
+      "options": [
+        "is_empty",
+        "e",
+        "thing",
+        "value3"
+      ],
+      "answer": 0,
+      "explanation": "is_empty reads like 'is it empty?' - a yes/no question. Good boolean names often start with is_, has_, or can_."
+    },
+    {
+      "id": "u19l07e03",
+      "type": "fillBlank",
+      "prompt": "Store the fact that a user is verified (yes):\n\nis_verified = ____\nprint(is_verified)   # shows: True",
+      "answer": "True",
+      "acceptable": [
+        "True"
+      ],
+      "explanation": "is_verified = True stores the yes/no fact with a clear name and a real boolean."
+    },
+    {
+      "id": "u19l07e04",
+      "type": "trueFalse",
+      "prompt": "Good boolean names often begin with is_, has_, or can_ (like is_open, has_paid, can_enter).",
+      "answer": true,
+      "explanation": "Yes - those prefixes make the variable read like a yes/no question, so True/False feel natural."
+    },
+    {
+      "id": "u19l07e05",
+      "type": "matchPairs",
+      "prompt": "Match the yes/no fact to a good variable name for it.",
+      "pairs": [
+        {
+          "left": "Is the form complete?",
+          "right": "is_complete"
+        },
+        {
+          "left": "Has the bill been paid?",
+          "right": "has_paid"
+        },
+        {
+          "left": "Can the user edit?",
+          "right": "can_edit"
+        }
+      ],
+      "explanation": "A good name turns the fact into a readable variable. The code almost explains itself."
+    },
+    {
+      "id": "u19l07e06",
+      "type": "multipleChoice",
+      "prompt": "PROBLEM: 'Charge a fee if the book is overdue.' Which stores that fact well?",
+      "options": [
+        "is_overdue = True",
+        "book = \"late\"",
+        "fee = True",
+        "x = False"
+      ],
+      "answer": 0,
+      "explanation": "is_overdue = True names the yes/no fact. The fee decision will read this boolean later."
+    },
+    {
+      "id": "u19l07e07",
+      "type": "multipleChoice",
+      "prompt": "Why not just store the fact as the text \"yes\" (quotes)?",
+      "options": [
+        "Because \"yes\" is text, not a yes/no value the computer can decide on",
+        "Because \"yes\" is too long",
+        "Because text is forbidden",
+        "Because \"yes\" means no"
+      ],
+      "answer": 0,
+      "explanation": "A yes/no value is a boolean (True/False), not text. Using the real boolean keeps the fact in the right type."
+    },
+    {
+      "id": "u19l07e08",
+      "type": "orderBlocks",
+      "prompt": "Arrange: name the fact that the seat is reserved (yes), then show it.",
+      "blocks": [
+        "print(is_reserved)",
+        "is_reserved = True"
+      ],
+      "answer": [
+        1,
+        0
+      ],
+      "explanation": "First store the named fact, then print it. The variable must exist before you use it."
+    },
+    {
+      "id": "u19l07e09",
+      "type": "tapTokens",
+      "prompt": "Arrange the tokens to store 'has_ticket' as False (no ticket).",
+      "tokens": [
+        "has_ticket",
+        "=",
+        "False"
+      ],
+      "answer": [
+        "has_ticket",
+        "=",
+        "False"
+      ],
+      "explanation": "has_ticket = False records the yes/no fact that there is no ticket. The name reads like the question."
+    },
+    {
+      "id": "u19l07e10",
+      "type": "multipleChoice",
+      "prompt": "What two skills has this lesson joined together?",
+      "options": [
+        "Spotting a yes/no fact AND storing it in a named boolean",
+        "Adding AND subtracting",
+        "Printing AND erasing",
+        "Nothing new"
+      ],
+      "answer": 0,
+      "explanation": "You now spot the yes/no fact in a problem and store it in a clearly named boolean. That's the foundation for deciding later."
+    }
+  ]
+}

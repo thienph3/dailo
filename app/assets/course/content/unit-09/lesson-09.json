@@ -1,0 +1,132 @@
+{
+  "unitId": "u09",
+  "lessonId": "u09l09",
+  "title": "Reassignment in a real plan",
+  "idea": "Use reassignment to model something that changes over time, like a game score or an elevator floor. (Numbers only — text as data comes later.)",
+  "exercises": [
+    {
+      "id": "u09l09e01",
+      "type": "multipleChoice",
+      "prompt": "A game tracks the current level number. What will this show (three lines)?\n\nlevel = 1\nprint(level)\nlevel = 2\nprint(level)\nlevel = 3\nprint(level)",
+      "options": [
+        "1, 2, 3",
+        "3, 2, 1",
+        "3, 3, 3",
+        "1, 1, 1"
+      ],
+      "answer": 0,
+      "explanation": "As the player advances, level is reassigned. Each print shows the level at that point in the plan."
+    },
+    {
+      "id": "u09l09e02",
+      "type": "trueFalse",
+      "prompt": "Reassignment is a good fit for a number that changes as a game moves forward.",
+      "answer": true,
+      "explanation": "Yes! A changing level, score, or floor is exactly what reassignment is for."
+    },
+    {
+      "id": "u09l09e03",
+      "type": "multipleChoice",
+      "prompt": "An elevator moves up through floors. What will this show (three lines)?\n\nfloor = 1\nprint(floor)\nfloor = 4\nprint(floor)\nfloor = 9\nprint(floor)",
+      "options": [
+        "1, 4, 9",
+        "9, 4, 1",
+        "1, 1, 1",
+        "9, 9, 9"
+      ],
+      "answer": 0,
+      "explanation": "Each stop reassigns floor, and each print catches it. A clean way to show progress."
+    },
+    {
+      "id": "u09l09e04",
+      "type": "fillBlank",
+      "prompt": "Give the descriptive name for the current player's turn, holding 1.\n\n____ = 1\nprint(current_turn)",
+      "answer": "current_turn",
+      "acceptable": [
+        "current_turn"
+      ],
+      "explanation": "A clear name like current_turn tells you exactly what the box is tracking."
+    },
+    {
+      "id": "u09l09e05",
+      "type": "orderBlocks",
+      "prompt": "Arrange a plan that shows a seat count going 0, then 1 (someone sits down).",
+      "blocks": [
+        "seats_taken = 0",
+        "print(seats_taken)",
+        "seats_taken = 1",
+        "print(seats_taken)"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "Start at 0, show it, then someone sits (1), show it again. The count changes as the plan runs."
+    },
+    {
+      "id": "u09l09e06",
+      "type": "multipleChoice",
+      "prompt": "Why use a variable called score instead of just printing numbers directly?",
+      "options": [
+        "So we can change the score as the game runs and always print the current one",
+        "Because numbers can't be printed",
+        "Because variables are faster to type",
+        "There's no reason — it's the same"
+      ],
+      "answer": 0,
+      "explanation": "A variable lets the value change over time. We reassign score and reprint it whenever it updates."
+    },
+    {
+      "id": "u09l09e07",
+      "type": "multipleChoice",
+      "prompt": "What will this show (two lines)?\n\nscore = 0\nprint(score)\nscore = 10\nprint(score)",
+      "options": [
+        "0 then 10",
+        "10 then 0",
+        "0 then 0",
+        "10 then 10"
+      ],
+      "answer": 0,
+      "explanation": "The score starts at 0, gets shown, then is reassigned to 10 and shown again. No math — just a new value."
+    },
+    {
+      "id": "u09l09e08",
+      "type": "multiSelect",
+      "prompt": "Which of these are good uses for reassignment?",
+      "options": [
+        "Tracking a game score that goes up",
+        "Showing an elevator moving from floor 1 to floor 9",
+        "A countdown timer changing each second",
+        "A number that must never, ever change"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Reassignment shines when a number changes. If a value must never change, you simply don't reassign it."
+    },
+    {
+      "id": "u09l09e09",
+      "type": "trueFalse",
+      "prompt": "A descriptive name like current_floor makes the plan easier to read than a bare name like f.",
+      "answer": true,
+      "explanation": "Yes! Good names make code read like the plan. current_floor says exactly what the box tracks."
+    },
+    {
+      "id": "u09l09e10",
+      "type": "multipleChoice",
+      "prompt": "A thermostat updates its reading. What shows (three lines)?\n\ntemperature = 18\nprint(temperature)\ntemperature = 21\nprint(temperature)\ntemperature = 24\nprint(temperature)",
+      "options": [
+        "18, 21, 24",
+        "24, 21, 18",
+        "18, 18, 18",
+        "24, 24, 24"
+      ],
+      "answer": 0,
+      "explanation": "Each reassignment updates the reading, and each print shows the current temperature. You can model change now!"
+    }
+  ]
+}

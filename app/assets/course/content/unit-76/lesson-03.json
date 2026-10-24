@@ -1,0 +1,130 @@
+{
+  "unitId": "u76",
+  "lessonId": "u76l03",
+  "title": "Composing with a middle variable",
+  "idea": "Composing functions: the same chain, written step by step with a variable between calls — clearer, and identical in result to nesting.",
+  "exercises": [
+    {
+      "id": "u76l03e01",
+      "type": "multipleChoice",
+      "prompt": "These two do the same thing. Version A:\n\nprint(add_one(double(5)))\n\nVersion B:\n\nstep = double(5)\nprint(add_one(step))\n\nDo they give the same result?",
+      "options": [
+        "Yes — both compute add_one(double(5))",
+        "No, A is 11 and B is 10",
+        "No, B errors",
+        "Only A works"
+      ],
+      "answer": 0,
+      "explanation": "Both are 11. B just stores the inner result in a variable first. Nesting and a middle variable are the same computation."
+    },
+    {
+      "id": "u76l03e02",
+      "type": "multipleChoice",
+      "prompt": "In version B, what does 'step' hold?\n\ndef double(n):\n    return n * 2\n\nstep = double(5)",
+      "options": [
+        "10",
+        "5",
+        "double",
+        "None"
+      ],
+      "answer": 0,
+      "explanation": "double(5) returns 10, so step is 10. Then add_one(step) is add_one(10)."
+    },
+    {
+      "id": "u76l03e03",
+      "type": "trueFalse",
+      "prompt": "Using a middle variable can make a composed calculation easier to read.",
+      "answer": true,
+      "explanation": "Yes. A named middle step (like 'step' or 'subtotal') shows what each piece means — handy when chains get long."
+    },
+    {
+      "id": "u76l03e04",
+      "type": "orderBlocks",
+      "prompt": "Write the step-by-step version: define double and add_one, store double(5) in step, print add_one(step).",
+      "blocks": [
+        "def double(n):",
+        "    return n * 2",
+        "def add_one(n):",
+        "    return n + 1",
+        "step = double(5)",
+        "print(add_one(step))"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "explanation": "Define both, store the inner result in step, then feed step to add_one. Clear and equivalent to nesting."
+    },
+    {
+      "id": "u76l03e05",
+      "type": "fillBlank",
+      "prompt": "Store double(6) so it can feed add_one next:\n\ndef double(n):\n    return n * 2\n\n____ = double(6)",
+      "answer": "step",
+      "acceptable": ["step"],
+      "explanation": "double(6) returns 12; storing it in step lets add_one(step) run next. A middle variable makes the chain explicit."
+    },
+    {
+      "id": "u76l03e06",
+      "type": "multipleChoice",
+      "prompt": "Predict:\n\ndef double(n):\n    return n * 2\n\ndef add_one(n):\n    return n + 1\n\nstep = double(6)\nprint(add_one(step))",
+      "options": [
+        "13",
+        "12",
+        "7",
+        "None"
+      ],
+      "answer": 0,
+      "explanation": "step is 12; add_one(12) is 13. Same as add_one(double(6)) written in one line."
+    },
+    {
+      "id": "u76l03e07",
+      "type": "multipleChoice",
+      "prompt": "When is a middle variable MORE helpful than nesting?",
+      "options": [
+        "When the chain is long or the middle value has a clear meaning",
+        "Never — nesting is always better",
+        "Only for printing",
+        "Only inside loops"
+      ],
+      "answer": 0,
+      "explanation": "A meaningful name (subtotal, discounted_price) makes long chains readable. Short chains are fine nested."
+    },
+    {
+      "id": "u76l03e08",
+      "type": "trueFalse",
+      "prompt": "A middle variable changes the answer compared to nesting.",
+      "answer": false,
+      "explanation": "No. It's the same computation, just written in two lines. The result is identical."
+    },
+    {
+      "id": "u76l03e09",
+      "type": "multipleChoice",
+      "prompt": "REVIEW: storing a returned value in a variable is possible because...",
+      "options": [
+        "a returning call IS a value",
+        "variables are free",
+        "double prints it",
+        "it isn't possible"
+      ],
+      "answer": 0,
+      "explanation": "The call becomes its returned value, so it can be stored like any number. That's what makes the middle step work."
+    },
+    {
+      "id": "u76l03e10",
+      "type": "multipleChoice",
+      "prompt": "The idea of this lesson:",
+      "options": [
+        "A composed chain can be written step by step with a middle variable — same result, clearer",
+        "middle variables change the answer",
+        "nesting is the only way",
+        "you can't name middle steps"
+      ],
+      "answer": 0,
+      "explanation": "Nest the calls or use a named middle step — both compute the same thing. Pick whichever reads clearer."
+    }
+  ]
+}

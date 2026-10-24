@@ -1,0 +1,155 @@
+{
+  "unitId": "u83",
+  "lessonId": "u83l05",
+  "title": "Fix it together: the total that returned too early",
+  "idea": "GUIDED (UEPCC), bug-focused. A total helper has 'return' INSIDE the loop, so it quits after one item. Move the return out to finish the walk.",
+  "problem": "total(nums) should add every number, but the 'return running' line sits inside the loop, so total([4, 8, 6]) returns 4 instead of 18. Fix it.",
+  "exercises": [
+    {
+      "id": "u83l05e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: total([4, 8, 6]) returns 4 instead of 18 because 'return' is inside the loop. What SHOULD it return?",
+      "options": [
+        "18 — the sum of all three",
+        "4 — the first number",
+        "6 — the last number",
+        "3"
+      ],
+      "answer": 0,
+      "explanation": "The total should add all of them: 4+8+6 = 18. Returning 4 means it stopped after the first item."
+    },
+    {
+      "id": "u83l05e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "Understand — why does a return INSIDE the loop stop it early?",
+      "options": [
+        "return exits the helper immediately, on the first pass",
+        "return skips the first item",
+        "return doubles the loop",
+        "return prints"
+      ],
+      "answer": 0,
+      "explanation": "A return hands back a value and ends the helper right away — so it quits before adding items two and three."
+    },
+    {
+      "id": "u83l05e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example — by hand. 4 + 8 + 6 = ?",
+      "options": [
+        "18",
+        "12",
+        "4",
+        "10"
+      ],
+      "answer": 0,
+      "explanation": "4 + 8 + 6 = 18. Hand answer = 18. The buggy 4 is only the first addition."
+    },
+    {
+      "id": "u83l05e04",
+      "type": "trueFalse",
+      "uepcc": "E",
+      "prompt": "The accumulator 'running' is being built correctly; the problem is WHEN we return it.",
+      "answer": true,
+      "explanation": "Yes — running starts at 0 and adds fine, but we return it too soon. The fix is about placement, not the adding."
+    },
+    {
+      "id": "u83l05e05",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Plan the fix. Where must 'return running' go?",
+      "options": [
+        "AFTER the loop, so the whole list is added first",
+        "Inside the loop, but later",
+        "Before the loop",
+        "Inside the print"
+      ],
+      "answer": 0,
+      "explanation": "The return belongs after the loop finishes, so running holds the full sum before we hand it back."
+    },
+    {
+      "id": "u83l05e06",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Order the fix-it routine.",
+      "blocks": [
+        "Hand-work the sum: 18",
+        "See that it returns 4 — stops after one item",
+        "Move 'return running' outside the loop",
+        "Re-check: now it returns 18"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "Hand answer, spot the early stop, move the return out, re-check. A premature-return fix."
+    },
+    {
+      "id": "u83l05e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code the fixed helper (return OUTSIDE the loop).",
+      "blocks": [
+        "def total(nums):",
+        "    running = 0",
+        "    for n in nums:",
+        "        running = running + n",
+        "    return running"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "explanation": "running accumulates through the whole loop, THEN we return it. The return sits at the helper's end, not inside the loop."
+    },
+    {
+      "id": "u83l05e08",
+      "type": "multipleChoice",
+      "uepcc": "C",
+      "prompt": "Which indentation is correct for 'return running'?",
+      "options": [
+        "Lined up with the 'for' (outside the loop body)",
+        "Indented under the 'for' (inside the loop)",
+        "Indented twice",
+        "Before 'running = 0'"
+      ],
+      "answer": 0,
+      "explanation": "Outside the loop body means same indent as 'for'. That runs it once, after all items are added."
+    },
+    {
+      "id": "u83l05e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check — the fixed total([4, 8, 6]) returns 18; hand example was 18. Verdict?",
+      "options": [
+        "Passes",
+        "Fails",
+        "Unknown",
+        "Rewrite example"
+      ],
+      "answer": 0,
+      "explanation": "Output (18) matches the hand example (18). Moving the return out let the whole list be summed."
+    },
+    {
+      "id": "u83l05e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Re-check: total([10, 20]) now returns...",
+      "options": [
+        "30",
+        "10",
+        "20",
+        "2"
+      ],
+      "answer": 0,
+      "explanation": "10 + 20 = 30. The fixed helper walks the whole list for any input. You fixed a premature-return bug!"
+    }
+  ]
+}

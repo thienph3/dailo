@@ -1,0 +1,134 @@
+{
+  "unitId": "u36",
+  "lessonId": "u36l06",
+  "title": "Build a small 'for each' loop",
+  "idea": "Arrange and complete simple 'for each' loops yourself, keeping the header and indented body correct.",
+  "exercises": [
+    {
+      "id": "u36l06e01",
+      "type": "orderBlocks",
+      "prompt": "Arrange a loop that prints Hi for each of 3 times.",
+      "blocks": [
+        "for each of 3 times:",
+        "    print(\"Hi\")"
+      ],
+      "answer": [
+        0,
+        1
+      ],
+      "explanation": "Header first, then the indented body. That prints Hi three times."
+    },
+    {
+      "id": "u36l06e02",
+      "type": "fillBlank",
+      "prompt": "Complete the body so it shows Go each pass:\n\nfor each of 4 times:\n    print(____)",
+      "answer": "\"Go\"",
+      "acceptable": [
+        "\"Go\"",
+        "'Go'"
+      ],
+      "explanation": "The text Go goes in quotes inside print. The loop runs it four times."
+    },
+    {
+      "id": "u36l06e03",
+      "type": "multipleChoice",
+      "prompt": "Which line correctly starts a loop that repeats for each of 5 rounds?",
+      "options": [
+        "for each of 5 rounds:",
+        "print 5 rounds",
+        "if 5 rounds:",
+        "repeat rounds"
+      ],
+      "answer": 0,
+      "explanation": "'for each of 5 rounds:' is the loop header, ending with a colon like an if header does."
+    },
+    {
+      "id": "u36l06e04",
+      "type": "trueFalse",
+      "prompt": "The loop header line ends with a colon ( : ), just like an if header.",
+      "answer": true,
+      "explanation": "Yes — a colon ends the header, and the body is indented beneath. Same shape you learned for if."
+    },
+    {
+      "id": "u36l06e05",
+      "type": "orderBlocks",
+      "prompt": "Arrange a loop that prints Up then Down for each of 2 rounds.",
+      "blocks": [
+        "for each of 2 rounds:",
+        "    print(\"Up\")",
+        "    print(\"Down\")"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Header first, then both indented body lines. Each pass prints Up then Down."
+    },
+    {
+      "id": "u36l06e06",
+      "type": "fillBlank",
+      "prompt": "Fill the count so it repeats 6 times:\n\nfor each of ____ times:\n    print(\"Hi\")",
+      "answer": "6",
+      "acceptable": [
+        "6"
+      ],
+      "explanation": "The count 6 makes the body run six times. The count controls how many passes happen."
+    },
+    {
+      "id": "u36l06e07",
+      "type": "multipleChoice",
+      "prompt": "What is wrong here?\n\nfor each of 3 times:\nprint(\"Hi\")",
+      "options": [
+        "The body is not indented",
+        "The word Hi is wrong",
+        "3 is too big",
+        "Nothing is wrong"
+      ],
+      "answer": 0,
+      "explanation": "The print must be indented under the header to be the loop body. Missing indentation breaks the loop."
+    },
+    {
+      "id": "u36l06e08",
+      "type": "multipleChoice",
+      "prompt": "What shows for this loop?\n\nfor each of 3 times:\n    print(\"Hi\")",
+      "options": [
+        "Hi\nHi\nHi",
+        "Hi",
+        "3",
+        "times"
+      ],
+      "answer": 0,
+      "explanation": "Three passes of the body — three Hi lines. You built and traced a working loop."
+    },
+    {
+      "id": "u36l06e09",
+      "type": "orderBlocks",
+      "prompt": "Arrange: print a title once, then print Welcome for each of 2 guests.",
+      "blocks": [
+        "print(\"Welcome, all!\")",
+        "for each of 2 guests:",
+        "    print(\"Welcome\")"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Title once (un-indented, before), then the loop header, then the indented repeated greeting."
+    },
+    {
+      "id": "u36l06e10",
+      "type": "multipleChoice",
+      "prompt": "You wrote a 'for each' loop and it prints the right lines. What's the final step?",
+      "options": [
+        "Check the output matches what the problem asked",
+        "Delete it",
+        "Add random lines",
+        "Change the count to 0"
+      ],
+      "answer": 0,
+      "explanation": "Always Check: does the output match the goal? Writing plus checking is how you trust a loop."
+    }
+  ]
+}

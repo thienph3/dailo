@@ -1,0 +1,135 @@
+{
+  "unitId": "u18",
+  "lessonId": "u18l10",
+  "title": "Loop back: your turn, full UEPCC",
+  "idea": "REVIEW CAPSTONE. Learner runs the whole store->compute->report pipeline on a fresh problem, pulling in variables, average with /, and an f-string report from across both laps.",
+  "problem": "You scored 8, 9, and 10 on three quizzes. Report your average score in a sentence.",
+  "exercises": [
+    {
+      "id": "u18l10e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: Quiz scores 8, 9, 10. Report your AVERAGE in a sentence.\n\nWhat is the OUTPUT?",
+      "options": [
+        "A sentence reporting the average score",
+        "The highest score",
+        "The number of quizzes",
+        "The word quiz"
+      ],
+      "answer": 0,
+      "explanation": "Output = a sentence reporting the average. Name it before solving."
+    },
+    {
+      "id": "u18l10e02",
+      "type": "multiSelect",
+      "uepcc": "U",
+      "prompt": "What are the INPUTS? Pick all the numbers the problem gives you.",
+      "options": [
+        "The first score (8)",
+        "The second score (9)",
+        "The third score (10)",
+        "The word average"
+      ],
+      "answer": [0, 1, 2],
+      "explanation": "Three scores, three named variables. The count of quizzes (3) also matters when you average."
+    },
+    {
+      "id": "u18l10e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example by hand. Average of 8, 9, 10 is (8 + 9 + 10) / 3 = ?",
+      "options": ["9.0", "27", "3", "9.5"],
+      "answer": 0,
+      "explanation": "27 / 3 = 9.0. Average = sum divided by how many. Check value: 9.0."
+    },
+    {
+      "id": "u18l10e04",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Plan the steps in order.",
+      "blocks": [
+        "Add the three scores into a total",
+        "Remember the three scores",
+        "Divide the total by how many scores",
+        "Report the average"
+      ],
+      "answer": [1, 0, 2, 3],
+      "explanation": "Store, sum, divide, report. Average is always 'sum then divide by the count'."
+    },
+    {
+      "id": "u18l10e05",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "You want an exact average like 9.0 (not a chopped whole number). Which division operator?",
+      "options": [
+        "/ (true division)",
+        "// (floor division)",
+        "% (remainder)",
+        "* (multiply)"
+      ],
+      "answer": 0,
+      "explanation": "/ gives the exact result including decimals. // would throw away the fraction, which is wrong for an average."
+    },
+    {
+      "id": "u18l10e06",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Why wrap the sum in parentheses: average = (s1 + s2 + s3) / 3 ?",
+      "options": [
+        "So all three add BEFORE dividing",
+        "Parentheses are just decoration",
+        "To turn the numbers into strings",
+        "To make it divide first"
+      ],
+      "answer": 0,
+      "explanation": "Without parentheses, / would bind to s3 alone first. Grouping forces the full sum, then the divide — matching your example."
+    },
+    {
+      "id": "u18l10e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code it. Arrange the lines (store, compute, report).",
+      "blocks": [
+        "quiz1 = 8",
+        "quiz2 = 9",
+        "quiz3 = 10",
+        "average = (quiz1 + quiz2 + quiz3) / 3",
+        "print(f\"Your average is {average}\")"
+      ],
+      "answer": [0, 1, 2, 3, 4],
+      "explanation": "Store the three scores, compute the grouped average with /, then report it with an f-string."
+    },
+    {
+      "id": "u18l10e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Complete the compute step so the sum happens before dividing:\n\naverage = (quiz1 + quiz2 + quiz3) ____ 3",
+      "answer": "/",
+      "acceptable": ["/"],
+      "explanation": "Divide the grouped sum by 3 with /. average becomes 9.0."
+    },
+    {
+      "id": "u18l10e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "It prints 'Your average is 9.0'. Your example said 9.0. Verdict?",
+      "options": ["Passes", "Fails", "Can't tell", "Change the example"],
+      "answer": 0,
+      "explanation": "Computed 9.0 matches the hand example 9.0 — correct."
+    },
+    {
+      "id": "u18l10e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "New inputs: quiz1 = 6, quiz2 = 6, quiz3 = 9. What prints?",
+      "options": [
+        "Your average is 7.0",
+        "Your average is 9.0",
+        "Your average is 21",
+        "Your average is 7"
+      ],
+      "answer": 0,
+      "explanation": "(6 + 6 + 9) / 3 = 21 / 3 = 7.0. You just ran the full UEPCC pipeline on a fresh problem — store, compute, report, check. Well done!"
+    }
+  ]
+}

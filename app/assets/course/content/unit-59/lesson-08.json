@@ -1,0 +1,130 @@
+{
+  "unitId": "u59",
+  "lessonId": "u59l08",
+  "title": "Tricky lists for max",
+  "idea": "TOOL: reason about ties, negatives, and single-item lists for the max pattern.",
+  "exercises": [
+    {
+      "id": "u59l08e01",
+      "type": "multipleChoice",
+      "prompt": "What is the biggest of [-10, -3, -8]?",
+      "options": [
+        "-3",
+        "-10",
+        "-8",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "Among negatives, -3 is closest to zero, so it is the biggest. Starting best at the first value handles this correctly."
+    },
+    {
+      "id": "u59l08e02",
+      "type": "multipleChoice",
+      "prompt": "Why can starting best at 0 give a WRONG answer for [-10, -3, -8]?",
+      "options": [
+        "No negative beats 0, so best would stay 0 — a value not in the list",
+        "0 is the biggest negative",
+        "0 is not allowed",
+        "It would find -10"
+      ],
+      "answer": 0,
+      "explanation": "0 is bigger than every negative, so best never updates and reports 0 — which isn't even in the list. Start at nums[0]."
+    },
+    {
+      "id": "u59l08e03",
+      "type": "multipleChoice",
+      "prompt": "Biggest of [5, 5, 5, 5]?",
+      "options": [
+        "5",
+        "20",
+        "0",
+        "4"
+      ],
+      "answer": 0,
+      "explanation": "All equal, so best stays at the first value, 5. The max of all-equal values is that value."
+    },
+    {
+      "id": "u59l08e04",
+      "type": "multipleChoice",
+      "prompt": "Biggest of a one-item list [42]?",
+      "options": [
+        "42",
+        "0",
+        "1",
+        "An error"
+      ],
+      "answer": 0,
+      "explanation": "best starts at 42 and nothing else exists to beat it. One item means that item is the max."
+    },
+    {
+      "id": "u59l08e05",
+      "type": "trueFalse",
+      "prompt": "With ties for biggest (e.g. two 9s), the max loop still reports a single value, 9.",
+      "answer": true,
+      "explanation": "Max reports the biggest VALUE, not how many times it appears. Two 9s still give a max of 9."
+    },
+    {
+      "id": "u59l08e06",
+      "type": "multipleChoice",
+      "prompt": "In [3, -2, 7, -9, 7], what does best hold at the end?",
+      "options": [
+        "7",
+        "-9",
+        "3",
+        "6"
+      ],
+      "answer": 0,
+      "explanation": "best rises to 7 and the second 7 ties (no change). Mixed signs are fine because best started at a real value."
+    },
+    {
+      "id": "u59l08e07",
+      "type": "multiSelect",
+      "prompt": "Which lists have a biggest value of exactly 0? (pick all)",
+      "options": [
+        "[0, -1, -5]",
+        "[-3, 0, -2]",
+        "[0, 0, 0]",
+        "[1, 0, -1]"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "The first three top out at 0. The last has a 1, so its biggest is 1."
+    },
+    {
+      "id": "u59l08e08",
+      "type": "multipleChoice",
+      "prompt": "A list of golf scores can go below par (negative). Why does the best-so-far start matter here?",
+      "options": [
+        "Starting at the first real score, not 0, lets negative scores win correctly",
+        "Golf scores are never negative",
+        "You must sort first",
+        "0 is always the best score"
+      ],
+      "answer": 0,
+      "explanation": "Real data like golf scores can be negative. Starting best at a real value avoids the 'stuck at 0' bug."
+    },
+    {
+      "id": "u59l08e09",
+      "type": "trueFalse",
+      "prompt": "If you are not sure your max works on negatives, a quick fix is to test it on an all-negative list.",
+      "answer": true,
+      "explanation": "An all-negative list is the classic case that exposes the 'start at 0' bug. Testing it builds confidence."
+    },
+    {
+      "id": "u59l08e10",
+      "type": "multipleChoice",
+      "prompt": "Biggest of [100, 100, 99, 100]?",
+      "options": [
+        "100",
+        "99",
+        "399",
+        "3"
+      ],
+      "answer": 0,
+      "explanation": "100 is the top value; the 99 never beats it. Repeats of the max don't change the answer."
+    }
+  ]
+}

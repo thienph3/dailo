@@ -1,0 +1,101 @@
+{
+  "unitId": "u11",
+  "lessonId": "u11l05",
+  "title": "You pick the operation",
+  "idea": "GUIDED PRACTICE. No longer told which operation — the learner must choose + - * / from the problem's wording (pattern recognition). Mixed mini-problems.",
+  "exercises": [
+    {
+      "id": "u11l05e01",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "'A shirt is 12 and trousers are 18. Show the total.' Which operation?",
+      "options": ["Add", "Subtract", "Multiply", "Divide"],
+      "answer": 0,
+      "explanation": "Total of two different things = add."
+    },
+    {
+      "id": "u11l05e02",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "'You had 50, you spent 15. Show what's left.' Which operation?",
+      "options": ["Subtract", "Add", "Multiply", "Divide"],
+      "answer": 0,
+      "explanation": "'What's left' after spending = subtract."
+    },
+    {
+      "id": "u11l05e03",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "'One box holds 8 cans. Show how many cans in 5 boxes.' Which operation?",
+      "options": ["Multiply", "Add", "Subtract", "Divide"],
+      "answer": 0,
+      "explanation": "Many of the same (5 boxes of 8) = multiply."
+    },
+    {
+      "id": "u11l05e04",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "'24 sweets shared equally by 6 kids. Show each kid's share.' Which operation?",
+      "options": ["Divide", "Multiply", "Add", "Subtract"],
+      "answer": 0,
+      "explanation": "Share equally = divide."
+    },
+    {
+      "id": "u11l05e05",
+      "type": "matchPairs",
+      "uepcc": "P",
+      "prompt": "Match each problem to its operation.",
+      "pairs": [
+        {"left": "total of apples and oranges", "right": "+"},
+        {"left": "how much taller A is than B", "right": "-"},
+        {"left": "cost of 7 identical pens", "right": "*"},
+        {"left": "pizza slices per person", "right": "/"}
+      ],
+      "explanation": "Reading the wording to pick the operation is the Plan step's core move."
+    },
+    {
+      "id": "u11l05e06",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "'A shirt is 12, trousers 18, show the total.' By hand, the answer is?",
+      "options": ["30", "6", "216", "15"],
+      "answer": 0,
+      "explanation": "12 + 18 = 30."
+    },
+    {
+      "id": "u11l05e07",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Code the shirt+trousers total:\n\nshirt = 12\ntrousers = 18\ntotal = shirt ____ trousers\nprint(total)",
+      "answer": "+",
+      "acceptable": ["+"],
+      "explanation": "Add: total = 30."
+    },
+    {
+      "id": "u11l05e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Code 'had 50, spent 15, what's left':\n\nhad = 50\nspent = 15\nleft = had ____ spent\nprint(left)",
+      "answer": "-",
+      "acceptable": ["-"],
+      "explanation": "Subtract: left = 35."
+    },
+    {
+      "id": "u11l05e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "For '5 boxes of 8 cans', you wrote total = boxes * cans with boxes=5, cans=8. Output 40. Example by hand was 40. Verdict?",
+      "options": ["Passes", "Fails", "Unknown", "Rewrite example"],
+      "answer": 0,
+      "explanation": "5 * 8 = 40, matches. Correct."
+    },
+    {
+      "id": "u11l05e10",
+      "type": "trueFalse",
+      "uepcc": "P",
+      "prompt": "The hardest part of these problems is usually choosing the right operation, not typing the code.",
+      "answer": true,
+      "explanation": "Exactly — the thinking (which operation, in what order) is the real work. The code is short once the plan is clear."
+    }
+  ]
+}

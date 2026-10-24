@@ -1,0 +1,144 @@
+{
+  "unitId": "u36",
+  "lessonId": "u36l09",
+  "title": "From a plan to a 'for each' loop",
+  "idea": "Take a plain-English repetition plan (body + count) from Unit 35 and turn it into a 'for each' loop. Plan, then code, then check.",
+  "exercises": [
+    {
+      "id": "u36l09e01",
+      "type": "multipleChoice",
+      "prompt": "PLAN: body = print Hi, count = 3. Which loop matches it?",
+      "options": [
+        "for each of 3 times:\n    print(\"Hi\")",
+        "for each of 3 times:\n    print(\"3\")",
+        "print(\"Hi\")",
+        "if 3 times:\n    print(\"Hi\")"
+      ],
+      "answer": 0,
+      "explanation": "The header uses the count (3), the indented body is the plan's body (print Hi). Plan maps straight to code."
+    },
+    {
+      "id": "u36l09e02",
+      "type": "multipleChoice",
+      "prompt": "PLAN: print Welcome for each of 5 guests. What's the expected output?",
+      "options": [
+        "Welcome printed on 5 lines",
+        "Welcome printed once",
+        "The number 5",
+        "guests"
+      ],
+      "answer": 0,
+      "explanation": "Body 'print Welcome' repeated 5 times = five Welcome lines. The plan predicts the output to check against."
+    },
+    {
+      "id": "u36l09e03",
+      "type": "orderBlocks",
+      "prompt": "Turn this plan into code: 'print a header once, then Hi for each of 2 times'.",
+      "blocks": [
+        "print(\"Greetings:\")",
+        "for each of 2 times:",
+        "    print(\"Hi\")"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Once-only header first, then the loop header, then the indented repeated body. The plan's shape becomes the code's shape."
+    },
+    {
+      "id": "u36l09e04",
+      "type": "fillBlank",
+      "prompt": "PLAN says repeat 4 times. Fill the count:\n\nfor each of ____ times:\n    print(\"Go\")",
+      "answer": "4",
+      "acceptable": [
+        "4"
+      ],
+      "explanation": "The plan's count goes in the header. 4 makes the body run four times."
+    },
+    {
+      "id": "u36l09e05",
+      "type": "multipleChoice",
+      "prompt": "You coded the loop and ran it. It prints Hi 3 times. Your plan said 3. So...",
+      "options": [
+        "It passes — output matches the plan",
+        "It fails",
+        "You can't tell",
+        "Change the plan to 3"
+      ],
+      "answer": 0,
+      "explanation": "Output (3 Hi) matches the plan (3). That's a passing Check — exactly how UEPCC closes the loop."
+    },
+    {
+      "id": "u36l09e06",
+      "type": "trueFalse",
+      "prompt": "Writing the plan in words first makes the loop code easier to get right.",
+      "answer": true,
+      "explanation": "Plan -> code -> check. A clear plan (body + count) turns almost directly into a correct loop."
+    },
+    {
+      "id": "u36l09e07",
+      "type": "matchPairs",
+      "prompt": "Match each plan to its loop count.",
+      "pairs": [
+        {
+          "left": "Print OK for each of 6 items",
+          "right": "6"
+        },
+        {
+          "left": "Print Hi 2 times",
+          "right": "2"
+        },
+        {
+          "left": "Greet each of 9 guests",
+          "right": "9"
+        }
+      ],
+      "explanation": "The plan's count becomes the loop's count. Reading it out of the plan is step one."
+    },
+    {
+      "id": "u36l09e08",
+      "type": "multipleChoice",
+      "prompt": "PLAN: body = print Bye, count = 0. What happens when you run the loop?",
+      "options": [
+        "Nothing prints — the body runs 0 times",
+        "Bye prints once",
+        "It errors",
+        "Bye prints forever"
+      ],
+      "answer": 0,
+      "explanation": "A count of 0 means zero passes — the body never runs. Loops handle the 'none' case cleanly."
+    },
+    {
+      "id": "u36l09e09",
+      "type": "orderBlocks",
+      "prompt": "Order the full UEPCC-style flow for a repetition problem.",
+      "blocks": [
+        "Understand: name the output",
+        "Plan: body + count",
+        "Code: write the 'for each' loop",
+        "Check: trace the output vs the plan"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "Understand, plan, code, check — the same spine you've used all course, now applied to loops."
+    },
+    {
+      "id": "u36l09e10",
+      "type": "multipleChoice",
+      "prompt": "You can now turn a repetition plan into a 'for each' loop. What's the next tool coming?",
+      "options": [
+        "A real Python way to repeat exactly a known number of times",
+        "Nothing new ever again",
+        "Only decisions",
+        "Deleting loops"
+      ],
+      "answer": 0,
+      "explanation": "Next unit gives you Python's real counting loop for repeating a known number of times. You've built the intuition it rests on."
+    }
+  ]
+}

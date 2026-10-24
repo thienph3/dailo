@@ -1,0 +1,149 @@
+{
+  "unitId": "u68",
+  "lessonId": "u68l10",
+  "title": "Lap 4 finale: a tour of everything",
+  "idea": "LOOP finale: interleave print, arithmetic, strings, conditions, loops, and every list tool from Laps 0-4. Review-heavy wrap.",
+  "exercises": [
+    {
+      "id": "u68l10e01",
+      "type": "multipleChoice",
+      "prompt": "REVIEW (Lap 0): what does print(2 + 3) show?",
+      "options": [
+        "5",
+        "2 + 3",
+        "23",
+        "6"
+      ],
+      "answer": 0,
+      "explanation": "The computer evaluates 2 + 3 first, then prints 5. Numbers aren't shown as text unless quoted."
+    },
+    {
+      "id": "u68l10e02",
+      "type": "multipleChoice",
+      "prompt": "REVIEW (Lap 1b strings): print(\"a\" + \"b\") shows...",
+      "options": [
+        "ab",
+        "a + b",
+        "a b",
+        "ab "
+      ],
+      "answer": 0,
+      "explanation": "+ joins strings with nothing between, so \"a\" + \"b\" is \"ab\"."
+    },
+    {
+      "id": "u68l10e03",
+      "type": "multipleChoice",
+      "prompt": "REVIEW (Lap 2): predict:\n\nx = 5\nif x > 3 and x < 10:\n    print(\"yes\")\nelse:\n    print(\"no\")",
+      "options": [
+        "yes",
+        "no",
+        "5",
+        "error"
+      ],
+      "answer": 0,
+      "explanation": "5 > 3 is True AND 5 < 10 is True, so 'and' is True and it prints yes."
+    },
+    {
+      "id": "u68l10e04",
+      "type": "multipleChoice",
+      "prompt": "REVIEW (Lap 3): predict:\n\nfor i in range(1, 4):\n    print(i)",
+      "options": [
+        "1, 2, 3",
+        "0, 1, 2, 3",
+        "1, 2, 3, 4",
+        "1, 4"
+      ],
+      "answer": 0,
+      "explanation": "range(1, 4) starts at 1 and stops before 4, giving 1, 2, 3."
+    },
+    {
+      "id": "u68l10e05",
+      "type": "multipleChoice",
+      "prompt": "REVIEW (Lap 4 sum): total of [5, 10, 15]?",
+      "options": [
+        "30",
+        "3",
+        "15",
+        "510"
+      ],
+      "answer": 0,
+      "explanation": "5 + 10 + 15 = 30. The core accumulate pattern."
+    },
+    {
+      "id": "u68l10e06",
+      "type": "multipleChoice",
+      "prompt": "REVIEW (Lap 4 filter): what does this print?\n\nout = []\nfor n in [1, 5, 3, 9]:\n    if n > 4:\n        out.append(n)\nprint(out)",
+      "options": [
+        "[5, 9]",
+        "[1, 3]",
+        "[5, 3, 9]",
+        "[]"
+      ],
+      "answer": 0,
+      "explanation": "Only 5 and 9 exceed 4, so out is [5, 9]. Filter builds a list of matches."
+    },
+    {
+      "id": "u68l10e07",
+      "type": "multipleChoice",
+      "prompt": "REVIEW (Lap 4 max): biggest of [8, 3, 11, 6]?",
+      "options": [
+        "11",
+        "8",
+        "6",
+        "3"
+      ],
+      "answer": 0,
+      "explanation": "11 is the largest. Track-the-best finds it."
+    },
+    {
+      "id": "u68l10e08",
+      "type": "multipleChoice",
+      "prompt": "REVIEW (Lap 4 search): is 7 in [2, 4, 6]?",
+      "options": [
+        "No — it's not present",
+        "Yes",
+        "Maybe",
+        "7"
+      ],
+      "answer": 0,
+      "explanation": "None of 2, 4, 6 equals 7, so the search answers no (False)."
+    },
+    {
+      "id": "u68l10e09",
+      "type": "matchPairs",
+      "prompt": "Match each Lap-4 tool to a one-word description.",
+      "pairs": [
+        {
+          "left": "sum",
+          "right": "total"
+        },
+        {
+          "left": "filter",
+          "right": "keep-matches"
+        },
+        {
+          "left": "search",
+          "right": "present?"
+        },
+        {
+          "left": "average",
+          "right": "mean (guard empty)"
+        }
+      ],
+      "explanation": "Four tools, four jobs: total, keep-matches, present?, and mean with an empty guard. You now own all of them."
+    },
+    {
+      "id": "u68l10e10",
+      "type": "multipleChoice",
+      "prompt": "You've finished Lap 4 — the full list toolkit. What's the next lap about?",
+      "options": [
+        "splitting big problems into named, reusable sub-plans",
+        "more lists",
+        "starting over",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "Lap 5 is about naming a sub-plan so a bigger problem can be split into pieces and composed. You're ready for it!"
+    }
+  ]
+}

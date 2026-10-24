@@ -1,0 +1,136 @@
+{
+  "unitId": "u80",
+  "lessonId": "u80l01",
+  "title": "What is an 'edge case'?",
+  "idea": "edge-case enumeration: an edge case is an unusual-but-possible input (empty, zero, just one) that can break a plan that only handles the 'normal' case.",
+  "exercises": [
+    {
+      "type": "multipleChoice",
+      "prompt": "What is an 'edge case'?",
+      "options": [
+        "An unusual but possible input that might break a simple plan",
+        "A mistake in your math",
+        "A kind of loop",
+        "The last line of a program"
+      ],
+      "answer": 0,
+      "explanation": "An edge case is a possible input at the 'edges' of normal — like an empty list or a zero — that a quick plan might miss.",
+      "id": "u80l01e01"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Thinking of tricky inputs BEFORE you write code helps you avoid bugs later.",
+      "answer": true,
+      "explanation": "Yes. Listing edge cases up front means your plan handles them on purpose, not by accident.",
+      "id": "u80l01e02"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "You will average a list of scores. Which input is an EDGE case worth thinking about first?",
+      "options": [
+        "An empty list (no scores)",
+        "A list of three normal scores",
+        "A list of five normal scores",
+        "Any list with more than one score"
+      ],
+      "answer": 0,
+      "explanation": "An empty list is the tricky one — dividing by zero scores breaks. The 'normal' lists are the easy middle.",
+      "id": "u80l01e03"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Why do edge cases deserve special attention?",
+      "options": [
+        "They're easy to forget and often cause the worst bugs",
+        "They never actually happen",
+        "They make code run faster",
+        "They are the normal inputs"
+      ],
+      "answer": 0,
+      "explanation": "Edge cases hide at the boundaries. A plan that only handles the middle crashes or lies when a boundary input arrives.",
+      "id": "u80l01e04"
+    },
+    {
+      "type": "matchPairs",
+      "prompt": "Match each situation to its edge-case input.",
+      "pairs": [
+        {
+          "left": "Averaging a list",
+          "right": "An empty list"
+        },
+        {
+          "left": "Dividing by a count",
+          "right": "A count of zero"
+        },
+        {
+          "left": "Finding the biggest",
+          "right": "A list with only one item"
+        }
+      ],
+      "explanation": "Each task has a boundary input that stresses it: empty, zero, or a single item. Spotting them is the habit.",
+      "id": "u80l01e05"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "The 'normal' inputs (a few typical values) are where most bugs hide.",
+      "answer": false,
+      "explanation": "No — the normal middle is usually fine. Bugs hide at the edges: empty, zero, one item, the very biggest.",
+      "id": "u80l01e06"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Enumerating edge cases is best done...",
+      "options": [
+        "During planning, before writing code",
+        "Only after the program crashes",
+        "Never — just run it",
+        "Only once the code is finished"
+      ],
+      "answer": 0,
+      "explanation": "List them while planning. Finding tricky cases before coding is this unit's whole idea.",
+      "id": "u80l01e07"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Which of these is NOT an edge case for 'sum a list of numbers'?",
+      "options": [
+        "A list of a few ordinary numbers",
+        "An empty list",
+        "A list with a single number",
+        "A list where every number is zero"
+      ],
+      "answer": 0,
+      "explanation": "A few ordinary numbers is the normal case. Empty, single-item, and all-zeros are the edges to check.",
+      "id": "u80l01e08"
+    },
+    {
+      "type": "orderBlocks",
+      "prompt": "Order the healthy habit: plan first, then enumerate, then code.",
+      "blocks": [
+        "Understand inputs and output",
+        "List the tricky edge cases",
+        "Write the code to handle all of them"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Understand, then enumerate edge cases, THEN code. Enumerating early shapes a plan that won't be surprised.",
+      "id": "u80l01e09"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "The big idea of this lesson:",
+      "options": [
+        "An edge case is an unusual possible input; list them before coding",
+        "Edge cases are rare and ignorable",
+        "Only normal inputs matter",
+        "Edge cases are syntax errors"
+      ],
+      "answer": 0,
+      "explanation": "Edge cases are the boundary inputs. Naming them up front is the deepest form of the edge-case habit.",
+      "id": "u80l01e10"
+    }
+  ]
+}

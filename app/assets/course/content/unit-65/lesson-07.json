@@ -1,0 +1,151 @@
+{
+  "unitId": "u65",
+  "lessonId": "u65l07",
+  "title": "Solve it: spot the wrong filter",
+  "idea": "GUIDED PROBLEM (filter, wrong-approach focus). Same keep-only task, but the learner judges several flawed solutions \u2014 wrong comparison, forgetting the empty list, appending the wrong thing \u2014 before confirming the right one. Heavy on thinking.",
+  "problem": "Temperatures were [18, 25, 22, 30, 19]. A 'warm day' is 22 or hotter. Build a list of the warm-day temperatures.",
+  "exercises": [
+    {
+      "id": "u65l07e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: temps are [18, 25, 22, 30, 19]; warm means 22 or hotter. Build a list of the warm-day temperatures.\n\nOUTPUT?",
+      "options": [
+        "A new list of the temperatures that are 22 or more",
+        "The hottest temperature",
+        "The number of warm days",
+        "The average temperature"
+      ],
+      "answer": 0,
+      "explanation": "Keep-only task: the output is a filtered list of warm-day temperatures."
+    },
+    {
+      "id": "u65l07e02",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example. By hand, keep temps 22-or-more from [18, 25, 22, 30, 19]. Which stay?",
+      "options": [
+        "25, 22, 30",
+        "18, 19",
+        "25, 30",
+        "all five"
+      ],
+      "answer": 0,
+      "explanation": "25, 22 (exactly the limit), and 30 are warm; 18 and 19 are not. Kept list is [25, 22, 30] \u2014 your check value."
+    },
+    {
+      "id": "u65l07e03",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "A friend writes the test as 'if temp > warm_limit' (with warm_limit = 22). What goes wrong?",
+      "options": [
+        "It drops 22 itself \u2014 but 22 is warm, so the test should be >=",
+        "Nothing, it is correct",
+        "It keeps 18 and 19 by mistake",
+        "It causes an error"
+      ],
+      "answer": 0,
+      "explanation": "'22 or hotter' includes 22. Using > would wrongly skip the exactly-22 day. The right test is >= warm_limit."
+    },
+    {
+      "id": "u65l07e04",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Another friend forgets one line and gets an error on 'warm.append(temp)'. What did they most likely forget?",
+      "options": [
+        "Starting warm as an empty list before the loop (warm = [])",
+        "The print at the end",
+        "To store the temps",
+        "The warm_limit value"
+      ],
+      "answer": 0,
+      "explanation": "You can only append to a list that already exists. Filtering always starts with warm = [] before the loop."
+    },
+    {
+      "id": "u65l07e05",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "A third friend writes 'warm.append(warm_limit)' inside the if. What list would that build?",
+      "options": [
+        "A list full of 22s \u2014 the limit, not the actual temperatures",
+        "The correct [25, 22, 30]",
+        "An empty list",
+        "The whole temps list"
+      ],
+      "answer": 0,
+      "explanation": "They appended the threshold instead of the item. You must append 'temp' \u2014 the value you are keeping \u2014 not warm_limit."
+    },
+    {
+      "id": "u65l07e06",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Now the correct version. Arrange the lines (limit, empty list, loop + test + append the item, show).",
+      "blocks": [
+        "warm_limit = 22",
+        "temps = [18, 25, 22, 30, 19]",
+        "warm = []",
+        "for temp in temps:",
+        "    if temp >= warm_limit:",
+        "        warm.append(temp)",
+        "print(warm)"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "explanation": "Limit named, warm starts empty, test is >=, and you append the temp (the kept value). All three earlier mistakes are avoided."
+    },
+    {
+      "id": "u65l07e07",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Fix the test so warm days of exactly 22 are kept:\n\nfor temp in temps:\n    if temp ____ warm_limit:\n        warm.append(temp)",
+      "answer": ">=",
+      "acceptable": [
+        ">="
+      ],
+      "explanation": ">= keeps 22 and anything hotter. That is the fix for the dropped-edge bug."
+    },
+    {
+      "id": "u65l07e08",
+      "type": "trueFalse",
+      "uepcc": "C",
+      "prompt": "Appending 'temp' (not 'warm_limit') is what makes the kept list hold the real temperatures.",
+      "answer": true,
+      "explanation": "You keep the item being tested. Appending the limit would just repeat 22; appending temp records the actual warm days."
+    },
+    {
+      "id": "u65l07e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check. The fixed code prints [25, 22, 30]; your hand example was [25, 22, 30]. Verdict?",
+      "options": [
+        "Passes",
+        "Fails",
+        "Unknown",
+        "Rewrite the example"
+      ],
+      "answer": 0,
+      "explanation": "Matches the by-hand list, so the corrected filter is right \u2014 including the exactly-22 edge."
+    },
+    {
+      "id": "u65l07e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Same fixed plan, new inputs: warm_limit = 20, temps = [15, 20, 28]. What prints?",
+      "options": [
+        "[20, 28]",
+        "[28]",
+        "[15, 20, 28]",
+        "[15]"
+      ],
+      "answer": 0,
+      "explanation": "20 (exactly) and 28 are warm, 15 is not, so [20, 28]. Catching the three bugs leaves a filter that generalizes correctly."
+    }
+  ]
+}

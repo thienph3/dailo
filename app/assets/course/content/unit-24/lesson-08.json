@@ -1,0 +1,132 @@
+{
+  "unitId": "u24",
+  "lessonId": "u24l08",
+  "title": "Predict the guarded program",
+  "idea": "Read small guarded programs and predict the output for both the normal case and the edge case. Pure thinking.",
+  "exercises": [
+    {
+      "id": "u24l08e01",
+      "type": "multipleChoice",
+      "prompt": "What prints?\n\ncount = 0\nif count == 0:\n    print(\"No average\")\nelse:\n    print(\"Has average\")",
+      "options": [
+        "No average",
+        "Has average",
+        "0",
+        "error"
+      ],
+      "answer": 0,
+      "explanation": "count is 0, so the guard fires: No average. The division it protects is safely skipped."
+    },
+    {
+      "id": "u24l08e02",
+      "type": "multipleChoice",
+      "prompt": "What prints?\n\ncount = 5\nif count == 0:\n    print(\"No average\")\nelse:\n    print(\"Has average\")",
+      "options": [
+        "Has average",
+        "No average",
+        "5",
+        "error"
+      ],
+      "answer": 0,
+      "explanation": "count is 5, so count == 0 is False; the normal branch runs: Has average."
+    },
+    {
+      "id": "u24l08e03",
+      "type": "multipleChoice",
+      "prompt": "What prints?\n\nitems = 0\nif items == 0:\n    print(\"Empty\")\nelse:\n    print(items)",
+      "options": [
+        "Empty",
+        "0",
+        "nothing",
+        "error"
+      ],
+      "answer": 0,
+      "explanation": "items is 0, so the guard prints Empty rather than the awkward number 0."
+    },
+    {
+      "id": "u24l08e04",
+      "type": "multipleChoice",
+      "prompt": "What prints?\n\nitems = 7\nif items == 0:\n    print(\"Empty\")\nelse:\n    print(items)",
+      "options": [
+        "7",
+        "Empty",
+        "0",
+        "error"
+      ],
+      "answer": 0,
+      "explanation": "items is 7, so the else prints the value 7."
+    },
+    {
+      "id": "u24l08e05",
+      "type": "multipleChoice",
+      "prompt": "What prints?\n\nage = -1\nif age < 0:\n    print(\"Invalid\")\nelse:\n    print(\"OK\")",
+      "options": [
+        "Invalid",
+        "OK",
+        "-1",
+        "error"
+      ],
+      "answer": 0,
+      "explanation": "-1 < 0 is True, so the guard catches the impossible age: Invalid."
+    },
+    {
+      "id": "u24l08e06",
+      "type": "multipleChoice",
+      "prompt": "What prints?\n\nage = 0\nif age < 0:\n    print(\"Invalid\")\nelse:\n    print(\"OK\")",
+      "options": [
+        "OK",
+        "Invalid",
+        "0",
+        "error"
+      ],
+      "answer": 0,
+      "explanation": "0 < 0 is False, so the else runs: OK. Note zero age is not negative, so it passes this guard."
+    },
+    {
+      "id": "u24l08e07",
+      "type": "trueFalse",
+      "prompt": "In a guarded if/else, exactly one branch runs - either the guard or the normal case.",
+      "answer": true,
+      "explanation": "Right. Just like any if/else, one path always runs and only one."
+    },
+    {
+      "id": "u24l08e08",
+      "type": "multipleChoice",
+      "prompt": "What prints?\n\npeople = 0\nif people == 0:\n    print(\"Nobody here\")\nelse:\n    print(\"Sharing bill\")",
+      "options": [
+        "Nobody here",
+        "Sharing bill",
+        "0",
+        "error"
+      ],
+      "answer": 0,
+      "explanation": "people is 0, so the guard prints Nobody here and the division is skipped - no crash."
+    },
+    {
+      "id": "u24l08e09",
+      "type": "multipleChoice",
+      "prompt": "What prints?\n\nstock = 3\nif stock == 0:\n    print(\"Sold out\")\nelse:\n    print(\"Available\")",
+      "options": [
+        "Available",
+        "Sold out",
+        "3",
+        "error"
+      ],
+      "answer": 0,
+      "explanation": "stock is 3, so stock == 0 is False; the normal branch runs: Available."
+    },
+    {
+      "id": "u24l08e10",
+      "type": "multipleChoice",
+      "prompt": "Across all these, what makes a guard valuable?",
+      "options": [
+        "It gives a sensible answer for the edge case instead of a crash or nonsense",
+        "It makes output longer",
+        "It runs both branches",
+        "It removes the need for comparisons"
+      ],
+      "answer": 0,
+      "explanation": "A guard turns a dangerous or nonsensical edge case into a clear, deliberate answer. That is the whole point."
+    }
+  ]
+}

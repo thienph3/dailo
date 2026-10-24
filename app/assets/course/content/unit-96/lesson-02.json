@@ -1,0 +1,129 @@
+{
+  "unitId": "u96",
+  "lessonId": "u96l02",
+  "title": "Loop back: reading a problem and naming its parts",
+  "idea": "LOOP (review): no new concept. Re-practice decomposition - reading an unseen multi-part problem and mapping each part to the right pattern from earlier laps.",
+  "exercises": [
+    {
+      "id": "u96l02e01",
+      "type": "multipleChoice",
+      "prompt": "UNSEEN PROBLEM: 'From a list of daily rainfalls, show the total rain and how many days it rained at all (more than 0).' What is the OUTPUT?",
+      "options": [
+        "Two numbers: the total rainfall and the count of rainy days",
+        "One number: just the total",
+        "The list sorted",
+        "The wettest day only"
+      ],
+      "answer": 0,
+      "explanation": "The problem asks for two things. Spotting that there are two outputs tells you to track two pieces of state in one pass."
+    },
+    {
+      "id": "u96l02e02",
+      "type": "matchPairs",
+      "prompt": "Match each part of that rainfall problem to its pattern.",
+      "pairs": [
+        {"left": "Total rain", "right": "Accumulate (running sum)"},
+        {"left": "How many rainy days", "right": "Count with a condition"},
+        {"left": "Look at every day", "right": "A loop over the list"}
+      ],
+      "explanation": "Total = accumulate, count-of-rainy = count-with-condition, 'every day' = a loop. Each part maps to one familiar pattern."
+    },
+    {
+      "id": "u96l02e03",
+      "type": "multipleChoice",
+      "prompt": "Review (Lap 2 patterns): 'the day with the most rain' is which pattern?",
+      "options": [
+        "Track the maximum (keep the biggest seen so far)",
+        "Accumulate a sum",
+        "Filter",
+        "Validate input"
+      ],
+      "answer": 0,
+      "explanation": "'The most' means tracking the biggest value as you scan - the track-the-maximum pattern, built by hand, no builtin."
+    },
+    {
+      "id": "u96l02e04",
+      "type": "multipleChoice",
+      "prompt": "UNSEEN PROBLEM: 'Keep asking for a password length until it is at least 8, then say it is accepted.' Which pattern handles the 'keep asking until' part?",
+      "options": [
+        "A validation while loop that repeats until the value is valid",
+        "A for loop over a fixed list",
+        "A function with no body",
+        "A single if with no loop"
+      ],
+      "answer": 0,
+      "explanation": "'Keep asking until valid' is the validation-loop pattern from Lap 3 - a while loop that repeats on bad input."
+    },
+    {
+      "id": "u96l02e05",
+      "type": "orderBlocks",
+      "prompt": "Order how to decompose any unseen problem.",
+      "blocks": [
+        "Restate the goal, inputs, and output in your own words",
+        "Split the goal into smaller sub-problems",
+        "Match each sub-problem to a known pattern"
+      ],
+      "answer": [0, 1, 2],
+      "explanation": "Restate, split, then match patterns. Decomposition is reading carefully before writing any code."
+    },
+    {
+      "id": "u96l02e06",
+      "type": "multipleChoice",
+      "prompt": "UNSEEN PROBLEM: 'Count how many words in a list are longer than 4 letters.' Which TWO tools are needed?",
+      "options": [
+        "A loop over the words and a count-with-condition using len()",
+        "Only a print",
+        "A nested loop over pairs",
+        "A validation loop"
+      ],
+      "answer": 0,
+      "explanation": "Loop each word, and count those where len(word) > 4. len() gives the SIZE - allowed - while we build the count ourselves."
+    },
+    {
+      "id": "u96l02e07",
+      "type": "trueFalse",
+      "prompt": "Naming the inputs and output before coding is optional busywork you can skip for small problems.",
+      "answer": false,
+      "explanation": "Naming them is the cheapest way to avoid solving the wrong problem. Even small problems benefit - it takes seconds and prevents whole-solution mistakes."
+    },
+    {
+      "id": "u96l02e08",
+      "type": "multipleChoice",
+      "prompt": "UNSEEN PROBLEM: 'For each pair of players, record if their scores are equal.' Which pattern is 'each pair'?",
+      "options": [
+        "Nested loops (each item against each other item)",
+        "A single loop",
+        "An accumulator",
+        "A validation loop"
+      ],
+      "answer": 0,
+      "explanation": "'Each pair' needs a loop inside a loop. Recognizing the pairs shape is a Lap 6 skill you now apply on sight."
+    },
+    {
+      "id": "u96l02e09",
+      "type": "multipleChoice",
+      "prompt": "Why map parts to KNOWN patterns instead of inventing something new?",
+      "options": [
+        "The patterns you know already cover these problems - recombining them is faster and less error-prone",
+        "New patterns are always better",
+        "It is a course rule with no reason",
+        "Known patterns run slower"
+      ],
+      "answer": 0,
+      "explanation": "Real problems are old patterns recombined. Reaching for a familiar, tested pattern beats inventing an untested one."
+    },
+    {
+      "id": "u96l02e10",
+      "type": "multipleChoice",
+      "prompt": "After decomposing a problem into patterns, what is the next step?",
+      "options": [
+        "Weave the chosen patterns together in order and trace one example",
+        "Start over with a new problem",
+        "Delete the plan",
+        "Skip straight to the output"
+      ],
+      "answer": 0,
+      "explanation": "Once each part has a pattern, assemble them in the right order and check with a hand example. Decomposition feeds directly into building."
+    }
+  ]
+}

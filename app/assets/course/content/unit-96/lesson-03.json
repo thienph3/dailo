@@ -1,0 +1,96 @@
+{
+  "unitId": "u96",
+  "lessonId": "u96l03",
+  "title": "Loop back: tracing woven code by hand",
+  "idea": "LOOP (review): no new concept. Re-practice predicting the output of integrated code - loops, decisions, functions, and accumulators woven together.",
+  "exercises": [
+    {
+      "id": "u96l03e01",
+      "type": "multipleChoice",
+      "prompt": "Predict the output (helper called in a loop):\n\ndef triple(n):\n    return n * 3\n\ntotal = 0\nfor x in [2, 5]:\n    total = total + triple(x)\nprint(total)",
+      "options": ["21", "7", "6", "15"],
+      "answer": 0,
+      "explanation": "triple(2)=6, triple(5)=15, total = 21. A function returns a value, the loop accumulates it - the backbone weave."
+    },
+    {
+      "id": "u96l03e02",
+      "type": "multipleChoice",
+      "prompt": "Predict the output (decision chooses what to add):\n\ntotal = 0\nfor n in [4, 7, 2, 9]:\n    if n > 5:\n        total = total + n\nprint(total)",
+      "options": ["16", "22", "2", "9"],
+      "answer": 0,
+      "explanation": "Only 7 and 9 are over 5, so total = 7 + 9 = 16. A filter woven into the accumulate - add only what passes the test."
+    },
+    {
+      "id": "u96l03e03",
+      "type": "multipleChoice",
+      "prompt": "Predict the output (two state variables):\n\ntotal = 0\ncount = 0\nfor n in [10, 20, 30]:\n    total = total + n\n    count = count + 1\nprint(total)\nprint(count)",
+      "options": ["60 then 3", "3 then 60", "60 then 60", "30 then 3"],
+      "answer": 0,
+      "explanation": "total sums to 60 and count reaches 3. Two pieces of state tracked in one pass - exactly what an average needs."
+    },
+    {
+      "id": "u96l03e04",
+      "type": "multipleChoice",
+      "prompt": "Predict the output (nested loop over pairs):\n\npairs = 0\nfor i in range(3):\n    for j in range(i + 1, 3):\n        pairs = pairs + 1\nprint(pairs)",
+      "options": ["3", "9", "6", "2"],
+      "answer": 0,
+      "explanation": "The inner loop starts at i+1, giving pairs (0,1),(0,2),(1,2) = 3. That is every unique pair of 3 items, counted once."
+    },
+    {
+      "id": "u96l03e05",
+      "type": "multipleChoice",
+      "prompt": "Predict the output (early stop with break - a search):\n\nfound = -1\nfor i in range(len([5, 8, 3, 9])):\n    nums = [5, 8, 3, 9]\n    if nums[i] < 4:\n        found = i\n        break\nprint(found)",
+      "options": ["2", "0", "3", "-1"],
+      "answer": 0,
+      "explanation": "The first value under 4 is 3, at index 2, where break stops the loop. A search keeps the FIRST match and quits."
+    },
+    {
+      "id": "u96l03e06",
+      "type": "trueFalse",
+      "prompt": "Review: in 'total = total + triple(x)', the loop uses the value triple RETURNS. If triple only printed and returned nothing, the loop would get None.",
+      "answer": true,
+      "explanation": "Return hands a value back for the loop to use; print only shows it. Return-then-use is why helpers in loops must return."
+    },
+    {
+      "id": "u96l03e07",
+      "type": "multipleChoice",
+      "prompt": "Predict the output (a loop wrapped in a function - Lap 5 + Lap 2):\n\ndef count_evens(nums):\n    c = 0\n    for n in nums:\n        if n % 2 == 0:\n            c = c + 1\n    return c\n\nprint(count_evens([1, 2, 4, 7, 8]))",
+      "options": ["3", "2", "5", "4"],
+      "answer": 0,
+      "explanation": "2, 4, and 8 are even (n % 2 == 0), so c = 3. A whole counting loop packaged as a reusable function."
+    },
+    {
+      "id": "u96l03e08",
+      "type": "orderBlocks",
+      "prompt": "Order the steps for tracing code by hand.",
+      "blocks": [
+        "Write down each variable's starting value",
+        "Step through the loop one turn at a time, updating the variables",
+        "The final variable values are the output"
+      ],
+      "answer": [0, 1, 2],
+      "explanation": "Track the variables turn by turn. Hand-tracing is how you predict output and catch bugs before running anything."
+    },
+    {
+      "id": "u96l03e09",
+      "type": "multipleChoice",
+      "prompt": "Predict the output (decision + accumulator with else):\n\nup = 0\ndown = 0\nfor n in [3, -2, 5, -1]:\n    if n > 0:\n        up = up + n\n    else:\n        down = down + n\nprint(up)\nprint(down)",
+      "options": ["8 then -3", "11 then 0", "8 then 3", "0 then -3"],
+      "answer": 0,
+      "explanation": "Positives 3 and 5 make up = 8; negatives -2 and -1 make down = -3. Two accumulators split by one decision."
+    },
+    {
+      "id": "u96l03e10",
+      "type": "multipleChoice",
+      "prompt": "Why is tracing by hand worth the effort before running code?",
+      "options": [
+        "It builds a clear mental model and catches logic bugs the computer would run silently",
+        "It is faster than the computer",
+        "It replaces the need to ever run code",
+        "It is only useful for printing"
+      ],
+      "answer": 0,
+      "explanation": "Hand-tracing proves you understand the flow. A wrong trace reveals a logic error before you waste time on a wrong output."
+    }
+  ]
+}

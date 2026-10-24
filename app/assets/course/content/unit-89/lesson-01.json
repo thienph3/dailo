@@ -1,0 +1,129 @@
+{
+  "unitId": "u89",
+  "lessonId": "u89l01",
+  "title": "One pass, several things to remember",
+  "idea": "TOOL (multiple state variables): a single walk through data can keep more than one running value at once - a total AND a count, side by side.",
+  "exercises": [
+    {
+      "type": "multipleChoice",
+      "prompt": "So far you kept ONE running value while walking a list - like a total. Some problems need to remember TWO things at once, like a total AND how many items. What lets you do that?",
+      "options": [
+        "Keep two running variables, updating both each turn",
+        "Only one variable is ever allowed",
+        "You must walk the list twice, once per value",
+        "You cannot track two things"
+      ],
+      "answer": 0,
+      "explanation": "You just use more than one running variable. Each turn of the loop updates every one you care about. That is this unit's new tool: multiple state variables.",
+      "id": "u89l01e01"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "A single loop can update a running total AND a running count on the same turn.",
+      "answer": true,
+      "explanation": "Yes. One pass can carry several running values. Each turn you add to the total and add one to the count.",
+      "id": "u89l01e02"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Why keep two running values in ONE loop instead of looping twice?",
+      "options": [
+        "It reads the data once and stays in step - both values describe the same items",
+        "It is the only way Python allows",
+        "Two loops are always faster",
+        "Looping once is impossible"
+      ],
+      "answer": 0,
+      "explanation": "One pass keeps the values in step and only reads the data once. Both numbers describe the exact same items you walked.",
+      "id": "u89l01e03"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\ntotal = 0\ncount = 0\nfor n in [4, 6, 10]:\n    total = total + n\n    count = count + 1\nprint(total, count)",
+      "options": [
+        "20 3",
+        "20",
+        "3",
+        "10 3"
+      ],
+      "answer": 0,
+      "explanation": "total grows 4, 10, 20; count grows 1, 2, 3. Two running values finish at 20 and 3 - printed together.",
+      "id": "u89l01e04"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "In that loop, what is the job of 'count = count + 1'?",
+      "options": [
+        "Add one each turn so count remembers HOW MANY items were seen",
+        "Add the item's value",
+        "Reset the count",
+        "Stop the loop"
+      ],
+      "answer": 0,
+      "explanation": "count = count + 1 bumps the counter by one every turn, so it ends up holding the number of items.",
+      "id": "u89l01e05"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Both running variables must be set to their starting values BEFORE the loop begins.",
+      "answer": true,
+      "explanation": "Yes - total = 0 and count = 0 before the loop. If you start them inside, they would reset every turn and never accumulate.",
+      "id": "u89l01e06"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "What everyday task keeps two running values at once?",
+      "options": [
+        "Totalling a shopping bill WHILE counting how many items go in the basket",
+        "Flipping one light switch",
+        "Saying hello once",
+        "Reading a single number"
+      ],
+      "answer": 0,
+      "explanation": "A cashier adds to the bill and counts items at the same time - two running values, one pass down the counter.",
+      "id": "u89l01e07"
+    },
+    {
+      "type": "orderBlocks",
+      "prompt": "Order the shape of a two-state loop.",
+      "blocks": [
+        "Start BOTH running values before the loop",
+        "Each turn, update every running value",
+        "After the loop, use the finished values"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Start both, update both every turn, then read both at the end. Same shape as one-state, just more of it.",
+      "id": "u89l01e08"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nhigh = 0\nlow = 100\nfor score in [50, 90, 30]:\n    if score > high:\n        high = score\n    if score < low:\n        low = score\nprint(high, low)",
+      "options": [
+        "90 30",
+        "50 30",
+        "90 50",
+        "30 90"
+      ],
+      "answer": 0,
+      "explanation": "high tracks the biggest (ends 90), low tracks the smallest (ends 30). Two trackers in one pass.",
+      "id": "u89l01e09"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "This unit's new tool is...",
+      "options": [
+        "Keeping several running values through one pass over the data",
+        "A faster print",
+        "A brand-new kind of loop",
+        "A way to skip items"
+      ],
+      "answer": 0,
+      "explanation": "Multiple state variables: track a total and a count, or a biggest and a smallest, all in one walk. No new syntax - just more running values.",
+      "id": "u89l01e10"
+    }
+  ]
+}

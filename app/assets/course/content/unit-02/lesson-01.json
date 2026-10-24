@@ -1,0 +1,118 @@
+{
+  "unitId": "u02",
+  "lessonId": "u02l01",
+  "title": "Every task takes something in and gives something out",
+  "idea": "A task has an INPUT (what you start with) and an OUTPUT (what you end with). No code — just the idea.",
+  "exercises": [
+    {
+      "id": "u02l01e01",
+      "type": "multipleChoice",
+      "prompt": "A task's INPUT is...",
+      "options": [
+        "What you start with",
+        "What you end with",
+        "The name of the task",
+        "How long the task takes"
+      ],
+      "answer": 0,
+      "explanation": "Input is what goes IN — the stuff you begin with before the task runs."
+    },
+    {
+      "id": "u02l01e02",
+      "type": "multipleChoice",
+      "prompt": "A task's OUTPUT is...",
+      "options": [
+        "What you end with",
+        "What you start with",
+        "The person doing the task",
+        "A mistake in the task"
+      ],
+      "answer": 0,
+      "explanation": "Output is what comes OUT — the result you have when the task is done."
+    },
+    {
+      "id": "u02l01e03",
+      "type": "trueFalse",
+      "prompt": "Every task takes something in and gives something out.",
+      "answer": true,
+      "explanation": "That's the whole idea of this unit: things go in, a result comes out."
+    },
+    {
+      "id": "u02l01e04",
+      "type": "multipleChoice",
+      "prompt": "Task: toasting bread. What is the INPUT?",
+      "options": [
+        "A slice of bread",
+        "A piece of toast",
+        "The toaster's price",
+        "The kitchen"
+      ],
+      "answer": 0,
+      "explanation": "You start with bread. That's what goes in."
+    },
+    {
+      "id": "u02l01e05",
+      "type": "multipleChoice",
+      "prompt": "Task: toasting bread. What is the OUTPUT?",
+      "options": [
+        "A piece of toast",
+        "A slice of bread",
+        "The toaster",
+        "Butter"
+      ],
+      "answer": 0,
+      "explanation": "You end with toast. That's what comes out."
+    },
+    {
+      "id": "u02l01e06",
+      "type": "matchPairs",
+      "prompt": "Match each word to what it means.",
+      "pairs": [
+        { "left": "Input", "right": "What goes in" },
+        { "left": "Output", "right": "What comes out" },
+        { "left": "Task", "right": "The thing being done" }
+      ],
+      "explanation": "Input goes in, output comes out, and the task is the work in between."
+    },
+    {
+      "id": "u02l01e07",
+      "type": "trueFalse",
+      "prompt": "The output is what you have AFTER the task is finished.",
+      "answer": true,
+      "explanation": "Yes. Start = input. Finish = output."
+    },
+    {
+      "id": "u02l01e08",
+      "type": "multipleChoice",
+      "prompt": "Task: sharpening a pencil. What is the input?",
+      "options": [
+        "A blunt pencil",
+        "A sharp pencil",
+        "The sharpener's color",
+        "The desk"
+      ],
+      "answer": 0,
+      "explanation": "You begin with a blunt pencil — that's the input."
+    },
+    {
+      "id": "u02l01e09",
+      "type": "multipleChoice",
+      "prompt": "Task: sharpening a pencil. What is the output?",
+      "options": [
+        "A sharp pencil",
+        "A blunt pencil",
+        "Pencil shavings only",
+        "A pen"
+      ],
+      "answer": 0,
+      "explanation": "You end with a sharp pencil — that's the output."
+    },
+    {
+      "id": "u02l01e10",
+      "type": "trueFalse",
+      "prompt": "Naming the input and output is a good first step before solving a task.",
+      "answer": true,
+      "explanation": "Knowing what goes in and what should come out frames the whole problem. That's the 'U' in UEPCC."
+    }
+  ]
+}

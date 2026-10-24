@@ -1,0 +1,143 @@
+{
+  "unitId": "u64",
+  "lessonId": "u64l03",
+  "title": "Reading a search result",
+  "idea": "TOOL: use the found flag with if/else to print a friendly yes/no message. Predict output.",
+  "exercises": [
+    {
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nnums = [2, 6, 4]\ntarget = 6\nfound = False\nfor n in nums:\n    if n == target:\n        found = True\nif found:\n    print(\"Yes\")\nelse:\n    print(\"No\")",
+      "options": [
+        "Yes",
+        "No",
+        "True",
+        "6"
+      ],
+      "answer": 0,
+      "explanation": "6 is present, so found becomes True, and the if prints 'Yes'. The flag drives a friendly message.",
+      "id": "u64l03e01"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nnums = [2, 6, 4]\ntarget = 9\nfound = False\nfor n in nums:\n    if n == target:\n        found = True\nif found:\n    print(\"Yes\")\nelse:\n    print(\"No\")",
+      "options": [
+        "No",
+        "Yes",
+        "False",
+        "9"
+      ],
+      "answer": 0,
+      "explanation": "9 is absent, so found stays False and the else prints 'No'.",
+      "id": "u64l03e02"
+    },
+    {
+      "type": "orderBlocks",
+      "prompt": "Arrange a search that prints Yes or No.",
+      "blocks": [
+        "found = False",
+        "for n in nums:",
+        "    if n == target:",
+        "        found = True",
+        "if found:",
+        "    print(\"Yes\")",
+        "else:",
+        "    print(\"No\")"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "explanation": "Do the found-flag search first, then an if/else on found turns the boolean into a readable message.",
+      "id": "u64l03e03"
+    },
+    {
+      "type": "fillBlank",
+      "prompt": "After the search, test the flag to print the message:\n\nif ____:\n    print(\"Yes\")\nelse:\n    print(\"No\")",
+      "answer": "found",
+      "acceptable": [
+        "found"
+      ],
+      "explanation": "You test the found flag. If it is True the if runs; otherwise the else runs.",
+      "id": "u64l03e04"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "The if/else that prints Yes/No comes AFTER the search loop finishes.",
+      "answer": true,
+      "explanation": "You must finish checking every item before you decide. So the message comes after the loop, using the final flag.",
+      "id": "u64l03e05"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Why not print 'Yes' inside the loop the first time you see a match?",
+      "options": [
+        "You could, but if the value appears twice you would print Yes twice — the flag avoids that",
+        "printing is illegal in loops",
+        "the loop would crash",
+        "there is never a match"
+      ],
+      "answer": 0,
+      "explanation": "A flag records the match once and you report it once, after the loop. It keeps the yes/no clean.",
+      "id": "u64l03e06"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nnums = []\ntarget = 5\nfound = False\nfor n in nums:\n    if n == target:\n        found = True\nif found:\n    print(\"Yes\")\nelse:\n    print(\"No\")",
+      "options": [
+        "No",
+        "Yes",
+        "an error",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "The list is empty, so the loop never runs and found stays False. Searching empty gives 'No' safely.",
+      "id": "u64l03e07"
+    },
+    {
+      "type": "matchPairs",
+      "prompt": "Match the final flag value to the meaning.",
+      "pairs": [
+        {
+          "left": "found is True",
+          "right": "the value is present"
+        },
+        {
+          "left": "found is False",
+          "right": "the value is absent"
+        },
+        {
+          "left": "empty list searched",
+          "right": "found stays False (absent)"
+        }
+      ],
+      "explanation": "True means present, False means absent. An empty list can only give absent.",
+      "id": "u64l03e08"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nnums = [7, 1, 7]\ntarget = 7\nfound = False\nfor n in nums:\n    if n == target:\n        found = True\nif found:\n    print(\"Found it\")\nelse:\n    print(\"Missing\")",
+      "options": [
+        "Found it",
+        "Missing",
+        "True",
+        "7"
+      ],
+      "answer": 0,
+      "explanation": "7 is present, so found is True and the if prints 'Found it'.",
+      "id": "u64l03e09"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "A search on an empty list is safe and simply reports 'not found'.",
+      "answer": true,
+      "explanation": "With no items the loop body never runs, found stays False, and you correctly report absent.",
+      "id": "u64l03e10"
+    }
+  ]
+}

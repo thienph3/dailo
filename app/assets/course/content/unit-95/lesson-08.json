@@ -1,0 +1,125 @@
+{
+  "unitId": "u95",
+  "lessonId": "u95l08",
+  "title": "Cutting out the dead weight",
+  "idea": "MEET (thinking): spot code that does nothing - unused variables, lines that are never reached, work done twice. Removing dead weight is a refactor too.",
+  "exercises": [
+    {
+      "id": "u95l08e01",
+      "type": "multipleChoice",
+      "prompt": "Find the dead line:\n\nprice = 10\nunused = 999\ntotal = price * 2\nprint(total)",
+      "options": [
+        "unused = 999 - it's set but never read",
+        "price = 10",
+        "total = price * 2",
+        "print(total)"
+      ],
+      "answer": 0,
+      "explanation": "'unused' is assigned and then never used. Deleting it removes clutter without touching the output (still 20)."
+    },
+    {
+      "id": "u95l08e02",
+      "type": "trueFalse",
+      "prompt": "Removing a variable that is never read changes the program's output.",
+      "answer": false,
+      "explanation": "No. If nothing reads it, deleting it is invisible to the result. Dead code removal is a safe, clarifying refactor."
+    },
+    {
+      "id": "u95l08e03",
+      "type": "multipleChoice",
+      "prompt": "Spot the wasted work:\n\narea = width * height\narea = width * height\nprint(area)",
+      "options": [
+        "The calculation is done twice; the first line is pointless",
+        "print is wrong",
+        "width is undefined",
+        "Nothing is wasted"
+      ],
+      "answer": 0,
+      "explanation": "Computing area twice gives the same value - the first assignment is immediately overwritten. One line is enough."
+    },
+    {
+      "id": "u95l08e04",
+      "type": "multipleChoice",
+      "prompt": "Which line can never run?\n\ndef f(n):\n    return n * 2\n    print(\"done\")",
+      "options": [
+        "print(\"done\") - it's after return, so it's unreachable",
+        "return n * 2",
+        "def f(n):",
+        "None of them"
+      ],
+      "answer": 0,
+      "explanation": "return hands control back immediately, so any line after it in the function never runs. Unreachable code should be removed."
+    },
+    {
+      "id": "u95l08e05",
+      "type": "trueFalse",
+      "prompt": "Code placed right after a return inside a function is dead code.",
+      "answer": true,
+      "explanation": "True. Once return fires, the function is done. Lines below it can't execute, so they only confuse readers."
+    },
+    {
+      "id": "u95l08e06",
+      "type": "multiSelect",
+      "prompt": "Which of these are 'dead weight' worth removing? Pick ALL that apply.",
+      "options": [
+        "A variable assigned but never used",
+        "A line of code after a return",
+        "A result variable that IS printed",
+        "The same calculation written twice in a row"
+      ],
+      "answer": [0, 1, 3],
+      "explanation": "Unused variables, unreachable lines, and duplicated work are all dead weight. A result that's actually printed is needed - keep it."
+    },
+    {
+      "id": "u95l08e07",
+      "type": "multipleChoice",
+      "prompt": "Why remove dead code even though it 'does no harm'?",
+      "options": [
+        "It distracts readers and hides the real logic - clarity is the harm it does",
+        "It makes the computer overheat",
+        "It is illegal",
+        "It speeds the program up tenfold"
+      ],
+      "answer": 0,
+      "explanation": "Dead code makes a reader wonder 'is this important?' Every extra line is a cost to understanding. Removing it sharpens the real intent."
+    },
+    {
+      "id": "u95l08e08",
+      "type": "multipleChoice",
+      "prompt": "Careful! Which 'cleanup' would actually BREAK behavior?",
+      "options": [
+        "Deleting 'total = price * 2' because the line looks long",
+        "Deleting an unused variable",
+        "Deleting a line after return",
+        "Deleting a duplicated calculation"
+      ],
+      "answer": 0,
+      "explanation": "total feeds the print, so it's live code. Removing it changes the output (or errors). Only remove lines nothing depends on."
+    },
+    {
+      "id": "u95l08e09",
+      "type": "orderBlocks",
+      "prompt": "Order the safe steps to remove a suspected dead line.",
+      "blocks": [
+        "Check that nothing else reads or depends on it",
+        "Remove the line",
+        "Re-run and confirm the output is unchanged"
+      ],
+      "answer": [0, 1, 2],
+      "explanation": "Confirm it's truly unused, remove it, then re-check. If the output changed, the line wasn't dead - put it back."
+    },
+    {
+      "id": "u95l08e10",
+      "type": "multipleChoice",
+      "prompt": "The rule for removing dead weight is...",
+      "options": [
+        "Only delete what nothing depends on, then re-check the output",
+        "Delete whatever looks longest",
+        "Delete every other line",
+        "Never delete anything"
+      ],
+      "answer": 0,
+      "explanation": "Remove only truly unused code, and verify the answers didn't change. That keeps the refactor safe while the solution gets cleaner."
+    }
+  ]
+}

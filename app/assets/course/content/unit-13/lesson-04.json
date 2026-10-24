@@ -1,0 +1,136 @@
+{
+  "unitId": "u13",
+  "lessonId": "u13l04",
+  "title": "Predict the result",
+  "idea": "Practice reading mixed expressions step by step: do * and / first, then + and -, and parentheses before all.",
+  "exercises": [
+    {
+      "id": "u13l04e01",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nprint(3 * 4 + 2 * 5)",
+      "options": [
+        "22",
+        "70",
+        "26",
+        "120"
+      ],
+      "answer": 0,
+      "explanation": "Both * first: 3*4 is 12, 2*5 is 10. Then add: 12 + 10 is 22."
+    },
+    {
+      "id": "u13l04e02",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nprint(20 - 3 * 4)",
+      "options": [
+        "8",
+        "68",
+        "17",
+        "12"
+      ],
+      "answer": 0,
+      "explanation": "* first: 3*4 is 12. Then 20 - 12 is 8."
+    },
+    {
+      "id": "u13l04e03",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nprint(2 * (3 + 4))",
+      "options": [
+        "14",
+        "10",
+        "24",
+        "11"
+      ],
+      "answer": 0,
+      "explanation": "Inside ( ) first: 3 + 4 is 7. Then 2 * 7 is 14."
+    },
+    {
+      "id": "u13l04e04",
+      "type": "multipleChoice",
+      "prompt": "Which step happens FIRST?\n\nprint(5 + 6 / 2)",
+      "options": [
+        "6 / 2",
+        "5 + 6",
+        "5 + 3",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "Divide before plus: 6 / 2 is 3.0 first, then 5 + 3.0 is 8.0."
+    },
+    {
+      "id": "u13l04e05",
+      "type": "fillBlank",
+      "prompt": "Fill in the result:\n\nprint(1 + 4 * 2 - 3)\n\nOutput: ____",
+      "answer": "6",
+      "acceptable": [
+        "6"
+      ],
+      "explanation": "* first: 4*2 is 8. Then left to right: 1 + 8 is 9, minus 3 is 6."
+    },
+    {
+      "id": "u13l04e06",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nprint((8 - 2) / 3)",
+      "options": [
+        "2.0",
+        "7.3",
+        "6.0",
+        "2"
+      ],
+      "answer": 0,
+      "explanation": "Inside first: 8 - 2 is 6. Then 6 / 3 is 2.0. Divide gives a decimal."
+    },
+    {
+      "id": "u13l04e07",
+      "type": "multiSelect",
+      "prompt": "Which of these equal 14? (pick all)",
+      "options": [
+        "print(2 + 3 * 4)",
+        "print(2 * (3 + 4))",
+        "print((2 + 3) * 4)",
+        "print(7 + 7)"
+      ],
+      "answer": [
+        0,
+        1,
+        3
+      ],
+      "explanation": "2+3*4 = 14, 2*(3+4) = 14, 7+7 = 14. But (2+3)*4 = 20, so that one is left out."
+    },
+    {
+      "id": "u13l04e08",
+      "type": "trueFalse",
+      "prompt": "In 10 / 2 + 3, the divide happens before the plus.",
+      "answer": true,
+      "explanation": "Divide is in the 'first' group with times. 10 / 2 is 5.0, then + 3 is 8.0."
+    },
+    {
+      "id": "u13l04e09",
+      "type": "orderBlocks",
+      "prompt": "Put the steps in the order the computer does them for: 2 + 3 * 4",
+      "blocks": [
+        "Do 3 * 4 (times first)",
+        "Add 2 to the result",
+        "Show the final number"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Times first (3*4=12), then the plus (2+12=14), then show 14."
+    },
+    {
+      "id": "u13l04e10",
+      "type": "multipleChoice",
+      "prompt": "Review: reassignment. What does this print?\n\nx = 2\nx = x * 3 + 1\nprint(x)",
+      "options": [
+        "7",
+        "9",
+        "6",
+        "2"
+      ],
+      "answer": 0,
+      "explanation": "x starts at 2. x * 3 is 6 (times first), plus 1 is 7. x is now 7."
+    }
+  ]
+}

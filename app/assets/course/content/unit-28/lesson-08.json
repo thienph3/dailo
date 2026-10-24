@@ -1,0 +1,138 @@
+{
+  "unitId": "u28",
+  "lessonId": "u28l08",
+  "title": "Nested if in the else branch",
+  "idea": "A nested if can live inside the else, not just the if. This is one way to express 'otherwise, ask another question' - and shows why elif often reads better. Predict output.",
+  "exercises": [
+    {
+      "id": "u28l08e01",
+      "type": "multipleChoice",
+      "prompt": "Where can a nested if be placed?",
+      "options": [
+        "Inside the if branch, the else branch, or both",
+        "Only inside the if branch",
+        "Only at the very top of the file",
+        "Never inside an else"
+      ],
+      "answer": 0,
+      "explanation": "Any branch is just a body of code, so an if can be nested inside the if branch, the else branch, or both."
+    },
+    {
+      "id": "u28l08e02",
+      "type": "multipleChoice",
+      "prompt": "Trace:\n\nscore = 55\nif score >= 90:\n    print(\"A\")\nelse:\n    if score >= 50:\n        print(\"Pass\")\n    else:\n        print(\"Fail\")",
+      "options": [
+        "Pass",
+        "A",
+        "Fail",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "55 >= 90 is False, so we enter the else. Inside, 55 >= 50 is True, so 'Pass'."
+    },
+    {
+      "id": "u28l08e03",
+      "type": "multipleChoice",
+      "prompt": "Same code, score = 40. What prints?",
+      "options": [
+        "Fail",
+        "Pass",
+        "A",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "40 >= 90 False, into the else; 40 >= 50 False, so the inner else: 'Fail'."
+    },
+    {
+      "id": "u28l08e04",
+      "type": "multipleChoice",
+      "prompt": "This 'if inside else' pattern does the same job as which flatter structure?",
+      "options": [
+        "An if / elif / else chain",
+        "A loop",
+        "A single if with 'and'",
+        "Nothing can replace it"
+      ],
+      "answer": 0,
+      "explanation": "'else: if ...' is exactly what elif is short for. 'if A / elif B / else' reads more cleanly than nesting an if in the else."
+    },
+    {
+      "id": "u28l08e05",
+      "type": "trueFalse",
+      "prompt": "'else:' then an indented 'if' on the next line behaves like an 'elif'.",
+      "answer": true,
+      "explanation": "Yes - elif is literally shorthand for an if nested in an else. Both check the second condition only when the first was False."
+    },
+    {
+      "id": "u28l08e06",
+      "type": "orderBlocks",
+      "prompt": "Rewrite the nested-in-else grade code as a flat elif chain (arrange the lines).",
+      "blocks": [
+        "if score >= 90:",
+        "    print(\"A\")",
+        "elif score >= 50:",
+        "    print(\"Pass\")",
+        "else:",
+        "    print(\"Fail\")"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "explanation": "The elif chain is the flat, readable version of 'if A / else: if B / else'. Same outcomes, less indentation."
+    },
+    {
+      "id": "u28l08e07",
+      "type": "multipleChoice",
+      "prompt": "When is a REAL nested if (not just elif) the right tool?",
+      "options": [
+        "When the inner question depends on being inside a branch, e.g. only ask about seats after confirming a ticket",
+        "Whenever you have two conditions",
+        "Only when the conditions are numbers",
+        "Never; always use elif"
+      ],
+      "answer": 0,
+      "explanation": "elif chains pick one bucket from a flat list. Real nesting is for a second question that only makes sense inside a particular branch."
+    },
+    {
+      "id": "u28l08e08",
+      "type": "multipleChoice",
+      "prompt": "Trace:\n\nmember = False\nage = 70\nif member:\n    print(\"Free\")\nelse:\n    if age >= 65:\n        print(\"Senior discount\")\n    else:\n        print(\"Full price\")",
+      "options": [
+        "Senior discount",
+        "Free",
+        "Full price",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "member is False, so we enter the else; age 70 >= 65 is True, so 'Senior discount'."
+    },
+    {
+      "id": "u28l08e09",
+      "type": "fillBlank",
+      "prompt": "Collapse 'else: if age >= 65:' into one keyword:\n\nif member:\n    print(\"Free\")\n____ age >= 65:\n    print(\"Senior discount\")\nelse:\n    print(\"Full price\")",
+      "answer": "elif",
+      "acceptable": [
+        "elif"
+      ],
+      "explanation": "elif replaces the 'else:' plus nested 'if'. The result is the same but flatter and easier to read."
+    },
+    {
+      "id": "u28l08e10",
+      "type": "multipleChoice",
+      "prompt": "Takeaway for 'if inside else'?",
+      "options": [
+        "It works, but an elif chain usually reads better for picking one of several buckets",
+        "It is always wrong",
+        "It changes the output compared to elif",
+        "It is faster than elif"
+      ],
+      "answer": 0,
+      "explanation": "Nesting in the else is valid, but elif is the clean idiom for a flat list of buckets. Save true nesting for dependent questions."
+    }
+  ]
+}

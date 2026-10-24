@@ -1,0 +1,134 @@
+{
+  "unitId": "u29",
+  "lessonId": "u29l01",
+  "title": "Meet comparing words with ==",
+  "idea": "Just like numbers, two strings can be compared with ==. It is True only when the words match exactly. Meet it with visible output.",
+  "exercises": [
+    {
+      "id": "u29l01e01",
+      "type": "multipleChoice",
+      "prompt": "You already compare numbers with ==. The new idea is that == also works on...",
+      "options": [
+        "words (strings)",
+        "only even numbers",
+        "nothing else",
+        "colors on the screen"
+      ],
+      "answer": 0,
+      "explanation": "== compares values of the same kind. For strings it asks: are these two words exactly the same?"
+    },
+    {
+      "id": "u29l01e02",
+      "type": "multipleChoice",
+      "prompt": "What is the value of this?\n\n\"cat\" == \"cat\"",
+      "options": [
+        "True",
+        "False",
+        "an error",
+        "cat"
+      ],
+      "answer": 0,
+      "explanation": "The two words are identical, so == gives True. String comparison asks for an exact match."
+    },
+    {
+      "id": "u29l01e03",
+      "type": "multipleChoice",
+      "prompt": "What is the value of this?\n\n\"cat\" == \"dog\"",
+      "options": [
+        "False",
+        "True",
+        "an error",
+        "both"
+      ],
+      "answer": 0,
+      "explanation": "Different words, so they are not equal - False. Only an exact match gives True."
+    },
+    {
+      "id": "u29l01e04",
+      "type": "multipleChoice",
+      "prompt": "What does this print?\n\ncolor = \"red\"\nif color == \"red\":\n    print(\"Stop\")\nelse:\n    print(\"Go\")",
+      "options": [
+        "Stop",
+        "Go",
+        "red",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "color holds \"red\", and \"red\" == \"red\" is True, so the if branch prints \"Stop\"."
+    },
+    {
+      "id": "u29l01e05",
+      "type": "multipleChoice",
+      "prompt": "Same code, but color = \"green\". What prints?",
+      "options": [
+        "Go",
+        "Stop",
+        "green",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "\"green\" == \"red\" is False, so the else runs: \"Go\"."
+    },
+    {
+      "id": "u29l01e06",
+      "type": "trueFalse",
+      "prompt": "A string variable can now hold a word, and you can test that word with ==.",
+      "answer": true,
+      "explanation": "Yes - strings are in scope, so a variable like color = \"red\" is fine, and color == \"red\" tests it."
+    },
+    {
+      "id": "u29l01e07",
+      "type": "fillBlank",
+      "prompt": "Fill the blank so it checks the word equals \"yes\":\n\nanswer = \"yes\"\nif answer ____ \"yes\":\n    print(\"Confirmed\")",
+      "answer": "==",
+      "acceptable": ["=="],
+      "explanation": "== tests equality for words too. answer == \"yes\" is True, so \"Confirmed\" prints."
+    },
+    {
+      "id": "u29l01e08",
+      "type": "multipleChoice",
+      "prompt": "Why must the word on the right be in quotes, as in color == \"red\"?",
+      "options": [
+        "Quotes mark it as the text to compare against; without them Python looks for a variable named red",
+        "Quotes are optional",
+        "It makes it run faster",
+        "To make it a number"
+      ],
+      "answer": 0,
+      "explanation": "\"red\" is literal text. Dropping the quotes would make Python search for a variable called red - likely an error."
+    },
+    {
+      "id": "u29l01e09",
+      "type": "matchPairs",
+      "prompt": "Match each comparison to its value.",
+      "pairs": [
+        {
+          "left": "\"sun\" == \"sun\"",
+          "right": "True"
+        },
+        {
+          "left": "\"sun\" == \"moon\"",
+          "right": "False"
+        },
+        {
+          "left": "\"go\" == \"go\"",
+          "right": "True"
+        }
+      ],
+      "explanation": "Identical words give True; different words give False. Exact match is the whole rule."
+    },
+    {
+      "id": "u29l01e10",
+      "type": "multipleChoice",
+      "prompt": "Why is comparing words useful?",
+      "options": [
+        "It lets a program react to which word it was given, like \"red\" or \"yes\"",
+        "It makes words longer",
+        "It replaces numbers",
+        "It changes the spelling"
+      ],
+      "answer": 0,
+      "explanation": "Deciding based on words - a command, a color, an answer - is how programs respond to choices made in text."
+    }
+  ]
+}

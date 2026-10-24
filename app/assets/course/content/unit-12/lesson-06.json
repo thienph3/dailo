@@ -1,0 +1,143 @@
+{
+  "unitId": "u12",
+  "lessonId": "u12l06",
+  "title": "Predict the output",
+  "idea": "Read // and % lines carefully and predict exactly what prints — before running.",
+  "exercises": [
+    {
+      "id": "u12l06e01",
+      "type": "multipleChoice",
+      "prompt": "What will this show?\n\nprint(15 // 4)",
+      "options": [
+        "3",
+        "4",
+        "3.75",
+        "2"
+      ],
+      "answer": 0,
+      "explanation": "Three 4s make 12, which fits in 15. // keeps only the whole part: 3."
+    },
+    {
+      "id": "u12l06e02",
+      "type": "multipleChoice",
+      "prompt": "What will this show?\n\nprint(15 % 4)",
+      "options": [
+        "3",
+        "4",
+        "0",
+        "1"
+      ],
+      "answer": 0,
+      "explanation": "15 minus the 12 from three 4s leaves 3. So 15 % 4 is 3."
+    },
+    {
+      "id": "u12l06e03",
+      "type": "multipleChoice",
+      "prompt": "What will this show?\n\nprint(4 // 7)",
+      "options": [
+        "0",
+        "1",
+        "4",
+        "7"
+      ],
+      "answer": 0,
+      "explanation": "No whole 7 fits inside 4, so 4 // 7 is 0 full groups. A smaller number over a bigger one gives 0."
+    },
+    {
+      "id": "u12l06e04",
+      "type": "multipleChoice",
+      "prompt": "What will this show?\n\nprint(4 % 7)",
+      "options": [
+        "4",
+        "0",
+        "7",
+        "1"
+      ],
+      "answer": 0,
+      "explanation": "Since no whole 7 fits in 4, nothing is used and all 4 is left over. So 4 % 7 is 4."
+    },
+    {
+      "id": "u12l06e05",
+      "type": "multipleChoice",
+      "prompt": "What will this show?\n\nprint(100 // 10)",
+      "options": [
+        "10",
+        "100",
+        "1",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "Ten 10s make 100 exactly. 100 // 10 is 10, with a leftover of 0."
+    },
+    {
+      "id": "u12l06e06",
+      "type": "multipleChoice",
+      "prompt": "What will this show?\n\nprint(100 % 10)",
+      "options": [
+        "0",
+        "10",
+        "1",
+        "100"
+      ],
+      "answer": 0,
+      "explanation": "100 shares into 10s perfectly, so nothing is left. 100 % 10 is 0."
+    },
+    {
+      "id": "u12l06e07",
+      "type": "multipleChoice",
+      "prompt": "What will these two lines show?\n\nn = 29\nprint(n // 10)\nprint(n % 10)",
+      "options": [
+        "2 then 9",
+        "9 then 2",
+        "29 then 0",
+        "2 then 0"
+      ],
+      "answer": 0,
+      "explanation": "29 // 10 is 2 (the tens), and 29 % 10 is 9 (the ones). // and % can even pull apart the digits of a number!"
+    },
+    {
+      "id": "u12l06e08",
+      "type": "trueFalse",
+      "prompt": "For any number shared into 10s, % 10 gives its last digit.",
+      "answer": true,
+      "explanation": "The leftover after whole 10s is exactly the ones digit. 47 % 10 is 7, 83 % 10 is 3. A neat trick."
+    },
+    {
+      "id": "u12l06e09",
+      "type": "matchPairs",
+      "prompt": "Match each line to its output.",
+      "pairs": [
+        {
+          "left": "print(13 // 5)",
+          "right": "2"
+        },
+        {
+          "left": "print(13 % 5)",
+          "right": "3"
+        },
+        {
+          "left": "print(5 // 13)",
+          "right": "0"
+        },
+        {
+          "left": "print(5 % 13)",
+          "right": "5"
+        }
+      ],
+      "explanation": "13 shares into 5s as 2 groups with 3 left. The other way, no whole 13 fits in 5, so 0 groups and all 5 left over."
+    },
+    {
+      "id": "u12l06e10",
+      "type": "multipleChoice",
+      "prompt": "Before running, you predict print(22 % 5) shows 2. Are you right?",
+      "options": [
+        "Yes — four 5s make 20, and 2 is left",
+        "No — it shows 4",
+        "No — it shows 5",
+        "No — it shows 0"
+      ],
+      "answer": 0,
+      "explanation": "Four 5s make 20, and 22 minus 20 is 2. Your prediction was right! Predicting first is how good programmers work."
+    }
+  ]
+}

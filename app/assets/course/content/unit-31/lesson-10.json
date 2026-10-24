@@ -1,0 +1,166 @@
+{
+  "unitId": "u31",
+  "lessonId": "u31l10",
+  "title": "Solve it: handle an odd answer gracefully",
+  "idea": "GUIDED + REVIEW. UEPCC on reacting to unexpected input with a catch-all else.",
+  "problem": "Ask 'Pick a size: S, M, or L'. Print the price (S=5, M=7, L=9). For anything else, print 'Unknown size'.",
+  "exercises": [
+    {
+      "id": "u31l10e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: read S/M/L, print the price (5/7/9); anything else -> 'Unknown size'.\n\nWhat is the OUTPUT?",
+      "options": [
+        "A price (5/7/9) or 'Unknown size'",
+        "The letter typed",
+        "Always 5",
+        "The three prices"
+      ],
+      "answer": 0,
+      "explanation": "The output is a price for a valid size, or a safety message for anything unexpected."
+    },
+    {
+      "id": "u31l10e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "Why plan for 'anything else' at all?",
+      "options": [
+        "Users may type something that is not S, M, or L",
+        "Because else is required by law",
+        "To print the price twice",
+        "Sizes can be numbers"
+      ],
+      "answer": 0,
+      "explanation": "Users type surprising things. A catch-all else keeps the program from silently doing nothing."
+    },
+    {
+      "id": "u31l10e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Work it by hand: the user types M. What prints?",
+      "options": [
+        "7",
+        "5",
+        "9",
+        "Unknown size"
+      ],
+      "answer": 0,
+      "explanation": "M maps to 7. A valid-size check value."
+    },
+    {
+      "id": "u31l10e04",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "The odd answer by hand: the user types XL. What prints?",
+      "options": [
+        "Unknown size",
+        "9",
+        "7",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "XL is not S, M, or L, so the catch-all else prints 'Unknown size'. This is the edge case."
+    },
+    {
+      "id": "u31l10e05",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Plan the branches, valid sizes first and a catch-all last.",
+      "blocks": [
+        "If S -> 5",
+        "Else if M -> 7",
+        "Else if L -> 9",
+        "Else -> 'Unknown size'"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "Test each known size, then let else handle everything unexpected. Order known cases before the catch-all."
+    },
+    {
+      "id": "u31l10e06",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Which branch keyword is the catch-all that needs NO condition?",
+      "options": [
+        "else",
+        "elif",
+        "if",
+        "and"
+      ],
+      "answer": 0,
+      "explanation": "else has no condition; it runs only when every earlier if/elif test failed."
+    },
+    {
+      "id": "u31l10e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Arrange the code to match the plan.",
+      "blocks": [
+        "size = input(\"Size S/M/L: \")",
+        "if size == \"S\":",
+        "    print(5)",
+        "elif size == \"M\":",
+        "    print(7)",
+        "elif size == \"L\":",
+        "    print(9)",
+        "else:",
+        "    print(\"Unknown size\")"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "explanation": "Read the size, test S/M/L with if/elif, and finish with a catch-all else."
+    },
+    {
+      "id": "u31l10e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Complete the catch-all keyword:\n\nif size == \"S\":\n    print(5)\nelif size == \"M\":\n    print(7)\nelif size == \"L\":\n    print(9)\n____:\n    print(\"Unknown size\")",
+      "answer": "else",
+      "acceptable": [
+        "else"
+      ],
+      "explanation": "else is the catch-all with no condition; it handles any size that was not matched above."
+    },
+    {
+      "id": "u31l10e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check with the first example: the user types M. What prints?",
+      "options": [
+        "7",
+        "5",
+        "9",
+        "Unknown size"
+      ],
+      "answer": 0,
+      "explanation": "size == \"M\" is True, so 7 prints — matching your hand answer."
+    },
+    {
+      "id": "u31l10e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Re-check the odd answer: the user types banana. What prints?",
+      "options": [
+        "Unknown size",
+        "5",
+        "7",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "No size matches, so the else runs: 'Unknown size'. Odd input is handled gracefully. Great work!"
+    }
+  ]
+}

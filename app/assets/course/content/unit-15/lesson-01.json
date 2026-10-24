@@ -1,0 +1,127 @@
+{
+  "unitId": "u15",
+  "lessonId": "u15l01",
+  "title": "Text you can name and reuse",
+  "idea": "A string is text in quotes. Just like a number, you can store it in a variable and reuse it.",
+  "exercises": [
+    {
+      "id": "u15l01e01",
+      "type": "multipleChoice",
+      "prompt": "A 'string' is the programming word for what?",
+      "options": [
+        "A piece of text",
+        "A kind of number",
+        "A math operation",
+        "A screen"
+      ],
+      "answer": 0,
+      "explanation": "A string is just text. You've already used strings inside print — the words in quotes were strings all along."
+    },
+    {
+      "id": "u15l01e02",
+      "type": "multipleChoice",
+      "prompt": "Which of these is a string?",
+      "options": [
+        "\"hello\"",
+        "42",
+        "3 + 4",
+        "print"
+      ],
+      "answer": 0,
+      "explanation": "Text wrapped in quotes is a string. 42 is a number, not a string."
+    },
+    {
+      "id": "u15l01e03",
+      "type": "trueFalse",
+      "prompt": "You can store a string in a variable, just like you store a number.",
+      "answer": true,
+      "explanation": "A variable can hold a string too. name = \"Mia\" remembers the text \"Mia\" under the name 'name'."
+    },
+    {
+      "id": "u15l01e04",
+      "type": "multipleChoice",
+      "prompt": "What will this show?\n\nname = \"Mia\"\nprint(name)",
+      "options": [
+        "Mia",
+        "name",
+        "\"Mia\"",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "name holds the string \"Mia\". Printing name shows its value: Mia (no quotes on screen)."
+    },
+    {
+      "id": "u15l01e05",
+      "type": "multipleChoice",
+      "prompt": "What is the difference between these two lines?\n\nprint(\"name\")\nprint(name)",
+      "options": [
+        "The first shows the word name; the second shows what the variable name holds",
+        "They do the same thing",
+        "The second one is wrong",
+        "The first one shows nothing"
+      ],
+      "answer": 0,
+      "explanation": "Quotes mean 'this exact text'. No quotes means 'use the variable's value'. A tiny difference, a big effect."
+    },
+    {
+      "id": "u15l01e06",
+      "type": "trueFalse",
+      "prompt": "A string can hold a whole sentence, with spaces.",
+      "answer": true,
+      "explanation": "One pair of quotes can hold a word or a long sentence. \"See you tomorrow\" is one string."
+    },
+    {
+      "id": "u15l01e07",
+      "type": "fillBlank",
+      "prompt": "Store the text Dailo in a variable called app, then print it.\n\napp = ____\nprint(app)",
+      "answer": "\"Dailo\"",
+      "acceptable": [
+        "\"Dailo\"",
+        "'Dailo'"
+      ],
+      "explanation": "The text goes in quotes on the right of the =. Now app holds \"Dailo\"."
+    },
+    {
+      "id": "u15l01e08",
+      "type": "multipleChoice",
+      "prompt": "What will this show?\n\ngreeting = \"Good morning\"\nprint(greeting)",
+      "options": [
+        "Good morning",
+        "greeting",
+        "Good",
+        "morning"
+      ],
+      "answer": 0,
+      "explanation": "greeting holds the whole string. Printing it shows: Good morning."
+    },
+    {
+      "id": "u15l01e09",
+      "type": "tapTokens",
+      "prompt": "Build a line that stores the text yes in a variable called answer.",
+      "tokens": [
+        "answer",
+        "=",
+        "\"yes\""
+      ],
+      "answer": [
+        "answer",
+        "=",
+        "\"yes\""
+      ],
+      "explanation": "variable = \"text\". The quotes make it a string."
+    },
+    {
+      "id": "u15l01e10",
+      "type": "multipleChoice",
+      "prompt": "Why is it handy to store text in a variable?",
+      "options": [
+        "You can reuse the same text many times by name",
+        "It makes the text bigger",
+        "Strings only work in variables",
+        "It turns text into a number"
+      ],
+      "answer": 0,
+      "explanation": "Name it once, use it everywhere. Change it in one place and every use updates. Same power as number variables."
+    }
+  ]
+}

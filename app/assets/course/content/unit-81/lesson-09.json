@@ -1,0 +1,136 @@
+{
+  "unitId": "u81",
+  "lessonId": "u81l09",
+  "title": "Which split is flawed? Compare two plans",
+  "idea": "Given two ways of splitting the same problem into helpers, identify which decomposition hides a bug (dropped value, wrong order, unhandled edge) — thinking, not coding.",
+  "exercises": [
+    {
+      "type": "multipleChoice",
+      "prompt": "Goal: cost of 2 meals (12 each) + 3 drinks (3 each) = 33. Plan A: meals_cost + drinks_cost. Plan B: meals_cost + drink_price (forgets the count). Which is flawed?",
+      "options": [
+        "Plan B — it drops the drink COUNT, so it adds only one drink",
+        "Plan A",
+        "Both",
+        "Neither"
+      ],
+      "answer": 0,
+      "explanation": "Plan B uses drink_price, not drink_count * drink_price — it counts one drink instead of three. A dropped value.",
+      "id": "u81l09e01"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "A plan that 'looks simpler' is automatically more correct.",
+      "answer": false,
+      "explanation": "No. Plan B is simpler but wrong because it drops a value. Simpler is only better when it still handles every part.",
+      "id": "u81l09e02"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Plan A: average = total / count, guarded for empty. Plan B: average = total / count, no guard. For the empty list, which is safe?",
+      "options": [
+        "Plan A — the guard handles empty; Plan B crashes",
+        "Plan B",
+        "Both",
+        "Neither"
+      ],
+      "answer": 0,
+      "explanation": "Only Plan A guards the empty list. The missing guard in Plan B is the hidden flaw.",
+      "id": "u81l09e03"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Two plans compute 'square then halve' of 4 (=8). Plan A: half(square(4)). Plan B: square(half(4)). Which is correct?",
+      "options": [
+        "Plan A — square runs first (16), then half (8)",
+        "Plan B",
+        "Both give 8",
+        "Neither"
+      ],
+      "answer": 0,
+      "explanation": "Plan A wires square inside, so it runs first: 16 then 8. Plan B halves first (2) then squares (4) — wrong order.",
+      "id": "u81l09e04"
+    },
+    {
+      "type": "matchPairs",
+      "prompt": "Match each flawed plan to its hidden bug.",
+      "pairs": [
+        {
+          "left": "Uses price without count",
+          "right": "Dropped a value"
+        },
+        {
+          "left": "No empty-list guard",
+          "right": "Missing edge case"
+        },
+        {
+          "left": "Helpers in reverse order",
+          "right": "Wrong wiring"
+        }
+      ],
+      "explanation": "The three decomposition bugs again — dropped value, missing case, wrong order — now spotted by comparing plans.",
+      "id": "u81l09e05"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Comparing two plans against the SAME hand-worked answer helps reveal which one is flawed.",
+      "answer": true,
+      "explanation": "Yes. The hand answer is the yardstick. The plan whose result wouldn't match it is the flawed one.",
+      "id": "u81l09e06"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Plan A and Plan B give the same correct answer on normal input but Plan B crashes on empty. The better plan is...",
+      "options": [
+        "Plan A — it handles the edge case too, not just the normal one",
+        "Plan B — it's shorter",
+        "Either, they're equal",
+        "Neither works"
+      ],
+      "answer": 0,
+      "explanation": "Handling edges makes a plan robust. Same normal answer, but only Plan A survives the empty case.",
+      "id": "u81l09e07"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "When choosing between two splits, you should prefer the one that...",
+      "options": [
+        "Maps every value in the problem and handles the edges",
+        "Uses the fewest variables, always",
+        "Looks cleverest",
+        "Has no comments"
+      ],
+      "answer": 0,
+      "explanation": "A correct split accounts for every value and every edge. That's the test, not brevity or cleverness.",
+      "id": "u81l09e08"
+    },
+    {
+      "type": "orderBlocks",
+      "prompt": "Order how to compare two decompositions.",
+      "blocks": [
+        "Work the correct answer (incl. edges) by hand",
+        "Trace each plan against it",
+        "Pick the plan that matches on every case"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Hand answer with edges, trace both plans, choose the one that matches everywhere. Thinking beats guessing.",
+      "id": "u81l09e09"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "The takeaway:",
+      "options": [
+        "Compare rival splits against a hand answer (with edges) to spot the flawed one",
+        "The shorter plan always wins",
+        "Both plans are always equal",
+        "You can't compare plans"
+      ],
+      "answer": 0,
+      "explanation": "Judging decompositions is a thinking skill: match each against the true answer, edges included.",
+      "id": "u81l09e10"
+    }
+  ]
+}

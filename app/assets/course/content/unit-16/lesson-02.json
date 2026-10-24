@@ -1,0 +1,136 @@
+{
+  "unitId": "u16",
+  "lessonId": "u16l02",
+  "title": "The quotes change everything",
+  "idea": "\"5\" is text and 5 is a number. Same-looking, but the computer stores and uses them differently.",
+  "exercises": [
+    {
+      "id": "u16l02e01",
+      "type": "multipleChoice",
+      "prompt": "What will this show?\n\nprint(5 + 3)",
+      "options": [
+        "8",
+        "53",
+        "5 + 3",
+        "\"8\""
+      ],
+      "answer": 0,
+      "explanation": "No quotes means numbers. The computer does the math: 5 + 3 is 8."
+    },
+    {
+      "id": "u16l02e02",
+      "type": "multipleChoice",
+      "prompt": "What will this show?\n\nprint(\"5\" + \"3\")",
+      "options": [
+        "53",
+        "8",
+        "5 3",
+        "Error"
+      ],
+      "answer": 0,
+      "explanation": "These are text. For text, + JOINS the pieces: \"5\" and \"3\" become \"53\". Same symbol, very different result!"
+    },
+    {
+      "id": "u16l02e03",
+      "type": "trueFalse",
+      "prompt": "The + symbol does the same thing whether the values are text or numbers.",
+      "answer": false,
+      "explanation": "No! On numbers + ADDS (5 + 3 = 8). On text + JOINS (\"5\" + \"3\" = \"53\"). This is the heart of the bug we're learning to avoid."
+    },
+    {
+      "id": "u16l02e04",
+      "type": "multipleChoice",
+      "prompt": "Which of these would the computer ADD to get 15?",
+      "options": [
+        "7 + 8",
+        "\"7\" + \"8\"",
+        "\"7\" + 8",
+        "\"15\""
+      ],
+      "answer": 0,
+      "explanation": "Only 7 + 8 (both numbers) gets added to 15. \"7\" + \"8\" would join into \"78\" instead."
+    },
+    {
+      "id": "u16l02e05",
+      "type": "multipleChoice",
+      "prompt": "What will this show?\n\nprint(\"cat\" + \"dog\")",
+      "options": [
+        "catdog",
+        "cat dog",
+        "cat + dog",
+        "Error"
+      ],
+      "answer": 0,
+      "explanation": "Joining text glues it with no space: catdog. (You'd add \" \" yourself if you wanted a space.)"
+    },
+    {
+      "id": "u16l02e06",
+      "type": "multiSelect",
+      "prompt": "Select EVERY line that does number math (adds), not text joining.",
+      "options": [
+        "print(10 + 2)",
+        "print(\"10\" + \"2\")",
+        "print(6 + 6)",
+        "print(\"a\" + \"b\")"
+      ],
+      "answer": [
+        0,
+        2
+      ],
+      "explanation": "Lines without quotes work on numbers and add (12 and 12). The quoted ones join text instead."
+    },
+    {
+      "id": "u16l02e07",
+      "type": "multipleChoice",
+      "prompt": "score = \"10\"\nbonus = \"5\"\nprint(score + bonus)\n\nWhat shows?",
+      "options": [
+        "105",
+        "15",
+        "10 5",
+        "Error"
+      ],
+      "answer": 0,
+      "explanation": "Both variables hold TEXT (quotes!). + joins them: \"10\" + \"5\" is \"105\", not 15. A classic surprise."
+    },
+    {
+      "id": "u16l02e08",
+      "type": "multipleChoice",
+      "prompt": "score = 10\nbonus = 5\nprint(score + bonus)\n\nWhat shows?",
+      "options": [
+        "15",
+        "105",
+        "10 5",
+        "Error"
+      ],
+      "answer": 0,
+      "explanation": "No quotes this time — real numbers. + adds them: 10 + 5 = 15. The only change from before was removing the quotes."
+    },
+    {
+      "id": "u16l02e09",
+      "type": "matchPairs",
+      "prompt": "Match each line to what it shows.",
+      "pairs": [
+        {
+          "left": "print(2 + 2)",
+          "right": "4"
+        },
+        {
+          "left": "print(\"2\" + \"2\")",
+          "right": "22"
+        },
+        {
+          "left": "print(\"ab\" + \"cd\")",
+          "right": "abcd"
+        }
+      ],
+      "explanation": "Numbers add (4). Text joins (22, abcd). Reading the quotes tells you which will happen."
+    },
+    {
+      "id": "u16l02e10",
+      "type": "trueFalse",
+      "prompt": "If you MEAN to add numbers but your values are text, you'll get a joined result instead of a sum.",
+      "answer": true,
+      "explanation": "Exactly — that's the 'added text instead of numbers' bug. The fix is converting the type, which starts next lesson."
+    }
+  ]
+}

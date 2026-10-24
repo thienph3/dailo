@@ -1,0 +1,127 @@
+{
+  "unitId": "u88",
+  "lessonId": "u88l01",
+  "title": "A loop inside a loop",
+  "idea": "TOOL (nested loops): for every turn of an outer loop, an inner loop runs all the way through. Introduce the construct with visible, predictable output. Mostly thinking.",
+  "exercises": [
+    {
+      "id": "u88l01e01",
+      "type": "multipleChoice",
+      "prompt": "Some problems pair EVERY thing with EVERY other thing — like greeting each guest at each table. One loop walks one list. What walks a list FOR EACH item of another?",
+      "options": [
+        "A loop inside a loop (a nested loop)",
+        "A single loop",
+        "An if statement",
+        "A print on its own"
+      ],
+      "answer": 0,
+      "explanation": "When you need 'for each A, do something with each B', you put one loop INSIDE another. That's a nested loop — this unit's new tool."
+    },
+    {
+      "id": "u88l01e02",
+      "type": "multipleChoice",
+      "prompt": "In a nested loop, how many times does the INNER loop run?",
+      "options": [
+        "Once fully for every single turn of the outer loop",
+        "Just once in total",
+        "Never",
+        "Only on the last outer turn"
+      ],
+      "answer": 0,
+      "explanation": "Each time the outer loop takes one step, the inner loop runs all the way through. Outer turns multiply the inner runs."
+    },
+    {
+      "id": "u88l01e03",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nfor a in range(2):\n    for b in range(3):\n        print(a, b)\n\nHow many lines are printed?",
+      "options": [
+        "6 (2 outer turns times 3 inner turns)",
+        "5",
+        "3",
+        "2"
+      ],
+      "answer": 0,
+      "explanation": "The outer loop runs 2 times; each time the inner runs 3 times. 2 times 3 = 6 lines. Nested loops multiply."
+    },
+    {
+      "id": "u88l01e04",
+      "type": "orderBlocks",
+      "prompt": "Predict the exact output order of:\n\nfor a in range(2):\n    for b in range(2):\n        print(a, b)",
+      "blocks": [
+        "0 0",
+        "0 1",
+        "1 0",
+        "1 1"
+      ],
+      "answer": [0, 1, 2, 3],
+      "explanation": "Outer a=0 first: inner b goes 0 then 1 (0 0, 0 1). Then a=1: b goes 0 then 1 (1 0, 1 1). The inner finishes before the outer steps."
+    },
+    {
+      "id": "u88l01e05",
+      "type": "trueFalse",
+      "prompt": "The inner loop finishes ALL its turns before the outer loop moves to its next turn.",
+      "answer": true,
+      "explanation": "Yes. The inner loop runs to completion, THEN the outer takes one step and the inner starts over. That's the heartbeat of nesting."
+    },
+    {
+      "id": "u88l01e06",
+      "type": "multipleChoice",
+      "prompt": "What everyday task is most like a nested loop?",
+      "options": [
+        "For each row of seats, check every seat in that row",
+        "Flip one light switch",
+        "Read a single number",
+        "Say hello once"
+      ],
+      "answer": 0,
+      "explanation": "'For each row, every seat' is a nested loop: rows are the outer loop, seats the inner. Grids and pairings are the classic fit."
+    },
+    {
+      "id": "u88l01e07",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nfor a in range(3):\n    for b in range(1):\n        print(a, b)\n\nHow many lines?",
+      "options": [
+        "3 (3 outer turns times 1 inner turn)",
+        "1",
+        "0",
+        "9"
+      ],
+      "answer": 0,
+      "explanation": "Outer runs 3 times; inner runs 1 time each. 3 times 1 = 3 lines: '0 0', '1 0', '2 0'. The inner range of 1 runs once per outer turn."
+    },
+    {
+      "id": "u88l01e08",
+      "type": "fillBlank",
+      "prompt": "Complete the inner loop so this prints every (a, b) pair for a in 0..1 and b in 0..1:\n\nfor a in range(2):\n    for b in ____(2):\n        print(a, b)",
+      "answer": "range",
+      "acceptable": ["range"],
+      "explanation": "The inner loop uses range(2) too, so b takes 0 then 1 for each a. Both loops use range here."
+    },
+    {
+      "id": "u88l01e09",
+      "type": "multipleChoice",
+      "prompt": "Why must the inner loop's body be indented FURTHER than the outer loop's?",
+      "options": [
+        "Indentation shows what belongs inside each loop",
+        "It makes the code shorter",
+        "Python prints indentation",
+        "It is only for decoration"
+      ],
+      "answer": 0,
+      "explanation": "Indentation tells Python which lines are inside the inner loop, and which inside the outer. Nesting is indentation inside indentation."
+    },
+    {
+      "id": "u88l01e10",
+      "type": "multipleChoice",
+      "prompt": "This unit's new tool is...",
+      "options": [
+        "A loop inside a loop, for 'each thing against each other thing' problems",
+        "A faster print",
+        "A new kind of list",
+        "A way to skip loops"
+      ],
+      "answer": 0,
+      "explanation": "Nested loops let you pair every item with every other — grids, pairings, and comparisons. Next lessons use it on real problems."
+    }
+  ]
+}

@@ -1,0 +1,131 @@
+{
+  "unitId": "u41",
+  "lessonId": "u41l07",
+  "title": "Running total of 1 to N",
+  "idea": "Build the sum of the first N numbers with an accumulator, including a user-chosen N.",
+  "exercises": [
+    {
+      "id": "u41l07e01",
+      "type": "multipleChoice",
+      "prompt": "What is the running total of 1 + 2 + 3 + 4 + 5?",
+      "options": [
+        "15",
+        "10",
+        "5",
+        "25"
+      ],
+      "answer": 0,
+      "explanation": "1 + 2 + 3 + 4 + 5 = 15. An accumulator over range(1, 6) builds this."
+    },
+    {
+      "id": "u41l07e02",
+      "type": "multipleChoice",
+      "prompt": "What shows?\n\ntotal = 0\nfor i in range(1, 6):\n    total += i\nprint(total)",
+      "options": [
+        "15",
+        "10",
+        "5",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "Adds 1 through 5 to reach 15."
+    },
+    {
+      "id": "u41l07e03",
+      "type": "multipleChoice",
+      "prompt": "To total 1 through N where N is typed by the user, what range do you loop over?",
+      "options": [
+        "range(1, n + 1)",
+        "range(1, n)",
+        "range(n)",
+        "range(0, n)"
+      ],
+      "answer": 0,
+      "explanation": "range(1, n + 1) includes N (stop is one past N). First read n with int(input())."
+    },
+    {
+      "id": "u41l07e04",
+      "type": "trueFalse",
+      "prompt": "input() returns text, so you convert it with int() before using it as the loop's stop.",
+      "answer": true,
+      "explanation": "True. The typed text must become a number before range can use it."
+    },
+    {
+      "id": "u41l07e05",
+      "type": "orderBlocks",
+      "prompt": "Arrange a program that totals 1 to a user-chosen n.",
+      "blocks": [
+        "    total += i",
+        "n = int(input())",
+        "total = 0",
+        "print(total)",
+        "for i in range(1, n + 1):"
+      ],
+      "answer": [
+        1,
+        2,
+        4,
+        0,
+        3
+      ],
+      "explanation": "Read and convert n, start total at 0, loop 1..n adding i, then print the total."
+    },
+    {
+      "id": "u41l07e06",
+      "type": "fillBlank",
+      "prompt": "Fill the stop so the loop includes n:\n\nn = int(input())\ntotal = 0\nfor i in range(1, ____):\n    total += i\nprint(total)",
+      "answer": "n + 1",
+      "acceptable": [
+        "n + 1",
+        "n+1"
+      ],
+      "explanation": "Stop is one past n, so n + 1 includes n in the sum."
+    },
+    {
+      "id": "u41l07e07",
+      "type": "multipleChoice",
+      "prompt": "The user types 4. What total prints for the 1-to-n program?",
+      "options": [
+        "10",
+        "4",
+        "6",
+        "15"
+      ],
+      "answer": 0,
+      "explanation": "1 + 2 + 3 + 4 = 10."
+    },
+    {
+      "id": "u41l07e08",
+      "type": "multipleChoice",
+      "prompt": "The user types 1. What total prints?",
+      "options": [
+        "1",
+        "0",
+        "2",
+        "It errors"
+      ],
+      "answer": 0,
+      "explanation": "Just the single number 1, so the total is 1. A good solution handles small n too."
+    },
+    {
+      "id": "u41l07e09",
+      "type": "multipleChoice",
+      "prompt": "Why start total at 0 and not at the first number?",
+      "options": [
+        "So every number is added the same way, including the first",
+        "It runs faster",
+        "range needs it",
+        "To skip the first number"
+      ],
+      "answer": 0,
+      "explanation": "Starting at 0 lets the loop add every number uniformly, including the first, without special cases."
+    },
+    {
+      "id": "u41l07e10",
+      "type": "trueFalse",
+      "prompt": "The same accumulator pattern works for any n just by changing the loop's range.",
+      "answer": true,
+      "explanation": "True. Start at 0, loop over the numbers, add each — the pattern generalizes to any range."
+    }
+  ]
+}

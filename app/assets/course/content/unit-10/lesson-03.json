@@ -1,0 +1,87 @@
+{
+  "unitId": "u10",
+  "lessonId": "u10l03",
+  "title": "Multiplying with *",
+  "idea": "The * sign (a star) means multiply. print(4 * 5) shows 20.",
+  "exercises": [
+    {
+      "id": "u10l03e01",
+      "type": "multipleChoice",
+      "prompt": "What will this show?\n\nprint(4 * 5)",
+      "options": ["20", "45", "9", "4 * 5"],
+      "answer": 0,
+      "explanation": "The * is the multiply sign. 4 times 5 is 20."
+    },
+    {
+      "id": "u10l03e02",
+      "type": "multipleChoice",
+      "prompt": "In code, which symbol means multiply?",
+      "options": ["*", "x", "times", "."],
+      "answer": 0,
+      "explanation": "We use * (a star) to multiply, not the letter x. The computer would read x as a name."
+    },
+    {
+      "id": "u10l03e03",
+      "type": "multipleChoice",
+      "prompt": "What will this show?\n\nprint(6 * 1)",
+      "options": ["6", "61", "7", "1"],
+      "answer": 0,
+      "explanation": "Any number times 1 stays the same: 6."
+    },
+    {
+      "id": "u10l03e04",
+      "type": "trueFalse",
+      "prompt": "print(3 * 0) shows 0.",
+      "answer": true,
+      "explanation": "Anything times zero is zero. The computer does the math and shows 0."
+    },
+    {
+      "id": "u10l03e05",
+      "type": "multipleChoice",
+      "prompt": "You buy 3 packs and each pack has 8 items. Which instruction shows the total items?",
+      "options": ["print(3 * 8)", "print(3 + 8)", "print(3 - 8)", "print(\"3 * 8\")"],
+      "answer": 0,
+      "explanation": "Same amount, many times means multiply: 3 * 8 shows 24."
+    },
+    {
+      "id": "u10l03e06",
+      "type": "fillBlank",
+      "prompt": "Fill the blank so the screen shows 35:\n\nprint(7 ____ 5)",
+      "answer": "*",
+      "acceptable": ["*"],
+      "explanation": "7 * 5 is 35. The star means multiply."
+    },
+    {
+      "id": "u10l03e07",
+      "type": "tapTokens",
+      "prompt": "Build an instruction that multiplies 9 and 2 and shows the result.",
+      "tokens": ["print", "(", "9", "*", "2", ")"],
+      "answer": ["print", "(", "9", "*", "2", ")"],
+      "explanation": "print(9 * 2) shows 18."
+    },
+    {
+      "id": "u10l03e08",
+      "type": "multipleChoice",
+      "prompt": "What will this show?\n\nprint(10 * 10)",
+      "options": ["100", "1010", "20", "1"],
+      "answer": 0,
+      "explanation": "10 times 10 is 100."
+    },
+    {
+      "id": "u10l03e09",
+      "type": "multipleChoice",
+      "prompt": "Spot the one that MULTIPLIES 5 and 4.",
+      "options": ["print(5 * 4)", "print(5 + 4)", "print(5 x 4)", "print(54)"],
+      "answer": 0,
+      "explanation": "Only print(5 * 4) uses the star to multiply. The letter x is not the multiply sign."
+    },
+    {
+      "id": "u10l03e10",
+      "type": "fillBlank",
+      "prompt": "Write a full instruction that multiplies 12 and 3 and shows the result.",
+      "answer": "print(12 * 3)",
+      "acceptable": ["print(12 * 3)", "print(12*3)"],
+      "explanation": "print(12 * 3) shows 36."
+    }
+  ]
+}

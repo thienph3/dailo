@@ -1,0 +1,131 @@
+{
+  "unitId": "u19",
+  "lessonId": "u19l01",
+  "title": "Some questions have only two answers",
+  "idea": "Many real questions can only be answered yes or no. Noticing those 'yes/no' facts is the first step toward making decisions. No code yet — just the idea.",
+  "exercises": [
+    {
+      "id": "u19l01e01",
+      "type": "multipleChoice",
+      "prompt": "Which of these questions has only two possible answers - yes or no?",
+      "options": [
+        "Is the door open?",
+        "What color is the door?",
+        "How many doors are there?",
+        "Where is the door?"
+      ],
+      "answer": 0,
+      "explanation": "\"Is the door open?\" can only be answered yes or no. The others ask for a color, a number, or a place."
+    },
+    {
+      "id": "u19l01e02",
+      "type": "trueFalse",
+      "prompt": "\"Is it raining?\" is a yes/no question.",
+      "answer": true,
+      "explanation": "Right - the only sensible answers are yes or no. That makes it a yes/no question."
+    },
+    {
+      "id": "u19l01e03",
+      "type": "trueFalse",
+      "prompt": "\"How old are you?\" is a yes/no question.",
+      "answer": false,
+      "explanation": "That asks for a number, not a yes or no. It is not a yes/no question."
+    },
+    {
+      "id": "u19l01e04",
+      "type": "multipleChoice",
+      "prompt": "A yes/no question is special because...",
+      "options": [
+        "it has exactly two possible answers",
+        "it has many possible answers",
+        "it has no answer",
+        "it asks for a name"
+      ],
+      "answer": 0,
+      "explanation": "Exactly two answers: yes or no. That two-answer shape is what we will teach the computer to handle."
+    },
+    {
+      "id": "u19l01e05",
+      "type": "multipleChoice",
+      "prompt": "Which question is NOT a yes/no question?",
+      "options": [
+        "What is your favorite number?",
+        "Is the light on?",
+        "Did the team win?",
+        "Is 5 bigger than 3?"
+      ],
+      "answer": 0,
+      "explanation": "\"What is your favorite number?\" asks for a number, so it has many answers. The others each answer yes or no."
+    },
+    {
+      "id": "u19l01e06",
+      "type": "matchPairs",
+      "prompt": "Match each question to the kind of answer it needs.",
+      "pairs": [
+        {
+          "left": "Is the cup full?",
+          "right": "yes or no"
+        },
+        {
+          "left": "How full is the cup?",
+          "right": "a number"
+        },
+        {
+          "left": "What is in the cup?",
+          "right": "a word"
+        }
+      ],
+      "explanation": "Only the first one is a yes/no question. Noticing the kind of answer a question needs is a real skill."
+    },
+    {
+      "id": "u19l01e07",
+      "type": "trueFalse",
+      "prompt": "\"Is the gate locked?\" can be answered with just yes or no.",
+      "answer": true,
+      "explanation": "Yes - the gate is either locked or not. That's a clean yes/no fact."
+    },
+    {
+      "id": "u19l01e08",
+      "type": "multipleChoice",
+      "prompt": "You want to know if a store is open before walking there. The key question is...",
+      "options": [
+        "Is the store open?",
+        "How big is the store?",
+        "What does the store sell?",
+        "Who owns the store?"
+      ],
+      "answer": 0,
+      "explanation": "\"Is the store open?\" is the yes/no fact your decision depends on. We will learn to store facts like this."
+    },
+    {
+      "id": "u19l01e09",
+      "type": "multiSelect",
+      "prompt": "Select ALL of these that are yes/no questions.",
+      "options": [
+        "Is the oven hot?",
+        "Did you finish?",
+        "How many eggs?",
+        "Is the answer correct?"
+      ],
+      "answer": [
+        0,
+        1,
+        3
+      ],
+      "explanation": "\"Is the oven hot?\", \"Did you finish?\", and \"Is the answer correct?\" each answer yes or no. \"How many eggs?\" asks for a number."
+    },
+    {
+      "id": "u19l01e10",
+      "type": "multipleChoice",
+      "prompt": "Why does it matter to spot yes/no facts in a problem?",
+      "options": [
+        "Because soon we'll let the computer act on yes/no facts",
+        "Because yes/no facts are the only facts that exist",
+        "Because numbers are not allowed anymore",
+        "Because it makes problems longer"
+      ],
+      "answer": 0,
+      "explanation": "Spotting the yes/no fact is step one. Soon the computer will read that fact and make a choice from it."
+    }
+  ]
+}

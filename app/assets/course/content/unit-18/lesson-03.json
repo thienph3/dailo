@@ -1,0 +1,123 @@
+{
+  "unitId": "u18",
+  "lessonId": "u18l03",
+  "title": "Loop back: split the bill evenly",
+  "idea": "REVIEW. Store->compute->report using // (floor division). Interleaves variables with integer division from Lap 1.",
+  "problem": "A bill of 60 is split evenly between 4 friends. Report how much each friend pays.",
+  "exercises": [
+    {
+      "id": "u18l03e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: A bill of 60 split evenly between 4 friends. Report each friend's share.\n\nWhat is the OUTPUT?",
+      "options": [
+        "A sentence showing each friend's share",
+        "The bill, 60",
+        "The number of friends, 4",
+        "The word bill"
+      ],
+      "answer": 0,
+      "explanation": "Output = each friend's share, reported in a sentence."
+    },
+    {
+      "id": "u18l03e02",
+      "type": "multiSelect",
+      "uepcc": "U",
+      "prompt": "What are the INPUTS? Pick all.",
+      "options": [
+        "The total bill (60)",
+        "The number of friends (4)",
+        "The word share",
+        "The restaurant name"
+      ],
+      "answer": [0, 1],
+      "explanation": "Two inputs: the bill (60) and the friend count (4)."
+    },
+    {
+      "id": "u18l03e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example by hand. 60 split 4 ways — each friend pays?",
+      "options": ["15", "240", "64", "56"],
+      "answer": 0,
+      "explanation": "60 / 4 = 15. That is your check value."
+    },
+    {
+      "id": "u18l03e04",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Plan. The bill divides evenly, so we want a whole-number share. Which operator gives a whole-number result?",
+      "options": ["//", "+", "*", "-"],
+      "answer": 0,
+      "explanation": "// is floor division — it gives a whole-number result. Since 60 divides evenly by 4, // gives exactly 15."
+    },
+    {
+      "id": "u18l03e05",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Put the plan steps in order (store, compute, report).",
+      "blocks": [
+        "Divide the bill by the number of friends",
+        "Remember the bill and the friend count",
+        "Report each friend's share"
+      ],
+      "answer": [1, 0, 2],
+      "explanation": "Store the inputs, compute the share, then report it."
+    },
+    {
+      "id": "u18l03e06",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code it. Arrange the lines.",
+      "blocks": [
+        "share = bill // friend_count",
+        "bill = 60",
+        "friend_count = 4",
+        "print(f\"Each pays {share}\")"
+      ],
+      "answer": [1, 2, 0, 3],
+      "explanation": "Store bill, store friend_count, compute share with //, report it. Both numbers are named variables."
+    },
+    {
+      "id": "u18l03e07",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Complete the compute step:\n\nbill = 60\nfriend_count = 4\nshare = bill ____ friend_count\nprint(f\"Each pays {share}\")",
+      "answer": "//",
+      "acceptable": ["//"],
+      "explanation": "Use // for a whole-number share. share becomes 15."
+    },
+    {
+      "id": "u18l03e08",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "It prints 'Each pays 15'. Your example said 15. Verdict?",
+      "options": ["Passes", "Fails", "Can't tell", "Rewrite the code"],
+      "answer": 0,
+      "explanation": "Computed 15 matches the hand example 15 — correct."
+    },
+    {
+      "id": "u18l03e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "New inputs: bill = 100, friend_count = 5. What does it print?",
+      "options": ["Each pays 20", "Each pays 15", "Each pays 500", "Each pays 95"],
+      "answer": 0,
+      "explanation": "100 // 5 = 20. Works for fresh numbers."
+    },
+    {
+      "id": "u18l03e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Tricky new inputs: bill = 61, friend_count = 4. With // what does it print?",
+      "options": [
+        "Each pays 15",
+        "Each pays 15.25",
+        "Each pays 16",
+        "Each pays 61"
+      ],
+      "answer": 0,
+      "explanation": "61 // 4 = 15 — // throws away the remainder and keeps the whole part. Knowing your tool's behavior is part of Check."
+    }
+  ]
+}

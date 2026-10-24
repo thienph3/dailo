@@ -1,0 +1,134 @@
+{
+  "unitId": "u40",
+  "lessonId": "u40l01",
+  "title": "A counter: a number that grows each pass",
+  "idea": "Meet the counter: a variable that starts at 0 and goes up by 1 each pass. Visible output.",
+  "exercises": [
+    {
+      "id": "u40l01e01",
+      "type": "multipleChoice",
+      "prompt": "A counter is a variable we use to count passes. What value should it start at before the loop?",
+      "options": [
+        "0",
+        "1",
+        "the loop's range",
+        "it doesn't matter"
+      ],
+      "answer": 0,
+      "explanation": "A counter starts at 0 — nothing has been counted yet. You set it before the loop begins."
+    },
+    {
+      "id": "u40l01e02",
+      "type": "multipleChoice",
+      "prompt": "What does count = count + 1 do?",
+      "options": [
+        "Adds 1 to count and stores the result back in count",
+        "Prints count",
+        "Resets count to 1",
+        "Multiplies count by 1"
+      ],
+      "answer": 0,
+      "explanation": "It takes the current count and makes it one bigger. Each pass nudges the counter up by one."
+    },
+    {
+      "id": "u40l01e03",
+      "type": "multipleChoice",
+      "prompt": "What shows?\n\ncount = 0\nfor i in range(3):\n    count = count + 1\nprint(count)",
+      "options": [
+        "3",
+        "0",
+        "2",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "The counter goes 0 -> 1 -> 2 -> 3 across three passes, then prints 3."
+    },
+    {
+      "id": "u40l01e04",
+      "type": "trueFalse",
+      "prompt": "The counter must be created BEFORE the loop, not inside it.",
+      "answer": true,
+      "explanation": "True. If you reset it inside the loop it would go back to 0 every pass and never grow."
+    },
+    {
+      "id": "u40l01e05",
+      "type": "multipleChoice",
+      "prompt": "After the loop, count holds 3. What does 3 tell us here?",
+      "options": [
+        "How many times the loop ran",
+        "The last value of i",
+        "A random number",
+        "The range stop"
+      ],
+      "answer": 0,
+      "explanation": "It is the number of passes the loop made — the counter counted them."
+    },
+    {
+      "id": "u40l01e06",
+      "type": "orderBlocks",
+      "prompt": "Arrange a loop that counts 4 passes and prints the count.",
+      "blocks": [
+        "    count = count + 1",
+        "count = 0",
+        "print(count)",
+        "for i in range(4):"
+      ],
+      "answer": [
+        1,
+        3,
+        0,
+        2
+      ],
+      "explanation": "Start the counter at 0, loop four times adding 1, then print the final count (4)."
+    },
+    {
+      "id": "u40l01e07",
+      "type": "fillBlank",
+      "prompt": "Fill the start value for a counter:\n\ncount = ____\nfor i in range(5):\n    count = count + 1\nprint(count)",
+      "answer": "0",
+      "acceptable": [
+        "0"
+      ],
+      "explanation": "A counter starts at 0 so the count is honest — nothing counted yet."
+    },
+    {
+      "id": "u40l01e08",
+      "type": "multipleChoice",
+      "prompt": "What shows?\n\ncount = 0\nfor i in range(5):\n    count = count + 1\nprint(count)",
+      "options": [
+        "5",
+        "0",
+        "4",
+        "15"
+      ],
+      "answer": 0,
+      "explanation": "Five passes, each adds 1, so count ends at 5."
+    },
+    {
+      "id": "u40l01e09",
+      "type": "multipleChoice",
+      "prompt": "Why start the counter OUTSIDE the loop?",
+      "options": [
+        "So it keeps its value across every pass",
+        "To make it faster",
+        "To skip the first pass",
+        "There is no reason"
+      ],
+      "answer": 0,
+      "explanation": "It must survive across passes. Starting it inside would reset it to 0 every time."
+    },
+    {
+      "id": "u40l01e10",
+      "type": "multipleChoice",
+      "prompt": "A loop runs range(10) and adds 1 to a counter each pass. What is the final count?",
+      "options": [
+        "10",
+        "9",
+        "0",
+        "11"
+      ],
+      "answer": 0,
+      "explanation": "Ten passes, plus one each, counting from 0: the counter ends at 10."
+    }
+  ]
+}

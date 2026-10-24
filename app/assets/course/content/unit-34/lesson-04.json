@@ -1,0 +1,125 @@
+{
+  "unitId": "u34",
+  "lessonId": "u34l04",
+  "title": "Loop back: reacting to user input",
+  "idea": "LOOP. No new concept. Review input(), int() conversion, and branching on the answer, including odd answers via else.",
+  "exercises": [
+    {
+      "id": "u34l04e01",
+      "type": "multipleChoice",
+      "prompt": "What type does input() always give back?",
+      "options": [
+        "Text (a string)",
+        "A number",
+        "True or False",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "input() returns text even for typed digits. Convert with int() for number math. (Review of input.)"
+    },
+    {
+      "id": "u34l04e02",
+      "type": "multipleChoice",
+      "prompt": "The user types 9. What prints?\n\nn = int(input(\"n: \"))\nif n >= 10:\n    print(\"Big\")\nelse:\n    print(\"Small\")",
+      "options": [
+        "Small",
+        "Big",
+        "9",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "9 >= 10 is false, so else prints 'Small'. int() made the comparison numeric. (Review of input + if/else.)"
+    },
+    {
+      "id": "u34l04e03",
+      "type": "fillBlank",
+      "prompt": "Fill the conversion so the comparison is numeric:\n\nage = ____(input(\"Age: \"))\nif age >= 18:\n    print(\"Adult\")",
+      "answer": "int",
+      "acceptable": ["int"],
+      "explanation": "int() turns the typed text into a number for the >= test. (Review of int().)"
+    },
+    {
+      "id": "u34l04e04",
+      "type": "multipleChoice",
+      "prompt": "The user types 'maybe'. What prints?\n\nanswer = input(\"yes/no? \")\nif answer == \"yes\":\n    print(\"OK\")\nelse:\n    print(\"Not yes\")",
+      "options": [
+        "Not yes",
+        "OK",
+        "maybe",
+        "An error"
+      ],
+      "answer": 0,
+      "explanation": "'maybe' is not 'yes', so the else catches the odd answer: 'Not yes'. (Review of else for odd answers.)"
+    },
+    {
+      "id": "u34l04e05",
+      "type": "trueFalse",
+      "prompt": "You must ask with input() before you can use the answer in a later line.",
+      "answer": true,
+      "explanation": "A variable needs a value before it is used. Ask first, then use. (Review of ask-before-use.)"
+    },
+    {
+      "id": "u34l04e06",
+      "type": "multipleChoice",
+      "prompt": "Why does 'if age >= 18' fail when age came from input() without int()?",
+      "options": [
+        "age is still text, so comparing it to the number 18 does not behave as intended",
+        "18 is too small",
+        ">= is invalid",
+        "It works fine"
+      ],
+      "answer": 0,
+      "explanation": "Text vs number is a mismatch. Convert with int() first. (Review of the classic input bug.)"
+    },
+    {
+      "id": "u34l04e07",
+      "type": "orderBlocks",
+      "prompt": "Order the lines so the greeting works.",
+      "blocks": [
+        "name = input(\"Name: \")",
+        "print(\"Hi, \" + name)"
+      ],
+      "answer": [0, 1],
+      "explanation": "Ask first, then use the answer. (Review of order with input.)"
+    },
+    {
+      "id": "u34l04e08",
+      "type": "multipleChoice",
+      "prompt": "The user types 'Yes'. What prints?\n\nanswer = input(\"Agree? \")\nif answer == \"yes\":\n    print(\"Great\")\nelse:\n    print(\"No\")",
+      "options": [
+        "No - 'Yes' is not exactly 'yes'",
+        "Great",
+        "An error",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "String == is case-sensitive, so 'Yes' falls to else. (Review of case sensitivity.)"
+    },
+    {
+      "id": "u34l04e09",
+      "type": "multipleChoice",
+      "prompt": "To accept both 'yes' and 'Yes', the condition should be...",
+      "options": [
+        "answer == \"yes\" or answer == \"Yes\"",
+        "answer == \"yes\" and answer == \"Yes\"",
+        "answer == \"yes\" or \"Yes\"",
+        "answer = \"yes\""
+      ],
+      "answer": 0,
+      "explanation": "Two full comparisons joined by 'or'. (Review of or + case handling.)"
+    },
+    {
+      "id": "u34l04e10",
+      "type": "multipleChoice",
+      "prompt": "The user types 5 and the code does 'int(input(\"n: \")) * 2'. What is the result?",
+      "options": [
+        "10",
+        "52",
+        "\"55\"",
+        "An error"
+      ],
+      "answer": 0,
+      "explanation": "int() makes it the number 5, and 5 * 2 is 10. Without int() you would not get number math. (Review of int() + arithmetic.)"
+    }
+  ]
+}

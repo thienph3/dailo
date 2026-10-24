@@ -1,0 +1,102 @@
+{
+  "unitId": "u03",
+  "lessonId": "u03l04",
+  "title": "Solve it: a recipe with a blank line",
+  "idea": "GUIDED PROBLEM. Report a title then steps, using an empty print() to add a blank line for readability. Blank lines are part of the output plan.",
+  "problem": "Show a recipe: the title Tea, then a blank line, then two steps — boil water, add tea bag.",
+  "exercises": [
+    {
+      "id": "u03l04e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: Show the title Tea, a blank line, then two steps (boil water, add tea bag).\n\nHow many lines of output in total (counting the blank line)?",
+      "options": ["4", "3", "2", "1"],
+      "answer": 0,
+      "explanation": "Title (1) + blank line (1) + two steps (2) = 4 lines. The blank line counts as a line."
+    },
+    {
+      "id": "u03l04e02",
+      "type": "trueFalse",
+      "uepcc": "U",
+      "prompt": "A blank line is still a line of output.",
+      "answer": true,
+      "explanation": "Yes. An empty line takes up a line on screen — it is part of the output you planned."
+    },
+    {
+      "id": "u03l04e03",
+      "type": "orderBlocks",
+      "uepcc": "E",
+      "prompt": "Example. Work the output by hand. Put these pieces in the order they should appear (the blank line is the gap).",
+      "blocks": ["Tea", "(blank line)", "boil water", "add tea bag"],
+      "answer": [0, 1, 2, 3],
+      "explanation": "Title, then the blank gap, then step one, then step two. This is the exact output to match."
+    },
+    {
+      "id": "u03l04e04",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Plan: which tool makes the blank line in the middle?",
+      "options": ["An empty print()", "A missing line", "A space inside quotes only", "There is no way"],
+      "answer": 0,
+      "explanation": "print() with nothing inside shows a blank line. You met this in Unit 1."
+    },
+    {
+      "id": "u03l04e05",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Plan: how many print instructions total (including the blank one)?",
+      "options": ["Four", "Three", "Two", "One"],
+      "answer": 0,
+      "explanation": "Title, blank, and two steps = four print instructions, one per line."
+    },
+    {
+      "id": "u03l04e06",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code. Arrange the lines: title, blank, then the two steps.",
+      "blocks": ["print(\"boil water\")", "print(\"Tea\")", "print()", "print(\"add tea bag\")"],
+      "answer": [1, 2, 0, 3],
+      "explanation": "print(\"Tea\"), then print() for the gap, then the two step lines in order."
+    },
+    {
+      "id": "u03l04e07",
+      "type": "tapTokens",
+      "uepcc": "C",
+      "prompt": "Build the instruction that makes the blank line.",
+      "tokens": ["print", "(", ")"],
+      "answer": ["print", "(", ")"],
+      "explanation": "print() with empty brackets shows a blank line — nothing between the brackets."
+    },
+    {
+      "id": "u03l04e08",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check. The output is:\n\nTea\n\nboil water\nadd tea bag\n\nMatches your example?",
+      "options": ["Yes — title, gap, two steps, in order", "No — no gap appears", "No — a step is missing", "Can't tell"],
+      "answer": 0,
+      "explanation": "The blank line sits between the title and the steps, just as planned. Check passes."
+    },
+    {
+      "id": "u03l04e09",
+      "type": "trueFalse",
+      "uepcc": "Check",
+      "prompt": "If you forgot the empty print(), the title and the first step would end up on back-to-back lines with no gap.",
+      "answer": true,
+      "explanation": "Right. Removing the blank print removes the gap — the output no longer matches the example."
+    },
+    {
+      "id": "u03l04e10",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Why add a blank line at all?",
+      "options": [
+        "To space the output out so it is easier to read",
+        "To make the program run faster",
+        "To delete the title",
+        "It is required by every program"
+      ],
+      "answer": 0,
+      "explanation": "Blank lines are for readability — they separate parts of the output cleanly."
+    }
+  ]
+}

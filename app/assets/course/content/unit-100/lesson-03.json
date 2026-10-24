@@ -1,0 +1,156 @@
+{
+  "unitId": "u100",
+  "lessonId": "u100l03",
+  "title": "Grand finale: split a bill with tip",
+  "idea": "GUIDED FINALE. A multi-step money problem: add a tip, then split among friends — every number named, order of steps chosen with care.",
+  "problem": "A bill is 80, add a 10% tip, then split it among 3 friends (each pays 29.33...).",
+  "exercises": [
+    {
+      "id": "u100l03e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: bill 80, +10% tip, split by 3. OUTPUT is...",
+      "options": [
+        "Each friend's share (one number)",
+        "The tip only",
+        "The bill only",
+        "The count of friends"
+      ],
+      "answer": 0,
+      "explanation": "Output is each person's share after tip. Several steps lead to one number."
+    },
+    {
+      "id": "u100l03e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "Which numbers from the problem must ALL appear as named values in the code?",
+      "options": [
+        "bill (80), tip rate (10% = 0.10), friends (3)",
+        "Only the bill",
+        "Only the friends",
+        "Just 80 and 3"
+      ],
+      "answer": 0,
+      "explanation": "Every stated number maps to a variable: bill, tip rate, friend count. The value-mapping rule — drop none, hardcode none loosely."
+    },
+    {
+      "id": "u100l03e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example by hand: 10% of 80 is 8, so the total with tip is...",
+      "options": [
+        "88",
+        "80",
+        "8",
+        "108"
+      ],
+      "answer": 0,
+      "explanation": "80 + 8 = 88. The tip is added before splitting."
+    },
+    {
+      "id": "u100l03e04",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Split 88 among 3 friends: 88 / 3 is about...",
+      "options": [
+        "29.33",
+        "29",
+        "26.67",
+        "88"
+      ],
+      "answer": 0,
+      "explanation": "88 / 3 = 29.33... Our check value (allowing for the repeating decimal). Tip first, THEN split."
+    },
+    {
+      "id": "u100l03e05",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Plan the order. Why tip before split? Order the steps.",
+      "blocks": [
+        "Split the total by the number of friends",
+        "Add the tip to the bill",
+        "Compute the tip as bill * tip rate",
+        "Show each share"
+      ],
+      "answer": [
+        2,
+        1,
+        0,
+        3
+      ],
+      "explanation": "Tip = bill * rate, add it, then divide by friends. Splitting before adding the tip would undercharge — order matters."
+    },
+    {
+      "id": "u100l03e06",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "How do we compute a 10% tip on the bill?",
+      "options": [
+        "tip = bill * 0.10",
+        "tip = bill / 10 / 10",
+        "tip = bill + 10",
+        "tip = bill * 10"
+      ],
+      "answer": 0,
+      "explanation": "10% is 0.10 as a fraction, so bill * 0.10 = 8. (bill * 10 would be a 1000% tip!)"
+    },
+    {
+      "id": "u100l03e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code it. Arrange the lines.",
+      "blocks": [
+        "total = bill + tip",
+        "share = total / friends",
+        "tip = bill * tip_rate",
+        "bill = 80"
+      ],
+      "answer": [
+        3,
+        2,
+        0,
+        1
+      ],
+      "explanation": "Name bill, compute tip, add for total, divide by friends. Each named value flows into the next step."
+    },
+    {
+      "id": "u100l03e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Complete the split step (total is 88, friends is 3):\n\nshare = total ____ friends",
+      "answer": "/",
+      "acceptable": [
+        "/"
+      ],
+      "explanation": "Divide the tipped total by the number of friends: 88 / 3 = 29.33..."
+    },
+    {
+      "id": "u100l03e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Run it: share is about 29.33. Hand said 29.33. Verdict?",
+      "options": [
+        "Passes",
+        "Fails",
+        "Unknown",
+        "Rewrite example"
+      ],
+      "answer": 0,
+      "explanation": "Matches. Tip added first, then split — a genuinely useful program with every value mapped."
+    },
+    {
+      "id": "u100l03e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Re-run with friends = 4 (same 88 total). Each share is...",
+      "options": [
+        "22",
+        "29.33",
+        "88",
+        "11"
+      ],
+      "answer": 0,
+      "explanation": "88 / 4 = 22. Change the friend count, the logic holds — because friends is a named variable, not hardcoded."
+    }
+  ]
+}

@@ -1,0 +1,126 @@
+{
+  "unitId": "u53",
+  "lessonId": "u53l06",
+  "title": "Predict the count",
+  "idea": "Pure prediction practice with len(), including len used in math and alongside printing the list. Thinking-heavy.",
+  "exercises": [
+    {
+      "id": "u53l06e01",
+      "type": "multipleChoice",
+      "prompt": "Predict:\n\nprint(len([2, 4, 6, 8, 10]))",
+      "options": [
+        "5",
+        "30",
+        "10",
+        "4"
+      ],
+      "answer": 0,
+      "explanation": "Five items, so len is 5. Count the commas-plus-one if it helps: four commas, five items."
+    },
+    {
+      "id": "u53l06e02",
+      "type": "multipleChoice",
+      "prompt": "Predict:\n\na = [1, 2, 3]\nb = [1, 2, 3, 4, 5]\nprint(len(a) + len(b))",
+      "options": [
+        "8",
+        "5",
+        "3",
+        "15"
+      ],
+      "answer": 0,
+      "explanation": "len(a) is 3 and len(b) is 5. 3 + 5 = 8. Counts are numbers, so you can add them."
+    },
+    {
+      "id": "u53l06e03",
+      "type": "multipleChoice",
+      "prompt": "Predict:\n\nb = [1, 2, 3, 4, 5]\nprint(len(b) - len([9, 9]))",
+      "options": [
+        "3",
+        "5",
+        "2",
+        "7"
+      ],
+      "answer": 0,
+      "explanation": "len(b) is 5, len([9, 9]) is 2. 5 - 2 = 3. You can mix stored lists and direct lists in one line."
+    },
+    {
+      "id": "u53l06e04",
+      "type": "multipleChoice",
+      "prompt": "Predict both lines:\n\nx = [7, 7, 7]\nprint(x)\nprint(len(x))",
+      "options": [
+        "[7, 7, 7] then 3",
+        "3 then [7, 7, 7]",
+        "21 then 3",
+        "[7, 7, 7] then 21"
+      ],
+      "answer": 0,
+      "explanation": "First print shows the whole list [7, 7, 7]; second shows its count, 3. len counts items, not their total."
+    },
+    {
+      "id": "u53l06e05",
+      "type": "fillBlank",
+      "prompt": "This should print 6. Fill in the missing list length by adding items:\n\nprint(len([1, 1, 1, 1, 1, ____]))",
+      "answer": "1",
+      "acceptable": ["1"],
+      "explanation": "Five items are shown; adding one more makes six items, so len is 6. (Any value in that last spot gives len 6; 1 keeps it simple.)"
+    },
+    {
+      "id": "u53l06e06",
+      "type": "trueFalse",
+      "prompt": "Predict: for m = [\"x\", \"y\"], print(len(m)) shows 2.",
+      "answer": true,
+      "explanation": "Two word-items, so len is 2. Words count the same as numbers."
+    },
+    {
+      "id": "u53l06e07",
+      "type": "multipleChoice",
+      "prompt": "Predict:\n\ndata = [3, 1, 4]\nprint(len(data) == 3)",
+      "options": [
+        "True",
+        "False",
+        "3",
+        "[3, 1, 4]"
+      ],
+      "answer": 0,
+      "explanation": "len(data) is 3, and 3 == 3 is True. len fits naturally into a comparison."
+    },
+    {
+      "id": "u53l06e08",
+      "type": "multipleChoice",
+      "prompt": "Predict:\n\nnums = [10, 20, 30]\nprint(len(nums) * 2)",
+      "options": [
+        "6",
+        "3",
+        "120",
+        "60"
+      ],
+      "answer": 0,
+      "explanation": "len(nums) is 3, times 2 is 6. The count is an ordinary number you can multiply."
+    },
+    {
+      "id": "u53l06e09",
+      "type": "orderBlocks",
+      "prompt": "Arrange code to print the list, then print how many items it has.",
+      "blocks": [
+        "colors = [\"red\", \"green\", \"blue\"]",
+        "print(colors)",
+        "print(len(colors))"
+      ],
+      "answer": [0, 1, 2],
+      "explanation": "Make the list, show it, then show its count. Output: ['red', 'green', 'blue'] then 3."
+    },
+    {
+      "id": "u53l06e10",
+      "type": "multipleChoice",
+      "prompt": "A program prints len(mystery) and shows 0. What must be true about mystery?",
+      "options": [
+        "It is an empty list",
+        "It has one item",
+        "Its first item is 0",
+        "Its items sum to 0"
+      ],
+      "answer": 0,
+      "explanation": "len is 0 only for an empty list. Reading a count of 0 back tells you the list holds nothing."
+    }
+  ]
+}

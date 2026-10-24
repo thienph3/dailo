@@ -1,0 +1,138 @@
+{
+  "unitId": "u89",
+  "lessonId": "u89l08",
+  "title": "Three running values at once",
+  "idea": "TOOL: scale up - a loop can carry three or more running values (total, count, and max) in one pass.",
+  "exercises": [
+    {
+      "type": "multipleChoice",
+      "prompt": "Can one loop carry THREE running values - a total, a count, and a biggest-so-far?",
+      "options": [
+        "Yes - just update all three each turn",
+        "No, two is the limit",
+        "Only with three loops",
+        "Never"
+      ],
+      "answer": 0,
+      "explanation": "There's no limit. Start three running values, update all three each turn, read all three at the end.",
+      "id": "u89l08e01"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\ntotal = 0\ncount = 0\nhigh = 0\nfor n in [4, 9, 2]:\n    total = total + n\n    count = count + 1\n    if n > high:\n        high = n\nprint(total, count, high)",
+      "options": [
+        "15 3 9",
+        "15 3 4",
+        "9 3 15",
+        "15 2 9"
+      ],
+      "answer": 0,
+      "explanation": "total = 4+9+2 = 15; count = 3; high tracks the biggest = 9. Three running values, one pass.",
+      "id": "u89l08e02"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Each of the three running values can update on a different rule in the same turn.",
+      "answer": true,
+      "explanation": "True. total adds the value, count adds one, high updates only if n is bigger. Independent rules, same loop.",
+      "id": "u89l08e03"
+    },
+    {
+      "type": "fillBlank",
+      "prompt": "Complete the max-tracking test (third running value):\n\nhigh = 0\nfor n in [3, 8, 1]:\n    if n ____ high:\n        high = n\nprint(high)",
+      "answer": ">",
+      "acceptable": [
+        ">"
+      ],
+      "explanation": "Keep n when it is GREATER than high so far. Output: 8.",
+      "id": "u89l08e04"
+    },
+    {
+      "type": "orderBlocks",
+      "prompt": "Arrange a loop tracking total, count, and high for [5, 10].",
+      "blocks": [
+        "total = 0",
+        "count = 0",
+        "high = 0",
+        "for n in [5, 10]:",
+        "    total = total + n",
+        "    count = count + 1",
+        "    if n > high:",
+        "        high = n",
+        "print(total, count, high)"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "explanation": "Three starts, three updates per turn, one print. Output: 15 2 10.",
+      "id": "u89l08e05"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "With total, count, and high ready, which report can you NOT make?",
+      "options": [
+        "The exact order items were entered",
+        "The sum",
+        "The average (total / count)",
+        "The biggest value"
+      ],
+      "answer": 0,
+      "explanation": "Running values summarise - they don't remember order. For order you'd keep the list itself. Sum, average, and max are all available.",
+      "id": "u89l08e06"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\ntotal = 0\ncount = 0\nhigh = 0\nfor n in [7]:\n    total = total + n\n    count = count + 1\n    if n > high:\n        high = n\nprint(total, count, high)",
+      "options": [
+        "7 1 7",
+        "7 1 0",
+        "0 1 7",
+        "7 0 7"
+      ],
+      "answer": 0,
+      "explanation": "One item: total 7, count 1, high 7. A single value fills every tracker at once.",
+      "id": "u89l08e07"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Adding a third running value is the same skill as the second - just one more variable to start and update.",
+      "answer": true,
+      "explanation": "True. Two or ten, the recipe is identical: initialise before, update inside. Multiple state scales freely.",
+      "id": "u89l08e08"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "A good habit when juggling three running values:",
+      "options": [
+        "List them and their starting values before writing the loop",
+        "Guess the starts later",
+        "Use the same name for all three",
+        "Skip starting values"
+      ],
+      "answer": 0,
+      "explanation": "Naming each running value and its start up front keeps the loop body clear and prevents 'forgot to update one' bugs.",
+      "id": "u89l08e09"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "The lesson:",
+      "options": [
+        "A single pass can carry as many running values as the problem needs",
+        "Three is too many",
+        "Each value needs its own loop",
+        "Multiple state is limited to two"
+      ],
+      "answer": 0,
+      "explanation": "One walk, several summaries. That's the full power of multiple state variables.",
+      "id": "u89l08e10"
+    }
+  ]
+}

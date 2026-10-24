@@ -1,0 +1,136 @@
+{
+  "unitId": "u80",
+  "lessonId": "u80l02",
+  "title": "The empty case",
+  "idea": "edge-case enumeration: an empty list is the classic edge case — ask 'what should happen when there's nothing?' before coding.",
+  "exercises": [
+    {
+      "type": "multipleChoice",
+      "prompt": "You're writing a plan to find the average of a list. What's the dangerous empty-case question?",
+      "options": [
+        "What happens if the list has NO numbers?",
+        "What if the list is very long?",
+        "What if numbers repeat?",
+        "What color is the list?"
+      ],
+      "answer": 0,
+      "explanation": "With no numbers, 'total divided by count' divides by zero. Asking this up front lets you plan a guard.",
+      "id": "u80l02e01"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Dividing a total by a count of zero is a problem you can predict and plan for.",
+      "answer": true,
+      "explanation": "Yes. The empty list means count is 0, and dividing by 0 breaks. A guard ('if the list is empty...') handles it.",
+      "id": "u80l02e02"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "For 'sum the numbers in a list', what is the right answer for an EMPTY list?",
+      "options": [
+        "0 — the total of nothing is zero",
+        "It should crash",
+        "The last number",
+        "1"
+      ],
+      "answer": 0,
+      "explanation": "Summing nothing gives 0. An accumulator starting at 0 naturally returns 0 for an empty list — no special guard needed.",
+      "id": "u80l02e03"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "For 'average the numbers', the empty list needs a GUARD because...",
+      "options": [
+        "You'd divide by zero, so you must decide what to do first",
+        "Averages are always wrong",
+        "Empty lists are impossible",
+        "Zero is not a number"
+      ],
+      "answer": 0,
+      "explanation": "Average = total / count. Count 0 can't be divided by. So you guard: if empty, say 'no scores' instead of dividing.",
+      "id": "u80l02e04"
+    },
+    {
+      "type": "matchPairs",
+      "prompt": "Match each task to its correct empty-list result.",
+      "pairs": [
+        {
+          "left": "Sum of an empty list",
+          "right": "0"
+        },
+        {
+          "left": "Count of an empty list",
+          "right": "0"
+        },
+        {
+          "left": "Average of an empty list",
+          "right": "needs a guard (can't divide)"
+        }
+      ],
+      "explanation": "Summing or counting nothing is 0 naturally. Averaging nothing needs a decision — a guard — because of the divide.",
+      "id": "u80l02e05"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Every task breaks on an empty list.",
+      "answer": false,
+      "explanation": "No. Sum and count handle empty fine (they give 0). Only tasks that divide by the count (like average) need a guard.",
+      "id": "u80l02e06"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "REVIEW: we already met the 'empty guard' with which task?",
+      "options": [
+        "Average of a list",
+        "Printing a message",
+        "Doubling a number",
+        "Comparing two numbers"
+      ],
+      "answer": 0,
+      "explanation": "The average + empty guard was taught earlier. Enumerating the empty case here makes that guard a deliberate habit.",
+      "id": "u80l02e07"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Best place to decide the empty-list behavior is...",
+      "options": [
+        "In the plan, before writing the loop",
+        "After it crashes once",
+        "Never",
+        "Only in the last line"
+      ],
+      "answer": 0,
+      "explanation": "Decide in the plan. 'If empty, do X; otherwise loop' is a cleaner design than patching after a crash.",
+      "id": "u80l02e08"
+    },
+    {
+      "type": "orderBlocks",
+      "prompt": "Order a plan that handles the empty case for an average.",
+      "blocks": [
+        "If the list is empty, report 'no scores'",
+        "Otherwise, add up the numbers",
+        "Divide the total by how many there are"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Check empty FIRST, then (otherwise) sum and divide. The guard protects the divide from a zero count.",
+      "id": "u80l02e09"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "The big idea:",
+      "options": [
+        "Ask 'what if it's empty?' first — sum/count give 0, but dividing needs a guard",
+        "Empty lists always crash",
+        "Ignore empty lists",
+        "Empty means the number zero"
+      ],
+      "answer": 0,
+      "explanation": "The empty case is the first edge to enumerate. Know which tasks handle it freely and which need a guard.",
+      "id": "u80l02e10"
+    }
+  ]
+}

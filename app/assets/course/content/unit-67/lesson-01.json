@@ -1,0 +1,145 @@
+{
+  "unitId": "u67",
+  "lessonId": "u67l01",
+  "title": "Fix it: the total that's too high",
+  "idea": "GUIDED BUG-FIX (sum). A summing loop starts the total at the wrong value. Walk UEPCC to find and fix it.",
+  "problem": "This code should print the total of the prices [4, 6, 10], which is 20. Instead it prints 25. Find and fix the bug.",
+  "exercises": [
+    {
+      "id": "u67l01e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "BROKEN CODE:\n\ntotal = 5\nfor price in [4, 6, 10]:\n    total = total + price\nprint(total)\n\nIt prints 25 but should print 20. First — Understand. What is this code SUPPOSED to produce?",
+      "options": [
+        "The total of all the prices",
+        "The biggest price",
+        "How many prices there are",
+        "The first price"
+      ],
+      "answer": 0,
+      "explanation": "Start by naming the intended OUTPUT: the total of the prices. Only then can you judge whether 25 is right or wrong."
+    },
+    {
+      "id": "u67l01e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "Still understanding. What are the INPUTS the code works from?",
+      "options": [
+        "The list of prices [4, 6, 10]",
+        "Only the number 5",
+        "The word 'total'",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "The input is the list of prices. Note the 5 is NOT an input, it's a starting value the code set, and that's where we'll look."
+    },
+    {
+      "id": "u67l01e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example. Work the CORRECT answer by hand: what is 4 + 6 + 10?",
+      "options": [
+        "20",
+        "25",
+        "16",
+        "30"
+      ],
+      "answer": 0,
+      "explanation": "4 + 6 + 10 = 20. This hand-worked value is your target; the code's 25 is 5 too high, which is a strong clue."
+    },
+    {
+      "id": "u67l01e04",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "The code prints 25; your hand answer is 20. The gap is exactly 5. Which bug family does a 'constant offset' point to?",
+      "options": [
+        "a wrong starting value",
+        "an off-by-one range",
+        "a missing print",
+        "an empty list"
+      ],
+      "answer": 0,
+      "explanation": "An answer that's off by a fixed amount is the fingerprint of a wrong START. The total began at 5 instead of 0, adding a phantom 5."
+    },
+    {
+      "id": "u67l01e05",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Plan the fix. A loop that ADDS up numbers must start the total at...",
+      "options": [
+        "0",
+        "5",
+        "the first price",
+        "the length"
+      ],
+      "answer": 0,
+      "explanation": "A sum starts at 0, meaning 'nothing added yet'. The fix is to change 'total = 5' to 'total = 0'."
+    },
+    {
+      "id": "u67l01e06",
+      "type": "trueFalse",
+      "uepcc": "P",
+      "prompt": "The loop body 'total = total + price' is correct, so the fix is in the setup line above the loop, not inside it.",
+      "answer": true,
+      "explanation": "Right. The adding is fine; only the starting value is wrong. Fix the one line 'total = 5' and leave the loop alone."
+    },
+    {
+      "id": "u67l01e07",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Write the corrected starting line:\n\ntotal = ____\nfor price in [4, 6, 10]:\n    total = total + price\nprint(total)",
+      "answer": "0",
+      "acceptable": [
+        "0"
+      ],
+      "explanation": "A sum starts at 0. Now total goes 0, 4, 10, 20, so it prints 20 — exactly the hand answer."
+    },
+    {
+      "id": "u67l01e08",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Arrange the FIXED code (start at 0, add each price, print once).",
+      "blocks": [
+        "total = 0",
+        "for price in [4, 6, 10]:",
+        "    total = total + price",
+        "print(total)"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "Set up total = 0 once, add every price inside the loop, print after. This is the correct summing shape."
+    },
+    {
+      "id": "u67l01e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check. After the fix the code prints 20. Your hand answer was 20. So...",
+      "options": [
+        "It passes — fixed output matches the hand example",
+        "It still fails",
+        "You can't tell",
+        "You must change the example"
+      ],
+      "answer": 0,
+      "explanation": "Fixed output (20) equals the hand result (20), so the repair is correct. That's what Check confirms."
+    },
+    {
+      "id": "u67l01e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Re-check with fresh inputs to prove the fix generalizes: prices = [2, 3], total = 0. What prints now?",
+      "options": [
+        "5",
+        "7",
+        "2",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "2 + 3 = 5, with no phantom offset. A good fix works for new inputs too — you repaired it, not just patched one case."
+    }
+  ]
+}

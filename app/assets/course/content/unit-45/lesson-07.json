@@ -1,0 +1,132 @@
+{
+  "unitId": "u45",
+  "lessonId": "u45l07",
+  "title": "Loops that run zero times",
+  "idea": "A while loop checks its condition first, so it may not run at all.",
+  "exercises": [
+    {
+      "type": "multipleChoice",
+      "prompt": "A while loop checks its condition BEFORE the first pass. What if the condition is false right away?",
+      "options": [
+        "The loop body runs zero times",
+        "The loop runs once anyway",
+        "Python raises an error",
+        "It runs forever"
+      ],
+      "answer": 0,
+      "explanation": "while tests first. If the condition starts false, the body is skipped entirely -- zero passes.",
+      "id": "u45l07e01"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "What shows?\n\ni = 5\nwhile i < 3:\n    print(i)\nprint(\"done\")",
+      "options": [
+        "done",
+        "5\ndone",
+        "nothing",
+        "5"
+      ],
+      "answer": 0,
+      "explanation": "5 < 3 is false from the start, so the loop body never runs. Only the line after the loop, 'done', prints.",
+      "id": "u45l07e02"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "A while loop always runs at least once.",
+      "answer": false,
+      "explanation": "False. Because it checks first, a while loop can run zero times if the condition starts false.",
+      "id": "u45l07e03"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Why is 'runs zero times' sometimes exactly what you want?",
+      "options": [
+        "If there's nothing to do, the loop should do nothing",
+        "Loops must always run",
+        "It saves the screen",
+        "Zero is an error"
+      ],
+      "answer": 0,
+      "explanation": "A loop over 'remaining items' should do nothing when there are none. Checking first makes that natural and safe.",
+      "id": "u45l07e04"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "What shows?\n\nn = 0\nwhile n > 0:\n    print(n)\n    n = n - 1\nprint(\"empty\")",
+      "options": [
+        "empty",
+        "0\nempty",
+        "nothing",
+        "empty\n0"
+      ],
+      "answer": 0,
+      "explanation": "n > 0 is false at the start (0 > 0 is false), so the body is skipped. Only 'empty' prints.",
+      "id": "u45l07e05"
+    },
+    {
+      "type": "multiSelect",
+      "prompt": "Which while loops run their body ZERO times?",
+      "options": [
+        "i = 10\nwhile i < 5:\n    print(i)",
+        "i = 0\nwhile i > 0:\n    print(i)",
+        "i = 1\nwhile i < 5:\n    i = i + 1",
+        "i = 3\nwhile i == 3:\n    i = i + 1"
+      ],
+      "answer": [
+        0,
+        1
+      ],
+      "explanation": "First two have conditions false at the start, so zero passes. The last two are true at the start and do run.",
+      "id": "u45l07e06"
+    },
+    {
+      "type": "orderBlocks",
+      "prompt": "Order these outcomes from fewest to most passes for i starting at 2.",
+      "blocks": [
+        "while i > 5: (0 passes)",
+        "while i < 3: (1 pass, then update to 3)",
+        "while i < 5: (3 passes)"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "i = 2: i > 5 is false (0 passes); i < 3 runs once; i < 5 runs for 2,3,4 (3 passes). Checking first explains all three.",
+      "id": "u45l07e07"
+    },
+    {
+      "type": "fillBlank",
+      "prompt": "Make this loop run ZERO times by choosing a start value. Fill the start so the body is skipped:\n\ni = ____\nwhile i < 3:\n    print(i)",
+      "answer": "3",
+      "acceptable": [
+        "3",
+        "4",
+        "5",
+        "10"
+      ],
+      "explanation": "Any start that already fails i < 3 works -- e.g. i = 3 makes 3 < 3 false, so the body never runs.",
+      "id": "u45l07e08"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Because while checks first, you can safely write a loop even when it might have nothing to do.",
+      "answer": true,
+      "explanation": "True. The check-first behavior means an empty case simply skips the body -- no special handling needed.",
+      "id": "u45l07e09"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "'Check the condition first' means a while loop is good for...",
+      "options": [
+        "Work that might not need to happen at all",
+        "Work that must happen exactly once",
+        "Printing forever",
+        "Only counting up"
+      ],
+      "answer": 0,
+      "explanation": "When the job might be empty, checking first lets the loop do nothing gracefully. That's a feature, not a bug.",
+      "id": "u45l07e10"
+    }
+  ]
+}

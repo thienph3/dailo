@@ -1,0 +1,156 @@
+{
+  "unitId": "u61",
+  "lessonId": "u61l09",
+  "title": "Solve it together: best and worst score",
+  "idea": "GUIDED via UEPCC. Find BOTH max and min of one list with two best-so-far trackers in one loop.",
+  "problem": "Test scores are [72, 55, 90, 63]. Show both the best (highest) and the worst (lowest) score.",
+  "exercises": [
+    {
+      "id": "u61l09e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: scores [72, 55, 90, 63]. Show the best AND the worst.\n\nHow many OUTPUTS are there?",
+      "options": [
+        "Two — a highest and a lowest",
+        "One — just the highest",
+        "One — the total",
+        "Four — one per score"
+      ],
+      "answer": 0,
+      "explanation": "The problem asks for two values: the max and the min. Two outputs mean two trackers."
+    },
+    {
+      "id": "u61l09e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "Which two patterns do you need?",
+      "options": [
+        "Max for the best, min for the worst",
+        "Sum and count",
+        "Two sums",
+        "Max only"
+      ],
+      "answer": 0,
+      "explanation": "Best = biggest (max), worst = smallest (min). Both are the same best-so-far pattern, flipped."
+    },
+    {
+      "id": "u61l09e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example by hand. For [72, 55, 90, 63], what are the best and worst?",
+      "options": [
+        "best 90, worst 55",
+        "best 55, worst 90",
+        "best 90, worst 63",
+        "best 72, worst 55"
+      ],
+      "answer": 0,
+      "explanation": "90 is the highest, 55 is the lowest. These two values are your check values."
+    },
+    {
+      "id": "u61l09e04",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Plan. How can you get both in ONE walk of the list?",
+      "options": [
+        "Keep two best-so-far variables and update each with its own if",
+        "You can't — you need two lists",
+        "Sum then divide",
+        "Count then multiply"
+      ],
+      "answer": 0,
+      "explanation": "Two trackers (one with >, one with <) updated in the same loop give both answers in one pass."
+    },
+    {
+      "id": "u61l09e05",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Put the plan in order.",
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "blocks": [
+        "Start both best and worst at the first score",
+        "For each score: if bigger, update best; if smaller, update worst",
+        "Show best and worst"
+      ],
+      "explanation": "Start both at the first value, update each on its own rule, then show both."
+    },
+    {
+      "id": "u61l09e06",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code it. Arrange the lines.",
+      "answer": [
+        1,
+        4,
+        6,
+        3,
+        2,
+        0,
+        5,
+        7
+      ],
+      "blocks": [
+        "    if s < worst:",
+        "best = scores[0]",
+        "        best = s",
+        "    if s > best:",
+        "worst = scores[0]",
+        "        worst = s",
+        "for s in scores:",
+        "print(best, worst)"
+      ],
+      "explanation": "Start best and worst at the first score, loop, update best on bigger and worst on smaller, then print both."
+    },
+    {
+      "id": "u61l09e07",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Finish the worst-tracking test:\n\nfor s in scores:\n    if s > best:\n        best = s\n    if s ____ worst:\n        worst = s",
+      "answer": "<",
+      "acceptable": [
+        "<"
+      ],
+      "explanation": "worst is the smallest, so its test is <. best uses >; the two ifs run side by side."
+    },
+    {
+      "id": "u61l09e08",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check. The code prints '90 55'. Your hand example said best 90, worst 55. So...",
+      "options": [
+        "It passes — both match",
+        "It fails",
+        "You can't tell",
+        "Change the example"
+      ],
+      "answer": 0,
+      "explanation": "Both outputs match the hand values, so the combined max/min solution is correct."
+    },
+    {
+      "id": "u61l09e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "New input: scores = [40, 40, 40]. What prints?",
+      "options": [
+        "40 40 — best and worst are both 40",
+        "40 0",
+        "120 40",
+        "An error"
+      ],
+      "answer": 0,
+      "explanation": "All equal, so best and worst are both 40. Both trackers start there and never change."
+    },
+    {
+      "id": "u61l09e10",
+      "type": "trueFalse",
+      "uepcc": "Check",
+      "prompt": "Tracking the best and worst in one loop is just two copies of the same best-so-far pattern.",
+      "answer": true,
+      "explanation": "One tracker with >, one with <. Max and min are the same idea, so combining them is natural."
+    }
+  ]
+}

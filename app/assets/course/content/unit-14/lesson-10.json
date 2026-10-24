@@ -1,0 +1,122 @@
+{
+  "unitId": "u14",
+  "lessonId": "u14l10",
+  "title": "Mixed practice: pick the right tool",
+  "idea": "REVIEW-HEAVY final lesson. Interleaves every number tool from this unit and earlier (+ - * /, //, %, parentheses) across small problems. The core skill practiced is CHOOSING the right operation and order, with a couple of short code steps.",
+  "problem": "Several tiny number problems, each solved by choosing the right operation, order, and brackets.",
+  "exercises": [
+    {
+      "id": "u14l10e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "Problem: 'How many left over when 22 pencils are shared among 4 kids?' What is the OUTPUT asking for?",
+      "options": [
+        "The remainder after equal sharing",
+        "How many each kid gets",
+        "The total pencils",
+        "The number of kids"
+      ],
+      "answer": 0,
+      "explanation": "'Left over' always means the remainder. Naming the output points you at the operator."
+    },
+    {
+      "id": "u14l10e02",
+      "type": "matchPairs",
+      "uepcc": "P",
+      "prompt": "Match each question to the operation that answers it.",
+      "pairs": [
+        { "left": "How many left over?", "right": "%" },
+        { "left": "How many full groups?", "right": "//" },
+        { "left": "Total of many same items?", "right": "*" },
+        { "left": "How much change?", "right": "-" }
+      ],
+      "explanation": "Choosing the operation IS the plan. These four cover most small number problems."
+    },
+    {
+      "id": "u14l10e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "By hand: 22 pencils among 4 kids. What is 22 % 4?",
+      "options": ["2", "5", "4", "0"],
+      "answer": 0,
+      "explanation": "4 kids x 5 each = 20, 22 - 20 = 2 left. 22 % 4 = 2."
+    },
+    {
+      "id": "u14l10e04",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Problem: total of 5 tickets at 8 each, PLUS a 3 booking fee. Which code is right?",
+      "options": [
+        "total = ticket_count * ticket_price + fee",
+        "total = ticket_count + ticket_price * fee",
+        "total = (ticket_count + ticket_price) * fee",
+        "total = ticket_count * (ticket_price + fee)"
+      ],
+      "answer": 0,
+      "explanation": "Multiply the tickets first (5 * 8 = 40), then add the one-off fee: 40 + 3 = 43. Here * runs before + naturally, so no brackets are needed."
+    },
+    {
+      "id": "u14l10e05",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Problem: average of three test scores. Which code is right?",
+      "options": [
+        "average = (a + b + c) / 3",
+        "average = a + b + c / 3",
+        "average = a + b + c * 3",
+        "average = a + (b + c) / 3"
+      ],
+      "answer": 0,
+      "explanation": "Add ALL the scores first, then divide by 3 — so the whole sum needs brackets. Without them, only c would be divided."
+    },
+    {
+      "id": "u14l10e06",
+      "type": "trueFalse",
+      "uepcc": "P",
+      "prompt": "Review: in 2 + 3 * 4, the multiply happens before the add.",
+      "answer": true,
+      "explanation": "Yes — * runs before +, giving 2 + 12 = 14. Use brackets when you need the add first."
+    },
+    {
+      "id": "u14l10e07",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Problem: how many whole weeks in 45 days? Complete it:\n\ndays = 45\ndays_per_week = 7\nweeks = days ____ days_per_week",
+      "answer": "//",
+      "acceptable": ["//"],
+      "explanation": "Whole weeks = whole division: 45 // 7 = 6 (with 3 days left over)."
+    },
+    {
+      "id": "u14l10e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Same problem, the leftover days:\n\ndays = 45\ndays_per_week = 7\nleftover_days = days ____ days_per_week",
+      "answer": "%",
+      "acceptable": ["%"],
+      "explanation": "Leftover = remainder: 45 % 7 = 3. And 6 x 7 + 3 = 45."
+    },
+    {
+      "id": "u14l10e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "You expected the average 10 but the code printed 14. Most likely cause?",
+      "options": [
+        "Missing brackets, so only the last value got divided",
+        "The computer is broken",
+        "The numbers are too big",
+        "print was spelled wrong"
+      ],
+      "answer": 0,
+      "explanation": "A 14-instead-of-10 mismatch screams a missing bracket or wrong order. Compare to your hand example to find it."
+    },
+    {
+      "id": "u14l10e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Final check: weeks = days // days_per_week and leftover_days = days % days_per_week with days=45. The prints show 6 and 3. Hand example said 6 and 3. Verdict?",
+      "options": ["Passes — both match, and 6 x 7 + 3 = 45", "Fails", "Only weeks is right", "Unknown"],
+      "answer": 0,
+      "explanation": "Both match and the rebuild (6 x 7 + 3 = 45) confirms it. You can now pick the right operation, order, and brackets for varied problems. Great finish to the unit!"
+    }
+  ]
+}

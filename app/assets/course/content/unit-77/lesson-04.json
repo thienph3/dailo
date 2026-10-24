@@ -1,0 +1,134 @@
+{
+  "unitId": "u77",
+  "lessonId": "u77l04",
+  "title": "Why private notes keep sub-plans tidy",
+  "idea": "TOOL. Why private notes keep sub-plans tidy and composable; review of return and scope together.",
+  "exercises": [
+    {
+      "type": "multipleChoice",
+      "prompt": "The benefit of private variables is...",
+      "options": [
+        "Each sub-plan can be written without worrying about names elsewhere",
+        "Nothing",
+        "Slower code",
+        "Fewer functions"
+      ],
+      "answer": 0,
+      "explanation": "Privacy lets you write a helper in isolation; its names won't clash with anyone else's.",
+      "id": "u77l04e01"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Predict:\n\ndef tax(p):\n    rate = p / 10\n    return rate\n\nprint(tax(200))",
+      "options": [
+        "20.0",
+        "200",
+        "rate",
+        "error"
+      ],
+      "answer": 0,
+      "explanation": "tax makes rate = 20.0 and returns it. We print the returned value.",
+      "id": "u77l04e02"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "After that code, print(rate) would...",
+      "options": [
+        "error — rate is private to tax",
+        "print 20.0",
+        "print 200",
+        "print rate"
+      ],
+      "answer": 0,
+      "explanation": "rate exists only inside tax. Outside, the name is unknown.",
+      "id": "u77l04e03"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "REVIEW: return hands a value back to whoever called the function.",
+      "answer": true,
+      "explanation": "Yes — return is how a sub-plan shares its result with the caller.",
+      "id": "u77l04e04"
+    },
+    {
+      "type": "orderBlocks",
+      "prompt": "REVIEW: arrange a helper that returns and a call that uses it.",
+      "blocks": [
+        "def triple(n):",
+        "    return n * 3",
+        "answer = triple(4)",
+        "print(answer)"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "triple(4) returns 12, stored in answer, then printed.",
+      "id": "u77l04e05"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Composing (from last unit) relies on scope how?",
+      "options": [
+        "Each helper keeps its own private notes, so you can safely chain their RETURNED values",
+        "It ignores scope",
+        "It makes everything global",
+        "It can't use return"
+      ],
+      "answer": 0,
+      "explanation": "Composing works because each helper is self-contained; you only pass RETURNED values between them.",
+      "id": "u77l04e06"
+    },
+    {
+      "type": "fillBlank",
+      "prompt": "REVIEW: complete so the doubled value leaves the helper:\n\ndef double(n):\n    d = n * 2\n    ____ d",
+      "answer": "return",
+      "acceptable": [
+        "return"
+      ],
+      "explanation": "return d shares the result. d itself is private.",
+      "id": "u77l04e07"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Which is the SAFE way to use a value a function computed?",
+      "options": [
+        "Return it and store the call's result",
+        "Read the function's private variable directly",
+        "Print the function's name",
+        "Guess the value"
+      ],
+      "answer": 0,
+      "explanation": "Return then store. Never reach into a function's private insides.",
+      "id": "u77l04e08"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Predict:\n\ndef f():\n    k = 3\n    return k * k\n\nprint(f())",
+      "options": [
+        "9",
+        "3",
+        "k",
+        "error"
+      ],
+      "answer": 0,
+      "explanation": "f returns 3 * 3 = 9. The private k is used inside and the result handed out.",
+      "id": "u77l04e09"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Scope, in one sentence:",
+      "options": [
+        "Names made inside a function are private; share results with return",
+        "All names are shared",
+        "Functions can't hold names",
+        "return makes names private"
+      ],
+      "answer": 0,
+      "explanation": "That's scope, gently: private insides, return for the outside.",
+      "id": "u77l04e10"
+    }
+  ]
+}

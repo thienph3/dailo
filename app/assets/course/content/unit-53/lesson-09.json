@@ -1,0 +1,125 @@
+{
+  "unitId": "u53",
+  "lessonId": "u53l09",
+  "title": "Spot the len mistake",
+  "idea": "Debug common len() slips: using len as the last position, square vs round brackets, confusing count with sum. Thinking-heavy.",
+  "exercises": [
+    {
+      "id": "u53l09e01",
+      "type": "multipleChoice",
+      "prompt": "A learner wants the last item of a 3-item list and writes n[len(n)]. What goes wrong?",
+      "options": [
+        "len(n) is 3, but position 3 doesn't exist — use len(n) - 1",
+        "len(n) is negative",
+        "n[len(n)] gives the first item",
+        "Nothing goes wrong"
+      ],
+      "answer": 0,
+      "explanation": "Three items fill positions 0, 1, 2. len is 3, which is one past the end. The last position is len - 1 = 2."
+    },
+    {
+      "id": "u53l09e02",
+      "type": "multipleChoice",
+      "prompt": "A learner writes len[scores] to count a list. Fix it.",
+      "options": [
+        "Use round brackets: len(scores)",
+        "Use len{scores}",
+        "Remove the brackets entirely",
+        "It's already correct"
+      ],
+      "answer": 0,
+      "explanation": "len uses round brackets, like print. Square brackets are for indexing a single item, not for counting."
+    },
+    {
+      "id": "u53l09e03",
+      "type": "trueFalse",
+      "prompt": "A learner says len([10, 20, 30]) is 60. That is correct.",
+      "answer": false,
+      "explanation": "len counts items, so it's 3, not 60. Adding the values would be 60, but len never adds."
+    },
+    {
+      "id": "u53l09e04",
+      "type": "multipleChoice",
+      "prompt": "For a 5-item list, which gives the LAST position?",
+      "options": [
+        "len(list) - 1",
+        "len(list)",
+        "len(list) + 1",
+        "5"
+      ],
+      "answer": 0,
+      "explanation": "Last position is always len - 1. For 5 items that's 4. Using len itself (5) overshoots the end."
+    },
+    {
+      "id": "u53l09e05",
+      "type": "multipleChoice",
+      "prompt": "A learner checks if a list is empty with if len(list) == 1. What's the slip?",
+      "options": [
+        "Empty means len == 0, not 1",
+        "len can't be compared",
+        "Empty means len == -1",
+        "Nothing is wrong"
+      ],
+      "answer": 0,
+      "explanation": "An empty list has zero items, so the test is len == 0. len == 1 would mean exactly one item."
+    },
+    {
+      "id": "u53l09e06",
+      "type": "multipleChoice",
+      "prompt": "A learner wants 'how many' and writes print(list) instead of print(len(list)). What will they see?",
+      "options": [
+        "The whole list, not the count",
+        "The count",
+        "An error",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "print(list) shows every item; they wanted the single count, which needs len. Easy to forget the len wrapper."
+    },
+    {
+      "id": "u53l09e07",
+      "type": "trueFalse",
+      "prompt": "len(n) - 1 and n[-1] are two correct ways to deal with the last item (one gives its position, one gives the item).",
+      "answer": true,
+      "explanation": "len(n) - 1 gives the last POSITION number; n[-1] gives the last ITEM directly. Both are valid, for different needs."
+    },
+    {
+      "id": "u53l09e08",
+      "type": "multipleChoice",
+      "prompt": "Predict what a learner's buggy code prints:\n\nn = [8, 8, 8]\nprint(len(n[0]))",
+      "options": [
+        "This is wrong — n[0] is the number 8, and you can't take len of a single number",
+        "1",
+        "3",
+        "8"
+      ],
+      "answer": 0,
+      "explanation": "n[0] is 8, a plain number. len counts items in a list, not a lone number. They meant len(n), which is 3."
+    },
+    {
+      "id": "u53l09e09",
+      "type": "orderBlocks",
+      "prompt": "Fix the goal 'print the last item using len'. Arrange the CORRECT lines.",
+      "blocks": [
+        "vals = [11, 22, 33]",
+        "last = len(vals) - 1",
+        "print(vals[last])"
+      ],
+      "answer": [0, 1, 2],
+      "explanation": "len(vals) is 3, last is 2, and vals[2] is 33. Writing vals[len(vals)] instead would go out of range."
+    },
+    {
+      "id": "u53l09e10",
+      "type": "multipleChoice",
+      "prompt": "What's the safest summary to remember about len?",
+      "options": [
+        "len is the COUNT; the last position is len - 1",
+        "len is the last position",
+        "len is the sum of the values",
+        "len is the first item"
+      ],
+      "answer": 0,
+      "explanation": "len counts items, and because positions start at 0, the last position is one less: len - 1. Keep those two facts straight and most len bugs disappear."
+    }
+  ]
+}

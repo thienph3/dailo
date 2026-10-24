@@ -1,0 +1,147 @@
+{
+  "unitId": "u84",
+  "lessonId": "u84l06",
+  "title": "Loop back: solve it — grocery total with a helper",
+  "idea": "LOOP. Solve a complete 'too big' problem end to end: a per-item helper plus an accumulate loop, reviewing variables, loops, lists, and functions together.",
+  "exercises": [
+    {
+      "id": "u84l06e01",
+      "type": "multipleChoice",
+      "prompt": "PROBLEM: items have counts [3, 2] and unit prices [4, 10]. Show the grand total. OUTPUT?",
+      "options": [
+        "One number: the grand total",
+        "The count of items",
+        "The cheaper item",
+        "The list of prices"
+      ],
+      "answer": 0,
+      "explanation": "Output = the grand total of the order. We'll build it per line, then add."
+    },
+    {
+      "id": "u84l06e02",
+      "type": "multipleChoice",
+      "prompt": "By hand: 3 at 4 is 12, 2 at 10 is 20. Grand total?",
+      "options": [
+        "32",
+        "12",
+        "20",
+        "5"
+      ],
+      "answer": 0,
+      "explanation": "12 + 20 = 32. Hand answer = 32, our check value."
+    },
+    {
+      "id": "u84l06e03",
+      "type": "multipleChoice",
+      "prompt": "The repeated per-line job is best written as...",
+      "options": [
+        "a helper line_cost(count, price) returning count * price",
+        "one giant formula",
+        "a print statement",
+        "a single variable"
+      ],
+      "answer": 0,
+      "explanation": "A per-line helper (count * price) is reused for each line — helper-in-a-loop."
+    },
+    {
+      "id": "u84l06e04",
+      "type": "orderBlocks",
+      "prompt": "Order the plan.",
+      "blocks": [
+        "Make line_cost(count, price) return count * price",
+        "Start a running total at 0",
+        "For each line, add line_cost to the total",
+        "Show the total"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "Helper, total at 0, accumulate each line, show. Decomposition plus accumulate."
+    },
+    {
+      "id": "u84l06e05",
+      "type": "orderBlocks",
+      "prompt": "Arrange the code.",
+      "blocks": [
+        "def line_cost(count, price):",
+        "    return count * price",
+        "counts = [3, 2]",
+        "prices = [4, 10]",
+        "total = 0",
+        "for i in range(len(counts)):",
+        "    total = total + line_cost(counts[i], prices[i])",
+        "print(total)"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "explanation": "Define the helper, store both lists, accumulate line_cost at each index, print. Every value is a named list entry."
+    },
+    {
+      "id": "u84l06e06",
+      "type": "fillBlank",
+      "prompt": "Finish the helper:\n\ndef line_cost(count, price):\n    return count ____ price",
+      "answer": "*",
+      "acceptable": [
+        "*"
+      ],
+      "explanation": "A line's cost is count TIMES price, so *. line_cost(3, 4) = 12."
+    },
+    {
+      "id": "u84l06e07",
+      "type": "trueFalse",
+      "prompt": "REVIEW: range(len(counts)) gives the index positions 0, 1 so we can read both lists in step.",
+      "answer": true,
+      "explanation": "Yes — range(len(...)) walks the index positions, letting us pair counts[i] with prices[i]."
+    },
+    {
+      "id": "u84l06e08",
+      "type": "multipleChoice",
+      "prompt": "Check — the code prints 32; hand example was 32. Verdict?",
+      "options": [
+        "Passes",
+        "Fails",
+        "Unknown",
+        "Rewrite example"
+      ],
+      "answer": 0,
+      "explanation": "Output (32) matches the hand example (32). The solution is correct."
+    },
+    {
+      "id": "u84l06e09",
+      "type": "multipleChoice",
+      "prompt": "Re-check: counts [1, 5], prices [7, 2]. Grand total?",
+      "options": [
+        "17",
+        "32",
+        "14",
+        "10"
+      ],
+      "answer": 0,
+      "explanation": "1*7=7, 5*2=10, 7+10=17. The same plan handles new numbers."
+    },
+    {
+      "id": "u84l06e10",
+      "type": "multipleChoice",
+      "prompt": "What this full solve reviewed:",
+      "options": [
+        "Lists, a loop, a helper function, and a running total — all at once",
+        "Only printing",
+        "Only variables",
+        "Only functions"
+      ],
+      "answer": 0,
+      "explanation": "You combined lists, loops, a helper, and accumulate — a real 'too big for one plan' solve."
+    }
+  ]
+}

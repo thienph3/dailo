@@ -1,0 +1,160 @@
+{
+  "unitId": "u33",
+  "lessonId": "u33l08",
+  "title": "Fix it: nested check with the wrong inner test",
+  "idea": "GUIDED BUG. A members-only senior discount nests two checks, but the inner age test is wrong.",
+  "problem": "Rule: a member aged 65 or more gets 'Senior discount'; a member under 65 gets 'Member'; a non-member gets 'Full price'. Broken inner test: if age > 65.",
+  "exercises": [
+    {
+      "id": "u33l08e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: member + 65 or more -> 'Senior discount'; member under 65 -> 'Member'; non-member -> 'Full price'.\n\nWhat is the OUTPUT?",
+      "options": [
+        "'Senior discount', 'Member', or 'Full price'",
+        "The age",
+        "A total",
+        "Always 'Member'"
+      ],
+      "answer": 0,
+      "explanation": "One of three labels. Two inputs (membership, age) and a nested decision drive it."
+    },
+    {
+      "id": "u33l08e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "'65 or more' includes which boundary value?",
+      "options": [
+        "65",
+        "64",
+        "66 only",
+        "none"
+      ],
+      "answer": 0,
+      "explanation": "It includes 65 itself, so a member aged exactly 65 should get the senior discount."
+    },
+    {
+      "id": "u33l08e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Work the boundary by hand: a member aged 65. The CORRECT answer is?",
+      "options": [
+        "Senior discount",
+        "Member",
+        "Full price",
+        "65"
+      ],
+      "answer": 0,
+      "explanation": "65 or more includes 65, so 'Senior discount'. Check value for the boundary."
+    },
+    {
+      "id": "u33l08e04",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Run the BROKEN inner test (if age > 65) for a member aged 65. What prints?",
+      "options": [
+        "Member (wrong)",
+        "Senior discount",
+        "Full price",
+        "an error"
+      ],
+      "answer": 0,
+      "explanation": "65 > 65 is False, so it falls to 'Member' — wrong, 65 should be 'Senior discount'. Boundary bug."
+    },
+    {
+      "id": "u33l08e05",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Plan the fix: which inner comparison includes 65?",
+      "options": [
+        "age >= 65",
+        "age > 65",
+        "age == 65",
+        "age < 65"
+      ],
+      "answer": 0,
+      "explanation": "Use age >= 65 so exactly 65 qualifies for the senior discount."
+    },
+    {
+      "id": "u33l08e06",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Plan the nested structure.",
+      "blocks": [
+        "Check if they are a member",
+        "Inside member: if age >= 65 -> Senior discount else Member",
+        "If not a member -> Full price"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "First decide membership; inside the member branch, decide senior vs regular by age."
+    },
+    {
+      "id": "u33l08e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Arrange the FIXED code (nested if inside the member branch).",
+      "blocks": [
+        "if is_member:",
+        "    if age >= 65:",
+        "        print(\"Senior discount\")",
+        "    else:",
+        "        print(\"Member\")",
+        "else:",
+        "    print(\"Full price\")"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "explanation": "Outer checks membership; the inner if uses >= 65 so the boundary qualifies."
+    },
+    {
+      "id": "u33l08e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Write the fixed inner comparison:\n\nif is_member:\n    if age ____ 65:\n        print(\"Senior discount\")\n    else:\n        print(\"Member\")\nelse:\n    print(\"Full price\")",
+      "answer": ">=",
+      "acceptable": [
+        ">="
+      ],
+      "explanation": ">= 65 includes the boundary age 65, matching '65 or more'."
+    },
+    {
+      "id": "u33l08e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check the boundary with the fix: member aged 65. What prints?",
+      "options": [
+        "Senior discount",
+        "Member",
+        "Full price",
+        "65"
+      ],
+      "answer": 0,
+      "explanation": "is_member True, 65 >= 65 True -> 'Senior discount'. Matches the hand answer. Fixed."
+    },
+    {
+      "id": "u33l08e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Re-check a fresh case: a non-member aged 70. What prints?",
+      "options": [
+        "Full price",
+        "Senior discount",
+        "Member",
+        "70"
+      ],
+      "answer": 0,
+      "explanation": "Not a member, so the outer else runs: 'Full price' — age is not even checked. Correct."
+    }
+  ]
+}

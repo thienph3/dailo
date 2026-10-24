@@ -1,0 +1,130 @@
+{
+  "unitId": "u30",
+  "lessonId": "u30l04",
+  "title": "A menu: react to several answers",
+  "idea": "Branch a typed answer across an if/elif/else to build a small menu. Predict which option each typed word triggers.",
+  "exercises": [
+    {
+      "id": "u30l04e01",
+      "type": "multipleChoice",
+      "prompt": "To react differently to \"add\", \"remove\", or anything else the user types, use...",
+      "options": [
+        "if choice == \"add\" ... elif choice == \"remove\" ... else",
+        "a single ==",
+        "one if with and",
+        "no branching"
+      ],
+      "answer": 0,
+      "explanation": "A menu maps each command word to its own branch, with else catching unknown entries. (if/elif/else review, driven by input.)"
+    },
+    {
+      "id": "u30l04e02",
+      "type": "multipleChoice",
+      "prompt": "The user types add:\n\nchoice = input(\"add or remove? \")\nif choice == \"add\":\n    print(\"Added\")\nelif choice == \"remove\":\n    print(\"Removed\")\nelse:\n    print(\"Unknown\")\n\nWhat prints?",
+      "options": [
+        "Added",
+        "Removed",
+        "Unknown",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "\"add\" matches the first branch, so \"Added\" prints and the chain stops."
+    },
+    {
+      "id": "u30l04e03",
+      "type": "multipleChoice",
+      "prompt": "Same code, the user types remove. What prints?",
+      "options": [
+        "Removed",
+        "Added",
+        "Unknown",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "\"remove\" fails the \"add\" test but matches the \"remove\" elif, so \"Removed\" prints."
+    },
+    {
+      "id": "u30l04e04",
+      "type": "multipleChoice",
+      "prompt": "Same code, the user types edit. What prints?",
+      "options": [
+        "Unknown",
+        "Added",
+        "Removed",
+        "an error"
+      ],
+      "answer": 0,
+      "explanation": "\"edit\" matches no listed command, so the catch-all else prints \"Unknown\". The else keeps the program responsive."
+    },
+    {
+      "id": "u30l04e05",
+      "type": "orderBlocks",
+      "prompt": "Build a tiny calculator menu: ask the operation, then \"plus\" prints the sum, \"minus\" prints the difference, else \"Unknown op\". (a and b are already numbers.)",
+      "blocks": [
+        "op = input(\"plus or minus? \")",
+        "if op == \"plus\":",
+        "    print(a + b)",
+        "elif op == \"minus\":",
+        "    print(a - b)",
+        "else:",
+        "    print(\"Unknown op\")"
+      ],
+      "answer": [0, 1, 2, 3, 4, 5, 6],
+      "explanation": "Ask the operation, then branch to the matching math. The typed word chooses the calculation."
+    },
+    {
+      "id": "u30l04e06",
+      "type": "multipleChoice",
+      "prompt": "For that calculator with a = 6, b = 2, the user types minus. What prints?",
+      "options": [
+        "4",
+        "8",
+        "Unknown op",
+        "minus"
+      ],
+      "answer": 0,
+      "explanation": "\"minus\" hits the elif, so print(a - b) shows 6 - 2 = 4."
+    },
+    {
+      "id": "u30l04e07",
+      "type": "fillBlank",
+      "prompt": "Fill the keyword so the second option only runs if the first did not match:\n\nif op == \"plus\":\n    print(a + b)\n____ op == \"minus\":\n    print(a - b)",
+      "answer": "elif",
+      "acceptable": ["elif"],
+      "explanation": "'elif' chains the next option, checked only when \"plus\" failed."
+    },
+    {
+      "id": "u30l04e08",
+      "type": "trueFalse",
+      "prompt": "A good menu includes an else to handle answers you did not plan for.",
+      "answer": true,
+      "explanation": "Yes - users type unexpected things. The else gives a clear response instead of silent nothing."
+    },
+    {
+      "id": "u30l04e09",
+      "type": "multipleChoice",
+      "prompt": "Why ask once and store the answer, rather than calling input() in every branch?",
+      "options": [
+        "So the user types one answer and every branch tests that same answer",
+        "To prompt them repeatedly",
+        "input cannot go in an if",
+        "No reason"
+      ],
+      "answer": 0,
+      "explanation": "One question, one stored answer, many tests. Re-calling input() would ask again and again - confusing."
+    },
+    {
+      "id": "u30l04e10",
+      "type": "multipleChoice",
+      "prompt": "The idea of a menu:",
+      "options": [
+        "Map each typed command to a branch, with else for the unexpected",
+        "Only accept one word",
+        "Numbers only",
+        "No else needed"
+      ],
+      "answer": 0,
+      "explanation": "A menu is an if/elif/else chain reacting to input - the heart of interactive programs."
+    }
+  ]
+}

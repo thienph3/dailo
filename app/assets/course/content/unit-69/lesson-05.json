@@ -1,0 +1,140 @@
+{
+  "unitId": "u69",
+  "lessonId": "u69l05",
+  "title": "Drawing the plan as a tree",
+  "idea": "MEET: see a big task as a top goal with sub-jobs hanging under it. No code.",
+  "exercises": [
+    {
+      "id": "u69l05e01",
+      "type": "multipleChoice",
+      "prompt": "Think of a big task as a TOP goal with smaller jobs under it. For 'make breakfast', which is the TOP goal?",
+      "options": [
+        "Make breakfast",
+        "Pour the juice",
+        "Toast the bread",
+        "Fry the egg"
+      ],
+      "answer": 0,
+      "explanation": "'Make breakfast' is the whole goal at the top. The smaller jobs (toast, egg, juice) hang beneath it."
+    },
+    {
+      "id": "u69l05e02",
+      "type": "multiSelect",
+      "prompt": "Under the goal 'make breakfast', which are reasonable SUB-jobs? (Pick all.)",
+      "options": [
+        "Toast the bread",
+        "Fry the egg",
+        "Pour the juice",
+        "Wash the car"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Toast, egg, and juice are all parts of making breakfast. Washing the car belongs to a different goal."
+    },
+    {
+      "id": "u69l05e03",
+      "type": "trueFalse",
+      "prompt": "A sub-job can itself be split into even smaller jobs if it's still too big.",
+      "answer": true,
+      "explanation": "Yes. 'Fry the egg' could split into crack, heat the pan, cook. You split until each piece is simple."
+    },
+    {
+      "id": "u69l05e04",
+      "type": "orderBlocks",
+      "prompt": "Order the sub-jobs under 'send a letter'.",
+      "blocks": [
+        "Post it in the box",
+        "Write the letter",
+        "Put it in an envelope"
+      ],
+      "answer": [
+        1,
+        2,
+        0
+      ],
+      "explanation": "Write it, seal it in an envelope, then post it. The sub-jobs still run in a sensible order."
+    },
+    {
+      "id": "u69l05e05",
+      "type": "multipleChoice",
+      "prompt": "In this tree picture, what sits at the very top?",
+      "options": [
+        "The one big goal",
+        "The smallest detail",
+        "A random step",
+        "The last job"
+      ],
+      "answer": 0,
+      "explanation": "The whole goal sits at the top. Everything below it is a smaller piece that helps reach that goal."
+    },
+    {
+      "id": "u69l05e06",
+      "type": "matchPairs",
+      "prompt": "Match each top goal to one of its sub-jobs.",
+      "pairs": [
+        {
+          "left": "Throw a party",
+          "right": "Send the invites"
+        },
+        {
+          "left": "Bake a cake",
+          "right": "Mix the batter"
+        },
+        {
+          "left": "Clean the house",
+          "right": "Vacuum the floor"
+        }
+      ],
+      "explanation": "Each big goal breaks into named sub-jobs. The tree shows the goal on top and its parts underneath."
+    },
+    {
+      "id": "u69l05e07",
+      "type": "multipleChoice",
+      "prompt": "Why is the tree picture useful before coding?",
+      "options": [
+        "It shows every sub-job you'll need, and the order",
+        "It makes the screen colourful",
+        "It removes all bugs",
+        "It replaces the computer"
+      ],
+      "answer": 0,
+      "explanation": "The tree lays out the parts and their order, so nothing is forgotten when you build each piece."
+    },
+    {
+      "id": "u69l05e08",
+      "type": "trueFalse",
+      "prompt": "If you forget a sub-job in the plan, the finished task will be missing part of its work.",
+      "answer": true,
+      "explanation": "Right. The plan is a checklist. A missing branch means a missing job - the result won't be complete."
+    },
+    {
+      "id": "u69l05e09",
+      "type": "multipleChoice",
+      "prompt": "REVIEW: under the goal 'report the class results', a sub-job is 'find the highest mark'. Its tool is...",
+      "options": [
+        "max - track the biggest so far",
+        "sum",
+        "a plain print",
+        "input()"
+      ],
+      "answer": 0,
+      "explanation": "'Highest mark' is a track-the-best (max) job. Each branch of the tree maps to a tool you already know."
+    },
+    {
+      "id": "u69l05e10",
+      "type": "multipleChoice",
+      "prompt": "What the tree gives you:",
+      "options": [
+        "a clear list of named sub-jobs to solve one by one",
+        "the final answer for free",
+        "a way to skip planning",
+        "fewer numbers"
+      ],
+      "answer": 0,
+      "explanation": "The tree turns one scary goal into a tidy set of small jobs. Soon each named job becomes real code."
+    }
+  ]
+}

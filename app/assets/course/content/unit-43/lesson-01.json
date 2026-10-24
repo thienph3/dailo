@@ -1,0 +1,158 @@
+{
+  "unitId": "u43",
+  "lessonId": "u43l01",
+  "title": "Solve it together: count the passing scores",
+  "idea": "GUIDED. Count how many numbers in a range meet a rule, using a counter + an if inside a for-loop.",
+  "problem": "Scores are 40, 75, 60, 90, 50. A passing score is 60 or more. How many scores pass?",
+  "exercises": [
+    {
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: Scores are 40, 75, 60, 90, 50. Passing means 60 or more. How many pass?\n\nFirst -- Understand. What is the OUTPUT?",
+      "options": [
+        "A count: how many scores are 60 or more",
+        "The sum of the scores",
+        "The highest score",
+        "The list of scores"
+      ],
+      "answer": 0,
+      "explanation": "Start by naming what to produce. Here the output is a COUNT -- how many scores meet the rule.",
+      "id": "u43l01e01"
+    },
+    {
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "What is the rule that decides whether a score counts?",
+      "options": [
+        "The score is 60 or more",
+        "The score is even",
+        "The score is the first one",
+        "Every score counts"
+      ],
+      "answer": 0,
+      "explanation": "The rule is 'score >= 60.' Only scores meeting it add to the count.",
+      "id": "u43l01e02"
+    },
+    {
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Work it by hand first. Of 40, 75, 60, 90, 50, which pass (60 or more), and how many?",
+      "options": [
+        "75, 60, 90 -> 3 pass",
+        "75, 90 -> 2 pass",
+        "all 5 pass",
+        "40, 50 -> 2 pass"
+      ],
+      "answer": 0,
+      "explanation": "By hand: 75, 60, 90 are each >= 60 -- that's 3. This hand answer (3) is what we'll check the code against.",
+      "id": "u43l01e03"
+    },
+    {
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Now -- Plan. Put the plain-English steps in order.",
+      "blocks": [
+        "Start a counter at 0",
+        "For each score, check if it is 60 or more",
+        "If it is, add 1 to the counter",
+        "Show the counter"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "Plan: start a counter, test each score, add 1 on a pass, then show the count. Plan in words first.",
+      "id": "u43l01e04"
+    },
+    {
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Your plan says 'for each score.' Which tool repeats once per value?",
+      "options": [
+        "A for-loop over a range",
+        "An if by itself",
+        "A single print",
+        "input()"
+      ],
+      "answer": 0,
+      "explanation": "A for-loop walks each value. Combined with an if, it acts only on the ones that pass the rule.",
+      "id": "u43l01e05"
+    },
+    {
+      "type": "multipleChoice",
+      "uepcc": "C",
+      "prompt": "We'll use scores 40, 75, 60, 90, 50 by walking a range and reading each. For the counter, what's the setup line BEFORE the loop?",
+      "options": [
+        "passing = 0",
+        "passing = 5",
+        "print(passing)",
+        "passing = passing + 1"
+      ],
+      "answer": 0,
+      "explanation": "A counter starts at 0 before the loop, so the first add gives the right count.",
+      "id": "u43l01e06"
+    },
+    {
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Complete the add-step so the counter rises by one each time a score passes:\n\npassing = 0\nfor score in range(1, 6):\n    value = score_value\n    if value >= 60:\n        passing = passing ____ 1",
+      "answer": "+",
+      "acceptable": [
+        "+"
+      ],
+      "explanation": "To count up, add 1: passing = passing + 1. It runs only on passes where the score is >= 60.",
+      "id": "u43l01e07"
+    },
+    {
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Arrange the full counting loop (one score per pass already in `value`).",
+      "blocks": [
+        "passing = 0",
+        "for n in range(1, 6):",
+        "    if value >= 60:",
+        "        passing = passing + 1",
+        "print(passing)"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "explanation": "Counter at 0, loop once per score, if the value passes add 1, then print the count after the loop.",
+      "id": "u43l01e08"
+    },
+    {
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "You run it and it shows 3. Your hand example said 3. So...",
+      "options": [
+        "It passes -- output matches the hand example",
+        "It fails -- the count is wrong",
+        "You can't tell",
+        "Change the example to match"
+      ],
+      "answer": 0,
+      "explanation": "Output (3) matches the hand-worked answer (3), so the solution is correct. That's what Check means.",
+      "id": "u43l01e09"
+    },
+    {
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "New scores: 55, 60, 61, 20. With the rule 'score >= 60', what count should the same code give?",
+      "options": [
+        "2",
+        "1",
+        "3",
+        "4"
+      ],
+      "answer": 0,
+      "explanation": "60 and 61 pass (>= 60); 55 and 20 don't. Count is 2. A good solution works on fresh numbers too.",
+      "id": "u43l01e10"
+    }
+  ]
+}

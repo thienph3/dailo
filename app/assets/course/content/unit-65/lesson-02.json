@@ -1,0 +1,148 @@
+{
+  "unitId": "u65",
+  "lessonId": "u65l02",
+  "title": "Solve it: is that number in the list?",
+  "idea": "GUIDED PROBLEM (search). Walk UEPCC on a membership question: decide whether a wanted value is present, ending in a yes/no answer. Uses the search tool (in / a found flag) rather than building a new list.",
+  "problem": "A locker list holds these ticket numbers: [12, 7, 25, 7, 40]. A customer has ticket 25. Is ticket 25 in the list?",
+  "exercises": [
+    {
+      "id": "u65l02e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: tickets are [12, 7, 25, 7, 40]; the wanted ticket is 25. Is 25 in the list?\n\nUnderstand first. What is the OUTPUT?",
+      "options": [
+        "A yes/no answer: whether 25 is present",
+        "A new list of all the tickets",
+        "The total of the tickets",
+        "The biggest ticket number"
+      ],
+      "answer": 0,
+      "explanation": "A search for membership produces a yes/no (True/False) answer, not a list or a total. That is different from filtering."
+    },
+    {
+      "id": "u65l02e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "Still understanding. What are the INPUTS?",
+      "options": [
+        "The list of tickets and the wanted ticket (25)",
+        "Only the number 25",
+        "The word 'present'",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "Two inputs: the list to look through and the value you are looking for. Both become named variables."
+    },
+    {
+      "id": "u65l02e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example. By hand, scan [12, 7, 25, 7, 40] for 25. Is it there?",
+      "options": [
+        "Yes \u2014 25 appears (in the middle)",
+        "No \u2014 25 is not there",
+        "Only if it appears twice",
+        "Can't tell without adding them up"
+      ],
+      "answer": 0,
+      "explanation": "Reading left to right you reach 25, so the answer is Yes (True). That by-hand result is your check value."
+    },
+    {
+      "id": "u65l02e04",
+      "type": "trueFalse",
+      "uepcc": "E",
+      "prompt": "For a 'is it present?' question, finding ONE match is enough \u2014 you don't need to count how many times it appears.",
+      "answer": true,
+      "explanation": "Membership only asks present or not. One hit answers it; whether 25 appears once or twice doesn't change the yes/no."
+    },
+    {
+      "id": "u65l02e05",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Plan. Which approach matches 'is this value present?'",
+      "options": [
+        "Check whether the wanted value is in the list",
+        "Add every value together",
+        "Build a new list of matches",
+        "Divide the list by its length"
+      ],
+      "answer": 0,
+      "explanation": "Searching for membership is a presence check. You ask the list whether it contains the wanted value."
+    },
+    {
+      "id": "u65l02e06",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Put the plain-English search plan in order.",
+      "blocks": [
+        "Ask whether the wanted ticket is in the tickets list",
+        "Remember the tickets and the wanted ticket",
+        "Show the yes/no answer"
+      ],
+      "answer": [
+        1,
+        0,
+        2
+      ],
+      "explanation": "Remember the inputs, ask the membership question, show the answer. Searching does not collect items \u2014 it reports presence."
+    },
+    {
+      "id": "u65l02e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code it. Arrange the lines (remember inputs, ask membership, show).",
+      "blocks": [
+        "tickets = [12, 7, 25, 7, 40]",
+        "wanted = 25",
+        "found = wanted in tickets",
+        "print(found)"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "Store the list and the wanted value, use 'in' to get a True/False, then print it. 'wanted in tickets' is the search tool in one line."
+    },
+    {
+      "id": "u65l02e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Complete the membership check:\n\ntickets = [12, 7, 25, 7, 40]\nwanted = 25\nfound = wanted ____ tickets\nprint(found)",
+      "answer": "in",
+      "acceptable": [
+        "in"
+      ],
+      "explanation": "The keyword 'in' asks whether a value is present in a list and gives back True or False."
+    },
+    {
+      "id": "u65l02e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check. The code prints True. Your hand example said Yes (True). Verdict?",
+      "options": [
+        "Passes \u2014 output matches the example",
+        "Fails \u2014 output is wrong",
+        "Unknown",
+        "Rewrite the example"
+      ],
+      "answer": 0,
+      "explanation": "True matches your by-hand Yes, so the search is correct."
+    },
+    {
+      "id": "u65l02e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Same code, new inputs: tickets = [1, 2, 3], wanted = 9. What does 'wanted in tickets' give?",
+      "options": [
+        "False",
+        "True",
+        "9",
+        "An error"
+      ],
+      "answer": 0,
+      "explanation": "9 is not in [1, 2, 3], so 'in' gives False. The same one-line search handles the not-present case cleanly."
+    }
+  ]
+}

@@ -1,0 +1,136 @@
+{
+  "unitId": "u80",
+  "lessonId": "u80l05",
+  "title": "The boundary case",
+  "idea": "MEET (thinking). The value exactly ON the cutoff is a classic edge case. 'Pass if 50 or more' must decide what 50 itself does.",
+  "exercises": [
+    {
+      "id": "u80l05e01",
+      "type": "multipleChoice",
+      "prompt": "A score passes if it is '50 or more.' What should a score of exactly 50 do?",
+      "options": [
+        "Pass — 'or more' includes 50",
+        "Fail",
+        "Be ignored",
+        "Cause an error"
+      ],
+      "answer": 0,
+      "explanation": "'50 or more' means >= 50, so 50 passes. The value right on the boundary is the one people get wrong."
+    },
+    {
+      "id": "u80l05e02",
+      "type": "multipleChoice",
+      "prompt": "Which comparison matches 'passes if 50 or MORE'?",
+      "options": [
+        "score >= 50",
+        "score > 50",
+        "score == 50",
+        "score < 50"
+      ],
+      "answer": 0,
+      "explanation": ">= includes the boundary (50). Using > by mistake would wrongly FAIL a score of exactly 50."
+    },
+    {
+      "id": "u80l05e03",
+      "type": "trueFalse",
+      "prompt": "The difference between > and >= only shows up at the exact boundary value.",
+      "answer": true,
+      "explanation": "Yes. For 49 and 51 both agree; only at 50 do > (fails) and >= (passes) differ. That's why the boundary is the edge case."
+    },
+    {
+      "id": "u80l05e04",
+      "type": "multipleChoice",
+      "prompt": "A rule says 'free shipping OVER 100.' Does an order of exactly 100 get free shipping?",
+      "options": [
+        "No — 'over' means strictly more than 100 (> 100)",
+        "Yes — 100 counts",
+        "It errors",
+        "Only on weekends"
+      ],
+      "answer": 0,
+      "explanation": "'Over 100' is > 100, so exactly 100 does NOT qualify. Words like 'over' vs 'at least' decide the boundary."
+    },
+    {
+      "id": "u80l05e05",
+      "type": "matchPairs",
+      "prompt": "Match each English phrase to its comparison.",
+      "pairs": [
+        {
+          "left": "50 or more",
+          "right": "score >= 50"
+        },
+        {
+          "left": "more than 50",
+          "right": "score > 50"
+        },
+        {
+          "left": "below 50",
+          "right": "score < 50"
+        }
+      ],
+      "explanation": "'or more' and 'at least' include the boundary (>=); 'more than' and 'over' exclude it (>). Read the words carefully."
+    },
+    {
+      "id": "u80l05e06",
+      "type": "multipleChoice",
+      "prompt": "To TEST whether your cutoff is right, which input should you try first?",
+      "options": [
+        "The exact boundary value itself",
+        "A value far above",
+        "A value far below",
+        "A negative value"
+      ],
+      "answer": 0,
+      "explanation": "Test the boundary value. Values far from it rarely reveal a >/>= mix-up; the exact cutoff does."
+    },
+    {
+      "id": "u80l05e07",
+      "type": "multiSelect",
+      "prompt": "For the rule 'child ticket if age is UNDER 12,' which ages are the tricky ones to check? (Select all.)",
+      "options": [
+        "11",
+        "12",
+        "50",
+        "3"
+      ],
+      "answer": [
+        0,
+        1
+      ],
+      "explanation": "11 (child) and 12 (not a child) sit right on either side of the cutoff. 3 and 50 are far away and won't catch a boundary bug."
+    },
+    {
+      "id": "u80l05e08",
+      "type": "trueFalse",
+      "prompt": "'At least 18' and 'over 18' mean the same thing for an 18-year-old.",
+      "answer": false,
+      "explanation": "No. 'At least 18' (>=) includes 18; 'over 18' (>) excludes it. For exactly 18 they disagree — a boundary difference."
+    },
+    {
+      "id": "u80l05e09",
+      "type": "multipleChoice",
+      "prompt": "REVIEW: last unit's 'is_pass' used score >= 50. Re-checking with [49, 50, 51] was testing...",
+      "options": [
+        "The boundary — making sure 50 passes and 49 doesn't",
+        "The empty case",
+        "The zero case",
+        "A single item"
+      ],
+      "answer": 0,
+      "explanation": "Picking 49, 50, 51 targets the boundary directly. That's how you prove the cutoff behaves as the words say."
+    },
+    {
+      "id": "u80l05e10",
+      "type": "multipleChoice",
+      "prompt": "The lesson in one line:",
+      "options": [
+        "Decide what the value ON the cutoff does, and test the boundary itself",
+        "Boundaries never matter",
+        "Always use >",
+        "Always use >="
+      ],
+      "answer": 0,
+      "explanation": "The boundary value is the edge case for any cutoff. Read the words ('or more' vs 'over'), pick >/>=, and test it directly."
+    }
+  ]
+}

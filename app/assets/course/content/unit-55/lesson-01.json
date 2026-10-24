@@ -1,0 +1,140 @@
+{
+  "unitId": "u55",
+  "lessonId": "u55l01",
+  "title": "Visiting every value",
+  "idea": "Opener: a list holds many values; often you want to do the SAME action to each one, in order. Thinking first, no new syntax yet.",
+  "exercises": [
+    {
+      "id": "u55l01e01",
+      "type": "multipleChoice",
+      "prompt": "You have a basket of apples and you want to polish EVERY apple. What are you doing?",
+      "options": [
+        "The same action to each item, one at a time",
+        "One action to the whole basket at once",
+        "Picking just the first apple",
+        "Counting the apples"
+      ],
+      "answer": 0,
+      "explanation": "Polishing every apple means repeating the SAME action for each item in turn. That 'do it to each one' idea is this unit's whole job."
+    },
+    {
+      "id": "u55l01e02",
+      "type": "trueFalse",
+      "prompt": "'Do something to every value in a list' means repeating the same step for each item, in order.",
+      "answer": true,
+      "explanation": "Exactly. You visit item 1, do the step; item 2, do the step; and so on to the end."
+    },
+    {
+      "id": "u55l01e03",
+      "type": "multipleChoice",
+      "prompt": "A list of scores is [10, 7, 9]. You want to print each score on its own line. How many times does the printing step happen?",
+      "options": [
+        "Three times — once per score",
+        "Once, for the whole list",
+        "Twice",
+        "It depends on the values"
+      ],
+      "answer": 0,
+      "explanation": "One action per item: three scores means the print step runs three times."
+    },
+    {
+      "id": "u55l01e04",
+      "type": "multiSelect",
+      "prompt": "Which of these are 'do the same thing to every item' tasks? (pick all)",
+      "options": [
+        "Print each name in a guest list",
+        "Add a star after each score",
+        "Read only the first item",
+        "Double every price in a list"
+      ],
+      "answer": [
+        0,
+        1,
+        3
+      ],
+      "explanation": "Printing each, starring each, and doubling each all repeat one action per item. Reading just the first item is a single step, not a per-item action."
+    },
+    {
+      "id": "u55l01e05",
+      "type": "orderBlocks",
+      "prompt": "You want to greet every name in a guest list. Put the plain-English steps in order.",
+      "blocks": [
+        "Greet that name",
+        "Take the next name from the list",
+        "Stop when the list is finished"
+      ],
+      "answer": [
+        1,
+        0,
+        2
+      ],
+      "explanation": "Take a name, greet it, repeat; stop at the end. That take-one / do-the-step / repeat rhythm is what a loop over a list gives you."
+    },
+    {
+      "id": "u55l01e06",
+      "type": "trueFalse",
+      "prompt": "When you do something to every value, the computer handles the items one at a time, from first to last.",
+      "answer": true,
+      "explanation": "A list keeps its order, so the loop walks it front to back — item 1, then 2, then 3."
+    },
+    {
+      "id": "u55l01e07",
+      "type": "multipleChoice",
+      "prompt": "Last unit you could already loop with range(n). Why might 'go through each item of a list' feel easier for a list?",
+      "options": [
+        "You get each value directly, without using its position number",
+        "It runs faster",
+        "It changes the list",
+        "Lists can't be looped any other way"
+      ],
+      "answer": 0,
+      "explanation": "Instead of asking for position 0, 1, 2... you can grab each value itself. That's the comfort this unit's tool gives you."
+    },
+    {
+      "id": "u55l01e08",
+      "type": "matchPairs",
+      "prompt": "Match each everyday task to what 'visiting every value' would do.",
+      "pairs": [
+        {
+          "left": "Mark attendance for each student",
+          "right": "one action per student"
+        },
+        {
+          "left": "Water each plant on the shelf",
+          "right": "one action per plant"
+        },
+        {
+          "left": "Add up a bill at the end",
+          "right": "not per-item — a single result (later unit)"
+        }
+      ],
+      "explanation": "Marking and watering repeat one action per item. Totalling is a different pattern we meet in a later unit — not yet."
+    },
+    {
+      "id": "u55l01e09",
+      "type": "multipleChoice",
+      "prompt": "A list of temperatures is [18, 21, 16]. You want to print 'Nice' once for each temperature. What will you see?",
+      "options": [
+        "'Nice' printed three times",
+        "'Nice' printed once",
+        "The numbers 18, 21, 16",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "One action per item, three items: 'Nice' appears three times. The action doesn't have to use the value."
+    },
+    {
+      "id": "u55l01e10",
+      "type": "multipleChoice",
+      "prompt": "This unit gives you one new tool. What is it for?",
+      "options": [
+        "Going through a list and doing something with each value",
+        "Making a new list",
+        "Counting items only",
+        "Sorting a list"
+      ],
+      "answer": 0,
+      "explanation": "Next you'll meet 'for item in list' — the clean way to visit every value and act on it."
+    }
+  ]
+}

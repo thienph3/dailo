@@ -1,0 +1,136 @@
+{
+  "unitId": "u81",
+  "lessonId": "u81l07",
+  "title": "Debug it: the helper that counts one too few",
+  "idea": "A counting/summing helper gives an answer that's consistently off by one. Tracing a tiny input by hand against the code reveals a range or boundary mistake.",
+  "exercises": [
+    {
+      "type": "multipleChoice",
+      "prompt": "sum_to(n) should add 1+2+...+n. For sum_to(5) you expect 15 but it gives 10. By hand, 1+2+3+4+5 = ...",
+      "options": [
+        "15 — so the helper is dropping a number",
+        "10 — the helper is right",
+        "5",
+        "25"
+      ],
+      "answer": 0,
+      "explanation": "1+2+3+4+5 = 15. The helper's 10 means it stopped early — a classic off-by-one, missing the last number.",
+      "id": "u81l07e01"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "An answer that is always off by exactly one is a strong hint of a boundary (range) mistake.",
+      "answer": true,
+      "explanation": "Yes. 'Always off by one' usually means a loop started or stopped one step too early or too late.",
+      "id": "u81l07e02"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "count_items counts a list but always returns one LESS than len. The likely cause?",
+      "options": [
+        "The loop skips the first (or last) item",
+        "The list is wrong",
+        "Counting is impossible",
+        "It returns too early"
+      ],
+      "answer": 0,
+      "explanation": "Missing exactly one item each time points to a loop that skips a boundary element — start or end.",
+      "id": "u81l07e03"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "To catch an off-by-one, the best input to trace by hand is...",
+      "options": [
+        "A tiny one, like a 2- or 3-item list, where you can count every step",
+        "A huge 1000-item list",
+        "An empty list only",
+        "No input at all"
+      ],
+      "answer": 0,
+      "explanation": "Tiny inputs make every step visible. On a 3-item list you'll immediately see if one is skipped.",
+      "id": "u81l07e04"
+    },
+    {
+      "type": "matchPairs",
+      "prompt": "Match each off-by-one symptom to a cause.",
+      "pairs": [
+        {
+          "left": "Sum one number short",
+          "right": "Loop stops one early"
+        },
+        {
+          "left": "Count one too many",
+          "right": "Counter starts at 1 instead of 0"
+        },
+        {
+          "left": "Skips the first item",
+          "right": "Loop starts at the second position"
+        }
+      ],
+      "explanation": "Off-by-one bugs come from the start value or the stopping point. Tracing a small case exposes which.",
+      "id": "u81l07e05"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "A counter should usually start at 0, and a running total should also usually start at 0.",
+      "answer": true,
+      "explanation": "Yes. Starting a count or total at 0 is the safe default. Starting at 1 is a common off-by-one source.",
+      "id": "u81l07e06"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "sum_to(3) gives 6 and sum_to(4) gives 10. Are these correct?",
+      "options": [
+        "Yes — 1+2+3=6 and 1+2+3+4=10, both right",
+        "No, both are one too high",
+        "No, both are one too low",
+        "Only the first is right"
+      ],
+      "answer": 0,
+      "explanation": "1+2+3=6 and 1+2+3+4=10. Checking two inputs by hand confirms the helper is correct here.",
+      "id": "u81l07e07"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Why trace TWO different inputs when hunting an off-by-one?",
+      "options": [
+        "One match could be luck; two matching builds confidence it's really fixed",
+        "Two is required by law",
+        "It wastes time",
+        "One is always enough"
+      ],
+      "answer": 0,
+      "explanation": "A single correct answer can be coincidence. Two correct traces make a real off-by-one much less likely.",
+      "id": "u81l07e08"
+    },
+    {
+      "type": "orderBlocks",
+      "prompt": "Order the off-by-one hunt.",
+      "blocks": [
+        "Pick a tiny input and count by hand",
+        "Trace the helper's loop step by step",
+        "Compare counts and fix the start or stop point"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Small hand count, step-by-step trace, fix the boundary. Off-by-ones hide at the start and the stop.",
+      "id": "u81l07e09"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "The takeaway:",
+      "options": [
+        "An always-off-by-one answer points to a boundary bug — trace a tiny input to find it",
+        "Off-by-ones are random",
+        "Big inputs find them fastest",
+        "Counters should start at 1"
+      ],
+      "answer": 0,
+      "explanation": "Consistent off-by-one = boundary mistake. Tiny inputs and hand counts pin it down.",
+      "id": "u81l07e10"
+    }
+  ]
+}

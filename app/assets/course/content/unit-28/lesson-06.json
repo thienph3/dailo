@@ -1,0 +1,140 @@
+{
+  "unitId": "u28",
+  "lessonId": "u28l06",
+  "title": "Nested if with elif inside",
+  "idea": "The inner decision can itself be an if/elif/else chain, giving several inner outcomes once the outer gate is passed. Predict output.",
+  "exercises": [
+    {
+      "id": "u28l06e01",
+      "type": "multipleChoice",
+      "prompt": "Can the inner decision be an if / elif / else chain instead of just if / else?",
+      "options": [
+        "Yes - any decision can go inside the outer body, including an elif chain",
+        "No - only a single if is allowed inside",
+        "No - elif cannot be indented",
+        "Only if there is no outer else"
+      ],
+      "answer": 0,
+      "explanation": "Whatever you can write at the top level you can write indented inside a branch, including a full if/elif/else chain."
+    },
+    {
+      "id": "u28l06e02",
+      "type": "multipleChoice",
+      "prompt": "Trace:\n\nlogged_in = True\nrole = 2\nif logged_in:\n    if role == 1:\n        print(\"Owner\")\n    elif role == 2:\n        print(\"Editor\")\n    else:\n        print(\"Viewer\")\nelse:\n    print(\"Log in first\")",
+      "options": [
+        "Editor",
+        "Owner",
+        "Viewer",
+        "Log in first"
+      ],
+      "answer": 0,
+      "explanation": "logged_in is True, so we enter. role == 1 is False, role == 2 is True, so 'Editor'."
+    },
+    {
+      "id": "u28l06e03",
+      "type": "multipleChoice",
+      "prompt": "Same code, logged_in = True, role = 5. What prints?",
+      "options": [
+        "Viewer",
+        "Owner",
+        "Editor",
+        "Log in first"
+      ],
+      "answer": 0,
+      "explanation": "Inside the logged-in branch, role 5 matches neither 1 nor 2, so the inner else runs: 'Viewer'."
+    },
+    {
+      "id": "u28l06e04",
+      "type": "multipleChoice",
+      "prompt": "Same code, logged_in = False, role = 1. What prints?",
+      "options": [
+        "Log in first",
+        "Owner",
+        "Editor",
+        "Viewer"
+      ],
+      "answer": 0,
+      "explanation": "The outer if is False, so the whole role chain is skipped and the outer else runs: 'Log in first'."
+    },
+    {
+      "id": "u28l06e05",
+      "type": "trueFalse",
+      "prompt": "The inner elif chain is only considered when the outer condition is True.",
+      "answer": true,
+      "explanation": "Yes. The chain lives inside the outer body, so it is reached only after the outer gate is passed."
+    },
+    {
+      "id": "u28l06e06",
+      "type": "orderBlocks",
+      "prompt": "Arrange: once a user is active, grade them A/B/C by score.",
+      "blocks": [
+        "if active:",
+        "    if score >= 90:",
+        "        print(\"A\")",
+        "    elif score >= 80:",
+        "        print(\"B\")",
+        "    else:",
+        "        print(\"C\")"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "explanation": "The whole grading chain is indented inside the 'active' branch, so grading only happens for active users."
+    },
+    {
+      "id": "u28l06e07",
+      "type": "fillBlank",
+      "prompt": "Add the middle grade path:\n\nif active:\n    if score >= 90:\n        print(\"A\")\n    ____ score >= 80:\n        print(\"B\")\n    else:\n        print(\"C\")",
+      "answer": "elif",
+      "acceptable": [
+        "elif"
+      ],
+      "explanation": "elif adds a middle outcome. It is checked only when the 90 test above it was False - and only when 'active' let us in."
+    },
+    {
+      "id": "u28l06e08",
+      "type": "multipleChoice",
+      "prompt": "Trace the grading code:\n\nactive = True\nscore = 85\nif active:\n    if score >= 90:\n        print(\"A\")\n    elif score >= 80:\n        print(\"B\")\n    else:\n        print(\"C\")",
+      "options": [
+        "B",
+        "A",
+        "C",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "active is True; 85 >= 90 is False; 85 >= 80 is True, so the elif runs: 'B'."
+    },
+    {
+      "id": "u28l06e09",
+      "type": "multipleChoice",
+      "prompt": "How many outcomes does this structure have: outer if/else, with an inner if/elif/else inside the if?",
+      "options": [
+        "Four - three from the inner chain plus the outer else",
+        "Two",
+        "Three",
+        "One"
+      ],
+      "answer": 0,
+      "explanation": "Inner chain gives A, B, C (three). The outer else gives a fourth. Nesting multiplies the paths."
+    },
+    {
+      "id": "u28l06e10",
+      "type": "multipleChoice",
+      "prompt": "When does putting an elif chain inside an if make sense?",
+      "options": [
+        "When several buckets only apply after an outer gate is passed",
+        "Only when there is no else",
+        "Never - elif cannot be nested",
+        "Only for exactly two buckets"
+      ],
+      "answer": 0,
+      "explanation": "Nest a chain when the bucket question only matters once an outer condition holds - like grading only active users."
+    }
+  ]
+}

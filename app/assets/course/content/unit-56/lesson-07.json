@@ -1,0 +1,150 @@
+{
+  "unitId": "u56",
+  "lessonId": "u56l07",
+  "title": "Solve it together: keep the big orders",
+  "idea": "GUIDED UEPCC. Walk a list of order sizes and collect only those above 100 into a new list.",
+  "problem": "From a list of order sizes, build a new list containing only the orders bigger than 100.",
+  "exercises": [
+    {
+      "id": "u56l07e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: Build a new list of only the orders bigger than 100.\n\nWhat is the OUTPUT?",
+      "options": [
+        "A new list of the big orders",
+        "A single number",
+        "How many are big",
+        "The first order"
+      ],
+      "answer": 0,
+      "explanation": "Output is a new list holding the items that pass the test. (Not a count — that's a later unit.)"
+    },
+    {
+      "id": "u56l07e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "What is the per-item test?",
+      "options": [
+        "Is this order bigger than 100?",
+        "Is this order the first?",
+        "Is this order even?",
+        "None"
+      ],
+      "answer": 0,
+      "explanation": "Each item is kept only if it is > 100."
+    },
+    {
+      "id": "u56l07e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example by hand. orders = [50, 200, 100, 300]. What new list?",
+      "options": [
+        "[200, 300]",
+        "[50, 100]",
+        "[200, 100, 300]",
+        "[50, 200, 100, 300]"
+      ],
+      "answer": 0,
+      "explanation": "Only 200 and 300 are strictly bigger than 100. 100 itself is not > 100."
+    },
+    {
+      "id": "u56l07e04",
+      "type": "trueFalse",
+      "uepcc": "E",
+      "prompt": "An order of exactly 100 is NOT kept, because 'bigger than 100' means > 100.",
+      "answer": true,
+      "explanation": "Strictly bigger excludes 100. Hand-checking the edge avoids an off-by-one slip."
+    },
+    {
+      "id": "u56l07e05",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Plan it. Order the steps.",
+      "blocks": [
+        "Start an empty 'big' list",
+        "For each order, if it is over 100, append it",
+        "(items at or below 100 are skipped)"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Empty list, then for each order test-and-maybe-append. Repeat."
+    },
+    {
+      "id": "u56l07e06",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Which three tools does this combine?",
+      "options": [
+        "empty list + for-each + if + append",
+        "two loops",
+        "input + print",
+        "range + len"
+      ],
+      "answer": 0,
+      "explanation": "Collect pattern with a filter: empty list, walk, test, append the keepers."
+    },
+    {
+      "id": "u56l07e07",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Code it. Fill the comparison:\n\nbig = []\nfor order in orders:\n    if order ____ 100:\n        big.append(order)",
+      "answer": ">",
+      "acceptable": [
+        ">"
+      ],
+      "explanation": "'Bigger than 100' is > 100 (strictly greater, so 100 is excluded)."
+    },
+    {
+      "id": "u56l07e08",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Arrange the full solution.",
+      "blocks": [
+        "        big.append(order)",
+        "    if order > 100:",
+        "for order in orders:",
+        "big = []",
+        "orders = [50, 200, 100, 300]"
+      ],
+      "answer": [
+        4,
+        3,
+        2,
+        1,
+        0
+      ],
+      "explanation": "Input list, empty result, loop, if (indent 1), append (indent 2). big ends [200, 300]."
+    },
+    {
+      "id": "u56l07e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check. 'big' ends [200, 300]. Hand example said [200, 300]. Verdict?",
+      "options": [
+        "Passes",
+        "Fails",
+        "Unknown",
+        "Change the test"
+      ],
+      "answer": 0,
+      "explanation": "Matches, including the 100-excluded edge. Correct."
+    },
+    {
+      "id": "u56l07e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Re-check with orders = [101, 100, 99]. What is 'big'?",
+      "options": [
+        "[101]",
+        "[101, 100]",
+        "[100, 99]",
+        "[]"
+      ],
+      "answer": 0,
+      "explanation": "Only 101 is > 100. The edge (100) and below are dropped."
+    }
+  ]
+}

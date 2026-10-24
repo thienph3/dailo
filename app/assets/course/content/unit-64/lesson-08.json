@@ -1,0 +1,127 @@
+{
+  "unitId": "u64",
+  "lessonId": "u64l08",
+  "title": "Searching strings and combined tests",
+  "idea": "TOOL: search works for any value and any == / comparison test, including strings. Predict output.",
+  "exercises": [
+    {
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nwords = [\"red\", \"green\", \"blue\"]\ntarget = \"green\"\nfound = False\nfor w in words:\n    if w == target:\n        found = True\nprint(found)",
+      "options": [
+        "True",
+        "False",
+        "green",
+        "[green]"
+      ],
+      "answer": 0,
+      "explanation": "'green' is in the list, so found becomes True. Search compares strings with == just like numbers.",
+      "id": "u64l08e01"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nwords = [\"cat\", \"dog\"]\ntarget = \"fish\"\nfound = False\nfor w in words:\n    if w == target:\n        found = True\nprint(found)",
+      "options": [
+        "False",
+        "True",
+        "fish",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "'fish' is not in the list, so no match occurs and found stays False.",
+      "id": "u64l08e02"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "A search can look for a string value using w == target, the same shape as searching numbers.",
+      "answer": true,
+      "explanation": "The pattern does not care about the type. Numbers or strings, you compare each item to the target with ==.",
+      "id": "u64l08e03"
+    },
+    {
+      "type": "fillBlank",
+      "prompt": "Search for the word in a list of words:\n\nfound = False\nfor w in words:\n    if w ____ target:\n        found = True",
+      "answer": "==",
+      "acceptable": [
+        "=="
+      ],
+      "explanation": "You compare the current word to the target with ==. A True means a match.",
+      "id": "u64l08e04"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nnums = [12, 3, 18]\nfound = False\nfor n in nums:\n    if n > 15:\n        found = True\nprint(found)",
+      "options": [
+        "True",
+        "False",
+        "18",
+        "[18]"
+      ],
+      "answer": 0,
+      "explanation": "This searches for ANY item over 15. 18 qualifies, so found becomes True — searching can use any test, not only ==.",
+      "id": "u64l08e05"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "A search with the test 'n > 15' answers which question?",
+      "options": [
+        "is there any item bigger than 15?",
+        "how many items are over 15?",
+        "what is the biggest item?",
+        "list the items over 15"
+      ],
+      "answer": 0,
+      "explanation": "A found flag with n > 15 asks 'does ANY item pass?'. It is a yes/no, not a count or a list.",
+      "id": "u64l08e06"
+    },
+    {
+      "type": "multiSelect",
+      "prompt": "Which are valid search tests inside the if? (pick all)",
+      "options": [
+        "n == target",
+        "w == \"red\"",
+        "n > 15",
+        "found = True"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Any boolean comparison works as the search test. 'found = True' is the action taken on a match, not a test.",
+      "id": "u64l08e07"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nnums = [2, 4, 6]\nfound = False\nfor n in nums:\n    if n % 2 == 1:\n        found = True\nprint(found)",
+      "options": [
+        "False",
+        "True",
+        "0",
+        "[]"
+      ],
+      "answer": 0,
+      "explanation": "This searches for any ODD item. All are even, so none pass and found stays False.",
+      "id": "u64l08e08"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Searching for 'any item that passes a test' is just a found flag with that test in the if.",
+      "answer": true,
+      "explanation": "Whether the test is == a value or a comparison, the found-flag shape answers 'does any item pass?'.",
+      "id": "u64l08e09"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nwords = [\"a\", \"b\", \"c\"]\ntarget = \"c\"\nfound = False\nfor w in words:\n    if w == target:\n        found = True\n        break\nif found:\n    print(\"yes\")\nelse:\n    print(\"no\")",
+      "options": [
+        "yes",
+        "no",
+        "True",
+        "c"
+      ],
+      "answer": 0,
+      "explanation": "'c' is present, so found becomes True, break stops the loop, and the if prints 'yes'.",
+      "id": "u64l08e10"
+    }
+  ]
+}

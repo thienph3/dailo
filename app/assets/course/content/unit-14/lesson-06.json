@@ -1,0 +1,127 @@
+{
+  "unitId": "u14",
+  "lessonId": "u14l06",
+  "title": "Solve it: minutes into hours and minutes",
+  "idea": "GUIDED PROBLEM. A relatable split: total minutes -> whole hours (//) and leftover minutes (%). Same two-operator pattern as lesson 3 in a new setting. Every value named.",
+  "problem": "A video is 155 minutes long. Show how many whole hours it is and how many minutes are left over. (60 minutes make an hour.)",
+  "exercises": [
+    {
+      "id": "u14l06e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: a video is 155 minutes. Show whole hours AND leftover minutes (60 min = 1 hour).\n\nUnderstand — what are the OUTPUTS?",
+      "options": [
+        "Two: the whole hours and the leftover minutes",
+        "One: just the minutes",
+        "One: just the hours",
+        "The video's name"
+      ],
+      "answer": 0,
+      "explanation": "Two outputs again: whole hours and the minutes left over. Spot both before you plan."
+    },
+    {
+      "id": "u14l06e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "What are the INPUTS?",
+      "options": [
+        "The total minutes (155) and minutes per hour (60)",
+        "Only the number 2",
+        "The word 'hours'",
+        "None"
+      ],
+      "answer": 0,
+      "explanation": "Two inputs: 155 total minutes and 60 minutes per hour. Both become named variables."
+    },
+    {
+      "id": "u14l06e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example by hand: 155 minutes, 60 per hour. Whole hours and leftover minutes?",
+      "options": [
+        "2 hours, 35 minutes",
+        "3 hours, 0 minutes",
+        "2 hours, 60 minutes",
+        "1 hour, 95 minutes"
+      ],
+      "answer": 0,
+      "explanation": "2 hours = 120 minutes; 155 - 120 = 35 left. So 2 hours, 35 minutes. Check values: 2 and 35."
+    },
+    {
+      "id": "u14l06e04",
+      "type": "matchPairs",
+      "uepcc": "P",
+      "prompt": "Match each output to its operator.",
+      "pairs": [
+        { "left": "whole hours", "right": "total_minutes // minutes_per_hour" },
+        { "left": "leftover minutes", "right": "total_minutes % minutes_per_hour" }
+      ],
+      "explanation": "// gives whole hours (how many full 60s fit), % gives the minutes that don't fill another hour."
+    },
+    {
+      "id": "u14l06e05",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Put the plan in order.",
+      "blocks": [
+        "Work out whole hours with //",
+        "Remember total minutes and minutes per hour",
+        "Work out leftover minutes with %",
+        "Show both results"
+      ],
+      "answer": [1, 0, 2, 3],
+      "explanation": "Remember inputs, compute hours, compute leftover minutes, show both."
+    },
+    {
+      "id": "u14l06e06",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Complete the whole-hours step:\n\ntotal_minutes = 155\nminutes_per_hour = 60\nhours = total_minutes ____ minutes_per_hour",
+      "answer": "//",
+      "acceptable": ["//"],
+      "explanation": "// gives whole hours: 155 // 60 = 2."
+    },
+    {
+      "id": "u14l06e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Arrange the full solution.",
+      "blocks": [
+        "total_minutes = 155",
+        "minutes_per_hour = 60",
+        "hours = total_minutes // minutes_per_hour",
+        "leftover_minutes = total_minutes % minutes_per_hour",
+        "print(hours)",
+        "print(leftover_minutes)"
+      ],
+      "answer": [0, 1, 2, 3, 4, 5],
+      "explanation": "Store both inputs, compute hours with //, leftover minutes with %, print each. Both inputs are used."
+    },
+    {
+      "id": "u14l06e08",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "The code prints 2 then 35. Hand example said 2 and 35. Verdict?",
+      "options": ["Passes — both match", "Fails", "Only hours is right", "Unknown"],
+      "answer": 0,
+      "explanation": "Both outputs match the example, so it's correct."
+    },
+    {
+      "id": "u14l06e09",
+      "type": "trueFalse",
+      "uepcc": "Check",
+      "prompt": "Sanity check: hours * minutes_per_hour + leftover_minutes should equal the total minutes (155).",
+      "answer": true,
+      "explanation": "Yes! 2 x 60 + 35 = 155. Rebuilding the total confirms // and % are both right."
+    },
+    {
+      "id": "u14l06e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "New video: 200 minutes, 60 per hour. Same code. What do the two prints show?",
+      "options": ["3 and 20", "3 and 0", "4 and 0", "2 and 80"],
+      "answer": 0,
+      "explanation": "200 // 60 = 3 hours, 200 % 60 = 20 minutes. And 3 x 60 + 20 = 200. The plan generalizes."
+    }
+  ]
+}

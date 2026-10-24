@@ -1,0 +1,129 @@
+{
+  "unitId": "u63",
+  "lessonId": "u63l02",
+  "title": "The filter shape: empty list, loop, append",
+  "idea": "TOOL: the concrete filter pattern — make an empty list, loop, test with if, append the passers. Shown with predictable output.",
+  "exercises": [
+    {
+      "id": "u63l02e01",
+      "type": "multipleChoice",
+      "prompt": "What will this show?\n\nscores = [4, 9, 2, 7]\nkept = []\nfor score in scores:\n    if score > 5:\n        kept.append(score)\nprint(kept)",
+      "options": [
+        "[9, 7]",
+        "[4, 2]",
+        "[4, 9, 2, 7]",
+        "[]"
+      ],
+      "answer": 0,
+      "explanation": "Each score is tested with score > 5. Only 9 and 7 pass and get appended, so kept ends up [9, 7]."
+    },
+    {
+      "id": "u63l02e02",
+      "type": "multipleChoice",
+      "prompt": "Why does the filter start with kept = [] (an empty list)?",
+      "options": [
+        "So there is somewhere to collect the items that pass",
+        "Because the original list must be empty",
+        "To count the items",
+        "It is just decoration and does nothing"
+      ],
+      "answer": 0,
+      "explanation": "You need an empty basket before you start picking. Each passing item gets appended into kept."
+    },
+    {
+      "id": "u63l02e03",
+      "type": "trueFalse",
+      "prompt": "The append happens INSIDE the if, so only items that pass the test are added.",
+      "answer": true,
+      "explanation": "The append is indented under the if. It only runs when the condition is true, so only passers are kept."
+    },
+    {
+      "id": "u63l02e04",
+      "type": "fillBlank",
+      "prompt": "Complete the line that adds a passing item to the kept list.\n\nkept = []\nfor n in numbers:\n    if n < 10:\n        kept.____(n)",
+      "answer": "append",
+      "acceptable": [
+        "append"
+      ],
+      "explanation": "append adds the item to the end of the list. You met it earlier — here it collects each number that passes n < 10."
+    },
+    {
+      "id": "u63l02e05",
+      "type": "multipleChoice",
+      "prompt": "What will this show?\n\nnums = [12, 3, 20, 8]\nkept = []\nfor n in nums:\n    if n < 10:\n        kept.append(n)\nprint(kept)",
+      "options": [
+        "[3, 8]",
+        "[12, 20]",
+        "[12, 3, 20, 8]",
+        "[]"
+      ],
+      "answer": 0,
+      "explanation": "Only 3 and 8 are below 10, so they are appended in the order they appear: [3, 8]."
+    },
+    {
+      "id": "u63l02e06",
+      "type": "orderBlocks",
+      "prompt": "Arrange these lines into a working filter that keeps scores above 5.",
+      "blocks": [
+        "scores = [4, 9, 2, 7]",
+        "kept = []",
+        "for score in scores:",
+        "    if score > 5:",
+        "        kept.append(score)",
+        "print(kept)"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "explanation": "List first, empty kept list, then the loop with the test, the append inside the if, and finally print the result."
+    },
+    {
+      "id": "u63l02e07",
+      "type": "multipleChoice",
+      "prompt": "What will this show?\n\nages = [15, 22, 8, 40]\nadults = []\nfor age in ages:\n    if age >= 18:\n        adults.append(age)\nprint(adults)",
+      "options": [
+        "[22, 40]",
+        "[15, 8]",
+        "[15, 22, 8, 40]",
+        "[18]"
+      ],
+      "answer": 0,
+      "explanation": "age >= 18 keeps only 22 and 40. The others are younger and left out, so adults is [22, 40]."
+    },
+    {
+      "id": "u63l02e08",
+      "type": "trueFalse",
+      "prompt": "If you forget the kept = [] line before the loop, the program has no list to append into.",
+      "answer": true,
+      "explanation": "The empty list must exist before the loop starts appending. Without it, there is nowhere to collect the passers."
+    },
+    {
+      "id": "u63l02e09",
+      "type": "multipleChoice",
+      "prompt": "What will this show?\n\nprices = [3, 8, 1, 6]\ncheap = []\nfor price in prices:\n    if price <= 5:\n        cheap.append(price)\nprint(cheap)",
+      "options": [
+        "[3, 1]",
+        "[8, 6]",
+        "[3, 8, 1, 6]",
+        "[5]"
+      ],
+      "answer": 0,
+      "explanation": "price <= 5 passes for 3 and 1 only. They are appended in order, giving [3, 1]."
+    },
+    {
+      "id": "u63l02e10",
+      "type": "fillBlank",
+      "prompt": "Complete the test so this keeps only numbers that are 10 or more.\n\nkept = []\nfor n in nums:\n    if n ____ 10:\n        kept.append(n)",
+      "answer": ">=",
+      "acceptable": [
+        ">="
+      ],
+      "explanation": "'10 or more' means greater-than-or-equal, so the comparison is >=. You saw this comparison back in the booleans unit."
+    }
+  ]
+}

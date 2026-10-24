@@ -1,0 +1,124 @@
+{
+  "unitId": "u04",
+  "lessonId": "u04l09",
+  "title": "Predicting multi-line output (review)",
+  "idea": "Read a few print lines and write the example output they produce — connecting code you know to the example habit.",
+  "exercises": [
+    {
+      "id": "u04l09e01",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nprint(\"Hi\")",
+      "options": [
+        "Hi",
+        "\"Hi\"",
+        "print(Hi)",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "print shows what's inside the quotes: Hi. Reviewing print from Unit 1 to build an example."
+    },
+    {
+      "id": "u04l09e02",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nprint(\"One\")\nprint(\"Two\")",
+      "options": [
+        "One on line 1, Two on line 2",
+        "Two on line 1, One on line 2",
+        "OneTwo on one line",
+        "One only"
+      ],
+      "answer": 0,
+      "explanation": "Each print makes its own line, in order. So One, then Two — a two-line example."
+    },
+    {
+      "id": "u04l09e03",
+      "type": "orderBlocks",
+      "prompt": "This code runs:\n\nprint(\"Red\")\nprint(\"Green\")\nprint(\"Blue\")\n\nPut the output lines in the order they appear.",
+      "blocks": [
+        "Red",
+        "Green",
+        "Blue"
+      ],
+      "answer": [0, 1, 2],
+      "explanation": "Prints run top to bottom, so the lines appear Red, Green, Blue — matching the code order."
+    },
+    {
+      "id": "u04l09e04",
+      "type": "trueFalse",
+      "prompt": "Each print() puts its text on its own line.",
+      "answer": true,
+      "explanation": "Yes — one print, one line. Three prints make three lines of output. (Review from Unit 1.)"
+    },
+    {
+      "id": "u04l09e05",
+      "type": "fillBlank",
+      "prompt": "Predict the output of this single line:\n\nprint(\"Done\")",
+      "answer": "Done",
+      "acceptable": ["Done", "done"],
+      "explanation": "print shows the text in quotes: Done. The quotes and print() don't appear on screen."
+    },
+    {
+      "id": "u04l09e06",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nprint(\"Start\")\nprint(\"End\")",
+      "options": [
+        "Line 1: Start, Line 2: End",
+        "Line 1: End, Line 2: Start",
+        "Line 1: Start End",
+        "Line 1: Start only"
+      ],
+      "answer": 0,
+      "explanation": "First print shows Start, second shows End — two lines in code order."
+    },
+    {
+      "id": "u04l09e07",
+      "type": "multiSelect",
+      "prompt": "This code:\n\nprint(\"A\")\nprint(\"B\")\n\nWhich statements about its output are true? (pick all)",
+      "options": [
+        "It has two lines",
+        "Line 1 is A",
+        "Line 2 is B",
+        "A and B share one line"
+      ],
+      "answer": [0, 1, 2],
+      "explanation": "Two prints, two lines: A then B. They do NOT share a line."
+    },
+    {
+      "id": "u04l09e08",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nprint(\"Go\")\nprint(\"Go\")",
+      "options": [
+        "Go on line 1, Go on line 2",
+        "Go once",
+        "GoGo on one line",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "The same print appears twice, so Go shows on two separate lines. Each print always makes its own line."
+    },
+    {
+      "id": "u04l09e09",
+      "type": "matchPairs",
+      "prompt": "Match each bit of code to the output line it makes.",
+      "pairs": [
+        { "left": "print(\"Cat\")", "right": "Cat" },
+        { "left": "print(\"9\")", "right": "9" },
+        { "left": "print(\"Yes\")", "right": "Yes" }
+      ],
+      "explanation": "print shows whatever is inside the quotes, each on its own line. (Review of Unit 1 printing.)"
+    },
+    {
+      "id": "u04l09e10",
+      "type": "multipleChoice",
+      "prompt": "Why does predicting output help you work examples?",
+      "options": [
+        "Predicting IS writing the expected output by hand",
+        "It makes the code run faster",
+        "It skips the thinking",
+        "It has nothing to do with examples"
+      ],
+      "answer": 0,
+      "explanation": "When you predict what prints will show, you're doing the exact skill of this unit: writing the expected output before trusting the run."
+    }
+  ]
+}

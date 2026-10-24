@@ -1,0 +1,141 @@
+{
+  "unitId": "u17",
+  "lessonId": "u17l04",
+  "title": "Convert text to numbers, then report",
+  "idea": "GUIDED PROBLEM. Two values arrive as text; convert with int() before adding, then present the total. Walked through UEPCC.",
+  "problem": "Two prices arrive written as text: \"5\" and \"8\". Add them and show a message like: The total is 13.",
+  "exercises": [
+    {
+      "id": "u17l04e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: two prices arrive as TEXT, \"5\" and \"8\". Show a message like 'The total is 13.'\n\nUnderstand. What is the OUTPUT?",
+      "options": [
+        "A message showing the total of the two prices",
+        "The two prices glued side by side",
+        "Only the first price",
+        "The word 'total'"
+      ],
+      "answer": 0,
+      "explanation": "The output is a message with the real numeric total. Name the output before solving."
+    },
+    {
+      "id": "u17l04e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "The inputs are \"5\" and \"8\" with quotes. What type are they right now?",
+      "options": [
+        "Strings (text), not numbers",
+        "Numbers you can add directly",
+        "Nothing — they are empty",
+        "Decimals"
+      ],
+      "answer": 0,
+      "explanation": "Quotes make them strings. Understanding their TYPE is the key to this problem."
+    },
+    {
+      "id": "u17l04e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example by hand. What is the real numeric total of 5 and 8?",
+      "options": ["13", "58", "85", "3"],
+      "answer": 0,
+      "explanation": "5 + 8 = 13. That's the number you want. (Watch out: as text, \"5\" + \"8\" would glue to \"58\" instead!)"
+    },
+    {
+      "id": "u17l04e04",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "If you forgot to convert and ran \"5\" + \"8\" as text, what would you get?",
+      "options": [
+        "\"58\" — the texts glued together, not added",
+        "13 — the correct total",
+        "An empty string",
+        "5.8"
+      ],
+      "answer": 0,
+      "explanation": "+ on two strings joins them: \"5\" + \"8\" = \"58\". That's why you must convert to numbers first."
+    },
+    {
+      "id": "u17l04e05",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Plan. Which tool turns the text \"5\" into the number 5 so you can add?",
+      "options": [
+        "int(\"5\")",
+        "str(5)",
+        "print(\"5\")",
+        "float(\"5\")"
+      ],
+      "answer": 0,
+      "explanation": "int() converts text that looks like a whole number into a real integer. int(\"5\") gives 5."
+    },
+    {
+      "id": "u17l04e06",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Order the plain-English steps.",
+      "blocks": [
+        "Convert each text price into a number",
+        "Remember the two text prices",
+        "Add the two numbers into a total",
+        "Show a message with the total"
+      ],
+      "answer": [1, 0, 2, 3],
+      "explanation": "Remember the texts, convert them to numbers, add, then present. Convert BEFORE adding."
+    },
+    {
+      "id": "u17l04e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code. Arrange the lines to match your plan.",
+      "blocks": [
+        "first_price = int(first_text)",
+        "first_text = \"5\"",
+        "second_text = \"8\"",
+        "second_price = int(second_text)",
+        "total = first_price + second_price",
+        "print(f\"The total is {total}.\")"
+      ],
+      "answer": [1, 2, 0, 3, 4, 5],
+      "explanation": "Store both texts, convert each with int(), add the numbers, then print the message."
+    },
+    {
+      "id": "u17l04e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Fill the blank so the text becomes a number:\n\nfirst_text = \"5\"\nfirst_price = ____(first_text)",
+      "answer": "int",
+      "acceptable": ["int"],
+      "explanation": "int(first_text) converts \"5\" into 5 so it can be added as a number."
+    },
+    {
+      "id": "u17l04e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check. After converting, the code prints 'The total is 13.' Hand example said 13. Verdict?",
+      "options": [
+        "Passes — matches the example",
+        "Fails — should be 58",
+        "Unknown",
+        "Rewrite the example"
+      ],
+      "answer": 0,
+      "explanation": "Converting first gave the real total 13, matching the hand example. Correct!"
+    },
+    {
+      "id": "u17l04e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "New inputs: first_text = \"20\", second_text = \"4\". After int() conversion and adding, what prints?",
+      "options": [
+        "The total is 24.",
+        "The total is 204.",
+        "The total is 420.",
+        "The total is 16."
+      ],
+      "answer": 0,
+      "explanation": "int(\"20\") + int(\"4\") = 24. Converting before adding keeps working for new inputs."
+    }
+  ]
+}

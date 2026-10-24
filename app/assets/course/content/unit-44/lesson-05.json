@@ -1,0 +1,130 @@
+{
+  "unitId": "u44",
+  "lessonId": "u44l05",
+  "title": "while with input: keep asking",
+  "idea": "A while loop can keep reading input until the answer meets a condition.",
+  "exercises": [
+    {
+      "type": "multipleChoice",
+      "prompt": "A program should keep asking for a number until the user enters a positive one. Which loop fits?",
+      "options": [
+        "while -- repeat as long as the input is not yet valid",
+        "for with range",
+        "a single if",
+        "no loop"
+      ],
+      "answer": 0,
+      "explanation": "You don't know how many tries it'll take, so a while loop repeats until the condition (a positive number) is met.",
+      "id": "u44l05e01"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "What does this loop do?\n\nn = int(input())\nwhile n <= 0:\n    n = int(input())\nprint(n)",
+      "options": [
+        "Keeps asking until the user enters a number above 0, then prints it",
+        "Prints 0 forever",
+        "Asks exactly once",
+        "Adds the numbers"
+      ],
+      "answer": 0,
+      "explanation": "It reads n, and while n <= 0 (not valid) it asks again. Once n is positive, the loop stops and it prints n.",
+      "id": "u44l05e02"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "A while loop is a natural fit for 'keep trying until it's right.'",
+      "answer": true,
+      "explanation": "True. The number of attempts is unknown, so a condition -- not a count -- controls the repeats.",
+      "id": "u44l05e03"
+    },
+    {
+      "type": "orderBlocks",
+      "prompt": "Arrange a loop that keeps asking until the number is at least 1.",
+      "blocks": [
+        "while n < 1:",
+        "n = int(input())",
+        "    n = int(input())",
+        "print(n)"
+      ],
+      "answer": [
+        1,
+        0,
+        2,
+        3
+      ],
+      "explanation": "Read n first, then while n < 1 ask again, and after the loop print the valid n.",
+      "id": "u44l05e04"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Why is a for-loop a poor fit for 'keep asking until valid'?",
+      "options": [
+        "You don't know how many tries the user will need",
+        "for-loops can't read input",
+        "for-loops are slower",
+        "for-loops never stop"
+      ],
+      "answer": 0,
+      "explanation": "A for-loop needs a known count. Here the count depends on the user, so a condition-controlled while is better.",
+      "id": "u44l05e05"
+    },
+    {
+      "type": "fillBlank",
+      "prompt": "Fill the condition so the loop repeats while the input is still zero or less:\n\nn = int(input())\nwhile n ____ 0:\n    n = int(input())",
+      "answer": "<=",
+      "acceptable": [
+        "<=",
+        "< =",
+        "&lt;="
+      ],
+      "explanation": "n <= 0 means 'not yet positive,' so it keeps asking. When n becomes positive, the condition is false and it stops.",
+      "id": "u44l05e06"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "The user types -2, then 0, then 5. What does this print?\n\nn = int(input())\nwhile n <= 0:\n    n = int(input())\nprint(n)",
+      "options": [
+        "5",
+        "-2",
+        "0",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "-2 and 0 are not positive, so it keeps asking. 5 is positive, the loop stops, and it prints 5.",
+      "id": "u44l05e07"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Reading the input once before the loop, and again inside it, is a common 'ask again' pattern.",
+      "answer": true,
+      "explanation": "True. The first read gives the loop something to check; the read inside gives the user another try.",
+      "id": "u44l05e08"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "What makes the input loop eventually stop?",
+      "options": [
+        "The user finally enters a value that fails the condition",
+        "Nothing, it runs forever",
+        "A fixed count",
+        "The screen fills up"
+      ],
+      "answer": 0,
+      "explanation": "The loop stops when the condition is false -- here, when the user enters a valid (positive) number.",
+      "id": "u44l05e09"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "'Keep asking until valid' belongs to which family of problems?",
+      "options": [
+        "Condition-controlled repetition -- a while job",
+        "Fixed counting -- a for job",
+        "One-time math",
+        "No repetition"
+      ],
+      "answer": 0,
+      "explanation": "An unknown number of repeats, ended by a condition, is exactly what while is for.",
+      "id": "u44l05e10"
+    }
+  ]
+}

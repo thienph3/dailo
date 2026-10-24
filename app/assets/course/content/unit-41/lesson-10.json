@@ -1,0 +1,134 @@
+{
+  "unitId": "u41",
+  "lessonId": "u41l10",
+  "title": "Put it together: the accumulator",
+  "idea": "REVIEW-LEANING. Recap the accumulator (start at 0, add a value each pass) mixing earlier tools.",
+  "exercises": [
+    {
+      "id": "u41l10e01",
+      "type": "multipleChoice",
+      "prompt": "Recall: what value does a running total start at?",
+      "options": [
+        "0",
+        "1",
+        "the first number",
+        "it varies"
+      ],
+      "answer": 0,
+      "explanation": "Zero — nothing has been added before the loop begins."
+    },
+    {
+      "id": "u41l10e02",
+      "type": "multipleChoice",
+      "prompt": "Recall: where must total = 0 go?",
+      "options": [
+        "Before the loop",
+        "Inside the loop",
+        "After the loop",
+        "It is optional"
+      ],
+      "answer": 0,
+      "explanation": "Before the loop, so the total survives and builds across passes."
+    },
+    {
+      "id": "u41l10e03",
+      "type": "multipleChoice",
+      "prompt": "What prints?\n\ntotal = 0\nfor i in range(1, 5):\n    total += i\nprint(total)",
+      "options": [
+        "10",
+        "4",
+        "6",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "1 + 2 + 3 + 4 = 10."
+    },
+    {
+      "id": "u41l10e04",
+      "type": "fillBlank",
+      "prompt": "Review (range): fill the stop so the loop sums the numbers 1 to 5:\n\nfor i in range(1, ____):",
+      "answer": "6",
+      "acceptable": [
+        "6"
+      ],
+      "explanation": "Stop one past 5 is 6, so range(1, 6) gives 1..5."
+    },
+    {
+      "id": "u41l10e05",
+      "type": "multipleChoice",
+      "prompt": "What prints?\n\ntotal = 0\nfor i in range(3):\n    total += 6\nprint(total)",
+      "options": [
+        "18",
+        "6",
+        "3",
+        "9"
+      ],
+      "answer": 0,
+      "explanation": "Three passes of +6: 6, 12, 18."
+    },
+    {
+      "id": "u41l10e06",
+      "type": "trueFalse",
+      "prompt": "Review (counter vs total): count += 1 answers 'how many', total += i answers 'what sum'.",
+      "answer": true,
+      "explanation": "True. Same shape, different job: one adds a fixed 1, the other adds a value."
+    },
+    {
+      "id": "u41l10e07",
+      "type": "orderBlocks",
+      "prompt": "Arrange a loop that sums the numbers 1 to 4.",
+      "blocks": [
+        "    total += i",
+        "total = 0",
+        "print(total)",
+        "for i in range(1, 5):"
+      ],
+      "answer": [
+        1,
+        3,
+        0,
+        2
+      ],
+      "explanation": "Start total at 0, loop over 1..4 adding i, then print (10)."
+    },
+    {
+      "id": "u41l10e08",
+      "type": "multipleChoice",
+      "prompt": "Review (f-strings): print(f\"Sum is {total}\") with total 10 shows what?",
+      "options": [
+        "Sum is 10",
+        "Sum is total",
+        "Sum is 0",
+        "10"
+      ],
+      "answer": 0,
+      "explanation": "The braces pull in 10, so it prints 'Sum is 10'."
+    },
+    {
+      "id": "u41l10e09",
+      "type": "multipleChoice",
+      "prompt": "A running total equals only the last value added. First thing to check?",
+      "options": [
+        "Whether total = 0 is wrongly inside the loop",
+        "The print spelling",
+        "The screen size",
+        "The range color"
+      ],
+      "answer": 0,
+      "explanation": "That almost always means total = 0 was placed inside the loop, resetting the sum each pass."
+    },
+    {
+      "id": "u41l10e10",
+      "type": "multipleChoice",
+      "prompt": "Big picture: what question does an accumulator answer?",
+      "options": [
+        "What is the total of these values?",
+        "How many are there?",
+        "Which is biggest?",
+        "Nothing useful"
+      ],
+      "answer": 0,
+      "explanation": "It answers 'what is the total?' — adding values up as the loop goes."
+    }
+  ]
+}

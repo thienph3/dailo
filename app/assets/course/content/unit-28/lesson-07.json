@@ -1,0 +1,129 @@
+{
+  "unitId": "u28",
+  "lessonId": "u28l07",
+  "title": "Common nested-if mistakes",
+  "idea": "Wrong indentation sends a branch to the wrong if, and = vs == still bites. Spot the flaw and explain why it misbehaves.",
+  "exercises": [
+    {
+      "id": "u28l07e01",
+      "type": "multipleChoice",
+      "prompt": "This was meant to print 'Buy a ticket' when an adult has no ticket. Why does it misbehave?\n\nif age >= 18:\n    if has_ticket:\n        print(\"Enter\")\nelse:\n    print(\"Buy a ticket\")",
+      "options": [
+        "The else lines up with the OUTER if, so it runs for under-18s, not for ticketless adults",
+        "The code is correct",
+        "has_ticket is spelled wrong",
+        "print is not allowed indented"
+      ],
+      "answer": 0,
+      "explanation": "Indentation decides ownership. This else matches the outer if, so it answers 'age >= 18', not the inner ticket question. Indent it to match the inner if instead."
+    },
+    {
+      "id": "u28l07e02",
+      "type": "multipleChoice",
+      "prompt": "What actually prints above when age = 15, has_ticket = True?",
+      "options": [
+        "Buy a ticket",
+        "Enter",
+        "nothing",
+        "an error"
+      ],
+      "answer": 0,
+      "explanation": "age >= 18 is False, so the outer else runs: 'Buy a ticket'. That is clearly wrong for a 15-year-old - proof the else is attached to the wrong if."
+    },
+    {
+      "id": "u28l07e03",
+      "type": "multipleChoice",
+      "prompt": "Spot the bug:\n\nif logged_in:\n    if is_admin = True:\n        print(\"Admin\")",
+      "options": [
+        "'is_admin = True' uses one =, which assigns; a test needs == (or just 'if is_admin:')",
+        "The indentation is wrong",
+        "print is misspelled",
+        "Nothing is wrong"
+      ],
+      "answer": 0,
+      "explanation": "A single = assigns and is not allowed in an if test. Use 'if is_admin == True:' or, better, 'if is_admin:'. The = vs == trap applies inside nested ifs too."
+    },
+    {
+      "id": "u28l07e04",
+      "type": "trueFalse",
+      "prompt": "Indenting the inner if by a different amount than Python expects can cause an error or send it to the wrong block.",
+      "answer": true,
+      "explanation": "Yes. Indentation is meaningful in Python. Mismatched indent either errors out or quietly attaches the line to the wrong block."
+    },
+    {
+      "id": "u28l07e05",
+      "type": "multipleChoice",
+      "prompt": "This should warn only cold AND rainy days. What is wrong?\n\nif cold:\nif rainy:\n    print(\"Wear a coat\")",
+      "options": [
+        "The inner if is not indented, so Python can't see it is inside the outer if",
+        "cold should be a number",
+        "print needs quotes removed",
+        "It is fine"
+      ],
+      "answer": 0,
+      "explanation": "The inner if must be indented under the outer if. With no indent, Python expects the outer if to have a body and raises an error."
+    },
+    {
+      "id": "u28l07e06",
+      "type": "multipleChoice",
+      "prompt": "Someone used a nested if where a simple 'and' would do:\n\nif a >= 1:\n    if b >= 1:\n        print(\"OK\")\n\nThey only ever want 'OK'. What is the cleaner fix?",
+      "options": [
+        "if a >= 1 and b >= 1: print(\"OK\")",
+        "Add two elses",
+        "Remove the prints",
+        "Nest a third if"
+      ],
+      "answer": 0,
+      "explanation": "With only the all-True case needed, 'and' is flatter and clearer. Nest only when an in-between case needs its own branch."
+    },
+    {
+      "id": "u28l07e07",
+      "type": "multipleChoice",
+      "prompt": "Why is a deeply over-nested if (if inside if inside if inside if) a smell to watch for?",
+      "options": [
+        "It gets hard to read and trace; often 'and'/elif can flatten it",
+        "Python forbids more than two levels",
+        "It runs slower than the hardware",
+        "Indentation is optional there"
+      ],
+      "answer": 0,
+      "explanation": "Deep nesting is legal but hard to follow. If the branches don't each need their own response, combine conditions with 'and' or use elif to flatten."
+    },
+    {
+      "id": "u28l07e08",
+      "type": "fillBlank",
+      "prompt": "Fix the comparison so it tests equality instead of assigning:\n\nif logged_in:\n    if role __ 1:\n        print(\"Owner\")",
+      "answer": "==",
+      "acceptable": [
+        "=="
+      ],
+      "explanation": "Use == to compare. A single = would try to assign to role and is not valid in an if condition."
+    },
+    {
+      "id": "u28l07e09",
+      "type": "multipleChoice",
+      "prompt": "A nested if has an inner if with no else. For the inner-False case, what happens?",
+      "options": [
+        "Nothing is printed by the inner block; the program just continues",
+        "The outer else runs",
+        "It is an error",
+        "The inner if runs anyway"
+      ],
+      "answer": 0,
+      "explanation": "An if without an else simply does nothing when its condition is False. Don't expect the outer else to catch an inner-False case - it won't."
+    },
+    {
+      "id": "u28l07e10",
+      "type": "multipleChoice",
+      "prompt": "Best habit to avoid nested-if bugs?",
+      "options": [
+        "Line up each else with the if it answers, and trace every path",
+        "Avoid indentation",
+        "Use = inside conditions",
+        "Always nest at least three deep"
+      ],
+      "answer": 0,
+      "explanation": "Careful indentation decides which if an else belongs to, and tracing every path catches a branch attached to the wrong question."
+    }
+  ]
+}

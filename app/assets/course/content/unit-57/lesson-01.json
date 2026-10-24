@@ -1,0 +1,132 @@
+{
+  "unitId": "u57",
+  "lessonId": "u57l01",
+  "title": "Keeping a running total",
+  "idea": "Opener: adding up many values means keeping ONE result that grows as you visit each value. Thinking first.",
+  "exercises": [
+    {
+      "id": "u57l01e01",
+      "type": "multipleChoice",
+      "prompt": "You add up a shopping receipt by keeping a running total in your head. What happens to that total as you read each price?",
+      "options": [
+        "It grows by each price, one at a time",
+        "It stays the same",
+        "It resets each time",
+        "It only holds the last price"
+      ],
+      "answer": 0,
+      "explanation": "A running total starts at 0 and grows by each value you meet. That 'one result that keeps adding' idea is this unit."
+    },
+    {
+      "id": "u57l01e02",
+      "type": "trueFalse",
+      "prompt": "To total a list, you keep a single number and add each value into it as you go.",
+      "answer": true,
+      "explanation": "One result variable, added to on every pass. We call it an accumulator."
+    },
+    {
+      "id": "u57l01e03",
+      "type": "multipleChoice",
+      "prompt": "Before you add anything, what should the running total start at?",
+      "options": [
+        "0 — the total of nothing is zero",
+        "1",
+        "The first value",
+        "The length of the list"
+      ],
+      "answer": 0,
+      "explanation": "Start at 0 so the first value you add is counted correctly. Totalling nothing gives 0."
+    },
+    {
+      "id": "u57l01e04",
+      "type": "orderBlocks",
+      "prompt": "You total [3, 5, 2] by hand. Put the running total after each step in order (start 0).",
+      "blocks": [
+        "0 + 3 = 3",
+        "3 + 5 = 8",
+        "8 + 2 = 10"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Start 0, add 3 -> 3, add 5 -> 8, add 2 -> 10. The total grows as you visit each value."
+    },
+    {
+      "id": "u57l01e05",
+      "type": "multipleChoice",
+      "prompt": "The final total of [3, 5, 2] is...",
+      "options": [
+        "10",
+        "3",
+        "8",
+        "2"
+      ],
+      "answer": 0,
+      "explanation": "3 + 5 + 2 = 10. The accumulator holds 10 after the last value."
+    },
+    {
+      "id": "u57l01e06",
+      "type": "multiSelect",
+      "prompt": "Which real tasks are 'keep a running total'? (pick all)",
+      "options": [
+        "Adding every item on a bill",
+        "Summing all the rainfall this week",
+        "Printing each name",
+        "Reading the first score"
+      ],
+      "answer": [
+        0,
+        1
+      ],
+      "explanation": "Bills and rainfall both add many values into one total. Printing names and reading one item aren't totalling."
+    },
+    {
+      "id": "u57l01e07",
+      "type": "trueFalse",
+      "prompt": "The accumulator is a variable that you reuse and update on each pass, not a brand-new variable each time.",
+      "answer": true,
+      "explanation": "One variable, updated over and over. That reuse is what makes the total build up."
+    },
+    {
+      "id": "u57l01e08",
+      "type": "multipleChoice",
+      "prompt": "You already met a 'counter' that goes +1 each pass. How is a running TOTAL different?",
+      "options": [
+        "It adds the VALUE each pass, not just 1",
+        "It subtracts",
+        "It never changes",
+        "It resets each pass"
+      ],
+      "answer": 0,
+      "explanation": "A counter adds 1 per item; a total adds the item's value. Same shape, different amount added."
+    },
+    {
+      "id": "u57l01e09",
+      "type": "multipleChoice",
+      "prompt": "If the list is empty, what should the total be?",
+      "options": [
+        "0 — nothing was added",
+        "1",
+        "An error",
+        "The last value"
+      ],
+      "answer": 0,
+      "explanation": "Starting at 0 and adding nothing leaves 0. The empty case falls out naturally."
+    },
+    {
+      "id": "u57l01e10",
+      "type": "multipleChoice",
+      "prompt": "This unit's tool is...",
+      "options": [
+        "Add every value in a list into one running total",
+        "Make a new list",
+        "Count items only",
+        "Sort a list"
+      ],
+      "answer": 0,
+      "explanation": "Next you'll write the accumulator loop that sums a whole list."
+    }
+  ]
+}

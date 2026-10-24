@@ -1,0 +1,131 @@
+{
+  "unitId": "u17",
+  "lessonId": "u17l07",
+  "title": "Report the cost of a meal order",
+  "idea": "GUIDED PROBLEM. Two priced things, each with a count. Map EVERY number to its own variable, total them, and present a clear message. Walked through UEPCC.",
+  "problem": "A customer orders 2 burgers at 6 each and 3 drinks at 2 each. Show a message like: Your order comes to 18.",
+  "exercises": [
+    {
+      "id": "u17l07e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: 2 burgers at 6 each, 3 drinks at 2 each. Show 'Your order comes to 18.'\n\nUnderstand. What is the OUTPUT?",
+      "options": [
+        "A message showing the total cost of the whole order",
+        "Only the burger cost",
+        "Only the number of drinks",
+        "The word 'order'"
+      ],
+      "answer": 0,
+      "explanation": "The output is a message with the full order total. Name it first."
+    },
+    {
+      "id": "u17l07e02",
+      "type": "multiSelect",
+      "uepcc": "U",
+      "prompt": "This problem has FOUR numbers. Select every value that must become its own named variable.",
+      "options": [
+        "burger count (2)",
+        "burger price (6)",
+        "drink count (3)",
+        "drink price (2)"
+      ],
+      "answer": [0, 1, 2, 3],
+      "explanation": "Value-mapping rule: every number in the problem gets its own variable. All four matter — drop one and the total is wrong."
+    },
+    {
+      "id": "u17l07e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example by hand. 2 burgers at 6 = 12, and 3 drinks at 2 = 6. Order total?",
+      "options": ["18", "12", "6", "13"],
+      "answer": 0,
+      "explanation": "12 + 6 = 18. Working each part by hand first gives you the check value."
+    },
+    {
+      "id": "u17l07e04",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Plan. How do you get the burger cost from 2 burgers at 6 each?",
+      "options": [
+        "Multiply burger count by burger price (2 * 6)",
+        "Add burger count and burger price (2 + 6)",
+        "Subtract them (6 - 2)",
+        "Divide them (6 / 2)"
+      ],
+      "answer": 0,
+      "explanation": "'Many of the same thing' means multiply: 2 * 6 = 12. Same idea for the drinks."
+    },
+    {
+      "id": "u17l07e05",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Order the plain-English steps.",
+      "blocks": [
+        "Add the burger cost and drink cost into a total",
+        "Work out the burger cost and the drink cost",
+        "Remember all four values",
+        "Show a message with the total"
+      ],
+      "answer": [2, 1, 0, 3],
+      "explanation": "Remember the four values, compute each cost, add them, then present the total."
+    },
+    {
+      "id": "u17l07e06",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code. Arrange the lines to match the plan.",
+      "blocks": [
+        "burger_count = 2",
+        "burger_price = 6",
+        "drink_count = 3",
+        "drink_price = 2",
+        "total = burger_count * burger_price + drink_count * drink_price",
+        "print(f\"Your order comes to {total}.\")"
+      ],
+      "answer": [0, 1, 2, 3, 4, 5],
+      "explanation": "Store all four values, compute each cost and add them, then print the total. Every number mapped — none hardcoded."
+    },
+    {
+      "id": "u17l07e07",
+      "type": "multipleChoice",
+      "uepcc": "C",
+      "prompt": "A classmate wrote total = burger_count * burger_price + 6. Why is that a bad habit, even though it prints 18 here?",
+      "options": [
+        "The 6 is a hardcoded drink cost — change the drink numbers and it breaks",
+        "It is perfectly fine and will always work",
+        "Addition is not allowed in Python",
+        "You cannot multiply before adding"
+      ],
+      "answer": 0,
+      "explanation": "Hardcoding 6 drops the drink count and price. If drinks change, the total stays wrong. Map every value to a variable."
+    },
+    {
+      "id": "u17l07e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Fill the blank so the drink cost is included properly:\n\ntotal = burger_count * burger_price + drink_count ____ drink_price",
+      "answer": "*",
+      "acceptable": ["*"],
+      "explanation": "3 drinks at 2 each means multiply: drink_count * drink_price = 6."
+    },
+    {
+      "id": "u17l07e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check. The code prints 'Your order comes to 18.' Hand example said 18. Verdict?",
+      "options": ["Passes", "Fails", "Unknown", "Rewrite the example"],
+      "answer": 0,
+      "explanation": "Output matches the hand example, so the solution is correct."
+    },
+    {
+      "id": "u17l07e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "New inputs: burger_count = 1, burger_price = 5, drink_count = 2, drink_price = 3. What total prints?",
+      "options": ["11", "18", "8", "13"],
+      "answer": 0,
+      "explanation": "1*5 + 2*3 = 5 + 6 = 11. Because every value is a variable, the code works for new numbers."
+    }
+  ]
+}

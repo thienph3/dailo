@@ -1,0 +1,136 @@
+{
+  "unitId": "u78",
+  "lessonId": "u78l07",
+  "title": "Two helpers in one loop",
+  "idea": "TOOL. Apply and combine two helpers on each item inside one loop.",
+  "exercises": [
+    {
+      "type": "multipleChoice",
+      "prompt": "Predict:\n\ndef double(n):\n    return n * 2\n\ndef add1(n):\n    return n + 1\n\nfor n in [1, 2]:\n    print(double(n) + add1(n))",
+      "options": [
+        "4, 7",
+        "2, 4",
+        "3, 5",
+        "error"
+      ],
+      "answer": 0,
+      "explanation": "n=1: 2+2=4; n=2: 4+3=7.",
+      "id": "u78l07e01"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "You can call more than one helper on the same item inside a loop.",
+      "answer": true,
+      "explanation": "Each item can be handed to several helpers.",
+      "id": "u78l07e02"
+    },
+    {
+      "type": "orderBlocks",
+      "prompt": "Arrange: for each item print double plus triple.",
+      "blocks": [
+        "def double(n):",
+        "    return n * 2",
+        "def triple(n):",
+        "    return n * 3",
+        "for n in [1, 2]:",
+        "    print(double(n) + triple(n))"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "explanation": "n=1: 2+3=5; n=2: 4+6=10.",
+      "id": "u78l07e03"
+    },
+    {
+      "type": "fillBlank",
+      "prompt": "Combine two helpers on the item:\n\nprint(double(n) + ____(n))\n\n(second helper is add1)",
+      "answer": "add1",
+      "acceptable": [
+        "add1"
+      ],
+      "explanation": "double(n) + add1(n) for the current item.",
+      "id": "u78l07e04"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Predict:\n\ndef sq(n):\n    return n * n\n\ndef neg(n):\n    return 0 - n\n\nfor n in [2, 3]:\n    print(sq(n) + neg(n))",
+      "options": [
+        "2, 6",
+        "4, 9",
+        "0, 0",
+        "error"
+      ],
+      "answer": 0,
+      "explanation": "n=2: 4+(-2)=2; n=3: 9+(-3)=6.",
+      "id": "u78l07e05"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "REVIEW (composing): double(add1(n)) for n=2 gives... (add1 then double)",
+      "options": [
+        "6",
+        "5",
+        "4",
+        "2"
+      ],
+      "answer": 0,
+      "explanation": "add1(2)=3, double(3)=6. Inner first.",
+      "id": "u78l07e06"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Using two helpers per item still keeps each call's variables private.",
+      "answer": true,
+      "explanation": "Scope holds — every call is independent.",
+      "id": "u78l07e07"
+    },
+    {
+      "type": "multiSelect",
+      "prompt": "TRUE statements? (choose all)",
+      "options": [
+        "A loop can call several helpers per item",
+        "Helper results can be combined",
+        "Each call is private",
+        "You must use only one helper ever"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "First three true.",
+      "id": "u78l07e08"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Why combine helpers per item?",
+      "options": [
+        "Build a richer result from small single-job pieces",
+        "To slow down",
+        "helpers can't combine",
+        "no reason"
+      ],
+      "answer": 0,
+      "explanation": "Small pieces, combined — the composing habit inside a loop.",
+      "id": "u78l07e09"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Lesson point:",
+      "options": [
+        "A loop can apply and combine several helpers on each item",
+        "only one helper per loop",
+        "loops can't use helpers",
+        "combining needs sorted()"
+      ],
+      "answer": 0,
+      "explanation": "Several single-job helpers, combined per item.",
+      "id": "u78l07e10"
+    }
+  ]
+}

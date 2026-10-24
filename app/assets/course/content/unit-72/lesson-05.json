@@ -1,0 +1,142 @@
+{
+  "unitId": "u72",
+  "lessonId": "u72l05",
+  "title": "Name the values the job needs",
+  "idea": "TOOL: read a job, decide which values it needs, and make those its parameters. Thinking-led.",
+  "exercises": [
+    {
+      "id": "u72l05e01",
+      "type": "multipleChoice",
+      "prompt": "JOB: 'show a line that repeats a symbol a certain number of times.' Which values does this job need?",
+      "options": [
+        "the symbol and the count",
+        "only the colour",
+        "nothing",
+        "the whole program"
+      ],
+      "answer": 0,
+      "explanation": "The job varies by two things: which symbol and how many. Those become its two parameters."
+    },
+    {
+      "id": "u72l05e02",
+      "type": "multipleChoice",
+      "prompt": "JOB: 'greet a player by number.' How many parameters does the sub-plan need?",
+      "options": [
+        "One - the player number",
+        "Zero",
+        "Three",
+        "Ten"
+      ],
+      "answer": 0,
+      "explanation": "The only thing that changes per call is the player number, so one parameter holds it."
+    },
+    {
+      "id": "u72l05e03",
+      "type": "multiSelect",
+      "prompt": "JOB: 'show a score for a given level and points.' Which values become parameters? (Pick all.)",
+      "options": [
+        "the level",
+        "the points",
+        "the keyboard",
+        "the screen size"
+      ],
+      "answer": [
+        0,
+        1
+      ],
+      "explanation": "The job depends on level and points, so both are parameters. The others aren't part of the job."
+    },
+    {
+      "id": "u72l05e04",
+      "type": "multipleChoice",
+      "prompt": "REVIEW (value-mapping): a job says 'repeat a symbol 5 times'. You should...",
+      "options": [
+        "pass both the symbol and the 5 as values, not hardcode them",
+        "hardcode 5 inside",
+        "drop the count",
+        "ignore the symbol"
+      ],
+      "answer": 0,
+      "explanation": "Every value the job mentions should be a parameter (or variable), not baked in. That keeps the job reusable."
+    },
+    {
+      "id": "u72l05e05",
+      "type": "multipleChoice",
+      "prompt": "Why make a value a parameter instead of fixing it inside the sub-plan?",
+      "options": [
+        "So each call can use a different value",
+        "To make it longer",
+        "To hide the value",
+        "Fixed values are always better"
+      ],
+      "answer": 0,
+      "explanation": "A parameter lets one sub-plan serve many values. Fixing the value inside locks it to just one case."
+    },
+    {
+      "id": "u72l05e06",
+      "type": "matchPairs",
+      "prompt": "Match each job to the parameter(s) it needs.",
+      "pairs": [
+        {
+          "left": "greet a player by number",
+          "right": "player_number"
+        },
+        {
+          "left": "show points for a level",
+          "right": "level and points"
+        },
+        {
+          "left": "print a symbol n times",
+          "right": "symbol and n"
+        }
+      ],
+      "explanation": "Reading the job tells you the values it varies by. Those values are exactly its parameters."
+    },
+    {
+      "id": "u72l05e07",
+      "type": "multipleChoice",
+      "prompt": "A good parameter name for 'how many stars to print' is...",
+      "options": [
+        "star_count",
+        "x",
+        "thing",
+        "z9"
+      ],
+      "answer": 0,
+      "explanation": "'star_count' echoes the value's meaning, like good variable names. Vague names hide what the value is."
+    },
+    {
+      "id": "u72l05e08",
+      "type": "trueFalse",
+      "prompt": "Choosing a sub-plan's parameters is a design decision you make before writing the body.",
+      "answer": true,
+      "explanation": "Yes. Decide what the job needs first; those become the parameters. Then the body uses them."
+    },
+    {
+      "id": "u72l05e09",
+      "type": "multipleChoice",
+      "prompt": "JOB: 'show a bill: price, quantity.' def show_bill(price, quantity): print(price * quantity). show_bill(3, 4) prints...",
+      "options": [
+        "12",
+        "34",
+        "7",
+        "price * quantity"
+      ],
+      "answer": 0,
+      "explanation": "price=3, quantity=4, so price * quantity is 12. Both named values map to parameters - no hardcoding."
+    },
+    {
+      "id": "u72l05e10",
+      "type": "multipleChoice",
+      "prompt": "The habit:",
+      "options": [
+        "make each value the job varies by a clearly named parameter",
+        "hardcode every value",
+        "use one letter names",
+        "avoid parameters"
+      ],
+      "answer": 0,
+      "explanation": "Map the job's values to clearly named parameters. That's the value-mapping habit, now applied to sub-plans."
+    }
+  ]
+}

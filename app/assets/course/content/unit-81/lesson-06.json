@@ -1,0 +1,136 @@
+{
+  "unitId": "u81",
+  "lessonId": "u81l06",
+  "title": "Debug it: the empty list that nobody guarded",
+  "idea": "A composed solution (sum then divide by count) works on normal data but crashes or lies on an empty list. Reading the trace reveals the missing guard.",
+  "exercises": [
+    {
+      "type": "multipleChoice",
+      "prompt": "average_scores(scores) sums the list then divides by len(scores). On [] it crashes. The right fix is to...",
+      "options": [
+        "Add an early guard: if the list is empty, return 0",
+        "Remove the division",
+        "Use a different list",
+        "Ignore the crash"
+      ],
+      "answer": 0,
+      "explanation": "An empty list means len is 0, and dividing by 0 crashes. A guard returning 0 (or a safe value) handles the edge on purpose.",
+      "id": "u81l06e01"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "A helper that is correct for a list of 5 scores is automatically correct for an empty list.",
+      "answer": false,
+      "explanation": "No. The empty list is a separate case. Many bugs live exactly there, unguarded.",
+      "id": "u81l06e02"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "count_passing(scores) counts scores >= 50 using a loop. On [] it returns 0. Is that a bug?",
+      "options": [
+        "No — zero scores means zero passing, which is correct",
+        "Yes — it should crash",
+        "Yes — it should return 50",
+        "Can't tell"
+      ],
+      "answer": 0,
+      "explanation": "An empty list genuinely has zero passing scores. Returning 0 is correct — the counting pattern handles empty naturally.",
+      "id": "u81l06e03"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Why does average break on empty but count does NOT?",
+      "options": [
+        "Average divides by the count (0 is illegal); count just adds up (0 is fine)",
+        "Average is always buggy",
+        "Count is always buggy",
+        "They both break"
+      ],
+      "answer": 0,
+      "explanation": "Division by zero is the trap. Averaging needs a guard; a plain count or sum survives an empty list on its own.",
+      "id": "u81l06e04"
+    },
+    {
+      "type": "matchPairs",
+      "prompt": "Match each helper to whether it NEEDS an empty guard.",
+      "pairs": [
+        {
+          "left": "average(nums)",
+          "right": "needs a guard (divides by count)"
+        },
+        {
+          "left": "total(nums)",
+          "right": "no guard needed (starts at 0)"
+        },
+        {
+          "left": "find_biggest(nums)",
+          "right": "needs a guard (reads nums[0])"
+        }
+      ],
+      "explanation": "Guards are needed wherever an empty list would divide by zero or read a missing item.",
+      "id": "u81l06e05"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Putting the empty-list guard BEFORE the division is what makes it protect the code.",
+      "answer": true,
+      "explanation": "Yes. The guard must run first, catching the empty case before the risky line ever executes.",
+      "id": "u81l06e06"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "A learner 'fixes' the crash by making it silently print nothing on empty. Is that a good fix?",
+      "options": [
+        "Not really — returning a clear value (like 0) is better than hiding the case",
+        "Yes, hiding it is ideal",
+        "Yes, crashes should be silent",
+        "It doesn't matter"
+      ],
+      "answer": 0,
+      "explanation": "Hiding a case is not handling it. A clear, chosen result (0, or a message) treats the edge on purpose.",
+      "id": "u81l06e07"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "The empty-list guard is an example of which planning habit from the last unit?",
+      "options": [
+        "Edge-case enumeration — listing tricky inputs before coding",
+        "Composition",
+        "Using more loops",
+        "Renaming variables"
+      ],
+      "answer": 0,
+      "explanation": "Guarding empty is edge-case thinking in action: you listed the edge, so you handled it on purpose.",
+      "id": "u81l06e08"
+    },
+    {
+      "type": "orderBlocks",
+      "prompt": "Order the debugging of the empty-list crash.",
+      "blocks": [
+        "Notice it only breaks on the empty list",
+        "Trace to the divide-by-count line",
+        "Add a guard that returns early for empty"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Spot the triggering input, trace to the risky line, guard it. The crash becomes a handled case.",
+      "id": "u81l06e09"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "The lesson:",
+      "options": [
+        "Averaging needs an empty-list guard; enumerate edges to avoid such bugs",
+        "Empty lists never happen",
+        "Crashes are unfixable",
+        "Guards slow code down too much to use"
+      ],
+      "answer": 0,
+      "explanation": "The unguarded empty list is a top decomposition bug. Enumerating edges while planning prevents it.",
+      "id": "u81l06e10"
+    }
+  ]
+}

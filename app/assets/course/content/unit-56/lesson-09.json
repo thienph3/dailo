@@ -1,0 +1,148 @@
+{
+  "unitId": "u56",
+  "lessonId": "u56l09",
+  "title": "Solve it together: star the top students",
+  "idea": "GUIDED UEPCC. For each score, print the score and add a star if it is 90 or more.",
+  "problem": "For each score in a list, print the score; if it is 90 or more, also print a star line.",
+  "exercises": [
+    {
+      "id": "u56l09e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: Print each score; if it is 90 or more, also print a star.\n\nWhat is the OUTPUT per item?",
+      "options": [
+        "The score, and sometimes an extra star line",
+        "Only a star",
+        "Only the score",
+        "A single total"
+      ],
+      "answer": 0,
+      "explanation": "Every item prints its score; high scores print an extra line. Per-item with a conditional extra."
+    },
+    {
+      "id": "u56l09e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "When does the star appear?",
+      "options": [
+        "Only when the score is 90 or more",
+        "Always",
+        "Never",
+        "Only for the first score"
+      ],
+      "answer": 0,
+      "explanation": "The star is guarded by an if: score >= 90."
+    },
+    {
+      "id": "u56l09e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example by hand. scores = [80, 95]. What prints?",
+      "options": [
+        "80, then 95, then a star",
+        "80 and 95 only",
+        "two stars",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "80 prints just the score; 95 prints the score and a star (95 >= 90)."
+    },
+    {
+      "id": "u56l09e04",
+      "type": "trueFalse",
+      "uepcc": "E",
+      "prompt": "A score of exactly 90 gets a star, because the rule is '90 or more' (>= 90).",
+      "answer": true,
+      "explanation": "90 or more includes 90, so it earns a star. Confirm the edge by hand."
+    },
+    {
+      "id": "u56l09e05",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Plan it. Order the steps for each score.",
+      "blocks": [
+        "Print the score",
+        "If the score is 90 or more, print a star",
+        "Take each score"
+      ],
+      "answer": [
+        2,
+        0,
+        1
+      ],
+      "explanation": "Take each score, always print it, then conditionally add the star. Repeat."
+    },
+    {
+      "id": "u56l09e06",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Where does the if go relative to the always-print line?",
+      "options": [
+        "After it, both inside the loop",
+        "Before the loop",
+        "Outside the loop",
+        "Instead of the loop"
+      ],
+      "answer": 0,
+      "explanation": "Both lines are in the loop body: print the score every pass, then the if decides the star."
+    },
+    {
+      "id": "u56l09e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Arrange the solution.",
+      "blocks": [
+        "        print(\"star\")",
+        "    if score >= 90:",
+        "    print(score)",
+        "for score in scores:"
+      ],
+      "answer": [
+        3,
+        2,
+        1,
+        0
+      ],
+      "explanation": "Loop header, print score (indent 1), if (indent 1), print star (indent 2)."
+    },
+    {
+      "id": "u56l09e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Fill the comparison for '90 or more':\n\nfor score in scores:\n    print(score)\n    if score ____ 90:\n        print(\"star\")",
+      "answer": ">=",
+      "acceptable": [
+        ">="
+      ],
+      "explanation": "'90 or more' is >= 90, which includes 90 itself."
+    },
+    {
+      "id": "u56l09e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check. For scores = [80, 95] the code prints 80, 95, star. Hand example said 80, 95, star. Verdict?",
+      "options": [
+        "Passes",
+        "Fails",
+        "Unknown",
+        "Change the rule"
+      ],
+      "answer": 0,
+      "explanation": "Matches the hand example — correct."
+    },
+    {
+      "id": "u56l09e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Re-check with scores = [90, 70]. What prints, in order?",
+      "options": [
+        "90, star, 70",
+        "90, 70",
+        "star, star",
+        "70, 90"
+      ],
+      "answer": 0,
+      "explanation": "90 prints then a star (90 >= 90); 70 prints with no star. Edge holds."
+    }
+  ]
+}

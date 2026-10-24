@@ -1,0 +1,128 @@
+{
+  "unitId": "u52",
+  "lessonId": "u52l03",
+  "title": "The first and the last by position",
+  "idea": "The first value is at index 0. There is a neat shortcut for the last value: index -1, which counts from the end. Both are just indexing.",
+  "exercises": [
+    {
+      "id": "u52l03e01",
+      "type": "multipleChoice",
+      "prompt": "nums = [3, 7, 2, 9]. Which line gives the FIRST value?",
+      "options": [
+        "nums[0]",
+        "nums[1]",
+        "nums[4]",
+        "nums[-1]"
+      ],
+      "answer": 0,
+      "explanation": "The first value is always index 0. Here nums[0] is 3."
+    },
+    {
+      "id": "u52l03e02",
+      "type": "multipleChoice",
+      "prompt": "There is a handy shortcut: index -1 means 'the LAST value'. Predict the output:\n\nnums = [3, 7, 2, 9]\nprint(nums[-1])",
+      "options": [
+        "9",
+        "3",
+        "2",
+        "-1"
+      ],
+      "answer": 0,
+      "explanation": "A negative index counts from the end. -1 is the last value, which is 9. You do not need to know how long the list is."
+    },
+    {
+      "id": "u52l03e03",
+      "type": "trueFalse",
+      "prompt": "Index -1 always gives the last value of a list, counting from the end.",
+      "answer": true,
+      "explanation": "Yes. -1 is the last, -2 is the second-to-last, and so on. It is a shortcut for reaching the end without counting positions."
+    },
+    {
+      "id": "u52l03e04",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nwords = [\"first\", \"middle\", \"last\"]\nprint(words[-1])",
+      "options": [
+        "last",
+        "first",
+        "middle",
+        "3"
+      ],
+      "answer": 0,
+      "explanation": "-1 reaches the final value, which is \"last\". Negative indexing works on words too."
+    },
+    {
+      "id": "u52l03e05",
+      "type": "matchPairs",
+      "prompt": "For nums = [10, 20, 30], match each index to its value.",
+      "pairs": [
+        {
+          "left": "nums[0]",
+          "right": "10"
+        },
+        {
+          "left": "nums[-1]",
+          "right": "30"
+        },
+        {
+          "left": "nums[1]",
+          "right": "20"
+        }
+      ],
+      "explanation": "0 is the first (10), -1 is the last (30), and 1 is the middle (20). Positive counts from the front, negative from the back."
+    },
+    {
+      "id": "u52l03e06",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nnums = [8, 6, 4, 2]\nprint(nums[-2])",
+      "options": [
+        "4",
+        "2",
+        "6",
+        "8"
+      ],
+      "answer": 0,
+      "explanation": "-1 is the last (2), so -2 is the second-to-last, which is 4. Negative indexes walk backward from the end."
+    },
+    {
+      "id": "u52l03e07",
+      "type": "fillBlank",
+      "prompt": "Complete the line to print the LAST value using the end shortcut:\n\nscores = [70, 80, 95]\nprint(scores[____])",
+      "answer": "-1",
+      "acceptable": ["-1"],
+      "explanation": "Index -1 is the last value, 95 — no need to know the list's length."
+    },
+    {
+      "id": "u52l03e08",
+      "type": "multipleChoice",
+      "prompt": "A race finished with results = [\"Ana\", \"Ben\", \"Cal\"]. Which line shows the WINNER (first place)?",
+      "options": [
+        "print(results[0])",
+        "print(results[-1])",
+        "print(results[1])",
+        "print(results)"
+      ],
+      "answer": 0,
+      "explanation": "The winner is first, at index 0: \"Ana\". The order of the list carries the meaning, and index 0 is the front."
+    },
+    {
+      "id": "u52l03e09",
+      "type": "multipleChoice",
+      "prompt": "Same race results = [\"Ana\", \"Ben\", \"Cal\"]. Which line shows LAST place without counting the names?",
+      "options": [
+        "print(results[-1])",
+        "print(results[3])",
+        "print(results[0])",
+        "print(results[1])"
+      ],
+      "answer": 0,
+      "explanation": "-1 grabs the last value, \"Cal\", whatever the length. That is why the end shortcut is so handy."
+    },
+    {
+      "id": "u52l03e10",
+      "type": "trueFalse",
+      "prompt": "To get the last value, you could use index 0.",
+      "answer": false,
+      "explanation": "No — index 0 is the FIRST value. The last value is index -1 (the end shortcut). Front and back are opposite ends."
+    }
+  ]
+}

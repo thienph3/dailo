@@ -1,0 +1,133 @@
+{
+  "unitId": "u72",
+  "lessonId": "u72l08",
+  "title": "Solving a sub-problem with a value handed in",
+  "idea": "TOOL: tie it to decomposition — a sub-plan with parameters solves one sub-problem that depends on values from the main plan. It prints its result. No return.",
+  "exercises": [
+    {
+      "id": "u72l08e01",
+      "type": "multipleChoice",
+      "prompt": "Main plan: greet two customers by name. A sub-plan greet(name) prints the greeting. How does the main plan use it?",
+      "options": [
+        "Call greet twice, handing in each customer's name",
+        "Define greet twice, once per name",
+        "Put both names in one call",
+        "Never call greet"
+      ],
+      "answer": 0,
+      "explanation": "The sub-plan solves 'greet one person'. The main plan hands in each name in turn: greet(\"Ann\"), greet(\"Bo\")."
+    },
+    {
+      "id": "u72l08e02",
+      "type": "trueFalse",
+      "prompt": "A parameter is how a sub-problem receives the exact values it depends on from the main plan.",
+      "answer": true,
+      "explanation": "Yes. In unit 69 you saw sub-problems that depend on values. Parameters are how those values get handed in."
+    },
+    {
+      "id": "u72l08e03",
+      "type": "multipleChoice",
+      "prompt": "def show_change(paid, cost):\n    print(paid - cost)\n\nshow_change(20, 13)\n\nWhat prints?",
+      "options": [
+        "7",
+        "33",
+        "13",
+        "20"
+      ],
+      "answer": 0,
+      "explanation": "The 'give change' sub-problem depends on paid and cost. Here 20 - 13 = 7 is the change, printed by the sub-plan."
+    },
+    {
+      "id": "u72l08e04",
+      "type": "orderBlocks",
+      "prompt": "Arrange a sub-plan that prints the area of a rectangle, then call it for width 4, height 5.",
+      "blocks": [
+        "def show_area(width, height):",
+        "    print(width * height)",
+        "show_area(4, 5)"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "The area sub-problem needs width and height. They arrive as parameters; the sub-plan prints 20."
+    },
+    {
+      "id": "u72l08e05",
+      "type": "multipleChoice",
+      "prompt": "A main plan needs the area for THREE different rectangles. With show_area(width, height), what does it do?",
+      "options": [
+        "Call show_area three times with the three pairs of sizes",
+        "Write three separate area sub-plans",
+        "Call show_area once with all six numbers",
+        "Avoid calling it"
+      ],
+      "answer": 0,
+      "explanation": "One parameterized sub-plan, called three times with different sizes. Decompose once, reuse by handing in values."
+    },
+    {
+      "id": "u72l08e06",
+      "type": "matchPairs",
+      "prompt": "Match each sub-problem to the values it would receive as parameters.",
+      "pairs": [
+        {
+          "left": "Give change",
+          "right": "amount paid, cost"
+        },
+        {
+          "left": "Area of a rectangle",
+          "right": "width, height"
+        },
+        {
+          "left": "Greet a person",
+          "right": "the person's name"
+        }
+      ],
+      "explanation": "Each sub-problem depends on specific values. Parameters are the slots those values fill when the main plan calls."
+    },
+    {
+      "id": "u72l08e07",
+      "type": "trueFalse",
+      "prompt": "For now, a sub-plan has no way to hand a value back, so it must PRINT its result to be useful.",
+      "answer": true,
+      "explanation": "Right. For now, a sub-plan shows its answer with print. A way to hand the value back to the caller comes in a later unit."
+    },
+    {
+      "id": "u72l08e08",
+      "type": "multipleChoice",
+      "prompt": "def show_total(price, count):\n    print(price * count)\n\nshow_total(5, 4)\n\nWhat sub-problem is this solving, and what prints?",
+      "options": [
+        "Cost of count items at a price — prints 20",
+        "Average of two numbers — prints 4.5",
+        "The bigger of two numbers — prints 5",
+        "Nothing is solved"
+      ],
+      "answer": 0,
+      "explanation": "price * count is the cost of several items. 5 * 4 = 20. The two values the sub-problem depends on came in as parameters."
+    },
+    {
+      "id": "u72l08e09",
+      "type": "fillBlank",
+      "prompt": "Complete the call so show_total handles 3 items at 7 each:\n\ndef show_total(price, count):\n    print(price * count)\n\nshow_total(7, ____)",
+      "answer": "3",
+      "acceptable": [
+        "3"
+      ],
+      "explanation": "price=7, count=3. show_total(7, 3) prints 21. The main plan decides the values; the sub-plan does the job."
+    },
+    {
+      "id": "u72l08e10",
+      "type": "multipleChoice",
+      "prompt": "How parameters complete the decomposition story:",
+      "options": [
+        "A sub-plan solves one sub-problem using values the main plan hands it, and prints the result",
+        "Sub-plans can't depend on outside values",
+        "Decomposition has nothing to do with parameters",
+        "The main plan must do every step itself"
+      ],
+      "answer": 0,
+      "explanation": "Split the problem, name the sub-plan, and pass it the values it needs. Parameters are the bridge from main plan to sub-plan."
+    }
+  ]
+}

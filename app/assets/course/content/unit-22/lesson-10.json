@@ -1,0 +1,116 @@
+{
+  "unitId": "u22",
+  "lessonId": "u22l10",
+  "title": "Put it together: this, otherwise that",
+  "idea": "Wrap up the unit: the if/else shape, exactly-one-branch rule, flipping conditions, and the = vs == trap, with review.",
+  "exercises": [
+    {
+      "id": "u22l10e01",
+      "type": "matchPairs",
+      "prompt": "Match each part of an if/else to its job.",
+      "pairs": [
+        { "left": "if condition:", "right": "Runs its step when the fact is true" },
+        { "left": "else:", "right": "Runs its step otherwise" },
+        { "left": "the colon  :", "right": "Ends each header" },
+        { "left": "the indent", "right": "Marks the step inside each branch" }
+      ],
+      "explanation": "if holds the true outcome, else holds the otherwise outcome, colons end the headers, and indentation marks each branch's step."
+    },
+    {
+      "id": "u22l10e02",
+      "type": "multipleChoice",
+      "prompt": "What will this show?\n\nn = 8\nif n > 10:\n    print(\"Big\")\nelse:\n    print(\"Small\")",
+      "options": ["Small", "Big", "Both", "Nothing"],
+      "answer": 0,
+      "explanation": "8 > 10 is False, so the else branch runs: Small."
+    },
+    {
+      "id": "u22l10e03",
+      "type": "trueFalse",
+      "prompt": "In an if/else, exactly one branch runs every time.",
+      "answer": true,
+      "explanation": "The condition is either true or false, so one branch always runs — never both, never neither."
+    },
+    {
+      "id": "u22l10e04",
+      "type": "multipleChoice",
+      "prompt": "Review the trap: which symbol does the if condition use to CHECK?",
+      "options": ["==", "=", "+", ":"],
+      "answer": 0,
+      "explanation": "An if checks, so it uses ==. One = would store. 'One store, two ask.'"
+    },
+    {
+      "id": "u22l10e05",
+      "type": "multipleChoice",
+      "prompt": "These two versions behave the same. What makes them match?\n\nA: if x >= 0: print(\"OK\") else: print(\"Neg\")\nB: if x < 0: print(\"Neg\") else: print(\"OK\")",
+      "options": [
+        "The comparison was flipped AND the branches were swapped",
+        "Only the comparison changed",
+        "Only the branches were swapped",
+        "They do not actually match"
+      ],
+      "answer": 0,
+      "explanation": ">= 0 flips to < 0, and the outcomes swap places too. Flip both together and the meaning stays the same."
+    },
+    {
+      "id": "u22l10e06",
+      "type": "multipleChoice",
+      "prompt": "Review of Unit 21: a plain if (no else). What shows?\n\nscore = 20\nif score > 50:\n    print(\"High\")",
+      "options": ["Nothing", "High", "20", "False"],
+      "answer": 0,
+      "explanation": "A one-sided if with a false condition simply skips its step. Without an else, nothing prints."
+    },
+    {
+      "id": "u22l10e07",
+      "type": "multipleChoice",
+      "prompt": "What is wrong here?\n\nif age >= 18:\n    print(\"Adult\")\nelse age < 18:\n    print(\"Minor\")",
+      "options": [
+        "else must not carry a condition — just else:",
+        "age should be in quotes",
+        "Adult needs to be a number",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "else already means 'every other case', so it takes no condition. Write it as else:."
+    },
+    {
+      "id": "u22l10e08",
+      "type": "orderBlocks",
+      "prompt": "Arrange these into a correct if/else that prints Even check result.",
+      "blocks": [
+        "    print(\"Odd\")",
+        "if n % 2 == 0:",
+        "else:",
+        "    print(\"Even\")"
+      ],
+      "answer": [1, 3, 2, 0],
+      "explanation": "if n % 2 == 0: with indented Even, then else: with indented Odd. (Review: % gives the remainder from Unit 12.)"
+    },
+    {
+      "id": "u22l10e09",
+      "type": "multiSelect",
+      "prompt": "Select EVERY true statement about if/else.",
+      "options": [
+        "Both the if and else headers end with a colon",
+        "else lines up with if",
+        "else carries its own condition",
+        "Exactly one branch runs"
+      ],
+      "answer": [0, 1, 3],
+      "explanation": "Colons on both headers, else lined up with if, exactly one branch runs. else does NOT carry a condition — that option is false."
+    },
+    {
+      "id": "u22l10e10",
+      "type": "multipleChoice",
+      "prompt": "What can you now do that you could not before this unit?",
+      "options": [
+        "Choose between two outcomes with if/else, so something always happens",
+        "Handle three or more separate cases",
+        "Repeat a step many times",
+        "Ask the user for input"
+      ],
+      "answer": 0,
+      "explanation": "You can write a two-outcome choice: do this, otherwise do that. Later units will add more cases and repetition."
+    }
+  ]
+}

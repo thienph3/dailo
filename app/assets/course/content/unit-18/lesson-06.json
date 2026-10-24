@@ -1,0 +1,132 @@
+{
+  "unitId": "u18",
+  "lessonId": "u18l06",
+  "title": "Loop back: build a report sentence",
+  "idea": "REVIEW. Store strings and numbers, then report with an f-string. Interleaves variables + strings (Lap 0/1) with f-string formatting.",
+  "problem": "A player named Ada scored 42 points. Report it as one sentence like 'Ada scored 42 points.'",
+  "exercises": [
+    {
+      "id": "u18l06e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: Player Ada scored 42 points. Report a sentence 'Ada scored 42 points.'\n\nWhat is the OUTPUT?",
+      "options": [
+        "A sentence combining the name and the score",
+        "Just the number 42",
+        "Just the name Ada",
+        "The word points"
+      ],
+      "answer": 0,
+      "explanation": "Output = a sentence that mixes a word (the name) and a number (the score)."
+    },
+    {
+      "id": "u18l06e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "What are the INPUTS?",
+      "options": [
+        "The name ('Ada') and the score (42)",
+        "Only the score",
+        "Only the name",
+        "The word scored"
+      ],
+      "answer": 0,
+      "explanation": "Two inputs of different kinds: a string (the name) and a number (the score)."
+    },
+    {
+      "id": "u18l06e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example by hand. With name 'Ada' and score 42, the finished sentence reads?",
+      "options": [
+        "Ada scored 42 points.",
+        "name scored score points.",
+        "42 scored Ada points.",
+        "Ada Ada 42 42."
+      ],
+      "answer": 0,
+      "explanation": "The real values slot into the sentence. That exact text is what your code must print."
+    },
+    {
+      "id": "u18l06e04",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Plan. What tool drops a variable's value right into a sentence cleanly?",
+      "options": [
+        "An f-string with {curly braces}",
+        "Only numbers",
+        "A blank line",
+        "The % operator"
+      ],
+      "answer": 0,
+      "explanation": "An f-string lets you write f\"{player_name} scored {score} points.\" and the values fill the braces."
+    },
+    {
+      "id": "u18l06e05",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Which names echo the problem best?",
+      "options": [
+        "player_name and score",
+        "x and y",
+        "a and b",
+        "s1 and n1"
+      ],
+      "answer": 0,
+      "explanation": "player_name and score read like the problem — the code becomes self-describing."
+    },
+    {
+      "id": "u18l06e06",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code it. Arrange the lines (store name, store score, report).",
+      "blocks": [
+        "player_name = \"Ada\"",
+        "score = 42",
+        "print(f\"{player_name} scored {score} points.\")"
+      ],
+      "answer": [0, 1, 2],
+      "explanation": "Store the name string, store the score number, then report both with an f-string."
+    },
+    {
+      "id": "u18l06e07",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Complete the f-string so the score appears:\n\nplayer_name = \"Ada\"\nscore = 42\nprint(f\"{player_name} scored {____} points.\")",
+      "answer": "score",
+      "acceptable": ["score"],
+      "explanation": "Put the variable name score inside the braces, and its value 42 slots in."
+    },
+    {
+      "id": "u18l06e08",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "It prints 'Ada scored 42 points.' Your example said the same. Verdict?",
+      "options": ["Passes", "Fails", "Can't tell", "Rewrite the example"],
+      "answer": 0,
+      "explanation": "Output text matches the hand example exactly — correct."
+    },
+    {
+      "id": "u18l06e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "New inputs: player_name = \"Ben\", score = 7. What prints?",
+      "options": [
+        "Ben scored 7 points.",
+        "Ada scored 42 points.",
+        "player_name scored score points.",
+        "Ben scored 42 points."
+      ],
+      "answer": 0,
+      "explanation": "The f-string re-reads the variables, so it prints 'Ben scored 7 points.' It generalizes."
+    },
+    {
+      "id": "u18l06e10",
+      "type": "trueFalse",
+      "uepcc": "C",
+      "prompt": "Inside f\"...\", the braces {score} are replaced by the VALUE of the variable, not the literal word 'score'.",
+      "answer": true,
+      "explanation": "Right — f-strings substitute the value. Forgetting the leading f would instead print the braces as text."
+    }
+  ]
+}

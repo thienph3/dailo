@@ -1,0 +1,15 @@
+{
+  "_comment": "The Dailo course catalog. Each entry is a course a learner can add. coursePath points to that course's course.json under assets/.",
+  "courses": [
+    {
+      "id": "programming-language",
+      "title": "Learn to Program",
+      "subtitle": "Beginner",
+      "description": "Go from zero to solving real problems. Bite-sized lessons teach you how to THINK like a programmer — not just syntax.",
+      "icon": "code",
+      "color": "0xFF2EB872",
+      "coursePath": "assets/course/course.json",
+      "contentBase": "assets/course/"
+    }
+  ]
+}

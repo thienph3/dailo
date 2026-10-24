@@ -1,0 +1,125 @@
+{
+  "unitId": "u49",
+  "lessonId": "u49l07",
+  "title": "Solve it: skip the multiples of 5",
+  "idea": "GUIDED PROBLEM. A counted loop that uses continue to skip some passes, with an accumulator. Deciding to skip rather than stop is the Plan insight.",
+  "problem": "Add up the numbers from 1 to 15, but skip any number that is a multiple of 5. Show the total.",
+  "exercises": [
+    {
+      "id": "u49l07e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: Add 1 to 15, but SKIP multiples of 5.\n\nUnderstand. What is the OUTPUT?",
+      "options": [
+        "The total of the numbers that are NOT skipped",
+        "The count of multiples of 5",
+        "The number 15",
+        "The largest number"
+      ],
+      "answer": 0,
+      "explanation": "The output is a sum of everything except the skipped numbers. 'Add up' means an accumulator; 'skip' means we leave some out."
+    },
+    {
+      "id": "u49l07e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "Understand. Which numbers from 1 to 15 get skipped?",
+      "options": [
+        "5, 10, 15 (the multiples of 5)",
+        "1, 2, 3, 4",
+        "all even numbers",
+        "none"
+      ],
+      "answer": 0,
+      "explanation": "Multiples of 5 up to 15 are 5, 10, 15. Those are skipped; everything else is added."
+    },
+    {
+      "id": "u49l07e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example by hand. The full sum 1 + 2 + ... + 15 is 120. The skipped ones (5 + 10 + 15) total 30. So the answer is:",
+      "options": ["90 (120 - 30)", "120", "30", "60"],
+      "answer": 0,
+      "explanation": "Add everything (120), then leave out the skipped 30: 120 - 30 = 90. Check value: 90."
+    },
+    {
+      "id": "u49l07e04",
+      "type": "trueFalse",
+      "uepcc": "E",
+      "prompt": "Skipping a number is different from stopping the whole loop.",
+      "answer": true,
+      "explanation": "Skipping ignores just that one pass and keeps going (continue). Stopping would end the loop entirely (break). Here we only skip."
+    },
+    {
+      "id": "u49l07e05",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Plan - choose the loop. 1 to 15 is a known range, so...",
+      "options": [
+        "A for loop over range(1, 16)",
+        "A while loop with no count",
+        "No loop",
+        "A for loop over range(5, 15)"
+      ],
+      "answer": 0,
+      "explanation": "Known range -> for over range(1, 16), which walks 1 through 15. We skip some passes inside."
+    },
+    {
+      "id": "u49l07e06",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Plan - 'skip the multiples of 5, keep going for the rest.' Which tool fits?",
+      "options": [
+        "continue - skip this pass and move on",
+        "break - stop the loop",
+        "a second loop",
+        "a print on every pass"
+      ],
+      "answer": 0,
+      "explanation": "'Skip, keep going' is continue. break would wrongly end the whole loop at the first multiple of 5."
+    },
+    {
+      "id": "u49l07e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code it. Arrange the lines to match the plan.",
+      "blocks": [
+        "total = 0",
+        "for i in range(1, 16):",
+        "    if i % 5 == 0:",
+        "        continue",
+        "    total = total + i",
+        "print(total)"
+      ],
+      "answer": [0, 1, 2, 3, 4, 5],
+      "explanation": "Start total at 0, loop 1..15; if i is a multiple of 5, continue (skip the add); otherwise add i. Skipped numbers never reach the total."
+    },
+    {
+      "id": "u49l07e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Complete the skip step:\n\nfor i in range(1, 16):\n    if i % 5 == 0:\n        ____\n    total = total + i",
+      "answer": "continue",
+      "acceptable": ["continue"],
+      "explanation": "continue jumps to the next pass, skipping the add below. So multiples of 5 are never added - exactly the skip we want."
+    },
+    {
+      "id": "u49l07e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "The code prints 90; your hand example was 90. Verdict?",
+      "options": ["Passes", "Fails", "Unknown", "Rewrite the example"],
+      "answer": 0,
+      "explanation": "90 matches 90. continue skipped the multiples of 5 and the accumulator summed the rest. Passing Check."
+    },
+    {
+      "id": "u49l07e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "New version: add 1 to 15 but skip multiples of 3 (3, 6, 9, 12, 15 total 45). What should it print?",
+      "options": ["75 (120 - 45)", "90", "45", "120"],
+      "answer": 0,
+      "explanation": "Full sum 120 minus the skipped 45 = 75. The same continue plan handles a different skip rule."
+    }
+  ]
+}

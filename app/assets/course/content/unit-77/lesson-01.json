@@ -1,0 +1,133 @@
+{
+  "unitId": "u77",
+  "lessonId": "u77l01",
+  "title": "A sub-plan's notes are private",
+  "idea": "TOOL. Introduce scope gently: a variable created INSIDE a function is the function's own private note. Code outside cannot see it. Shown with predictable behaviour.",
+  "exercises": [
+    {
+      "type": "multipleChoice",
+      "prompt": "A sub-plan sometimes makes a helper variable while it works. Who can see that variable?",
+      "options": [
+        "Only the code inside that sub-plan",
+        "Everyone, everywhere",
+        "Only the next sub-plan",
+        "Nobody at all"
+      ],
+      "answer": 0,
+      "explanation": "A variable made inside a function is private to that function — like a note it keeps to itself while working.",
+      "id": "u77l01e01"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Read:\n\ndef greet():\n    message = 7\n    print(message)\n\ngreet()\n\nWhat prints?",
+      "options": [
+        "7",
+        "message",
+        "nothing",
+        "an error"
+      ],
+      "answer": 0,
+      "explanation": "Inside greet, message is 7 and gets printed. The variable works fine INSIDE the function.",
+      "id": "u77l01e02"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Now outside the function:\n\ndef greet():\n    message = 7\n\ngreet()\nprint(message)\n\nWhat happens?",
+      "options": [
+        "An error — message is not known outside greet",
+        "It prints 7",
+        "It prints 0",
+        "It prints message"
+      ],
+      "answer": 0,
+      "explanation": "message lived only inside greet. Out here the name is unknown, so Python errors. That is scope.",
+      "id": "u77l01e03"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "A variable created inside a function keeps existing after the function finishes.",
+      "answer": false,
+      "explanation": "No — the function's private notes are forgotten when it ends. Use return to hand a value back instead.",
+      "id": "u77l01e04"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Why does a function keep its helper variables private?",
+      "options": [
+        "So different sub-plans can use the same name without clashing",
+        "To make code slower",
+        "To hide bugs",
+        "There is no reason"
+      ],
+      "answer": 0,
+      "explanation": "Privacy means two functions can both use 'total' without stepping on each other. Each has its own.",
+      "id": "u77l01e05"
+    },
+    {
+      "type": "matchPairs",
+      "prompt": "Match the idea to its meaning.",
+      "pairs": [
+        {
+          "left": "Private variable",
+          "right": "A note only the function can see"
+        },
+        {
+          "left": "return",
+          "right": "The proper way to hand a value OUT"
+        },
+        {
+          "left": "Scope",
+          "right": "Where a name can be seen"
+        }
+      ],
+      "explanation": "A private variable is invisible outside; return is how you share a result; scope is the region where a name exists.",
+      "id": "u77l01e06"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Predict:\n\ndef box():\n    side = 4\n    return side * side\n\nprint(box())",
+      "options": [
+        "16",
+        "4",
+        "side",
+        "error"
+      ],
+      "answer": 0,
+      "explanation": "Inside box, side is 4 and box returns 16. We print the RETURNED value, not the private 'side'.",
+      "id": "u77l01e07"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "If you want a value a function made, what should the function do?",
+      "options": [
+        "return it",
+        "hope you can read its private variable",
+        "print the function name",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "return is the doorway out. Reaching for the private variable directly will not work.",
+      "id": "u77l01e08"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "print(side) placed after a call to box() (where side is defined inside box) will show 4.",
+      "answer": false,
+      "explanation": "It errors — side is private to box. Only box can see it.",
+      "id": "u77l01e09"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "The one big idea of this lesson:",
+      "options": [
+        "Variables made inside a function are private to it; use return to share a result",
+        "All variables are global",
+        "Functions cannot make variables",
+        "return hides a variable"
+      ],
+      "answer": 0,
+      "explanation": "A sub-plan's working notes stay inside. To get a value out, hand it back with return.",
+      "id": "u77l01e10"
+    }
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "unitId": "u59",
+  "lessonId": "u59l03",
+  "title": "Tracing the champion",
+  "idea": "TOOL practice: trace the best-so-far step by step and predict the final maximum. Thinking-heavy.",
+  "exercises": [
+    {
+      "id": "u59l03e01",
+      "type": "orderBlocks",
+      "prompt": "Trace [2, 8, 5, 9] for the biggest. Put the best-so-far after each value in order (start 2).",
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "blocks": [
+        "Start best = 2",
+        "8 > 2, best = 8",
+        "5 is not > 8, best stays 8",
+        "9 > 8, best = 9"
+      ],
+      "explanation": "best goes 2 -> 8 -> 8 -> 9. The final biggest is 9."
+    },
+    {
+      "id": "u59l03e02",
+      "type": "multipleChoice",
+      "prompt": "Final biggest of [2, 8, 5, 9]?",
+      "options": [
+        "9",
+        "8",
+        "5",
+        "24"
+      ],
+      "answer": 0,
+      "explanation": "9 is the last and largest. best ends at 9."
+    },
+    {
+      "id": "u59l03e03",
+      "type": "multipleChoice",
+      "prompt": "Trace [10, 3, 1]. What is best after the whole loop?",
+      "options": [
+        "10",
+        "3",
+        "1",
+        "14"
+      ],
+      "answer": 0,
+      "explanation": "best starts at 10 and nothing beats it. The first value was already the biggest."
+    },
+    {
+      "id": "u59l03e04",
+      "type": "trueFalse",
+      "prompt": "The biggest value can show up anywhere in the list — first, middle, or last.",
+      "answer": true,
+      "explanation": "Max does not care about position. Starting best at the first value and comparing every item covers all cases."
+    },
+    {
+      "id": "u59l03e05",
+      "type": "multipleChoice",
+      "prompt": "In [5, 12, 7, 12, 4], how many values TIE for biggest?",
+      "options": [
+        "Two — both 12s",
+        "One",
+        "None",
+        "Five"
+      ],
+      "answer": 0,
+      "explanation": "12 appears twice and is the largest. The loop still reports 12 as the single biggest value."
+    },
+    {
+      "id": "u59l03e06",
+      "type": "multipleChoice",
+      "prompt": "Trace [1, 2, 3, 4, 5]. How many times does best change after the start?",
+      "options": [
+        "Four — every value beats the previous best",
+        "Once",
+        "Never",
+        "Two"
+      ],
+      "answer": 0,
+      "explanation": "A rising list updates best on every step: 1->2->3->4->5. It ends at 5."
+    },
+    {
+      "id": "u59l03e07",
+      "type": "multipleChoice",
+      "prompt": "Trace [5, 4, 3, 2, 1]. How many times does best change after the start?",
+      "options": [
+        "Never — best is 5 the whole time",
+        "Four",
+        "Once",
+        "Five"
+      ],
+      "answer": 0,
+      "explanation": "A falling list never finds anything bigger than the first value. best stays 5."
+    },
+    {
+      "id": "u59l03e08",
+      "type": "multiSelect",
+      "prompt": "Which lists have 8 as their biggest value? (pick all)",
+      "options": [
+        "[8, 1, 3]",
+        "[2, 8, 5]",
+        "[8, 8, 2]",
+        "[9, 8, 7]"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "The first three all top out at 8. The last one has a 9, so its biggest is 9, not 8."
+    },
+    {
+      "id": "u59l03e09",
+      "type": "multipleChoice",
+      "prompt": "You trace a list and best never changes from its start value. What does that tell you?",
+      "options": [
+        "The first value was the biggest",
+        "The list was empty",
+        "There was an error",
+        "The list was all zeros"
+      ],
+      "answer": 0,
+      "explanation": "If nothing beat the starting value, the first item was already the maximum."
+    },
+    {
+      "id": "u59l03e10",
+      "type": "trueFalse",
+      "prompt": "Tracing a loop by hand first helps you predict and trust the code's output.",
+      "answer": true,
+      "explanation": "Walking through values by hand gives you the expected answer to check the code against — the same habit from working an example first."
+    }
+  ]
+}

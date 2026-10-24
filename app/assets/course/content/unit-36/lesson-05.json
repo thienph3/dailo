@@ -1,0 +1,136 @@
+{
+  "unitId": "u36",
+  "lessonId": "u36l05",
+  "title": "What belongs inside, what stays outside",
+  "idea": "Deciding which steps go in the loop body (repeat) and which go before or after (run once) is a core loop-reading skill.",
+  "exercises": [
+    {
+      "id": "u36l05e01",
+      "type": "multipleChoice",
+      "prompt": "You want to print a title ONCE, then print Hi for each of 3 guests. Where does the title go?",
+      "options": [
+        "Before the loop, not indented",
+        "Inside the loop, indented",
+        "After the loop body, indented",
+        "It cannot be done"
+      ],
+      "answer": 0,
+      "explanation": "A once-only step goes before the loop, un-indented. Inside the loop it would repeat, which you don't want."
+    },
+    {
+      "id": "u36l05e02",
+      "type": "multipleChoice",
+      "prompt": "What shows?\n\nprint(\"Guests:\")\nfor each of 3 guests:\n    print(\"Welcome\")",
+      "options": [
+        "Guests:\nWelcome\nWelcome\nWelcome",
+        "Welcome\nWelcome\nWelcome\nGuests:",
+        "Guests:\nWelcome",
+        "Guests:"
+      ],
+      "answer": 0,
+      "explanation": "Guests: prints once first (before the loop), then Welcome repeats three times."
+    },
+    {
+      "id": "u36l05e03",
+      "type": "trueFalse",
+      "prompt": "A step placed inside the loop body runs once per pass.",
+      "answer": true,
+      "explanation": "Indented = inside = repeats each pass. Un-indented = outside = runs once."
+    },
+    {
+      "id": "u36l05e04",
+      "type": "multipleChoice",
+      "prompt": "What shows?\n\nfor each of 2 rounds:\n    print(\"Play\")\nprint(\"End\")",
+      "options": [
+        "Play\nPlay\nEnd",
+        "Play\nEnd\nPlay\nEnd",
+        "End\nPlay\nPlay",
+        "Play\nEnd"
+      ],
+      "answer": 0,
+      "explanation": "Play repeats twice (indented), then End runs once after the loop (not indented)."
+    },
+    {
+      "id": "u36l05e05",
+      "type": "multipleChoice",
+      "prompt": "You accidentally indented the 'End' line so it's inside the loop of 2. What now shows?",
+      "options": [
+        "Play\nEnd\nPlay\nEnd",
+        "Play\nPlay\nEnd",
+        "Play\nEnd",
+        "End\nEnd"
+      ],
+      "answer": 0,
+      "explanation": "Indented, End joins the body and repeats each pass: Play, End, Play, End. Indentation decides what repeats."
+    },
+    {
+      "id": "u36l05e06",
+      "type": "matchPairs",
+      "prompt": "Match each step to where it belongs for 'print a header once, greet each of N guests'.",
+      "pairs": [
+        {
+          "left": "Print the header",
+          "right": "Before the loop (once)"
+        },
+        {
+          "left": "Greet a guest",
+          "right": "Inside the loop body (repeats)"
+        },
+        {
+          "left": "Print a goodbye once",
+          "right": "After the loop (once)"
+        }
+      ],
+      "explanation": "Once-only steps sit outside the loop; the repeated greeting sits inside the indented body."
+    },
+    {
+      "id": "u36l05e07",
+      "type": "orderBlocks",
+      "prompt": "Arrange: print a header once, then greet each of 3 guests.",
+      "blocks": [
+        "print(\"Guest list:\")",
+        "for each of 3 guests:",
+        "    print(\"Welcome\")"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Header first (once), then the loop header, then the indented body that repeats."
+    },
+    {
+      "id": "u36l05e08",
+      "type": "trueFalse",
+      "prompt": "Putting a once-only step inside the loop is a common bug that repeats it by mistake.",
+      "answer": true,
+      "explanation": "Yes — a misplaced indent can turn a one-time message into a repeated one. Check indentation carefully."
+    },
+    {
+      "id": "u36l05e09",
+      "type": "multipleChoice",
+      "prompt": "How many total lines?\n\nprint(\"Top\")\nfor each of 4 items:\n    print(\"Item\")\nprint(\"Bottom\")",
+      "options": [
+        "6",
+        "4",
+        "5",
+        "8"
+      ],
+      "answer": 0,
+      "explanation": "Top (1) + Item four times (4) + Bottom (1) = 6 lines. Count outside-once plus inside-per-pass."
+    },
+    {
+      "id": "u36l05e10",
+      "type": "multipleChoice",
+      "prompt": "The key question when placing a step is:",
+      "options": [
+        "Should this run once, or once per pass?",
+        "Is the word spelled right?",
+        "Is the screen big enough?",
+        "Does it use a number?"
+      ],
+      "answer": 0,
+      "explanation": "Once vs once-per-pass decides inside-or-outside. Asking it keeps your loops doing exactly what you mean."
+    }
+  ]
+}

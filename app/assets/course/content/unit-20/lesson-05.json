@@ -1,0 +1,136 @@
+{
+  "unitId": "u20",
+  "lessonId": "u20l05",
+  "title": "Or equal to: <= and >=",
+  "idea": "<= and >= include the equal case. 5 >= 5 is True because it allows the 'or equal' part. This fixes the off-by-the-boundary trap.",
+  "exercises": [
+    {
+      "id": "u20l05e01",
+      "type": "multipleChoice",
+      "prompt": "What does >= mean?",
+      "options": [
+        "greater than OR equal to",
+        "only greater than",
+        "only equal to",
+        "less than"
+      ],
+      "answer": 0,
+      "explanation": ">= is true when the left side is greater than OR equal to the right side."
+    },
+    {
+      "id": "u20l05e02",
+      "type": "multipleChoice",
+      "prompt": "What does this print?\n\nprint(5 >= 5)",
+      "options": [
+        "True",
+        "False",
+        "5",
+        "10"
+      ],
+      "answer": 0,
+      "explanation": "5 is not greater than 5, but it IS equal, and >= allows equal. So the result is True."
+    },
+    {
+      "id": "u20l05e03",
+      "type": "multipleChoice",
+      "prompt": "What does this print?\n\nprint(4 <= 4)",
+      "options": [
+        "True",
+        "False",
+        "4",
+        "8"
+      ],
+      "answer": 0,
+      "explanation": "<= means 'less than or equal'. 4 equals 4, so it's True."
+    },
+    {
+      "id": "u20l05e04",
+      "type": "multipleChoice",
+      "prompt": "Which is the difference between > and >=?",
+      "options": [
+        ">= also counts the equal case as True",
+        "they are identical",
+        "> is for text",
+        ">= means less than"
+      ],
+      "answer": 0,
+      "explanation": "5 > 5 is False, but 5 >= 5 is True. The extra = includes the 'equal' case."
+    },
+    {
+      "id": "u20l05e05",
+      "type": "fillBlank",
+      "prompt": "A ride needs height 120 or more. Complete so exactly-120 passes:\n\nheight = 120\nprint(height ____ 120)   # shows: True",
+      "answer": ">=",
+      "acceptable": [
+        ">="
+      ],
+      "explanation": "Use >= so that exactly 120 counts. With > alone, 120 would fail the test."
+    },
+    {
+      "id": "u20l05e06",
+      "type": "multipleChoice",
+      "prompt": "What does this print?\n\nprint(3 >= 7)",
+      "options": [
+        "False",
+        "True",
+        "3",
+        "7"
+      ],
+      "answer": 0,
+      "explanation": "3 is neither greater than nor equal to 7, so the result is False."
+    },
+    {
+      "id": "u20l05e07",
+      "type": "matchPairs",
+      "prompt": "Match each comparison to its result.",
+      "pairs": [
+        {
+          "left": "6 >= 6",
+          "right": "True"
+        },
+        {
+          "left": "6 > 6",
+          "right": "False"
+        },
+        {
+          "left": "2 <= 1",
+          "right": "False"
+        }
+      ],
+      "explanation": "The 'or equal' versions include the equal case; the plain > and < do not."
+    },
+    {
+      "id": "u20l05e08",
+      "type": "trueFalse",
+      "prompt": "8 <= 8 is True.",
+      "answer": true,
+      "explanation": "Yes - 8 equals 8, and <= allows the equal case, so it's True."
+    },
+    {
+      "id": "u20l05e09",
+      "type": "multipleChoice",
+      "prompt": "A pass requires a score of 50 or higher. A student scores exactly 50. Which test says they pass (True)?",
+      "options": [
+        "score >= 50",
+        "score > 50",
+        "score < 50",
+        "score != 50"
+      ],
+      "answer": 0,
+      "explanation": "'50 or higher' includes 50 itself, so you need >=. With >, a score of exactly 50 would wrongly fail."
+    },
+    {
+      "id": "u20l05e10",
+      "type": "multipleChoice",
+      "prompt": "Why do the boundary cases (like exactly 50) matter so much?",
+      "options": [
+        "Picking > vs >= changes the answer at the edge",
+        "They never matter",
+        "Equal is impossible",
+        "Boundaries are always False"
+      ],
+      "answer": 0,
+      "explanation": "At the exact boundary, > and >= disagree. Choosing the right one is a common source of correct-vs-wrong answers."
+    }
+  ]
+}

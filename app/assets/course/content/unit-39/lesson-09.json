@@ -1,0 +1,146 @@
+{
+  "unitId": "u39",
+  "lessonId": "u39l09",
+  "title": "Solve it together: repeat what the user asked",
+  "idea": "GUIDED PROBLEM. Read a number with input()+int(), then repeat that many times.",
+  "problem": "Ask the user how many stars to show, then print that many '*' lines.",
+  "exercises": [
+    {
+      "id": "u39l09e01",
+      "type": "multipleChoice",
+      "prompt": "PROBLEM: ask how many stars, then print that many '*' lines.\n\nUnderstand. What is the INPUT?",
+      "uepcc": "U",
+      "options": [
+        "A number typed by the user",
+        "The star character",
+        "Nothing",
+        "The word 'stars'"
+      ],
+      "answer": 0,
+      "explanation": "The input is the count the user types."
+    },
+    {
+      "id": "u39l09e02",
+      "type": "multipleChoice",
+      "prompt": "Understand: the OUTPUT depends on the input. If they type 3, what prints?",
+      "uepcc": "U",
+      "options": [
+        "Three lines, each '*'",
+        "One line with 3",
+        "The number 3",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "Three '*' lines. The input decides how many passes."
+    },
+    {
+      "id": "u39l09e03",
+      "type": "multipleChoice",
+      "prompt": "Example. By hand, if the user types 2, how many '*' lines appear?",
+      "uepcc": "E",
+      "options": [
+        "2",
+        "1",
+        "3",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "Two lines. Hand-working one input pins down the expected output."
+    },
+    {
+      "id": "u39l09e04",
+      "type": "trueFalse",
+      "prompt": "Example: input() hands back TEXT, so we must turn it into a number before using it as a count.",
+      "uepcc": "E",
+      "answer": true,
+      "explanation": "True. int() converts the typed text to a number the loop can repeat with."
+    },
+    {
+      "id": "u39l09e05",
+      "type": "orderBlocks",
+      "prompt": "Plan. Order the steps.",
+      "uepcc": "P",
+      "blocks": [
+        "Repeat that many times, printing '*'",
+        "Read the user's number",
+        "Convert the text to a whole number"
+      ],
+      "answer": [
+        1,
+        2,
+        0
+      ],
+      "explanation": "Read the count, convert it to a number, then repeat that many times printing a star."
+    },
+    {
+      "id": "u39l09e06",
+      "type": "multipleChoice",
+      "prompt": "Plan: which tool turns the typed text '2' into the number 2?",
+      "uepcc": "P",
+      "options": [
+        "int()",
+        "print()",
+        "str()",
+        "range()"
+      ],
+      "answer": 0,
+      "explanation": "int() converts text to a whole number."
+    },
+    {
+      "id": "u39l09e07",
+      "type": "orderBlocks",
+      "prompt": "Code. Arrange the lines.",
+      "uepcc": "C",
+      "blocks": [
+        "    print(\"*\")",
+        "count = int(input())",
+        "for i in range(count):"
+      ],
+      "answer": [
+        1,
+        2,
+        0
+      ],
+      "explanation": "Read and convert the count, then loop range(count) printing a star each pass."
+    },
+    {
+      "id": "u39l09e08",
+      "type": "fillBlank",
+      "prompt": "Code. Fill the range so it repeats 'count' times:\n\ncount = int(input())\nfor i in range(____):\n    print(\"*\")",
+      "uepcc": "C",
+      "answer": "count",
+      "acceptable": [
+        "count"
+      ],
+      "explanation": "range(count) runs the body once for each step up to count."
+    },
+    {
+      "id": "u39l09e09",
+      "type": "multipleChoice",
+      "prompt": "Check. The user types 4 and four '*' lines appear. Hand example (2 -> 2 lines) logic holds. So...",
+      "uepcc": "Check",
+      "options": [
+        "It passes",
+        "It fails",
+        "Can't tell",
+        "Rewrite it"
+      ],
+      "answer": 0,
+      "explanation": "The count of lines equals the input, matching the pattern you worked by hand. It passes."
+    },
+    {
+      "id": "u39l09e10",
+      "type": "multipleChoice",
+      "prompt": "Check: the user types 0. How many '*' lines print?",
+      "uepcc": "Check",
+      "options": [
+        "0 — nothing prints",
+        "1",
+        "It errors",
+        "Many forever"
+      ],
+      "answer": 0,
+      "explanation": "range(0) makes zero passes, so nothing prints. A good solution handles 0 sensibly."
+    }
+  ]
+}

@@ -1,0 +1,156 @@
+{
+  "unitId": "u93",
+  "lessonId": "u93l06",
+  "title": "Solve it: how many beat the average",
+  "idea": "GUIDED INTEGRATED PROBLEM. A two-pass solution: first compute the average, then loop again to count values above it. Compose two helpers.",
+  "problem": "Scores are [60, 80, 40, 100]. Show how many scores are ABOVE the average.",
+  "exercises": [
+    {
+      "id": "u93l06e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: scores [60, 80, 40, 100]. How many are ABOVE the average?\n\nUnderstand — what must you know before you can compare anything?",
+      "explanation": "You can't say 'above average' until you know the average. The average must be computed first.",
+      "options": [
+        "The average itself — compute it before comparing",
+        "The biggest score",
+        "How long the list is only",
+        "Nothing in advance"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u93l06e02",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example — by hand: total of [60, 80, 40, 100] is 280, count is 4. Average = ?",
+      "explanation": "280 / 4 = 70. This is the threshold the second pass compares against.",
+      "options": [
+        "70",
+        "80",
+        "60",
+        "280"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u93l06e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "By hand, which scores are strictly above 70: 60, 80, 40, 100? How many?",
+      "explanation": "80 and 100 are above 70; 60 and 40 are not. That is 2 — your check value.",
+      "options": [
+        "2",
+        "3",
+        "1",
+        "4"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u93l06e04",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Plan — this needs TWO passes. Order them.",
+      "explanation": "First pass computes the average; second pass counts values above it. You can't merge them — the average isn't known until pass one ends.",
+      "blocks": [
+        "Pass 1: compute the average of the whole list",
+        "Pass 2: for each score, check if it is above the average",
+        "Count the ones that are above",
+        "Show the count"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "id": "u93l06e05",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Why can't you count 'above average' in the SAME loop that computes the average?",
+      "explanation": "The average isn't final until the loop finishes. Comparing mid-loop would use an incomplete average — so two passes.",
+      "options": [
+        "The average isn't known until the first loop completes",
+        "Loops can only run once ever",
+        "Counting is not allowed in a loop",
+        "Averages change the list"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u93l06e06",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "How does composing two helpers — average(scores) and count_above(scores, avg) — help here?",
+      "explanation": "Each helper does one clear job. The main plan reads 'get average, then count above it' — composition keeps it readable.",
+      "options": [
+        "Each helper does one job, so the solution reads like the plan",
+        "It avoids using a loop",
+        "It makes two passes into one",
+        "Helpers prevent checking"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u93l06e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code — arrange the main part that composes the two helpers.",
+      "explanation": "Store the list, call average to get the threshold, then count scores above it, then print. Composition in action.",
+      "blocks": [
+        "scores = [60, 80, 40, 100]",
+        "avg = average(scores)",
+        "above = count_above(scores, avg)",
+        "print(above)"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "id": "u93l06e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Inside count_above, complete the comparison for 'strictly above':\n\nfor score in scores:\n    if score ____ avg:\n        count = count + 1",
+      "explanation": "'Above' means greater than, so use >. If the problem said 'at least the average' you'd use >=.",
+      "answer": ">",
+      "acceptable": [
+        ">"
+      ]
+    },
+    {
+      "id": "u93l06e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check — the program prints 2, hand example was 2. Verdict?",
+      "explanation": "Output matches the hand example, so the two-pass composition is correct.",
+      "options": [
+        "Passes",
+        "Fails",
+        "Unknown",
+        "Rewrite the example"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u93l06e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Re-check with [70, 70, 70]. Average is 70. How many are strictly ABOVE 70?",
+      "explanation": "Every score equals the average, and > is strict, so none are above. The answer is 0 — the strict comparison matters.",
+      "options": [
+        "0",
+        "3",
+        "1",
+        "70"
+      ],
+      "answer": 0
+    }
+  ]
+}

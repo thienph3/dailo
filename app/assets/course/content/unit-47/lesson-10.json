@@ -1,0 +1,152 @@
+{
+  "unitId": "u47",
+  "lessonId": "u47l10",
+  "title": "Choosing the right repeat — all together",
+  "idea": "MEET. Wrap-up: given a problem, name the shape (for/while), the repeated step, what you keep (counter/accumulator), and whether break/continue is needed. Review-leaning. No code.",
+  "exercises": [
+    {
+      "id": "u47l10e01",
+      "type": "multipleChoice",
+      "prompt": "'Add up the numbers 1 to 50.' Shape and what you keep?",
+      "options": [
+        "for (count known) + accumulator (running total)",
+        "while + counter",
+        "while + accumulator",
+        "for + no state"
+      ],
+      "answer": 0,
+      "explanation": "1 to 50 is a known count (for), and summing values needs an accumulator (running total)."
+    },
+    {
+      "id": "u47l10e02",
+      "type": "multipleChoice",
+      "prompt": "'Keep asking for a number until they type 0, then say how many you got.' Shape and what you keep?",
+      "options": [
+        "while (stop on condition) + counter (how many)",
+        "for + accumulator",
+        "for + counter",
+        "while + no state"
+      ],
+      "answer": 0,
+      "explanation": "Stopping when they type 0 is a condition (while), and 'how many you got' needs a counter."
+    },
+    {
+      "id": "u47l10e03",
+      "type": "multipleChoice",
+      "prompt": "'Print 1 to 100 but stop at the first multiple of 7.' Shape and extra tool?",
+      "options": [
+        "for (known range) + break (stop at first match)",
+        "while + continue",
+        "for + accumulator",
+        "while only"
+      ],
+      "answer": 0,
+      "explanation": "The range 1 to 100 is known (for), and 'stop at the first' means break."
+    },
+    {
+      "id": "u47l10e04",
+      "type": "multipleChoice",
+      "prompt": "'Print 1 to 20 but skip the multiples of 5.' Shape and extra tool?",
+      "options": [
+        "for (known range) + continue (skip some)",
+        "while + break",
+        "for + accumulator",
+        "while only"
+      ],
+      "answer": 0,
+      "explanation": "1 to 20 is a known range (for); skipping some passes is continue."
+    },
+    {
+      "id": "u47l10e05",
+      "type": "matchPairs",
+      "prompt": "Match each problem to its loop shape.",
+      "pairs": [
+        {
+          "left": "Count down 10 to 1",
+          "right": "for"
+        },
+        {
+          "left": "Halve until below 1",
+          "right": "while"
+        },
+        {
+          "left": "Greet all 5 guests",
+          "right": "for"
+        },
+        {
+          "left": "Ask until they say yes",
+          "right": "while"
+        }
+      ],
+      "explanation": "Known counts (count down 10, 5 guests) are for; stopping on a condition (below 1, 'yes') is while."
+    },
+    {
+      "id": "u47l10e06",
+      "type": "multiSelect",
+      "prompt": "Select ALL problems that need a COUNTER.",
+      "options": [
+        "How many numbers 1 to 30 are even",
+        "The sum of 1 to 30",
+        "How many guests said yes",
+        "The total of all bills"
+      ],
+      "answer": [
+        0,
+        2
+      ],
+      "explanation": "Counting HOW MANY (even numbers, yeses) uses a counter. Sums and totals use an accumulator."
+    },
+    {
+      "id": "u47l10e07",
+      "type": "multiSelect",
+      "prompt": "Select ALL problems that need an ACCUMULATOR.",
+      "options": [
+        "The sum of 1 to 10",
+        "How many are odd",
+        "The total of all prices",
+        "How many passed"
+      ],
+      "answer": [
+        0,
+        2
+      ],
+      "explanation": "Building a SUM (of 1 to 10, of prices) uses an accumulator. Counting how many uses a counter."
+    },
+    {
+      "id": "u47l10e08",
+      "type": "trueFalse",
+      "prompt": "A single problem can need a for loop, a counter, AND an if inside the loop together.",
+      "answer": true,
+      "explanation": "True. 'Count how many of 1 to 50 are even' uses a for loop, a counter, and an if — tools combine."
+    },
+    {
+      "id": "u47l10e09",
+      "type": "orderBlocks",
+      "prompt": "Order the planning questions for ANY repetition problem.",
+      "blocks": [
+        "Is the count known (for) or does it stop on a condition (while)?",
+        "What single step repeats each pass?",
+        "Do I keep a counter or accumulator, and do I need if / break / continue?"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Pick the shape, name the repeated step, then decide the state and any break/continue. That is the whole plan."
+    },
+    {
+      "id": "u47l10e10",
+      "type": "multipleChoice",
+      "prompt": "What did this unit teach you to do BEFORE writing any loop?",
+      "options": [
+        "Choose the right kind of repeat and plan its parts",
+        "Memorise every answer",
+        "Skip the planning",
+        "Always use while"
+      ],
+      "answer": 0,
+      "explanation": "You learned to read a problem and pick the loop shape and tools first — the plan comes before the code."
+    }
+  ]
+}

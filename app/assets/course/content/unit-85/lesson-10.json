@@ -1,0 +1,141 @@
+{
+  "unitId": "u85",
+  "lessonId": "u85l10",
+  "title": "The understand-first habit, pulled together",
+  "idea": "MEET: review — before touching code, restate any big problem as goal, inputs (vs rule-numbers), and every output (including hidden ones), free of noise.",
+  "exercises": [
+    {
+      "type": "orderBlocks",
+      "prompt": "REVIEW: order the full understand-first habit.",
+      "blocks": [
+        "Read the whole problem to the end",
+        "Cross out the story noise",
+        "List the inputs (not the rule-numbers)",
+        "List every output, including hidden ones"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "Read fully, drop noise, list inputs, list every output. That's the complete understand step.",
+      "id": "u85l10e01"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "REVIEW: which is an INPUT, not a rule-number, in 'count ages 18+'?",
+      "options": [
+        "The list of ages",
+        "18",
+        "the word count",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "The list of ages is the data (input). 18 is the threshold inside the rule.",
+      "id": "u85l10e02"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "REVIEW: a single sentence can hide two separate outputs.",
+      "answer": true,
+      "explanation": "Yes — 'show the total and the average' is one sentence, two outputs. Read for every ask.",
+      "id": "u85l10e03"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "REVIEW (Lap 0): which line SHOWS an answer on screen?",
+      "options": [
+        "print(average)",
+        "average = 0",
+        "for s in scores:",
+        "if s > 60:"
+      ],
+      "answer": 0,
+      "explanation": "print() displays output — the Unit-1 tool we still use to show each result we produce.",
+      "id": "u85l10e04"
+    },
+    {
+      "type": "multiSelect",
+      "prompt": "REVIEW: select everything that belongs on the OUTPUTS line for 'total the prices and name the biggest'.",
+      "options": [
+        "the total",
+        "the biggest price",
+        "the list of prices",
+        "the word 'prices'"
+      ],
+      "answer": [
+        0,
+        1
+      ],
+      "explanation": "Two outputs: the total and the biggest. The list is an input; 'prices' is just a label.",
+      "id": "u85l10e05"
+    },
+    {
+      "type": "matchPairs",
+      "prompt": "REVIEW: match each problem part to its question.",
+      "pairs": [
+        {
+          "left": "GOAL",
+          "right": "what are we producing overall?"
+        },
+        {
+          "left": "INPUTS",
+          "right": "what values are we given?"
+        },
+        {
+          "left": "OUTPUTS",
+          "right": "what must we show?"
+        }
+      ],
+      "explanation": "Goal, inputs, outputs — three questions that frame every multi-part problem.",
+      "id": "u85l10e06"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "REVIEW: a problem says 'on a busy morning, total the 6 sales.' The noise is...",
+      "options": [
+        "'on a busy morning'",
+        "the 6 sales",
+        "'total'",
+        "the number 6"
+      ],
+      "answer": 0,
+      "explanation": "The morning is decoration. The sales and 'total' are the signal; 6 is how many items (len).",
+      "id": "u85l10e07"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "REVIEW: understanding a problem well makes the next step (splitting it) easier.",
+      "answer": true,
+      "explanation": "Yes — a clear list of outputs is already the start of the split. Good understanding feeds good decomposition.",
+      "id": "u85l10e08"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "REVIEW: the SAFEST first move on any big problem is...",
+      "options": [
+        "Restate it as goal, inputs, and every output",
+        "Start typing code immediately",
+        "Guess the answer",
+        "Ignore half the sentence"
+      ],
+      "answer": 0,
+      "explanation": "Restate before you code. Understanding first prevents the most common bug: solving the wrong problem.",
+      "id": "u85l10e09"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "The big idea you're pulling together:",
+      "options": [
+        "Understand first: restate goal, inputs, and every output before any code",
+        "Code first, understand later",
+        "Outputs are optional",
+        "Noise is the most important part"
+      ],
+      "answer": 0,
+      "explanation": "The whole unit in one line: understand the big problem fully before splitting or coding. Next, we split it.",
+      "id": "u85l10e10"
+    }
+  ]
+}

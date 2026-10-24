@@ -1,0 +1,154 @@
+{
+  "unitId": "u82",
+  "lessonId": "u82l05",
+  "title": "Solve it together: subtotal, then add a fee",
+  "idea": "GUIDED (UEPCC). Compose two helpers: subtotal(qty, price) and add_fee(amount, fee). The subtotal feeds into add_fee — wiring order matters.",
+  "problem": "Buy 4 items at 5 each, then add a flat delivery fee of 3. Show the final amount using subtotal(qty, price) and add_fee(amount, fee).",
+  "exercises": [
+    {
+      "id": "u82l05e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: 4 items at 5 each, plus a flat fee of 3. Show the final amount using subtotal(qty, price) and add_fee(amount, fee).\n\nOUTPUT?",
+      "options": [
+        "The final amount: items cost plus the fee",
+        "Just the fee",
+        "Just the item count",
+        "The cheapest item"
+      ],
+      "answer": 0,
+      "explanation": "Output = the final amount after adding the fee. Two helpers build it."
+    },
+    {
+      "id": "u82l05e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "INPUTS?",
+      "options": [
+        "Quantity (4), unit price (5), and the fee (3)",
+        "Only 4",
+        "The word total",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "Three values: 4, 5, 3. Each becomes a named variable so nothing is dropped."
+    },
+    {
+      "id": "u82l05e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example — by hand. 4 at 5 is 20; add the fee of 3. Final?",
+      "options": [
+        "23",
+        "20",
+        "12",
+        "15"
+      ],
+      "answer": 0,
+      "explanation": "4*5 = 20, 20 + 3 = 23. Hand answer = 23, our check value."
+    },
+    {
+      "id": "u82l05e04",
+      "type": "trueFalse",
+      "uepcc": "E",
+      "prompt": "add_fee(amount, fee) should return amount + fee.",
+      "answer": true,
+      "explanation": "Yes — adding the fee is just amount + fee. add_fee(20, 3) = 23."
+    },
+    {
+      "id": "u82l05e05",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Plan — which helper's result feeds into the other?",
+      "options": [
+        "subtotal runs first; its result goes into add_fee",
+        "add_fee runs first",
+        "They don't connect",
+        "The fee runs first, then subtotal"
+      ],
+      "answer": 0,
+      "explanation": "subtotal (20) is computed first, then add_fee(20, 3). The subtotal is the input to the fee step."
+    },
+    {
+      "id": "u82l05e06",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Order the plan.",
+      "blocks": [
+        "Work out the subtotal: qty * price",
+        "Add the fee to the subtotal",
+        "Show the final amount"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Subtotal first, then the fee, then show. Wiring order: subtotal into add_fee."
+    },
+    {
+      "id": "u82l05e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code it. Compose the two helpers.",
+      "blocks": [
+        "def subtotal(qty, price):",
+        "    return qty * price",
+        "def add_fee(amount, fee):",
+        "    return amount + fee",
+        "items_cost = subtotal(4, 5)",
+        "final = add_fee(items_cost, 3)",
+        "print(final)"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "explanation": "Define both helpers, compute items_cost with subtotal, feed it into add_fee, print. The subtotal's result wires into the fee step."
+    },
+    {
+      "id": "u82l05e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Complete the composition so the subtotal flows into the fee:\n\nitems_cost = subtotal(4, 5)\nfinal = add_fee(____, 3)",
+      "answer": "items_cost",
+      "acceptable": [
+        "items_cost"
+      ],
+      "explanation": "The fee is added to the subtotal, so items_cost (20) is the first argument to add_fee."
+    },
+    {
+      "id": "u82l05e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check — the code prints 23; hand example was 23. Verdict?",
+      "options": [
+        "Passes",
+        "Fails",
+        "Unknown",
+        "Rewrite example"
+      ],
+      "answer": 0,
+      "explanation": "Output (23) matches 23. The two helpers are wired in the right order."
+    },
+    {
+      "id": "u82l05e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Re-check: 2 items at 10, fee 5. Same plan. Final amount?",
+      "options": [
+        "25",
+        "23",
+        "20",
+        "15"
+      ],
+      "answer": 0,
+      "explanation": "2*10 = 20, 20 + 5 = 25. The composed helpers handle new numbers. You composed two sub-plans!"
+    }
+  ]
+}

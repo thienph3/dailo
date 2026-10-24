@@ -1,0 +1,139 @@
+{
+  "unitId": "u59",
+  "lessonId": "u59l05",
+  "title": "Using max on real lists",
+  "idea": "TOOL applied: read best-so-far code for everyday 'which is largest' questions and predict results.",
+  "exercises": [
+    {
+      "id": "u59l05e01",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\ntemps = [18, 24, 19, 31, 22]\nhottest = temps[0]\nfor t in temps:\n    if t > hottest:\n        hottest = t\nprint(hottest)",
+      "options": [
+        "31",
+        "18",
+        "22",
+        "114"
+      ],
+      "answer": 0,
+      "explanation": "The warmest day is 31. The best-so-far climbs to 31 and nothing beats it."
+    },
+    {
+      "id": "u59l05e02",
+      "type": "multipleChoice",
+      "prompt": "Which variable name reads most clearly for the biggest score?",
+      "options": [
+        "top_score",
+        "x",
+        "thing",
+        "n2"
+      ],
+      "answer": 0,
+      "explanation": "A descriptive name like top_score makes the code read like the problem. Bare names like x hide what it means."
+    },
+    {
+      "id": "u59l05e03",
+      "type": "fillBlank",
+      "prompt": "Finish the start line so this finds the longest jump:\n\njumps = [4, 7, 5]\nlongest = jumps[____]\nfor j in jumps:\n    if j > longest:\n        longest = j",
+      "answer": "0",
+      "acceptable": [
+        "0"
+      ],
+      "explanation": "Start longest at jumps[0], the first real value, then compare the rest. It will land on 7."
+    },
+    {
+      "id": "u59l05e04",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nsales = [120, 95, 120, 80]\nbest = sales[0]\nfor s in sales:\n    if s > best:\n        best = s\nprint(best)",
+      "options": [
+        "120",
+        "95",
+        "80",
+        "415"
+      ],
+      "answer": 0,
+      "explanation": "The best day sold 120 (it appears twice). The loop reports 120 as the single biggest."
+    },
+    {
+      "id": "u59l05e05",
+      "type": "orderBlocks",
+      "prompt": "Arrange a program that prints the highest rating in a list called ratings.",
+      "answer": [
+        1,
+        0,
+        3,
+        2,
+        4
+      ],
+      "blocks": [
+        "for r in ratings:",
+        "best = ratings[0]",
+        "        best = r",
+        "    if r > best:",
+        "print(best)"
+      ],
+      "explanation": "Start best at the first rating, loop each rating, replace when bigger, then print the winner."
+    },
+    {
+      "id": "u59l05e06",
+      "type": "trueFalse",
+      "prompt": "The best-so-far pattern works the same whether the list holds test scores, temperatures, or prices.",
+      "answer": true,
+      "explanation": "Max does not care what the numbers mean. The same loop finds the biggest of any list of numbers."
+    },
+    {
+      "id": "u59l05e07",
+      "type": "multipleChoice",
+      "prompt": "A shop tracks daily visitors: [40, 55, 55, 33]. The max loop reports 55. What does that 55 mean?",
+      "options": [
+        "The busiest single day had 55 visitors",
+        "The shop had 55 days",
+        "The total visitors were 55",
+        "55 days were busy"
+      ],
+      "answer": 0,
+      "explanation": "Max gives the single biggest value — here, the most visitors on any one day."
+    },
+    {
+      "id": "u59l05e08",
+      "type": "multipleChoice",
+      "prompt": "You need the WINNER'S score from [71, 88, 65]. Which pattern fits?",
+      "options": [
+        "Find the biggest (max)",
+        "Add them all (total)",
+        "Count how many (count)",
+        "Print each one"
+      ],
+      "answer": 0,
+      "explanation": "'The winner's score' is the single highest value — a max problem."
+    },
+    {
+      "id": "u59l05e09",
+      "type": "multiSelect",
+      "prompt": "Which problems call for the max pattern? (pick all)",
+      "options": [
+        "The record high temperature",
+        "The most goals in one game",
+        "The average goals per game",
+        "The total goals this season"
+      ],
+      "answer": [
+        0,
+        1
+      ],
+      "explanation": "Record high and most-in-one-game both want the single biggest value. Average and total are different tools."
+    },
+    {
+      "id": "u59l05e10",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nn = [50]\nbest = n[0]\nfor x in n:\n    if x > best:\n        best = x\nprint(best)",
+      "options": [
+        "50",
+        "0",
+        "1",
+        "An error"
+      ],
+      "answer": 0,
+      "explanation": "With one value, best starts at 50 and the loop finds nothing bigger. The max of a one-item list is that item."
+    }
+  ]
+}

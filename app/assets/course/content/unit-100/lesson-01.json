@@ -1,0 +1,158 @@
+{
+  "unitId": "u100",
+  "lessonId": "u100l01",
+  "title": "Grand finale: grade a quiz and report a percentage",
+  "idea": "GUIDED FINALE. Combine a counting loop and arithmetic into one small program: count correct answers, then turn the count into a percentage.",
+  "problem": "A quiz has marks [1, 0, 1, 1] where 1 means correct. Report the score as a percentage (3 of 4 = 75%).",
+  "exercises": [
+    {
+      "id": "u100l01e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "The final unit! PROBLEM: marks [1,0,1,1], 1=correct. Report the percentage. OUTPUT is...",
+      "options": [
+        "A percentage score (one number)",
+        "The list of marks",
+        "The count only",
+        "Pass or fail"
+      ],
+      "answer": 0,
+      "explanation": "Output is a percentage. We'll count the 1s, then convert to a percent. Two patterns in one program."
+    },
+    {
+      "id": "u100l01e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "What two quantities do we need before computing a percentage?",
+      "options": [
+        "How many correct, and how many total",
+        "Only the correct count",
+        "Only the total",
+        "The biggest mark"
+      ],
+      "answer": 0,
+      "explanation": "Percentage = correct / total * 100. So we need both the correct count and the total number of questions."
+    },
+    {
+      "id": "u100l01e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example by hand: how many 1s in [1, 0, 1, 1], and how many marks total?",
+      "options": [
+        "3 correct, 4 total",
+        "4 correct, 4 total",
+        "2 correct, 4 total",
+        "3 correct, 3 total"
+      ],
+      "answer": 0,
+      "explanation": "Three 1s, four marks. 3 out of 4."
+    },
+    {
+      "id": "u100l01e04",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "So the percentage is 3 / 4 * 100 = ?",
+      "options": [
+        "75",
+        "34",
+        "12",
+        "100"
+      ],
+      "answer": 0,
+      "explanation": "3/4 = 0.75, times 100 = 75%. Our check value."
+    },
+    {
+      "id": "u100l01e05",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Plan the program. Order the steps.",
+      "blocks": [
+        "Compute percentage = correct / total * 100",
+        "Count the correct marks (the 1s)",
+        "Get the total with len(marks)",
+        "Show the percentage"
+      ],
+      "answer": [
+        1,
+        2,
+        0,
+        3
+      ],
+      "explanation": "Count correct, get total, convert, show. We reuse count-with-condition then arithmetic."
+    },
+    {
+      "id": "u100l01e06",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "A mark is correct when it equals 1. Which test counts it?",
+      "options": [
+        "if mark == 1",
+        "if mark > 1",
+        "if mark % 1",
+        "if mark"
+      ],
+      "answer": 0,
+      "explanation": "mark == 1 means correct. We bump the correct counter when it holds."
+    },
+    {
+      "id": "u100l01e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code the counting loop plus the percentage. Arrange the lines.",
+      "blocks": [
+        "percentage = correct / len(marks) * 100",
+        "        correct = correct + 1",
+        "correct = 0",
+        "    if mark == 1:",
+        "for mark in marks:"
+      ],
+      "answer": [
+        2,
+        4,
+        3,
+        1,
+        0
+      ],
+      "explanation": "correct=0, loop marks, count the 1s, then percentage = correct/len*100. len gives the total safely."
+    },
+    {
+      "id": "u100l01e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Complete the percentage formula (correct=3):\n\npercentage = correct / len(marks) ____ 100",
+      "answer": "*",
+      "acceptable": [
+        "*"
+      ],
+      "explanation": "Multiply the fraction by 100 to make it a percent: 3/4 * 100 = 75."
+    },
+    {
+      "id": "u100l01e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Run it: percentage is 75. Hand said 75. Verdict?",
+      "options": [
+        "Passes",
+        "Fails",
+        "Unknown",
+        "Rewrite example"
+      ],
+      "answer": 0,
+      "explanation": "Matches! You counted correct answers and converted to a percentage — a real, useful little program."
+    },
+    {
+      "id": "u100l01e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Re-run on [1, 1, 1, 1] (all correct). What percentage?",
+      "options": [
+        "100",
+        "75",
+        "25",
+        "4"
+      ],
+      "answer": 0,
+      "explanation": "4/4 * 100 = 100%. The program generalizes to any set of marks. Nicely done!"
+    }
+  ]
+}

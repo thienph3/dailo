@@ -1,0 +1,123 @@
+{
+  "unitId": "u88",
+  "lessonId": "u88l04",
+  "title": "Making a grid of rows and columns",
+  "idea": "TOOL: nested range loops naturally print a grid (rows times columns). Visible output, thinking-heavy.",
+  "exercises": [
+    {
+      "id": "u88l04e01",
+      "type": "multipleChoice",
+      "prompt": "A grid has rows and columns. Which loop is the OUTER one if you print the grid row by row?",
+      "options": [
+        "The rows loop (outer), with columns inside",
+        "The columns loop (outer)",
+        "Neither — a grid needs one loop",
+        "Both must be outer"
+      ],
+      "answer": 0,
+      "explanation": "Printing row by row: the outer loop picks a row, the inner loop walks every column in that row. Rows outside, columns inside."
+    },
+    {
+      "id": "u88l04e02",
+      "type": "multipleChoice",
+      "prompt": "Predict how many cells this grid has:\n\nfor row in range(3):\n    for col in range(4):\n        print(row, col)",
+      "options": [
+        "12 (3 rows times 4 columns)",
+        "7",
+        "4",
+        "3"
+      ],
+      "answer": 0,
+      "explanation": "3 rows times 4 columns = 12 cells, so 12 lines. A grid's size is rows times columns."
+    },
+    {
+      "id": "u88l04e03",
+      "type": "orderBlocks",
+      "prompt": "Order the cells printed by:\n\nfor row in range(2):\n    for col in range(3):\n        print(row, col)",
+      "blocks": [
+        "0 0",
+        "0 1",
+        "0 2",
+        "1 0",
+        "1 1",
+        "1 2"
+      ],
+      "answer": [0, 1, 2, 3, 4, 5],
+      "explanation": "Row 0 first: columns 0,1,2. Then row 1: columns 0,1,2. The inner column loop finishes a whole row before the next row begins."
+    },
+    {
+      "id": "u88l04e04",
+      "type": "trueFalse",
+      "prompt": "A 5-by-5 grid printed with nested loops produces 25 cells.",
+      "answer": true,
+      "explanation": "5 rows times 5 columns = 25 cells. Square grids are just equal row and column counts multiplied."
+    },
+    {
+      "id": "u88l04e05",
+      "type": "multipleChoice",
+      "prompt": "Which real thing is like a grid built from nested loops?",
+      "options": [
+        "A seating chart with rows of seats",
+        "A single price",
+        "One name on a list",
+        "A yes/no answer"
+      ],
+      "answer": 0,
+      "explanation": "A seating chart is a grid: rows (outer) and seats per row (inner). Calendars, chessboards, and spreadsheets fit too."
+    },
+    {
+      "id": "u88l04e06",
+      "type": "multipleChoice",
+      "prompt": "Predict the value printed for the cell at row 2, column 3 in:\n\nfor row in range(4):\n    for col in range(4):\n        print(row * col)",
+      "options": [
+        "6 (2 times 3)",
+        "5",
+        "23",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "The printed value is row*col. At row 2, column 3 that's 2*3 = 6. This nested loop prints a small times-table grid."
+    },
+    {
+      "id": "u88l04e07",
+      "type": "fillBlank",
+      "prompt": "Complete the loop to print a 3-row, 3-column grid of (row, col):\n\nfor row in range(3):\n    for col in range(____):\n        print(row, col)",
+      "answer": "3",
+      "acceptable": ["3"],
+      "explanation": "range(3) for the columns gives 3 columns per row. 3 rows times 3 columns = 9 cells printed."
+    },
+    {
+      "id": "u88l04e08",
+      "type": "multipleChoice",
+      "prompt": "In a grid loop, what does one full run of the INNER loop represent?",
+      "options": [
+        "One complete row",
+        "One column only",
+        "The whole grid",
+        "A single cell"
+      ],
+      "answer": 0,
+      "explanation": "One sweep of the inner (column) loop fills one entire row. The outer loop then moves to the next row and sweeps again."
+    },
+    {
+      "id": "u88l04e09",
+      "type": "trueFalse",
+      "prompt": "Swapping row and column ranges (3-by-4 to 4-by-3) keeps the same number of cells but changes the shape.",
+      "answer": true,
+      "explanation": "3 times 4 and 4 times 3 both give 12 cells, but one is wide and one is tall. Same count, different grid shape."
+    },
+    {
+      "id": "u88l04e10",
+      "type": "multipleChoice",
+      "prompt": "What grid skill does this lesson give you?",
+      "options": [
+        "Visiting every cell of a rows-by-columns grid with nested loops",
+        "Printing one row only",
+        "Counting without loops",
+        "Avoiding grids"
+      ],
+      "answer": 0,
+      "explanation": "Nested range loops touch every cell of a grid. Rows outside, columns inside — the foundation for grid problems."
+    }
+  ]
+}

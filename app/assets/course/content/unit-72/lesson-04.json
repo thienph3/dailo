@@ -1,0 +1,136 @@
+{
+  "unitId": "u72",
+  "lessonId": "u72l04",
+  "title": "More than one value",
+  "idea": "TOOL: a sub-plan can take several parameters; arguments line up by position.",
+  "exercises": [
+    {
+      "id": "u72l04e01",
+      "type": "multipleChoice",
+      "prompt": "Which def line gives 'show' TWO parameters, a and b?",
+      "options": [
+        "def show(a, b):",
+        "def show(a b):",
+        "def show(a)(b):",
+        "def show():"
+      ],
+      "answer": 0,
+      "explanation": "Separate parameters with a comma: def show(a, b):. Now show expects two values when called."
+    },
+    {
+      "id": "u72l04e02",
+      "type": "multipleChoice",
+      "prompt": "Program:\n\ndef show(a, b):\n    print(a)\n    print(b)\nshow(3, 7)\n\nWhat prints?",
+      "options": [
+        "3\n7",
+        "7\n3",
+        "3",
+        "10"
+      ],
+      "answer": 0,
+      "explanation": "3 fills a, 7 fills b (by position). The body prints a then b: 3, then 7."
+    },
+    {
+      "id": "u72l04e03",
+      "type": "multipleChoice",
+      "prompt": "In show(3, 7) for def show(a, b), which value does b get?",
+      "options": [
+        "7",
+        "3",
+        "10",
+        "neither"
+      ],
+      "answer": 0,
+      "explanation": "Arguments line up by position: first (3) to a, second (7) to b. So b is 7. Order matters."
+    },
+    {
+      "id": "u72l04e04",
+      "type": "trueFalse",
+      "prompt": "The FIRST argument fills the FIRST parameter, the second fills the second, and so on.",
+      "answer": true,
+      "explanation": "Yes. Arguments match parameters by position, left to right. Swapping the call's order swaps the values."
+    },
+    {
+      "id": "u72l04e05",
+      "type": "multipleChoice",
+      "prompt": "def show(a, b): print(a). Call show(9, 2). What prints?",
+      "options": [
+        "9",
+        "2",
+        "9\n2",
+        "11"
+      ],
+      "answer": 0,
+      "explanation": "a gets 9, b gets 2, but the body only prints a - so just 9. b was passed but not printed here."
+    },
+    {
+      "id": "u72l04e06",
+      "type": "fillBlank",
+      "prompt": "Complete the call so a=4 and b=6:\n\ndef show(a, b):\n    print(a)\n    print(b)\nshow(4, ____)",
+      "answer": "6",
+      "acceptable": [
+        "6"
+      ],
+      "explanation": "The second argument fills b, so write 6: show(4, 6). Then it prints 4 then 6."
+    },
+    {
+      "id": "u72l04e07",
+      "type": "multipleChoice",
+      "prompt": "def total(a, b): print(a + b). What does total(5, 8) print?",
+      "options": [
+        "13",
+        "58",
+        "5",
+        "8"
+      ],
+      "answer": 0,
+      "explanation": "a is 5, b is 8, so a + b is 13. A sub-plan can combine several parameters, then print the result."
+    },
+    {
+      "id": "u72l04e08",
+      "type": "matchPairs",
+      "prompt": "Match each call to its output for def show(a, b): print(a + b).",
+      "pairs": [
+        {
+          "left": "show(2, 3)",
+          "right": "5"
+        },
+        {
+          "left": "show(10, 1)",
+          "right": "11"
+        },
+        {
+          "left": "show(0, 9)",
+          "right": "9"
+        }
+      ],
+      "explanation": "Both arguments fill their slots by position, then a + b is printed. Many values, one reusable sub-plan."
+    },
+    {
+      "id": "u72l04e09",
+      "type": "multipleChoice",
+      "prompt": "If def show(a, b) needs two values, what happens if you call show(5)?",
+      "options": [
+        "It errors - a second value is missing",
+        "b becomes 5 too",
+        "b becomes 0",
+        "It prints 5 twice"
+      ],
+      "answer": 0,
+      "explanation": "Two parameters need two arguments. show(5) leaves b with no value - that's a mismatch error. Counts must match."
+    },
+    {
+      "id": "u72l04e10",
+      "type": "multipleChoice",
+      "prompt": "The rule for several parameters:",
+      "options": [
+        "list them with commas; arguments fill them by position",
+        "they fill in random order",
+        "only one value is allowed",
+        "commas are optional"
+      ],
+      "answer": 0,
+      "explanation": "def name(a, b, c): and call name(1, 2, 3) - positions line up. Count and order of values must match."
+    }
+  ]
+}

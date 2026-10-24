@@ -1,0 +1,137 @@
+{
+  "unitId": "u94",
+  "lessonId": "u94l04",
+  "title": "Testing the boundary",
+  "idea": "MEET. The boundary (the exact cutoff value) is where >= vs > bugs live. Reason about which side of the line a value falls.",
+  "exercises": [
+    {
+      "id": "u94l04e01",
+      "type": "multipleChoice",
+      "prompt": "A rule says 'passes if score is 50 or more'. The BOUNDARY value to test is...",
+      "explanation": "50 is the exact cutoff. Testing 50 proves whether 'or more' really includes the boundary (it does: >=).",
+      "options": [
+        "50 — the exact cutoff",
+        "100",
+        "0",
+        "25"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u94l04e02",
+      "type": "multipleChoice",
+      "prompt": "With rule 'score >= 50', does a score of exactly 50 pass?",
+      "explanation": ">= includes the boundary, so 50 passes. If the code used >, 50 would wrongly fail — that's the classic boundary bug.",
+      "options": [
+        "Yes — >= includes 50",
+        "No — 50 never passes",
+        "Only sometimes",
+        "It crashes"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u94l04e03",
+      "type": "multipleChoice",
+      "prompt": "A rule says 'free coffee if the order is OVER 25'. Does an order of exactly 25 earn one?",
+      "explanation": "'Over' means strictly greater (>), so 25 does NOT qualify. Only 26 and up do. Words map to > vs >=.",
+      "options": [
+        "No — 'over 25' is strict, so 25 does not qualify",
+        "Yes — 25 counts",
+        "Only on weekends",
+        "It crashes"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u94l04e04",
+      "type": "matchPairs",
+      "prompt": "Match the English phrase to the comparison it means.",
+      "explanation": "English hides the boundary: 'at least'/'or more' is >=, 'over'/'more than' is >, 'under'/'less than' is <.",
+      "pairs": [
+        {
+          "left": "50 or more",
+          "right": ">= 50"
+        },
+        {
+          "left": "over 50",
+          "right": "> 50"
+        },
+        {
+          "left": "under 50",
+          "right": "< 50"
+        },
+        {
+          "left": "at most 50",
+          "right": "<= 50"
+        }
+      ]
+    },
+    {
+      "id": "u94l04e05",
+      "type": "trueFalse",
+      "prompt": "Testing exactly the boundary value is the best way to catch a > vs >= bug.",
+      "explanation": "Yes — a value on the boundary is the ONLY input where > and >= disagree. That's why it's the key test.",
+      "answer": true
+    },
+    {
+      "id": "u94l04e06",
+      "type": "multipleChoice",
+      "prompt": "To fully test 'score >= 50', which THREE values are most revealing?",
+      "explanation": "49 (just below), 50 (the boundary), 51 (just above) pin down exactly where the line is. The boundary trio.",
+      "options": [
+        "49, 50, 51",
+        "1, 2, 3",
+        "0, 500, 1000",
+        "only 50"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u94l04e07",
+      "type": "multipleChoice",
+      "prompt": "A program counts 'adults (18+)'. Someone tests only ages 25 and 40. What's the risk?",
+      "explanation": "Both are clearly adults, so the code never meets age 18 or 17 — the boundary where the rule actually matters is untested.",
+      "options": [
+        "It never tests ages near 18, where the rule matters most",
+        "Nothing — those are fine",
+        "25 is too small",
+        "It tests too much"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u94l04e08",
+      "type": "trueFalse",
+      "prompt": "If 49, 50, and 51 all behave correctly, the >=/> choice is well tested.",
+      "explanation": "Yes — those three straddle the boundary, so correct behaviour on all three confirms the comparison is right.",
+      "answer": true
+    },
+    {
+      "id": "u94l04e09",
+      "type": "multipleChoice",
+      "prompt": "Why do boundary bugs survive casual testing?",
+      "explanation": "Casual tests use 'obvious' values far from the line, so > and >= give the same answer and the bug stays hidden.",
+      "options": [
+        "Values far from the boundary behave the same under > and >=",
+        "Boundaries don't exist",
+        "The computer hides them",
+        "They only appear on Mondays"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u94l04e10",
+      "type": "multipleChoice",
+      "prompt": "The habit this lesson builds is...",
+      "explanation": "Whenever a rule has a cutoff, deliberately test the exact boundary and one value each side. That's rigorous checking.",
+      "options": [
+        "Always test the exact cutoff and one value on each side",
+        "Never test cutoffs",
+        "Only test huge numbers",
+        "Trust the code"
+      ],
+      "answer": 0
+    }
+  ]
+}

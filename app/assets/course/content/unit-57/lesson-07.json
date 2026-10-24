@@ -1,0 +1,137 @@
+{
+  "unitId": "u57",
+  "lessonId": "u57l07",
+  "title": "Total only some values",
+  "idea": "Add an if inside the loop so only matching values go into the total. Reviews if inside a loop.",
+  "exercises": [
+    {
+      "id": "u57l07e01",
+      "type": "multipleChoice",
+      "prompt": "nums = [5, 12, 3, 20]\ntotal = 0\nfor n in nums:\n    if n > 10:\n        total = total + n\nprint(total)\n\nWhat prints?",
+      "options": [
+        "32",
+        "40",
+        "8",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "Only values over 10 are added: 12 + 20 = 32."
+    },
+    {
+      "id": "u57l07e02",
+      "type": "multipleChoice",
+      "prompt": "What decides whether a value joins the total?",
+      "options": [
+        "The if condition inside the loop",
+        "Its position",
+        "The list length",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "The if guards the accumulate line, so only passing values are added."
+    },
+    {
+      "id": "u57l07e03",
+      "type": "fillBlank",
+      "prompt": "Total only the even numbers:\n\ntotal = 0\nfor n in nums:\n    if n % 2 == 0:\n        total ____ n",
+      "answer": "+=",
+      "acceptable": [
+        "+=",
+        "= total +"
+      ],
+      "explanation": "Inside the if, add the value: total += n (same as total = total + n)."
+    },
+    {
+      "id": "u57l07e04",
+      "type": "orderBlocks",
+      "prompt": "Arrange: total only the prices above 100.",
+      "blocks": [
+        "        total = total + price",
+        "    if price > 100:",
+        "for price in prices:",
+        "total = 0",
+        "prices = [50, 200, 150]"
+      ],
+      "answer": [
+        4,
+        3,
+        2,
+        1,
+        0
+      ],
+      "explanation": "List, start total, loop, if (indent 1), add (indent 2). 200 + 150 = 350."
+    },
+    {
+      "id": "u57l07e05",
+      "type": "multipleChoice",
+      "prompt": "nums = [1, 2, 3, 4]\ntotal = 0\nfor n in nums:\n    if n % 2 == 0:\n        total = total + n\nprint(total)\n\nWhat prints (sum of evens)?",
+      "options": [
+        "6",
+        "10",
+        "4",
+        "2"
+      ],
+      "answer": 0,
+      "explanation": "Evens are 2 and 4; 2 + 4 = 6. Odd values are skipped by the if."
+    },
+    {
+      "id": "u57l07e06",
+      "type": "trueFalse",
+      "prompt": "The accumulate line is indented TWICE here: once for the loop, once for the if.",
+      "answer": true,
+      "explanation": "It lives inside both the loop and the if, so it carries two indent levels."
+    },
+    {
+      "id": "u57l07e07",
+      "type": "multipleChoice",
+      "prompt": "If NO value matches the if, what is the final total?",
+      "options": [
+        "0 — nothing was added",
+        "the first value",
+        "an error",
+        "the list length"
+      ],
+      "answer": 0,
+      "explanation": "total started at 0 and nothing passed the test, so it stays 0."
+    },
+    {
+      "id": "u57l07e08",
+      "type": "multipleChoice",
+      "prompt": "scores = [40, 70, 90]\ntotal = 0\nfor s in scores:\n    if s >= 50:\n        total = total + s\nprint(total)\n\nWhat prints?",
+      "options": [
+        "160",
+        "200",
+        "40",
+        "90"
+      ],
+      "answer": 0,
+      "explanation": "50-or-more values are 70 and 90; 70 + 90 = 160."
+    },
+    {
+      "id": "u57l07e09",
+      "type": "multipleChoice",
+      "prompt": "Where must 'total = 0' go when there's an if inside the loop?",
+      "options": [
+        "Before the loop, as always",
+        "Inside the if",
+        "After the loop",
+        "It isn't needed"
+      ],
+      "answer": 0,
+      "explanation": "The if only decides what's added; the accumulator still initialises once before the loop."
+    },
+    {
+      "id": "u57l07e10",
+      "type": "multipleChoice",
+      "prompt": "'Total only the values that pass a test' combines which two ideas?",
+      "options": [
+        "an accumulator + an if inside the loop",
+        "two loops",
+        "input + print",
+        "range + len"
+      ],
+      "answer": 0,
+      "explanation": "Sum tool plus a filter if: add a value only when it matches."
+    }
+  ]
+}

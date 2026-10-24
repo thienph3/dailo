@@ -1,0 +1,151 @@
+{
+  "unitId": "u84",
+  "lessonId": "u84l05",
+  "title": "Loop back: assemble the plan for a bigger problem",
+  "idea": "LOOP. Given a 'too big' problem, order the sub-problems and choose the pattern for each — planning practice pulling from every lap.",
+  "exercises": [
+    {
+      "id": "u84l05e01",
+      "type": "orderBlocks",
+      "prompt": "PROBLEM: 'Average of the passing scores, or 0 if none pass.' Order the plan.",
+      "blocks": [
+        "Filter the scores to the passing ones",
+        "Guard: if none passed, the answer is 0",
+        "Total the passing scores",
+        "Divide the total by how many passed, and show it"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "Filter, guard empty, total, divide. Each step is a pattern from an earlier lap."
+    },
+    {
+      "id": "u84l05e02",
+      "type": "multipleChoice",
+      "prompt": "In that plan, the filtering step uses which tool?",
+      "options": [
+        "A loop with an if that keeps passing scores (append to a new list)",
+        "A running total",
+        "print only",
+        "A single variable"
+      ],
+      "answer": 0,
+      "explanation": "Filtering walks the list and appends the ones that pass to a new list — the filter pattern."
+    },
+    {
+      "id": "u84l05e03",
+      "type": "orderBlocks",
+      "prompt": "PROBLEM: 'Total cost of an order with quantities and prices.' Order the plan.",
+      "blocks": [
+        "Make line_cost(qty, price) return qty * price",
+        "Start a running total at 0",
+        "For each line, add line_cost to the total",
+        "Show the total"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "A per-line helper plus an accumulate loop — helper-in-a-loop with a running total."
+    },
+    {
+      "id": "u84l05e04",
+      "type": "matchPairs",
+      "prompt": "Match each plan step to its pattern.",
+      "pairs": [
+        {
+          "left": "Add each line's cost",
+          "right": "Running total"
+        },
+        {
+          "left": "Keep only big orders",
+          "right": "Filter"
+        },
+        {
+          "left": "Is the code valid?",
+          "right": "Search / membership"
+        }
+      ],
+      "explanation": "Naming the pattern for each step is how you turn a plan into code you already know how to write."
+    },
+    {
+      "id": "u84l05e05",
+      "type": "trueFalse",
+      "prompt": "Writing the plan in plain English before coding reduces bugs.",
+      "answer": true,
+      "explanation": "Yes — a clear plan catches missing steps and edge cases before they become bugs in code."
+    },
+    {
+      "id": "u84l05e06",
+      "type": "multipleChoice",
+      "prompt": "PROBLEM: 'How many weights are above the average?' What must come FIRST?",
+      "options": [
+        "Compute the average (you need it as the limit to compare against)",
+        "Count the above-average ones",
+        "Print the answer",
+        "Sort the weights"
+      ],
+      "answer": 0,
+      "explanation": "You can't count above-average until you HAVE the average. Stage one computes it, stage two counts."
+    },
+    {
+      "id": "u84l05e07",
+      "type": "orderBlocks",
+      "prompt": "Order the plan for 'count weights above the average'.",
+      "blocks": [
+        "Total the weights",
+        "Divide by the count to get the average",
+        "Count weights greater than the average",
+        "Show the count"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "Total, average, count-above, show. Two stages, each reusing a known pattern."
+    },
+    {
+      "id": "u84l05e08",
+      "type": "multipleChoice",
+      "prompt": "REVIEW: why give the comparison rule its own helper like above(weight, limit)?",
+      "options": [
+        "It names the rule once and is reused for every weight",
+        "It makes code slower",
+        "Helpers can't compare",
+        "It replaces the loop"
+      ],
+      "answer": 0,
+      "explanation": "A named rule helper documents the comparison and keeps the counting loop clean."
+    },
+    {
+      "id": "u84l05e09",
+      "type": "fillBlank",
+      "prompt": "Finish the average step:\n\naverage = total(weights) / ____(weights)",
+      "answer": "len",
+      "acceptable": [
+        "len"
+      ],
+      "explanation": "Divide the total by how many weights there are — len(weights) gives the count."
+    },
+    {
+      "id": "u84l05e10",
+      "type": "multipleChoice",
+      "prompt": "The planning skill you looped back on:",
+      "options": [
+        "Order the sub-problems and pick a known pattern for each",
+        "Code before planning",
+        "Use only one pattern ever",
+        "Skip the edge cases"
+      ],
+      "answer": 0,
+      "explanation": "Assembling a plan — ordered sub-problems, a pattern each — is how you tackle an unseen big problem."
+    }
+  ]
+}

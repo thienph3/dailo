@@ -1,0 +1,127 @@
+{
+  "unitId": "u74",
+  "lessonId": "u74l06",
+  "title": "Spot the mistake: wrong tool for the job",
+  "idea": "return vs print: diagnose code where the wrong one was used, and pick the one-line fix. Reading and fixing, not typing.",
+  "exercises": [
+    {
+      "id": "u74l06e01",
+      "type": "multipleChoice",
+      "prompt": "Goal: store the doubled value. Code:\n\ndef double(n):\n    print(n * 2)\n\nx = double(4)\n\nWhat's wrong?",
+      "options": [
+        "double prints but doesn't return, so x is None",
+        "double is spelled wrong",
+        "4 is too big",
+        "nothing is wrong"
+      ],
+      "answer": 0,
+      "explanation": "To store the value, double must return it. As written, x is None because print doesn't hand anything back."
+    },
+    {
+      "id": "u74l06e02",
+      "type": "multipleChoice",
+      "prompt": "Goal: just show a greeting, nothing stored. Code:\n\ndef greet():\n    return \"Hello\"\n\ngreet()\n\nWhat happens on screen?",
+      "options": [
+        "Nothing — return is silent and the value isn't printed",
+        "Hello appears",
+        "None appears",
+        "an error"
+      ],
+      "answer": 0,
+      "explanation": "return hands back 'Hello' silently, but nothing catches or prints it, so the screen stays blank. For a display job, use print."
+    },
+    {
+      "id": "u74l06e03",
+      "type": "multipleChoice",
+      "prompt": "Fix the greeting sub-plan so 'Hello' shows on screen when called:",
+      "options": [
+        "def greet():\n    print(\"Hello\")",
+        "def greet():\n    return \"Hello\"",
+        "def greet():\n    Hello",
+        "def greet():\n    return"
+      ],
+      "answer": 0,
+      "explanation": "The job is to display text, so print is right. Now greet() shows Hello."
+    },
+    {
+      "id": "u74l06e04",
+      "type": "trueFalse",
+      "prompt": "Using return for a job that only needs to SHOW text means nothing appears unless the caller prints it.",
+      "answer": true,
+      "explanation": "Yes. return is silent. If the job is purely to display, print inside the sub-plan is the simpler fit."
+    },
+    {
+      "id": "u74l06e05",
+      "type": "multipleChoice",
+      "prompt": "Goal: add tax to a returned total. Code:\n\ndef total(a, b):\n    print(a + b)\n\nbill = total(10, 5)\nfinal = bill + 2\n\nWhat's the bug and fix?",
+      "options": [
+        "bill is None; change print to return",
+        "final should be bill - 2",
+        "total needs three parameters",
+        "no bug"
+      ],
+      "answer": 0,
+      "explanation": "total prints but returns None, so bill is None and bill + 2 errors. Change the print to 'return a + b'."
+    },
+    {
+      "id": "u74l06e06",
+      "type": "fillBlank",
+      "prompt": "Apply the fix:\n\ndef total(a, b):\n    ____ a + b",
+      "answer": "return",
+      "acceptable": ["return"],
+      "explanation": "return a + b hands the total back so bill holds a real number and bill + 2 works."
+    },
+    {
+      "id": "u74l06e07",
+      "type": "multipleChoice",
+      "prompt": "Goal: show the final answer to the user. The sub-plan already RETURNS it:\n\ndef answer():\n    return 42\n\nanswer()\n\nHow do you make 42 appear?",
+      "options": [
+        "Wrap the call: print(answer())",
+        "Add print inside answer",
+        "Return twice",
+        "You can't"
+      ],
+      "answer": 0,
+      "explanation": "The sub-plan correctly returns 42. To show it, the main plan prints the returned value: print(answer())."
+    },
+    {
+      "id": "u74l06e08",
+      "type": "multipleChoice",
+      "prompt": "Which pairing of job and tool is WRONG?",
+      "options": [
+        "Compute a value to reuse -> print",
+        "Compute a value to reuse -> return",
+        "Show a banner to the user -> print",
+        "Return a yes/no for an if -> return"
+      ],
+      "answer": 0,
+      "explanation": "Computing a value to reuse needs return, not print. The other three pairings are correct."
+    },
+    {
+      "id": "u74l06e09",
+      "type": "multipleChoice",
+      "prompt": "REVIEW: None appears in the output. First thing to check?",
+      "options": [
+        "Did a sub-plan print its answer instead of returning it?",
+        "Is the screen broken?",
+        "Is 0 too small?",
+        "Did the loop run?"
+      ],
+      "answer": 0,
+      "explanation": "None almost always points to a missing return — the value was shown but not handed back."
+    },
+    {
+      "id": "u74l06e10",
+      "type": "multipleChoice",
+      "prompt": "The idea of this lesson:",
+      "options": [
+        "Match the tool to the job: return to reuse a value, print to show it",
+        "always use return",
+        "always use print",
+        "the tools are interchangeable"
+      ],
+      "answer": 0,
+      "explanation": "Most return-vs-print bugs come from the wrong tool. Ask who needs the value and pick accordingly."
+    }
+  ]
+}

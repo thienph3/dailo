@@ -1,0 +1,137 @@
+{
+  "unitId": "u68",
+  "lessonId": "u68l09",
+  "title": "Spot the bug, then solve",
+  "idea": "LOOP: reuse the debugging eye from Units 66-67 on mixed list code, then write the correct version. No new concept.",
+  "exercises": [
+    {
+      "id": "u68l09e01",
+      "type": "multipleChoice",
+      "prompt": "This should sum [2, 3, 5] to 10:\n\ntotal = 1\nfor n in [2, 3, 5]:\n    total = total + n\nprint(total)\n\nWhat prints, and why?",
+      "options": [
+        "11 — total started at 1 instead of 0",
+        "10",
+        "1",
+        "5"
+      ],
+      "answer": 0,
+      "explanation": "1 + 2 + 3 + 5 = 11, one too high. The wrong start of 1 is the bug; it should be 0."
+    },
+    {
+      "id": "u68l09e02",
+      "type": "multipleChoice",
+      "prompt": "This should count items over 4 in [5, 9]:\n\ncount = 0\nfor n in [5, 9]:\n    count = 0\n    if n > 4:\n        count = count + 1\nprint(count)\n\nWhat prints?",
+      "options": [
+        "1 — 'count = 0' inside the loop resets it every pass",
+        "2",
+        "0",
+        "9"
+      ],
+      "answer": 0,
+      "explanation": "The reset-inside bug: only the last pass survives, so count is 1 though both items match. Move the reset above the loop."
+    },
+    {
+      "id": "u68l09e03",
+      "type": "multipleChoice",
+      "prompt": "This should keep scores 50+:\n\nfor s in [50, 80]:\n    if s > 50:\n        keep.append(s)\n\nWhat's wrong for a score of exactly 50?",
+      "options": [
+        "> drops the 50; it should be >=",
+        "nothing",
+        "append is wrong",
+        "the loop is wrong"
+      ],
+      "answer": 0,
+      "explanation": "'50 or more' includes 50, so use >=. With > 50 the boundary value 50 is wrongly dropped."
+    },
+    {
+      "id": "u68l09e04",
+      "type": "multipleChoice",
+      "prompt": "This should print all 3 items of nums = [1, 2, 3]:\n\nfor i in range(len(nums) - 1):\n    print(nums[i])\n\nWhat goes wrong?",
+      "options": [
+        "it skips the last item — the '- 1' is an off-by-one bug",
+        "it works",
+        "it crashes",
+        "it prints 3 only"
+      ],
+      "answer": 0,
+      "explanation": "range(len-1) = range(2) = 0,1, so item 3 is skipped. Remove the '- 1' to visit every index."
+    },
+    {
+      "id": "u68l09e05",
+      "type": "multipleChoice",
+      "prompt": "This finds the biggest of [-4, -2]:\n\nbest = 0\nfor n in [-4, -2]:\n    if n > best:\n        best = n\nprint(best)\n\nWhat prints, and why wrong?",
+      "options": [
+        "0 — but 0 isn't in the list; start best at the first item",
+        "-2",
+        "-4",
+        "2"
+      ],
+      "answer": 0,
+      "explanation": "No negative beats 0, so best stays 0 (not a list value). Start best at the first item to fix it."
+    },
+    {
+      "id": "u68l09e06",
+      "type": "orderBlocks",
+      "prompt": "Now write it RIGHT: sum [2, 3, 5] correctly. Arrange the code.",
+      "blocks": [
+        "total = 0",
+        "for n in [2, 3, 5]:",
+        "    total = total + n",
+        "print(total)"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "Start at 0, add each item, print. Prints 10 — the correct sum."
+    },
+    {
+      "id": "u68l09e07",
+      "type": "trueFalse",
+      "prompt": "Knowing the common bug families makes you faster at BOTH fixing and writing correct code the first time.",
+      "answer": true,
+      "explanation": "Yes — the families (wrong start, reset-inside, off-by-one, wrong test, empty case) are a checklist you apply as you write."
+    },
+    {
+      "id": "u68l09e08",
+      "type": "multipleChoice",
+      "prompt": "Before trusting any list loop, a quick self-check is to...",
+      "options": [
+        "ask: right start? reset above the loop? right comparison? empty case handled?",
+        "run it twice",
+        "ignore the start",
+        "delete the loop"
+      ],
+      "answer": 0,
+      "explanation": "Running the bug-family checklist in your head catches most mistakes before they ever print a wrong answer."
+    },
+    {
+      "id": "u68l09e09",
+      "type": "multipleChoice",
+      "prompt": "Write it RIGHT: count items over 4 in [5, 9]. The correct start and test are...",
+      "options": [
+        "count = 0 above the loop, test n > 4 inside",
+        "count = 0 inside the loop",
+        "count = 1 above the loop",
+        "no loop"
+      ],
+      "answer": 0,
+      "explanation": "Set count = 0 once above the loop and test n > 4 inside. That gives 2 — both items counted."
+    },
+    {
+      "id": "u68l09e10",
+      "type": "multipleChoice",
+      "prompt": "The takeaway tying Laps 3-4 to debugging:",
+      "options": [
+        "the same tools, written carefully, with the bug checklist, solve problems correctly",
+        "debugging is separate from solving",
+        "loops are unreliable",
+        "you need new tools"
+      ],
+      "answer": 0,
+      "explanation": "Solving and debugging are two sides of one skill: apply the familiar tools and watch for the familiar bugs."
+    }
+  ]
+}

@@ -1,0 +1,145 @@
+{
+  "unitId": "u62",
+  "lessonId": "u62l05",
+  "title": "Average, start to finish",
+  "idea": "TOOL applied: read and predict full safe-average programs on everyday lists.",
+  "exercises": [
+    {
+      "id": "u62l05e01",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nscores = [70, 80, 90]\ncount = len(scores)\nif count == 0:\n    print(\"No scores\")\nelse:\n    total = 0\n    for s in scores:\n        total = total + s\n    print(total / count)",
+      "options": [
+        "80.0",
+        "240",
+        "3",
+        "90"
+      ],
+      "answer": 0,
+      "explanation": "Sum 240, count 3, 240 / 3 = 80.0. The class average is 80."
+    },
+    {
+      "id": "u62l05e02",
+      "type": "multipleChoice",
+      "prompt": "Which variable name reads most clearly for the result of a sum/count division?",
+      "options": [
+        "average",
+        "x",
+        "thing",
+        "a2"
+      ],
+      "answer": 0,
+      "explanation": "'average' says exactly what it holds. Result names like average, total, count are clear and encouraged."
+    },
+    {
+      "id": "u62l05e03",
+      "type": "fillBlank",
+      "prompt": "Finish the count for the average:\n\ntotal = 0\nfor r in ratings:\n    total = total + r\naverage = total / ____(ratings)",
+      "answer": "len",
+      "acceptable": [
+        "len"
+      ],
+      "explanation": "len(ratings) gives how many ratings there are — the count you divide by."
+    },
+    {
+      "id": "u62l05e04",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nsales = [100, 100, 100, 100]\ntotal = 0\nfor s in sales:\n    total = total + s\nprint(total / len(sales))",
+      "options": [
+        "100.0",
+        "400",
+        "4",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "Sum 400, count 4, 400 / 4 = 100.0. All-equal values average to that value."
+    },
+    {
+      "id": "u62l05e05",
+      "type": "orderBlocks",
+      "prompt": "Arrange a safe average for a list called temps.",
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "blocks": [
+        "count = len(temps)",
+        "if count == 0:",
+        "    print(\"No readings\")",
+        "else:",
+        "    total = 0",
+        "    for t in temps:",
+        "        total = total + t",
+        "    print(total / count)"
+      ],
+      "explanation": "Count first, guard the empty case, else sum the values and divide. The guard protects the divide."
+    },
+    {
+      "id": "u62l05e06",
+      "type": "trueFalse",
+      "prompt": "The safe-average recipe works the same for scores, temperatures, or prices.",
+      "answer": true,
+      "explanation": "Average does not care what the numbers mean. Sum, count, guard, divide — same steps for any number list."
+    },
+    {
+      "id": "u62l05e07",
+      "type": "multipleChoice",
+      "prompt": "A shop's daily sales are [0, 0, 0]. What does the average come out as, and is it safe?",
+      "options": [
+        "0.0, and it is safe — count is 3, not 0",
+        "A crash",
+        "No average",
+        "100"
+      ],
+      "answer": 0,
+      "explanation": "Sum 0, count 3, 0 / 3 = 0.0. Zeros in the list are fine; only an EMPTY list is the danger."
+    },
+    {
+      "id": "u62l05e08",
+      "type": "multipleChoice",
+      "prompt": "You read 'what is the typical daily rainfall?' Which tool answers it?",
+      "options": [
+        "Average (sum / count)",
+        "Max",
+        "Min",
+        "Count"
+      ],
+      "answer": 0,
+      "explanation": "'Typical' per-day is an average — total rainfall shared across the days."
+    },
+    {
+      "id": "u62l05e09",
+      "type": "multiSelect",
+      "prompt": "Which problems call for an average? (pick all)",
+      "options": [
+        "The mean test score",
+        "Average speed over the trip",
+        "The fastest single lap",
+        "How many laps were under 60s"
+      ],
+      "answer": [
+        0,
+        1
+      ],
+      "explanation": "Mean score and average speed both divide a total by a count. Fastest lap is min; 'how many' is count."
+    },
+    {
+      "id": "u62l05e10",
+      "type": "multipleChoice",
+      "prompt": "Predict the output for an empty list:\n\nscores = []\ncount = len(scores)\nif count == 0:\n    print(\"No scores yet\")\nelse:\n    print(\"has average\")",
+      "options": [
+        "No scores yet",
+        "has average",
+        "0.0",
+        "An error"
+      ],
+      "answer": 0,
+      "explanation": "count is 0, so the guard runs and prints 'No scores yet'. No division, no crash."
+    }
+  ]
+}

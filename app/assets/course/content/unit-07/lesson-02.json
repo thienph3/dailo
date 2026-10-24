@@ -1,0 +1,124 @@
+{
+  "unitId": "u07",
+  "lessonId": "u07l02",
+  "title": "Finding the steps inside a task",
+  "idea": "Look at a task and name the 2-3 smaller steps hiding inside it. Thinking, not code.",
+  "exercises": [
+    {
+      "id": "u07l02e01",
+      "type": "multipleChoice",
+      "prompt": "Task: 'Show a greeting and your name.' How many steps is that?",
+      "options": [
+        "2 steps: show the greeting, then show the name",
+        "1 step",
+        "5 steps",
+        "0 steps"
+      ],
+      "answer": 0,
+      "explanation": "Two clear parts: the greeting, then the name. Two steps."
+    },
+    {
+      "id": "u07l02e02",
+      "type": "multiSelect",
+      "prompt": "Task: 'Print your name and your age on two lines.' Which are the real steps?",
+      "options": [
+        "Print the name",
+        "Print the age",
+        "Print the weather",
+        "Print a song"
+      ],
+      "answer": [0, 1],
+      "explanation": "Only two things were asked: the name and the age. The others are extra and don't belong."
+    },
+    {
+      "id": "u07l02e03",
+      "type": "trueFalse",
+      "prompt": "Task: 'Say good morning, then say have a nice day.' This task has two steps.",
+      "answer": true,
+      "explanation": "The word 'then' is a big hint. Two separate things to show means two steps."
+    },
+    {
+      "id": "u07l02e04",
+      "type": "multipleChoice",
+      "prompt": "Which word in a task usually signals a NEW step is coming?",
+      "options": [
+        "then",
+        "the",
+        "happy",
+        "very"
+      ],
+      "answer": 0,
+      "explanation": "'Then' (and 'next', 'after') usually means a new step. Watch for them when finding steps."
+    },
+    {
+      "id": "u07l02e05",
+      "type": "multiSelect",
+      "prompt": "Task: 'Welcome a guest: show Hello, show Welcome, show Enjoy your stay.' Pick the steps.",
+      "options": [
+        "Show Hello",
+        "Show Welcome",
+        "Show Enjoy your stay",
+        "Show the guest's phone number"
+      ],
+      "answer": [0, 1, 2],
+      "explanation": "Three things to show means three steps. The phone number was never asked for."
+    },
+    {
+      "id": "u07l02e06",
+      "type": "multipleChoice",
+      "prompt": "Task: 'Print the title of a book.' How many steps?",
+      "options": [
+        "1 step",
+        "2 steps",
+        "3 steps",
+        "0 steps"
+      ],
+      "answer": 0,
+      "explanation": "Just one thing to show, so just one step. Not every task needs breaking up."
+    },
+    {
+      "id": "u07l02e07",
+      "type": "matchPairs",
+      "prompt": "Match each small task to how many steps it has.",
+      "pairs": [
+        { "left": "Show a greeting", "right": "1 step" },
+        { "left": "Show a greeting, then a name", "right": "2 steps" },
+        { "left": "Show a greeting, a name, a goodbye", "right": "3 steps" }
+      ],
+      "explanation": "Count the separate things to show. Each one is a step."
+    },
+    {
+      "id": "u07l02e08",
+      "type": "trueFalse",
+      "prompt": "Task: 'Print Hi.' Breaking this into 3 steps would make it simpler.",
+      "answer": false,
+      "explanation": "No — it is already one tiny step. Breaking up a one-step task just adds confusion."
+    },
+    {
+      "id": "u07l02e09",
+      "type": "multiSelect",
+      "prompt": "Task: 'Introduce yourself: say your name and your favorite color.' Pick the steps.",
+      "options": [
+        "Say your name",
+        "Say your favorite color",
+        "Say the time",
+        "Say your address"
+      ],
+      "answer": [0, 1],
+      "explanation": "Two things were asked: name and favorite color. Stay with what the task actually says."
+    },
+    {
+      "id": "u07l02e10",
+      "type": "multipleChoice",
+      "prompt": "What is the best way to find the steps in a task?",
+      "options": [
+        "Count the separate things it asks you to do",
+        "Add as many steps as you can imagine",
+        "Ignore the words and guess",
+        "Always use exactly one step"
+      ],
+      "answer": 0,
+      "explanation": "Read carefully and count the separate things asked. Each one becomes a step. You're getting good at this!"
+    }
+  ]
+}

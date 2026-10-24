@@ -1,0 +1,154 @@
+{
+  "unitId": "u98",
+  "lessonId": "u98l07",
+  "title": "Capstone: find the smallest number in a list",
+  "idea": "GUIDED CAPSTONE. The mirror of max: track the smallest-so-far with a loop and an if (<), never a builtin.",
+  "problem": "Find the smallest number in [6, 2, 8, 4] (which is 2).",
+  "exercises": [
+    {
+      "id": "u98l07e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: smallest in [6, 2, 8, 4]. OUTPUT is...",
+      "options": [
+        "One number: the smallest value",
+        "The list sorted",
+        "The count",
+        "The sum"
+      ],
+      "answer": 0,
+      "explanation": "Output is a single value — the minimum. Same shape as max, flipped comparison."
+    },
+    {
+      "id": "u98l07e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "To track the smallest, what do we remember as we scan?",
+      "options": [
+        "The smallest value seen so far",
+        "The biggest",
+        "The total",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "A 'smallest so far' variable, seeded with the first item, replaced by anything smaller."
+    },
+    {
+      "id": "u98l07e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example by hand. Seed best = 6. Next 2: is 2 < 6?",
+      "options": [
+        "Yes — best becomes 2",
+        "No — best stays 6",
+        "Equal",
+        "Can't tell"
+      ],
+      "answer": 0,
+      "explanation": "2 is smaller, so best updates to 2. We keep the smaller value."
+    },
+    {
+      "id": "u98l07e04",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Finish: items 8 then 4 against best = 2. Final smallest?",
+      "options": [
+        "2",
+        "4",
+        "8",
+        "6"
+      ],
+      "answer": 0,
+      "explanation": "Neither 8 nor 4 is below 2, so best stays 2. Hand answer: 2."
+    },
+    {
+      "id": "u98l07e05",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Plan the min scan. Order the steps.",
+      "blocks": [
+        "If an item is smaller, update best",
+        "Seed best with the first item",
+        "best holds the answer after the loop"
+      ],
+      "answer": [
+        1,
+        0,
+        2
+      ],
+      "explanation": "Seed with the first item, replace with anything smaller. Mirror of the max pattern."
+    },
+    {
+      "id": "u98l07e06",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Which comparison finds a smaller item?",
+      "options": [
+        "item < best",
+        "item > best",
+        "item == best",
+        "item // best"
+      ],
+      "answer": 0,
+      "explanation": "< tests 'strictly smaller'. When true, best updates to item."
+    },
+    {
+      "id": "u98l07e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code the scan. Arrange the lines.",
+      "blocks": [
+        "    if item < best:",
+        "best = numbers[0]",
+        "for item in numbers:",
+        "        best = item"
+      ],
+      "answer": [
+        1,
+        2,
+        0,
+        3
+      ],
+      "explanation": "Seed best=numbers[0], loop, update on a smaller item. Only the comparison differs from max."
+    },
+    {
+      "id": "u98l07e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Complete the comparison that keeps the smallest:\n\nnumbers = [6, 2, 8, 4]\nbest = numbers[0]\nfor item in numbers:\n    if item ____ best:\n        best = item\nprint(best)",
+      "answer": "<",
+      "acceptable": [
+        "<"
+      ],
+      "explanation": "Use < so a smaller item replaces best. After the scan best is 2 — built by hand, no builtin."
+    },
+    {
+      "id": "u98l07e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Run it: prints 2. Hand said 2. Verdict?",
+      "options": [
+        "Passes",
+        "Fails",
+        "Unknown",
+        "Rewrite example"
+      ],
+      "answer": 0,
+      "explanation": "Matches. You built min yourself by flipping the max comparison."
+    },
+    {
+      "id": "u98l07e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Re-run on [5, 5, 9]. What prints?",
+      "options": [
+        "5",
+        "9",
+        "2",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "best seeds at 5; 5 is not < 5, 9 is not < 5, so best stays 5. Ties handled right."
+    }
+  ]
+}

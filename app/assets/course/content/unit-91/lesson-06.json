@@ -1,0 +1,160 @@
+{
+  "unitId": "u91",
+  "lessonId": "u91l06",
+  "title": "Solve it: how many big orders, and their spend",
+  "idea": "GUIDED PROBLEM. A two-part conditional: count the qualifying items AND total them, in one pass.",
+  "problem": "Orders [150, 80, 300, 120]. Count the orders over 100 AND total those same orders.",
+  "exercises": [
+    {
+      "id": "u91l06e01",
+      "uepcc": "U",
+      "type": "multipleChoice",
+      "prompt": "PROBLEM: orders [150, 80, 300, 120]. For orders over 100: how MANY, and their TOTAL.\n\nHow many outputs?",
+      "options": [
+        "Two - a count and a total",
+        "One",
+        "Three",
+        "None"
+      ],
+      "answer": 0,
+      "explanation": "Two outputs about the same qualifying group: a count and a conditional total. Multi-part again."
+    },
+    {
+      "id": "u91l06e02",
+      "uepcc": "U",
+      "type": "multipleChoice",
+      "prompt": "Both outputs describe which orders?",
+      "options": [
+        "Only the orders over 100",
+        "All orders",
+        "Only the smallest",
+        "Only the first"
+      ],
+      "answer": 0,
+      "explanation": "Both the count and the total apply to the over-100 group, so a single condition drives both."
+    },
+    {
+      "id": "u91l06e03",
+      "uepcc": "E",
+      "type": "multipleChoice",
+      "prompt": "By hand: which orders are over 100, and how many?",
+      "options": [
+        "150, 300, 120 - that's 3",
+        "Just 300 - that's 1",
+        "All 4",
+        "80 and 120 - that's 2"
+      ],
+      "answer": 0,
+      "explanation": "150, 300, 120 all beat 100: 3 orders. 80 is the only one that doesn't qualify."
+    },
+    {
+      "id": "u91l06e04",
+      "uepcc": "E",
+      "type": "multipleChoice",
+      "prompt": "By hand: total those 3 qualifying orders. 150 + 300 + 120 = ?",
+      "options": [
+        "570",
+        "450",
+        "480",
+        "530"
+      ],
+      "answer": 0,
+      "explanation": "150 + 300 + 120 = 570. Hand answers: count 3, total 570."
+    },
+    {
+      "id": "u91l06e05",
+      "uepcc": "P",
+      "type": "orderBlocks",
+      "prompt": "Plan the steps.",
+      "blocks": [
+        "Start a count and a total at 0",
+        "Walk the orders; if over 100, add 1 to count and add the order to total",
+        "Show count and total"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "One pass; inside a single if, update BOTH running values. Two running values, one condition."
+    },
+    {
+      "id": "u91l06e06",
+      "uepcc": "P",
+      "type": "multipleChoice",
+      "prompt": "Why can both the count and the total updates live inside the SAME if?",
+      "options": [
+        "Both only apply to qualifying orders, so one condition covers both",
+        "They need separate ifs",
+        "The count goes outside",
+        "Only one can be inside"
+      ],
+      "answer": 0,
+      "explanation": "Both outputs care about the same 'over 100' group, so one if guards both updates - efficient and in step."
+    },
+    {
+      "id": "u91l06e07",
+      "uepcc": "C",
+      "type": "orderBlocks",
+      "prompt": "Code the plan.",
+      "blocks": [
+        "count = 0",
+        "total = 0",
+        "for order in [150, 80, 300, 120]:",
+        "    if order > 100:",
+        "        count = count + 1",
+        "        total = total + order",
+        "print(count, total)"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "explanation": "Start both running values, and inside one if bump the count and add to the total. Print both."
+    },
+    {
+      "id": "u91l06e08",
+      "uepcc": "C",
+      "type": "fillBlank",
+      "prompt": "Complete the total update inside the if:\n\nif order > 100:\n    count = count + 1\n    total = total ____ order",
+      "answer": "+",
+      "acceptable": [
+        "+"
+      ],
+      "explanation": "Add the qualifying order into the total: total = total + order."
+    },
+    {
+      "id": "u91l06e09",
+      "uepcc": "Check",
+      "type": "multipleChoice",
+      "prompt": "Check: code prints 3 and 570. Hand answers were 3 and 570. Verdict?",
+      "options": [
+        "Passes - both parts match",
+        "Fails",
+        "Unknown",
+        "Only the count matters"
+      ],
+      "answer": 0,
+      "explanation": "Count 3 and total 570 both match the hand example. The two-part conditional is correct."
+    },
+    {
+      "id": "u91l06e10",
+      "uepcc": "Check",
+      "type": "multipleChoice",
+      "prompt": "New data [90, 95] (none over 100). What prints?",
+      "options": [
+        "0 and 0",
+        "2 and 185",
+        "0 and 185",
+        "2 and 0"
+      ],
+      "answer": 0,
+      "explanation": "Nothing qualifies, so neither running value changes: count 0, total 0. The shared if skips both correctly."
+    }
+  ]
+}

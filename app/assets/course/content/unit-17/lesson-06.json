@@ -1,0 +1,127 @@
+{
+  "unitId": "u17",
+  "lessonId": "u17l06",
+  "title": "Report a sale price after a discount",
+  "idea": "GUIDED PROBLEM. Compute a discount amount, subtract it, then present the sale price in a message. Walked through UEPCC.",
+  "problem": "A jacket costs 50. There is a 10 off coupon. Show a message like: The sale price is 40.",
+  "exercises": [
+    {
+      "id": "u17l06e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: a jacket costs 50, with a 10 off coupon. Show 'The sale price is 40.'\n\nUnderstand. What is the OUTPUT?",
+      "options": [
+        "A message showing the price after the coupon",
+        "The original price only",
+        "The coupon amount only",
+        "The word 'sale'"
+      ],
+      "answer": 0,
+      "explanation": "The output is a message with the final sale price. Name it before solving."
+    },
+    {
+      "id": "u17l06e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "What are the INPUTS?",
+      "options": [
+        "The original price (50) and the coupon amount (10)",
+        "Only the number 40",
+        "The word 'jacket'",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "Inputs are the original price and the coupon. Both numbers become named values."
+    },
+    {
+      "id": "u17l06e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example by hand. A 50 jacket with 10 off costs how much?",
+      "options": ["40", "60", "500", "5"],
+      "answer": 0,
+      "explanation": "50 - 10 = 40. That's your check value."
+    },
+    {
+      "id": "u17l06e04",
+      "type": "trueFalse",
+      "uepcc": "E",
+      "prompt": "The hand example (40) is what you will compare the printed message against later.",
+      "answer": true,
+      "explanation": "Right. The hand-worked answer is the anchor for the Check step."
+    },
+    {
+      "id": "u17l06e05",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Plan. Order the plain-English steps.",
+      "blocks": [
+        "Subtract the coupon from the original price",
+        "Remember the original price and the coupon",
+        "Show a message with the sale price"
+      ],
+      "answer": [1, 0, 2],
+      "explanation": "Remember the values, subtract the coupon, present the sale price."
+    },
+    {
+      "id": "u17l06e06",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Which operation turns the original price into the sale price here?",
+      "options": [
+        "Subtraction (price minus coupon)",
+        "Addition (price plus coupon)",
+        "Multiplication",
+        "Division"
+      ],
+      "answer": 0,
+      "explanation": "A coupon LOWERS the price, so you subtract: 50 - 10. Choosing the right operation is the heart of the plan."
+    },
+    {
+      "id": "u17l06e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code. Arrange the lines to match the plan.",
+      "blocks": [
+        "original_price = 50",
+        "coupon = 10",
+        "sale_price = original_price - coupon",
+        "print(f\"The sale price is {sale_price}.\")"
+      ],
+      "answer": [0, 1, 2, 3],
+      "explanation": "Store the price and coupon, subtract to get the sale price, then print the message."
+    },
+    {
+      "id": "u17l06e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Fill the blank so the sale price is 40:\n\noriginal_price = 50\ncoupon = 10\nsale_price = original_price ____ coupon\nprint(f\"The sale price is {sale_price}.\")",
+      "answer": "-",
+      "acceptable": ["-"],
+      "explanation": "A coupon subtracts from the price: 50 - 10 = 40."
+    },
+    {
+      "id": "u17l06e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check. The code prints 'The sale price is 40.' Hand example said 40. Verdict?",
+      "options": ["Passes", "Fails", "Unknown", "Rewrite the example"],
+      "answer": 0,
+      "explanation": "Output matches the hand example, so it's correct."
+    },
+    {
+      "id": "u17l06e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "New inputs: original_price = 80, coupon = 25. What message prints?",
+      "options": [
+        "The sale price is 55.",
+        "The sale price is 105.",
+        "The sale price is 25.",
+        "The sale price is 80."
+      ],
+      "answer": 0,
+      "explanation": "80 - 25 = 55. Works for new numbers — the solution generalizes."
+    }
+  ]
+}

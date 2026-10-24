@@ -1,0 +1,119 @@
+{
+  "unitId": "u74",
+  "lessonId": "u74l07",
+  "title": "Return a boolean, let the caller decide",
+  "idea": "return vs print: for a yes/no, returning True/False lets an if act on it; printing 'yes' is just text a human reads.",
+  "exercises": [
+    {
+      "id": "u74l07e01",
+      "type": "multipleChoice",
+      "prompt": "You want an if to react to whether a number is even. Which is more useful?",
+      "options": [
+        "def is_even(n):\n    return n % 2 == 0",
+        "def is_even(n):\n    print(\"even\")"
+      ],
+      "answer": 0,
+      "explanation": "Returning True/False lets an if decide. Printing 'even' is just a message — the if can't use it."
+    },
+    {
+      "id": "u74l07e02",
+      "type": "multipleChoice",
+      "prompt": "Predict:\n\ndef is_even(n):\n    return n % 2 == 0\n\nif is_even(8):\n    print(\"yes\")\nelse:\n    print(\"no\")",
+      "options": [
+        "yes",
+        "no",
+        "True",
+        "8"
+      ],
+      "answer": 0,
+      "explanation": "is_even(8) returns True, so the if runs and prints yes. The returned boolean drove the decision."
+    },
+    {
+      "id": "u74l07e03",
+      "type": "trueFalse",
+      "prompt": "A returned True/False can be used as the condition of an if; a printed 'yes' cannot.",
+      "answer": true,
+      "explanation": "Right. The if needs a real True/False value. A printed word is just text on the screen."
+    },
+    {
+      "id": "u74l07e04",
+      "type": "multipleChoice",
+      "prompt": "Why let the CALLER decide what to do with the yes/no, instead of printing inside the sub-plan?",
+      "options": [
+        "Different callers may want different reactions to the same answer",
+        "it is slower",
+        "printing is banned",
+        "no reason"
+      ],
+      "answer": 0,
+      "explanation": "One caller might print 'yes', another might count it, another might stop a loop. Returning the boolean keeps all options open."
+    },
+    {
+      "id": "u74l07e05",
+      "type": "fillBlank",
+      "prompt": "Complete so the sub-plan hands back the yes/no (is n at least 10?):\n\ndef big_enough(n):\n    return n ____ 10",
+      "answer": ">=",
+      "acceptable": [">="],
+      "explanation": "n >= 10 is True for 10 and up. Returning the comparison hands back the yes/no."
+    },
+    {
+      "id": "u74l07e06",
+      "type": "multipleChoice",
+      "prompt": "Predict:\n\ndef big_enough(n):\n    return n >= 10\n\nprint(big_enough(4))",
+      "options": [
+        "False",
+        "True",
+        "4",
+        "None"
+      ],
+      "answer": 0,
+      "explanation": "4 >= 10 is False, so the sub-plan hands back False and print shows False."
+    },
+    {
+      "id": "u74l07e07",
+      "type": "multipleChoice",
+      "prompt": "REVIEW: a comparison like n >= 10 evaluates to...",
+      "options": [
+        "True or False",
+        "a number",
+        "a word",
+        "None"
+      ],
+      "answer": 0,
+      "explanation": "Comparisons produce True or False — exactly the kind of value an if uses and a sub-plan can return."
+    },
+    {
+      "id": "u74l07e08",
+      "type": "trueFalse",
+      "prompt": "Returning a boolean and then using it in an if keeps the 'decide' job and the 'react' job separate.",
+      "answer": true,
+      "explanation": "Yes. The sub-plan decides (returns True/False); the caller reacts (acts on it). Separating jobs keeps code reusable."
+    },
+    {
+      "id": "u74l07e09",
+      "type": "multipleChoice",
+      "prompt": "A sub-plan that prints 'pass' or 'fail' instead of returning True/False is harder to reuse because...",
+      "options": [
+        "the caller can't easily act on the result — it's just text",
+        "it runs too fast",
+        "text is illegal",
+        "it isn't harder"
+      ],
+      "answer": 0,
+      "explanation": "Text on screen can't drive an if or be counted. A returned boolean can. Return the answer; let the caller show it if needed."
+    },
+    {
+      "id": "u74l07e10",
+      "type": "multipleChoice",
+      "prompt": "The idea of this lesson:",
+      "options": [
+        "Return a yes/no so the caller can decide; don't lock it into a printed word",
+        "always print yes/no",
+        "booleans can't be returned",
+        "an if can use printed text"
+      ],
+      "answer": 0,
+      "explanation": "Returning True/False keeps the decision reusable. The caller can print it, count it, or branch on it."
+    }
+  ]
+}

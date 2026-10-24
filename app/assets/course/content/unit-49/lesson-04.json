@@ -1,0 +1,123 @@
+{
+  "unitId": "u49",
+  "lessonId": "u49l04",
+  "title": "Solve it: find the first square over 50",
+  "idea": "GUIDED PROBLEM. A search with a counted loop and a break at the first match. Choosing for with break (known range, stop early) is the Plan step.",
+  "problem": "Going through numbers 1, 2, 3, ... up to 20, find the first number whose square (number times itself) is over 50. Show that number.",
+  "exercises": [
+    {
+      "id": "u49l04e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: From 1 to 20, find the FIRST number whose square is over 50.\n\nUnderstand. What is the OUTPUT?",
+      "options": [
+        "The first number that qualifies",
+        "All numbers that qualify",
+        "The square itself for every number",
+        "The number 50"
+      ],
+      "answer": 0,
+      "explanation": "The output is a single number - the FIRST match. 'First' is a strong hint we'll stop early with break."
+    },
+    {
+      "id": "u49l04e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "Understand. What does 'square' mean here?",
+      "options": [
+        "The number times itself (for example 8 * 8 = 64)",
+        "The number plus itself",
+        "The number minus 1",
+        "Half the number"
+      ],
+      "answer": 0,
+      "explanation": "A square is number * number. We're looking for the first one where that product passes 50."
+    },
+    {
+      "id": "u49l04e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example by hand. Squares: 6*6=36, 7*7=49, 8*8=64. Which is the FIRST over 50?",
+      "options": ["8 (its square is 64)", "7 (its square is 49)", "6 (its square is 36)", "9"],
+      "answer": 0,
+      "explanation": "36 and 49 are not over 50; 64 is. So 8 is the first number whose square passes 50. Check value: 8."
+    },
+    {
+      "id": "u49l04e04",
+      "type": "trueFalse",
+      "uepcc": "E",
+      "prompt": "Once we've found 8, there's any point in checking 9, 10, and beyond.",
+      "answer": false,
+      "explanation": "No - we only want the FIRST match, so we stop at 8. Checking further wastes work. That's exactly why break fits."
+    },
+    {
+      "id": "u49l04e05",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Plan - choose the loop. We check numbers 1 to 20 but may stop early. Which fits?",
+      "options": [
+        "A for loop over range(1, 21) with a break at the first match",
+        "A while loop that never stops",
+        "No loop",
+        "A for loop with no break"
+      ],
+      "answer": 0,
+      "explanation": "The search range is known (1..20), so for fits; break lets us leave the moment we find the first match. Count caps it; break stops it."
+    },
+    {
+      "id": "u49l04e06",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Plan - what does the if inside the loop test?",
+      "options": [
+        "Whether i * i is over 50",
+        "Whether i is even",
+        "Whether i equals 50",
+        "Whether i is below 8"
+      ],
+      "answer": 0,
+      "explanation": "The match rule is 'square over 50', so the if tests i * i > 50. When true, we print i and break."
+    },
+    {
+      "id": "u49l04e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code it. Arrange the lines to match the plan.",
+      "blocks": [
+        "for i in range(1, 21):",
+        "    if i * i > 50:",
+        "        print(i)",
+        "        break"
+      ],
+      "answer": [0, 1, 2, 3],
+      "explanation": "Loop over 1..20, test if the square beats 50, print the first that does, then break to stop. Clean 'first match' search."
+    },
+    {
+      "id": "u49l04e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Complete the step that stops the search after the first match:\n\nfor i in range(1, 21):\n    if i * i > 50:\n        print(i)\n        ____",
+      "answer": "break",
+      "acceptable": ["break"],
+      "explanation": "break ends the loop immediately, so we never check numbers past the first match. That's the 'first' in 'first over 50'."
+    },
+    {
+      "id": "u49l04e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "The code prints 8; your hand example was 8. Verdict?",
+      "options": ["Passes", "Fails", "Unknown", "Rewrite the example"],
+      "answer": 0,
+      "explanation": "8 matches 8. The loop stopped at the first square over 50, exactly as planned. Passing Check."
+    },
+    {
+      "id": "u49l04e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "New target: first number whose square is over 10 (i * i > 10). What should it print?",
+      "options": ["4 (4*4=16, while 3*3=9 is not over 10)", "3", "5", "10"],
+      "answer": 0,
+      "explanation": "3*3 = 9 (not over 10), 4*4 = 16 (over 10). The same for+break plan finds the new first match: 4."
+    }
+  ]
+}

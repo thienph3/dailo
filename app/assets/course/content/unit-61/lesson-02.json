@@ -1,0 +1,150 @@
+{
+  "unitId": "u61",
+  "lessonId": "u61l02",
+  "title": "Solve it together: how many passed",
+  "idea": "GUIDED PROBLEM via UEPCC. Choose and apply the COUNT pattern to count scores at or above a pass mark.",
+  "problem": "Scores are [55, 40, 70, 60, 30]. A pass is 50 or more. How many passed?",
+  "exercises": [
+    {
+      "id": "u61l02e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: scores [55, 40, 70, 60, 30], pass = 50 or more. How many passed?\n\nUnderstand. What is the OUTPUT?",
+      "options": [
+        "A count: how many scores are 50 or more",
+        "The total of all scores",
+        "The highest score",
+        "Each score printed"
+      ],
+      "answer": 0,
+      "explanation": "The output is a count of passing scores. 'How many fit a rule' signals the count pattern."
+    },
+    {
+      "id": "u61l02e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "What is the RULE a score must fit to be counted?",
+      "options": [
+        "score >= 50",
+        "score == 50",
+        "score < 50",
+        "score + 50"
+      ],
+      "answer": 0,
+      "explanation": "A pass is 50 or more, so the rule is score >= 50. Naming the rule shapes the if."
+    },
+    {
+      "id": "u61l02e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example by hand. Which scores in [55, 40, 70, 60, 30] are 50 or more, and how many?",
+      "options": [
+        "55, 70, 60 — that's 3",
+        "All five",
+        "40 and 30 — that's 2",
+        "Only 70 — that's 1"
+      ],
+      "answer": 0,
+      "explanation": "55, 70, 60 pass; 40 and 30 do not. That's 3. This hand count is your check value."
+    },
+    {
+      "id": "u61l02e04",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Plan. Which pattern fits 'how many fit a rule'?",
+      "options": [
+        "Count — add 1 each time the rule is true",
+        "Sum — add the values",
+        "Max — the biggest",
+        "Min — the smallest"
+      ],
+      "answer": 0,
+      "explanation": "'How many' is the conditional COUNT: a counter guarded by an if."
+    },
+    {
+      "id": "u61l02e05",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Put the plan in order.",
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "blocks": [
+        "Start a count at 0",
+        "For each score, if it is 50 or more, add 1",
+        "Show the count"
+      ],
+      "explanation": "Start at 0, add 1 only on a match, then show the count."
+    },
+    {
+      "id": "u61l02e06",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code it. Arrange the lines to count the passes.",
+      "answer": [
+        1,
+        3,
+        2,
+        0,
+        4
+      ],
+      "blocks": [
+        "        count = count + 1",
+        "count = 0",
+        "    if score >= 50:",
+        "for score in scores:",
+        "print(count)"
+      ],
+      "explanation": "Start count at 0, loop, test the rule, add 1 on a match, then print."
+    },
+    {
+      "id": "u61l02e07",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Finish the rule so only passing scores are counted:\n\nfor score in scores:\n    if score ____ 50:\n        count = count + 1",
+      "answer": ">=",
+      "acceptable": [
+        ">="
+      ],
+      "explanation": "A pass is 50 or more, so the test is score >= 50."
+    },
+    {
+      "id": "u61l02e08",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check. The code prints 3. Your hand example said 3. So...",
+      "options": [
+        "It passes — output matches the example",
+        "It fails",
+        "You can't tell",
+        "Change the example"
+      ],
+      "answer": 0,
+      "explanation": "The code's count matches the hand count, so the count solution is correct."
+    },
+    {
+      "id": "u61l02e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "New input: scores = [90, 10, 50]. With the same code (pass >= 50), what prints?",
+      "options": [
+        "2",
+        "3",
+        "1",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "90 and 50 pass (50 counts because of >=); 10 does not. That's 2."
+    },
+    {
+      "id": "u61l02e10",
+      "type": "trueFalse",
+      "uepcc": "Check",
+      "prompt": "If the rule had been 'more than 50' (> 50), the score of exactly 50 would NOT be counted.",
+      "answer": true,
+      "explanation": ">= 50 includes 50; > 50 excludes it. Picking the right comparison is part of getting the count right."
+    }
+  ]
+}

@@ -1,0 +1,131 @@
+{
+  "unitId": "u96",
+  "lessonId": "u96l05",
+  "title": "Loop back: spotting the flaw in a woven solution",
+  "idea": "LOOP (review): no new concept. Re-practice finding bugs in integrated code - off-by-one, wrong operator, missing init, missing return, from earlier laps.",
+  "exercises": [
+    {
+      "id": "u96l05e01",
+      "type": "multipleChoice",
+      "prompt": "This sum is wrong. Why?\n\nfor n in [2, 3, 4]:\n    total = total + n\nprint(total)",
+      "options": [
+        "total was never set to 0 before the loop",
+        "The loop variable should be i",
+        "print needs two arguments",
+        "Lists cannot be looped"
+      ],
+      "answer": 0,
+      "explanation": "An accumulator must start at a known value. Without 'total = 0' first, the very first 'total + n' has no total to add to."
+    },
+    {
+      "id": "u96l05e02",
+      "type": "multipleChoice",
+      "prompt": "This 'count values over 10' prints 0 for [12, 15, 3]. Why?\n\nover = 0\nfor n in [12, 15, 3]:\n    if n < 10:\n        over = over + 1\nprint(over)",
+      "options": [
+        "The test is backwards - it should be n > 10, not n < 10",
+        "over should start at 1",
+        "The list is empty",
+        "range is missing"
+      ],
+      "answer": 0,
+      "explanation": "'Over 10' means n > 10. The code tests n < 10, so it counts the wrong items. A flipped comparison is a classic bug."
+    },
+    {
+      "id": "u96l05e03",
+      "type": "multipleChoice",
+      "prompt": "This helper is meant to give the loop a value, but total stays 0. Why?\n\ndef add_tax(price):\n    price * 1.1\n\ntotal = 0\nfor p in [100, 200]:\n    total = total + add_tax(p)\nprint(total)",
+      "options": [
+        "add_tax never RETURNS - it computes price * 1.1 and throws it away",
+        "The loop variable is wrong",
+        "100 and 200 are too big",
+        "print is misspelled"
+      ],
+      "answer": 0,
+      "explanation": "Without 'return', the function hands back nothing. The fix is 'return price * 1.1'. Return-then-use is essential for helpers in loops."
+    },
+    {
+      "id": "u96l05e04",
+      "type": "multipleChoice",
+      "prompt": "This 'find the biggest' returns 0 for [3, 8, 5]. Why?\n\nbest = 0\nfor n in [3, 8, 5]:\n    if n > best:\n        best = n\nprint(best)",
+      "options": [
+        "This one is actually correct - it prints 8",
+        "best should start at -1",
+        "The if is backwards",
+        "It cannot handle three items"
+      ],
+      "answer": 0,
+      "explanation": "Seeding best=0 works here because all values are positive; 8 wins. Not every suspicious-looking line is a bug - trace it before 'fixing' it."
+    },
+    {
+      "id": "u96l05e05",
+      "type": "multipleChoice",
+      "prompt": "The 'biggest' code above (best = 0) WOULD be buggy for which list?",
+      "options": [
+        "[-3, -8, -5] - all negative, so best wrongly stays 0",
+        "[1, 2, 3]",
+        "[10, 20]",
+        "[5]"
+      ],
+      "answer": 0,
+      "explanation": "With all-negative values, none beats 0, so it reports 0 - a value not even in the list. Seeding with nums[0] instead of 0 fixes it."
+    },
+    {
+      "id": "u96l05e06",
+      "type": "multipleChoice",
+      "prompt": "This pairs loop counts (a,b) AND (b,a) as two pairs. Which line causes that?\n\nfor i in range(len(xs)):\n    for j in range(len(xs)):\n        ...",
+      "options": [
+        "The inner loop starts at 0; it should start at i + 1",
+        "The outer loop is wrong",
+        "len() is not allowed",
+        "Both loops should be while loops"
+      ],
+      "answer": 0,
+      "explanation": "Starting the inner loop at i+1 visits each unique pair once and skips self-pairs. Starting at 0 double-counts - a common nested-loop bug."
+    },
+    {
+      "id": "u96l05e07",
+      "type": "trueFalse",
+      "prompt": "A validation loop written as 'while value >= 0' (to reject negatives) is wrong - it loops while the value is GOOD, not bad.",
+      "answer": true,
+      "explanation": "You loop WHILE the input is invalid. To reject negatives you want 'while value < 0'. Getting the condition's direction right is the whole job of a validation loop."
+    },
+    {
+      "id": "u96l05e08",
+      "type": "multipleChoice",
+      "prompt": "This average crashes on an empty list. What is missing?\n\naverage = total / count\nprint(average)",
+      "options": [
+        "A guard: if count == 0, use 0 instead of dividing",
+        "A second loop",
+        "A larger total",
+        "A print at the start"
+      ],
+      "answer": 0,
+      "explanation": "Dividing by a count of 0 crashes. The empty guard checks count first and returns 0 - an edge case you must always handle for averages."
+    },
+    {
+      "id": "u96l05e09",
+      "type": "orderBlocks",
+      "prompt": "Order the steps for debugging a wrong result.",
+      "blocks": [
+        "Trace the code by hand on a small example",
+        "Compare the traced result to what you expected",
+        "Find the first line where they disagree and fix it"
+      ],
+      "answer": [0, 1, 2],
+      "explanation": "Trace, compare, locate the divergence. Bugs hide at the first place your hand-trace stops matching your expectation."
+    },
+    {
+      "id": "u96l05e10",
+      "type": "multipleChoice",
+      "prompt": "What is the big lesson across these bug examples?",
+      "options": [
+        "Most bugs are small - a flipped operator, a bad start value, a missing return or guard",
+        "Bugs are random and unfindable",
+        "You must rewrite everything from scratch",
+        "Only functions ever have bugs"
+      ],
+      "answer": 0,
+      "explanation": "Integrated code rarely fails in exotic ways. It is usually one small slip - which hand-tracing quickly reveals."
+    }
+  ]
+}

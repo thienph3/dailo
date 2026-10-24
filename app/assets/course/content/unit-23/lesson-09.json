@@ -1,0 +1,150 @@
+{
+  "unitId": "u23",
+  "lessonId": "u23l09",
+  "title": "Practice mix: pick the right test",
+  "idea": "GUIDED review. Across several tiny problems, choose the comparison and branch that solve each - reinforcing the UEPCC habit.",
+  "problem": "Small decision problems: pick the correct comparison and predict the one-choice result.",
+  "exercises": [
+    {
+      "id": "u23l09e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "A problem outputs 'Adult' when age is 18 or more, else 'Minor'. The OUTPUT is...",
+      "options": [
+        "Adult or Minor",
+        "the age",
+        "a number",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "One of two labels. Naming the output is always step one."
+    },
+    {
+      "id": "u23l09e02",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Which comparison means '18 or more'?",
+      "options": [
+        "age >= 18",
+        "age > 18",
+        "age < 18",
+        "age == 18"
+      ],
+      "answer": 0,
+      "explanation": ">= 18 includes 18 itself. 'or more' tells you to include the boundary."
+    },
+    {
+      "id": "u23l09e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "By hand: age = 18 should give which label (rule: 18+ is Adult)?",
+      "options": [
+        "Adult",
+        "Minor",
+        "18",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "18 is '18 or more', so Adult. Edge values decide between > and >=."
+    },
+    {
+      "id": "u23l09e04",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "A problem outputs 'In stock' only when count is above 0. Which test?",
+      "options": [
+        "count > 0",
+        "count >= 0",
+        "count < 0",
+        "count == 0"
+      ],
+      "answer": 0,
+      "explanation": "'Above 0' is > 0. Note >= 0 would wrongly say 0 items are in stock."
+    },
+    {
+      "id": "u23l09e05",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "What prints?\n\ncount = 0\nif count > 0:\n    print(\"In stock\")\nelse:\n    print(\"Sold out\")",
+      "options": [
+        "Sold out",
+        "In stock",
+        "0",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "0 > 0 is False, so the else runs: Sold out. Exactly the reason > (not >=) was chosen."
+    },
+    {
+      "id": "u23l09e06",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "A problem outputs 'Match' when a code equals 1234. Which test?",
+      "options": [
+        "code == 1234",
+        "code = 1234",
+        "code > 1234",
+        "code % 1234"
+      ],
+      "answer": 0,
+      "explanation": "Equality is ==. A single = would assign and break the condition."
+    },
+    {
+      "id": "u23l09e07",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Order the UEPCC steps you follow for any one-choice problem.",
+      "blocks": [
+        "Understand: name inputs and output",
+        "Example: work one by hand",
+        "Plan: choose the comparison and branches",
+        "Code: write the if/else",
+        "Check: re-run with new inputs"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "explanation": "Understand, Example, Plan, Code, Check - the spine of every problem you will solve."
+    },
+    {
+      "id": "u23l09e08",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "What prints?\n\ntemp = 20\nif temp >= 25:\n    print(\"Warm\")\nelse:\n    print(\"Cool\")",
+      "options": [
+        "Cool",
+        "Warm",
+        "20",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "20 >= 25 is False, so the else runs: Cool."
+    },
+    {
+      "id": "u23l09e09",
+      "type": "trueFalse",
+      "uepcc": "Check",
+      "prompt": "Working an example by hand before coding gives you the value to check the code against.",
+      "answer": true,
+      "explanation": "Yes - the hand example is your answer key. Without it you cannot tell if the code is right."
+    },
+    {
+      "id": "u23l09e10",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "The single most important first question for any problem is...",
+      "options": [
+        "What is the output I must produce?",
+        "How long is the code?",
+        "Which keyword is fancy?",
+        "Can I skip the plan?"
+      ],
+      "answer": 0,
+      "explanation": "Start by naming the output. Everything else - inputs, plan, code, check - follows from knowing what you must produce."
+    }
+  ]
+}

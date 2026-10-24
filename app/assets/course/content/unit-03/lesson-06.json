@@ -1,0 +1,118 @@
+{
+  "unitId": "u03",
+  "lessonId": "u03l06",
+  "title": "Spot the wrong order",
+  "idea": "GUIDED PROBLEM (debugging flavor). Given code whose output is out of order, diagnose it against the hand example and fix the order. Heavy on thinking.",
+  "problem": "Show a countdown on three lines: 3, 2, 1. A friend's code prints them in the wrong order — find and fix it.",
+  "exercises": [
+    {
+      "id": "u03l06e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: Show a countdown — 3, then 2, then 1 — one per line.\n\nWhat is the correct OUTPUT?",
+      "options": ["3, 2, 1 on three lines", "1, 2, 3 on three lines", "6 on one line", "Just 3"],
+      "answer": 0,
+      "explanation": "A countdown goes 3, then 2, then 1. That order is the output you want."
+    },
+    {
+      "id": "u03l06e02",
+      "type": "orderBlocks",
+      "uepcc": "E",
+      "prompt": "Example. Work the correct output by hand — order the countdown.",
+      "blocks": ["3", "2", "1"],
+      "answer": [0, 1, 2],
+      "explanation": "3, 2, 1. This hand example is the yardstick for judging the friend's code."
+    },
+    {
+      "id": "u03l06e03",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Your friend's code is:\n\nprint(1)\nprint(2)\nprint(3)\n\nWhat does it show?",
+      "options": ["1, 2, 3 on three lines", "3, 2, 1", "6", "1 only"],
+      "answer": 0,
+      "explanation": "Lines run top to bottom, so it shows 1, then 2, then 3."
+    },
+    {
+      "id": "u03l06e04",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Compare that output (1, 2, 3) to your example (3, 2, 1). Verdict?",
+      "options": [
+        "Fails — right numbers, wrong order",
+        "Passes — close enough",
+        "Fails — a number is missing",
+        "Passes exactly"
+      ],
+      "answer": 0,
+      "explanation": "All three numbers are there, but the order is backwards. That is a fail."
+    },
+    {
+      "id": "u03l06e05",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Plan the fix: what needs to change?",
+      "options": [
+        "Reorder the print lines to 3, 2, 1",
+        "Add more prints",
+        "Delete a print",
+        "Change the numbers to words"
+      ],
+      "answer": 0,
+      "explanation": "The numbers are right; only their order is wrong. Reorder the lines."
+    },
+    {
+      "id": "u03l06e06",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code the fix. Arrange the lines so the output is 3, 2, 1.",
+      "blocks": ["print(1)", "print(2)", "print(3)"],
+      "answer": [2, 1, 0],
+      "explanation": "Put print(3) first, print(2) next, print(1) last — the corrected countdown order."
+    },
+    {
+      "id": "u03l06e07",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check the fix. The new output is:\n\n3\n2\n1\n\nCompared to the example (3, 2, 1)?",
+      "options": ["Passes — matches exactly", "Still fails", "Can't tell", "Missing a line"],
+      "answer": 0,
+      "explanation": "Now the output matches the hand example line for line. Fixed!"
+    },
+    {
+      "id": "u03l06e08",
+      "type": "trueFalse",
+      "uepcc": "U",
+      "prompt": "Having all the right facts is not enough — they must also be in the right order.",
+      "answer": true,
+      "explanation": "Correct. Right facts, wrong order is still wrong output. Order is part of the answer."
+    },
+    {
+      "id": "u03l06e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "A different friend wrote:\n\nprint(3)\nprint(1)\n\nAgainst the example 3, 2, 1, what is wrong?",
+      "options": [
+        "A line is missing — 2 was never printed",
+        "The order is backwards",
+        "Nothing is wrong",
+        "Too many lines"
+      ],
+      "answer": 0,
+      "explanation": "Only 3 and 1 appear; the 2 line is missing. Checking against the example catches it."
+    },
+    {
+      "id": "u03l06e10",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "What is the lesson of debugging by example?",
+      "options": [
+        "Compare the real output to the hand example to find exactly what is wrong",
+        "Guess randomly until it works",
+        "Delete the code and start over every time",
+        "Never check the output"
+      ],
+      "answer": 0,
+      "explanation": "The hand example tells you what SHOULD appear, so comparing pinpoints the bug fast."
+    }
+  ]
+}

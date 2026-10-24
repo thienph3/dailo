@@ -1,0 +1,160 @@
+{
+  "unitId": "u67",
+  "lessonId": "u67l06",
+  "title": "Finish it: the average that crashes on empty",
+  "idea": "GUIDED BUG-FIX (empty guard). An average divides a hand-built total by len with no empty check, crashing on []. Add the guard.",
+  "problem": "This code finds the average of a list by adding the numbers up in a loop, then dividing by how many there are. It works for [4, 8], but crashes when the list is empty. Finish it so an empty list is handled.",
+  "exercises": [
+    {
+      "id": "u67l06e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "CODE:\n\nnums = [4, 8]\ntotal = 0\nfor x in nums:\n    total = total + x\naverage = total / len(nums)\nprint(average)\n\nUnderstand. What does this compute, and from what?",
+      "options": [
+        "The average: a total we build up in the loop, divided by how many items",
+        "The biggest item",
+        "The list length only",
+        "The total only"
+      ],
+      "answer": 0,
+      "explanation": "The loop adds each number into total, then we divide that total by len (the count). Knowing both parts — the built-up total and the count — tells us where an empty list could bite: the count."
+    },
+    {
+      "id": "u67l06e02",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example. By hand, walk the loop over [4, 8]: total starts at 0, becomes 4, then 12. What average does total / len give?",
+      "options": [
+        "6",
+        "12",
+        "2",
+        "4"
+      ],
+      "answer": 0,
+      "explanation": "The loop leaves total = 12, and len is 2, so 12 / 2 = 6. For a non-empty list the code is correct; the trouble only appears for a special input."
+    },
+    {
+      "id": "u67l06e03",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Now imagine the empty list []. The loop never runs, so total stays 0. What is len([]), and what does total / len become?",
+      "options": [
+        "len is 0, so it divides by zero and crashes",
+        "len is 1, so it works",
+        "len is empty",
+        "it prints 0 safely"
+      ],
+      "answer": 0,
+      "explanation": "With [] the loop body never runs, so total is still 0. But len([]) is 0, so total / 0 is division by zero — a crash. Testing the empty input reveals the missing guard."
+    },
+    {
+      "id": "u67l06e04",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "Why can't you compute an average of an empty list at all?",
+      "options": [
+        "There are zero items, and dividing by zero has no answer",
+        "Averages need exactly 2 items",
+        "Empty lists aren't real",
+        "It would be 0"
+      ],
+      "answer": 0,
+      "explanation": "With no items there's nothing to average, and the math (divide by 0) is undefined. The code must handle this case specially."
+    },
+    {
+      "id": "u67l06e05",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Plan the safe version. Order the steps.",
+      "blocks": [
+        "Build the total: start at 0 and add each number in a loop",
+        "If the list is empty, print a 'no average' message and stop",
+        "Otherwise, divide the total by len and print it"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Add the numbers up first, then guard the empty case BEFORE any division. Only when the list has items is total / len safe to compute."
+    },
+    {
+      "id": "u67l06e06",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Which test detects the empty list?",
+      "options": [
+        "if len(nums) == 0",
+        "if len(nums) == 1",
+        "if total == 0",
+        "if nums > 0"
+      ],
+      "answer": 0,
+      "explanation": "An empty list has len 0, so 'if len(nums) == 0' spots it. (Note: a list of zeros like [0, 0] builds a total of 0 but has len 2 — it's not empty, so testing total == 0 would be wrong.)"
+    },
+    {
+      "id": "u67l06e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Arrange the FIXED code: build the total, then guard the empty case.",
+      "blocks": [
+        "total = 0",
+        "for x in nums:",
+        "    total = total + x",
+        "if len(nums) == 0:",
+        "    print(\"no average\")",
+        "else:",
+        "    print(total / len(nums))"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "explanation": "First build total with the loop. Then check the empty case and report 'no average'; otherwise divide total by len safely and print. The guard prevents the crash."
+    },
+    {
+      "id": "u67l06e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Complete the guard that catches the empty list:\n\ntotal = 0\nfor x in nums:\n    total = total + x\nif len(nums) == ____:\n    print(\"no average\")\nelse:\n    print(total / len(nums))",
+      "answer": "0",
+      "acceptable": [
+        "0"
+      ],
+      "explanation": "len 0 means empty, so compare to 0. When it's 0 we skip the division entirely — even though we already built the total."
+    },
+    {
+      "id": "u67l06e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check. Run the fixed code on [4, 8]: the loop builds total = 12 and the else branch prints 6. Does the guard break the normal case?",
+      "options": [
+        "No — non-empty lists still compute 6 correctly",
+        "Yes, it now prints 0",
+        "Yes, it crashes",
+        "It prints 'no average'"
+      ],
+      "answer": 0,
+      "explanation": "For [4, 8], the loop makes total 12 and len is 2, so the else branch runs and prints 6. The guard only changes behavior for the empty list — good."
+    },
+    {
+      "id": "u67l06e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Re-check the input that used to crash: nums = []. What does the fixed code do now?",
+      "options": [
+        "prints 'no average' and does not crash",
+        "crashes as before",
+        "prints 0",
+        "prints 6"
+      ],
+      "answer": 0,
+      "explanation": "The empty list leaves total at 0, then hits the guard and prints 'no average' safely. The crash is gone — the code is finished."
+    }
+  ]
+}

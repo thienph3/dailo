@@ -1,0 +1,126 @@
+{
+  "unitId": "u32",
+  "lessonId": "u32l02",
+  "title": "The > vs >= edge case",
+  "idea": "The classic missed edge case: using > where the rule says 'or more', so the exact boundary value is handled wrong.",
+  "exercises": [
+    {
+      "id": "u32l02e01",
+      "type": "multipleChoice",
+      "prompt": "Rule: 'free gift for spending 100 or more.' Code: if spend > 100: print('Gift'). A customer spends exactly 100. What prints?",
+      "options": [
+        "Nothing (no 'Gift') — which is wrong",
+        "Gift — correctly",
+        "An error",
+        "100"
+      ],
+      "answer": 0,
+      "explanation": "> 100 is False for 100 itself, so no 'Gift' — but the rule says 100 should get it. The boundary is mishandled."
+    },
+    {
+      "id": "u32l02e02",
+      "type": "multipleChoice",
+      "prompt": "What is the single flawed character in if spend > 100?",
+      "options": [
+        "> should be >=",
+        ">= should be >",
+        "100 should be 101",
+        "spend should be amount"
+      ],
+      "answer": 0,
+      "explanation": "> excludes 100. The rule 'or more' includes the boundary, so it needs >=."
+    },
+    {
+      "id": "u32l02e03",
+      "type": "trueFalse",
+      "prompt": "spend > 100 and spend >= 100 behave the same for every value.",
+      "answer": false,
+      "explanation": "False — they disagree at exactly 100. That one value is the whole bug."
+    },
+    {
+      "id": "u32l02e04",
+      "type": "multipleChoice",
+      "prompt": "Which single input exposes the > vs >= bug?",
+      "options": [
+        "Exactly 100",
+        "50",
+        "200",
+        "Any negative number"
+      ],
+      "answer": 0,
+      "explanation": "Only the boundary value, 100, behaves differently. Testing 100 catches it; testing 50 or 200 does not."
+    },
+    {
+      "id": "u32l02e05",
+      "type": "multipleChoice",
+      "prompt": "Rule: 'teenager means age 13 to 19.' Code: if age > 13 and age < 19. Who is wrongly excluded?",
+      "options": [
+        "Both 13-year-olds and 19-year-olds",
+        "Only 20-year-olds",
+        "Nobody is excluded",
+        "Only 15-year-olds"
+      ],
+      "answer": 0,
+      "explanation": "> 13 drops 13, and < 19 drops 19 — both ends are missed. The rule includes both boundaries."
+    },
+    {
+      "id": "u32l02e06",
+      "type": "multipleChoice",
+      "prompt": "Fix the teenager test so 13 and 19 count.",
+      "options": [
+        "age >= 13 and age <= 19",
+        "age > 13 and age < 19",
+        "age >= 13 or age <= 19",
+        "age == 13 and age == 19"
+      ],
+      "answer": 0,
+      "explanation": "Use >= 13 and <= 19 so both boundary ages are included, matching '13 to 19'."
+    },
+    {
+      "id": "u32l02e07",
+      "type": "trueFalse",
+      "prompt": "A boundary value like 'exactly the limit' is one of the first inputs you should test.",
+      "answer": true,
+      "explanation": "Yes. Boundaries are where > / >= / < / <= bugs hide, so always hand-test the exact limit."
+    },
+    {
+      "id": "u32l02e08",
+      "type": "multipleChoice",
+      "prompt": "Rule: 'pass is 50 or more.' Code: if score >= 50: print('Pass') else: print('Fail'). Score 50 prints what?",
+      "options": [
+        "Pass — correct",
+        "Fail — wrong",
+        "An error",
+        "50"
+      ],
+      "answer": 0,
+      "explanation": ">= 50 includes 50, so 'Pass' — correct. This version handles the boundary properly."
+    },
+    {
+      "id": "u32l02e09",
+      "type": "multipleChoice",
+      "prompt": "Someone says 'my code works, I tested 10 and 90.' Why is that not enough?",
+      "options": [
+        "Neither value is near the boundary where the bug lives",
+        "10 and 90 are invalid",
+        "You must test exactly 1000 values",
+        "Testing is never useful"
+      ],
+      "answer": 0,
+      "explanation": "10 and 90 are far from the boundary, so they never trigger a > vs >= mistake. You must test the limit itself."
+    },
+    {
+      "id": "u32l02e10",
+      "type": "multipleChoice",
+      "prompt": "In one sentence, what is the lesson of > vs >=?",
+      "options": [
+        "Decide if the boundary is included, and always test the exact boundary",
+        "Always use >",
+        "Never use comparisons",
+        "Boundaries never matter"
+      ],
+      "answer": 0,
+      "explanation": "When a rule says 'or more' / 'at most' / a range, decide carefully whether the boundary is included, and test it."
+    }
+  ]
+}

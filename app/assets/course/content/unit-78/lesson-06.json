@@ -1,0 +1,125 @@
+{
+  "unitId": "u78",
+  "lessonId": "u78l06",
+  "title": "Spot the helper-in-loop mistake",
+  "idea": "TOOL. Spot and fix common helper-in-loop bugs (forgot to call, overwrote, reset inside).",
+  "exercises": [
+    {
+      "type": "multipleChoice",
+      "prompt": "Spot the bug:\n\ndef double(n):\n    return n * 2\n\ntotal = 0\nfor n in [1, 2, 3]:\n    total = total + n\nprint(total)",
+      "options": [
+        "It adds n, not double(n) — the helper is never called",
+        "no bug",
+        "prints 12",
+        "double is wrong"
+      ],
+      "answer": 0,
+      "explanation": "It totals the originals (6), forgetting to call the helper. Fix: add double(n).",
+      "id": "u78l06e01"
+    },
+    {
+      "type": "fillBlank",
+      "prompt": "Fix it — call the helper:\n\nfor n in [1, 2, 3]:\n    total = total + ____(n)",
+      "answer": "double",
+      "acceptable": [
+        "double"
+      ],
+      "explanation": "total + double(n) gives 2+4+6 = 12.",
+      "id": "u78l06e02"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Spot the bug:\n\ndef double(n):\n    return n * 2\n\ntotal = 0\nfor n in [1, 2, 3]:\n    total = double(n)\nprint(total)",
+      "options": [
+        "It overwrites total each loop instead of adding",
+        "no bug",
+        "prints 12",
+        "double is wrong"
+      ],
+      "answer": 0,
+      "explanation": "= replaces total each time, leaving only the last (6). Use total = total + double(n).",
+      "id": "u78l06e03"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Putting total = 0 INSIDE the loop would reset it every item — a bug.",
+      "answer": true,
+      "explanation": "Yes — the total must start once, before the loop.",
+      "id": "u78l06e04"
+    },
+    {
+      "type": "orderBlocks",
+      "prompt": "Arrange the CORRECT accumulate.",
+      "blocks": [
+        "total = 0",
+        "for n in [1, 2, 3]:",
+        "    total = total + double(n)",
+        "print(total)"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "Start once, add each helper result, print 12.",
+      "id": "u78l06e05"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Spot the bug:\n\ndef is_big(n):\n    return n > 10\n\ncount = 0\nfor n in [12, 20]:\n    if is_big:\n        count = count + 1\nprint(count)",
+      "options": [
+        "is_big (no call) is always truthy — it must be is_big(n)",
+        "no bug",
+        "prints 0",
+        "is_big is wrong"
+      ],
+      "answer": 0,
+      "explanation": "is_big without (n) is the function itself, not a call. Write if is_big(n).",
+      "id": "u78l06e06"
+    },
+    {
+      "type": "fillBlank",
+      "prompt": "Fix the condition to call the helper:\n\nif ____(n):\n    count = count + 1\n\n(helper is is_big)",
+      "answer": "is_big",
+      "acceptable": [
+        "is_big"
+      ],
+      "explanation": "Call is_big(n) to get True/False for this item.",
+      "id": "u78l06e07"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "REVIEW: why must a composed/looped helper RETURN (not print)?",
+      "options": [
+        "So its value can be added or tested",
+        "print is slower",
+        "to rename it",
+        "no reason"
+      ],
+      "answer": 0,
+      "explanation": "You need a value to accumulate or check; print gives None.",
+      "id": "u78l06e08"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "A good check is to compare the loop's output against a hand-worked example.",
+      "answer": true,
+      "explanation": "Always verify against the example you worked by hand.",
+      "id": "u78l06e09"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Lesson point:",
+      "options": [
+        "Common bugs: forgetting to call the helper, overwriting instead of adding, resetting inside the loop",
+        "helpers never fail",
+        "loops can't have bugs",
+        "always use sum()"
+      ],
+      "answer": 0,
+      "explanation": "Call the helper, accumulate (don't overwrite), start totals once.",
+      "id": "u78l06e10"
+    }
+  ]
+}

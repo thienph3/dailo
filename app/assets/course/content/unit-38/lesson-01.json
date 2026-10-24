@@ -1,0 +1,133 @@
+{
+  "unitId": "u38",
+  "lessonId": "u38l01",
+  "title": "The loop variable: a number that changes each pass",
+  "idea": "In for i in range(n), i holds the current count and changes each pass: 0, 1, 2, ... Meet the loop variable with visible output.",
+  "exercises": [
+    {
+      "id": "u38l01e01",
+      "type": "multipleChoice",
+      "prompt": "In for i in range(3), what is i on the three passes?",
+      "options": [
+        "0, then 1, then 2",
+        "1, then 2, then 3",
+        "3, 3, 3",
+        "always 0"
+      ],
+      "answer": 0,
+      "explanation": "range(3) gives i the values 0, 1, 2 — it starts at 0 and stops before 3. i changes each pass."
+    },
+    {
+      "id": "u38l01e02",
+      "type": "multipleChoice",
+      "prompt": "What shows?\n\nfor i in range(3):\n    print(i)",
+      "options": [
+        "0\n1\n2",
+        "1\n2\n3",
+        "3\n3\n3",
+        "i\ni\ni"
+      ],
+      "answer": 0,
+      "explanation": "Printing i shows its current value each pass: 0, 1, 2. The loop variable carries the count."
+    },
+    {
+      "id": "u38l01e03",
+      "type": "trueFalse",
+      "prompt": "The loop variable i holds a different number on each pass of the loop.",
+      "answer": true,
+      "explanation": "Yes — that's the whole point. i is 0, then 1, then 2, letting each pass use its own number."
+    },
+    {
+      "id": "u38l01e04",
+      "type": "multipleChoice",
+      "prompt": "range(4) gives the loop variable which values?",
+      "options": [
+        "0, 1, 2, 3",
+        "1, 2, 3, 4",
+        "0, 1, 2, 3, 4",
+        "4, 3, 2, 1"
+      ],
+      "answer": 0,
+      "explanation": "range(4) starts at 0 and stops before 4: 0, 1, 2, 3. Four values, four passes."
+    },
+    {
+      "id": "u38l01e05",
+      "type": "trueFalse",
+      "prompt": "range(n) by itself starts the loop variable at 0, not 1.",
+      "answer": true,
+      "explanation": "range(n) counts 0, 1, ..., n-1. Starting at 0 surprises beginners — remember it begins at 0."
+    },
+    {
+      "id": "u38l01e06",
+      "type": "multipleChoice",
+      "prompt": "What shows?\n\nfor i in range(5):\n    print(i)",
+      "options": [
+        "0\n1\n2\n3\n4",
+        "1\n2\n3\n4\n5",
+        "0\n1\n2\n3\n4\n5",
+        "5\n5\n5\n5\n5"
+      ],
+      "answer": 0,
+      "explanation": "range(5) gives 0, 1, 2, 3, 4 — it stops before 5. Five numbers, printed one per line."
+    },
+    {
+      "id": "u38l01e07",
+      "type": "multipleChoice",
+      "prompt": "Why is the loop variable useful?",
+      "options": [
+        "Each pass can use its own number (0, 1, 2, ...)",
+        "It makes the loop run faster",
+        "It removes the colon",
+        "It stops the loop"
+      ],
+      "answer": 0,
+      "explanation": "With i, passes differ: print 0, then 1, then 2. Without it, every pass was identical."
+    },
+    {
+      "id": "u38l01e08",
+      "type": "matchPairs",
+      "prompt": "Match each range to the loop variable's values.",
+      "pairs": [
+        {
+          "left": "range(2)",
+          "right": "0, 1"
+        },
+        {
+          "left": "range(3)",
+          "right": "0, 1, 2"
+        },
+        {
+          "left": "range(1)",
+          "right": "0"
+        }
+      ],
+      "explanation": "range(n) runs the variable from 0 up to n-1. Count the values: that's the number of passes."
+    },
+    {
+      "id": "u38l01e09",
+      "type": "multipleChoice",
+      "prompt": "The last value i takes in for i in range(6) is...",
+      "options": [
+        "5",
+        "6",
+        "0",
+        "7"
+      ],
+      "answer": 0,
+      "explanation": "range(6) stops before 6, so the last value is 5. Start at 0, end at n-1."
+    },
+    {
+      "id": "u38l01e10",
+      "type": "multipleChoice",
+      "prompt": "You print i in a range(3) loop and expected 1, 2, 3 but got 0, 1, 2. Why?",
+      "options": [
+        "range starts at 0 by default",
+        "The loop is broken",
+        "i is spelled wrong",
+        "range(3) means three 0s"
+      ],
+      "answer": 0,
+      "explanation": "range(n) begins at 0. To get 1, 2, 3 you'll choose a start value — exactly what the next lesson covers."
+    }
+  ]
+}

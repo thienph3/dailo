@@ -1,0 +1,137 @@
+{
+  "unitId": "u44",
+  "lessonId": "u44l03",
+  "title": "The control value",
+  "idea": "A while loop usually tracks a value that changes each pass toward the stop.",
+  "exercises": [
+    {
+      "type": "multipleChoice",
+      "prompt": "In a while loop, the value the condition checks is often called the control value. What should happen to it each pass?",
+      "options": [
+        "It changes, moving toward the point where the loop stops",
+        "It stays the same",
+        "It resets to the start",
+        "It disappears"
+      ],
+      "answer": 0,
+      "explanation": "The control value must change each pass so the condition eventually turns false. Otherwise the loop never stops.",
+      "id": "u44l03e01"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "What is the control value here?\n\ncount = 0\nwhile count < 4:\n    print(count)\n    count = count + 1",
+      "options": [
+        "count",
+        "print",
+        "4",
+        "0 only"
+      ],
+      "answer": 0,
+      "explanation": "count is checked by the condition and changed each pass. It's the value controlling the loop.",
+      "id": "u44l03e02"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "If the control value never changes, the condition's answer never changes either.",
+      "answer": true,
+      "explanation": "True. The condition depends on the control value. No change means the loop can't stop.",
+      "id": "u44l03e03"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "What shows?\n\ncount = 2\nwhile count <= 5:\n    print(count)\n    count = count + 1",
+      "options": [
+        "2\n3\n4\n5",
+        "2\n3\n4\n5\n6",
+        "2",
+        "forever"
+      ],
+      "answer": 0,
+      "explanation": "count goes 2,3,4,5 (all <= 5), then 6 fails. The control value climbs until the condition is false.",
+      "id": "u44l03e04"
+    },
+    {
+      "type": "matchPairs",
+      "prompt": "Match each piece to its role in a while loop.",
+      "pairs": [
+        {
+          "left": "Control value",
+          "right": "What the condition checks"
+        },
+        {
+          "left": "Update",
+          "right": "Changes the control value each pass"
+        },
+        {
+          "left": "Condition",
+          "right": "Decides whether to keep looping"
+        }
+      ],
+      "explanation": "The control value is tested, the update changes it, the condition reads it. Together they make the loop stop.",
+      "id": "u44l03e05"
+    },
+    {
+      "type": "orderBlocks",
+      "prompt": "Arrange a loop whose control value counts up to print 1, 2, 3.",
+      "blocks": [
+        "    count = count + 1",
+        "count = 1",
+        "    print(count)",
+        "while count <= 3:"
+      ],
+      "answer": [
+        1,
+        3,
+        2,
+        0
+      ],
+      "explanation": "count starts at 1, the loop prints it and grows it each pass. count is the control value.",
+      "id": "u44l03e06"
+    },
+    {
+      "type": "fillBlank",
+      "prompt": "Fill the update that changes the control value each pass:\n\nstep = 0\nwhile step < 3:\n    print(step)\n    ____",
+      "answer": "step = step + 1",
+      "acceptable": [
+        "step = step + 1",
+        "step=step+1",
+        "step += 1"
+      ],
+      "explanation": "step must change each pass. step = step + 1 moves it toward 3, where step < 3 turns false.",
+      "id": "u44l03e07"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "What goes wrong if you forget the update?\n\ni = 1\nwhile i <= 3:\n    print(i)",
+      "options": [
+        "i stays 1 forever, so the loop never stops",
+        "It prints 1, 2, 3 anyway",
+        "It prints nothing",
+        "It prints 3 once"
+      ],
+      "answer": 0,
+      "explanation": "Without changing i, i <= 3 is always true. The control value is stuck, so the loop runs forever.",
+      "id": "u44l03e08"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Choosing a good starting value for the control value is part of setting up a while loop.",
+      "answer": true,
+      "explanation": "True. The start, the condition, and the update all work together to make the loop run the right passes.",
+      "id": "u44l03e09"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "The control value is important because...",
+      "options": [
+        "It's what the condition reads, so changing it is what eventually stops the loop",
+        "It prints the output",
+        "It's always zero",
+        "It replaces the condition"
+      ],
+      "answer": 0,
+      "explanation": "The loop stops when the condition is false, and the condition depends on the control value. So you must change it.",
+      "id": "u44l03e10"
+    }
+  ]
+}

@@ -1,0 +1,133 @@
+{
+  "unitId": "u84",
+  "lessonId": "u84l07",
+  "title": "Loop back: the tricky inputs",
+  "idea": "LOOP (review). Revisit the edge-case habit (empty, zero, one item, boundary) from Unit 80-81 across different patterns.",
+  "exercises": [
+    {
+      "id": "u84l07e01",
+      "type": "multipleChoice",
+      "prompt": "Review: which input is the tricky EDGE case for averaging a list?",
+      "options": [
+        "An empty list — dividing by zero items breaks",
+        "A list of three normal numbers",
+        "A list of five numbers",
+        "Any list with more than one item"
+      ],
+      "answer": 0,
+      "explanation": "An empty list means count 0, and dividing by 0 crashes. Always guard the empty case before an average."
+    },
+    {
+      "id": "u84l07e02",
+      "type": "multipleChoice",
+      "prompt": "Review: a 'track the biggest' helper seeds best = items[0]. Which input breaks that very line?",
+      "options": [
+        "An empty list — there is no items[0]",
+        "A one-item list",
+        "A list of negatives",
+        "A long list"
+      ],
+      "answer": 0,
+      "explanation": "items[0] needs at least one item. On an empty list it crashes — the empty edge case strikes again."
+    },
+    {
+      "id": "u84l07e03",
+      "type": "trueFalse",
+      "prompt": "Review: a sum helper handles an empty list fine, returning 0.",
+      "answer": true,
+      "explanation": "Yes. total starts at 0 and the loop just doesn't run, so empty gives 0. Not every pattern needs an empty guard — summing is safe."
+    },
+    {
+      "id": "u84l07e04",
+      "type": "multipleChoice",
+      "prompt": "Review: which pattern NEEDS an empty guard to avoid a crash?",
+      "options": [
+        "Average (it divides by the count)",
+        "Sum",
+        "Count with a condition",
+        "Printing a label"
+      ],
+      "answer": 0,
+      "explanation": "Dividing by the count breaks at count 0. Sum and count handle empty naturally (they return 0); the divide needs the guard."
+    },
+    {
+      "id": "u84l07e05",
+      "type": "multipleChoice",
+      "prompt": "Review (boundary): a pass is 'at least 50'. A score of exactly 50 should...",
+      "options": [
+        "Pass — use >= 50",
+        "Fail — use > 50",
+        "Be ignored",
+        "Crash"
+      ],
+      "answer": 0,
+      "explanation": "'At least 50' includes 50, so >= 50. Testing a value exactly on the boundary catches < vs <= bugs."
+    },
+    {
+      "id": "u84l07e06",
+      "type": "matchPairs",
+      "prompt": "Review: match each task to the edge case worth testing first.",
+      "pairs": [
+        {
+          "left": "Average a list",
+          "right": "Empty list"
+        },
+        {
+          "left": "Find the biggest",
+          "right": "A single-item list"
+        },
+        {
+          "left": "Count 'at least N'",
+          "right": "A value exactly N"
+        }
+      ],
+      "explanation": "Each pattern has a boundary input that stresses it. Listing them while planning stops bugs before they happen."
+    },
+    {
+      "id": "u84l07e07",
+      "type": "multipleChoice",
+      "prompt": "Review: a single-item list [7]. The biggest is...",
+      "options": [
+        "7 — the only item is the biggest",
+        "0",
+        "an error",
+        "the average"
+      ],
+      "answer": 0,
+      "explanation": "With one item, it is trivially the biggest. A correct track-the-biggest helper handles the single-item edge fine."
+    },
+    {
+      "id": "u84l07e08",
+      "type": "trueFalse",
+      "prompt": "Review: enumerating edge cases DURING planning is better than waiting for a crash.",
+      "answer": true,
+      "explanation": "Yes — the whole edge-case habit. Think of empty, zero, one, and boundary inputs up front so the helper handles them on purpose."
+    },
+    {
+      "id": "u84l07e09",
+      "type": "multipleChoice",
+      "prompt": "Review: why do edge-case bugs survive casual testing?",
+      "options": [
+        "Everyday inputs are far from the edges, so the one bad case rarely appears",
+        "They crash on every input",
+        "They change all results",
+        "They only happen in huge programs"
+      ],
+      "answer": 0,
+      "explanation": "The bug bites only at the edge. Unless you deliberately test empty/zero/one/boundary, normal inputs look fine and hide it."
+    },
+    {
+      "id": "u84l07e10",
+      "type": "multipleChoice",
+      "prompt": "The loop-back idea:",
+      "options": [
+        "List the edge cases (empty, zero, one, boundary) per pattern and guard the ones that would crash or lie",
+        "Edge cases never matter",
+        "Only normal inputs count",
+        "Every pattern needs an empty guard"
+      ],
+      "answer": 0,
+      "explanation": "Enumerating edges is prevention. Some patterns need a guard (average), some don't (sum). Knowing which is the skill."
+    }
+  ]
+}

@@ -1,0 +1,145 @@
+{
+  "unitId": "u69",
+  "lessonId": "u69l10",
+  "title": "Put it together: decomposition",
+  "idea": "LOOP: mix recall across this unit - spot too-big tasks, name sub-jobs, find repeats. No code.",
+  "exercises": [
+    {
+      "id": "u69l10e01",
+      "type": "multipleChoice",
+      "prompt": "What does 'decomposition' mean?",
+      "options": [
+        "Breaking a big problem into smaller sub-problems",
+        "Adding numbers",
+        "Repeating with a loop",
+        "Printing text"
+      ],
+      "answer": 0,
+      "explanation": "Decomposition is splitting a big task into smaller, solvable jobs. It's the heart of this unit."
+    },
+    {
+      "id": "u69l10e02",
+      "type": "multipleChoice",
+      "prompt": "A task is 'print one word'. Should you split it?",
+      "options": [
+        "No - it's a single step, already small enough",
+        "Yes, into ten jobs",
+        "Yes, always split everything",
+        "Only if it's Tuesday"
+      ],
+      "answer": 0,
+      "explanation": "Tiny one-step tasks don't need splitting. Split when there are several jobs or a repeat."
+    },
+    {
+      "id": "u69l10e03",
+      "type": "multiSelect",
+      "prompt": "Which are signs a task should be SPLIT? (Pick all.)",
+      "options": [
+        "It has several different jobs",
+        "A job repeats",
+        "It's one single action",
+        "It fits in one short step"
+      ],
+      "answer": [
+        0,
+        1
+      ],
+      "explanation": "Several jobs or a repeated job both call for a split. A single short action does not."
+    },
+    {
+      "id": "u69l10e04",
+      "type": "orderBlocks",
+      "prompt": "Order the sub-jobs of 'take an order, total it, print the receipt'.",
+      "blocks": [
+        "Print the receipt",
+        "Take the order",
+        "Total it"
+      ],
+      "answer": [
+        1,
+        2,
+        0
+      ],
+      "explanation": "Take, total, print - in that order. Decomposition keeps the jobs in a sensible sequence."
+    },
+    {
+      "id": "u69l10e05",
+      "type": "multipleChoice",
+      "prompt": "'Show the banner at the top and bottom.' The banner job...",
+      "options": [
+        "repeats, so it's worth naming once",
+        "happens zero times",
+        "is three separate jobs",
+        "cannot be named"
+      ],
+      "answer": 0,
+      "explanation": "The banner repeats top and bottom. A repeated job is the natural thing to name and reuse."
+    },
+    {
+      "id": "u69l10e06",
+      "type": "matchPairs",
+      "prompt": "Match each sub-job to its tool (review).",
+      "pairs": [
+        {
+          "left": "total of the prices",
+          "right": "sum"
+        },
+        {
+          "left": "highest mark",
+          "right": "max"
+        },
+        {
+          "left": "how many pass",
+          "right": "count with a condition"
+        }
+      ],
+      "explanation": "Each named sub-job maps to a familiar tool. Naming jobs then picking tools is the plan."
+    },
+    {
+      "id": "u69l10e07",
+      "type": "multipleChoice",
+      "prompt": "Why give each sub-job a clear name?",
+      "options": [
+        "So the plan reads clearly and each job is easy to find and fix",
+        "To make it longer",
+        "To hide its purpose",
+        "Names don't matter"
+      ],
+      "answer": 0,
+      "explanation": "Clear names make the plan readable and the jobs fixable. Vague names waste that chance."
+    },
+    {
+      "id": "u69l10e08",
+      "type": "trueFalse",
+      "prompt": "Decomposition is the same core skill you first met as 'order 2 to 3 steps', now deeper.",
+      "answer": true,
+      "explanation": "Yes - one pillar, revisited and deepened into named, reusable sub-jobs."
+    },
+    {
+      "id": "u69l10e09",
+      "type": "multipleChoice",
+      "prompt": "A big task feels scary. Decomposition helps because...",
+      "options": [
+        "it becomes many small, familiar jobs you can solve one by one",
+        "the task disappears",
+        "you skip the hard part",
+        "numbers shrink"
+      ],
+      "answer": 0,
+      "explanation": "Small familiar jobs replace one big unknown. That's why splitting makes hard problems doable."
+    },
+    {
+      "id": "u69l10e10",
+      "type": "multipleChoice",
+      "prompt": "You've learned to spot and name sub-jobs. The next step in this lap is...",
+      "options": [
+        "giving a reusable sub-job a name you can call - then writing it as code",
+        "giving up",
+        "never splitting again",
+        "only using loops"
+      ],
+      "answer": 0,
+      "explanation": "Next: name a reusable sub-plan (Unit 70), then write it as real runnable code (Unit 71). Great planning foundation!"
+    }
+  ]
+}

@@ -1,0 +1,137 @@
+{
+  "unitId": "u19",
+  "lessonId": "u19l06",
+  "title": "The yes/no fact inside a problem",
+  "idea": "Many problems quietly depend on one yes/no fact. Learning to spot that fact is the whole point of this unit. Thinking, not code.",
+  "exercises": [
+    {
+      "id": "u19l06e01",
+      "type": "multipleChoice",
+      "prompt": "PROBLEM: 'If it's raining, bring an umbrella.' What yes/no fact does the answer depend on?",
+      "options": [
+        "Is it raining?",
+        "How heavy is the umbrella?",
+        "What color is the sky?",
+        "How far is the walk?"
+      ],
+      "answer": 0,
+      "explanation": "The whole decision hinges on one fact: is it raining? Spotting that fact is the skill."
+    },
+    {
+      "id": "u19l06e02",
+      "type": "multipleChoice",
+      "prompt": "PROBLEM: 'Free shipping if the order is over 50.' The answer hinges on which yes/no fact?",
+      "options": [
+        "Is the order over 50?",
+        "What is being shipped?",
+        "Who placed the order?",
+        "How fast is shipping?"
+      ],
+      "answer": 0,
+      "explanation": "The yes/no fact is 'Is the order over 50?'. Everything else is extra detail."
+    },
+    {
+      "id": "u19l06e03",
+      "type": "trueFalse",
+      "prompt": "PROBLEM: 'You can enter if you have a ticket.' This problem depends on a yes/no fact.",
+      "answer": true,
+      "explanation": "Yes - 'Do you have a ticket?' is a yes/no fact, and entry depends on it."
+    },
+    {
+      "id": "u19l06e04",
+      "type": "multipleChoice",
+      "prompt": "PROBLEM: 'The pass is valid if the user is a member.' The key yes/no fact is...",
+      "options": [
+        "Is the user a member?",
+        "How old is the user?",
+        "What is the user's name?",
+        "Where does the user live?"
+      ],
+      "answer": 0,
+      "explanation": "'Is the user a member?' is the fact the pass depends on. Name, age, and place are distractions here."
+    },
+    {
+      "id": "u19l06e05",
+      "type": "multiSelect",
+      "prompt": "Select ALL problems whose answer hinges on a yes/no fact.",
+      "options": [
+        "Show a reminder if the task is due",
+        "Add 3 and 5",
+        "Unlock the phone if the code is correct",
+        "Charge extra if the bag is overweight"
+      ],
+      "answer": [
+        0,
+        2,
+        3
+      ],
+      "explanation": "Three of these hinge on a yes/no fact (due? correct? overweight?). 'Add 3 and 5' is just a calculation - no yes/no involved."
+    },
+    {
+      "id": "u19l06e06",
+      "type": "matchPairs",
+      "prompt": "Match each problem to the yes/no fact it depends on.",
+      "pairs": [
+        {
+          "left": "Give a discount to members",
+          "right": "Is the person a member?"
+        },
+        {
+          "left": "Warn when battery is low",
+          "right": "Is the battery low?"
+        },
+        {
+          "left": "Open the gate for staff",
+          "right": "Is the person staff?"
+        }
+      ],
+      "explanation": "Every decision problem hides a yes/no fact. Pulling it out is how you start to solve it."
+    },
+    {
+      "id": "u19l06e07",
+      "type": "multipleChoice",
+      "prompt": "PROBLEM: 'Print a warning if the fuel is empty.' Which is the yes/no fact?",
+      "options": [
+        "Is the fuel empty?",
+        "How big is the tank?",
+        "What kind of fuel?",
+        "Where is the car?"
+      ],
+      "answer": 0,
+      "explanation": "The warning depends on one fact: is the fuel empty? Yes or no decides whether to warn."
+    },
+    {
+      "id": "u19l06e08",
+      "type": "multipleChoice",
+      "prompt": "A problem says 'do X when a fact is true.' What should you look for first?",
+      "options": [
+        "The single yes/no fact the answer depends on",
+        "The longest sentence",
+        "A number to add",
+        "A color"
+      ],
+      "answer": 0,
+      "explanation": "Find the yes/no fact first. Once you name it, the rest of the plan falls into place."
+    },
+    {
+      "id": "u19l06e09",
+      "type": "trueFalse",
+      "prompt": "PROBLEM: 'Add up three prices and show the total.' This depends on a yes/no fact.",
+      "answer": false,
+      "explanation": "No yes/no fact here - it's a straight calculation. Not every problem has a yes/no question inside."
+    },
+    {
+      "id": "u19l06e10",
+      "type": "multipleChoice",
+      "prompt": "Why practice spotting the yes/no fact before writing any code?",
+      "options": [
+        "Because the fact is what the decision will be built on",
+        "Because code comes before thinking",
+        "Because facts are always numbers",
+        "So we can skip the problem"
+      ],
+      "answer": 0,
+      "explanation": "The yes/no fact is the hinge of the whole decision. Name it clearly and the solution becomes much easier later."
+    }
+  ]
+}

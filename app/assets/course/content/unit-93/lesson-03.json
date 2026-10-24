@@ -1,0 +1,166 @@
+{
+  "unitId": "u93",
+  "lessonId": "u93l03",
+  "title": "Solve it: average temperature, safely",
+  "idea": "GUIDED INTEGRATED PROBLEM. Average = sum / count, needing two state variables AND an empty-list guard so you never divide by zero.",
+  "problem": "Daily temperatures are [20, 24, 16, 20]. Show the average. If the list is empty, show 0 instead of crashing.",
+  "exercises": [
+    {
+      "id": "u93l03e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: temps [20, 24, 16, 20]; show the average; if empty, show 0.\n\nUnderstand — the average needs which TWO facts about the list?",
+      "explanation": "Average = total divided by how many. You must track BOTH a running total and a count.",
+      "options": [
+        "The total of the values AND how many values there are",
+        "Only the total",
+        "Only the biggest value",
+        "Only the first value"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u93l03e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "What special (edge) case does the problem warn about?",
+      "explanation": "An empty list would make count 0, and dividing by 0 crashes. The guard is part of understanding the problem.",
+      "options": [
+        "An empty list — dividing by zero must be avoided",
+        "A list that is too long",
+        "Negative temperatures",
+        "A list with one item"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u93l03e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example — by hand: total of [20, 24, 16, 20] is 80, count is 4. Average = ?",
+      "explanation": "80 / 4 = 20. Hand-working both the total (80) and count (4) gives you the check value 20.",
+      "options": [
+        "20",
+        "24",
+        "80",
+        "16"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u93l03e04",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Edge example — by hand, the list is empty []. The problem says show what?",
+      "explanation": "With no values the average is undefined, so the problem tells us to show 0 instead of dividing by zero.",
+      "options": [
+        "0",
+        "Crash with an error",
+        "1",
+        "The word empty"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u93l03e05",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Plan — order the steps, guard included.",
+      "explanation": "Build total and count in the loop, THEN guard: if count is 0 show 0, else show total/count. The guard protects the division.",
+      "blocks": [
+        "Start total at 0 and count at 0",
+        "For each temp, add it to total and add 1 to count",
+        "If count is 0, the average is 0",
+        "Otherwise the average is total / count"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "id": "u93l03e06",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Why check 'if count is 0' BEFORE dividing?",
+      "explanation": "Division by zero crashes. The guard is an edge-case check that must come before the risky operation.",
+      "options": [
+        "Dividing by zero crashes, so the guard must come first",
+        "It makes the average larger",
+        "Counts are always zero",
+        "To avoid using a loop"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u93l03e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code — arrange the function with its guard.",
+      "explanation": "Accumulate total and count, then guard the division. Returning early on empty keeps the division safe.",
+      "blocks": [
+        "def average(temps):",
+        "    total = 0",
+        "    count = 0",
+        "    for temp in temps:",
+        "        total = total + temp",
+        "        count = count + 1",
+        "    if count == 0:",
+        "        return 0",
+        "    return total / count"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "id": "u93l03e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Complete the guard so an empty list is safe:\n\nif count ____ 0:\n    return 0\nreturn total / count",
+      "explanation": "You compare count to 0 with ==. If equal, return 0 and skip the division entirely.",
+      "answer": "==",
+      "acceptable": [
+        "=="
+      ]
+    },
+    {
+      "id": "u93l03e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check — average([20, 24, 16, 20]) returns 20.0, hand example was 20. Verdict?",
+      "explanation": "20.0 equals 20 in value, matching the hand example. Division gives a decimal, which is expected and correct.",
+      "options": [
+        "Passes — matches the hand example",
+        "Fails",
+        "Unknown",
+        "Rewrite the example"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u93l03e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Re-check the EDGE: average([]) — what does the guard make it return?",
+      "explanation": "count stays 0, so the guard returns 0 before any division. The empty case is handled, not crashed.",
+      "options": [
+        "0",
+        "A crash",
+        "1",
+        "None of these"
+      ],
+      "answer": 0
+    }
+  ]
+}

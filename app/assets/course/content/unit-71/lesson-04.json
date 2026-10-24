@@ -1,0 +1,138 @@
+{
+  "unitId": "u71",
+  "lessonId": "u71l04",
+  "title": "Common mix-ups with def and call",
+  "idea": "TOOL: spot the usual beginner mistakes - forgetting the call, wrong def line, missing colon.",
+  "exercises": [
+    {
+      "id": "u71l04e01",
+      "type": "multipleChoice",
+      "prompt": "This prints nothing:\n\ndef greet():\n    print(\"Hi\")\n\nWhat's missing?",
+      "options": [
+        "A call: greet()",
+        "A second def",
+        "A number",
+        "More indentation"
+      ],
+      "answer": 0,
+      "explanation": "The sub-plan is defined but never called. Add greet() to run it. Forgetting the call is the top mistake."
+    },
+    {
+      "id": "u71l04e02",
+      "type": "multipleChoice",
+      "prompt": "What's wrong here?\n\ndef greet()\n    print(\"Hi\")\ngreet()",
+      "options": [
+        "The def line is missing its colon",
+        "greet() should be greeting()",
+        "print is spelled wrong",
+        "nothing is wrong"
+      ],
+      "answer": 0,
+      "explanation": "A def line needs a colon: 'def greet():'. Without the ':' Python can't tell the body is starting."
+    },
+    {
+      "id": "u71l04e03",
+      "type": "multipleChoice",
+      "prompt": "What's wrong here?\n\ndef greet():\nprint(\"Hi\")\ngreet()",
+      "options": [
+        "The body print isn't indented under def",
+        "greet() is wrong",
+        "there are too many colons",
+        "nothing is wrong"
+      ],
+      "answer": 0,
+      "explanation": "The print must be indented to be inside greet. Un-indented, it isn't part of the sub-plan."
+    },
+    {
+      "id": "u71l04e04",
+      "type": "trueFalse",
+      "prompt": "Writing 'greet' (without the parentheses) on its own line calls the sub-plan.",
+      "answer": false,
+      "explanation": "No. You must write greet() with the parentheses to call it. 'greet' alone does not run the body."
+    },
+    {
+      "id": "u71l04e05",
+      "type": "multipleChoice",
+      "prompt": "A learner says 'I defined greet so Hi should have printed.' What's the misunderstanding?",
+      "options": [
+        "Defining doesn't run it - you must call greet()",
+        "You can't define greet",
+        "Hi is spelled wrong",
+        "greet needs a number"
+      ],
+      "answer": 0,
+      "explanation": "Classic define-vs-run mix-up. The def only describes greet; calling greet() is what makes 'Hi' print."
+    },
+    {
+      "id": "u71l04e06",
+      "type": "multiSelect",
+      "prompt": "Which of these are REQUIRED to define and run a printing sub-plan? (Pick all.)",
+      "options": [
+        "the word def and a name",
+        "a colon at the end of the def line",
+        "an indented body",
+        "a call like greet()"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "You need the def line (def name() :), an indented body, AND a call to run it. All four matter."
+    },
+    {
+      "id": "u71l04e07",
+      "type": "multipleChoice",
+      "prompt": "Fix this so 'Hi' prints:\n\ndef greet():\n    print(\"Hi\")\n____",
+      "options": [
+        "greet()",
+        "greet",
+        "def greet",
+        "print greet"
+      ],
+      "answer": 0,
+      "explanation": "Add the call greet() on the last line. Now the defined sub-plan actually runs and prints 'Hi'."
+    },
+    {
+      "id": "u71l04e08",
+      "type": "matchPairs",
+      "prompt": "Match each mistake to its fix.",
+      "pairs": [
+        {
+          "left": "nothing prints",
+          "right": "add a call greet()"
+        },
+        {
+          "left": "def greet() with no colon",
+          "right": "add ':' at the end"
+        },
+        {
+          "left": "body not indented",
+          "right": "indent the body under def"
+        }
+      ],
+      "explanation": "Three classic slips: missing call, missing colon, missing indent. Each has a clear, small fix."
+    },
+    {
+      "id": "u71l04e09",
+      "type": "trueFalse",
+      "prompt": "A missing colon on the def line and a missing call cause the SAME problem.",
+      "answer": false,
+      "explanation": "No. A missing colon is an error in the def itself; a missing call means it's defined fine but never runs."
+    },
+    {
+      "id": "u71l04e10",
+      "type": "multipleChoice",
+      "prompt": "The safest mental check after writing a sub-plan:",
+      "options": [
+        "did I both DEFINE it and CALL it?",
+        "did I use a big number?",
+        "did I avoid print?",
+        "did I add a loop?"
+      ],
+      "answer": 0,
+      "explanation": "Always check both halves: define (def...) and run (name()). Forgetting the call is the most common bug here."
+    }
+  ]
+}

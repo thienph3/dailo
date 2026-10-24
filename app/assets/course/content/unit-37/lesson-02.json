@@ -1,0 +1,130 @@
+{
+  "unitId": "u37",
+  "lessonId": "u37l02",
+  "title": "The number in range is the count",
+  "idea": "range(n) runs the body n times. Change n, change how many repeats. Practice reading and setting the count.",
+  "exercises": [
+    {
+      "id": "u37l02e01",
+      "type": "multipleChoice",
+      "prompt": "range(7) repeats the body how many times?",
+      "options": [
+        "7",
+        "6",
+        "8",
+        "1"
+      ],
+      "answer": 0,
+      "explanation": "range(7) means seven passes. The number inside range is the repeat count, straight up."
+    },
+    {
+      "id": "u37l02e02",
+      "type": "multipleChoice",
+      "prompt": "To make a loop repeat 10 times, what do you write?",
+      "options": [
+        "range(10)",
+        "range(9)",
+        "range(11)",
+        "repeat(10)"
+      ],
+      "answer": 0,
+      "explanation": "range(10) gives ten passes. Want N repeats? Write range(N)."
+    },
+    {
+      "id": "u37l02e03",
+      "type": "trueFalse",
+      "prompt": "Changing range(3) to range(300) makes the body run 300 times instead of 3.",
+      "answer": true,
+      "explanation": "One number change scales the repeats from 3 to 300. That's the power loops have over copy-paste."
+    },
+    {
+      "id": "u37l02e04",
+      "type": "multipleChoice",
+      "prompt": "What shows?\n\nfor i in range(4):\n    print(\"X\")",
+      "options": [
+        "X\nX\nX\nX",
+        "X",
+        "4",
+        "XXXX on one line"
+      ],
+      "answer": 0,
+      "explanation": "range(4) = four passes, one X each on its own line — four X lines."
+    },
+    {
+      "id": "u37l02e05",
+      "type": "fillBlank",
+      "prompt": "Fill in to repeat the body exactly 8 times:\n\nfor i in range(____):\n    print(\"Beep\")",
+      "answer": "8",
+      "acceptable": [
+        "8"
+      ],
+      "explanation": "range(8) runs the body eight times. The count lives inside range."
+    },
+    {
+      "id": "u37l02e06",
+      "type": "matchPairs",
+      "prompt": "Match each range to how many times the body runs.",
+      "pairs": [
+        {
+          "left": "range(2)",
+          "right": "2 times"
+        },
+        {
+          "left": "range(6)",
+          "right": "6 times"
+        },
+        {
+          "left": "range(1)",
+          "right": "1 time"
+        }
+      ],
+      "explanation": "range(n) always runs the body n times. Reading the count is just reading the number."
+    },
+    {
+      "id": "u37l02e07",
+      "type": "multipleChoice",
+      "prompt": "range(1) runs the body how many times?",
+      "options": [
+        "1",
+        "0",
+        "2",
+        "Forever"
+      ],
+      "answer": 0,
+      "explanation": "range(1) is a single pass. The loop still works — it just doesn't repeat."
+    },
+    {
+      "id": "u37l02e08",
+      "type": "multipleChoice",
+      "prompt": "You want Hi to show 3 times but wrote range(2). What's the fix?",
+      "options": [
+        "Change range(2) to range(3)",
+        "Change Hi to Hi Hi",
+        "Add a colon",
+        "Remove the indent"
+      ],
+      "answer": 0,
+      "explanation": "The count is one short, so bump range to 3. The number in range controls repeats."
+    },
+    {
+      "id": "u37l02e09",
+      "type": "trueFalse",
+      "prompt": "range(0) runs the body zero times — nothing prints.",
+      "answer": true,
+      "explanation": "A count of 0 means no passes. Loops handle 'none' without error — a useful edge case to know."
+    },
+    {
+      "id": "u37l02e10",
+      "type": "multipleChoice",
+      "prompt": "A program needs to print a line for each of 50 seats. What range do you use?",
+      "options": [
+        "range(50)",
+        "range(49)",
+        "range(51)",
+        "range(5)"
+      ],
+      "answer": 0,
+      "explanation": "50 seats, 50 repeats — range(50). Match the count in range to the number of things."
+    }
+  ]
+}

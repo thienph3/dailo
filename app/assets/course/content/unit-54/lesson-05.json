@@ -1,0 +1,127 @@
+{
+  "unitId": "u54",
+  "lessonId": "u54l05",
+  "title": "Changing items, one or many",
+  "idea": "Fluency with item assignment, including changing items inside a loop with range(len(...)). Combines assignment, indexing, and len.",
+  "exercises": [
+    {
+      "id": "u54l05e01",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nn = [1, 2, 3]\nn[0] = 10\nn[2] = 30\nprint(n)",
+      "options": [
+        "[10, 2, 30]",
+        "[1, 2, 3]",
+        "[10, 20, 30]",
+        "[30, 2, 10]"
+      ],
+      "answer": 0,
+      "explanation": "Two assignments: spot 0 becomes 10, spot 2 becomes 30. The middle item is untouched: [10, 2, 30]."
+    },
+    {
+      "id": "u54l05e02",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nn = [5, 5, 5]\nn[1] = n[1] * 2\nprint(n)",
+      "options": [
+        "[5, 10, 5]",
+        "[10, 10, 10]",
+        "[5, 5, 5]",
+        "[5, 25, 5]"
+      ],
+      "answer": 0,
+      "explanation": "n[1] is 5; 5 * 2 is 10; that goes back into spot 1. Only the middle item changes: [5, 10, 5]."
+    },
+    {
+      "id": "u54l05e03",
+      "type": "trueFalse",
+      "prompt": "You can read an item and write to the same spot in one line, like n[0] = n[0] + 1.",
+      "answer": true,
+      "explanation": "The right side is computed first using the old value, then stored back in the spot. It's the list version of count = count + 1."
+    },
+    {
+      "id": "u54l05e04",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nn = [2, 4, 6]\nfor i in range(len(n)):\n    n[i] = n[i] + 1\nprint(n)",
+      "options": [
+        "[3, 5, 7]",
+        "[2, 4, 6]",
+        "[3, 4, 6]",
+        "[1, 3, 5]"
+      ],
+      "answer": 0,
+      "explanation": "For each position i, add 1 to n[i]. 2->3, 4->5, 6->7, giving [3, 5, 7]. The loop changes every item in place."
+    },
+    {
+      "id": "u54l05e05",
+      "type": "fillBlank",
+      "prompt": "Double every item. Fill in the position used on both sides:\n\nn = [1, 2, 3]\nfor i in range(len(n)):\n    n[i] = n[____] * 2\nprint(n)",
+      "answer": "i",
+      "acceptable": ["i"],
+      "explanation": "Both sides use position i: n[i] = n[i] * 2. The loop doubles each item, giving [2, 4, 6]."
+    },
+    {
+      "id": "u54l05e06",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nn = [7, 8, 9]\nfor i in range(len(n)):\n    n[i] = 0\nprint(n)",
+      "options": [
+        "[0, 0, 0]",
+        "[7, 8, 9]",
+        "[0]",
+        "[0, 8, 9]"
+      ],
+      "answer": 0,
+      "explanation": "Every position is set to 0, so the whole list becomes [0, 0, 0]. Assigning in a loop can reset every item."
+    },
+    {
+      "id": "u54l05e07",
+      "type": "orderBlocks",
+      "prompt": "Arrange code that adds 10 to every item in the list.",
+      "blocks": [
+        "n = [1, 2, 3]",
+        "for i in range(len(n)):",
+        "    n[i] = n[i] + 10",
+        "print(n)"
+      ],
+      "answer": [0, 1, 2, 3],
+      "explanation": "Loop over every position and add 10 to each item: [11, 12, 13]. range(len(n)) hits every spot."
+    },
+    {
+      "id": "u54l05e08",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nn = [3, 1, 4]\nn[1] = 1\nprint(n)",
+      "options": [
+        "[3, 1, 4]",
+        "[1, 1, 4]",
+        "[3, 1, 1]",
+        "error"
+      ],
+      "answer": 0,
+      "explanation": "Position 1 already held 1, and we assigned 1 again — no visible change. Assigning the same value is harmless."
+    },
+    {
+      "id": "u54l05e09",
+      "type": "multipleChoice",
+      "prompt": "Why use range(len(n)) when changing every item in a loop?",
+      "options": [
+        "It visits exactly the valid positions, so n[i] is always safe",
+        "It makes the list longer",
+        "It sorts the list first",
+        "It only works for 3 items"
+      ],
+      "answer": 0,
+      "explanation": "range(len(n)) gives 0 up to len-1 — every real position. So n[i] never goes out of range, whatever the length."
+    },
+    {
+      "id": "u54l05e10",
+      "type": "multipleChoice",
+      "prompt": "Same code, new list:\n\nn = [0, 0]\nfor i in range(len(n)):\n    n[i] = n[i] + 5\nprint(n)\n\nWhat shows?",
+      "options": [
+        "[5, 5]",
+        "[0, 0]",
+        "[5, 0]",
+        "[10]"
+      ],
+      "answer": 0,
+      "explanation": "Each 0 gets 5 added, giving [5, 5]. The same 'change every item' loop adapts to the new values and length."
+    }
+  ]
+}

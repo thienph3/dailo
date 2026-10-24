@@ -1,0 +1,102 @@
+{
+  "unitId": "u11",
+  "lessonId": "u11l03",
+  "title": "Solve it: total for many of the same item",
+  "idea": "GUIDED PROBLEM. Multiplication via UEPCC. Learner recognizes 'many of the same' means multiply.",
+  "problem": "A ticket costs 6. Show the total cost of 4 tickets.",
+  "exercises": [
+    {
+      "id": "u11l03e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: One ticket costs 6. Show the cost of 4 tickets.\n\nOUTPUT?",
+      "options": ["The total cost of 4 tickets", "The price of one ticket", "The number 4", "How many tickets"],
+      "answer": 0,
+      "explanation": "Output = total cost of all 4 tickets."
+    },
+    {
+      "id": "u11l03e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "INPUTS?",
+      "options": ["Price per ticket (6) and how many (4)", "Only 24", "The word ticket", "None"],
+      "answer": 0,
+      "explanation": "The price each, and the count."
+    },
+    {
+      "id": "u11l03e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "By hand: 4 tickets at 6 each. Total?",
+      "options": ["24", "10", "46", "2"],
+      "answer": 0,
+      "explanation": "6 + 6 + 6 + 6 = 24, which is 6 x 4. Your check value is 24."
+    },
+    {
+      "id": "u11l03e04",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "'Four of the same price' — what's the shortcut instead of adding 6 four times?",
+      "options": ["Multiply: 6 * 4", "Subtract: 6 - 4", "Divide: 6 / 4", "Add once: 6 + 4"],
+      "answer": 0,
+      "explanation": "Repeated addition of the same number IS multiplication. Recognizing this pattern is the key skill."
+    },
+    {
+      "id": "u11l03e05",
+      "type": "matchPairs",
+      "uepcc": "P",
+      "prompt": "Match each everyday phrase to its operation.",
+      "pairs": [
+        {"left": "total of different items", "right": "+ add"},
+        {"left": "change / difference", "right": "- subtract"},
+        {"left": "many of the same", "right": "* multiply"}
+      ],
+      "explanation": "Spotting which operation a phrase implies is the heart of planning a calculation."
+    },
+    {
+      "id": "u11l03e06",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Which operator multiplies in Python?",
+      "options": ["*", "x", "times", "^"],
+      "answer": 0,
+      "explanation": "The * symbol means multiply."
+    },
+    {
+      "id": "u11l03e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code it (remember, compute, show).",
+      "blocks": ["total = ticket_price * ticket_count", "ticket_count = 4", "ticket_price = 6", "print(total)"],
+      "answer": [2, 1, 0, 3],
+      "explanation": "Store the price, store the count, total = ticket_price * ticket_count, print total. Names echo the problem so the code reads like the plan."
+    },
+    {
+      "id": "u11l03e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Complete it:\n\nticket_price = 6\nticket_count = 4\ntotal = ticket_price ____ ticket_count\nprint(total)",
+      "answer": "*",
+      "acceptable": ["*"],
+      "explanation": "Multiply: total = ticket_price * ticket_count = 24."
+    },
+    {
+      "id": "u11l03e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Code shows 24; example said 24. Verdict?",
+      "options": ["Passes", "Fails", "Unknown", "Change the example"],
+      "answer": 0,
+      "explanation": "Matches — correct."
+    },
+    {
+      "id": "u11l03e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "New inputs: ticket_price = 5, ticket_count = 3. print(total) shows?",
+      "options": ["15", "8", "53", "2"],
+      "answer": 0,
+      "explanation": "5 * 3 = 15. The same solution handles new numbers."
+    }
+  ]
+}

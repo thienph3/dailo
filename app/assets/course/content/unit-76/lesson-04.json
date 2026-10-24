@@ -1,0 +1,128 @@
+{
+  "unitId": "u76",
+  "lessonId": "u76l04",
+  "title": "A sub-plan calling another sub-plan",
+  "idea": "Composing functions: a sub-plan's BODY can call another sub-plan and use its returned value. Composition lives inside a definition too.",
+  "exercises": [
+    {
+      "id": "u76l04e01",
+      "type": "multipleChoice",
+      "prompt": "Read:\n\ndef double(n):\n    return n * 2\n\ndef double_plus_one(n):\n    return double(n) + 1\n\nprint(double_plus_one(5))",
+      "options": [
+        "11",
+        "10",
+        "6",
+        "12"
+      ],
+      "answer": 0,
+      "explanation": "double_plus_one calls double(5) -> 10, then adds 1 -> 11. A sub-plan can use another sub-plan inside its body."
+    },
+    {
+      "id": "u76l04e02",
+      "type": "trueFalse",
+      "prompt": "A sub-plan's body is allowed to call another sub-plan and use its returned value.",
+      "answer": true,
+      "explanation": "Yes. Inside double_plus_one, the call double(n) runs and its returned value is used in the + 1. Composition inside a def."
+    },
+    {
+      "id": "u76l04e03",
+      "type": "multipleChoice",
+      "prompt": "In 'return double(n) + 1', what runs first?",
+      "options": [
+        "double(n) — it returns a value, then + 1 is added",
+        "+ 1 runs first",
+        "return runs first",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "The inner call double(n) resolves to a value first; then + 1 is added; then that result is returned."
+    },
+    {
+      "id": "u76l04e04",
+      "type": "multipleChoice",
+      "prompt": "Why is building double_plus_one on top of double a good idea?",
+      "options": [
+        "It reuses double instead of repeating its logic",
+        "it runs slower",
+        "it needs no parameters",
+        "there is no reason"
+      ],
+      "answer": 0,
+      "explanation": "Reusing double avoids rewriting 'n * 2'. If double ever changes, double_plus_one benefits automatically."
+    },
+    {
+      "id": "u76l04e05",
+      "type": "fillBlank",
+      "prompt": "Complete so it uses double inside the body:\n\ndef double(n):\n    return n * 2\n\ndef double_plus_one(n):\n    return ____(n) + 1",
+      "answer": "double",
+      "acceptable": ["double"],
+      "explanation": "Call double(n) to get n * 2, then add 1. The body composes with the other sub-plan."
+    },
+    {
+      "id": "u76l04e06",
+      "type": "multipleChoice",
+      "prompt": "Predict:\n\ndef double(n):\n    return n * 2\n\ndef double_plus_one(n):\n    return double(n) + 1\n\nprint(double_plus_one(10))",
+      "options": [
+        "21",
+        "20",
+        "11",
+        "None"
+      ],
+      "answer": 0,
+      "explanation": "double(10) is 20; + 1 is 21. The sub-plan reuses double for any input."
+    },
+    {
+      "id": "u76l04e07",
+      "type": "orderBlocks",
+      "prompt": "Arrange: define double, define area_doubled that returns double(width * height), then print area_doubled(3, 4).",
+      "blocks": [
+        "def double(n):",
+        "    return n * 2",
+        "def area_doubled(width, height):",
+        "    return double(width * height)",
+        "print(area_doubled(3, 4))"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "explanation": "area_doubled computes width * height = 12, feeds it to double -> 24. Composition inside a def, then a call."
+    },
+    {
+      "id": "u76l04e08",
+      "type": "multipleChoice",
+      "prompt": "Predict:\n\ndef double(n):\n    return n * 2\n\ndef area_doubled(width, height):\n    return double(width * height)\n\nprint(area_doubled(3, 4))",
+      "options": [
+        "24",
+        "12",
+        "14",
+        "7"
+      ],
+      "answer": 0,
+      "explanation": "width * height is 12; double(12) is 24. The inner math runs, then double doubles it."
+    },
+    {
+      "id": "u76l04e09",
+      "type": "trueFalse",
+      "prompt": "For a sub-plan to use another's result inside its body, that other sub-plan must RETURN a value.",
+      "answer": true,
+      "explanation": "Yes. You can only use a value that's handed back. A printing-only sub-plan would give None inside the body."
+    },
+    {
+      "id": "u76l04e10",
+      "type": "multipleChoice",
+      "prompt": "The idea of this lesson:",
+      "options": [
+        "A sub-plan can call another sub-plan in its body and use the returned value",
+        "sub-plans can't call each other",
+        "composition only works in print",
+        "bodies can't contain calls"
+      ],
+      "answer": 0,
+      "explanation": "Composition isn't only for the main plan — a sub-plan's body can reuse another sub-plan's returned answer."
+    }
+  ]
+}

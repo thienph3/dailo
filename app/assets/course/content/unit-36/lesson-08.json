@@ -1,0 +1,133 @@
+{
+  "unitId": "u36",
+  "lessonId": "u36l08",
+  "title": "A loop with a decision inside — gently",
+  "idea": "A quick peek: the loop body can be any step you know, including an if. The body still just repeats each pass. Reviews if from earlier laps.",
+  "exercises": [
+    {
+      "id": "u36l08e01",
+      "type": "multipleChoice",
+      "prompt": "Can the body of a 'for each' loop contain an if?",
+      "options": [
+        "Yes — the body can be any steps you know, including an if",
+        "No — loops forbid if",
+        "Only before the loop",
+        "Only after the loop"
+      ],
+      "answer": 0,
+      "explanation": "The body is just steps; an if is a step. Each pass runs the if again. We'll go deeper later — this is a gentle peek."
+    },
+    {
+      "id": "u36l08e02",
+      "type": "multipleChoice",
+      "prompt": "Review: what does an if do?",
+      "options": [
+        "Runs its indented step only when the condition is true",
+        "Repeats a step",
+        "Shows every line",
+        "Deletes code"
+      ],
+      "answer": 0,
+      "explanation": "if is a yes/no gate: the body runs only when the condition is true. A loop, by contrast, repeats."
+    },
+    {
+      "id": "u36l08e03",
+      "type": "trueFalse",
+      "prompt": "A loop repeats, and an if decides — they do different jobs.",
+      "answer": true,
+      "explanation": "Loop = repeat; if = choose. They combine well: repeat a check for each pass. Different tools, different jobs."
+    },
+    {
+      "id": "u36l08e04",
+      "type": "multipleChoice",
+      "prompt": "Review: which comparison is true, 7 > 3?",
+      "options": [
+        "True",
+        "False",
+        "It is not a comparison",
+        "7 equals 3"
+      ],
+      "answer": 0,
+      "explanation": "7 is greater than 3, so 7 > 3 is True. Comparisons feed if conditions — a quick recap from Lap 2."
+    },
+    {
+      "id": "u36l08e05",
+      "type": "multipleChoice",
+      "prompt": "In 'for each pass: if ...: print(...)', how many times does the if get checked over 4 passes?",
+      "options": [
+        "4 — once per pass",
+        "1",
+        "0",
+        "8"
+      ],
+      "answer": 0,
+      "explanation": "The whole body repeats each pass, so the if runs once per pass — four checks over four passes."
+    },
+    {
+      "id": "u36l08e06",
+      "type": "trueFalse",
+      "prompt": "Each pass of a loop runs the whole body fresh, including any if inside it.",
+      "answer": true,
+      "explanation": "Yes — every pass re-runs the body top to bottom. An if inside gets re-evaluated each time."
+    },
+    {
+      "id": "u36l08e07",
+      "type": "matchPairs",
+      "prompt": "Match each tool to its one-line job.",
+      "pairs": [
+        {
+          "left": "Loop",
+          "right": "Repeat a step"
+        },
+        {
+          "left": "if",
+          "right": "Do a step only when true"
+        },
+        {
+          "left": "print",
+          "right": "Show something"
+        }
+      ],
+      "explanation": "You now have repeat, decide, and show — the building blocks you'll combine in later units."
+    },
+    {
+      "id": "u36l08e08",
+      "type": "multipleChoice",
+      "prompt": "Why only a gentle peek at if-inside-a-loop now?",
+      "options": [
+        "Combining them fully comes in a later unit; first get the loop shape solid",
+        "Because if does not work in loops",
+        "Because it is too easy",
+        "Because loops are being removed"
+      ],
+      "answer": 0,
+      "explanation": "One idea at a time: solid loops first, then combining with if later. For now, just know the body can hold any step."
+    },
+    {
+      "id": "u36l08e09",
+      "type": "multipleChoice",
+      "prompt": "Review: = and == are different. Which one COMPARES two values?",
+      "options": [
+        "==",
+        "=",
+        "both",
+        "neither"
+      ],
+      "answer": 0,
+      "explanation": "== compares; = assigns. A recap from Lap 2 that stays true inside loops too."
+    },
+    {
+      "id": "u36l08e10",
+      "type": "multipleChoice",
+      "prompt": "The big takeaway of this unit so far?",
+      "options": [
+        "A 'for each' loop repeats a body once per thing, and the body can be any steps",
+        "Loops replace all other code",
+        "if no longer exists",
+        "Repetition is impossible"
+      ],
+      "answer": 0,
+      "explanation": "The loop repeats a body per item; the body is ordinary steps. That foundation carries into for + range next."
+    }
+  ]
+}

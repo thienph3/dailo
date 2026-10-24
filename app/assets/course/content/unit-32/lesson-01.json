@@ -1,0 +1,131 @@
+{
+  "unitId": "u32",
+  "lessonId": "u32l01",
+  "title": "Wrong answer, not a crash",
+  "idea": "The idea: a program can run fine yet give the WRONG answer because the reasoning is flawed. Our new job is to debug thinking.",
+  "exercises": [
+    {
+      "id": "u32l01e01",
+      "type": "multipleChoice",
+      "prompt": "A program runs with no error, but prints the wrong result. What kind of bug is this?",
+      "options": [
+        "A logic bug — the reasoning is wrong",
+        "A typo the computer refuses to run",
+        "A broken keyboard",
+        "It is not a bug at all"
+      ],
+      "answer": 0,
+      "explanation": "A logic bug: the code runs, but the reasoning behind it is wrong. These are the ones we learn to hunt now."
+    },
+    {
+      "id": "u32l01e02",
+      "type": "trueFalse",
+      "prompt": "If a program does not crash, its answer must be correct.",
+      "answer": false,
+      "explanation": "Not true. The computer only does what you told it. If you told it the wrong thing, it happily prints a wrong answer."
+    },
+    {
+      "id": "u32l01e03",
+      "type": "multipleChoice",
+      "prompt": "To find a logic bug, what is the most useful first step?",
+      "options": [
+        "Work out the correct answer by hand, then compare",
+        "Add more print lines until it works",
+        "Rewrite everything from scratch",
+        "Ask the computer to guess"
+      ],
+      "answer": 0,
+      "explanation": "Work out the correct answer by hand first. Without knowing the right answer, you cannot tell the output is wrong."
+    },
+    {
+      "id": "u32l01e04",
+      "type": "multipleChoice",
+      "prompt": "A pass/fail checker should print 'Pass' for a score of 50 or more. For a score of 70 it printed 'Fail'. What does that tell you?",
+      "options": [
+        "The condition's logic is wrong",
+        "70 is not a number",
+        "The computer made a random mistake",
+        "'Pass' and 'Fail' mean the same thing"
+      ],
+      "answer": 0,
+      "explanation": "70 should pass, so the output is wrong. The reasoning in the condition must be flawed, not the computer."
+    },
+    {
+      "id": "u32l01e05",
+      "type": "multipleChoice",
+      "prompt": "Which everyday habit best matches 'debugging the reasoning'?",
+      "options": [
+        "Re-reading the recipe to find which step was wrong",
+        "Buying a new oven",
+        "Throwing the cake away and guessing",
+        "Blaming the flour"
+      ],
+      "answer": 0,
+      "explanation": "Re-reading a recipe to see WHY the cake came out wrong is debugging reasoning — checking the steps against the goal."
+    },
+    {
+      "id": "u32l01e06",
+      "type": "trueFalse",
+      "prompt": "In this unit we fix flawed LOGIC, not spelling mistakes in keywords.",
+      "answer": true,
+      "explanation": "Right. This beat is about reasoning: wrong comparisons, wrong order, missed cases — not typos like 'pirnt'."
+    },
+    {
+      "id": "u32l01e07",
+      "type": "multipleChoice",
+      "prompt": "A checker for 'is it freezing?' prints 'Freezing' when the temperature is 20 degrees. 20 is warm. What is the FIRST thing to suspect?",
+      "options": [
+        "The comparison in the condition is backwards or wrong",
+        "20 is secretly cold",
+        "print() is broken",
+        "The program needs to run twice"
+      ],
+      "answer": 0,
+      "explanation": "The condition that decides 'Freezing' is testing the wrong thing. Suspect the reasoning in the comparison."
+    },
+    {
+      "id": "u32l01e08",
+      "type": "orderBlocks",
+      "prompt": "Put the debugging steps in a sensible order.",
+      "blocks": [
+        "Work out the correct answer by hand",
+        "Run the program and read the actual output",
+        "Compare actual with correct",
+        "Find which step's reasoning is wrong"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "First decide the correct answer by hand, run to see the actual output, compare, then find the flawed step."
+    },
+    {
+      "id": "u32l01e09",
+      "type": "multipleChoice",
+      "prompt": "Why is 'the computer made a mistake' almost never the real cause?",
+      "options": [
+        "The computer only does exactly what the code says",
+        "Computers are always tired",
+        "Computers prefer wrong answers",
+        "Because answers are random"
+      ],
+      "answer": 0,
+      "explanation": "The computer follows instructions exactly. A wrong answer means the instructions (your reasoning) were wrong."
+    },
+    {
+      "id": "u32l01e10",
+      "type": "multipleChoice",
+      "prompt": "You confirmed by hand that the answer should be 'Pass', but the program prints 'Fail'. What have you proven?",
+      "options": [
+        "There is a real logic bug to find in the decision",
+        "The hand answer is wrong",
+        "The program is correct",
+        "Nothing can be learned"
+      ],
+      "answer": 0,
+      "explanation": "A mismatch proves there IS a bug and tells you where to look: the logic that chooses Pass vs Fail."
+    }
+  ]
+}

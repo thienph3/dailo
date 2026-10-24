@@ -1,0 +1,129 @@
+{
+  "unitId": "u32",
+  "lessonId": "u32l05",
+  "title": "The missed middle case",
+  "idea": "A chain that handles 'high' and 'low' but forgets the value in between — a whole case is never covered.",
+  "exercises": [
+    {
+      "id": "u32l05e01",
+      "type": "multipleChoice",
+      "prompt": "Rule: hot if temp > 25, cold if temp < 10. The code only has those two ifs. What about temp = 18?",
+      "options": [
+        "Nothing prints — the middle case is missed",
+        "It prints both",
+        "It prints 'hot'",
+        "It crashes"
+      ],
+      "answer": 0,
+      "explanation": "18 is neither > 25 nor < 10, so neither branch runs — a whole middle range was forgotten."
+    },
+    {
+      "id": "u32l05e02",
+      "type": "multipleChoice",
+      "prompt": "What is the reasoning flaw?",
+      "options": [
+        "The in-between range has no branch",
+        "25 is too large",
+        "< and > cannot be used together",
+        "temp must be a string"
+      ],
+      "answer": 0,
+      "explanation": "The chain covers the extremes but not the values between them. A 'mild' case is missing."
+    },
+    {
+      "id": "u32l05e03",
+      "type": "multipleChoice",
+      "prompt": "Which value proves the middle case is missing?",
+      "options": [
+        "18",
+        "30",
+        "5",
+        "100"
+      ],
+      "answer": 0,
+      "explanation": "A value like 18 sits between the two limits and falls through. Testing a middle value exposes the gap."
+    },
+    {
+      "id": "u32l05e04",
+      "type": "orderBlocks",
+      "prompt": "Plan a chain that covers ALL temperatures (high, low, and the rest).",
+      "blocks": [
+        "If temp > 25 -> Hot",
+        "Else if temp < 10 -> Cold",
+        "Else -> Mild"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Test hot, then cold, then let else catch every remaining (mild) value so nothing falls through."
+    },
+    {
+      "id": "u32l05e05",
+      "type": "trueFalse",
+      "prompt": "Adding an else branch guarantees every input is handled.",
+      "answer": true,
+      "explanation": "True. else has no condition, so any input that missed every if/elif lands there — no gaps left."
+    },
+    {
+      "id": "u32l05e06",
+      "type": "multipleChoice",
+      "prompt": "After adding 'else -> Mild', temp = 18 prints what?",
+      "options": [
+        "Mild",
+        "Hot",
+        "Cold",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "18 misses hot and cold, so the else runs: 'Mild'. The gap is closed."
+    },
+    {
+      "id": "u32l05e07",
+      "type": "multipleChoice",
+      "prompt": "A grade chain has 'A' for 90+ and 'C' for under 70, nothing else. A score of 80 gives…",
+      "options": [
+        "nothing — the 70-89 range is missed",
+        "A",
+        "C",
+        "B"
+      ],
+      "answer": 0,
+      "explanation": "80 is below 90 and not under 70, so no branch matches — the B range (70-89) was forgotten."
+    },
+    {
+      "id": "u32l05e08",
+      "type": "multipleChoice",
+      "prompt": "Best way to catch a missed case BEFORE running the code?",
+      "options": [
+        "Hand-trace a value from every range, including the middle",
+        "Only test the biggest number",
+        "Trust it works",
+        "Only test zero"
+      ],
+      "answer": 0,
+      "explanation": "List a few representative inputs across the whole range and hand-check each finds a branch."
+    },
+    {
+      "id": "u32l05e09",
+      "type": "multipleChoice",
+      "prompt": "Why is 'nothing prints' a dangerous bug?",
+      "options": [
+        "It is silent, so the gap is easy to miss",
+        "It always crashes loudly",
+        "It prints an error",
+        "It fixes itself"
+      ],
+      "answer": 0,
+      "explanation": "Silent output looks like nothing is wrong, so the missed case can slip through unnoticed."
+    },
+    {
+      "id": "u32l05e10",
+      "type": "trueFalse",
+      "prompt": "Covering extremes is not the same as covering every case.",
+      "answer": true,
+      "explanation": "Right. High and low are only two cases; the values between them need a branch too (often an else)."
+    }
+  ]
+}

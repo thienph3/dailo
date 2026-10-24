@@ -1,0 +1,157 @@
+{
+  "unitId": "u86",
+  "lessonId": "u86l09",
+  "title": "Match problems to their ordered sub-problem list",
+  "idea": "MEET: rapid practice — read several multi-part problems and pick or order the correct decomposition, building fluency.",
+  "exercises": [
+    {
+      "type": "matchPairs",
+      "prompt": "Match each problem to its FIRST sub-problem.",
+      "pairs": [
+        {
+          "left": "Average the scores",
+          "right": "total the scores"
+        },
+        {
+          "left": "Average the passing scores",
+          "right": "filter the passing scores"
+        },
+        {
+          "left": "Final bill = subtotal + fee",
+          "right": "compute the subtotal"
+        }
+      ],
+      "explanation": "The first sub-problem is the one with no prerequisites. For a subset average, that's the filter.",
+      "id": "u86l09e01"
+    },
+    {
+      "type": "orderBlocks",
+      "prompt": "Order the sub-problems for 'count the big orders (over 100), then show what fraction of all orders that is'.",
+      "blocks": [
+        "Count all the orders",
+        "Count the orders over 100",
+        "Divide the big-order count by the total count"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "You need both counts before you can take the fraction. The divide comes last.",
+      "id": "u86l09e02"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "PROBLEM: 'Show the biggest and smallest price.' The split is...",
+      "options": [
+        "two independent sub-problems: track biggest, track smallest",
+        "one sub-problem that does both at once only",
+        "a chain where smallest needs biggest",
+        "impossible to split"
+      ],
+      "answer": 0,
+      "explanation": "Biggest and smallest are independent tracks. (A single pass can do both, but neither needs the other's result.)",
+      "id": "u86l09e03"
+    },
+    {
+      "type": "multiSelect",
+      "prompt": "Select the problems whose sub-problems FEED each other (a forced order).",
+      "options": [
+        "average = total then divide by count",
+        "final bill = subtotal then add fee",
+        "biggest and smallest price",
+        "total and count over 10"
+      ],
+      "answer": [
+        0,
+        1
+      ],
+      "explanation": "Average and final-bill are chains with forced order. Biggest/smallest and total/count are independent.",
+      "id": "u86l09e04"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "PROBLEM: 'Average of the passing scores.' Which sub-problem must be LAST?",
+      "options": [
+        "divide the passing total by the passing count",
+        "filter the passers",
+        "total the passers",
+        "count the passers"
+      ],
+      "answer": 0,
+      "explanation": "The divide needs the passing total and count, so it must be last in the chain.",
+      "id": "u86l09e05"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "For independent sub-problems, there is more than one correct order.",
+      "answer": true,
+      "explanation": "Yes — if neither needs the other, swapping them is still correct. Only dependencies pin a position.",
+      "id": "u86l09e06"
+    },
+    {
+      "type": "orderBlocks",
+      "prompt": "Order 'show the total, then the average' for a list of scores.",
+      "blocks": [
+        "Total the scores",
+        "Count the scores",
+        "Divide total by count to get the average",
+        "Show the total and the average"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "Total and count, then average from both, then show both outputs. A clean ordered list.",
+      "id": "u86l09e07"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "A split lists 'divide for average' before 'count the scores'. This is...",
+      "options": [
+        "wrong — the divide needs the count first",
+        "right",
+        "faster",
+        "the only valid order"
+      ],
+      "answer": 0,
+      "explanation": "The average needs the count, so counting must come before dividing. This order is impossible.",
+      "id": "u86l09e08"
+    },
+    {
+      "type": "matchPairs",
+      "prompt": "Match each problem to how many sub-problems it needs (at least).",
+      "pairs": [
+        {
+          "left": "Add two numbers",
+          "right": "one"
+        },
+        {
+          "left": "Total and average",
+          "right": "three (total, count, divide)"
+        },
+        {
+          "left": "Average of passers",
+          "right": "four (filter, total, count, divide)"
+        }
+      ],
+      "explanation": "Counting sub-problems shows the real size of a problem — far more honest than its sentence length.",
+      "id": "u86l09e09"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "The big idea:",
+      "options": [
+        "Fluent decomposition: list outputs, make sub-problems, order by dependency, every time",
+        "Each problem needs a unique trick",
+        "Ordering is guesswork",
+        "Practice doesn't help"
+      ],
+      "answer": 0,
+      "explanation": "The more problems you split, the faster you see the parts. The habit is always the same.",
+      "id": "u86l09e10"
+    }
+  ]
+}

@@ -1,0 +1,154 @@
+{
+  "unitId": "u49",
+  "lessonId": "u49l01",
+  "title": "Solve it: add up 1 to 5",
+  "idea": "GUIDED. Count-controlled accumulator problem walked through UEPCC. Choose for + a running total.",
+  "problem": "Add up all the numbers from 1 to 5 and show the total.",
+  "exercises": [
+    {
+      "id": "u49l01e01",
+      "type": "multipleChoice",
+      "prompt": "PROBLEM: Add up all the numbers from 1 to 5 and show the total.\n\nUnderstand first. What is the OUTPUT?",
+      "options": [
+        "The total of 1 + 2 + 3 + 4 + 5",
+        "Just the number 5",
+        "How many numbers there are",
+        "The largest number"
+      ],
+      "answer": 0,
+      "explanation": "Name the output first: it is the TOTAL of the numbers 1 through 5.",
+      "uepcc": "U"
+    },
+    {
+      "id": "u49l01e02",
+      "type": "multipleChoice",
+      "prompt": "Still understanding. What are the INPUTS (the values you work from)?",
+      "options": [
+        "The numbers 1, 2, 3, 4, 5",
+        "Only the number 15",
+        "The word 'total'",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "The inputs are the numbers 1 to 5. Framing inputs and output sets up the whole plan.",
+      "uepcc": "U"
+    },
+    {
+      "id": "u49l01e03",
+      "type": "multipleChoice",
+      "prompt": "Example — work it by hand. What is 1 + 2 + 3 + 4 + 5?",
+      "options": [
+        "15",
+        "10",
+        "5",
+        "12"
+      ],
+      "answer": 0,
+      "explanation": "1+2+3+4+5 = 15. This hand answer becomes the value you check your code against.",
+      "uepcc": "E"
+    },
+    {
+      "id": "u49l01e04",
+      "type": "multipleChoice",
+      "prompt": "Plan — which loop shape fits 'the numbers 1 to 5'?",
+      "options": [
+        "A for loop over a range (count is known)",
+        "A while loop (stop on a condition)",
+        "No loop",
+        "Two loops"
+      ],
+      "answer": 0,
+      "explanation": "You know exactly which numbers (1 to 5), a fixed count — so a for loop over a range fits.",
+      "uepcc": "P"
+    },
+    {
+      "id": "u49l01e05",
+      "type": "multipleChoice",
+      "prompt": "Plan — to build the total, what do you keep across passes?",
+      "options": [
+        "An accumulator: total that starts at 0 and grows",
+        "A counter that only ever adds 1",
+        "Nothing",
+        "The last number only"
+      ],
+      "answer": 0,
+      "explanation": "Adding values together means a running total (accumulator), starting at 0 before the loop.",
+      "uepcc": "P"
+    },
+    {
+      "id": "u49l01e06",
+      "type": "orderBlocks",
+      "prompt": "Plan — order the plain-English steps.",
+      "blocks": [
+        "Start total at 0",
+        "For each number 1 to 5, add it to total",
+        "After the loop, show total"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Start the total, add each number in turn, then print it. The plan comes before the code.",
+      "uepcc": "P"
+    },
+    {
+      "id": "u49l01e07",
+      "type": "orderBlocks",
+      "prompt": "Code — arrange the program to match the plan.",
+      "blocks": [
+        "total = 0",
+        "for number in range(1, 6):",
+        "    total = total + number",
+        "print(total)"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "range(1, 6) is 1..5. Each pass adds number to total; then print shows 15. range stops before 6 to include 5.",
+      "uepcc": "C"
+    },
+    {
+      "id": "u49l01e08",
+      "type": "fillBlank",
+      "prompt": "Code — fill the range stop so it covers 1 to 5:\n\ntotal = 0\nfor number in range(1, ____):\n    total = total + number\nprint(total)",
+      "answer": "6",
+      "acceptable": [
+        "6"
+      ],
+      "explanation": "range excludes its stop value, so to include 5 you stop at 6. range(1, 6) is 1,2,3,4,5.",
+      "uepcc": "C"
+    },
+    {
+      "id": "u49l01e09",
+      "type": "multipleChoice",
+      "prompt": "Check — you run it and it shows 15. Your hand example said 15. So...",
+      "options": [
+        "It passes — output matches the hand example",
+        "It fails",
+        "You cannot tell",
+        "Change the example"
+      ],
+      "answer": 0,
+      "explanation": "Output (15) matches the example (15), so the solution is correct. That is what Check means.",
+      "uepcc": "Check"
+    },
+    {
+      "id": "u49l01e10",
+      "type": "multipleChoice",
+      "prompt": "Check — new numbers: add 1 to 4 instead (range(1, 5)). What should it show?",
+      "options": [
+        "10",
+        "15",
+        "4",
+        "5"
+      ],
+      "answer": 0,
+      "explanation": "1+2+3+4 = 10. A good solution works for new inputs, proving it generalizes.",
+      "uepcc": "Check"
+    }
+  ]
+}

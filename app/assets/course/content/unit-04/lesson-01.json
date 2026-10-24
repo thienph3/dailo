@@ -1,0 +1,118 @@
+{
+  "unitId": "u04",
+  "lessonId": "u04l01",
+  "title": "What a worked example is",
+  "idea": "Before you write code, you work one example by hand: given THIS input, the output should be THAT. No code yet — just the idea.",
+  "exercises": [
+    {
+      "id": "u04l01e01",
+      "type": "multipleChoice",
+      "prompt": "What does it mean to 'work an example by hand'?",
+      "options": [
+        "Decide what the output should be for one real input, before coding",
+        "Type the code as fast as you can",
+        "Run the program and hope it works",
+        "Ask a friend to do it"
+      ],
+      "answer": 0,
+      "explanation": "A worked example is you, on paper, saying: for this exact input, here is the exact output I expect. It's thinking, not typing."
+    },
+    {
+      "id": "u04l01e02",
+      "type": "trueFalse",
+      "prompt": "A worked example is done before you write any code.",
+      "answer": true,
+      "explanation": "That's the whole point. You decide what 'right' looks like first, so later you can check the code against it."
+    },
+    {
+      "id": "u04l01e03",
+      "type": "multipleChoice",
+      "prompt": "Task: show the word 'Hi'. What is the expected output?",
+      "options": [
+        "Hi",
+        "print",
+        "A number",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "The example output is just the word Hi appearing on the screen. Simple tasks have simple examples."
+    },
+    {
+      "id": "u04l01e04",
+      "type": "trueFalse",
+      "prompt": "You can only know if code is correct if you first know what 'correct' looks like.",
+      "answer": true,
+      "explanation": "Without an expected example, 'correct' has no meaning. The hand-worked example is your target."
+    },
+    {
+      "id": "u04l01e05",
+      "type": "matchPairs",
+      "prompt": "Match each word to what it means.",
+      "pairs": [
+        { "left": "Example", "right": "One input and the output it should give" },
+        { "left": "Expected output", "right": "What SHOULD appear on screen" },
+        { "left": "By hand", "right": "Worked out by you, before any code runs" }
+      ],
+      "explanation": "An example pairs an input with its expected output, decided by you before coding."
+    },
+    {
+      "id": "u04l01e06",
+      "type": "multipleChoice",
+      "prompt": "Why is working an example a 'thinking' step and not a 'typing' step?",
+      "options": [
+        "You figure out what you want before you build it",
+        "Thinking is slower",
+        "Typing is not allowed",
+        "The computer does the thinking"
+      ],
+      "answer": 0,
+      "explanation": "You decide the goal first. Deciding the goal is thinking; making the code hit it comes later."
+    },
+    {
+      "id": "u04l01e07",
+      "type": "trueFalse",
+      "prompt": "A worked example is a guess you make up randomly.",
+      "answer": false,
+      "explanation": "It's not random. You carefully decide the right output for a chosen input, so it can act as a dependable target."
+    },
+    {
+      "id": "u04l01e08",
+      "type": "multipleChoice",
+      "prompt": "Task: show the word 'Dog'. Which is the correct hand-worked expected output?",
+      "options": [
+        "Dog",
+        "\"Dog\"",
+        "print(Dog)",
+        "Cat"
+      ],
+      "answer": 0,
+      "explanation": "On the screen you'd see just: Dog. The quotes and print() are code — they don't appear in the output."
+    },
+    {
+      "id": "u04l01e09",
+      "type": "multiSelect",
+      "prompt": "Which of these are good reasons to work an example first? (pick all)",
+      "options": [
+        "It gives you a clear target",
+        "You can check the code against it later",
+        "It makes the task take forever",
+        "It forces you to understand the task"
+      ],
+      "answer": [0, 1, 3],
+      "explanation": "A clear target, a later check, and real understanding — all three are why we do it. It does not make the task take forever."
+    },
+    {
+      "id": "u04l01e10",
+      "type": "multipleChoice",
+      "prompt": "You're starting a new task. What is a smart first move?",
+      "options": [
+        "Write one example: this input should give this output",
+        "Start typing code immediately",
+        "Delete everything and restart",
+        "Wait for the answer to appear"
+      ],
+      "answer": 0,
+      "explanation": "Lead with the example. It's the E in our rhythm — Understand, Example, then the rest."
+    }
+  ]
+}

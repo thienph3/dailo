@@ -1,0 +1,123 @@
+{
+  "unitId": "u37",
+  "lessonId": "u37l07",
+  "title": "A string in the loop body",
+  "idea": "The loop body can print words and f-strings too. Repeat a message exactly n times. Reviews strings and f-strings from Lap 1.",
+  "exercises": [
+    {
+      "id": "u37l07e01",
+      "type": "multipleChoice",
+      "prompt": "What shows?\n\nfor i in range(3):\n    print(\"Welcome!\")",
+      "options": [
+        "Welcome!\nWelcome!\nWelcome!",
+        "Welcome!",
+        "3",
+        "i"
+      ],
+      "answer": 0,
+      "explanation": "The body prints the message Welcome! three times, once per pass."
+    },
+    {
+      "id": "u37l07e02",
+      "type": "multipleChoice",
+      "prompt": "Review: with name = \"Ada\", what does print(f\"Hi {name}\") show?",
+      "options": [
+        "Hi Ada",
+        "Hi {name}",
+        "Hi name",
+        "f\"Hi Ada\""
+      ],
+      "answer": 0,
+      "explanation": "An f-string drops the variable's value in: Hi Ada. f-strings came in Lap 1, and they work inside loops too."
+    },
+    {
+      "id": "u37l07e03",
+      "type": "multipleChoice",
+      "prompt": "What shows?\n\nname = \"Sam\"\nfor i in range(2):\n    print(f\"Hello {name}\")",
+      "options": [
+        "Hello Sam\nHello Sam",
+        "Hello Sam",
+        "Hello {name}",
+        "Sam\nSam"
+      ],
+      "answer": 0,
+      "explanation": "The f-string shows Hello Sam, and the loop repeats it twice. name stays Sam each pass."
+    },
+    {
+      "id": "u37l07e04",
+      "type": "trueFalse",
+      "prompt": "A loop body can hold a print with an f-string, not just plain text.",
+      "answer": true,
+      "explanation": "The body is any code you know. f-strings, plain strings, numbers — all fine inside a loop."
+    },
+    {
+      "id": "u37l07e05",
+      "type": "fillBlank",
+      "prompt": "Complete so it greets Lee each pass:\n\nname = \"Lee\"\nfor i in range(3):\n    print(f\"Hi {____}\")",
+      "answer": "name",
+      "acceptable": [
+        "name"
+      ],
+      "explanation": "Inside the braces goes the variable name, so the f-string shows Hi Lee each pass."
+    },
+    {
+      "id": "u37l07e06",
+      "type": "multipleChoice",
+      "prompt": "How many lines?\n\nfor i in range(4):\n    print(\"Line\")",
+      "options": [
+        "4",
+        "1",
+        "8",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "range(4) repeats the single print four times — four lines."
+    },
+    {
+      "id": "u37l07e07",
+      "type": "multipleChoice",
+      "prompt": "What shows?\n\nfor i in range(2):\n    print(\"Top\")\n    print(\"-----\")",
+      "options": [
+        "Top\n-----\nTop\n-----",
+        "Top\n-----",
+        "Top\nTop\n-----\n-----",
+        "Top"
+      ],
+      "answer": 0,
+      "explanation": "Both lines are the body, so each pass prints Top then a divider. Two passes gives that pair twice."
+    },
+    {
+      "id": "u37l07e08",
+      "type": "trueFalse",
+      "prompt": "Review: print(\"Hi\" + \"!\") shows Hi! (concatenation joins the strings).",
+      "answer": true,
+      "explanation": "+ between strings joins them: Hi!. Concatenation from Lap 1 still works inside a loop body."
+    },
+    {
+      "id": "u37l07e09",
+      "type": "multipleChoice",
+      "prompt": "A sign needs the line 'Thank you' printed for each of 6 customers. Which loop?",
+      "options": [
+        "for i in range(6):\n    print(\"Thank you\")",
+        "for i in range(5):\n    print(\"Thank you\")",
+        "print(\"Thank you\")",
+        "for i in range(6)\n    print(\"Thank you\")"
+      ],
+      "answer": 0,
+      "explanation": "Six customers, six repeats — range(6) with the message as the body."
+    },
+    {
+      "id": "u37l07e10",
+      "type": "multipleChoice",
+      "prompt": "Big takeaway: the for/range loop body can be...",
+      "options": [
+        "Any code you already know — text, f-strings, variables",
+        "Only the number from range",
+        "Only one special print",
+        "Nothing at all"
+      ],
+      "answer": 0,
+      "explanation": "The body is ordinary code repeated n times. Everything you learned earlier still works inside it."
+    }
+  ]
+}

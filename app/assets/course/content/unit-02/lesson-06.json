@@ -1,0 +1,118 @@
+{
+  "unitId": "u02",
+  "lessonId": "u02l06",
+  "title": "Tasks with more than one input",
+  "idea": "Some tasks start with several things. Name all of them, not just one.",
+  "exercises": [
+    {
+      "id": "u02l06e01",
+      "type": "multipleChoice",
+      "prompt": "Task: 'Add two prices to get a total.' How many inputs does it have?",
+      "options": [
+        "Two — the two prices",
+        "One — the total",
+        "Three",
+        "None"
+      ],
+      "answer": 0,
+      "explanation": "Two prices go in, one total comes out. Count every value you start with."
+    },
+    {
+      "id": "u02l06e02",
+      "type": "multipleChoice",
+      "prompt": "Task: 'Average three test scores.' What are the inputs?",
+      "options": [
+        "The three scores",
+        "The one average",
+        "The subject names",
+        "The teacher"
+      ],
+      "answer": 0,
+      "explanation": "All three scores are inputs. Missing one would give the wrong average."
+    },
+    {
+      "id": "u02l06e03",
+      "type": "trueFalse",
+      "prompt": "If a task says 'two meals and three drinks', the counts (two and three) are part of the input.",
+      "answer": true,
+      "explanation": "Yes — every number in the task is an input. Don't drop the counts; they matter."
+    },
+    {
+      "id": "u02l06e04",
+      "type": "multiSelect",
+      "prompt": "Task: 'Buy 2 pens and 1 notebook; show the total cost.' Which of these are inputs? (Choose all.)",
+      "options": [
+        "The number of pens (2)",
+        "The number of notebooks (1)",
+        "The price of a pen",
+        "The total cost"
+      ],
+      "answer": [0, 1, 2],
+      "explanation": "Counts and prices are all inputs. The total cost is the output, not an input."
+    },
+    {
+      "id": "u02l06e05",
+      "type": "multipleChoice",
+      "prompt": "Task: 'Buy 2 pens and 1 notebook; show the total cost.' What is the output?",
+      "options": [
+        "The total cost",
+        "The 2 pens",
+        "The notebook",
+        "The shop's name"
+      ],
+      "answer": 0,
+      "explanation": "The one thing that comes out is the total cost."
+    },
+    {
+      "id": "u02l06e06",
+      "type": "trueFalse",
+      "prompt": "It is fine to ignore one of the inputs if the task has several.",
+      "answer": false,
+      "explanation": "Never drop an input. Every value in the task is there for a reason — leaving one out breaks the result."
+    },
+    {
+      "id": "u02l06e07",
+      "type": "matchPairs",
+      "prompt": "Match each task to how many inputs it has.",
+      "pairs": [
+        { "left": "Show the word Hello", "right": "One input" },
+        { "left": "Add two prices", "right": "Two inputs" },
+        { "left": "Average three scores", "right": "Three inputs" }
+      ],
+      "explanation": "Count the values you start with. That count is how many inputs the task has."
+    },
+    {
+      "id": "u02l06e08",
+      "type": "multipleChoice",
+      "prompt": "Task: 'Split a bill of 60 between 4 people.' What are the inputs?",
+      "options": [
+        "The bill (60) and the number of people (4)",
+        "Only the bill (60)",
+        "Only the number of people (4)",
+        "The amount each person pays"
+      ],
+      "answer": 0,
+      "explanation": "Both 60 and 4 go in. The amount each person pays is the output."
+    },
+    {
+      "id": "u02l06e09",
+      "type": "multiSelect",
+      "prompt": "For 'Split a bill of 60 between 4 people', which are TRUE? (Choose all.)",
+      "options": [
+        "The bill is an input",
+        "The number of people is an input",
+        "The amount per person is the output",
+        "There are no inputs"
+      ],
+      "answer": [0, 1, 2],
+      "explanation": "Two inputs (bill and people count), one output (amount per person). The last option is false."
+    },
+    {
+      "id": "u02l06e10",
+      "type": "trueFalse",
+      "prompt": "Writing down every input first helps make sure none gets forgotten later.",
+      "answer": true,
+      "explanation": "Listing all inputs up front is a safe habit — it stops you dropping a value when you solve the task."
+    }
+  ]
+}

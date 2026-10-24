@@ -1,0 +1,128 @@
+{
+  "unitId": "u40",
+  "lessonId": "u40l08",
+  "title": "Reporting the count in a message",
+  "idea": "Put the final counter value into a readable f-string report.",
+  "exercises": [
+    {
+      "id": "u40l08e01",
+      "type": "multipleChoice",
+      "prompt": "A counter ends at 3. Which f-string reports it nicely?",
+      "options": [
+        "print(f\"Found {count} matches\")",
+        "print(\"Found count matches\")",
+        "print(count + matches)",
+        "print(f\"Found count\")"
+      ],
+      "answer": 0,
+      "explanation": "f\"Found {count} matches\" drops the value 3 into the sentence: 'Found 3 matches'."
+    },
+    {
+      "id": "u40l08e02",
+      "type": "multipleChoice",
+      "prompt": "What shows?\n\ncount = 0\nfor i in range(1, 5):\n    count += 1\nprint(f\"Passes: {count}\")",
+      "options": [
+        "Passes: 4",
+        "Passes: count",
+        "Passes: 5",
+        "4"
+      ],
+      "answer": 0,
+      "explanation": "Four passes make count 4, and the f-string prints 'Passes: 4'."
+    },
+    {
+      "id": "u40l08e03",
+      "type": "trueFalse",
+      "prompt": "Inside an f-string, {count} is replaced by the counter's current value.",
+      "answer": true,
+      "explanation": "True. The braces pull in the value, so a counter of 4 shows as 4 in the sentence."
+    },
+    {
+      "id": "u40l08e04",
+      "type": "multipleChoice",
+      "prompt": "Why report the count AFTER the loop rather than inside it?",
+      "options": [
+        "The counter is only final once the loop ends",
+        "f-strings don't work in loops",
+        "It runs faster",
+        "No reason"
+      ],
+      "answer": 0,
+      "explanation": "After the loop the counter is final; inside, it is only a partial count."
+    },
+    {
+      "id": "u40l08e05",
+      "type": "fillBlank",
+      "prompt": "Fill the blank so the message includes the count:\n\nprint(f\"Total: {____}\")",
+      "answer": "count",
+      "acceptable": [
+        "count"
+      ],
+      "explanation": "Put the variable name count in the braces to show its value."
+    },
+    {
+      "id": "u40l08e06",
+      "type": "multipleChoice",
+      "prompt": "What shows?\n\ncount = 0\nfor i in range(1, 11):\n    if i % 2 == 0:\n        count += 1\nprint(f\"Even numbers: {count}\")",
+      "options": [
+        "Even numbers: 5",
+        "Even numbers: 10",
+        "Even numbers: count",
+        "5"
+      ],
+      "answer": 0,
+      "explanation": "Even numbers 2, 4, 6, 8, 10 give a count of 5, so it prints 'Even numbers: 5'."
+    },
+    {
+      "id": "u40l08e07",
+      "type": "orderBlocks",
+      "prompt": "Arrange a loop that counts passes and reports them in a message.",
+      "blocks": [
+        "    count += 1",
+        "count = 0",
+        "print(f\"Count: {count}\")",
+        "for i in range(6):"
+      ],
+      "answer": [
+        1,
+        3,
+        0,
+        2
+      ],
+      "explanation": "Start counter, loop and add, then print the f-string report after the loop."
+    },
+    {
+      "id": "u40l08e08",
+      "type": "multipleChoice",
+      "prompt": "If you forget the f before the quotes: print(\"Count: {count}\"), what shows?",
+      "options": [
+        "Count: {count}",
+        "Count: 0",
+        "The real count",
+        "An error"
+      ],
+      "answer": 0,
+      "explanation": "Without the f, Python prints the braces literally: 'Count: {count}' — not the value."
+    },
+    {
+      "id": "u40l08e09",
+      "type": "trueFalse",
+      "prompt": "The f before the opening quote is what turns {count} into the real value.",
+      "answer": true,
+      "explanation": "True. No f means no substitution — the braces are shown as plain text."
+    },
+    {
+      "id": "u40l08e10",
+      "type": "multipleChoice",
+      "prompt": "A report says 'Count: 0' after a loop that should have counted. What is the likely cause?",
+      "options": [
+        "The counter never got raised (wrong condition or reset)",
+        "f-strings are broken",
+        "The message is wrong",
+        "range is always 0"
+      ],
+      "answer": 0,
+      "explanation": "A zero count usually means the += line never ran — a wrong condition or a misplaced start."
+    }
+  ]
+}

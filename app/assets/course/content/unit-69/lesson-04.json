@@ -1,0 +1,136 @@
+{
+  "unitId": "u69",
+  "lessonId": "u69l04",
+  "title": "Would splitting help here?",
+  "idea": "MEET: decide whether a given task is worth splitting, or already small enough. No code.",
+  "exercises": [
+    {
+      "id": "u69l04e01",
+      "type": "multipleChoice",
+      "prompt": "Which task is already small enough that splitting would NOT help?",
+      "options": [
+        "Print a single greeting",
+        "Run a whole quiz: ask, score, and report",
+        "Plan a full meal with three courses",
+        "Process every order in a shop"
+      ],
+      "answer": 0,
+      "explanation": "Printing one greeting is a single step. Splitting a one-step job adds work for no gain."
+    },
+    {
+      "id": "u69l04e02",
+      "type": "multipleChoice",
+      "prompt": "Which task clearly WOULD benefit from being split into sub-jobs?",
+      "options": [
+        "Run a quiz: ask the questions, score them, then report the result",
+        "Print the number 7",
+        "Add 2 and 3",
+        "Show one word"
+      ],
+      "answer": 0,
+      "explanation": "A quiz has three distinct jobs (ask, score, report). Splitting makes each easier to build and check."
+    },
+    {
+      "id": "u69l04e03",
+      "type": "trueFalse",
+      "prompt": "Splitting is always worth it, even for a one-line task.",
+      "answer": false,
+      "explanation": "No. Tiny tasks are fine as they are. Split when a task has several jobs or a repeated job - not before."
+    },
+    {
+      "id": "u69l04e04",
+      "type": "multiSelect",
+      "prompt": "What are good SIGNS that a task is worth splitting? (Pick all.)",
+      "options": [
+        "It has several different jobs",
+        "A job repeats more than once",
+        "It is one single action",
+        "The whole thing fits in one short step"
+      ],
+      "answer": [
+        0,
+        1
+      ],
+      "explanation": "Several jobs, or a repeated job, both say 'split me'. A single short action does not."
+    },
+    {
+      "id": "u69l04e05",
+      "type": "multipleChoice",
+      "prompt": "TASK: 'Show a menu, take a choice, show the menu again, take another choice.' Is splitting useful?",
+      "options": [
+        "Yes - 'show the menu' repeats, so name it once",
+        "No - it's a single step",
+        "No - there are no jobs here",
+        "Only if the menu is long"
+      ],
+      "answer": 0,
+      "explanation": "'Show the menu' happens twice. Naming it once and reusing it is exactly when splitting pays off."
+    },
+    {
+      "id": "u69l04e06",
+      "type": "multipleChoice",
+      "prompt": "A task has three jobs but you've written them as one long tangled list. What's the risk?",
+      "options": [
+        "It's hard to find and fix any one job",
+        "It runs faster",
+        "It can never be read",
+        "The computer refuses it"
+      ],
+      "answer": 0,
+      "explanation": "A tangle hides where each job starts and ends, so bugs are hard to locate. Named parts fix that."
+    },
+    {
+      "id": "u69l04e07",
+      "type": "matchPairs",
+      "prompt": "Match each task to the right verdict.",
+      "pairs": [
+        {
+          "left": "print one line",
+          "right": "small - no split needed"
+        },
+        {
+          "left": "greet, score, report",
+          "right": "split into three jobs"
+        },
+        {
+          "left": "draw the same border 4 times",
+          "right": "name the border job, reuse it"
+        }
+      ],
+      "explanation": "Decide per task: leave tiny ones alone, split multi-job ones, and name repeated jobs."
+    },
+    {
+      "id": "u69l04e08",
+      "type": "trueFalse",
+      "prompt": "Deciding WHETHER to split is itself part of planning, done before any code.",
+      "answer": true,
+      "explanation": "Yes. Judging the shape of the problem comes first. Good planning saves you from a tangled mess later."
+    },
+    {
+      "id": "u69l04e09",
+      "type": "multipleChoice",
+      "prompt": "REVIEW: you decide a task splits into 'sum the prices' and 'show the total'. The first job's tool is...",
+      "options": [
+        "a sum over the list of prices",
+        "a search",
+        "a max",
+        "input()"
+      ],
+      "answer": 0,
+      "explanation": "'Sum the prices' is an accumulate-over-the-list job. Each sub-job maps to a familiar tool you already know."
+    },
+    {
+      "id": "u69l04e10",
+      "type": "multipleChoice",
+      "prompt": "Overall, when should you split a problem into sub-jobs?",
+      "options": [
+        "When it has several jobs, or a job that repeats",
+        "Always, for every task",
+        "Never - keep everything in one list",
+        "Only on weekends"
+      ],
+      "answer": 0,
+      "explanation": "Split for multiple jobs or repeats; leave truly tiny tasks alone. That judgment is the skill this unit builds."
+    }
+  ]
+}

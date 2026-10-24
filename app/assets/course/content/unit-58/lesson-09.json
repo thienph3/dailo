@@ -1,0 +1,111 @@
+{
+  "unitId": "u58",
+  "lessonId": "u58l09",
+  "title": "Reading and predicting a count",
+  "idea": "Fluency with the count pattern: translate between code and plain English, predict counts, and recognize 'how many' problems.",
+  "exercises": [
+    {
+      "id": "u58l09e01",
+      "type": "multipleChoice",
+      "prompt": "Read this in plain English:\n\ncount = 0\nfor n in nums:\n    if n > 10:\n        count = count + 1",
+      "options": [
+        "Start a count at zero, then add one for each number over 10",
+        "Total the numbers over 10",
+        "Print each number",
+        "Find the biggest number"
+      ],
+      "answer": 0,
+      "explanation": "That's the count-with-condition pattern in words: tick up by one for every value that passes the test."
+    },
+    {
+      "id": "u58l09e02",
+      "type": "multipleChoice",
+      "prompt": "Plain English: 'Count how many scores are at least 60.' Which code matches?",
+      "options": [
+        "count = 0\nfor score in scores:\n    if score >= 60:\n        count = count + 1",
+        "total = 0\nfor score in scores:\n    total = total + score",
+        "print(len(scores))",
+        "for score in scores:\n    print(score)"
+      ],
+      "answer": 0,
+      "explanation": "Counting a rule: counter + if + add 1. The sum option totals; len counts all; the last just prints."
+    },
+    {
+      "id": "u58l09e03",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nnums = [2, 4, 6, 7]\ncount = 0\nfor n in nums:\n    if n % 2 == 0:\n        count = count + 1\nprint(count)",
+      "options": ["3", "4", "1", "19"],
+      "answer": 0,
+      "explanation": "Evens are 2, 4, 6 - three of them. 7 is odd. Count 3."
+    },
+    {
+      "id": "u58l09e04",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nnums = [5, 5, 5]\ncount = 0\nfor n in nums:\n    if n == 5:\n        count = count + 1\nprint(count)",
+      "options": ["3", "0", "5", "15"],
+      "answer": 0,
+      "explanation": "All three equal 5, so each adds 1 -> count 3."
+    },
+    {
+      "id": "u58l09e05",
+      "type": "matchPairs",
+      "prompt": "Count of values >= 50 in each list. Match list to count.",
+      "pairs": [
+        { "left": "[10, 60, 70]", "right": "2" },
+        { "left": "[50, 50, 50]", "right": "3" },
+        { "left": "[10, 20, 30]", "right": "0" }
+      ],
+      "explanation": "Count the ones at least 50: two, three, and none. (Remember 50 itself counts with >=.)"
+    },
+    {
+      "id": "u58l09e06",
+      "type": "fillBlank",
+      "prompt": "Finish so it counts matches:\n\ncount = 0\nfor n in nums:\n    if n > 10:\n        count = count + ____\nprint(count)",
+      "answer": "1",
+      "acceptable": ["1"],
+      "explanation": "Add 1 for each match to count items. Adding n would make a sum instead."
+    },
+    {
+      "id": "u58l09e07",
+      "type": "trueFalse",
+      "prompt": "Predicting a count by hand before running helps you catch bugs early.",
+      "answer": true,
+      "explanation": "True. If your predicted count and the program disagree, one is wrong - and you've spotted a problem to fix."
+    },
+    {
+      "id": "u58l09e08",
+      "type": "multipleChoice",
+      "prompt": "Predict:\n\nnums = []\ncount = 0\nfor n in nums:\n    if n > 10:\n        count = count + 1\nprint(count)",
+      "options": ["0", "nothing", "an error", "1"],
+      "answer": 0,
+      "explanation": "Empty list -> no passes -> count stays 0. A count of 0 is the right answer for an empty list."
+    },
+    {
+      "id": "u58l09e09",
+      "type": "orderBlocks",
+      "prompt": "Turn 'start count at zero, add one per value over 10, then show it' into code order.",
+      "blocks": [
+        "count = 0",
+        "for n in nums:",
+        "    if n > 10:",
+        "        count = count + 1",
+        "print(count)"
+      ],
+      "answer": [0, 1, 2, 3, 4],
+      "explanation": "Initialize, loop, test, add 1 on a match, print after. The code follows the plain-English plan."
+    },
+    {
+      "id": "u58l09e10",
+      "type": "multipleChoice",
+      "prompt": "Which phrase signals a count-with-condition problem?",
+      "options": [
+        "'How many ... are ...?'",
+        "'What is the total ...?'",
+        "'Which is the biggest ...?'",
+        "'Put them in order'"
+      ],
+      "answer": 0,
+      "explanation": "'How many are...' asks you to count items that fit a rule. Spotting that phrasing tells you to reach for this pattern."
+    }
+  ]
+}

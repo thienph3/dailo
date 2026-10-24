@@ -1,0 +1,125 @@
+{
+  "unitId": "u96",
+  "lessonId": "u96l04",
+  "title": "Loop back: assembling a solution from blocks",
+  "idea": "LOOP (review): no new concept. Arrange code blocks to solve unseen multi-part problems, reusing accumulate, track, filter, and helper patterns from earlier laps.",
+  "exercises": [
+    {
+      "id": "u96l04e01",
+      "type": "orderBlocks",
+      "prompt": "PROBLEM: sum the prices in a list and print the total. Arrange the code.",
+      "blocks": [
+        "prices = [5, 9, 2]",
+        "total = 0",
+        "for price in prices:",
+        "total = total + price",
+        "print(total)"
+      ],
+      "answer": [0, 1, 2, 3, 4],
+      "explanation": "Store the list, start total at 0, loop and add each price, then print. The accumulate pattern, assembled from blocks."
+    },
+    {
+      "id": "u96l04e02",
+      "type": "orderBlocks",
+      "prompt": "PROBLEM: count how many numbers are negative. Arrange the code.",
+      "blocks": [
+        "nums = [3, -1, -4, 2]",
+        "negatives = 0",
+        "for n in nums:",
+        "if n < 0:",
+        "negatives = negatives + 1",
+        "print(negatives)"
+      ],
+      "answer": [0, 1, 2, 3, 4, 5],
+      "explanation": "List, counter at 0, loop with an if for 'negative', add 1 on a match, then print. Count-with-condition from blocks."
+    },
+    {
+      "id": "u96l04e03",
+      "type": "multipleChoice",
+      "prompt": "For the 'count negatives' code above, what does it print for [3, -1, -4, 2]?",
+      "options": ["2", "1", "4", "0"],
+      "answer": 0,
+      "explanation": "-1 and -4 are negative, so the counter reaches 2. Always trace an example to confirm the assembly is right."
+    },
+    {
+      "id": "u96l04e04",
+      "type": "orderBlocks",
+      "prompt": "PROBLEM: find the smallest value by hand (track the minimum, no builtin). Arrange the code.",
+      "blocks": [
+        "nums = [7, 3, 9, 1]",
+        "smallest = nums[0]",
+        "for n in nums:",
+        "if n < smallest:",
+        "smallest = n",
+        "print(smallest)"
+      ],
+      "answer": [0, 1, 2, 3, 4, 5],
+      "explanation": "Seed smallest with the first item, then keep the lesser one as you scan. Track-the-minimum, built by hand - never min()."
+    },
+    {
+      "id": "u96l04e05",
+      "type": "orderBlocks",
+      "prompt": "PROBLEM: a helper doubles a number; use it to build a new list. Arrange the code.",
+      "blocks": [
+        "def double(n):",
+        "return n * 2",
+        "nums = [1, 4, 6]",
+        "doubled = []",
+        "for n in nums:",
+        "doubled.append(double(n))",
+        "print(doubled)"
+      ],
+      "answer": [0, 1, 2, 3, 4, 5, 6],
+      "explanation": "Define the helper, store the list, start an empty list, loop and append each doubled value. Function + loop + list-building."
+    },
+    {
+      "id": "u96l04e06",
+      "type": "multipleChoice",
+      "prompt": "For the 'double into a new list' code, what does it print for [1, 4, 6]?",
+      "options": ["[2, 8, 12]", "[1, 4, 6]", "[2, 4, 6]", "22"],
+      "answer": 0,
+      "explanation": "Each item is doubled and appended: 2, 8, 12. The transform-into-a-new-list pattern produces a same-length list."
+    },
+    {
+      "id": "u96l04e07",
+      "type": "orderBlocks",
+      "prompt": "PROBLEM: keep asking for a number until it is positive. Arrange the code.",
+      "blocks": [
+        "value = int(input())",
+        "while value <= 0:",
+        "value = int(input())",
+        "print(value)"
+      ],
+      "answer": [0, 1, 2, 3],
+      "explanation": "Read once, re-ask while the value is not positive, then print the valid one. The validation-loop pattern from Lap 3."
+    },
+    {
+      "id": "u96l04e08",
+      "type": "fillBlank",
+      "prompt": "Complete the accumulate step for summing a list:\n\ntotal = 0\nfor n in nums:\n    total = total ____ n",
+      "answer": "+",
+      "acceptable": ["+"],
+      "explanation": "Each turn we ADD the item onto the running total, so the operator is +. This is how a sum is built without any builtin."
+    },
+    {
+      "id": "u96l04e09",
+      "type": "trueFalse",
+      "prompt": "When assembling blocks, indentation decides which lines sit INSIDE a loop or if, and getting it wrong changes the result.",
+      "answer": true,
+      "explanation": "Indentation is how Python knows the loop body from the code after it. A misplaced line can run once instead of every turn, or vice versa."
+    },
+    {
+      "id": "u96l04e10",
+      "type": "multipleChoice",
+      "prompt": "What is the LAST thing to do after arranging any solution?",
+      "options": [
+        "Trace one example by hand to confirm the output is what you expect",
+        "Add a new feature",
+        "Delete the comments",
+        "Rename every variable"
+      ],
+      "answer": 0,
+      "explanation": "Assembly is not done until you check it. Running one example through confirms the blocks are in the right order."
+    }
+  ]
+}

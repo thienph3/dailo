@@ -1,0 +1,154 @@
+{
+  "unitId": "u98",
+  "lessonId": "u98l01",
+  "title": "Capstone: find the biggest number in a list",
+  "idea": "GUIDED CAPSTONE. Track the biggest-so-far by hand — the max pattern built with a loop and an if, never a builtin.",
+  "problem": "Find the biggest number in the list [4, 9, 2, 7].",
+  "exercises": [
+    {
+      "id": "u98l01e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "Lists capstone! PROBLEM: biggest in [4, 9, 2, 7]. OUTPUT is...",
+      "options": [
+        "One number: the largest value",
+        "The whole list sorted",
+        "How many numbers",
+        "The position only"
+      ],
+      "answer": 0,
+      "explanation": "Output is a single value — the biggest. We'll track it as we scan, never calling a builtin."
+    },
+    {
+      "id": "u98l01e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "The input is the list. To find the biggest with a loop, what do we need to REMEMBER as we go?",
+      "options": [
+        "The best (biggest) value seen so far",
+        "Nothing",
+        "Only the last value",
+        "The sum"
+      ],
+      "answer": 0,
+      "explanation": "A 'best so far' variable. Each item either beats it or not. That memory IS the max pattern."
+    },
+    {
+      "id": "u98l01e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example by hand. Start best = 4 (first item). Next is 9: is 9 > 4?",
+      "options": [
+        "Yes — best becomes 9",
+        "No — best stays 4",
+        "They're equal",
+        "Can't tell"
+      ],
+      "answer": 0,
+      "explanation": "9 beats 4, so best updates to 9. We only keep a value when it's bigger."
+    },
+    {
+      "id": "u98l01e04",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Continue: items 2 then 7 against best = 9. What is best at the end?",
+      "options": [
+        "9 — neither 2 nor 7 beats it",
+        "7",
+        "2",
+        "4"
+      ],
+      "answer": 0,
+      "explanation": "2 < 9 and 7 < 9, so best stays 9. Hand answer: the biggest is 9."
+    },
+    {
+      "id": "u98l01e05",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Plan the max scan. Order the steps.",
+      "blocks": [
+        "For each remaining item, if it is bigger, update best",
+        "Start best at the first item",
+        "After the loop, best holds the answer"
+      ],
+      "answer": [
+        1,
+        0,
+        2
+      ],
+      "explanation": "Seed best with the first item, then let any bigger item replace it. Seeding with the first value avoids guessing a start."
+    },
+    {
+      "id": "u98l01e06",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Which comparison decides 'this item is bigger than our best'?",
+      "options": [
+        "item > best",
+        "item < best",
+        "item == best",
+        "item + best"
+      ],
+      "answer": 0,
+      "explanation": "> tests 'strictly bigger'. When true, we update best to item."
+    },
+    {
+      "id": "u98l01e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code the scan. Arrange the lines.",
+      "blocks": [
+        "    if item > best:",
+        "best = numbers[0]",
+        "        best = item",
+        "for item in numbers:"
+      ],
+      "answer": [
+        1,
+        3,
+        0,
+        2
+      ],
+      "explanation": "Seed best from numbers[0], loop each item, and update best only when item is bigger. Indentation nests the assignment under the if."
+    },
+    {
+      "id": "u98l01e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Complete the comparison that keeps the biggest:\n\nnumbers = [4, 9, 2, 7]\nbest = numbers[0]\nfor item in numbers:\n    if item ____ best:\n        best = item\nprint(best)",
+      "answer": ">",
+      "acceptable": [
+        ">"
+      ],
+      "explanation": "Use > so a larger item replaces best. After the scan best is 9 — computed by hand, not by a builtin."
+    },
+    {
+      "id": "u98l01e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Run it: prints 9. Hand example said 9. Verdict?",
+      "options": [
+        "Passes",
+        "Fails",
+        "Unknown",
+        "Rewrite example"
+      ],
+      "answer": 0,
+      "explanation": "Matches. You built max yourself with a loop and an if — exactly what this course teaches."
+    },
+    {
+      "id": "u98l01e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Re-run with [3, 3, 1]. What prints?",
+      "options": [
+        "3",
+        "1",
+        "9",
+        "6"
+      ],
+      "answer": 0,
+      "explanation": "best seeds at 3; 3 is not > 3, 1 is not > 3, so best stays 3. Ties and the seed both handled correctly."
+    }
+  ]
+}

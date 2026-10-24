@@ -1,0 +1,133 @@
+{
+  "unitId": "u22",
+  "lessonId": "u22l03",
+  "title": "Only one branch runs",
+  "idea": "Tracing if/else: the condition picks exactly one branch. The other is always skipped. Careful tracing, thinking-heavy.",
+  "exercises": [
+    {
+      "id": "u22l03e01",
+      "type": "multipleChoice",
+      "prompt": "What does this print?\n\nscore = 70\nif score >= 50:\n    print(\"Pass\")\nelse:\n    print(\"Fail\")",
+      "options": [
+        "Pass",
+        "Fail",
+        "both",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "70 >= 50 is True, so only the if branch runs: Pass."
+    },
+    {
+      "id": "u22l03e02",
+      "type": "multipleChoice",
+      "prompt": "What does this print?\n\nscore = 30\nif score >= 50:\n    print(\"Pass\")\nelse:\n    print(\"Fail\")",
+      "options": [
+        "Fail",
+        "Pass",
+        "both",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "30 >= 50 is False, so only the else branch runs: Fail."
+    },
+    {
+      "id": "u22l03e03",
+      "type": "trueFalse",
+      "prompt": "In an if/else, both branches can run at the same time.",
+      "answer": false,
+      "explanation": "No - exactly one branch runs. The condition chooses; the other branch is skipped."
+    },
+    {
+      "id": "u22l03e04",
+      "type": "multipleChoice",
+      "prompt": "How many lines print?\n\nn = 5\nif n == 5:\n    print(\"five\")\nelse:\n    print(\"not five\")",
+      "options": [
+        "1",
+        "0",
+        "2",
+        "3"
+      ],
+      "answer": 0,
+      "explanation": "5 == 5 is True, so only 'five' prints. Exactly one line."
+    },
+    {
+      "id": "u22l03e05",
+      "type": "multipleChoice",
+      "prompt": "What prints?\n\nn = 8\nif n % 2 == 0:\n    print(\"even\")\nelse:\n    print(\"odd\")",
+      "options": [
+        "even",
+        "odd",
+        "both",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "8 % 2 is 0, and 0 == 0 is True, so the if branch runs: even."
+    },
+    {
+      "id": "u22l03e06",
+      "type": "multipleChoice",
+      "prompt": "What prints?\n\nn = 7\nif n % 2 == 0:\n    print(\"even\")\nelse:\n    print(\"odd\")",
+      "options": [
+        "odd",
+        "even",
+        "both",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "7 % 2 is 1, and 1 == 0 is False, so the else branch runs: odd."
+    },
+    {
+      "id": "u22l03e07",
+      "type": "matchPairs",
+      "prompt": "Match each value of n to what prints:\n\nif n > 0:\n    print(\"positive\")\nelse:\n    print(\"zero or less\")",
+      "pairs": [
+        {
+          "left": "n = 5",
+          "right": "positive"
+        },
+        {
+          "left": "n = 0",
+          "right": "zero or less"
+        },
+        {
+          "left": "n = -3",
+          "right": "zero or less"
+        }
+      ],
+      "explanation": "n > 0 is True only for 5 here. 0 and -3 fall to the else branch."
+    },
+    {
+      "id": "u22l03e08",
+      "type": "trueFalse",
+      "prompt": "If the if branch runs, the else branch is skipped.",
+      "answer": true,
+      "explanation": "Yes - they are the two halves of one choice. Only the chosen half runs."
+    },
+    {
+      "id": "u22l03e09",
+      "type": "multipleChoice",
+      "prompt": "What prints after the whole thing?\n\nn = 4\nif n > 10:\n    print(\"big\")\nelse:\n    print(\"small\")\nprint(\"done\")",
+      "options": [
+        "small then done",
+        "big then done",
+        "done only",
+        "small only"
+      ],
+      "answer": 0,
+      "explanation": "n > 10 is False so else runs ('small'). Then the unindented 'done' always runs after the choice."
+    },
+    {
+      "id": "u22l03e10",
+      "type": "multipleChoice",
+      "prompt": "Why is it reassuring that exactly one branch always runs?",
+      "options": [
+        "Every case is covered - no situation is left without an outcome",
+        "Because both run",
+        "Because neither runs",
+        "It is not reassuring"
+      ],
+      "answer": 0,
+      "explanation": "if/else guarantees an outcome for both True and False - nothing slips through unhandled."
+    }
+  ]
+}

@@ -1,0 +1,141 @@
+{
+  "unitId": "u12",
+  "lessonId": "u12l03",
+  "title": "Groups and leftover together",
+  "idea": "// and % answer the same sharing question: how many each, and how many left over.",
+  "exercises": [
+    {
+      "id": "u12l03e01",
+      "type": "multipleChoice",
+      "prompt": "Share 14 marbles into groups of 4. How many full groups, and how many left over?",
+      "options": [
+        "3 groups, 2 left over",
+        "4 groups, 0 left over",
+        "2 groups, 6 left over",
+        "3 groups, 0 left over"
+      ],
+      "answer": 0,
+      "explanation": "Three 4s make 12, and 14 minus 12 is 2. So 3 full groups with 2 left over. // gives the 3, % gives the 2."
+    },
+    {
+      "id": "u12l03e02",
+      "type": "multipleChoice",
+      "prompt": "What will these two lines show?\n\nprint(14 // 4)\nprint(14 % 4)",
+      "options": [
+        "3 then 2",
+        "2 then 3",
+        "3 then 3",
+        "4 then 2"
+      ],
+      "answer": 0,
+      "explanation": "14 // 4 is 3 (the full groups), then 14 % 4 is 2 (the leftover). Together they fully describe the share."
+    },
+    {
+      "id": "u12l03e03",
+      "type": "multipleChoice",
+      "prompt": "For the same two numbers, // gives the groups and % gives the ____.",
+      "options": [
+        "leftover",
+        "total",
+        "product",
+        "sum"
+      ],
+      "answer": 0,
+      "explanation": "// is the full groups; % is the leftover. They're a matched pair for any sharing problem."
+    },
+    {
+      "id": "u12l03e04",
+      "type": "trueFalse",
+      "prompt": "groups times the group size, plus the leftover, gives back the starting number.",
+      "answer": true,
+      "explanation": "For 14 and 4: 3 * 4 is 12, plus leftover 2 is 14. The groups and leftover always rebuild the original."
+    },
+    {
+      "id": "u12l03e05",
+      "type": "multipleChoice",
+      "prompt": "What will these show?\n\nprint(20 // 6)\nprint(20 % 6)",
+      "options": [
+        "3 then 2",
+        "3 then 0",
+        "4 then 2",
+        "2 then 8"
+      ],
+      "answer": 0,
+      "explanation": "Three 6s make 18, leaving 2. So 20 // 6 is 3 and 20 % 6 is 2."
+    },
+    {
+      "id": "u12l03e06",
+      "type": "orderBlocks",
+      "prompt": "Put these lines in order to show the groups first, then the leftover, for 23 shared into 5s.",
+      "blocks": [
+        "print(23 // 5)",
+        "print(23 % 5)"
+      ],
+      "answer": [
+        0,
+        1
+      ],
+      "explanation": "Groups first (23 // 5 is 4), then the leftover (23 % 5 is 3). Lines run top to bottom."
+    },
+    {
+      "id": "u12l03e07",
+      "type": "multipleChoice",
+      "prompt": "You pack 30 eggs into cartons of 12. Which pair of lines shows full cartons, then loose eggs?",
+      "options": [
+        "print(30 // 12) then print(30 % 12)",
+        "print(30 % 12) then print(30 // 12)",
+        "print(30 + 12) then print(30 - 12)",
+        "print(12 // 30) then print(12 % 30)"
+      ],
+      "answer": 0,
+      "explanation": "30 // 12 is 2 full cartons; 30 % 12 is 6 loose eggs. Full groups use //, loose leftover uses %."
+    },
+    {
+      "id": "u12l03e08",
+      "type": "fillBlank",
+      "prompt": "Fill the blank to show how many whole weeks are in 25 days.\n\nprint(25 __ 7)",
+      "answer": "//",
+      "acceptable": [
+        "//"
+      ],
+      "explanation": "25 // 7 is 3 whole weeks. (And 25 % 7 would be the 4 leftover days.)"
+    },
+    {
+      "id": "u12l03e09",
+      "type": "matchPairs",
+      "prompt": "Match each question to the sign that answers it.",
+      "pairs": [
+        {
+          "left": "How many full groups?",
+          "right": "//"
+        },
+        {
+          "left": "How many left over?",
+          "right": "%"
+        },
+        {
+          "left": "How many in total if added?",
+          "right": "+"
+        },
+        {
+          "left": "How many altogether in rows?",
+          "right": "*"
+        }
+      ],
+      "explanation": "// counts full groups, % counts the leftover. + and * are the adding and repeating tools from before."
+    },
+    {
+      "id": "u12l03e10",
+      "type": "multipleChoice",
+      "prompt": "17 students ride in cars that hold 5 each. What do 17 // 5 and 17 % 5 tell you?",
+      "options": [
+        "3 full cars, and 2 students still need a ride",
+        "5 full cars, and 3 students still need a ride",
+        "2 full cars, and 7 students still need a ride",
+        "3 full cars, and 0 students still need a ride"
+      ],
+      "answer": 0,
+      "explanation": "17 // 5 is 3 full cars (15 students), and 17 % 5 is 2 left over. Those 2 still need a ride — real info from // and %."
+    }
+  ]
+}

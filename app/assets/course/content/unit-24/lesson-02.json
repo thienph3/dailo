@@ -1,0 +1,133 @@
+{
+  "unitId": "u24",
+  "lessonId": "u24l02",
+  "title": "Why zero can break a plan",
+  "idea": "Dividing by zero is impossible - the program errors. Spotting a possible zero divisor is the first edge-case skill. Thinking, no code.",
+  "exercises": [
+    {
+      "id": "u24l02e01",
+      "type": "multipleChoice",
+      "prompt": "What happens if a program tries to compute 10 / 0?",
+      "options": [
+        "It errors - dividing by zero is not allowed",
+        "It gives 0",
+        "It gives 10",
+        "It gives a huge number"
+      ],
+      "answer": 0,
+      "explanation": "Division by zero is undefined, so Python raises an error and stops. You must avoid it."
+    },
+    {
+      "id": "u24l02e02",
+      "type": "trueFalse",
+      "prompt": "You can safely divide any number by zero and get zero.",
+      "answer": false,
+      "explanation": "No. Dividing by zero is impossible and causes an error - it does not quietly give zero."
+    },
+    {
+      "id": "u24l02e03",
+      "type": "multipleChoice",
+      "prompt": "'total / count gives the average.' When is this dangerous?",
+      "options": [
+        "When count is zero",
+        "When total is large",
+        "When count is 5",
+        "Never"
+      ],
+      "answer": 0,
+      "explanation": "If count is zero, total / count divides by zero and crashes. The zero count is the edge case."
+    },
+    {
+      "id": "u24l02e04",
+      "type": "multipleChoice",
+      "prompt": "In 'price / people', which variable must NOT be zero?",
+      "options": [
+        "people (the divisor)",
+        "price",
+        "both equally",
+        "neither"
+      ],
+      "answer": 0,
+      "explanation": "The divisor (people) must not be zero. A zero price is fine - zero people is the problem."
+    },
+    {
+      "id": "u24l02e05",
+      "type": "matchPairs",
+      "prompt": "Match each division to the value that must not be zero.",
+      "pairs": [
+        {
+          "left": "bill / diners",
+          "right": "diners"
+        },
+        {
+          "left": "distance / hours",
+          "right": "hours"
+        },
+        {
+          "left": "total / items",
+          "right": "items"
+        }
+      ],
+      "explanation": "In each case the bottom number (the divisor) must not be zero, or the division errors."
+    },
+    {
+      "id": "u24l02e06",
+      "type": "multipleChoice",
+      "prompt": "'miles / gallons gives miles-per-gallon.' The edge case is...",
+      "options": [
+        "gallons is zero",
+        "miles is large",
+        "gallons is 10",
+        "miles is zero"
+      ],
+      "answer": 0,
+      "explanation": "Zero gallons means dividing by zero. A zero miles value is fine; zero gallons is the danger."
+    },
+    {
+      "id": "u24l02e07",
+      "type": "trueFalse",
+      "prompt": "Before dividing, it is wise to ask whether the divisor could ever be zero.",
+      "answer": true,
+      "explanation": "Exactly. Checking the divisor for zero first is how you guard against the crash."
+    },
+    {
+      "id": "u24l02e08",
+      "type": "multipleChoice",
+      "prompt": "Which of these divisions is always safe (the divisor can never be zero)?",
+      "options": [
+        "total / 2",
+        "total / count",
+        "bill / people",
+        "distance / hours"
+      ],
+      "answer": 0,
+      "explanation": "total / 2 has a fixed divisor of 2, which is never zero. The others divide by a variable that might be zero."
+    },
+    {
+      "id": "u24l02e09",
+      "type": "multipleChoice",
+      "prompt": "A zero divisor is an edge case because...",
+      "options": [
+        "it is a rare value that breaks the normal division",
+        "it is the most common value",
+        "it makes division faster",
+        "it is not a number"
+      ],
+      "answer": 0,
+      "explanation": "Most of the time the divisor is fine; the rare zero is what breaks the plan. That is what makes it an edge case."
+    },
+    {
+      "id": "u24l02e10",
+      "type": "multipleChoice",
+      "prompt": "The safe habit before any division is...",
+      "options": [
+        "Check the divisor is not zero first",
+        "Divide and hope",
+        "Always divide by 2",
+        "Never divide"
+      ],
+      "answer": 0,
+      "explanation": "Guard the divisor: only divide when it is not zero. The next lessons show how a simple if does this."
+    }
+  ]
+}

@@ -1,0 +1,140 @@
+{
+  "unitId": "u85",
+  "lessonId": "u85l02",
+  "title": "Reading slowly: find every 'thing it asks for'",
+  "idea": "MEET: the output of a big problem is EVERY thing it asks you to produce — underline each one before planning.",
+  "exercises": [
+    {
+      "type": "multipleChoice",
+      "prompt": "PROBLEM: 'For a list of prices, show the total and show how many cost more than 10.' How many OUTPUTS?",
+      "options": [
+        "Two: the total, and the count above 10",
+        "One: just the total",
+        "Three",
+        "None"
+      ],
+      "answer": 0,
+      "explanation": "Two separate things are asked for. Each output is a part you'll plan separately.",
+      "id": "u85l02e01"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "In that same problem, which words signal the SECOND output?",
+      "options": [
+        "'how many cost more than 10'",
+        "'a list of prices'",
+        "'show the total'",
+        "'For a list'"
+      ],
+      "answer": 0,
+      "explanation": "'How many...' asks for a count — a different output from the total. Reading slowly catches it.",
+      "id": "u85l02e02"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "It is safe to start coding before you've found every thing the problem asks for.",
+      "answer": false,
+      "explanation": "No — miss an output and your solution is incomplete. Find all the asks first.",
+      "id": "u85l02e03"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "PROBLEM: 'Report the average score and whether the class passed (average at least 60).' The outputs are...",
+      "options": [
+        "The average, and a yes/no 'did it pass'",
+        "Only the average",
+        "Only yes/no",
+        "The number of students"
+      ],
+      "answer": 0,
+      "explanation": "Two outputs: a number (average) and a true/false (passed). Both must appear in the final answer.",
+      "id": "u85l02e04"
+    },
+    {
+      "type": "multiSelect",
+      "prompt": "Select every OUTPUT this problem asks for: 'Show the total bill, the tip (10% of the bill), and the final amount.'",
+      "options": [
+        "The total bill",
+        "The tip",
+        "The final amount",
+        "The number of diners"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Three outputs are named. 'Number of diners' is never asked for — don't invent extra work.",
+      "id": "u85l02e05"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Why underline each 'thing it asks for' before planning?",
+      "options": [
+        "So no required output gets forgotten",
+        "To make the problem longer",
+        "Because the computer needs it",
+        "To use up time"
+      ],
+      "answer": 0,
+      "explanation": "A missed output is a silent bug. Listing every ask up front is cheap insurance.",
+      "id": "u85l02e06"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "A problem can ask for a NUMBER and a YES/NO answer at the same time.",
+      "answer": true,
+      "explanation": "Yes — e.g. 'the average, and did it pass?'. Outputs can be different kinds.",
+      "id": "u85l02e07"
+    },
+    {
+      "type": "matchPairs",
+      "prompt": "Match each phrase to the kind of output it asks for.",
+      "pairs": [
+        {
+          "left": "'how many...'",
+          "right": "A count (number)"
+        },
+        {
+          "left": "'what is the total...'",
+          "right": "A total (number)"
+        },
+        {
+          "left": "'did it pass?'",
+          "right": "A yes/no (true or false)"
+        }
+      ],
+      "explanation": "Different question words point at different kinds of output. Spotting the kind helps you plan the part.",
+      "id": "u85l02e08"
+    },
+    {
+      "type": "orderBlocks",
+      "prompt": "Order the slow-reading habit for finding outputs.",
+      "blocks": [
+        "Read the whole problem once",
+        "Underline every 'thing it asks for'",
+        "Count how many outputs you underlined"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Read, underline each ask, count them. Now you know exactly what the answer must contain.",
+      "id": "u85l02e09"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "The big idea:",
+      "options": [
+        "The output is EVERY thing the problem asks for — find them all first",
+        "A problem only ever asks for one thing",
+        "Outputs don't matter",
+        "You should guess the outputs"
+      ],
+      "answer": 0,
+      "explanation": "List every ask before planning. Nothing gets forgotten when it's written down.",
+      "id": "u85l02e10"
+    }
+  ]
+}

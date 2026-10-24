@@ -1,0 +1,125 @@
+{
+  "unitId": "u95",
+  "lessonId": "u95l09",
+  "title": "Refactor, then re-check",
+  "idea": "MEET (thinking): the safety net for every refactor is the Check habit from Unit 94 - run your examples again and confirm the output didn't move.",
+  "exercises": [
+    {
+      "id": "u95l09e01",
+      "type": "multipleChoice",
+      "prompt": "You just renamed variables and pulled out a helper. What's the very next thing to do?",
+      "options": [
+        "Re-run your examples and confirm the output matches the old output",
+        "Add a new feature",
+        "Delete your old notes",
+        "Change the inputs to make it look better"
+      ],
+      "answer": 0,
+      "explanation": "Refactor then CHECK. Re-running the same examples is how you prove behavior stayed identical. No check means no proof."
+    },
+    {
+      "id": "u95l09e02",
+      "type": "multipleChoice",
+      "prompt": "Before refactoring, your code printed 72 for a certain input. After refactoring it prints 72. This tells you...",
+      "options": [
+        "The refactor preserved behavior for that example",
+        "The refactor failed",
+        "The input was wrong",
+        "You must change 72"
+      ],
+      "answer": 0,
+      "explanation": "Same output for the same input = behavior preserved, at least for that case. That matching number is your evidence."
+    },
+    {
+      "id": "u95l09e03",
+      "type": "multipleChoice",
+      "prompt": "After refactoring, the output changed from 72 to 70. What does that mean?",
+      "options": [
+        "You accidentally changed behavior - it's a bug, not a refactor",
+        "The refactor worked perfectly",
+        "The computer is tired",
+        "70 is just a nicer number"
+      ],
+      "answer": 0,
+      "explanation": "A changed answer means you altered logic somewhere. Go find what moved - a refactor must leave the output exactly as it was."
+    },
+    {
+      "id": "u95l09e04",
+      "type": "trueFalse",
+      "prompt": "Checking ONE example is enough to be fully sure a refactor is safe.",
+      "answer": false,
+      "explanation": "One example is a good start, but edge cases (zero, empty, biggest, smallest) can still differ. Re-check several, including the tricky ones."
+    },
+    {
+      "id": "u95l09e05",
+      "type": "multiSelect",
+      "prompt": "After a refactor, which inputs are worth re-checking? Pick ALL that apply.",
+      "options": [
+        "A normal everyday input",
+        "An edge case like 0 or an empty list",
+        "The largest and smallest values",
+        "Only inputs that give round answers"
+      ],
+      "answer": [0, 1, 2],
+      "explanation": "Normal + edges + extremes. Refactors most often break at the boundaries, so those are exactly where to re-check."
+    },
+    {
+      "id": "u95l09e06",
+      "type": "orderBlocks",
+      "prompt": "Order the safe refactoring loop.",
+      "blocks": [
+        "Note the current outputs for your examples",
+        "Make ONE small clarity change",
+        "Re-run and confirm every output still matches"
+      ],
+      "answer": [0, 1, 2],
+      "explanation": "Record, change a little, re-check. Small steps with checks between them make it easy to spot exactly what broke if something does."
+    },
+    {
+      "id": "u95l09e07",
+      "type": "multipleChoice",
+      "prompt": "Why make ONE small change at a time, then check?",
+      "options": [
+        "If a check fails, you know exactly which change caused it",
+        "Big changes are illegal",
+        "The computer only allows one change",
+        "Small changes run faster"
+      ],
+      "answer": 0,
+      "explanation": "Small steps keep the suspect list tiny. If you change ten things then check, a failure could be any of the ten."
+    },
+    {
+      "id": "u95l09e08",
+      "type": "multipleChoice",
+      "prompt": "Predict: before and after.\n\nBefore:\np = 50\nt = p * 10 / 100\nprint(t)\n\nAfter (renamed + named constant):\nbill = 50\ntip_rate = 10\ntip = bill * tip_rate / 100\nprint(tip)",
+      "options": [
+        "Both print 5.0 - the refactor preserved behavior",
+        "Before prints 5.0, after prints something else",
+        "After errors",
+        "Both print 50"
+      ],
+      "answer": 0,
+      "explanation": "50 * 10 / 100 = 5.0 in both. The 'after' version just reads clearly. Matching output confirms the rename+constant refactor is safe."
+    },
+    {
+      "id": "u95l09e09",
+      "type": "trueFalse",
+      "prompt": "The Check habit from proving a solution works is the SAME habit that keeps a refactor safe.",
+      "answer": true,
+      "explanation": "Exactly. Checking proved your first solution; re-checking proves your tidy-up didn't break it. One habit, two jobs."
+    },
+    {
+      "id": "u95l09e10",
+      "type": "multipleChoice",
+      "prompt": "The golden rule of this whole unit, in one line:",
+      "options": [
+        "Change how it reads, prove it still gives the same answers",
+        "Change the answers, keep the code",
+        "Never re-run anything",
+        "Refactor only code that is broken"
+      ],
+      "answer": 0,
+      "explanation": "Clearer code, identical answers, proven by re-checking. That's refactoring done right."
+    }
+  ]
+}

@@ -1,0 +1,133 @@
+{
+  "unitId": "u57",
+  "lessonId": "u57l04",
+  "title": "Total with a label",
+  "idea": "Use the summed total in an f-string and simple follow-up math. Reviews f-strings.",
+  "exercises": [
+    {
+      "id": "u57l04e01",
+      "type": "multipleChoice",
+      "prompt": "prices = [3, 5, 2]\ntotal = 0\nfor price in prices:\n    total = total + price\nprint(f\"Total: {total}\")\n\nWhat prints?",
+      "options": [
+        "Total: 10",
+        "Total: {total}",
+        "Total: 3",
+        "10"
+      ],
+      "answer": 0,
+      "explanation": "The f-string drops the final total (10) in: 'Total: 10'."
+    },
+    {
+      "id": "u57l04e02",
+      "type": "fillBlank",
+      "prompt": "Fill the blank to show the total in a sentence:\n\nprint(f\"You spent {____}\")",
+      "answer": "total",
+      "acceptable": [
+        "total"
+      ],
+      "explanation": "Put the variable name in the braces so its value appears in the text."
+    },
+    {
+      "id": "u57l04e03",
+      "type": "multipleChoice",
+      "prompt": "After totalling, you want each value's share of a 3-way split... but wait — which part is still just 'the total'?",
+      "options": [
+        "total holds the full sum before any splitting",
+        "total is already split",
+        "total is the first value",
+        "total is 0"
+      ],
+      "answer": 0,
+      "explanation": "The accumulator gives the full sum. Anything you do next (like dividing) uses that total."
+    },
+    {
+      "id": "u57l04e04",
+      "type": "multipleChoice",
+      "prompt": "nums = [10, 20, 30]\ntotal = 0\nfor n in nums:\n    total = total + n\nprint(total * 2)\n\nWhat prints?",
+      "options": [
+        "120",
+        "60",
+        "180",
+        "[10, 20, 30]"
+      ],
+      "answer": 0,
+      "explanation": "Total is 60; printed doubled is 120. You can use the total in more math."
+    },
+    {
+      "id": "u57l04e05",
+      "type": "orderBlocks",
+      "prompt": "Arrange: total a list of donations and print 'Raised: <total>'.",
+      "blocks": [
+        "print(f\"Raised: {total}\")",
+        "    total = total + d",
+        "total = 0",
+        "for d in donations:",
+        "donations = [5, 15]"
+      ],
+      "answer": [
+        4,
+        2,
+        3,
+        1,
+        0
+      ],
+      "explanation": "List, start total, loop + add, then the labelled print. Shows 'Raised: 20'."
+    },
+    {
+      "id": "u57l04e06",
+      "type": "trueFalse",
+      "prompt": "You can label the total with an f-string because total is just a number variable after the loop.",
+      "answer": true,
+      "explanation": "Once the loop ends, total is an ordinary number you can print, label, or compute with."
+    },
+    {
+      "id": "u57l04e07",
+      "type": "multipleChoice",
+      "prompt": "weights = [2, 2, 2, 2]\ntotal = 0\nfor w in weights:\n    total = total + w\nprint(total)\n\nWhat prints?",
+      "options": [
+        "8",
+        "2",
+        "4",
+        "16"
+      ],
+      "answer": 0,
+      "explanation": "Four 2s summed is 8."
+    },
+    {
+      "id": "u57l04e08",
+      "type": "multipleChoice",
+      "prompt": "Which line correctly adds the loop value 'item' into a total called sum_so_far?",
+      "options": [
+        "sum_so_far = sum_so_far + item",
+        "sum_so_far = item",
+        "sum_so_far = sum_so_far + 1",
+        "item = item + sum_so_far"
+      ],
+      "answer": 0,
+      "explanation": "Add the value into the accumulator: sum_so_far = sum_so_far + item."
+    },
+    {
+      "id": "u57l04e09",
+      "type": "fillBlank",
+      "prompt": "Use the += shorthand to add each value:\n\ntotal = 0\nfor n in nums:\n    total ____ n",
+      "answer": "+=",
+      "acceptable": [
+        "+="
+      ],
+      "explanation": "total += n is shorthand for total = total + n."
+    },
+    {
+      "id": "u57l04e10",
+      "type": "multipleChoice",
+      "prompt": "Big picture: what two lines make the 'sum a list' pattern?",
+      "options": [
+        "total = 0 before the loop, and total = total + value inside",
+        "total = value, print(total)",
+        "for only",
+        "print only"
+      ],
+      "answer": 0,
+      "explanation": "Initialise to 0, then add each value inside the loop. That's the whole sum tool."
+    }
+  ]
+}

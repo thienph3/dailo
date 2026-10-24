@@ -1,0 +1,122 @@
+{
+  "unitId": "u50",
+  "lessonId": "u50l09",
+  "title": "Loop back: solve something new",
+  "idea": "REVIEW. Apply the whole lap to small unseen problems: choose the loop, pick the inside tool, and predict the result. No new concepts.",
+  "exercises": [
+    {
+      "id": "u50l09e01",
+      "type": "multipleChoice",
+      "prompt": "'Print each number from 1 to 100.' Which loop, and how many passes?",
+      "options": [
+        "for over range(1, 101) - 100 passes",
+        "while forever",
+        "for over range(100) printing 0 to 99",
+        "no loop"
+      ],
+      "answer": 0,
+      "explanation": "Known range -> for; range(1, 101) prints 1 through 100 - exactly 100 passes."
+    },
+    {
+      "id": "u50l09e02",
+      "type": "multipleChoice",
+      "prompt": "'Count how many numbers from 1 to 50 are multiples of 7.' Loop + inside tool?",
+      "options": [
+        "for (known range) with a counter and an if (i % 7 == 0)",
+        "while with an accumulator",
+        "for with no if",
+        "no loop"
+      ],
+      "answer": 0,
+      "explanation": "Known range -> for; 'how many' -> counter; the rule -> an if. Multiples of 7 up to 50 are 7, 14, 21, 28, 35, 42, 49."
+    },
+    {
+      "id": "u50l09e03",
+      "type": "multipleChoice",
+      "prompt": "From the problem above, what is the final count?",
+      "options": ["7", "6", "8", "50"],
+      "answer": 0,
+      "explanation": "7, 14, 21, 28, 35, 42, 49 - seven multiples of 7 up to 50."
+    },
+    {
+      "id": "u50l09e04",
+      "type": "multipleChoice",
+      "prompt": "'Add 20 to a jar each day until it holds at least 150.' Loop + why?",
+      "options": [
+        "while - the number of days isn't known ahead of time",
+        "for over range(150)",
+        "for over range(20)",
+        "no loop"
+      ],
+      "answer": 0,
+      "explanation": "The day count depends on reaching 150, so it's unknown up front. Repeat-until -> while."
+    },
+    {
+      "id": "u50l09e05",
+      "type": "multipleChoice",
+      "prompt": "From that jar problem (20 per day, goal 150), how many days?",
+      "options": ["8 days (160 on day 8)", "7 days", "150 days", "20 days"],
+      "answer": 0,
+      "explanation": "20, 40, 60, 80, 100, 120, 140, 160 - day 8 is the first at or above 150. A while loop counts those days."
+    },
+    {
+      "id": "u50l09e06",
+      "type": "multipleChoice",
+      "prompt": "'Total the numbers 1 to 20, but skip those divisible by 4.' Inside tools?",
+      "options": [
+        "An accumulator plus a continue (or if) to skip multiples of 4",
+        "A counter only",
+        "A break on the first pass",
+        "No tools"
+      ],
+      "answer": 0,
+      "explanation": "'Total' -> accumulator; 'skip some' -> continue (or an if that only adds the rest). Multiples of 4 are left out."
+    },
+    {
+      "id": "u50l09e07",
+      "type": "multipleChoice",
+      "prompt": "'Find the first number from 1 up whose square is over 200.' Best structure?",
+      "options": [
+        "A for loop over a range with an if (i * i > 200) and a break",
+        "A while that never stops",
+        "An accumulator",
+        "No loop"
+      ],
+      "answer": 0,
+      "explanation": "Search with a known range, test the square, break at the first match. 14*14 = 196 (no), 15*15 = 225 (yes) -> 15."
+    },
+    {
+      "id": "u50l09e08",
+      "type": "trueFalse",
+      "prompt": "Choosing the loop and the inside tool are two separate decisions.",
+      "answer": true,
+      "explanation": "First pick the loop shape (for/while), then pick what to track inside (counter/accumulator/if/break). Independent choices."
+    },
+    {
+      "id": "u50l09e09",
+      "type": "orderBlocks",
+      "prompt": "Order the solving routine for any repetition problem.",
+      "blocks": [
+        "Find the stopping rule (known count or a condition?)",
+        "Choose for or while from that rule",
+        "Choose the inside tool (counter/accumulator/if/break)",
+        "Code it and trace to check"
+      ],
+      "answer": [0, 1, 2, 3],
+      "explanation": "Stopping rule -> loop choice -> inside tool -> code and check. This routine solves any loop problem you meet."
+    },
+    {
+      "id": "u50l09e10",
+      "type": "multipleChoice",
+      "prompt": "'Print 'go' exactly 3 times, then print 'done'.' Which loop?",
+      "options": [
+        "for over range(3), then a print after the loop",
+        "while forever",
+        "no loop",
+        "for over range(300)"
+      ],
+      "answer": 0,
+      "explanation": "Known count (3) -> for over range(3). The 'done' print comes after the loop ends."
+    }
+  ]
+}

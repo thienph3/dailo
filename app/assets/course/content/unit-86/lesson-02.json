@@ -1,0 +1,139 @@
+{
+  "unitId": "u86",
+  "lessonId": "u86l02",
+  "title": "One output, one sub-problem",
+  "idea": "MEET: the simplest split starts from the outputs — each thing the problem asks for usually becomes its own sub-problem.",
+  "exercises": [
+    {
+      "type": "multipleChoice",
+      "prompt": "PROBLEM: 'Show the total and the average of the scores.' Starting from outputs, how many sub-problems?",
+      "options": [
+        "Two — one for the total, one for the average",
+        "One — they're the same",
+        "Three",
+        "Zero"
+      ],
+      "answer": 0,
+      "explanation": "Two outputs (total, average) suggest two sub-problems to start. Each output earns its own piece.",
+      "id": "u86l02e01"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "A good first split is 'one sub-problem per output the problem asks for'.",
+      "answer": true,
+      "explanation": "Yes — listing outputs from Unit 85 gives you a starter list of sub-problems for free.",
+      "id": "u86l02e02"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "PROBLEM: 'Count the passes and count the fails.' The two sub-problems are...",
+      "options": [
+        "count the passes; count the fails",
+        "count everything once",
+        "sort the scores",
+        "print the list"
+      ],
+      "answer": 0,
+      "explanation": "Two outputs, two sub-problems: one count for passes, one for fails. Each output maps to a job.",
+      "id": "u86l02e03"
+    },
+    {
+      "type": "multiSelect",
+      "prompt": "Select the sub-problems for 'show the biggest price and the smallest price'.",
+      "options": [
+        "Track the biggest price",
+        "Track the smallest price",
+        "Delete the list",
+        "Rename prices"
+      ],
+      "answer": [
+        0,
+        1
+      ],
+      "explanation": "Two outputs become two tracking sub-problems: biggest and smallest. The others aren't jobs the problem needs.",
+      "id": "u86l02e04"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Why start the split from the OUTPUTS?",
+      "options": [
+        "Each thing you must produce is naturally its own piece of work",
+        "Outputs are decoration",
+        "Inputs can't be split",
+        "It's the only legal order"
+      ],
+      "answer": 0,
+      "explanation": "Every output is something you must build, so each is a ready-made sub-problem. It's the easiest place to start.",
+      "id": "u86l02e05"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Two outputs always collapse into a single sub-problem.",
+      "answer": false,
+      "explanation": "No — usually each output is its own job. Sometimes they share a step, but start by giving each its own piece.",
+      "id": "u86l02e06"
+    },
+    {
+      "type": "matchPairs",
+      "prompt": "Match each output to its sub-problem job.",
+      "pairs": [
+        {
+          "left": "the total",
+          "right": "add up the values (running total)"
+        },
+        {
+          "left": "the count over 10",
+          "right": "count items that pass the rule"
+        },
+        {
+          "left": "the biggest",
+          "right": "track the biggest so far"
+        }
+      ],
+      "explanation": "Each output names a familiar job. The output IS the hint for which pattern the sub-problem needs.",
+      "id": "u86l02e07"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "PROBLEM: 'Report the average and whether it passed (>=60).' The two sub-problems are...",
+      "options": [
+        "compute the average; decide pass/fail from the average",
+        "sort then print",
+        "count the list twice",
+        "there are none"
+      ],
+      "answer": 0,
+      "explanation": "Average is one job; deciding pass/fail (average >= 60) is a second job that uses the first's result.",
+      "id": "u86l02e08"
+    },
+    {
+      "type": "orderBlocks",
+      "prompt": "Order the output-first split habit.",
+      "blocks": [
+        "List every output the problem asks for",
+        "Give each output its own sub-problem",
+        "Note if any sub-problem needs another's result"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "List outputs, make each a sub-problem, then spot dependencies. A clean starter decomposition.",
+      "id": "u86l02e09"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "The big idea:",
+      "options": [
+        "Start the split from the outputs — one sub-problem per thing you must produce",
+        "Outputs and sub-problems are unrelated",
+        "Always use exactly one sub-problem",
+        "Sub-problems come before outputs"
+      ],
+      "answer": 0,
+      "explanation": "Outputs first. Each thing the problem asks for is a natural sub-problem — the easiest way to begin splitting.",
+      "id": "u86l02e10"
+    }
+  ]
+}

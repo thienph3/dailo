@@ -1,0 +1,156 @@
+{
+  "unitId": "u100",
+  "lessonId": "u100l05",
+  "title": "Grand finale: count the vowels in a word",
+  "idea": "GUIDED FINALE. Strings are in your toolkit too: loop a word's letters and count the vowels with a membership test.",
+  "problem": "Count the vowels in the word 'apple' (a, e -> 2 vowels).",
+  "exercises": [
+    {
+      "id": "u100l05e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: count vowels in 'apple'. OUTPUT is...",
+      "options": [
+        "A count of vowel letters",
+        "The vowels themselves",
+        "The word reversed",
+        "The length"
+      ],
+      "answer": 0,
+      "explanation": "Output is a count. Strings can be looped letter by letter, just like lists of numbers."
+    },
+    {
+      "id": "u100l05e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "How do we check if a letter is a vowel?",
+      "options": [
+        "Test if it is in 'aeiou' (membership)",
+        "Compare it to 5",
+        "Divide it",
+        "Add it up"
+      ],
+      "answer": 0,
+      "explanation": "Membership: letter in 'aeiou' is True for a vowel. The search/membership pattern, applied to letters."
+    },
+    {
+      "id": "u100l05e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example by hand: which letters of 'apple' are vowels?",
+      "options": [
+        "a and e",
+        "a, p, e",
+        "p, p, l",
+        "all of them"
+      ],
+      "answer": 0,
+      "explanation": "a and e are vowels; p, p, l are not. So two vowels."
+    },
+    {
+      "id": "u100l05e04",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "So the hand-worked vowel count is...",
+      "options": [
+        "2",
+        "3",
+        "5",
+        "1"
+      ],
+      "answer": 0,
+      "explanation": "Two vowels (a, e). Our check value."
+    },
+    {
+      "id": "u100l05e05",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Plan it. Order the steps.",
+      "blocks": [
+        "If the letter is a vowel, add 1 to the count",
+        "Start a count at 0",
+        "For each letter in the word",
+        "Show the count"
+      ],
+      "answer": [
+        1,
+        2,
+        0,
+        3
+      ],
+      "explanation": "Counter at 0, loop letters, bump on a vowel, show. Count-with-condition, condition = membership."
+    },
+    {
+      "id": "u100l05e06",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Which test means 'this letter is a vowel'?",
+      "options": [
+        "if letter in \"aeiou\":",
+        "if letter == 5:",
+        "if letter > \"a\":",
+        "if letter % 2:"
+      ],
+      "answer": 0,
+      "explanation": "letter in \"aeiou\" checks membership against the vowel set. True only for a, e, i, o, u."
+    },
+    {
+      "id": "u100l05e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code the loop. Arrange the lines.",
+      "blocks": [
+        "        count = count + 1",
+        "for letter in word:",
+        "    if letter in \"aeiou\":",
+        "count = 0"
+      ],
+      "answer": [
+        3,
+        1,
+        2,
+        0
+      ],
+      "explanation": "count=0, loop each letter, test membership, increment inside the if. Strings loop just like lists."
+    },
+    {
+      "id": "u100l05e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Complete the vowel test:\n\nword = \"apple\"\ncount = 0\nfor letter in word:\n    if letter ____ \"aeiou\":\n        count = count + 1\nprint(count)",
+      "answer": "in",
+      "acceptable": [
+        "in"
+      ],
+      "explanation": "The 'in' keyword tests membership. For 'apple', a and e match, so count ends at 2."
+    },
+    {
+      "id": "u100l05e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Run it on 'apple': count is 2. Hand said 2. Verdict?",
+      "options": [
+        "Passes",
+        "Fails",
+        "Unknown",
+        "Rewrite example"
+      ],
+      "answer": 0,
+      "explanation": "Matches. You looped a string and counted with a membership test — strings are just another thing to loop!"
+    },
+    {
+      "id": "u100l05e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Re-run on 'sky' (no a/e/i/o/u). What is count?",
+      "options": [
+        "0 — no vowels",
+        "1",
+        "3",
+        "2"
+      ],
+      "answer": 0,
+      "explanation": "None of s, k, y are in 'aeiou', so count stays 0. The 'no match' case works. (y isn't in our vowel set here.)"
+    }
+  ]
+}

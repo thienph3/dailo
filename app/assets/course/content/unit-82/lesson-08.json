@@ -1,0 +1,166 @@
+{
+  "unitId": "u82",
+  "lessonId": "u82l08",
+  "title": "Solve it together: average of just the passing scores",
+  "idea": "GUIDED (UEPCC). A harder split: filter passing scores into a list, then average that list (total / count) with an empty guard. Two stages, each a familiar pattern.",
+  "problem": "Scores are [30, 60, 80, 45, 90]. Passing is >= 50. Show the average of ONLY the passing scores, returning 0 if none pass.",
+  "exercises": [
+    {
+      "id": "u82l08e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: scores [30, 60, 80, 45, 90], pass >= 50. Average of ONLY passing scores; 0 if none pass.\n\nOUTPUT?",
+      "options": [
+        "The average of the passing scores only",
+        "The average of all scores",
+        "The count of passers",
+        "The biggest score"
+      ],
+      "answer": 0,
+      "explanation": "Output = the average of the passing subset — not all scores, only those that pass."
+    },
+    {
+      "id": "u82l08e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "INPUTS, including the edge?",
+      "options": [
+        "The scores, the pass mark (50), and the 'no one passes' edge case",
+        "Only the scores",
+        "The word average",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "Inputs are scores and the threshold 50. The edge case: what if NO score passes? We return 0."
+    },
+    {
+      "id": "u82l08e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example — by hand. Passing scores from [30, 60, 80, 45, 90] are 60, 80, 90. Their average?",
+      "options": [
+        "76.67 (that's 230 / 3)",
+        "53 (all five averaged)",
+        "3",
+        "90"
+      ],
+      "answer": 0,
+      "explanation": "60+80+90 = 230, over 3 passers, 230/3 ≈ 76.67. Hand answer built on the passing subset only."
+    },
+    {
+      "id": "u82l08e04",
+      "type": "trueFalse",
+      "uepcc": "E",
+      "prompt": "We must collect the passing scores FIRST, then average that smaller list — not average everything.",
+      "answer": true,
+      "explanation": "Yes — two stages: filter to the passers, then average just those. Averaging all five would be the wrong answer."
+    },
+    {
+      "id": "u82l08e05",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Plan — what are the TWO stages?",
+      "options": [
+        "Stage 1: build a list of passing scores. Stage 2: average that list.",
+        "Average, then filter",
+        "Count, then sort",
+        "Just divide by 5"
+      ],
+      "answer": 0,
+      "explanation": "Filter first (keep scores >= 50), then average the kept list. Each stage is a pattern you know."
+    },
+    {
+      "id": "u82l08e06",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Order the plan, edge case included.",
+      "blocks": [
+        "Build a list of the passing scores",
+        "If that list is empty, return 0",
+        "Add up the passing scores (total)",
+        "Divide the total by how many passed, and show it"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "Filter, guard empty, total, divide. The empty guard protects against 'nobody passed'."
+    },
+    {
+      "id": "u82l08e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code it. Build the passing list with append, then average it.",
+      "blocks": [
+        "scores = [30, 60, 80, 45, 90]",
+        "passing = []",
+        "for score in scores:",
+        "    if score >= 50:",
+        "        passing.append(score)",
+        "total = 0",
+        "for p in passing:",
+        "    total = total + p",
+        "if len(passing) == 0:",
+        "    print(0)",
+        "else:",
+        "    print(total / len(passing))"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "explanation": "Filter into 'passing' with append, accumulate its total, then guard empty before dividing. Two stages, each a known pattern. No builtins used."
+    },
+    {
+      "id": "u82l08e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Complete the filter step that keeps a passing score:\n\nif score >= 50:\n    passing.____(score)",
+      "answer": "append",
+      "acceptable": [
+        "append"
+      ],
+      "explanation": "append adds the score to the end of the passing list. That's how we build the filtered list."
+    },
+    {
+      "id": "u82l08e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check — the code prints about 76.67; your hand example was 230/3. Verdict?",
+      "options": [
+        "Passes — 230/3 is ≈ 76.67",
+        "Fails",
+        "Unknown",
+        "Rewrite example"
+      ],
+      "answer": 0,
+      "explanation": "230 / 3 ≈ 76.67 matches the output. The two-stage filter-then-average solution is correct."
+    },
+    {
+      "id": "u82l08e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Re-check the edge: scores [10, 20, 30], pass >= 50. What is shown?",
+      "options": [
+        "0 — nobody passes, so the guard returns 0",
+        "It crashes dividing by zero",
+        "60",
+        "20"
+      ],
+      "answer": 0,
+      "explanation": "No score passes, so 'passing' is empty and the guard returns 0 — no divide-by-zero. The edge is handled."
+    }
+  ]
+}

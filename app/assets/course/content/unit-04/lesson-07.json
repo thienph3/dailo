@@ -1,0 +1,117 @@
+{
+  "unitId": "u04",
+  "lessonId": "u04l07",
+  "title": "The example becomes your check value",
+  "idea": "The output you worked by hand is exactly what you'll compare the real output to later. It is your check.",
+  "exercises": [
+    {
+      "id": "u04l07e01",
+      "type": "multipleChoice",
+      "prompt": "After coding, how do you use your hand-worked example?",
+      "options": [
+        "Compare the real output to it",
+        "Throw it away",
+        "Rewrite it to match the code",
+        "Ignore it"
+      ],
+      "answer": 0,
+      "explanation": "The example is your check value. You run the code and compare what appears to what you expected."
+    },
+    {
+      "id": "u04l07e02",
+      "type": "trueFalse",
+      "prompt": "If the real output matches your example, that's a good sign the code is right.",
+      "answer": true,
+      "explanation": "A match means the code did what you wanted. That's exactly why you wrote the example first."
+    },
+    {
+      "id": "u04l07e03",
+      "type": "multipleChoice",
+      "prompt": "Your example says the output is 'Hello'. The program prints 'Hello'. What now?",
+      "options": [
+        "It matches — the task is done",
+        "Rewrite the example",
+        "It failed",
+        "Run it 10 more times to be safe"
+      ],
+      "answer": 0,
+      "explanation": "Real output matches the expected output, so the code passes this check. Nice work."
+    },
+    {
+      "id": "u04l07e04",
+      "type": "multipleChoice",
+      "prompt": "Your example says the output is 'Hello'. The program prints 'Hallo'. What now?",
+      "options": [
+        "It does NOT match — fix the code",
+        "Change the example to Hallo",
+        "It's fine, close enough",
+        "The example was wrong"
+      ],
+      "answer": 0,
+      "explanation": "Hallo is not Hello. The example caught a real mistake. You fix the code, not the example."
+    },
+    {
+      "id": "u04l07e05",
+      "type": "trueFalse",
+      "prompt": "If the output doesn't match, you should change your example to make it match.",
+      "answer": false,
+      "explanation": "Never bend the target to the result. The example is correct; the code is what needs fixing."
+    },
+    {
+      "id": "u04l07e06",
+      "type": "orderBlocks",
+      "prompt": "Put the full mini-rhythm in order.",
+      "blocks": [
+        "Work the example by hand",
+        "Write the code",
+        "Compare real output to the example"
+      ],
+      "answer": [0, 1, 2],
+      "explanation": "Example, then code, then check. The example you wrote first is the yardstick at the end."
+    },
+    {
+      "id": "u04l07e07",
+      "type": "matchPairs",
+      "prompt": "Match each outcome to what it means.",
+      "pairs": [
+        { "left": "Output matches example", "right": "Code passes" },
+        { "left": "Output differs from example", "right": "Code needs a fix" },
+        { "left": "No example written", "right": "Nothing to check against" }
+      ],
+      "explanation": "A match passes, a mismatch means fix the code, and no example means no way to judge."
+    },
+    {
+      "id": "u04l07e08",
+      "type": "multiSelect",
+      "prompt": "Which are good reasons the example is your 'check value'? (pick all)",
+      "options": [
+        "It's the exact output you expect",
+        "You can compare it to the real output",
+        "It was decided before coding, so it's unbiased",
+        "It changes to match whatever the code does"
+      ],
+      "answer": [0, 1, 2],
+      "explanation": "Exact, comparable, and decided up front so it's honest. It must NOT change to match the code."
+    },
+    {
+      "id": "u04l07e09",
+      "type": "multipleChoice",
+      "prompt": "Task: 'show Red, then Blue'. Your example lists Red then Blue. The program shows Blue then Red. Pass or fail?",
+      "options": [
+        "Fail — the lines are in the wrong order",
+        "Pass — both words appear",
+        "Pass — order never matters",
+        "Can't tell"
+      ],
+      "answer": 0,
+      "explanation": "Both words appear, but in the wrong order. Your example said Red first, so this is a fail — order is part of the check."
+    },
+    {
+      "id": "u04l07e10",
+      "type": "trueFalse",
+      "prompt": "Writing the example first is what makes a later check possible.",
+      "answer": true,
+      "explanation": "No example, no check. The E step sets up the Check step — that's why we do it before coding."
+    }
+  ]
+}

@@ -1,0 +1,127 @@
+{
+  "unitId": "u87",
+  "lessonId": "u87l10",
+  "title": "Put it together: choosing patterns",
+  "idea": "MEET review: consolidate pattern selection and recall the whole read-split-pick-check pipeline. Thinking only.",
+  "exercises": [
+    {
+      "id": "u87l10e01",
+      "type": "matchPairs",
+      "prompt": "Quick recall: match each sub-problem to its pattern.",
+      "pairs": [
+        { "left": "the total", "right": "accumulate" },
+        { "left": "how many fit a rule", "right": "count" },
+        { "left": "the typical value", "right": "average" }
+      ],
+      "explanation": "Total -> accumulate, how-many -> count, typical -> average. The core of the pattern map, recalled fast."
+    },
+    {
+      "id": "u87l10e02",
+      "type": "matchPairs",
+      "prompt": "More recall: match each sub-problem to its pattern.",
+      "pairs": [
+        { "left": "the biggest", "right": "max" },
+        { "left": "the smallest", "right": "min" },
+        { "left": "keep only the matches", "right": "filter" }
+      ],
+      "explanation": "Biggest -> max, smallest -> min, keep-matches -> filter. The rest of the toolbox, firmly in hand."
+    },
+    {
+      "id": "u87l10e03",
+      "type": "multipleChoice",
+      "prompt": "Review: which pattern answers a YES/NO about presence?",
+      "options": [
+        "search (membership)",
+        "accumulate",
+        "average",
+        "max"
+      ],
+      "answer": 0,
+      "explanation": "Search asks 'is it in there?' — a yes/no. Output shape (yes/no) pins the pattern."
+    },
+    {
+      "id": "u87l10e04",
+      "type": "multiSelect",
+      "prompt": "Which of these are good habits for pattern selection? (Pick all.)",
+      "options": [
+        "Match the sub-problem's output shape to a pattern",
+        "Use signal words as a first guess, then confirm",
+        "Check your choice against a hand example",
+        "Pick the pattern you used last, regardless"
+      ],
+      "answer": [0, 1, 2],
+      "explanation": "Shape-match, signal-word guess, and hand-check are solid. Reusing last time's pattern blindly is how mismatches sneak in."
+    },
+    {
+      "id": "u87l10e05",
+      "type": "orderBlocks",
+      "prompt": "Review: order the full thinking pipeline from units 85-87.",
+      "blocks": [
+        "Read the problem (goal, inputs, outputs, noise)",
+        "Split into sub-problems and order them",
+        "Pick a pattern for each sub-problem"
+      ],
+      "answer": [0, 1, 2],
+      "explanation": "Read, split, pick — three units, one smooth pipeline from a wordy problem to a fully-planned solution."
+    },
+    {
+      "id": "u87l10e06",
+      "type": "multipleChoice",
+      "prompt": "Review (u85): what must you know about a sub-problem before choosing its pattern?",
+      "options": [
+        "Its expected output (shape and meaning)",
+        "Its author",
+        "Its position in the problem",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "The output drives the pattern. Knowing the sub-problem's output shape — number, list, yes/no — tells you which pattern fits."
+    },
+    {
+      "id": "u87l10e07",
+      "type": "multipleChoice",
+      "prompt": "Sub-problem: 'the average of items under 100.' Which combo?",
+      "options": [
+        "filter to under-100, then average",
+        "just max",
+        "just search",
+        "just count"
+      ],
+      "answer": 0,
+      "explanation": "A two-pattern combo: filter first, then average the matches. Combos are tiny decompositions of their own."
+    },
+    {
+      "id": "u87l10e08",
+      "type": "trueFalse",
+      "prompt": "Review: a wrong pattern can give a plausible-looking but wrong KIND of answer, so checking against a hand example matters.",
+      "answer": true,
+      "explanation": "Yes — count vs accumulate both yield numbers. The hand example (worked in u85-style) catches a mismatch the eye might miss."
+    },
+    {
+      "id": "u87l10e09",
+      "type": "multipleChoice",
+      "prompt": "You've read, split, and pattern-mapped a problem. Several sub-problems are 'each thing vs each other thing' (like comparing every pair). What's missing from your toolbox?",
+      "options": [
+        "A way to loop inside a loop — the next unit's tool",
+        "Nothing — you can already do it",
+        "A new kind of print",
+        "A bigger list"
+      ],
+      "answer": 0,
+      "explanation": "Some sub-problems compare every pair or fill a grid — they need a loop inside a loop. That's exactly what Unit 88 introduces."
+    },
+    {
+      "id": "u87l10e10",
+      "type": "multipleChoice",
+      "prompt": "You've finished the three MEET units of this lap. What can you now do with a big problem?",
+      "options": [
+        "Read it, split it into ordered sub-problems, and pick the right pattern for each",
+        "Solve anything instantly without thinking",
+        "Avoid big problems entirely",
+        "Only count the words"
+      ],
+      "answer": 0,
+      "explanation": "Read, split, pick — the full thinking pipeline is yours. Next, the TOOL unit adds nested loops for 'every pair / grid' problems."
+    }
+  ]
+}

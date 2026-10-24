@@ -1,0 +1,123 @@
+{
+  "unitId": "u25",
+  "lessonId": "u25l01",
+  "title": "Meet elif: more than two outcomes",
+  "idea": "elif adds extra paths between if and else, so a decision can have three or more outcomes. Meet it with visible output.",
+  "exercises": [
+    {
+      "id": "u25l01e01",
+      "type": "multipleChoice",
+      "prompt": "So far if/else gave two paths. What does 'elif' add?",
+      "options": [
+        "Extra middle paths, checked only if earlier ones were False",
+        "A loop",
+        "A new variable",
+        "A second program"
+      ],
+      "answer": 0,
+      "explanation": "elif means 'else, if...'. It adds more choices between the first if and the final else."
+    },
+    {
+      "id": "u25l01e02",
+      "type": "multipleChoice",
+      "prompt": "What does this print?\n\nscore = 85\nif score >= 90:\n    print(\"A\")\nelif score >= 80:\n    print(\"B\")\nelse:\n    print(\"C\")",
+      "options": [
+        "B",
+        "A",
+        "C",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "90 fails (85 < 90), so Python tries the elif: 85 >= 80 is True, so 'B' prints and the rest is skipped."
+    },
+    {
+      "id": "u25l01e03",
+      "type": "multipleChoice",
+      "prompt": "What does this print?\n\nscore = 95\nif score >= 90:\n    print(\"A\")\nelif score >= 80:\n    print(\"B\")\nelse:\n    print(\"C\")",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "A then B"
+      ],
+      "answer": 0,
+      "explanation": "95 >= 90 is True, so 'A' prints. Once a branch matches, the elif and else are skipped."
+    },
+    {
+      "id": "u25l01e04",
+      "type": "multipleChoice",
+      "prompt": "What does this print?\n\nscore = 60\nif score >= 90:\n    print(\"A\")\nelif score >= 80:\n    print(\"B\")\nelse:\n    print(\"C\")",
+      "options": [
+        "C",
+        "A",
+        "B",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "60 fails both the if and the elif, so the else runs: 'C'. else catches everything left over."
+    },
+    {
+      "id": "u25l01e05",
+      "type": "trueFalse",
+      "prompt": "An elif branch is only checked if all the branches above it were False.",
+      "answer": true,
+      "explanation": "Yes - Python checks top to bottom and stops at the first True. An elif only gets a turn if the earlier tests failed."
+    },
+    {
+      "id": "u25l01e06",
+      "type": "trueFalse",
+      "prompt": "You can have several elif branches in one decision.",
+      "answer": true,
+      "explanation": "Right - you can chain as many elif branches as you need between the if and the else."
+    },
+    {
+      "id": "u25l01e07",
+      "type": "multipleChoice",
+      "prompt": "In an if / elif / else chain, how many branches actually run?",
+      "options": [
+        "Exactly one",
+        "All of them",
+        "None",
+        "At least two"
+      ],
+      "answer": 0,
+      "explanation": "Only the first matching branch runs. The chain is a one-winner race from top to bottom."
+    },
+    {
+      "id": "u25l01e08",
+      "type": "fillBlank",
+      "prompt": "Fill the keyword for a middle path:\n\nif level >= 10:\n    print(\"Expert\")\n____ level >= 5:\n    print(\"Intermediate\")\nelse:\n    print(\"Beginner\")",
+      "answer": "elif",
+      "acceptable": [
+        "elif"
+      ],
+      "explanation": "elif adds the middle path. It runs only when the first if was False and its own test is True."
+    },
+    {
+      "id": "u25l01e09",
+      "type": "multipleChoice",
+      "prompt": "Does an if / elif / else chain need the else at the end?",
+      "options": [
+        "No - else is optional, but it catches any leftover case",
+        "Yes - always required",
+        "No - elif is never allowed with else",
+        "Yes - but only with two elifs"
+      ],
+      "answer": 0,
+      "explanation": "else is optional. Adding it guarantees something runs even when no branch above matched."
+    },
+    {
+      "id": "u25l01e10",
+      "type": "multipleChoice",
+      "prompt": "Why is elif better than writing many separate ifs for buckets like grades?",
+      "options": [
+        "Once one branch matches, the rest are skipped - exactly one bucket wins",
+        "elif runs faster than the computer",
+        "separate ifs are illegal",
+        "elif prints automatically"
+      ],
+      "answer": 0,
+      "explanation": "A chain picks exactly one bucket. Separate ifs could each fire, landing a value in more than one bucket by mistake."
+    }
+  ]
+}

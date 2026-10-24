@@ -1,0 +1,140 @@
+{
+  "unitId": "u70",
+  "lessonId": "u70l10",
+  "title": "Put it together: named sub-plans",
+  "idea": "LOOP: mix recall - naming jobs, define vs use, honest names, design helpers. No code.",
+  "exercises": [
+    {
+      "id": "u70l10e01",
+      "type": "multipleChoice",
+      "prompt": "A named sub-plan (a reusable job with a name) is called a...",
+      "options": [
+        "function",
+        "loop",
+        "variable",
+        "comparison"
+      ],
+      "answer": 0,
+      "explanation": "A function is a named sub-plan. This unit built the idea; next unit writes it as code."
+    },
+    {
+      "id": "u70l10e02",
+      "type": "multipleChoice",
+      "prompt": "'Define once, use many times' means...",
+      "options": [
+        "set the job up once, then use its name as often as needed",
+        "define it many times",
+        "use it only once",
+        "never define it"
+      ],
+      "answer": 0,
+      "explanation": "Describe the job once; use its name repeatedly. That reuse is the main payoff of naming a job."
+    },
+    {
+      "id": "u70l10e03",
+      "type": "trueFalse",
+      "prompt": "Defining a sub-plan makes its steps happen right away.",
+      "answer": false,
+      "explanation": "No. Defining only describes the job. The steps happen when you USE it. Define vs use are different."
+    },
+    {
+      "id": "u70l10e04",
+      "type": "multipleChoice",
+      "prompt": "Plan: define greet (shows 'Hi'), then use greet twice. What appears?",
+      "options": [
+        "Hi, then Hi",
+        "Hi, once",
+        "nothing",
+        "greet, greet"
+      ],
+      "answer": 0,
+      "explanation": "The define is quiet setup. Two uses show 'Hi' twice. Output follows the uses, in order."
+    },
+    {
+      "id": "u70l10e05",
+      "type": "multiSelect",
+      "prompt": "Which jobs are worth naming as helpers? (Pick all.)",
+      "options": [
+        "a border used top and bottom",
+        "a greeting reused per player",
+        "a one-off single print",
+        "totalling a basket reused per customer"
+      ],
+      "answer": [
+        0,
+        1,
+        3
+      ],
+      "explanation": "Repeated or reused jobs earn names. A one-off single print usually stays inline."
+    },
+    {
+      "id": "u70l10e06",
+      "type": "matchPairs",
+      "prompt": "Match each idea to its meaning.",
+      "pairs": [
+        {
+          "left": "define",
+          "right": "describe the named job"
+        },
+        {
+          "left": "use",
+          "right": "make the job happen"
+        },
+        {
+          "left": "honest name",
+          "right": "the name matches the job"
+        }
+      ],
+      "explanation": "Define describes, use does, and an honest name tells the truth about the job. The core ideas of this unit."
+    },
+    {
+      "id": "u70l10e07",
+      "type": "multipleChoice",
+      "prompt": "A job named 'show_score' that really prints a border is a problem because...",
+      "options": [
+        "the name lies about what the job does",
+        "names never matter",
+        "it's too fast",
+        "borders are banned"
+      ],
+      "answer": 0,
+      "explanation": "Misleading names cause bugs. A helper's name must honestly describe its job."
+    },
+    {
+      "id": "u70l10e08",
+      "type": "orderBlocks",
+      "prompt": "Order a short main plan: greet, total the basket, print the receipt.",
+      "blocks": [
+        "use print_receipt",
+        "use greet",
+        "use total_basket"
+      ],
+      "answer": [
+        1,
+        2,
+        0
+      ],
+      "explanation": "greet, total_basket, print_receipt - the main plan is just named helpers in order."
+    },
+    {
+      "id": "u70l10e09",
+      "type": "trueFalse",
+      "prompt": "A main plan built from named helpers reads like a short summary of the task.",
+      "answer": true,
+      "explanation": "Yes. The main plan lists the big steps by name; each helper hides its own details. Short and clear."
+    },
+    {
+      "id": "u70l10e10",
+      "type": "multipleChoice",
+      "prompt": "You've built the IDEA of a named sub-plan. What's next in the lap?",
+      "options": [
+        "writing a real sub-plan and running it - define vs run in code",
+        "giving up",
+        "only loops",
+        "never naming jobs"
+      ],
+      "answer": 0,
+      "explanation": "Next unit: the real syntax to define a sub-plan and to call it. The idea you learned becomes runnable code!"
+    }
+  ]
+}

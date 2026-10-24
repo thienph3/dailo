@@ -1,0 +1,138 @@
+{
+  "unitId": "u69",
+  "lessonId": "u69l07",
+  "title": "Too-big problems in the wild",
+  "idea": "MEET: recognize decomposition in everyday, realistic tasks. No code.",
+  "exercises": [
+    {
+      "id": "u69l07e01",
+      "type": "multipleChoice",
+      "prompt": "A shop app must: greet the customer, total their basket, apply a discount, and print a receipt. This is...",
+      "options": [
+        "a big task made of four smaller jobs",
+        "a single one-step task",
+        "impossible to split",
+        "just one print"
+      ],
+      "answer": 0,
+      "explanation": "Four distinct jobs: greet, total, discount, receipt. A real task like this cries out to be decomposed."
+    },
+    {
+      "id": "u69l07e02",
+      "type": "multiSelect",
+      "prompt": "From that shop task, which are separate sub-jobs? (Pick all.)",
+      "options": [
+        "Greet the customer",
+        "Total the basket",
+        "Apply the discount",
+        "Print the receipt"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "All four are distinct jobs. Each one is small and familiar; together they do the big task."
+    },
+    {
+      "id": "u69l07e03",
+      "type": "multipleChoice",
+      "prompt": "Which of those sub-jobs might REPEAT if there are several customers?",
+      "options": [
+        "All of them, once per customer",
+        "None of them",
+        "Only the discount, forever",
+        "Only the greeting, once ever"
+      ],
+      "answer": 0,
+      "explanation": "For each customer you'd greet, total, discount, and print again. A repeated set of jobs is a reuse hint."
+    },
+    {
+      "id": "u69l07e04",
+      "type": "matchPairs",
+      "prompt": "Match each real task to one of its sub-jobs.",
+      "pairs": [
+        {
+          "left": "run a game",
+          "right": "keep the score"
+        },
+        {
+          "left": "send a newsletter",
+          "right": "write the subject line"
+        },
+        {
+          "left": "check out a basket",
+          "right": "add up the prices"
+        }
+      ],
+      "explanation": "Real programs are built from small named jobs. Spotting them is the first real-world skill."
+    },
+    {
+      "id": "u69l07e05",
+      "type": "trueFalse",
+      "prompt": "Real software is usually built as many small jobs working together, not one giant block.",
+      "answer": true,
+      "explanation": "Exactly how real programs are built: small, named, testable jobs combined. You're learning the real habit."
+    },
+    {
+      "id": "u69l07e06",
+      "type": "multipleChoice",
+      "prompt": "A weather app must fetch today's numbers, find the highest temperature, and show it. The middle job's tool is...",
+      "options": [
+        "max - track the biggest temperature",
+        "sum",
+        "search",
+        "input() only"
+      ],
+      "answer": 0,
+      "explanation": "'Highest temperature' is a track-the-best (max) job. Each real sub-job maps to a tool you already have."
+    },
+    {
+      "id": "u69l07e07",
+      "type": "multipleChoice",
+      "prompt": "Why do programmers split real tasks into named jobs?",
+      "options": [
+        "So each job can be built, named, and checked on its own",
+        "To make programs longer",
+        "To hide bugs",
+        "To avoid planning"
+      ],
+      "answer": 0,
+      "explanation": "Named jobs can be understood and tested separately, which makes big programs manageable and reliable."
+    },
+    {
+      "id": "u69l07e08",
+      "type": "multipleChoice",
+      "prompt": "A task says: 'for each student, show a greeting with their name.' What repeats?",
+      "options": [
+        "The 'show a greeting' job, once per student",
+        "Nothing repeats",
+        "Only the first greeting",
+        "The whole app restarts"
+      ],
+      "answer": 0,
+      "explanation": "The greeting job runs for every student - a repeated job, the clearest sign to name it once and reuse."
+    },
+    {
+      "id": "u69l07e09",
+      "type": "trueFalse",
+      "prompt": "Noticing a repeated job in a real task is a reason to turn that job into a named sub-plan.",
+      "answer": true,
+      "explanation": "Yes. Repetition in the wild is the cue. Naming the job once keeps the program short and fixable."
+    },
+    {
+      "id": "u69l07e10",
+      "type": "multipleChoice",
+      "prompt": "The big lesson from real tasks:",
+      "options": [
+        "almost every real program is many small named jobs combined",
+        "real programs avoid splitting",
+        "one block is always best",
+        "jobs never repeat"
+      ],
+      "answer": 0,
+      "explanation": "Real programs are built from small named jobs. You can already spot them - next you'll write them."
+    }
+  ]
+}

@@ -1,0 +1,145 @@
+{
+  "unitId": "u27",
+  "lessonId": "u27l05",
+  "title": "Solve it: allow unless blocked",
+  "idea": "GUIDED. One problem through UEPCC using 'not' to flip a condition: act unless something is true.",
+  "problem": "A user may post unless their account is banned. Given is_banned, print 'Allowed' or 'Blocked'.",
+  "exercises": [
+    {
+      "id": "u27l05e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: May post UNLESS banned. Print 'Allowed' or 'Blocked'.\n\nWhat is the OUTPUT?",
+      "options": [
+        "The label 'Allowed' or 'Blocked'",
+        "The username",
+        "The number of posts",
+        "The ban reason"
+      ],
+      "answer": 0,
+      "explanation": "One of two labels. 'is_banned' is the input; the label is the output."
+    },
+    {
+      "id": "u27l05e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "'May post unless banned' means posting is allowed when...",
+      "options": [
+        "the account is NOT banned",
+        "the account is banned",
+        "always",
+        "never"
+      ],
+      "answer": 0,
+      "explanation": "'Unless banned' is the same as 'when not banned'. That word 'not' is the clue to the tool."
+    },
+    {
+      "id": "u27l05e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "By hand: is_banned is False. Allowed or Blocked?",
+      "options": [
+        "Allowed",
+        "Blocked",
+        "both",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "Not banned, so posting is Allowed. 'not False' is True, so the allow branch runs."
+    },
+    {
+      "id": "u27l05e04",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "By hand: is_banned is True. Allowed or Blocked?",
+      "options": [
+        "Blocked",
+        "Allowed",
+        "both",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "Banned, so 'not True' is False and the else runs: 'Blocked'."
+    },
+    {
+      "id": "u27l05e05",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Plan: which tool turns 'is_banned' into 'is not banned'?",
+      "options": [
+        "not",
+        "and",
+        "or",
+        "=="
+      ],
+      "answer": 0,
+      "explanation": "'not' flips a true/false value. 'not is_banned' is True exactly when the account is not banned."
+    },
+    {
+      "id": "u27l05e06",
+      "type": "trueFalse",
+      "uepcc": "P",
+      "prompt": "'if not is_banned:' runs its body when the account is NOT banned.",
+      "answer": true,
+      "explanation": "Yes. 'not' flips the value, so the body runs when is_banned is False."
+    },
+    {
+      "id": "u27l05e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Arrange the code.",
+      "blocks": [
+        "if not is_banned:",
+        "    print(\"Allowed\")",
+        "else:",
+        "    print(\"Blocked\")"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "'not is_banned' is the allow test; the else blocks the banned case."
+    },
+    {
+      "id": "u27l05e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Complete the flip:\n\nif ____ is_banned:\n    print(\"Allowed\")\nelse:\n    print(\"Blocked\")",
+      "answer": "not",
+      "acceptable": [
+        "not"
+      ],
+      "explanation": "'not' flips is_banned so the allow branch runs when the account is not banned."
+    },
+    {
+      "id": "u27l05e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check the first example: is_banned False. What prints?",
+      "options": [
+        "Allowed",
+        "Blocked",
+        "both",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "not False is True, so 'Allowed' - matching your hand answer."
+    },
+    {
+      "id": "u27l05e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Fresh case: is_banned True. What prints?",
+      "options": [
+        "Blocked",
+        "Allowed",
+        "both",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "not True is False, so the else runs: 'Blocked'. The 'not' correctly flips both cases."
+    }
+  ]
+}

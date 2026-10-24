@@ -1,0 +1,128 @@
+{
+  "unitId": "u88",
+  "lessonId": "u88l10",
+  "title": "Put it together: nested loops",
+  "idea": "TOOL review: consolidate nested loops and interleave earlier tools (single loops, if, counter, len). Thinking-heavy.",
+  "exercises": [
+    {
+      "id": "u88l10e01",
+      "type": "multipleChoice",
+      "prompt": "The big idea of this unit in one line:",
+      "options": [
+        "A loop inside a loop pairs every thing with every other thing",
+        "Loops can never nest",
+        "Nesting removes the inner loop",
+        "One loop is always enough"
+      ],
+      "answer": 0,
+      "explanation": "Nested loops = each outer item paired with every inner item. Grids, cross-pairings, and comparisons all come from this."
+    },
+    {
+      "id": "u88l10e02",
+      "type": "multipleChoice",
+      "prompt": "Review (single loop): when is ONE loop enough, with no nesting?",
+      "options": [
+        "When you visit each item once, not pairing it with others",
+        "When you compare every pair",
+        "When you build a grid",
+        "Never"
+      ],
+      "answer": 0,
+      "explanation": "A single loop handles 'do something to each item' — total, count, max. Nesting is only for pairing or grids. Pick the simpler tool when it fits."
+    },
+    {
+      "id": "u88l10e03",
+      "type": "multipleChoice",
+      "prompt": "Predict the line count:\n\nfor a in range(4):\n    for b in range(5):\n        print(a, b)",
+      "options": [
+        "20 (4 times 5)",
+        "9",
+        "5",
+        "4"
+      ],
+      "answer": 0,
+      "explanation": "4 outer turns times 5 inner turns = 20 lines. The two ranges multiply — the core counting fact of nesting."
+    },
+    {
+      "id": "u88l10e04",
+      "type": "multiSelect",
+      "prompt": "Which problems call for NESTED loops? (Pick all.)",
+      "options": [
+        "Print every (size, colour) combination",
+        "Compare each player with every other",
+        "Add up one list of prices",
+        "Fill a rows-by-columns grid"
+      ],
+      "answer": [0, 1, 3],
+      "explanation": "Combinations, pairings, and grids all need nesting. Adding up one list is a single-loop accumulate — no nesting needed."
+    },
+    {
+      "id": "u88l10e05",
+      "type": "trueFalse",
+      "prompt": "Review (counter): a counter that tallies matching pairs must start at 0 BEFORE both loops.",
+      "answer": true,
+      "explanation": "Yes — the counter from earlier laps still starts outside the loops. Inside, it would reset and lose the running tally."
+    },
+    {
+      "id": "u88l10e06",
+      "type": "orderBlocks",
+      "prompt": "Order the code to count pairs that sum to 6 and print the total once.",
+      "blocks": [
+        "matches = 0",
+        "for a in nums:",
+        "    for b in nums:",
+        "        if a + b == 6:",
+        "            matches = matches + 1",
+        "print(matches)"
+      ],
+      "answer": [0, 1, 2, 3, 4, 5],
+      "explanation": "Counter first, nested loops, the sum test, +1 on a match, print once at the end. This weaves nesting, if, and the counter together."
+    },
+    {
+      "id": "u88l10e07",
+      "type": "multipleChoice",
+      "prompt": "Review (len + index): why might you loop with range(len(items)) in a pairing problem?",
+      "options": [
+        "So you can use positions i and j and write 'if i < j' for each pair once",
+        "Because you can't loop a list otherwise",
+        "To make it slower",
+        "len is required for all loops"
+      ],
+      "answer": 0,
+      "explanation": "Indexing by position lets 'i < j' select each unordered pair once and skip self-pairs. len() gives the size to range over."
+    },
+    {
+      "id": "u88l10e08",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nfor a in range(3):\n    for b in range(3):\n        if a < b:\n            print(a, b)",
+      "options": [
+        "0 1, 0 2, 1 2",
+        "every pair",
+        "0 0, 1 1, 2 2",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "'a < b' keeps each unordered pair once: 0 1, 0 2, 1 2. No self-pairs, no mirror duplicates — a clean three."
+    },
+    {
+      "id": "u88l10e09",
+      "type": "trueFalse",
+      "prompt": "Review: tracing a small nested loop by hand is the best way to be sure of its output before running a big one.",
+      "answer": true,
+      "explanation": "Yes — the hand-trace and hand-example habits from the whole course apply doubly to nesting, where output grows fast."
+    },
+    {
+      "id": "u88l10e10",
+      "type": "multipleChoice",
+      "prompt": "You've finished the nested-loops unit. What new kind of problem can you now solve?",
+      "options": [
+        "'Each thing against each other thing' — pairs, grids, and combinations",
+        "Only single-value problems",
+        "Problems with no loops",
+        "Nothing new"
+      ],
+      "answer": 0,
+      "explanation": "Nested loops unlock pairings, grids, and combinations. With read-split-pick (units 85-87) plus this tool, big problems are within reach."
+    }
+  ]
+}

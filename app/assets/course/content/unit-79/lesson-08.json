@@ -1,0 +1,150 @@
+{
+  "unitId": "u79",
+  "lessonId": "u79l08",
+  "title": "Solve it together: total only the big orders",
+  "idea": "GUIDED PROBLEM (UEPCC). A yes/no helper marks big orders; the loop adds only those to a running total.",
+  "problem": "An order counts as 'big' if it is 100 or more. Given orders [40, 120, 100, 30, 250], show the total of only the big orders.",
+  "exercises": [
+    {
+      "id": "u79l08e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: orders [40, 120, 100, 30, 250]; 'big' means 100 or more. Total ONLY the big ones.\n\nWhat is the OUTPUT?",
+      "options": [
+        "The total of the big orders only",
+        "The count of big orders",
+        "The total of all orders",
+        "The biggest order"
+      ],
+      "answer": 0,
+      "explanation": "The output is one number: the sum of just the orders that are big (100 or more)."
+    },
+    {
+      "id": "u79l08e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "What is the exact rule for 'big'?",
+      "options": [
+        "order >= 100",
+        "order > 100",
+        "order == 100",
+        "order < 100"
+      ],
+      "answer": 0,
+      "explanation": "'100 or more' means order >= 100. So 100 itself counts as big."
+    },
+    {
+      "id": "u79l08e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example — by hand. Which orders are big (>= 100), and what is their total?",
+      "options": [
+        "120, 100, 250 -> total 470",
+        "120, 250 -> total 370",
+        "all -> total 540",
+        "40, 30 -> total 70"
+      ],
+      "answer": 0,
+      "explanation": "120, 100, and 250 are big (100 included). 120 + 100 + 250 = 470 — our check value."
+    },
+    {
+      "id": "u79l08e04",
+      "type": "trueFalse",
+      "uepcc": "E",
+      "prompt": "The small orders (40 and 30) must be skipped, not added to the total.",
+      "answer": true,
+      "explanation": "Yes. Only big orders are added. The if inside the loop skips the small ones."
+    },
+    {
+      "id": "u79l08e05",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Plan — combine two patterns. Which two?",
+      "options": [
+        "A yes/no helper (is_big) to filter, plus an accumulator to total",
+        "Two accumulators",
+        "Just printing each order",
+        "A helper that sorts"
+      ],
+      "answer": 0,
+      "explanation": "is_big decides which orders count; the accumulator adds only those. Filter + accumulate together."
+    },
+    {
+      "id": "u79l08e06",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Plan the steps.",
+      "blocks": [
+        "Start a total at 0",
+        "For each order, if it is big, add it to the total",
+        "Show the total"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Total at 0, add only big orders (decided by is_big), then show the total."
+    },
+    {
+      "id": "u79l08e07",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Code the yes/no helper:\n\ndef is_big(order):\n    return order >= ____",
+      "answer": "100",
+      "acceptable": ["100"],
+      "explanation": "order >= 100 is True for big orders. This matches the rule, including 100 itself."
+    },
+    {
+      "id": "u79l08e08",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code the filtered total. Arrange the lines.",
+      "blocks": [
+        "orders = [40, 120, 100, 30, 250]",
+        "total = 0",
+        "for order in orders:",
+        "    if is_big(order):",
+        "        total = total + order",
+        "print(total)"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "explanation": "Total at 0, add each order only when is_big is True, then print 470."
+    },
+    {
+      "id": "u79l08e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check — the code prints 470, matching your hand example. So...",
+      "options": [
+        "It passes",
+        "It fails",
+        "You can't tell",
+        "Change the example"
+      ],
+      "answer": 0,
+      "explanation": "Output 470 matches the hand total 470. The filter-and-sum solution is correct."
+    },
+    {
+      "id": "u79l08e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Re-check with [100, 99, 101]. Total of the big ones?",
+      "options": [
+        "201",
+        "300",
+        "101",
+        "99"
+      ],
+      "answer": 0,
+      "explanation": "100 and 101 are big (99 is not): 100 + 101 = 201. The >= boundary is handled correctly on fresh inputs."
+    }
+  ]
+}

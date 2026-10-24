@@ -1,0 +1,132 @@
+{
+  "unitId": "u20",
+  "lessonId": "u20l01",
+  "title": "A comparison gives a yes/no answer",
+  "idea": "Comparing two values asks a yes/no question and the computer answers with a boolean (True or False). Meet the > operator with visible output.",
+  "exercises": [
+    {
+      "id": "u20l01e01",
+      "type": "multipleChoice",
+      "prompt": "We can ask the computer 'is 5 bigger than 3?'. What kind of answer comes back?",
+      "options": [
+        "A boolean: True or False",
+        "A number",
+        "Some text",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "A comparison asks a yes/no question, so the answer is a boolean - True or False."
+    },
+    {
+      "id": "u20l01e02",
+      "type": "multipleChoice",
+      "prompt": "What does this print?\n\nprint(5 > 3)",
+      "options": [
+        "True",
+        "False",
+        "5",
+        "3"
+      ],
+      "answer": 0,
+      "explanation": "5 is bigger than 3, so 5 > 3 is True. The comparison turns into a boolean."
+    },
+    {
+      "id": "u20l01e03",
+      "type": "multipleChoice",
+      "prompt": "What does this print?\n\nprint(2 > 9)",
+      "options": [
+        "False",
+        "True",
+        "2",
+        "9"
+      ],
+      "answer": 0,
+      "explanation": "2 is not bigger than 9, so 2 > 9 is False."
+    },
+    {
+      "id": "u20l01e04",
+      "type": "trueFalse",
+      "prompt": "The symbol > means 'greater than'.",
+      "answer": true,
+      "explanation": "Yes - > asks 'is the left side greater than the right side?'"
+    },
+    {
+      "id": "u20l01e05",
+      "type": "multipleChoice",
+      "prompt": "Which comparison is True?",
+      "options": [
+        "10 > 4",
+        "4 > 10",
+        "7 > 7",
+        "1 > 100"
+      ],
+      "answer": 0,
+      "explanation": "Only 10 > 4 is true. 7 > 7 is false because 7 is not greater than itself."
+    },
+    {
+      "id": "u20l01e06",
+      "type": "fillBlank",
+      "prompt": "Complete so the result is True:\n\nprint(8 ____ 2)   # shows: True",
+      "answer": ">",
+      "acceptable": [
+        ">"
+      ],
+      "explanation": "8 > 2 is True because 8 is greater than 2."
+    },
+    {
+      "id": "u20l01e07",
+      "type": "multipleChoice",
+      "prompt": "What does this print?\n\nage = 20\nprint(age > 18)",
+      "options": [
+        "True",
+        "False",
+        "20",
+        "18"
+      ],
+      "answer": 0,
+      "explanation": "age holds 20, and 20 > 18 is True. Comparisons work on variables too."
+    },
+    {
+      "id": "u20l01e08",
+      "type": "trueFalse",
+      "prompt": "A comparison like 7 > 2 can only ever be True or False.",
+      "answer": true,
+      "explanation": "Right - a comparison always produces a boolean, never a number or text."
+    },
+    {
+      "id": "u20l01e09",
+      "type": "tapTokens",
+      "prompt": "Arrange the tokens to print whether 9 is greater than 5.",
+      "tokens": [
+        "print",
+        "(",
+        "9",
+        ">",
+        "5",
+        ")"
+      ],
+      "answer": [
+        "print",
+        "(",
+        "9",
+        ">",
+        "5",
+        ")"
+      ],
+      "explanation": "print(9 > 5) checks the comparison and prints its boolean result, True."
+    },
+    {
+      "id": "u20l01e10",
+      "type": "multipleChoice",
+      "prompt": "Last unit you STORED yes/no facts by hand. What's new here?",
+      "options": [
+        "The computer PRODUCES the yes/no answer by comparing values",
+        "Booleans no longer exist",
+        "Numbers replace booleans",
+        "Nothing changed"
+      ],
+      "answer": 0,
+      "explanation": "Before, you typed True/False yourself. Now a comparison computes the boolean for you from the values."
+    }
+  ]
+}

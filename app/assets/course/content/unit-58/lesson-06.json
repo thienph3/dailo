@@ -1,0 +1,136 @@
+{
+  "unitId": "u58",
+  "lessonId": "u58l06",
+  "title": "Different rules to count by",
+  "idea": "The rule in the if can be anything: ranges, equality, string match, len. Reviews comparisons and strings.",
+  "exercises": [
+    {
+      "id": "u58l06e01",
+      "type": "multipleChoice",
+      "prompt": "nums = [1, 2, 3, 4, 5, 6]\ncount = 0\nfor n in nums:\n    if n % 2 == 0:\n        count = count + 1\nprint(count)\n\nHow many even?",
+      "options": [
+        "3",
+        "2",
+        "6",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "Evens are 2, 4, 6 — count 3."
+    },
+    {
+      "id": "u58l06e02",
+      "type": "multipleChoice",
+      "prompt": "words = [\"cat\", \"dog\", \"cat\"]\ncount = 0\nfor w in words:\n    if w == \"cat\":\n        count = count + 1\nprint(count)\n\nWhat prints?",
+      "options": [
+        "2",
+        "3",
+        "1",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "Two of the words equal 'cat'. String comparison with == works inside the if."
+    },
+    {
+      "id": "u58l06e03",
+      "type": "fillBlank",
+      "prompt": "Count values between 10 and 20 (inclusive) — fill the AND rule:\n\nif n >= 10 ____ n <= 20:\n    count = count + 1",
+      "answer": "and",
+      "acceptable": [
+        "and"
+      ],
+      "explanation": "Both parts must hold, so join them with 'and'."
+    },
+    {
+      "id": "u58l06e04",
+      "type": "multipleChoice",
+      "prompt": "nums = [5, 15, 25]\ncount = 0\nfor n in nums:\n    if n >= 10 and n <= 20:\n        count = count + 1\nprint(count)\n\nWhat prints?",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "Only 15 is in 10..20. 5 is too low, 25 too high. Count 1."
+    },
+    {
+      "id": "u58l06e05",
+      "type": "multipleChoice",
+      "prompt": "words = [\"a\", \"bbb\", \"cc\"]\ncount = 0\nfor w in words:\n    if len(w) >= 2:\n        count = count + 1\nprint(count)\n\nWhat prints?",
+      "options": [
+        "2",
+        "3",
+        "1",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "len('bbb')=3 and len('cc')=2 are >= 2; 'a' is 1. Count 2."
+    },
+    {
+      "id": "u58l06e06",
+      "type": "trueFalse",
+      "prompt": "The rule inside the if can be any true/false test — a range, an equality, even a string match.",
+      "answer": true,
+      "explanation": "The counter doesn't care what the rule is, only whether it's true that pass."
+    },
+    {
+      "id": "u58l06e07",
+      "type": "orderBlocks",
+      "prompt": "Arrange: count how many scores equal exactly 100.",
+      "blocks": [
+        "        count = count + 1",
+        "    if s == 100:",
+        "for s in scores:",
+        "count = 0",
+        "scores = [100, 90, 100]"
+      ],
+      "answer": [
+        4,
+        3,
+        2,
+        1,
+        0
+      ],
+      "explanation": "List, start count, loop, if equality (indent 1), +1 (indent 2). Two 100s -> count 2."
+    },
+    {
+      "id": "u58l06e08",
+      "type": "multipleChoice",
+      "prompt": "nums = [-1, 0, 3, -5]\ncount = 0\nfor n in nums:\n    if n < 0:\n        count = count + 1\nprint(count)\n\nHow many negatives?",
+      "options": [
+        "2",
+        "1",
+        "3",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "-1 and -5 are below 0. 0 is not negative. Count 2."
+    },
+    {
+      "id": "u58l06e09",
+      "type": "multipleChoice",
+      "prompt": "To count how many names are NOT 'Sam', which rule fits?",
+      "options": [
+        "if name != \"Sam\"",
+        "if name == \"Sam\"",
+        "if name < \"Sam\"",
+        "if len(name) == 3"
+      ],
+      "answer": 0,
+      "explanation": "'Not Sam' is name != 'Sam' — count the ones that differ."
+    },
+    {
+      "id": "u58l06e10",
+      "type": "multipleChoice",
+      "prompt": "The count tool is flexible because...",
+      "options": [
+        "You can put any true/false rule in the if",
+        "It only counts numbers",
+        "It only uses ==",
+        "It sorts first"
+      ],
+      "answer": 0,
+      "explanation": "Same counter; the rule is yours to choose."
+    }
+  ]
+}

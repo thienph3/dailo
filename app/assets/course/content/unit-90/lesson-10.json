@@ -1,0 +1,129 @@
+{
+  "unitId": "u90",
+  "lessonId": "u90l10",
+  "title": "Validation, reviewed and combined",
+  "idea": "Review of the unit (lean review-heavy): recap the validation skeleton, range/menu checks, messages, and combining with counters and loops - plus earlier laps.",
+  "exercises": [
+    {
+      "type": "multipleChoice",
+      "prompt": "In ONE sentence, what is a validation loop?",
+      "options": [
+        "A loop that re-asks for input until the value is valid",
+        "A loop that runs a fixed number of times",
+        "A loop with no condition",
+        "A loop that prints input"
+      ],
+      "answer": 0,
+      "explanation": "Ask, check, re-ask if bad, until valid. That's the whole unit in one line.",
+      "id": "u90l10e01"
+    },
+    {
+      "type": "orderBlocks",
+      "prompt": "Order the validation skeleton.",
+      "blocks": [
+        "Read an input once",
+        "While it is invalid, read a fresh input",
+        "Use the now-valid value"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Read-before, loop-while-invalid, use-after. The skeleton behind every example in this unit.",
+      "id": "u90l10e02"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Review: the loop condition should describe the ___ case.",
+      "options": [
+        "invalid",
+        "valid",
+        "random",
+        "empty"
+      ],
+      "answer": 0,
+      "explanation": "Loop WHILE invalid. Wording it as the valid case inverts the logic and re-asks good input.",
+      "id": "u90l10e03"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Review (range check): invalid for a 1-to-10 value is written as...",
+      "options": [
+        "x < 1 or x > 10",
+        "x < 1 and x > 10",
+        "x == 1",
+        "x > 10 only"
+      ],
+      "answer": 0,
+      "explanation": "Too low OR too high. 'and' can never be true for a single number, so it would catch nothing.",
+      "id": "u90l10e04"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Review: a validation loop with no fresh input() inside it loops forever on bad input.",
+      "answer": true,
+      "explanation": "True. The checked value must change inside the loop, or the condition stays true endlessly.",
+      "id": "u90l10e05"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Review (combining, last unit): adding a counter to a validation loop lets you...",
+      "options": [
+        "Track how many attempts the user made",
+        "Change the rule",
+        "Skip validation",
+        "Print faster"
+      ],
+      "answer": 0,
+      "explanation": "A counter is a running value beside the validation - multiple state and validation combined.",
+      "id": "u90l10e06"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Predict:\n\nn = int(input())\nwhile n < 1 or n > 5:\n    n = int(input())\nprint(n)\n\nUser types 0, 6, 3. What prints?",
+      "options": [
+        "3",
+        "0",
+        "6",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "0 (too low) and 6 (too high) are rejected; 3 is in 1-5 and prints. A two-sided range validator.",
+      "id": "u90l10e07"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Review (earlier lap): a validation loop can sit inside a for loop to validate each of several inputs.",
+      "answer": true,
+      "explanation": "True - nested loops. The for collects, the inner while validates each item.",
+      "id": "u90l10e08"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "After any validation loop finishes, the value is...",
+      "options": [
+        "Guaranteed valid, safe to compute with",
+        "Possibly still bad",
+        "Always zero",
+        "A string"
+      ],
+      "answer": 0,
+      "explanation": "The loop exits only on a valid value, so downstream code can trust it - validate then compute.",
+      "id": "u90l10e09"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "You've finished Unit 90. What can you now do?",
+      "options": [
+        "Write programs that reject or re-ask on bad input until it's valid",
+        "Only read one input",
+        "Avoid loops",
+        "Only compute without input"
+      ],
+      "answer": 0,
+      "explanation": "You can guard your programs against bad input - a key piece of the integrated problems coming next.",
+      "id": "u90l10e10"
+    }
+  ]
+}

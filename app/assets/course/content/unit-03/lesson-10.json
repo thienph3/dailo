@@ -1,0 +1,108 @@
+{
+  "unitId": "u03",
+  "lessonId": "u03l10",
+  "title": "Mixed practice: you drive",
+  "idea": "REVIEW-HEAVY GUIDED PROBLEM. The learner runs the full UEPCC rhythm on a small report with less scaffolding, mixing earlier Unit 1 print skills with this unit's multi-line ordering.",
+  "problem": "Show a mini profile card on three lines: a name (Sam), a city (Hue), and a number — their lucky number 7.",
+  "exercises": [
+    {
+      "id": "u03l10e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: Show name Sam, city Hue, lucky number 7 — one per line.\n\nWhat is the OUTPUT?",
+      "options": ["Three lines: Sam, Hue, 7", "One line adding them", "Just the number", "A question"],
+      "answer": 0,
+      "explanation": "Three facts, three lines. You lead this one — start by naming the output."
+    },
+    {
+      "id": "u03l10e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "The lucky number 7 — do we print it as text in quotes or as a bare number?",
+      "options": [
+        "Either works — print(\"7\") and print(7) both show 7",
+        "Only print(\"7\") works",
+        "Numbers cannot be printed",
+        "Only if we add it to something"
+      ],
+      "answer": 0,
+      "explanation": "From Unit 1: both a bare number and a number in quotes print as 7. Either is fine here."
+    },
+    {
+      "id": "u03l10e03",
+      "type": "orderBlocks",
+      "uepcc": "E",
+      "prompt": "Example. Order the output by hand (name, city, number).",
+      "blocks": ["Sam", "Hue", "7"],
+      "answer": [0, 1, 2],
+      "explanation": "Sam, Hue, 7. This is the output you will check against."
+    },
+    {
+      "id": "u03l10e04",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Plan: pick the shape.",
+      "options": ["Three print lines, one per fact, in order", "One print for all three", "Two prints", "Add the facts"],
+      "answer": 0,
+      "explanation": "One print per fact, three facts, in the listed order. You chose the plan yourself."
+    },
+    {
+      "id": "u03l10e05",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code. Arrange the three lines (name, city, number).",
+      "blocks": ["print(7)", "print(\"Sam\")", "print(\"Hue\")"],
+      "answer": [1, 2, 0],
+      "explanation": "Sam, Hue, 7 — names in quotes, the number bare, in the planned order."
+    },
+    {
+      "id": "u03l10e06",
+      "type": "tapTokens",
+      "uepcc": "C",
+      "prompt": "Build the city line (it should show Hue).",
+      "tokens": ["print", "(", "\"Hue\"", ")"],
+      "answer": ["print", "(", "\"Hue\"", ")"],
+      "explanation": "print(\"Hue\") shows the city on its own line."
+    },
+    {
+      "id": "u03l10e07",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check. Output:\n\nSam\nHue\n7\n\nMatches your example?",
+      "options": ["Yes — three lines, right order", "No — wrong order", "No — missing a line", "Can't tell"],
+      "answer": 0,
+      "explanation": "All three facts in the planned order. Check passes — you drove the whole UEPCC rhythm!"
+    },
+    {
+      "id": "u03l10e08",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "New card: name Lee, city Oslo, lucky number 9. Same plan — the last line shows?",
+      "options": ["9", "Lee", "Oslo", "7"],
+      "answer": 0,
+      "explanation": "Same shape, new facts. The number is last, so the last line shows 9. The plan generalizes."
+    },
+    {
+      "id": "u03l10e09",
+      "type": "trueFalse",
+      "uepcc": "U",
+      "prompt": "Review of the whole unit: to report several facts, you use several print lines, and the order you write them is the order shown.",
+      "answer": true,
+      "explanation": "That is the heart of Unit 3. Several prints, chosen order — a tidy little report."
+    },
+    {
+      "id": "u03l10e10",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "You can now solve which kind of problem on your own?",
+      "options": [
+        "Report a few known facts as neatly ordered output",
+        "Do complicated math",
+        "Ask the user questions",
+        "Repeat something a hundred times"
+      ],
+      "answer": 0,
+      "explanation": "You finished Unit 3! You can take a few facts and report them in order with print lines. Next up: working an example by hand before you code."
+    }
+  ]
+}

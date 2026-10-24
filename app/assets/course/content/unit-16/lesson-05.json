@@ -1,0 +1,139 @@
+{
+  "unitId": "u16",
+  "lessonId": "u16l05",
+  "title": "float() for numbers with a decimal point",
+  "idea": "float(\"2.5\") gives back the number 2.5. Use it when values have parts, not just whole counts.",
+  "exercises": [
+    {
+      "id": "u16l05e01",
+      "type": "multipleChoice",
+      "prompt": "Some numbers have a decimal point, like 2.5 or 0.75. float() turns text into that kind of number. What does float(\"2.5\") give back?",
+      "options": [
+        "The number 2.5",
+        "The text \"2.5\"",
+        "The number 2",
+        "The number 25"
+      ],
+      "answer": 0,
+      "explanation": "float(\"2.5\") makes the real number 2.5. A 'float' is a number that can have a decimal point."
+    },
+    {
+      "id": "u16l05e02",
+      "type": "multipleChoice",
+      "prompt": "What will this show?\n\nprint(float(\"1.5\") + float(\"2.0\"))",
+      "options": [
+        "3.5",
+        "1.52.0",
+        "3",
+        "Error"
+      ],
+      "answer": 0,
+      "explanation": "Both become decimal numbers, so + adds them: 1.5 + 2.0 = 3.5."
+    },
+    {
+      "id": "u16l05e03",
+      "type": "multipleChoice",
+      "prompt": "When would you pick float() instead of int()?",
+      "options": [
+        "When the number can have a decimal point, like a price of 3.99",
+        "Always — int() is broken",
+        "Only for text that has letters",
+        "Never, they are the same"
+      ],
+      "answer": 0,
+      "explanation": "Use float() for values with parts (prices, weights, averages). int() is for whole counts like 3 apples."
+    },
+    {
+      "id": "u16l05e04",
+      "type": "matchPairs",
+      "prompt": "Match each value to the best tool to turn its text into a number.",
+      "pairs": [
+        {
+          "left": "\"7\" (a whole count)",
+          "right": "int()"
+        },
+        {
+          "left": "\"3.99\" (a price)",
+          "right": "float()"
+        },
+        {
+          "left": "\"12\" (people in a room)",
+          "right": "int()"
+        }
+      ],
+      "explanation": "Whole counts use int(); anything with a decimal point uses float()."
+    },
+    {
+      "id": "u16l05e05",
+      "type": "fillBlank",
+      "prompt": "Complete this to add two prices that have decimals:\n\nprint(____(\"2.50\") + float(\"1.25\"))",
+      "answer": "float",
+      "acceptable": [
+        "float"
+      ],
+      "explanation": "Prices have decimals, so use float(). 2.50 + 1.25 = 3.75."
+    },
+    {
+      "id": "u16l05e06",
+      "type": "multipleChoice",
+      "prompt": "price = \"4.5\"\nprint(float(price) + 0.5)\n\nWhat shows?",
+      "options": [
+        "5.0",
+        "4.50.5",
+        "\"5.0\"",
+        "Error"
+      ],
+      "answer": 0,
+      "explanation": "float(price) makes 4.5, then + 0.5 adds to 5.0. You can convert a variable with float() too."
+    },
+    {
+      "id": "u16l05e07",
+      "type": "trueFalse",
+      "prompt": "float() is for numbers that can have a decimal point; int() is for whole numbers.",
+      "answer": true,
+      "explanation": "Exactly. Choose based on whether the value needs a fractional part."
+    },
+    {
+      "id": "u16l05e08",
+      "type": "multiSelect",
+      "prompt": "Select EVERY value best converted with float() (it has, or may have, a decimal point).",
+      "options": [
+        "\"9.99\" (a price)",
+        "\"1.5\" (hours worked)",
+        "\"6\" (eggs in a box)",
+        "\"20\" (students)"
+      ],
+      "answer": [
+        0,
+        1
+      ],
+      "explanation": "Prices and hours can have decimals — float(). Whole counts like eggs and students fit int()."
+    },
+    {
+      "id": "u16l05e09",
+      "type": "multipleChoice",
+      "prompt": "What will this show?\n\nprint(\"1.5\" + \"2.0\")",
+      "options": [
+        "1.52.0",
+        "3.5",
+        "3",
+        "Error"
+      ],
+      "answer": 0,
+      "explanation": "No float() here, so these stay text and JOIN into 1.52.0. Without converting, + never adds."
+    },
+    {
+      "id": "u16l05e10",
+      "type": "multipleChoice",
+      "prompt": "You now have three conversion tools. Which turns text into a decimal number?",
+      "options": [
+        "float()",
+        "int()",
+        "str()",
+        "print()"
+      ],
+      "answer": 0,
+      "explanation": "float() for decimals, int() for whole numbers, str() for text. Three tools, three jobs."
+    }
+  ]
+}

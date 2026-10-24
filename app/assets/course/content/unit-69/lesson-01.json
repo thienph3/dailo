@@ -1,0 +1,136 @@
+{
+  "unitId": "u69",
+  "lessonId": "u69l01",
+  "title": "When one plan isn't enough",
+  "idea": "MEET: a big task is really several smaller tasks. Spotting that is the first step. No code.",
+  "exercises": [
+    {
+      "id": "u69l01e01",
+      "type": "multipleChoice",
+      "prompt": "You've been solving problems with one straight plan: a few steps in order. Some problems feel BIGGER than that. What usually makes a problem feel too big?",
+      "options": [
+        "It has several different jobs tangled together",
+        "It uses the number 100",
+        "It has a long title",
+        "It was written in capital letters"
+      ],
+      "answer": 0,
+      "explanation": "A big problem is usually several smaller jobs stuck together. Seeing the separate jobs is how you start."
+    },
+    {
+      "id": "u69l01e02",
+      "type": "trueFalse",
+      "prompt": "Every problem, no matter how large, is best written as one long list of steps with no groups.",
+      "answer": false,
+      "explanation": "Not true. Big problems get clearer when you split them into smaller named jobs instead of one giant list."
+    },
+    {
+      "id": "u69l01e03",
+      "type": "multipleChoice",
+      "prompt": "'Plan a birthday party' feels big. Which is the clearest sign it should be SPLIT into smaller jobs?",
+      "options": [
+        "It naturally breaks into parts: invites, food, cake, games",
+        "It is a happy event",
+        "It happens once a year",
+        "It involves balloons"
+      ],
+      "answer": 0,
+      "explanation": "When you can name separate parts (invites, food, cake...), each part is a smaller job. That's decomposition."
+    },
+    {
+      "id": "u69l01e04",
+      "type": "multipleChoice",
+      "prompt": "Breaking a big task into smaller tasks has a name. What is it?",
+      "options": [
+        "Decomposition — splitting into smaller sub-problems",
+        "Addition",
+        "Looping",
+        "Printing"
+      ],
+      "answer": 0,
+      "explanation": "Decomposition means breaking a problem down into smaller pieces you can each solve. You first met it in Lap 1."
+    },
+    {
+      "id": "u69l01e05",
+      "type": "multiSelect",
+      "prompt": "Which of these tasks are clearly made of SEVERAL smaller jobs? (Pick all that apply.)",
+      "options": [
+        "Cook a three-course dinner",
+        "Clap your hands once",
+        "Build a treehouse",
+        "Say the number five"
+      ],
+      "answer": [
+        0,
+        2
+      ],
+      "explanation": "A dinner (starter, main, dessert) and a treehouse (floor, walls, roof) each split into parts. The other two are single tiny actions."
+    },
+    {
+      "id": "u69l01e06",
+      "type": "multipleChoice",
+      "prompt": "Why is splitting a big problem into smaller jobs helpful?",
+      "options": [
+        "Each small job is easier to think about and check on its own",
+        "It makes the problem disappear",
+        "It uses less electricity",
+        "Small jobs never have mistakes"
+      ],
+      "answer": 0,
+      "explanation": "Smaller jobs are easier to understand, solve, and check one at a time. That is the whole point of splitting."
+    },
+    {
+      "id": "u69l01e07",
+      "type": "matchPairs",
+      "prompt": "Match each big task to a smaller job INSIDE it.",
+      "pairs": [
+        {
+          "left": "Make a sandwich",
+          "right": "Spread the butter"
+        },
+        {
+          "left": "Tidy the room",
+          "right": "Make the bed"
+        },
+        {
+          "left": "Wash the car",
+          "right": "Rinse the windows"
+        }
+      ],
+      "explanation": "Each big task contains smaller jobs. Naming one small job is the start of decomposition."
+    },
+    {
+      "id": "u69l01e08",
+      "type": "trueFalse",
+      "prompt": "A problem that is one single step (like 'print hello') usually does NOT need splitting.",
+      "answer": true,
+      "explanation": "Right. Tiny single-step tasks are already small enough. You split only when a task has several jobs inside it."
+    },
+    {
+      "id": "u69l01e09",
+      "type": "multipleChoice",
+      "prompt": "You read: 'Greet the user, then show today's total, then say goodbye.' How many separate jobs is that?",
+      "options": [
+        "Three: greet, show the total, say goodbye",
+        "One big job",
+        "Two jobs",
+        "None - it's just text"
+      ],
+      "answer": 0,
+      "explanation": "The word 'then' between parts is a clue: greet / show total / say goodbye are three separate jobs."
+    },
+    {
+      "id": "u69l01e10",
+      "type": "multipleChoice",
+      "prompt": "What is the FIRST thing to do when a problem feels too big?",
+      "options": [
+        "Look for the smaller jobs hiding inside it",
+        "Give up",
+        "Write all the code at once",
+        "Pick a bigger number"
+      ],
+      "answer": 0,
+      "explanation": "Before any code, find the smaller jobs. Spotting the parts is the thinking that makes the rest easy."
+    }
+  ]
+}

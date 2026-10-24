@@ -1,0 +1,131 @@
+{
+  "unitId": "u66",
+  "lessonId": "u66l05",
+  "title": "Resetting inside the loop by mistake",
+  "idea": "If you set total = 0 INSIDE the loop, it forgets every pass. Indentation decides what runs each pass. Spot the misplaced line.",
+  "exercises": [
+    {
+      "id": "u66l05e01",
+      "type": "multipleChoice",
+      "prompt": "In Python, what decides whether a line runs ONCE or EVERY pass of a loop?",
+      "options": [
+        "its indentation (how far it is indented)",
+        "its length",
+        "the variable name",
+        "the comments"
+      ],
+      "answer": 0,
+      "explanation": "Indented lines are INSIDE the loop (run every pass). Lines lined up with 'for' run once. Indentation is the whole story here."
+    },
+    {
+      "id": "u66l05e02",
+      "type": "multipleChoice",
+      "prompt": "BUGGY: sum of [1, 2, 3] should be 6.\n\nfor n in [1, 2, 3]:\n    total = 0\n    total = total + n\nprint(total)\n\nWhat prints?",
+      "options": [
+        "3 — total is reset to 0 every pass, so only the last item survives",
+        "6",
+        "0",
+        "1"
+      ],
+      "answer": 0,
+      "explanation": "'total = 0' is INSIDE the loop, so each pass wipes it out. Only the final item (3) remains. The reset must move ABOVE the loop."
+    },
+    {
+      "id": "u66l05e03",
+      "type": "orderBlocks",
+      "prompt": "Arrange the lines so the sum works (reset ONCE, then add each item).",
+      "blocks": [
+        "total = 0",
+        "for n in [1, 2, 3]:",
+        "    total = total + n",
+        "print(total)"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "Set total = 0 ONCE before the loop, add inside, print after. Now total survives every pass and reaches 6."
+    },
+    {
+      "id": "u66l05e04",
+      "type": "trueFalse",
+      "prompt": "The starting line 'total = 0' belongs ABOVE the loop, not indented inside it.",
+      "answer": true,
+      "explanation": "Right. It should run once. Indent it inside and it resets every pass, erasing the running total."
+    },
+    {
+      "id": "u66l05e05",
+      "type": "multipleChoice",
+      "prompt": "BUGGY: this should print the total AFTER adding everything.\n\ntotal = 0\nfor n in [4, 5, 6]:\n    total = total + n\n    print(total)\n\nWhat does it actually do?",
+      "options": [
+        "prints 4, 9, 15 — once per pass, not just the final total",
+        "prints 15 only",
+        "prints nothing",
+        "crashes"
+      ],
+      "answer": 0,
+      "explanation": "print is INSIDE the loop, so it fires every pass: 4, 9, 15. To show only the final total, un-indent print so it runs once after."
+    },
+    {
+      "id": "u66l05e06",
+      "type": "multipleChoice",
+      "prompt": "You want the final total shown ONCE. Where should print(total) go?",
+      "options": [
+        "lined up with 'for', after the loop (not indented)",
+        "indented inside the loop",
+        "before total = 0",
+        "inside the if"
+      ],
+      "answer": 0,
+      "explanation": "Un-indented and after the loop, print runs once with the finished total. Inside, it runs every pass."
+    },
+    {
+      "id": "u66l05e07",
+      "type": "trueFalse",
+      "prompt": "Moving a line in or out by one indentation level can completely change what a program does.",
+      "answer": true,
+      "explanation": "Absolutely. Indentation is not decoration in Python; it decides what's inside the loop. A misplaced line is a real, common bug."
+    },
+    {
+      "id": "u66l05e08",
+      "type": "multipleChoice",
+      "prompt": "REVIEW: which lines run EVERY pass here?\n\ntotal = 0\nfor n in [1, 2]:\n    total = total + n\n    print(n)\nprint(total)",
+      "options": [
+        "'total = total + n' and 'print(n)' — the indented ones",
+        "all four lines",
+        "only 'print(total)'",
+        "only 'total = 0'"
+      ],
+      "answer": 0,
+      "explanation": "The two indented lines are inside the loop (every pass). 'total = 0' and the final print run once."
+    },
+    {
+      "id": "u66l05e09",
+      "type": "multipleChoice",
+      "prompt": "A summing loop prints a tiny number like the last item instead of the full total. Suspect...",
+      "options": [
+        "'total = 0' was accidentally placed INSIDE the loop",
+        "the list is empty",
+        "the plus sign is wrong",
+        "print is missing"
+      ],
+      "answer": 0,
+      "explanation": "If only the last item's worth survives, the reset is firing every pass; 'total = 0' slipped inside the loop."
+    },
+    {
+      "id": "u66l05e10",
+      "type": "multipleChoice",
+      "prompt": "The rule to remember from this lesson:",
+      "options": [
+        "set up once ABOVE the loop; do the repeated work INSIDE it",
+        "put everything inside the loop",
+        "never indent anything",
+        "print on every pass"
+      ],
+      "answer": 0,
+      "explanation": "Set up (total = 0) above, repeat (add) inside, report (print) after. Indentation puts each line in the right place."
+    }
+  ]
+}

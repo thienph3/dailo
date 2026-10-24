@@ -1,0 +1,137 @@
+{
+  "unitId": "u16",
+  "lessonId": "u16l06",
+  "title": "Convert first, then do the math",
+  "idea": "When text holds digits you want to add, convert with int() or float() before the math.",
+  "exercises": [
+    {
+      "id": "u16l06e01",
+      "type": "multipleChoice",
+      "prompt": "apples = \"6\"\noranges = \"4\"\nprint(apples + oranges)\n\nThe programmer wanted 10. What shows instead?",
+      "options": [
+        "64",
+        "10",
+        "6 4",
+        "Error"
+      ],
+      "answer": 0,
+      "explanation": "Both are text, so + joins: 64. The fix is to convert each with int() before adding."
+    },
+    {
+      "id": "u16l06e02",
+      "type": "multipleChoice",
+      "prompt": "Fix the last program. What shows now?\n\napples = \"6\"\noranges = \"4\"\nprint(int(apples) + int(oranges))",
+      "options": [
+        "10",
+        "64",
+        "\"10\"",
+        "Error"
+      ],
+      "answer": 0,
+      "explanation": "int() turns each text into a number, so + adds: 6 + 4 = 10. Convert first, then the math works."
+    },
+    {
+      "id": "u16l06e03",
+      "type": "orderBlocks",
+      "prompt": "Arrange a program: text prices \"8\" and \"5\", converted and added, shown as a total.",
+      "blocks": [
+        "pen_price = \"8\"",
+        "book_price = \"5\"",
+        "total = int(pen_price) + int(book_price)",
+        "print(total)"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "Store both text values, convert-and-add into total, then print. total is 13."
+    },
+    {
+      "id": "u16l06e04",
+      "type": "fillBlank",
+      "prompt": "The prices have decimals. Complete the conversion:\n\nmeal = \"7.50\"\ndrink = \"2.50\"\ntotal = ____(meal) + float(drink)\nprint(total)",
+      "answer": "float",
+      "acceptable": [
+        "float"
+      ],
+      "explanation": "Decimal prices need float(). 7.50 + 2.50 = 10.0."
+    },
+    {
+      "id": "u16l06e05",
+      "type": "trueFalse",
+      "prompt": "If your digits are stored as text, you must convert them before + will add instead of join.",
+      "answer": true,
+      "explanation": "Yes. 'Convert first, then math' is the rule that beats the 'added text instead of numbers' bug."
+    },
+    {
+      "id": "u16l06e06",
+      "type": "multipleChoice",
+      "prompt": "a = \"20\"\nb = \"3\"\nprint(int(a) * int(b))\n\nWhat shows?",
+      "options": [
+        "60",
+        "203",
+        "\"60\"",
+        "Error"
+      ],
+      "answer": 0,
+      "explanation": "Convert both to numbers, then multiply: 20 * 3 = 60. Conversion helps * just like it helps +."
+    },
+    {
+      "id": "u16l06e07",
+      "type": "multipleChoice",
+      "prompt": "Which line correctly adds the text values \"15\" and \"5\" to get 20?",
+      "options": [
+        "print(int(\"15\") + int(\"5\"))",
+        "print(\"15\" + \"5\")",
+        "print(str(\"15\") + str(\"5\"))",
+        "print(\"15\" + 5)"
+      ],
+      "answer": 0,
+      "explanation": "Only converting BOTH to numbers with int() makes + add to 20. str() would keep them as text."
+    },
+    {
+      "id": "u16l06e08",
+      "type": "multipleChoice",
+      "prompt": "score = \"50\"\nprint(int(score) + 25)\n\nWhat shows?",
+      "options": [
+        "75",
+        "5025",
+        "\"75\"",
+        "Error"
+      ],
+      "answer": 0,
+      "explanation": "int(score) is 50, plus 25 is 75. You can mix a converted value with a number you already have."
+    },
+    {
+      "id": "u16l06e09",
+      "type": "multiSelect",
+      "prompt": "Select EVERY line that will correctly ADD to a number result.",
+      "options": [
+        "print(int(\"4\") + int(\"4\"))",
+        "print(float(\"1.5\") + float(\"1.5\"))",
+        "print(\"4\" + \"4\")",
+        "print(\"1.5\" + \"1.5\")"
+      ],
+      "answer": [
+        0,
+        1
+      ],
+      "explanation": "The converted lines add (8 and 3.0). The unconverted ones stay text and join (44 and 1.51.5)."
+    },
+    {
+      "id": "u16l06e10",
+      "type": "multipleChoice",
+      "prompt": "What is the SAFEST habit when text holds digits you want to add?",
+      "options": [
+        "Convert with int() or float() first, then do the math",
+        "Just use + and hope",
+        "Never use + at all",
+        "Put more quotes around the numbers"
+      ],
+      "answer": 0,
+      "explanation": "Convert first. That single habit prevents the joining bug every time."
+    }
+  ]
+}

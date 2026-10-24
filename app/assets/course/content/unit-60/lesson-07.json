@@ -1,0 +1,139 @@
+{
+  "unitId": "u60",
+  "lessonId": "u60l07",
+  "title": "Writing the min loop",
+  "idea": "TOOL: assemble the smallest-so-far loop, noticing it is the max loop with one sign changed.",
+  "exercises": [
+    {
+      "id": "u60l07e01",
+      "type": "tapTokens",
+      "prompt": "Tap the tokens to start the smallest at the first value of nums.",
+      "answer": [
+        "best",
+        "=",
+        "nums",
+        "[",
+        "0",
+        "]"
+      ],
+      "tokens": [
+        "best",
+        "=",
+        "nums",
+        "[",
+        "0",
+        "]"
+      ],
+      "explanation": "best = nums[0] — the SAME safe start as the max loop. Only the comparison will differ."
+    },
+    {
+      "id": "u60l07e02",
+      "type": "fillBlank",
+      "prompt": "Write the loop header that visits each value in nums (call it n):\n\nfor ____ in nums:",
+      "answer": "n",
+      "acceptable": [
+        "n"
+      ],
+      "explanation": "'for n in nums:' — identical to the max loop's header."
+    },
+    {
+      "id": "u60l07e03",
+      "type": "fillBlank",
+      "prompt": "Write the test that is true when n is smaller than the best so far:\n\n    if n ____ best:",
+      "answer": "<",
+      "acceptable": [
+        "<"
+      ],
+      "explanation": "n < best is true when n is smaller — the flipped comparison that makes this a min."
+    },
+    {
+      "id": "u60l07e04",
+      "type": "fillBlank",
+      "prompt": "Write the line that saves the smaller value into best:\n\n        best ____ n",
+      "answer": "=",
+      "acceptable": [
+        "="
+      ],
+      "explanation": "best = n — the same save step as max. The winner goes INTO best."
+    },
+    {
+      "id": "u60l07e05",
+      "type": "orderBlocks",
+      "prompt": "Put the whole min program in order.",
+      "answer": [
+        1,
+        3,
+        2,
+        0,
+        4
+      ],
+      "blocks": [
+        "        best = n",
+        "best = nums[0]",
+        "    if n < best:",
+        "for n in nums:",
+        "print(best)"
+      ],
+      "explanation": "Start best, loop, test with <, replace on a smaller value, print. Compare to the max program: only the sign changed."
+    },
+    {
+      "id": "u60l07e06",
+      "type": "multipleChoice",
+      "prompt": "You assembled the loop for nums = [6, 2, 9, 4]. What prints?",
+      "options": [
+        "2",
+        "9",
+        "6",
+        "21"
+      ],
+      "answer": 0,
+      "explanation": "best drops 6 -> 2 and nothing is smaller. It prints the minimum, 2."
+    },
+    {
+      "id": "u60l07e07",
+      "type": "multipleChoice",
+      "prompt": "You have a working max loop on screen. What is the fastest way to make it a min loop?",
+      "options": [
+        "Change the one > to a <",
+        "Rewrite the whole thing",
+        "Add a second loop",
+        "Delete the start line"
+      ],
+      "answer": 0,
+      "explanation": "One character. That is the whole point of this unit — the pattern transfers."
+    },
+    {
+      "id": "u60l07e08",
+      "type": "multipleChoice",
+      "prompt": "Where must 'best = n' sit so it only runs on a smaller value?",
+      "options": [
+        "Indented under the if",
+        "At the same level as the for",
+        "Before the loop",
+        "After the print"
+      ],
+      "answer": 0,
+      "explanation": "Indent it under the if so the replace only happens on a win — exactly like max."
+    },
+    {
+      "id": "u60l07e09",
+      "type": "trueFalse",
+      "prompt": "The min loop and the max loop have the same number of lines.",
+      "answer": true,
+      "explanation": "They are the same loop structure. Only the comparison sign inside the if is different."
+    },
+    {
+      "id": "u60l07e10",
+      "type": "multipleChoice",
+      "prompt": "Before trusting your min loop, what should you do?",
+      "options": [
+        "Trace a small list by hand and compare to the output",
+        "Delete the if",
+        "Run it a hundred times",
+        "Rename every variable"
+      ],
+      "answer": 0,
+      "explanation": "Hand-trace a small list to get the expected smallest, then check the code matches — the Check habit."
+    }
+  ]
+}

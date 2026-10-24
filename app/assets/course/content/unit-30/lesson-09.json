@@ -1,0 +1,126 @@
+{
+  "unitId": "u30",
+  "lessonId": "u30l09",
+  "title": "Spot the wrong interactive logic",
+  "idea": "Debug the APPROACH of input-driven programs: missing int(), using the answer before asking, impossible 'and' on one answer, and unhandled inputs. Fix the reasoning.",
+  "exercises": [
+    {
+      "id": "u30l09e01",
+      "type": "multipleChoice",
+      "prompt": "A program asks for a quantity and multiplies it by a price:\n\nqty = input(\"How many? \")\nprint(qty * price)\n\nThe user types 3, price is 2 (a number). What goes wrong?",
+      "options": [
+        "qty is text \"3\", so qty * price repeats the text or errors instead of giving 6",
+        "It prints 6 correctly",
+        "price is wrong",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "Text times a number is not arithmetic. Convert first: qty = int(input(...)), then qty * price is 6."
+    },
+    {
+      "id": "u30l09e02",
+      "type": "fillBlank",
+      "prompt": "Fix the quantity so the math works:\n\nqty = ____(input(\"How many? \"))\nprint(qty * price)",
+      "answer": "int",
+      "acceptable": ["int"],
+      "explanation": "int() makes qty a number, so qty * price is real multiplication."
+    },
+    {
+      "id": "u30l09e03",
+      "type": "multipleChoice",
+      "prompt": "What is wrong?\n\nif reply == \"yes\":\n    print(\"OK\")\nreply = input(\"Confirm? \")",
+      "options": [
+        "reply is tested before input() gives it a value - ask first",
+        "\"yes\" is wrong",
+        "== should be =",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "You cannot react to an answer you have not asked for yet. The input() line must come before the if."
+    },
+    {
+      "id": "u30l09e04",
+      "type": "orderBlocks",
+      "prompt": "Put it in the right order.",
+      "blocks": [
+        "reply = input(\"Confirm? \")",
+        "if reply == \"yes\":",
+        "    print(\"OK\")"
+      ],
+      "answer": [0, 1, 2],
+      "explanation": "Ask first, then test the answer. The variable must exist before the if reads it."
+    },
+    {
+      "id": "u30l09e05",
+      "type": "multipleChoice",
+      "prompt": "Meant to accept \"y\" OR \"yes\". Someone wrote 'if reply == \"y\" and reply == \"yes\"'. Why does it never confirm?",
+      "options": [
+        "One answer can't equal both at once - it should be 'or'",
+        "and is faster",
+        "quotes are wrong",
+        "it does confirm"
+      ],
+      "answer": 0,
+      "explanation": "'and' requires reply to be both \"y\" and \"yes\" simultaneously - impossible. Use 'or' to accept either."
+    },
+    {
+      "id": "u30l09e06",
+      "type": "multipleChoice",
+      "prompt": "A menu checks \"add\" and \"remove\" but has no else. The user types \"edit\". What happens?",
+      "options": [
+        "Nothing prints, leaving the user confused - add an else to respond",
+        "It prints \"edit\"",
+        "It crashes",
+        "It prints \"add\""
+      ],
+      "answer": 0,
+      "explanation": "With no matching branch and no else, the program stays silent. A catch-all else keeps it responsive."
+    },
+    {
+      "id": "u30l09e07",
+      "type": "trueFalse",
+      "prompt": "An interactive program can run with no error yet behave wrongly because of a missing int() or a missing else.",
+      "answer": true,
+      "explanation": "Yes - these are reasoning bugs. Testing real inputs (numbers, odd words) exposes them."
+    },
+    {
+      "id": "u30l09e08",
+      "type": "multipleChoice",
+      "prompt": "A program does int(input(...)) but the user types \"ten\" instead of digits. This would...",
+      "options": [
+        "fail, because int() cannot turn the word \"ten\" into a number",
+        "give 10",
+        "give 0",
+        "work fine"
+      ],
+      "answer": 0,
+      "explanation": "int() only converts digit text like \"10\", not spelled-out words. Real programs guard against odd input - a topic for later units."
+    },
+    {
+      "id": "u30l09e09",
+      "type": "multipleChoice",
+      "prompt": "Best way to catch these interactive bugs?",
+      "options": [
+        "Run through sample answers by hand - a number, a known word, and an unexpected one",
+        "Assume it works if it runs",
+        "Only test one input",
+        "Remove the input"
+      ],
+      "answer": 0,
+      "explanation": "Trace the likely answers, including a surprising one. That reveals missing conversions, bad order, or an absent else."
+    },
+    {
+      "id": "u30l09e10",
+      "type": "multipleChoice",
+      "prompt": "The interactive-debugging checklist:",
+      "options": [
+        "Ask before using, int() numbers, use 'or' for either-word, and add an else",
+        "Never debug",
+        "Only numbers have bugs",
+        "Skip testing"
+      ],
+      "answer": 0,
+      "explanation": "Order, type, joiner, and a catch-all. Check these four and your ask-then-react programs hold up."
+    }
+  ]
+}

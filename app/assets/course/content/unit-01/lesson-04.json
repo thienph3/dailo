@@ -1,0 +1,136 @@
+{
+  "unitId": "u01",
+  "lessonId": "u01l04",
+  "title": "Single or double quotes",
+  "idea": "Python lets you use single ' ' or double \" \" quotes. Both work the same — but they must match.",
+  "exercises": [
+    {
+      "id": "u01l04e01",
+      "type": "trueFalse",
+      "prompt": "print('Hi') and print(\"Hi\") both show the same thing.",
+      "answer": true,
+      "explanation": "Single and double quotes work the same way. Both show: Hi"
+    },
+    {
+      "id": "u01l04e02",
+      "type": "multipleChoice",
+      "prompt": "Which of these is a valid piece of text?",
+      "options": [
+        "'cat'",
+        "\"cat'",
+        "'cat\"",
+        "cat"
+      ],
+      "answer": 0,
+      "explanation": "The quotes must MATCH: open and close with the same kind. 'cat' is fine; mixing ' and \" is not."
+    },
+    {
+      "id": "u01l04e03",
+      "type": "multipleChoice",
+      "prompt": "What is wrong with this?\n\nprint(\"Hello')",
+      "options": [
+        "The quotes don't match (starts with \", ends with ')",
+        "print is spelled wrong",
+        "Nothing is wrong",
+        "It needs two words"
+      ],
+      "answer": 0,
+      "explanation": "It opens with \" but closes with '. Quotes must be the same kind on both ends."
+    },
+    {
+      "id": "u01l04e04",
+      "type": "tapTokens",
+      "prompt": "Build an instruction using SINGLE quotes to show: hello",
+      "tokens": [
+        "print",
+        "(",
+        "'hello'",
+        ")"
+      ],
+      "answer": [
+        "print",
+        "(",
+        "'hello'",
+        ")"
+      ],
+      "explanation": "Single quotes work just like double quotes: print('hello') shows hello."
+    },
+    {
+      "id": "u01l04e05",
+      "type": "trueFalse",
+      "prompt": "You must always use double quotes in Python.",
+      "answer": false,
+      "explanation": "Single quotes are just as valid. Pick one style and keep both ends matching."
+    },
+    {
+      "id": "u01l04e06",
+      "type": "multiSelect",
+      "prompt": "Which of these are valid? (pick all)",
+      "options": [
+        "print(\"ok\")",
+        "print('ok')",
+        "print(\"ok')",
+        "print(ok)"
+      ],
+      "answer": [
+        0,
+        1
+      ],
+      "explanation": "The first two have matching quotes. The third mixes quote types; the fourth has no quotes at all."
+    },
+    {
+      "id": "u01l04e07",
+      "type": "fillBlank",
+      "prompt": "Fix this so the quotes match:\n\nprint('Bye____)",
+      "answer": "'",
+      "acceptable": [
+        "'"
+      ],
+      "explanation": "It opened with a single quote, so it must close with a single quote: print('Bye')."
+    },
+    {
+      "id": "u01l04e08",
+      "type": "multipleChoice",
+      "prompt": "What does print('Dailo') show?",
+      "options": [
+        "Dailo",
+        "'Dailo'",
+        "print",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "Single quotes mark the text and aren't shown. Output: Dailo."
+    },
+    {
+      "id": "u01l04e09",
+      "type": "multipleChoice",
+      "prompt": "Which one will cause a problem?",
+      "options": [
+        "print(\"day')",
+        "print(\"day\")",
+        "print('day')",
+        "print(\"night\")"
+      ],
+      "answer": 0,
+      "explanation": "The first opens with \" and closes with ' — mismatched. The rest all match correctly."
+    },
+    {
+      "id": "u01l04e10",
+      "type": "tapTokens",
+      "prompt": "Build an instruction using DOUBLE quotes to show: good job",
+      "tokens": [
+        "print",
+        "(",
+        "\"good job\"",
+        ")"
+      ],
+      "answer": [
+        "print",
+        "(",
+        "\"good job\"",
+        ")"
+      ],
+      "explanation": "print(\"good job\") — matching double quotes around the whole phrase."
+    }
+  ]
+}

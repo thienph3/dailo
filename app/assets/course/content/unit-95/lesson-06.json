@@ -1,0 +1,128 @@
+{
+  "unitId": "u95",
+  "lessonId": "u95l06",
+  "title": "Simplifying tangled conditionals",
+  "idea": "MEET (thinking): if/else chains can often be shortened. Combine checks with and/or, drop redundant branches - same decision, clearer code.",
+  "exercises": [
+    {
+      "id": "u95l06e01",
+      "type": "multipleChoice",
+      "prompt": "This works but is clunky:\n\nif score >= 50:\n    result = 1\nif score < 50:\n    result = 0\n\nWhat's the clearer refactor?",
+      "options": [
+        "Use if/else: if score >= 50: result = 1  else: result = 0",
+        "Add a third if-check",
+        "Remove both checks",
+        "Copy the block twice"
+      ],
+      "answer": 0,
+      "explanation": "Two separate ifs testing opposite conditions is really one choice. if/else says 'this OR the other' clearly - and the two can't disagree."
+    },
+    {
+      "id": "u95l06e02",
+      "type": "trueFalse",
+      "prompt": "Rewriting those two ifs as one if/else changes which result you get for score = 70.",
+      "answer": false,
+      "explanation": "No. 70 >= 50, so result is 1 either way. Same decision, same answer - just expressed more clearly."
+    },
+    {
+      "id": "u95l06e03",
+      "type": "multipleChoice",
+      "prompt": "Clunky:\n\nif age >= 13:\n    if age <= 19:\n        teen = 1\n\nSimpler same-meaning version?",
+      "options": [
+        "if age >= 13 and age <= 19: teen = 1",
+        "if age >= 13 or age <= 19: teen = 1",
+        "if age >= 13: teen = 1",
+        "if age <= 19: teen = 1"
+      ],
+      "answer": 0,
+      "explanation": "Two nested ifs BOTH must be true - that's exactly 'and.' Combining them flattens the code without changing the condition."
+    },
+    {
+      "id": "u95l06e04",
+      "type": "multipleChoice",
+      "prompt": "Why is 'and' the right join for those nested ifs, not 'or'?",
+      "options": [
+        "Both conditions had to hold (inner if ran only when the outer was true)",
+        "or is faster",
+        "Nested ifs always mean or",
+        "They mean the same thing"
+      ],
+      "answer": 0,
+      "explanation": "An inner if runs only if the outer passed - so BOTH must be true. That's 'and.' 'or' would wrongly accept ages like 5 or 40."
+    },
+    {
+      "id": "u95l06e05",
+      "type": "multipleChoice",
+      "prompt": "Spot the redundancy:\n\nif is_member == True:\n    price = 8\n\nCleaner?",
+      "options": [
+        "if is_member: price = 8",
+        "if is_member == True == True: price = 8",
+        "if is_member != False == True: price = 8",
+        "Leave it - it's already shortest"
+      ],
+      "answer": 0,
+      "explanation": "is_member is already True or False, so '== True' adds nothing. 'if is_member:' reads cleanly and behaves identically."
+    },
+    {
+      "id": "u95l06e06",
+      "type": "trueFalse",
+      "prompt": "'if is_member:' and 'if is_member == True:' make the same decision.",
+      "answer": true,
+      "explanation": "Identical behavior. The '== True' is just noise. Dropping it is a clarity refactor, not a behavior change."
+    },
+    {
+      "id": "u95l06e07",
+      "type": "multipleChoice",
+      "prompt": "Clunky chain:\n\nif n > 0:\n    sign = 1\nelse:\n    if n < 0:\n        sign = -1\n    else:\n        sign = 0\n\nWhat tidier tool flattens the nested else-if?",
+      "options": [
+        "elif",
+        "A loop",
+        "A new function per branch",
+        "break"
+      ],
+      "answer": 0,
+      "explanation": "elif collapses 'else: if ...' into one readable ladder: if n > 0 / elif n < 0 / else. Same three outcomes, much clearer."
+    },
+    {
+      "id": "u95l06e08",
+      "type": "orderBlocks",
+      "prompt": "Arrange the elif version of that sign check.",
+      "blocks": [
+        "if n > 0:",
+        "    sign = 1",
+        "elif n < 0:",
+        "    sign = -1",
+        "else:",
+        "    sign = 0"
+      ],
+      "answer": [0, 1, 2, 3, 4, 5],
+      "explanation": "if / elif / else reads top to bottom as three mutually exclusive cases. It replaces the nested else-if with no change in behavior."
+    },
+    {
+      "id": "u95l06e09",
+      "type": "multipleChoice",
+      "prompt": "Which 'simplification' would NOT be a safe refactor?",
+      "options": [
+        "Changing 'if age >= 13 and age <= 19' to 'if age >= 13' (dropping a condition)",
+        "Replacing '== True' with nothing",
+        "Turning two opposite ifs into if/else",
+        "Flattening else-if into elif"
+      ],
+      "answer": 0,
+      "explanation": "Dropping the upper bound changes the decision - now 40-year-olds count as teens. Simpler-looking but WRONG. Refactors must preserve behavior."
+    },
+    {
+      "id": "u95l06e10",
+      "type": "multipleChoice",
+      "prompt": "The key test when simplifying a conditional is...",
+      "options": [
+        "Does it make the exact same decision for every input?",
+        "Is it shorter, no matter what?",
+        "Does it use elif?",
+        "Does it avoid the word if?"
+      ],
+      "answer": 0,
+      "explanation": "Same decision for every input = safe refactor. Shorter is only good if the behavior is unchanged; otherwise you broke it."
+    }
+  ]
+}

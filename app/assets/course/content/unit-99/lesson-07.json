@@ -1,0 +1,158 @@
+{
+  "unitId": "u99",
+  "lessonId": "u99l07",
+  "title": "Capstone: a function that counts evens in a list",
+  "idea": "GUIDED CAPSTONE. A function takes a LIST parameter, loops with a condition, and returns a count — list + loop + return together.",
+  "problem": "Write count_evens(numbers) that returns how many items are even, so count_evens([3,4,6,7]) is 2.",
+  "exercises": [
+    {
+      "id": "u99l07e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: count_evens(numbers) returns how many evens. OUTPUT is...",
+      "options": [
+        "A count, returned to the caller",
+        "The even numbers",
+        "The sum",
+        "The list"
+      ],
+      "answer": 0,
+      "explanation": "Output is a single count handed back. The parameter is a whole list this time."
+    },
+    {
+      "id": "u99l07e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "The INPUT is a list. Inside the function, how do we look at each item?",
+      "options": [
+        "Loop over it with for item in numbers",
+        "Only numbers[0]",
+        "input()",
+        "We can't"
+      ],
+      "answer": 0,
+      "explanation": "A for loop walks every item. Lists as parameters work just like lists you made directly."
+    },
+    {
+      "id": "u99l07e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example by hand: which of 3, 4, 6, 7 are even?",
+      "options": [
+        "4 and 6",
+        "3 and 7",
+        "4, 6, 7",
+        "all"
+      ],
+      "answer": 0,
+      "explanation": "4 and 6 are even. So the count is 2 — our check."
+    },
+    {
+      "id": "u99l07e04",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "The even test inside the loop is...",
+      "options": [
+        "item % 2 == 0",
+        "item > 2",
+        "item // 2",
+        "item + 2"
+      ],
+      "answer": 0,
+      "explanation": "Remainder 0 means even. We bump the counter only when this holds."
+    },
+    {
+      "id": "u99l07e05",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Plan the function. Order the pieces.",
+      "blocks": [
+        "Loop items, add 1 to count when even",
+        "Define count_evens(numbers), count = 0",
+        "Return count"
+      ],
+      "answer": [
+        1,
+        0,
+        2
+      ],
+      "explanation": "Header + init, count-with-condition loop, return. All inside the function."
+    },
+    {
+      "id": "u99l07e06",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Where does return count belong?",
+      "options": [
+        "After the loop, so it returns the final count",
+        "Inside the loop",
+        "Before the loop",
+        "Inside the if"
+      ],
+      "answer": 0,
+      "explanation": "Return after the loop so the whole list is counted first. Returning inside would quit after one item."
+    },
+    {
+      "id": "u99l07e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code the function. Arrange the lines.",
+      "blocks": [
+        "        count = count + 1",
+        "    for item in numbers:",
+        "def count_evens(numbers):",
+        "    return count",
+        "    count = 0",
+        "        if item % 2 == 0:"
+      ],
+      "answer": [
+        2,
+        4,
+        1,
+        5,
+        0,
+        3
+      ],
+      "explanation": "def, count=0, loop, if even, increment, then return after the loop. Watch the indentation depth on the increment."
+    },
+    {
+      "id": "u99l07e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Complete the even test:\n\ndef count_evens(numbers):\n    count = 0\n    for item in numbers:\n        if item % 2 ____ 0:\n            count = count + 1\n    return count",
+      "answer": "==",
+      "acceptable": [
+        "=="
+      ],
+      "explanation": "Compare remainder to 0 with ==. For [3,4,6,7] the count returned is 2."
+    },
+    {
+      "id": "u99l07e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Call count_evens([3,4,6,7]): returns 2. Hand said 2. Verdict?",
+      "options": [
+        "Passes",
+        "Fails",
+        "Unknown",
+        "Rewrite example"
+      ],
+      "answer": 0,
+      "explanation": "Matches. A list parameter, a conditional count, and a return — three tools in one function."
+    },
+    {
+      "id": "u99l07e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "What does count_evens([]) return?",
+      "options": [
+        "0",
+        "2",
+        "None",
+        "It crashes"
+      ],
+      "answer": 0,
+      "explanation": "An empty list means the loop never runs, so count stays 0. The function returns 0 safely — empty case handled."
+    }
+  ]
+}

@@ -1,0 +1,130 @@
+{
+  "unitId": "u38",
+  "lessonId": "u38l06",
+  "title": "Using i in the body",
+  "idea": "The loop variable i is a normal number you can print, put in an f-string, or do math with. Each pass uses its current i.",
+  "exercises": [
+    {
+      "id": "u38l06e01",
+      "type": "multipleChoice",
+      "prompt": "What shows?\n\nfor i in range(1, 4):\n    print(i * 2)",
+      "options": [
+        "2\n4\n6",
+        "1\n2\n3",
+        "2\n4\n6\n8",
+        "6"
+      ],
+      "answer": 0,
+      "explanation": "i is 1, 2, 3; i * 2 is 2, 4, 6. The loop variable is a real number you can compute with."
+    },
+    {
+      "id": "u38l06e02",
+      "type": "multipleChoice",
+      "prompt": "What shows?\n\nfor i in range(1, 4):\n    print(f\"Item {i}\")",
+      "options": [
+        "Item 1\nItem 2\nItem 3",
+        "Item i\nItem i\nItem i",
+        "Item 0\nItem 1\nItem 2",
+        "Item 1\nItem 2\nItem 3\nItem 4"
+      ],
+      "answer": 0,
+      "explanation": "The f-string inserts i each pass: Item 1, Item 2, Item 3."
+    },
+    {
+      "id": "u38l06e03",
+      "type": "trueFalse",
+      "prompt": "You can do math with i, like i + 1 or i * 10, inside the loop body.",
+      "answer": true,
+      "explanation": "i is just a number each pass, so arithmetic works. i * 10 gives 10, 20, 30 for i = 1, 2, 3."
+    },
+    {
+      "id": "u38l06e04",
+      "type": "multipleChoice",
+      "prompt": "What shows?\n\nfor i in range(1, 4):\n    print(i * 10)",
+      "options": [
+        "10\n20\n30",
+        "1\n2\n3",
+        "10\n20\n30\n40",
+        "30"
+      ],
+      "answer": 0,
+      "explanation": "i is 1, 2, 3; i * 10 is 10, 20, 30. Multiplying the loop variable scales each pass."
+    },
+    {
+      "id": "u38l06e05",
+      "type": "fillBlank",
+      "prompt": "Fill to print 2, 3, 4 (one more than i which is 1, 2, 3):\n\nfor i in range(1, 4):\n    print(i ____ 1)",
+      "answer": "+",
+      "acceptable": [
+        "+"
+      ],
+      "explanation": "i + 1 adds one each pass: 2, 3, 4. The operator is +, from Lap 1 — still works on i."
+    },
+    {
+      "id": "u38l06e06",
+      "type": "multipleChoice",
+      "prompt": "What shows?\n\nfor i in range(1, 4):\n    print(f\"{i} squared is {i * i}\")",
+      "options": [
+        "1 squared is 1\n2 squared is 4\n3 squared is 9",
+        "1 squared is 1\n2 squared is 2\n3 squared is 3",
+        "i squared is i (three times)",
+        "1 squared is 2\n2 squared is 4"
+      ],
+      "answer": 0,
+      "explanation": "i and i * i both use the current i: 1 and 1, 2 and 4, 3 and 9. One variable, used twice per pass."
+    },
+    {
+      "id": "u38l06e07",
+      "type": "trueFalse",
+      "prompt": "The same i can appear more than once in a single body line.",
+      "answer": true,
+      "explanation": "Yes — f\"{i} and {i * i}\" uses i twice. It holds one value per pass, usable as often as you like."
+    },
+    {
+      "id": "u38l06e08",
+      "type": "multipleChoice",
+      "prompt": "What shows?\n\nfor i in range(2, 5):\n    print(f\"Table {i}\")",
+      "options": [
+        "Table 2\nTable 3\nTable 4",
+        "Table 0\nTable 1\nTable 2",
+        "Table 2\nTable 3\nTable 4\nTable 5",
+        "Table i (three times)"
+      ],
+      "answer": 0,
+      "explanation": "range(2, 5) is 2, 3, 4; the f-string labels each: Table 2, Table 3, Table 4."
+    },
+    {
+      "id": "u38l06e09",
+      "type": "matchPairs",
+      "prompt": "For i = 3, match each body expression to its printed value.",
+      "pairs": [
+        {
+          "left": "print(i)",
+          "right": "3"
+        },
+        {
+          "left": "print(i + 1)",
+          "right": "4"
+        },
+        {
+          "left": "print(i * 2)",
+          "right": "6"
+        }
+      ],
+      "explanation": "With i = 3: i is 3, i + 1 is 4, i * 2 is 6. The body computes fresh each pass from the current i."
+    },
+    {
+      "id": "u38l06e10",
+      "type": "multipleChoice",
+      "prompt": "A times-table line should read '3 x 1 = 3', '3 x 2 = 6', '3 x 3 = 9'. Which body?",
+      "options": [
+        "print(f\"3 x {i} = {3 * i}\") with i in range(1, 4)",
+        "print(\"3 x i = 3i\")",
+        "print(3 * 3)",
+        "print(f\"3 x {i}\") with i in range(3)"
+      ],
+      "answer": 0,
+      "explanation": "Using i for both the multiplier and the product (3 * i) gives 3, 6, 9. The loop variable powers the whole table."
+    }
+  ]
+}

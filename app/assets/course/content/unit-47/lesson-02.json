@@ -1,0 +1,136 @@
+{
+  "unitId": "u47",
+  "lessonId": "u47l02",
+  "title": "When the count is known: for",
+  "idea": "MEET. Recognising count-controlled problems: the number of repeats is known before you start, so a for loop over range fits. Reading only.",
+  "exercises": [
+    {
+      "id": "u47l02e01",
+      "type": "multipleChoice",
+      "prompt": "A COUNT-CONTROLLED problem tells you the number of repeats up front. Which of these is count-controlled?",
+      "options": [
+        "Greet each of 6 guests",
+        "Keep rolling until you get a six",
+        "Ask until the password is right",
+        "Wait while it is still raining"
+      ],
+      "answer": 0,
+      "explanation": "6 guests is a known count before you start. The other three stop on a changing condition, not a count."
+    },
+    {
+      "id": "u47l02e02",
+      "type": "multipleChoice",
+      "prompt": "range(5) in a for loop runs the body how many times?",
+      "options": [
+        "5 times",
+        "4 times",
+        "6 times",
+        "Forever"
+      ],
+      "answer": 0,
+      "explanation": "range(5) gives 0,1,2,3,4 — five values — so the body runs 5 times. A known, fixed count."
+    },
+    {
+      "id": "u47l02e03",
+      "type": "trueFalse",
+      "prompt": "'Print the numbers 1 through 10' is count-controlled — you know it runs 10 times.",
+      "answer": true,
+      "explanation": "True. The count (10) is known before starting, so a for loop over a range is the natural choice."
+    },
+    {
+      "id": "u47l02e04",
+      "type": "multipleChoice",
+      "prompt": "Which word most often signals a count-controlled loop?",
+      "options": [
+        "'times' (as in 'do it 3 times')",
+        "'until'",
+        "'while'",
+        "'as long as'"
+      ],
+      "answer": 0,
+      "explanation": "'times' usually names a fixed number of repeats. 'until', 'while', 'as long as' signal a condition instead."
+    },
+    {
+      "id": "u47l02e05",
+      "type": "matchPairs",
+      "prompt": "Match each phrase to whether the count is KNOWN before starting.",
+      "pairs": [
+        {
+          "left": "'for each of the 12 months'",
+          "right": "known count"
+        },
+        {
+          "left": "'repeat 8 times'",
+          "right": "known count"
+        },
+        {
+          "left": "'until the jar is full'",
+          "right": "not known"
+        }
+      ],
+      "explanation": "12 months and 8 times are fixed counts. 'Until the jar is full' depends on a condition, so the count is unknown."
+    },
+    {
+      "id": "u47l02e06",
+      "type": "multipleChoice",
+      "prompt": "'Do 20 jumping jacks.' How many repeats, and which shape?",
+      "options": [
+        "20 repeats — count-controlled (for)",
+        "Unknown repeats — while",
+        "1 repeat",
+        "0 repeats"
+      ],
+      "answer": 0,
+      "explanation": "20 is a fixed, known count, so a for loop over range(20) fits perfectly."
+    },
+    {
+      "id": "u47l02e07",
+      "type": "trueFalse",
+      "prompt": "range(start, stop, step) can count by 2s, so 'print every 2nd number up to 10' is still count-controlled.",
+      "answer": true,
+      "explanation": "True. Even with a step, the number of repeats is fixed and known, so it stays count-controlled (for)."
+    },
+    {
+      "id": "u47l02e08",
+      "type": "orderBlocks",
+      "prompt": "Order the thinking for a count-controlled problem.",
+      "blocks": [
+        "Find the fixed number of repeats in the problem",
+        "Pick a for loop with range",
+        "Plan the one step the body repeats"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Spot the fixed count, choose for/range, then plan the single repeated step. No code yet — just the plan."
+    },
+    {
+      "id": "u47l02e09",
+      "type": "multipleChoice",
+      "prompt": "Which is NOT count-controlled?",
+      "options": [
+        "Keep guessing until correct",
+        "Say 'hi' to all 4 friends",
+        "Print 1 to 100",
+        "Clap 3 times"
+      ],
+      "answer": 0,
+      "explanation": "'Keep guessing until correct' has no known count — it stops on a condition. The other three have fixed counts."
+    },
+    {
+      "id": "u47l02e10",
+      "type": "multipleChoice",
+      "prompt": "You decided a problem is count-controlled. What tool will you reach for?",
+      "options": [
+        "A for loop over a range",
+        "A while loop",
+        "An if with no loop",
+        "Just a print"
+      ],
+      "answer": 0,
+      "explanation": "Count-controlled means a fixed number of repeats — a for loop over a range is the match."
+    }
+  ]
+}

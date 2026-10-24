@@ -1,0 +1,132 @@
+{
+  "unitId": "u44",
+  "lessonId": "u44l04",
+  "title": "Count up and count down",
+  "idea": "A while loop can climb or shrink its control value toward the stop.",
+  "exercises": [
+    {
+      "type": "multipleChoice",
+      "prompt": "A while loop can count UP or DOWN. What matters for it to stop?",
+      "options": [
+        "The control value moves toward making the condition false",
+        "It always counts up",
+        "It always counts down",
+        "It never changes"
+      ],
+      "answer": 0,
+      "explanation": "Up or down doesn't matter -- the control value just has to head toward the point where the condition is false.",
+      "id": "u44l04e01"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "What shows?\n\nn = 5\nwhile n >= 1:\n    print(n)\n    n = n - 1",
+      "options": [
+        "5\n4\n3\n2\n1",
+        "5\n4\n3\n2\n1\n0",
+        "1\n2\n3\n4\n5",
+        "forever"
+      ],
+      "answer": 0,
+      "explanation": "n counts down from 5 while n >= 1: 5,4,3,2,1. At n = 0 the condition is false, so it stops.",
+      "id": "u44l04e02"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "What shows?\n\ni = 2\nwhile i <= 10:\n    print(i)\n    i = i + 2",
+      "options": [
+        "2\n4\n6\n8\n10",
+        "2\n4\n6\n8",
+        "2\n3\n4\n5",
+        "forever"
+      ],
+      "answer": 0,
+      "explanation": "i climbs by 2: 2,4,6,8,10 (all <= 10), then 12 fails. Steps can be bigger than 1.",
+      "id": "u44l04e03"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "To count down, the update subtracts; to count up, it adds.",
+      "answer": true,
+      "explanation": "True. Counting down uses n = n - something; counting up uses i = i + something. Both can reach a stop.",
+      "id": "u44l04e04"
+    },
+    {
+      "type": "orderBlocks",
+      "prompt": "Arrange a loop that counts down 3, 2, 1.",
+      "blocks": [
+        "    n = n - 1",
+        "n = 3",
+        "    print(n)",
+        "while n >= 1:"
+      ],
+      "answer": [
+        1,
+        3,
+        2,
+        0
+      ],
+      "explanation": "Start n = 3, loop while n >= 1, print n, then subtract 1. It prints 3, 2, 1 and stops at 0.",
+      "id": "u44l04e05"
+    },
+    {
+      "type": "fillBlank",
+      "prompt": "Fill the update so the loop counts DOWN:\n\nn = 4\nwhile n > 0:\n    print(n)\n    n = n ____ 1",
+      "answer": "-",
+      "acceptable": [
+        "-"
+      ],
+      "explanation": "To count down toward 0, subtract: n = n - 1. It prints 4, 3, 2, 1 then stops.",
+      "id": "u44l04e06"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "What shows?\n\ni = 10\nwhile i > 5:\n    print(i)\n    i = i - 2",
+      "options": [
+        "10\n8\n6",
+        "10\n8\n6\n4",
+        "10\n9\n8\n7\n6",
+        "forever"
+      ],
+      "answer": 0,
+      "explanation": "i shrinks by 2: 10, 8, 6 (all > 5), then 4 fails 4 > 5. Three passes.",
+      "id": "u44l04e07"
+    },
+    {
+      "type": "multiSelect",
+      "prompt": "Which of these while loops will stop?",
+      "options": [
+        "i = 1\nwhile i < 5:\n    i = i + 1",
+        "n = 5\nwhile n > 0:\n    n = n - 1",
+        "i = 1\nwhile i < 5:\n    i = i - 1",
+        "i = 0\nwhile i < 3:\n    i = i + 1"
+      ],
+      "answer": [
+        0,
+        1,
+        3
+      ],
+      "explanation": "First, second, and fourth move toward their stop. The third SHRINKS i while waiting for i to reach 5 -- it moves away, never stopping.",
+      "id": "u44l04e08"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Counting by 3 from 0 while i < 10 prints which values?",
+      "options": [
+        "0, 3, 6, 9",
+        "0, 3, 6, 9, 12",
+        "3, 6, 9",
+        "1, 2, 3"
+      ],
+      "answer": 0,
+      "explanation": "i goes 0, 3, 6, 9 (all < 10), then 12 fails. The step size is 3, so it climbs by threes.",
+      "id": "u44l04e09"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Whether it counts up or down, a while loop stops when its control value makes the condition false.",
+      "answer": true,
+      "explanation": "True. Direction doesn't matter -- the loop ends the moment the condition turns false, going up or down.",
+      "id": "u44l04e10"
+    }
+  ]
+}

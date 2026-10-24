@@ -1,0 +1,122 @@
+{
+  "unitId": "u29",
+  "lessonId": "u29l05",
+  "title": "A common mistake: = instead of == with words",
+  "idea": "Two classic word-comparison bugs: using = (assign) where == (compare) is meant, and forgetting the quotes. Spot and fix them.",
+  "exercises": [
+    {
+      "id": "u29l05e01",
+      "type": "multipleChoice",
+      "prompt": "What is wrong here?\n\nif color = \"red\":\n    print(\"Stop\")",
+      "options": [
+        "It uses = (assign) but a comparison needs == ",
+        "red should be a number",
+        "print is wrong",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "A single = tries to ASSIGN, not compare. Testing equality needs ==, so this is a classic mix-up."
+    },
+    {
+      "id": "u29l05e02",
+      "type": "fillBlank",
+      "prompt": "Fix it to compare:\n\nif color ____ \"red\":\n    print(\"Stop\")",
+      "answer": "==",
+      "acceptable": ["=="],
+      "explanation": "== compares. Now the if correctly tests whether color equals \"red\"."
+    },
+    {
+      "id": "u29l05e03",
+      "type": "multipleChoice",
+      "prompt": "What is wrong here?\n\nif answer == yes:\n    print(\"OK\")",
+      "options": [
+        "yes has no quotes, so Python looks for a variable named yes instead of the word",
+        "answer is misspelled",
+        "== should be =",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "Without quotes, yes is treated as a variable name, not the text \"yes\". The literal word needs quotes."
+    },
+    {
+      "id": "u29l05e04",
+      "type": "fillBlank",
+      "prompt": "Fix it so it compares against the WORD yes:\n\nif answer == ____:\n    print(\"OK\")",
+      "answer": "\"yes\"",
+      "acceptable": ["\"yes\"", "'yes'"],
+      "explanation": "Quotes make it the literal text \"yes\". Now the comparison is against the word, not a missing variable."
+    },
+    {
+      "id": "u29l05e05",
+      "type": "multipleChoice",
+      "prompt": "Which line correctly checks if name holds the word Sam?",
+      "options": [
+        "if name == \"Sam\":",
+        "if name = \"Sam\":",
+        "if name == Sam:",
+        "if name = Sam:"
+      ],
+      "answer": 0,
+      "explanation": "Compare with ==, and put the literal word in quotes. Only the first line does both."
+    },
+    {
+      "id": "u29l05e06",
+      "type": "trueFalse",
+      "prompt": "'=' and '==' mean the same thing inside an if.",
+      "answer": false,
+      "explanation": "No - '=' assigns a value; '==' compares. Using '=' where you meant '==' is a very common bug."
+    },
+    {
+      "id": "u29l05e07",
+      "type": "multipleChoice",
+      "prompt": "A program checks if cmd == stop (no quotes) and crashes saying stop is not defined. Why?",
+      "options": [
+        "Without quotes, Python expects a variable called stop, which does not exist",
+        "cmd is empty",
+        "stop is a banned word",
+        "== is wrong"
+      ],
+      "answer": 0,
+      "explanation": "The missing quotes turned the word into a variable lookup. Add quotes: cmd == \"stop\"."
+    },
+    {
+      "id": "u29l05e08",
+      "type": "multipleChoice",
+      "prompt": "Spot the correct comparison.",
+      "options": [
+        "if status == \"done\":",
+        "if status = \"done\":",
+        "if status == done:",
+        "if \"done\" = status:"
+      ],
+      "answer": 0,
+      "explanation": "== for comparing, quotes around the literal word. The first line is the only correct one."
+    },
+    {
+      "id": "u29l05e09",
+      "type": "multipleChoice",
+      "prompt": "Best habit to avoid these bugs?",
+      "options": [
+        "Read the line aloud: 'is X equal to the word Y?' - that reminds you to use == and quotes",
+        "Always use =",
+        "Never compare words",
+        "Remove all quotes"
+      ],
+      "answer": 0,
+      "explanation": "Saying the intent out loud separates 'compare' (==) from 'store' (=) and reminds you the word needs quotes."
+    },
+    {
+      "id": "u29l05e10",
+      "type": "multipleChoice",
+      "prompt": "The two word-comparison gotchas to remember:",
+      "options": [
+        "Use == (not =) to compare, and quote the literal word",
+        "Use = to compare, drop the quotes",
+        "Words cannot be compared",
+        "Only numbers need =="
+      ],
+      "answer": 0,
+      "explanation": "== for comparing and quotes around literal text - both must be right or the comparison misbehaves."
+    }
+  ]
+}

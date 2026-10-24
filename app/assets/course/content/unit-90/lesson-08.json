@@ -1,0 +1,132 @@
+{
+  "unitId": "u90",
+  "lessonId": "u90l08",
+  "title": "Validate, then compute",
+  "idea": "TOOL: once input is validated it can be trusted - feed the clean value straight into a calculation.",
+  "exercises": [
+    {
+      "type": "multipleChoice",
+      "prompt": "You validated 'quantity' to be at least 1. Now you multiply quantity by a price. Why is the order (validate THEN compute) important?",
+      "options": [
+        "Computing with a validated value guarantees a sensible result",
+        "Order never matters",
+        "You should compute first",
+        "Validation breaks the math"
+      ],
+      "answer": 0,
+      "explanation": "Clean input first, then math. A validated quantity means the total can't come out negative or nonsensical.",
+      "id": "u90l08e01"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Predict:\n\nqty = int(input())\nwhile qty < 1:\n    qty = int(input())\nprice = 5\ntotal = qty * price\nprint(total)\n\nUser types 0 then 3. What prints?",
+      "options": [
+        "15",
+        "0",
+        "5",
+        "3"
+      ],
+      "answer": 0,
+      "explanation": "0 is rejected; 3 is accepted. Then total = 3 * 5 = 15. The computation runs only on the clean value.",
+      "id": "u90l08e02"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Code AFTER a validation loop can assume the value is already valid.",
+      "answer": true,
+      "explanation": "True. The loop only exits once the value passes, so everything after it can trust the value. That's the payoff of validating up front.",
+      "id": "u90l08e03"
+    },
+    {
+      "type": "fillBlank",
+      "prompt": "Complete the calculation after validation (price is 5):\n\nqty = int(input())\nwhile qty < 1:\n    qty = int(input())\nprice = 5\ntotal = qty ____ price\nprint(total)",
+      "answer": "*",
+      "acceptable": [
+        "*"
+      ],
+      "explanation": "Multiply the clean quantity by the price. With qty 3, total = 15.",
+      "id": "u90l08e04"
+    },
+    {
+      "type": "orderBlocks",
+      "prompt": "Order a validate-then-compute program (quantity times price).",
+      "blocks": [
+        "qty = int(input())",
+        "while qty < 1:",
+        "    qty = int(input())",
+        "price = 5",
+        "total = qty * price",
+        "print(total)"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "explanation": "Read and validate the quantity, set the price, compute, print. Validation guards the calculation.",
+      "id": "u90l08e05"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "If you SKIPPED validation and the user typed -2 for quantity, what would total = qty * price (price 5) be?",
+      "options": [
+        "-10 - a nonsensical negative total from bad input",
+        "10",
+        "0",
+        "5"
+      ],
+      "answer": 0,
+      "explanation": "-2 * 5 = -10, a meaningless 'you owe negative money' result. That's exactly the silent wrong answer validation prevents.",
+      "id": "u90l08e06"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Validation is most valuable right where untrusted input first enters the program.",
+      "answer": true,
+      "explanation": "True. Clean it at the door, before it flows into calculations. Catching it early stops it poisoning everything downstream.",
+      "id": "u90l08e07"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "You validate BOTH a quantity (>=1) and a price (>=0). How many validation loops is that?",
+      "options": [
+        "Two - one per input, each with its own rule",
+        "One for both",
+        "Zero",
+        "Three"
+      ],
+      "answer": 0,
+      "explanation": "Each separate input gets its own validation loop with its own rule. Then both clean values feed the calculation.",
+      "id": "u90l08e08"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Predict:\n\nqty = int(input())\nwhile qty < 1:\n    qty = int(input())\nprice = int(input())\nwhile price < 0:\n    price = int(input())\nprint(qty * price)\n\nUser types 2, then 4. What prints?",
+      "options": [
+        "8",
+        "6",
+        "2",
+        "4"
+      ],
+      "answer": 0,
+      "explanation": "2 is a valid qty (first try), 4 is a valid price (first try). total = 2 * 4 = 8. Two validators, then compute.",
+      "id": "u90l08e09"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "The lesson:",
+      "options": [
+        "Validate each input at the door, then compute with full confidence",
+        "Compute first, validate later",
+        "Validation is optional for math",
+        "One loop validates everything"
+      ],
+      "answer": 0,
+      "explanation": "Clean inputs make trustworthy outputs. Validate-then-compute is the dependable order.",
+      "id": "u90l08e10"
+    }
+  ]
+}

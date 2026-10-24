@@ -1,0 +1,130 @@
+{
+  "unitId": "u63",
+  "lessonId": "u63l03",
+  "title": "Filtering with different tests",
+  "idea": "TOOL: the same filter shape works with any true/false test — even, below a limit, equal to a value. Swap only the condition.",
+  "exercises": [
+    {
+      "id": "u63l03e01",
+      "type": "multipleChoice",
+      "prompt": "What will this show?\n\nnums = [2, 5, 8, 11, 14]\nevens = []\nfor n in nums:\n    if n % 2 == 0:\n        evens.append(n)\nprint(evens)",
+      "options": [
+        "[2, 8, 14]",
+        "[5, 11]",
+        "[2, 5, 8, 11, 14]",
+        "[]"
+      ],
+      "answer": 0,
+      "explanation": "n % 2 == 0 is true for even numbers. 2, 8 and 14 pass, so evens is [2, 8, 14]. Only the test changed — the shape is the same."
+    },
+    {
+      "id": "u63l03e02",
+      "type": "trueFalse",
+      "prompt": "To filter for something different, you usually change only the if condition — the empty list, loop, and append stay the same.",
+      "answer": true,
+      "explanation": "The filter shape is reusable. The test is the one part that decides what gets kept, so that is what you swap."
+    },
+    {
+      "id": "u63l03e03",
+      "type": "multipleChoice",
+      "prompt": "Which test keeps only the ODD numbers?",
+      "options": [
+        "if n % 2 == 1",
+        "if n % 2 == 0",
+        "if n > 0",
+        "if n == 2"
+      ],
+      "answer": 0,
+      "explanation": "An odd number leaves remainder 1 when divided by 2, so n % 2 == 1 is the odd test. (n % 2 == 0 would be even.)"
+    },
+    {
+      "id": "u63l03e04",
+      "type": "multipleChoice",
+      "prompt": "What will this show?\n\ntemps = [30, 18, 25, 12, 28]\nhot = []\nfor t in temps:\n    if t >= 25:\n        hot.append(t)\nprint(hot)",
+      "options": [
+        "[30, 25, 28]",
+        "[18, 12]",
+        "[30, 18, 25, 12, 28]",
+        "[25]"
+      ],
+      "answer": 0,
+      "explanation": "t >= 25 keeps 30, 25 and 28. They are appended in the order they appear in the list."
+    },
+    {
+      "id": "u63l03e05",
+      "type": "fillBlank",
+      "prompt": "Complete the test so this keeps only numbers equal to 7.\n\nsevens = []\nfor n in nums:\n    if n ____ 7:\n        sevens.append(n)",
+      "answer": "==",
+      "acceptable": [
+        "=="
+      ],
+      "explanation": "'Equal to' is the == comparison (two equals signs). A single = would try to assign, which is a common mix-up."
+    },
+    {
+      "id": "u63l03e06",
+      "type": "multipleChoice",
+      "prompt": "What will this show?\n\nnums = [4, 7, 4, 9, 4]\nfours = []\nfor n in nums:\n    if n == 4:\n        fours.append(n)\nprint(fours)",
+      "options": [
+        "[4, 4, 4]",
+        "[4]",
+        "[7, 9]",
+        "[4, 7, 4, 9, 4]"
+      ],
+      "answer": 0,
+      "explanation": "Every item equal to 4 is kept — duplicates included. There are three 4s, so fours is [4, 4, 4]."
+    },
+    {
+      "id": "u63l03e07",
+      "type": "multipleChoice",
+      "prompt": "You want to keep scores between 5 and 10 inclusive. Which test does that?",
+      "options": [
+        "if score >= 5 and score <= 10",
+        "if score >= 5 or score <= 10",
+        "if score >= 5",
+        "if score <= 10"
+      ],
+      "answer": 0,
+      "explanation": "'Between 5 and 10' needs BOTH conditions true, so you join them with and. Using or would let almost everything through."
+    },
+    {
+      "id": "u63l03e08",
+      "type": "multipleChoice",
+      "prompt": "What will this show?\n\nnums = [3, 6, 9, 12, 15]\nkept = []\nfor n in nums:\n    if n % 3 == 0 and n > 5:\n        kept.append(n)\nprint(kept)",
+      "options": [
+        "[6, 9, 12, 15]",
+        "[3, 6, 9, 12, 15]",
+        "[3]",
+        "[]"
+      ],
+      "answer": 0,
+      "explanation": "All of these divide by 3, but the extra test n > 5 drops the 3. The rest pass both tests, so kept is [6, 9, 12, 15]."
+    },
+    {
+      "id": "u63l03e09",
+      "type": "trueFalse",
+      "prompt": "A filter test can combine conditions with and / or, just like any other if.",
+      "answer": true,
+      "explanation": "The if inside a filter is an ordinary if. You can combine conditions with and / or to make the test as precise as you need."
+    },
+    {
+      "id": "u63l03e10",
+      "type": "orderBlocks",
+      "prompt": "Arrange a filter that keeps only the even numbers from nums.",
+      "blocks": [
+        "evens = []",
+        "for n in nums:",
+        "    if n % 2 == 0:",
+        "        evens.append(n)",
+        "print(evens)"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "explanation": "Empty list, loop, the even test with %, append the passers, then print. Same shape as every filter — only the test is special."
+    }
+  ]
+}

@@ -1,0 +1,134 @@
+{
+  "unitId": "u73",
+  "lessonId": "u73l10",
+  "title": "Pulling return together",
+  "idea": "TOOL review: consolidate return — hand back a value, the call becomes the value, return ends the sub-plan, and the main plan uses the answer. Review-heavy.",
+  "exercises": [
+    {
+      "id": "u73l10e01",
+      "type": "multipleChoice",
+      "prompt": "In one sentence, what does 'return' do?",
+      "options": [
+        "Hands a value back to the caller and ends the sub-plan",
+        "Prints a value on the screen",
+        "Asks the user for input",
+        "Starts a loop"
+      ],
+      "answer": 0,
+      "explanation": "return hands back a value AND stops the sub-plan. That's the whole tool of this unit."
+    },
+    {
+      "id": "u73l10e02",
+      "type": "multipleChoice",
+      "prompt": "Predict:\n\ndef add(a, b):\n    return a + b\n\nprint(add(3, 4) + add(1, 2))",
+      "options": [
+        "10",
+        "7",
+        "3",
+        "None"
+      ],
+      "answer": 0,
+      "explanation": "add(3, 4) is 7, add(1, 2) is 3, so 7 + 3 = 10. Each call becomes its value, then the + runs."
+    },
+    {
+      "id": "u73l10e03",
+      "type": "trueFalse",
+      "prompt": "A sub-plan with no return hands back None.",
+      "answer": true,
+      "explanation": "Yes — no return (or a bare return) means the call is None, which is 'no real value'."
+    },
+    {
+      "id": "u73l10e04",
+      "type": "multipleChoice",
+      "prompt": "REVIEW (parameters): in 'def add(a, b):', a and b are...",
+      "options": [
+        "parameters — the inputs the sub-plan receives",
+        "the returned value",
+        "a loop variable",
+        "a list"
+      ],
+      "answer": 0,
+      "explanation": "a and b are parameters. return then hands back the value computed from them."
+    },
+    {
+      "id": "u73l10e05",
+      "type": "multipleChoice",
+      "prompt": "Spot the bug:\n\ndef double(n):\n    print(n * 2)\n\nx = double(5)\n\nWhat is x?",
+      "options": [
+        "None — double prints but doesn't return",
+        "10",
+        "5",
+        "double"
+      ],
+      "answer": 0,
+      "explanation": "double prints 10 but returns nothing, so x is None. To make x = 10, use 'return n * 2'."
+    },
+    {
+      "id": "u73l10e06",
+      "type": "orderBlocks",
+      "prompt": "REVIEW: arrange a sub-plan that loops to total a list, then returns the total.",
+      "blocks": [
+        "def total(nums):",
+        "    running = 0",
+        "    for x in nums:",
+        "        running = running + x",
+        "    return running"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "explanation": "Start at 0, add each item, then return AFTER the loop. (We total it ourselves — no shortcuts.)"
+    },
+    {
+      "id": "u73l10e07",
+      "type": "fillBlank",
+      "prompt": "Complete so the sub-plan hands back whether age is at least 18:\n\ndef is_adult(age):\n    return age ____ 18",
+      "answer": ">=",
+      "acceptable": [">="],
+      "explanation": "age >= 18 is True for 18 and up. Returning a comparison hands back a yes/no answer."
+    },
+    {
+      "id": "u73l10e08",
+      "type": "multipleChoice",
+      "prompt": "Predict:\n\ndef sign(n):\n    if n > 0:\n        return 1\n    return 0\n\nprint(sign(-5))",
+      "options": [
+        "0",
+        "1",
+        "-5",
+        "None"
+      ],
+      "answer": 0,
+      "explanation": "-5 > 0 is False, so the if's return is skipped and the sub-plan reaches 'return 0'."
+    },
+    {
+      "id": "u73l10e09",
+      "type": "multipleChoice",
+      "prompt": "Why is returning more flexible than printing inside the sub-plan?",
+      "options": [
+        "The caller can store, print, or combine a returned value in later steps",
+        "returning is faster to type",
+        "printing is not allowed",
+        "there is no difference"
+      ],
+      "answer": 0,
+      "explanation": "A returned value is reusable; a printed value is just shown and gone. Return keeps the answer in play."
+    },
+    {
+      "id": "u73l10e10",
+      "type": "multipleChoice",
+      "prompt": "You've learned return! What comes next (hint for the next unit)?",
+      "options": [
+        "Choosing clearly between return and print, case by case",
+        "deleting all your sub-plans",
+        "never using parameters again",
+        "returning is the last tool ever"
+      ],
+      "answer": 0,
+      "explanation": "Next you'll look hard at WHEN to return a value versus WHEN to print — two jobs that are easy to mix up."
+    }
+  ]
+}

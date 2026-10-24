@@ -1,0 +1,124 @@
+{
+  "unitId": "u05",
+  "lessonId": "u05l07",
+  "title": "A missing or extra line",
+  "idea": "Sometimes the count is wrong: a line is missing, or there's one too many. That fails the Check too.",
+  "exercises": [
+    {
+      "id": "u05l07e01",
+      "type": "multipleChoice",
+      "prompt": "Expected:\nOne\nTwo\nThree\n\nReal output:\nOne\nTwo\n\nWhat went wrong?",
+      "options": [
+        "A line is missing — 'Three' never printed",
+        "An extra line appeared",
+        "Nothing, it passes",
+        "The order is wrong"
+      ],
+      "answer": 0,
+      "explanation": "Expected three lines, got two. 'Three' is missing. Too few lines is a fail."
+    },
+    {
+      "id": "u05l07e02",
+      "type": "multipleChoice",
+      "prompt": "Expected:\nOne\nTwo\n\nReal output:\nOne\nTwo\nThree\n\nWhat went wrong?",
+      "options": [
+        "An extra line appeared — 'Three' wasn't expected",
+        "A line is missing",
+        "Nothing, it passes",
+        "The order is wrong"
+      ],
+      "answer": 0,
+      "explanation": "Expected two lines, got three. The extra 'Three' means too many lines. Fail."
+    },
+    {
+      "id": "u05l07e03",
+      "type": "trueFalse",
+      "prompt": "The number of lines should match between expected and real output.",
+      "answer": true,
+      "explanation": "A match needs the same lines in the same order — which means the same count. A missing or extra line fails."
+    },
+    {
+      "id": "u05l07e04",
+      "type": "multipleChoice",
+      "prompt": "Expected 3 lines. The real output has 3 lines and they all match. Verdict?",
+      "options": [
+        "Pass",
+        "Fail — too few",
+        "Fail — too many",
+        "Error"
+      ],
+      "answer": 0,
+      "explanation": "Same count, all matching. Pass."
+    },
+    {
+      "id": "u05l07e05",
+      "type": "multipleChoice",
+      "prompt": "A program should print 2 lines but prints 2 lines plus a blank line at the end. Does it pass?",
+      "options": [
+        "No — the extra blank line is one line too many",
+        "Yes, blank lines don't count",
+        "Error",
+        "Only if the words match"
+      ],
+      "answer": 0,
+      "explanation": "A blank line is still a line. An unexpected one makes the output longer than expected — fail."
+    },
+    {
+      "id": "u05l07e06",
+      "type": "multipleChoice",
+      "prompt": "Expected:\nStart\nMiddle\nEnd\n\nReal output:\nStart\nEnd\n\nWhich line is missing?",
+      "options": [
+        "'Middle'",
+        "'Start'",
+        "'End'",
+        "None"
+      ],
+      "answer": 0,
+      "explanation": "'Start' and 'End' are there, but 'Middle' is gone. The missing middle line fails the Check."
+    },
+    {
+      "id": "u05l07e07",
+      "type": "matchPairs",
+      "prompt": "Match each problem to its name.",
+      "pairs": [
+        { "left": "Expected 3 lines, got 2", "right": "Missing line" },
+        { "left": "Expected 2 lines, got 3", "right": "Extra line" },
+        { "left": "Expected 3 lines, got 3, all match", "right": "Pass" }
+      ],
+      "explanation": "Too few = missing line. Too many = extra line. Right count and content = pass."
+    },
+    {
+      "id": "u05l07e08",
+      "type": "trueFalse",
+      "prompt": "To fix a missing line, you usually add a print; to fix an extra line, you usually remove one.",
+      "answer": true,
+      "explanation": "Missing line? Add the print that makes it. Extra line? Delete the print that shouldn't be there."
+    },
+    {
+      "id": "u05l07e09",
+      "type": "multipleChoice",
+      "prompt": "Expected output has 4 lines. Real output has 4 lines but line 3 is different. Is this a missing/extra line problem?",
+      "options": [
+        "No — the count is right; it's a wrong-line mismatch instead",
+        "Yes, a line is missing",
+        "Yes, there's an extra line",
+        "It passes"
+      ],
+      "answer": 0,
+      "explanation": "Same count, so nothing is missing or extra. The problem is a wrong line (line 3). Still a fail, just a different kind."
+    },
+    {
+      "id": "u05l07e10",
+      "type": "multipleChoice",
+      "prompt": "Why check the line count first?",
+      "options": [
+        "A wrong count is a quick clue that a line is missing or extra",
+        "Count never matters",
+        "To make the Check slower",
+        "Because print requires it"
+      ],
+      "answer": 0,
+      "explanation": "Counting lines is a fast first check. If the counts differ, you already know something is missing or extra."
+    }
+  ]
+}

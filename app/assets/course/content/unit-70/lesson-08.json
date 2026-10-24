@@ -1,0 +1,140 @@
+{
+  "unitId": "u70",
+  "lessonId": "u70l08",
+  "title": "The main plan calls the helpers",
+  "idea": "MEET: a main plan stays short by naming its jobs and referring to them. No code.",
+  "exercises": [
+    {
+      "id": "u70l08e01",
+      "type": "multipleChoice",
+      "prompt": "A main plan says: use greet, use show_menu, use farewell. What is the main plan mostly made of?",
+      "options": [
+        "names of jobs it refers to",
+        "long lists of raw steps",
+        "only numbers",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "The main plan just refers to named jobs. The steps live inside each named job, keeping the main plan short."
+    },
+    {
+      "id": "u70l08e02",
+      "type": "trueFalse",
+      "prompt": "Referring to named jobs keeps the main plan short and readable.",
+      "answer": true,
+      "explanation": "Yes. The main plan reads like a summary: greet, show menu, farewell - the details hide inside each job."
+    },
+    {
+      "id": "u70l08e03",
+      "type": "orderBlocks",
+      "prompt": "Order a short main plan for a scoreboard: greet, show the score, say goodbye.",
+      "blocks": [
+        "use farewell",
+        "use greet",
+        "use show_score"
+      ],
+      "answer": [
+        1,
+        2,
+        0
+      ],
+      "explanation": "greet, show_score, farewell - the main plan is just the named jobs in order."
+    },
+    {
+      "id": "u70l08e04",
+      "type": "multipleChoice",
+      "prompt": "Named jobs the main plan refers to are often called...",
+      "options": [
+        "helpers",
+        "errors",
+        "numbers",
+        "quotes"
+      ],
+      "answer": 0,
+      "explanation": "A named sub-plan that the main plan uses is often called a helper - it helps do part of the big job."
+    },
+    {
+      "id": "u70l08e05",
+      "type": "multiSelect",
+      "prompt": "Why is a main plan of named helpers nice to read? (Pick all.)",
+      "options": [
+        "It summarises the whole task",
+        "You can see the big steps at a glance",
+        "Details hide inside each helper",
+        "It must repeat every step"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "A helper-based main plan reads like a summary, with details tucked away. It does NOT repeat every step."
+    },
+    {
+      "id": "u70l08e06",
+      "type": "matchPairs",
+      "prompt": "Match each helper name to its job in a shop checkout.",
+      "pairs": [
+        {
+          "left": "greet_customer",
+          "right": "say hello"
+        },
+        {
+          "left": "total_basket",
+          "right": "add up the prices"
+        },
+        {
+          "left": "print_receipt",
+          "right": "show the receipt"
+        }
+      ],
+      "explanation": "Each helper does one job. The main plan lines them up: greet, total, print. Clear and short."
+    },
+    {
+      "id": "u70l08e07",
+      "type": "multipleChoice",
+      "prompt": "If a helper's job needs fixing, where do you change it?",
+      "options": [
+        "Inside that one helper - every use gets the fix",
+        "In every place it's used",
+        "Nowhere",
+        "In a different helper"
+      ],
+      "answer": 0,
+      "explanation": "Fix the helper once; all its uses benefit. One definition, one place to fix - a big advantage of naming jobs."
+    },
+    {
+      "id": "u70l08e08",
+      "type": "trueFalse",
+      "prompt": "A main plan built from helpers reads a bit like the plain-English plan you wrote before coding.",
+      "answer": true,
+      "explanation": "Yes. That's the goal: the main plan reads like your plan - greet, total, print - with helpers doing details."
+    },
+    {
+      "id": "u70l08e09",
+      "type": "multipleChoice",
+      "prompt": "REVIEW: this 'summary on top, details below' idea connects to which earlier skill?",
+      "options": [
+        "drawing the plan as a tree (goal on top, sub-jobs under)",
+        "picking big numbers",
+        "avoiding loops",
+        "random guessing"
+      ],
+      "answer": 0,
+      "explanation": "It's the tree again: the main plan is the top goal; helpers are the sub-jobs beneath. Same shape, now in a program."
+    },
+    {
+      "id": "u70l08e10",
+      "type": "multipleChoice",
+      "prompt": "The idea:",
+      "options": [
+        "a short main plan refers to named helpers that hold the details",
+        "the main plan holds every raw step",
+        "helpers are useless",
+        "names make plans longer"
+      ],
+      "answer": 0,
+      "explanation": "Keep the main plan short by naming helpers. It reads like a summary; each helper holds its own steps."
+    }
+  ]
+}

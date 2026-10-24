@@ -1,0 +1,139 @@
+{
+  "unitId": "u35",
+  "lessonId": "u35l10",
+  "title": "Repetition: putting the reading skills together",
+  "idea": "Wrap-up of Unit 35: recognize repetition, name body and count, tell it apart from decisions, and connect back to earlier laps. Review-leaning.",
+  "exercises": [
+    {
+      "id": "u35l10e01",
+      "type": "multipleChoice",
+      "prompt": "Which problem is a repetition?",
+      "options": [
+        "Print a tick for each of 8 tasks",
+        "Print the larger of two numbers",
+        "Print Done once",
+        "If it is cold, print Jacket"
+      ],
+      "answer": 0,
+      "explanation": "'For each of 8 tasks' repeats a print. The others are a decision or a one-time step — a quick recap of lesson 5."
+    },
+    {
+      "id": "u35l10e02",
+      "type": "multipleChoice",
+      "prompt": "'Print Hi 4 times.' Body and count?",
+      "options": [
+        "Body: print Hi; Count: 4",
+        "Body: 4; Count: print Hi",
+        "Body: print 4 His; Count: 1",
+        "Body: nothing; Count: 4"
+      ],
+      "answer": 0,
+      "explanation": "Body is the single step, count is how many times — exactly as practiced."
+    },
+    {
+      "id": "u35l10e03",
+      "type": "multipleChoice",
+      "prompt": "Review from earlier laps: what does print(\"Hi\") show on the screen?",
+      "options": [
+        "Hi",
+        "\"Hi\"",
+        "print",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "print shows what's in the quotes, without the quotes: Hi. We'll repeat print statements with loops next."
+    },
+    {
+      "id": "u35l10e04",
+      "type": "trueFalse",
+      "prompt": "Review: an if statement is for making a yes/no decision, not for repeating.",
+      "answer": true,
+      "explanation": "if chooses whether a step runs; a loop repeats a step. Different tools for different problem shapes."
+    },
+    {
+      "id": "u35l10e05",
+      "type": "matchPairs",
+      "prompt": "Match each tool to the problem shape it fits.",
+      "pairs": [
+        {
+          "left": "A loop",
+          "right": "Repeat a step many times"
+        },
+        {
+          "left": "An if",
+          "right": "Do a step only sometimes"
+        },
+        {
+          "left": "A plain line",
+          "right": "Do a step once"
+        }
+      ],
+      "explanation": "Shape -> tool: repetition -> loop, decision -> if, one-shot -> plain line. The map you'll use all lap."
+    },
+    {
+      "id": "u35l10e06",
+      "type": "multipleChoice",
+      "prompt": "Trace 'print A 3 times'. How many lines of output?",
+      "options": [
+        "3",
+        "1",
+        "0",
+        "9"
+      ],
+      "answer": 0,
+      "explanation": "Three passes, three A lines. Tracing confirms output matches the count — the loop Check skill."
+    },
+    {
+      "id": "u35l10e07",
+      "type": "multipleChoice",
+      "prompt": "Why is copying print(\"Go\") fifty times a bad plan?",
+      "options": [
+        "Fifty copies are slow to write and easy to break",
+        "Go is the wrong word",
+        "Python caps output at ten lines",
+        "It is actually a great plan"
+      ],
+      "answer": 0,
+      "explanation": "Big counts make copy-paste painful and error-prone. A loop writes the body once — recap of lesson 4."
+    },
+    {
+      "id": "u35l10e08",
+      "type": "multipleChoice",
+      "prompt": "'Print 2, 4, 6, 8.' Does the printed value change each pass?",
+      "options": [
+        "Yes — it goes up by 2 each pass",
+        "No — it prints 2 every time",
+        "No — nothing prints",
+        "Yes — the word changes"
+      ],
+      "answer": 0,
+      "explanation": "2, 4, 6, 8 steps up by 2. A 'changing each pass' repetition — a taste of what range's step will do."
+    },
+    {
+      "id": "u35l10e09",
+      "type": "multipleChoice",
+      "prompt": "Review: a variable can remember a value for a later step. True of repetition too?",
+      "options": [
+        "Yes — a variable can hold a value used inside a repeated step",
+        "No — variables are banned in repetition",
+        "No — variables only hold words",
+        "Variables do not exist"
+      ],
+      "answer": 0,
+      "explanation": "Variables you learned earlier still work. Soon a special variable will hold the current pass count."
+    },
+    {
+      "id": "u35l10e10",
+      "type": "multipleChoice",
+      "prompt": "You've finished the 'recognize repetition' unit. What can you now do?",
+      "options": [
+        "Spot a repeat, name its body and count, and tell it from a decision",
+        "Write every possible loop already",
+        "Only solve decision problems",
+        "Nothing new"
+      ],
+      "answer": 0,
+      "explanation": "You can read repetition out of a problem and plan it in words. Next, the 'for each' idea turns that plan into code."
+    }
+  ]
+}

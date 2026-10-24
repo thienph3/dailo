@@ -1,0 +1,127 @@
+{
+  "unitId": "u02",
+  "lessonId": "u02l05",
+  "title": "The input and output of a print program",
+  "idea": "Connect input/output to code you know: for print(\"text\"), the text is the input and the screen showing it is the output.",
+  "exercises": [
+    {
+      "id": "u02l05e01",
+      "type": "multipleChoice",
+      "prompt": "For the program print(\"Hi\"), what is the OUTPUT?",
+      "options": [
+        "Hi shown on the screen",
+        "The word print",
+        "The brackets",
+        "Nothing happens"
+      ],
+      "answer": 0,
+      "explanation": "print shows what's inside the quotes. The output is Hi on the screen."
+    },
+    {
+      "id": "u02l05e02",
+      "type": "multipleChoice",
+      "prompt": "For the program print(\"Hi\"), what is the INPUT (what the task starts with)?",
+      "options": [
+        "The text Hi",
+        "The screen",
+        "A number",
+        "The keyboard"
+      ],
+      "answer": 0,
+      "explanation": "The text Hi is what goes in; the screen showing Hi is what comes out."
+    },
+    {
+      "id": "u02l05e03",
+      "type": "multipleChoice",
+      "prompt": "What does this program show?\n\nprint(\"Good job\")",
+      "options": [
+        "Good job",
+        "\"Good job\"",
+        "print",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "The text inside the quotes, shown exactly: Good job. The quotes themselves aren't shown."
+    },
+    {
+      "id": "u02l05e04",
+      "type": "trueFalse",
+      "prompt": "The output of a print program is whatever text you put inside the quotes.",
+      "answer": true,
+      "explanation": "Yes — print shows the text between the quotes on the screen. That shown text is the output."
+    },
+    {
+      "id": "u02l05e05",
+      "type": "matchPairs",
+      "prompt": "Match each print program to its OUTPUT.",
+      "pairs": [
+        { "left": "print(\"Cat\")", "right": "Cat" },
+        { "left": "print(\"42\")", "right": "42" },
+        { "left": "print(\"Yes\")", "right": "Yes" }
+      ],
+      "explanation": "The output is always the text inside the quotes, shown exactly."
+    },
+    {
+      "id": "u02l05e06",
+      "type": "tapTokens",
+      "prompt": "Build the program whose OUTPUT is: Hello",
+      "tokens": [
+        "print",
+        "(",
+        "\"Hello\"",
+        ")"
+      ],
+      "answer": [
+        "print",
+        "(",
+        "\"Hello\"",
+        ")"
+      ],
+      "explanation": "print, (, the text in quotes, ). Its output is Hello on the screen."
+    },
+    {
+      "id": "u02l05e07",
+      "type": "multipleChoice",
+      "prompt": "You want the output to be the word Done. What is the input you must put in the quotes?",
+      "options": [
+        "Done",
+        "print",
+        "A bracket",
+        "The screen"
+      ],
+      "answer": 0,
+      "explanation": "To get Done out, you put Done in — print(\"Done\")."
+    },
+    {
+      "id": "u02l05e08",
+      "type": "trueFalse",
+      "prompt": "print(\"7\") has the text 7 as its input and shows 7 as its output.",
+      "answer": true,
+      "explanation": "Anything inside the quotes is treated as text and shown exactly, even if it looks like a number."
+    },
+    {
+      "id": "u02l05e09",
+      "type": "fillBlank",
+      "prompt": "Finish the program so its OUTPUT is the word Win:\n\nprint(____)",
+      "answer": "\"Win\"",
+      "acceptable": [
+        "\"Win\"",
+        "'Win'"
+      ],
+      "explanation": "Put the text Win in quotes to make it the output. Single or double quotes both work."
+    },
+    {
+      "id": "u02l05e10",
+      "type": "multipleChoice",
+      "prompt": "In your own words, what is the job of a print program?",
+      "options": [
+        "Take text as input and show it on the screen as output",
+        "Do math on two numbers",
+        "Ask the user a question",
+        "Remember a value for later"
+      ],
+      "answer": 0,
+      "explanation": "print takes the text you give it and shows it. Input: the text. Output: the text on screen."
+    }
+  ]
+}

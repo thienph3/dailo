@@ -1,0 +1,136 @@
+{
+  "unitId": "u26",
+  "lessonId": "u26l07",
+  "title": "Solve it: a safe-temperature check",
+  "idea": "Use 'and' to require a value sits between two bounds. Classic 'both' problem solved with and.",
+  "exercises": [
+    {
+      "id": "u26l07e01",
+      "type": "multipleChoice",
+      "prompt": "PROBLEM: A room is comfortable when the temperature is at least 18 AND at most 24. What is the OUTPUT?",
+      "options": [
+        "'Comfortable' or 'Not comfortable'",
+        "The temperature",
+        "The number 18",
+        "A fee"
+      ],
+      "answer": 0,
+      "explanation": "A two-outcome decision that depends on TWO conditions both holding - a job for 'and'."
+    },
+    {
+      "id": "u26l07e02",
+      "type": "multipleChoice",
+      "prompt": "What is the INPUT?",
+      "options": [
+        "The temperature",
+        "The two bounds only",
+        "Nothing",
+        "The word 'room'"
+      ],
+      "answer": 0,
+      "explanation": "The temperature is the input; 18 and 24 are the bounds in the rule."
+    },
+    {
+      "id": "u26l07e03",
+      "type": "multipleChoice",
+      "prompt": "Example by hand: temperature 21. Is it at least 18 AND at most 24?",
+      "options": [
+        "Yes - both hold, so 'Comfortable'",
+        "No",
+        "Only the first holds",
+        "Cannot tell"
+      ],
+      "answer": 0,
+      "explanation": "21 >= 18 is True and 21 <= 24 is True, so both hold: 'Comfortable'."
+    },
+    {
+      "id": "u26l07e04",
+      "type": "multipleChoice",
+      "prompt": "Which condition means 'between 18 and 24, inclusive'?",
+      "options": [
+        "temperature >= 18 and temperature <= 24",
+        "temperature >= 18 or temperature <= 24",
+        "not temperature >= 18",
+        "temperature == 21"
+      ],
+      "answer": 0,
+      "explanation": "Both bounds must hold at once, so you join two comparisons with 'and'."
+    },
+    {
+      "id": "u26l07e05",
+      "type": "trueFalse",
+      "prompt": "Using 'or' here (>= 18 or <= 24) would wrongly accept almost every temperature.",
+      "answer": true,
+      "explanation": "Yes - with 'or', nearly any number passes one side, so it fails to pin the value between the bounds. 'and' is correct."
+    },
+    {
+      "id": "u26l07e06",
+      "type": "orderBlocks",
+      "prompt": "Code the between-bounds check.",
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "blocks": [
+        "temperature = 21",
+        "if temperature >= 18 and temperature <= 24:",
+        "    print(\"Comfortable\")",
+        "else:",
+        "    print(\"Not comfortable\")"
+      ],
+      "explanation": "Name the temperature, require both bounds with 'and', and print each outcome."
+    },
+    {
+      "id": "u26l07e07",
+      "type": "fillBlank",
+      "prompt": "Complete the 'both bounds' condition:\n\nif temperature >= 18 ____ temperature <= 24:\n    print(\"Comfortable\")\nelse:\n    print(\"Not comfortable\")",
+      "answer": "and",
+      "acceptable": [
+        "and"
+      ],
+      "explanation": "'and' makes both the lower and upper bound required - the value must sit inside the range."
+    },
+    {
+      "id": "u26l07e08",
+      "type": "multipleChoice",
+      "prompt": "Check. temperature = 21 prints 'Comfortable'. Hand answer: 'Comfortable'. Verdict?",
+      "options": [
+        "Pass - matches",
+        "Fail",
+        "Cannot tell",
+        "Change the example"
+      ],
+      "answer": 0,
+      "explanation": "Both conditions held, so 'Comfortable' prints as expected."
+    },
+    {
+      "id": "u26l07e09",
+      "type": "multipleChoice",
+      "prompt": "Re-check: temperature = 30. What prints?",
+      "options": [
+        "Not comfortable",
+        "Comfortable",
+        "30",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "30 <= 24 is False, so the 'and' is False and the else runs: 'Not comfortable'."
+    },
+    {
+      "id": "u26l07e10",
+      "type": "multipleChoice",
+      "prompt": "Re-check the lower boundary: temperature = 18. What prints?",
+      "options": [
+        "Comfortable",
+        "Not comfortable",
+        "18",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "18 >= 18 is True and 18 <= 24 is True, so both hold: 'Comfortable'. The inclusive bound works."
+    }
+  ]
+}

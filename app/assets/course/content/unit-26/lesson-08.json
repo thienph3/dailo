@@ -1,0 +1,138 @@
+{
+  "unitId": "u26",
+  "lessonId": "u26l08",
+  "title": "Solve it: a discount from two coupons",
+  "idea": "Use 'or' so either coupon qualifies for a discount. Classic 'either' problem solved with or, plus re-checking.",
+  "exercises": [
+    {
+      "id": "u26l08e01",
+      "type": "multipleChoice",
+      "prompt": "PROBLEM: A shopper gets a discount if they have the summer coupon OR the member coupon. What is the OUTPUT?",
+      "options": [
+        "'Discount' or 'Full price'",
+        "A coupon code",
+        "The total",
+        "A yes/no number"
+      ],
+      "answer": 0,
+      "explanation": "A two-outcome decision driven by 'either coupon' - a job for 'or'."
+    },
+    {
+      "id": "u26l08e02",
+      "type": "multipleChoice",
+      "prompt": "What are the INPUTS?",
+      "options": [
+        "Whether they have each coupon (two booleans)",
+        "Only the price",
+        "Only one coupon",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "Two yes/no facts: has_summer and has_member. Each is a boolean the 'or' combines."
+    },
+    {
+      "id": "u26l08e03",
+      "type": "multipleChoice",
+      "prompt": "Example by hand: has_summer = True, has_member = False. Discount?",
+      "options": [
+        "Yes - one coupon is enough with 'or'",
+        "No",
+        "Only with both",
+        "Cannot tell"
+      ],
+      "answer": 0,
+      "explanation": "'or' needs just one True. Having the summer coupon alone earns the discount."
+    },
+    {
+      "id": "u26l08e04",
+      "type": "multipleChoice",
+      "prompt": "Which condition matches 'either coupon qualifies'?",
+      "options": [
+        "has_summer or has_member",
+        "has_summer and has_member",
+        "not has_summer",
+        "has_summer == has_member"
+      ],
+      "answer": 0,
+      "explanation": "'or' grants the discount if either coupon is present."
+    },
+    {
+      "id": "u26l08e05",
+      "type": "trueFalse",
+      "prompt": "If the rule required BOTH coupons, you would use 'and' instead.",
+      "answer": true,
+      "explanation": "Yes - 'both' means 'and'. Here the rule is 'either', so 'or' is correct."
+    },
+    {
+      "id": "u26l08e06",
+      "type": "orderBlocks",
+      "prompt": "Code the 'either coupon' rule.",
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "blocks": [
+        "has_summer = True",
+        "has_member = False",
+        "if has_summer or has_member:",
+        "    print(\"Discount\")",
+        "else:",
+        "    print(\"Full price\")"
+      ],
+      "explanation": "Name both booleans, join with 'or', and print the result on each path."
+    },
+    {
+      "id": "u26l08e07",
+      "type": "fillBlank",
+      "prompt": "Complete the 'either' condition:\n\nif has_summer ____ has_member:\n    print(\"Discount\")\nelse:\n    print(\"Full price\")",
+      "answer": "or",
+      "acceptable": [
+        "or"
+      ],
+      "explanation": "'or' makes either coupon enough to earn the discount."
+    },
+    {
+      "id": "u26l08e08",
+      "type": "multipleChoice",
+      "prompt": "Check. has_summer = True, has_member = False prints 'Discount'. Hand answer: 'Discount'. Verdict?",
+      "options": [
+        "Pass - matches",
+        "Fail",
+        "Cannot tell",
+        "Change the example"
+      ],
+      "answer": 0,
+      "explanation": "One coupon was present, so 'or' is True and 'Discount' prints."
+    },
+    {
+      "id": "u26l08e09",
+      "type": "multipleChoice",
+      "prompt": "Re-check: has_summer = False, has_member = False. What prints?",
+      "options": [
+        "Full price",
+        "Discount",
+        "False",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "No coupon at all - both False, so 'or' is False and the else runs: 'Full price'."
+    },
+    {
+      "id": "u26l08e10",
+      "type": "multipleChoice",
+      "prompt": "Re-check: has_summer = True, has_member = True. What prints?",
+      "options": [
+        "Discount",
+        "Full price",
+        "two discounts",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "'or' is True when either or BOTH are True, so 'Discount' prints. (It is one discount, not two.)"
+    }
+  ]
+}

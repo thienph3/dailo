@@ -1,0 +1,134 @@
+{
+  "unitId": "u36",
+  "lessonId": "u36l02",
+  "title": "The body is indented",
+  "idea": "The repeated step (the body) sits indented under the 'for each' line, just like the body of an if. Indentation shows what repeats.",
+  "exercises": [
+    {
+      "id": "u36l02e01",
+      "type": "multipleChoice",
+      "prompt": "In a loop, how do you show which step repeats?",
+      "options": [
+        "Indent it under the 'for each' line",
+        "Make it uppercase",
+        "Put it in quotes",
+        "Write it twice"
+      ],
+      "answer": 0,
+      "explanation": "Indentation marks the body — the indented step is the one that repeats. You saw the same idea with if."
+    },
+    {
+      "id": "u36l02e02",
+      "type": "trueFalse",
+      "prompt": "Indentation telling the computer 'this belongs inside' is the same idea you met with if.",
+      "answer": true,
+      "explanation": "Yes — indentation groups a block. Under an if it's 'do this when true'; under a loop it's 'repeat this'."
+    },
+    {
+      "id": "u36l02e03",
+      "type": "multipleChoice",
+      "prompt": "Which line is the BODY here?\n\nfor each guest:\n    print(\"Welcome\")",
+      "options": [
+        "print(\"Welcome\") — it is indented",
+        "for each guest:",
+        "Both lines",
+        "Neither line"
+      ],
+      "answer": 0,
+      "explanation": "The indented print(\"Welcome\") is the body. The 'for each' line sets up the repeat; the indented line is what repeats."
+    },
+    {
+      "id": "u36l02e04",
+      "type": "multipleChoice",
+      "prompt": "What shows for 3 guests?\n\nfor each guest:\n    print(\"Welcome\")",
+      "options": [
+        "Welcome\nWelcome\nWelcome",
+        "Welcome",
+        "guest\nguest\nguest",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "The indented body runs once per guest — three Welcome lines for three guests."
+    },
+    {
+      "id": "u36l02e05",
+      "type": "multipleChoice",
+      "prompt": "A line that is NOT indented under the loop...",
+      "options": [
+        "Is not part of the repeat — it runs once, after the loop",
+        "Repeats too",
+        "Causes an error always",
+        "Is ignored forever"
+      ],
+      "answer": 0,
+      "explanation": "Only indented lines repeat. An un-indented line after the loop runs once, when the loop is done."
+    },
+    {
+      "id": "u36l02e06",
+      "type": "orderBlocks",
+      "prompt": "Arrange these to make a loop that greets each guest.",
+      "blocks": [
+        "for each guest:",
+        "    print(\"Welcome\")"
+      ],
+      "answer": [
+        0,
+        1
+      ],
+      "explanation": "The 'for each' header comes first, then the indented body beneath it. Header on top, body indented below."
+    },
+    {
+      "id": "u36l02e07",
+      "type": "trueFalse",
+      "prompt": "Forgetting to indent the body would change which lines repeat.",
+      "answer": true,
+      "explanation": "Indentation IS the signal. No indent, no 'inside the loop' — just like with if. Spacing matters in Python."
+    },
+    {
+      "id": "u36l02e08",
+      "type": "multipleChoice",
+      "prompt": "Trace: for 2 guests, with body 'print(\"Hi\")'. How many Hi lines?",
+      "options": [
+        "2",
+        "1",
+        "0",
+        "4"
+      ],
+      "answer": 0,
+      "explanation": "Two guests, one Hi each — two lines. Count the things, count the body runs."
+    },
+    {
+      "id": "u36l02e09",
+      "type": "matchPairs",
+      "prompt": "Match each part to its role.",
+      "pairs": [
+        {
+          "left": "for each guest:",
+          "right": "Header — controls the repeat"
+        },
+        {
+          "left": "    print(\"Welcome\")",
+          "right": "Body — the repeated step (indented)"
+        },
+        {
+          "left": "print(\"Done\")",
+          "right": "After the loop — runs once"
+        }
+      ],
+      "explanation": "Header sets up the repeat, the indented body repeats, and an un-indented line after runs once at the end."
+    },
+    {
+      "id": "u36l02e10",
+      "type": "multipleChoice",
+      "prompt": "Why does the loop body need to be indented?",
+      "options": [
+        "So the computer knows exactly which step to repeat",
+        "To make it look pretty only",
+        "Because print requires it",
+        "It does not need to be"
+      ],
+      "answer": 0,
+      "explanation": "Indentation tells the computer the boundary of the repeated block. Clear indentation = clear loop."
+    }
+  ]
+}

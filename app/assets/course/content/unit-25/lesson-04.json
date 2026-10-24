@@ -1,0 +1,130 @@
+{
+  "unitId": "u25",
+  "lessonId": "u25l04",
+  "title": "The else is the leftover bucket",
+  "idea": "else at the end of a chain catches every case no branch above matched. Decide what belongs in that catch-all. Thinking.",
+  "exercises": [
+    {
+      "id": "u25l04e01",
+      "type": "multipleChoice",
+      "prompt": "In if / elif / else, the final else runs when...",
+      "options": [
+        "none of the earlier tests were True",
+        "the first test was True",
+        "every test was True",
+        "always, no matter what"
+      ],
+      "answer": 0,
+      "explanation": "else is the leftover bucket: it only runs if all the branches above it were False."
+    },
+    {
+      "id": "u25l04e02",
+      "type": "multipleChoice",
+      "prompt": "What does this print?\n\nn = 0\nif n > 0:\n    print(\"Positive\")\nelif n < 0:\n    print(\"Negative\")\nelse:\n    print(\"Zero\")",
+      "options": [
+        "Zero",
+        "Positive",
+        "Negative",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "0 is not > 0 and not < 0, so the else catches it: 'Zero'. The leftover bucket handles the exact-zero case."
+    },
+    {
+      "id": "u25l04e03",
+      "type": "multipleChoice",
+      "prompt": "Same chain, n = 7. What prints?",
+      "options": [
+        "Positive",
+        "Negative",
+        "Zero",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "7 > 0 is True, so 'Positive' prints first and the rest is skipped."
+    },
+    {
+      "id": "u25l04e04",
+      "type": "trueFalse",
+      "prompt": "Leaving off the else is allowed, but then nothing runs when no branch matches.",
+      "answer": true,
+      "explanation": "Right - without else, an unmatched value simply produces no output. Add else when you want a guaranteed result."
+    },
+    {
+      "id": "u25l04e05",
+      "type": "multipleChoice",
+      "prompt": "Why is it risky to forget the else in a classifier?",
+      "options": [
+        "Some inputs may silently produce no result",
+        "else makes the code faster",
+        "the if will error",
+        "elif stops working"
+      ],
+      "answer": 0,
+      "explanation": "Without a catch-all, surprising inputs fall through with no message - a quiet bug that is easy to miss."
+    },
+    {
+      "id": "u25l04e06",
+      "type": "matchPairs",
+      "prompt": "Match each positive/negative/zero chain outcome to its input.",
+      "pairs": [
+        {
+          "left": "n = 4",
+          "right": "Positive"
+        },
+        {
+          "left": "n = -2",
+          "right": "Negative"
+        },
+        {
+          "left": "n = 0",
+          "right": "Zero"
+        }
+      ],
+      "explanation": "Positive and Negative are caught by the if and elif; zero falls through to the else bucket."
+    },
+    {
+      "id": "u25l04e07",
+      "type": "fillBlank",
+      "prompt": "Complete the catch-all keyword:\n\nif n > 0:\n    print(\"Positive\")\nelif n < 0:\n    print(\"Negative\")\n____:\n    print(\"Zero\")",
+      "answer": "else",
+      "acceptable": [
+        "else"
+      ],
+      "explanation": "else is the leftover bucket. Here it catches the only remaining case: exactly zero."
+    },
+    {
+      "id": "u25l04e08",
+      "type": "multipleChoice",
+      "prompt": "A chain sorts a weekday number into Mon/Tue/Wed... with no else. For an unexpected 9, what happens?",
+      "options": [
+        "Nothing prints - 9 matched no branch",
+        "It prints Monday",
+        "It errors loudly",
+        "It prints every day"
+      ],
+      "answer": 0,
+      "explanation": "9 matches no branch and there is no else, so nothing prints. An else saying 'Not a weekday' would be safer."
+    },
+    {
+      "id": "u25l04e09",
+      "type": "trueFalse",
+      "prompt": "Adding an else like 'Unknown' can turn a silent miss into a helpful message.",
+      "answer": true,
+      "explanation": "Yes - a catch-all else gives surprising inputs a clear response instead of silence."
+    },
+    {
+      "id": "u25l04e10",
+      "type": "multipleChoice",
+      "prompt": "The takeaway about else is...",
+      "options": [
+        "it is the catch-all for everything the branches above missed",
+        "it runs first",
+        "it needs its own condition",
+        "it must be removed"
+      ],
+      "answer": 0,
+      "explanation": "else sweeps up every leftover case. Decide on purpose what that bucket should say."
+    }
+  ]
+}

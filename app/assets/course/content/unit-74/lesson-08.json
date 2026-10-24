@@ -1,0 +1,139 @@
+{
+  "unitId": "u74",
+  "lessonId": "u74l08",
+  "title": "Trace it: what shows, what comes back",
+  "idea": "return vs print: for each snippet, say what APPEARS on screen and what the call HANDS BACK. Two separate questions.",
+  "exercises": [
+    {
+      "id": "u74l08e01",
+      "type": "multipleChoice",
+      "prompt": "For this call, what APPEARS on screen?\n\ndef f(n):\n    return n + 1\n\nf(5)",
+      "options": [
+        "Nothing",
+        "6",
+        "5",
+        "None"
+      ],
+      "answer": 0,
+      "explanation": "return is silent and nothing prints the result, so the screen is blank. (It DID hand back 6 — but that's a separate question.)"
+    },
+    {
+      "id": "u74l08e02",
+      "type": "multipleChoice",
+      "prompt": "Same call — what does f(5) HAND BACK?\n\ndef f(n):\n    return n + 1\n\nf(5)",
+      "options": [
+        "6",
+        "Nothing",
+        "None",
+        "5"
+      ],
+      "answer": 0,
+      "explanation": "f(5) hands back 6. 'What appears' and 'what comes back' are two different questions — here: nothing shown, 6 returned."
+    },
+    {
+      "id": "u74l08e03",
+      "type": "multipleChoice",
+      "prompt": "What APPEARS on screen?\n\ndef g(n):\n    print(n + 1)\n\ng(5)",
+      "options": [
+        "6",
+        "Nothing",
+        "5",
+        "None"
+      ],
+      "answer": 0,
+      "explanation": "print shows n + 1 = 6, so 6 appears. (But g hands back None — the other question.)"
+    },
+    {
+      "id": "u74l08e04",
+      "type": "multipleChoice",
+      "prompt": "Same call — what does g(5) HAND BACK?\n\ndef g(n):\n    print(n + 1)\n\ng(5)",
+      "options": [
+        "None",
+        "6",
+        "5",
+        "Nothing shown means 0"
+      ],
+      "answer": 0,
+      "explanation": "g prints but has no return, so it hands back None. Shown: 6. Returned: None."
+    },
+    {
+      "id": "u74l08e05",
+      "type": "matchPairs",
+      "prompt": "Match each sub-plan to what its call HANDS BACK.",
+      "pairs": [
+        {
+          "left": "def a(n):\n    return n",
+          "right": "the value of n"
+        },
+        {
+          "left": "def b(n):\n    print(n)",
+          "right": "None"
+        },
+        {
+          "left": "def c(n):\n    n + 1",
+          "right": "None"
+        }
+      ],
+      "explanation": "Only a() returns a value. b() prints and returns None. c() computes but discards it, also None."
+    },
+    {
+      "id": "u74l08e06",
+      "type": "multipleChoice",
+      "prompt": "What APPEARS (two lines)?\n\ndef h(n):\n    print(n)\n    return n * 10\n\nprint(h(3))",
+      "options": [
+        "3\n30",
+        "30\n3",
+        "3\n3",
+        "30\n30"
+      ],
+      "answer": 0,
+      "explanation": "Inside h, print(n) shows 3 (first line). h returns 30; the outer print shows 30 (second line)."
+    },
+    {
+      "id": "u74l08e07",
+      "type": "trueFalse",
+      "prompt": "'What appears on screen' and 'what the call hands back' are two separate questions you should answer one at a time.",
+      "answer": true,
+      "explanation": "Yes. A sub-plan can print one thing and return another. Tracing each separately avoids confusion."
+    },
+    {
+      "id": "u74l08e08",
+      "type": "multipleChoice",
+      "prompt": "What does x hold?\n\ndef h(n):\n    print(n)\n    return n * 10\n\nx = h(3)",
+      "options": [
+        "30",
+        "3",
+        "None",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "h returns n * 10 = 30, so x is 30. (It also printed 3 on the way, but that doesn't affect x.)"
+    },
+    {
+      "id": "u74l08e09",
+      "type": "multipleChoice",
+      "prompt": "REVIEW: which action is silent (shows nothing by itself)?",
+      "options": [
+        "return",
+        "print",
+        "both show text",
+        "neither runs"
+      ],
+      "answer": 0,
+      "explanation": "return is silent — it hands a value back without displaying it. print is the one that shows text."
+    },
+    {
+      "id": "u74l08e10",
+      "type": "multipleChoice",
+      "prompt": "The idea of this lesson:",
+      "options": [
+        "Trace 'what shows' and 'what comes back' separately — they can differ",
+        "they are always the same",
+        "return shows text",
+        "print hands back the value"
+      ],
+      "answer": 0,
+      "explanation": "Keep the two questions apart. A sub-plan may show one value and return another — or show nothing while returning a lot."
+    }
+  ]
+}

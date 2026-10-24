@@ -1,0 +1,148 @@
+{
+  "unitId": "u80",
+  "lessonId": "u80l08",
+  "title": "List the tricky cases before you code",
+  "idea": "MEET (thinking). Make it a habit: given a problem, enumerate the edge cases FIRST, as part of planning.",
+  "exercises": [
+    {
+      "id": "u80l08e01",
+      "type": "multipleChoice",
+      "prompt": "WHEN is the best time to list a problem's edge cases?",
+      "options": [
+        "During planning, before writing code",
+        "After the program ships",
+        "Only when it crashes",
+        "Never — code handles them automatically"
+      ],
+      "answer": 0,
+      "explanation": "Enumerate edge cases while planning. It's far cheaper to plan for the empty and zero cases than to debug a crash later."
+    },
+    {
+      "id": "u80l08e02",
+      "type": "multipleChoice",
+      "prompt": "PROBLEM: 'average the scores in a list.' Which edge cases should you list?",
+      "options": [
+        "Empty list (divide by 0) and maybe a single score",
+        "Only lists of exactly 5 scores",
+        "Only sorted lists",
+        "None — averaging is always safe"
+      ],
+      "answer": 0,
+      "explanation": "The empty list is the big one (zero divisor). A single score is worth a thought too. List them before coding."
+    },
+    {
+      "id": "u80l08e03",
+      "type": "multipleChoice",
+      "prompt": "PROBLEM: 'count scores that are 50 or more.' Which edge cases matter most?",
+      "options": [
+        "A score exactly 50 (boundary) and an empty list (count stays 0)",
+        "Only scores above 90",
+        "Only even scores",
+        "None"
+      ],
+      "answer": 0,
+      "explanation": "The boundary value 50 and the empty input are the cases to check. Listing them shapes your comparison and confirms count 0 is fine."
+    },
+    {
+      "id": "u80l08e04",
+      "type": "multiSelect",
+      "prompt": "PROBLEM: 'find the highest price in a list.' Which edge cases belong on your list? (Select all.)",
+      "options": [
+        "An empty list (no first item)",
+        "A list with one price",
+        "A list where the max repeats (tie)",
+        "A normal list of several different prices"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Empty, single-item, and tie are the edge cases. The normal several-value list is the ordinary case, not an edge case."
+    },
+    {
+      "id": "u80l08e05",
+      "type": "orderBlocks",
+      "prompt": "Put a good planning routine in order.",
+      "blocks": [
+        "Understand the normal case and its answer",
+        "List the tricky inputs (empty, zero, one, boundary, ties)",
+        "Decide what each tricky input should do",
+        "Then write code that handles all of them"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "Understand normal, enumerate edge cases, decide each one's behavior, THEN code. Edge-case thinking sits inside planning."
+    },
+    {
+      "id": "u80l08e06",
+      "type": "trueFalse",
+      "prompt": "Listing edge cases is part of PLANNING, not something you bolt on after the code works.",
+      "answer": true,
+      "explanation": "Yes. The habit is to enumerate tricky inputs up front, so your plan is built to handle them from the start."
+    },
+    {
+      "id": "u80l08e07",
+      "type": "multipleChoice",
+      "prompt": "PROBLEM: 'split a bill among N people.' The edge case that MUST be handled is...",
+      "options": [
+        "N is 0 — dividing by 0 crashes",
+        "N is 2",
+        "the bill is 100",
+        "there are no edge cases"
+      ],
+      "answer": 0,
+      "explanation": "Zero people is the dangerous divisor. Listing it during planning reminds you to guard before dividing."
+    },
+    {
+      "id": "u80l08e08",
+      "type": "matchPairs",
+      "prompt": "Match each problem to its most important edge case.",
+      "pairs": [
+        {
+          "left": "Average a list",
+          "right": "Empty list"
+        },
+        {
+          "left": "Count over a cutoff",
+          "right": "A value exactly on the cutoff"
+        },
+        {
+          "left": "Find the highest",
+          "right": "Empty list / a tie"
+        }
+      ],
+      "explanation": "Each problem has a signature edge case. Recognizing the pattern lets you list them quickly during planning."
+    },
+    {
+      "id": "u80l08e09",
+      "type": "multipleChoice",
+      "prompt": "What is the PAYOFF of enumerating edge cases first?",
+      "options": [
+        "Your solution handles unusual inputs from the start, with fewer surprises",
+        "The code runs faster",
+        "You write less code overall",
+        "You never have to test"
+      ],
+      "answer": 0,
+      "explanation": "Planning for edge cases means fewer crashes and surprises. It doesn't replace testing — it makes your plan sturdier."
+    },
+    {
+      "id": "u80l08e10",
+      "type": "multipleChoice",
+      "prompt": "The lesson in one line:",
+      "options": [
+        "Make a habit of listing tricky inputs during planning, then handle each",
+        "Edge cases are a waste of time",
+        "Only handle edge cases after a crash",
+        "Normal inputs are all that matter"
+      ],
+      "answer": 0,
+      "explanation": "The edge-case habit: before coding, name the empty, zero, one-item, boundary, and tie cases, and decide what each should do."
+    }
+  ]
+}

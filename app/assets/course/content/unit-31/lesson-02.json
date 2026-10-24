@@ -1,0 +1,153 @@
+{
+  "unitId": "u31",
+  "lessonId": "u31l02",
+  "title": "Solve it: is the typed number even or odd?",
+  "idea": "GUIDED. UEPCC on reading a number with int(input()) and branching with %.",
+  "problem": "Ask the user for a whole number, then print 'Even' or 'Odd'.",
+  "exercises": [
+    {
+      "id": "u31l02e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: Ask for a whole number, print 'Even' or 'Odd'.\n\nWhat is the OUTPUT?",
+      "options": [
+        "One label: 'Even' or 'Odd'",
+        "The number doubled",
+        "The number itself",
+        "A greeting"
+      ],
+      "answer": 0,
+      "explanation": "The output is one of two labels. Knowing it is a choice between two words shapes the plan."
+    },
+    {
+      "id": "u31l02e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "input() always hands back text. To do math on it, what must you do first?",
+      "options": [
+        "Convert it to a number with int()",
+        "Add quotes around it",
+        "Print it twice",
+        "Nothing — text does math fine"
+      ],
+      "answer": 0,
+      "explanation": "input() returns a string. int() converts that text into a number you can test with %."
+    },
+    {
+      "id": "u31l02e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Work it by hand: the user types 4. Even or odd?",
+      "options": [
+        "Even",
+        "Odd",
+        "4",
+        "Neither"
+      ],
+      "answer": 0,
+      "explanation": "4 divided by 2 leaves no remainder, so it is Even. This is your check value."
+    },
+    {
+      "id": "u31l02e04",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Another by hand: the user types 7. Even or odd?",
+      "options": [
+        "Odd",
+        "Even",
+        "7",
+        "Neither"
+      ],
+      "answer": 0,
+      "explanation": "7 leaves a remainder of 1 when divided by 2, so it is Odd. Testing both sides matters."
+    },
+    {
+      "id": "u31l02e05",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Plan: which operator tells you the remainder after dividing by 2?",
+      "options": [
+        "%",
+        "//",
+        "*",
+        "+"
+      ],
+      "answer": 0,
+      "explanation": "% gives the remainder. number % 2 is 0 for even numbers and 1 for odd ones."
+    },
+    {
+      "id": "u31l02e06",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Which test means 'this number is even'?",
+      "options": [
+        "number % 2 == 0",
+        "number % 2 = 0",
+        "number / 2 == 0",
+        "number % 2 == 1"
+      ],
+      "answer": 0,
+      "explanation": "Even means no remainder, so number % 2 == 0. Use == to compare, not = which assigns."
+    },
+    {
+      "id": "u31l02e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Arrange the code to match the plan.",
+      "blocks": [
+        "number = int(input(\"A whole number: \"))",
+        "if number % 2 == 0:",
+        "    print(\"Even\")",
+        "else:",
+        "    print(\"Odd\")"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "explanation": "Read and convert the number, test the remainder, print the matching label."
+    },
+    {
+      "id": "u31l02e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Complete the even test:\n\nnumber = int(input(\"A whole number: \"))\nif number % 2 ____ 0:\n    print(\"Even\")\nelse:\n    print(\"Odd\")",
+      "answer": "==",
+      "acceptable": [
+        "=="
+      ],
+      "explanation": "You are comparing the remainder to 0, so use ==. A single = would try to assign and error."
+    },
+    {
+      "id": "u31l02e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check with the first example: the user types 4. What prints?",
+      "options": [
+        "Even",
+        "Odd",
+        "0",
+        "4"
+      ],
+      "answer": 0,
+      "explanation": "4 % 2 is 0, which equals 0, so 'Even' prints — matching your hand answer."
+    },
+    {
+      "id": "u31l02e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Re-check with a fresh input: the user types 7. What prints?",
+      "options": [
+        "Odd",
+        "Even",
+        "1",
+        "7"
+      ],
+      "answer": 0,
+      "explanation": "7 % 2 is 1, not 0, so the else runs and 'Odd' prints. It generalizes."
+    }
+  ]
+}

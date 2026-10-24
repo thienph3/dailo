@@ -1,0 +1,125 @@
+{
+  "unitId": "u21",
+  "lessonId": "u21l08",
+  "title": "Common if mistakes to avoid",
+  "idea": "Spot the four classic if slips: missing colon, missing indent, using = instead of ==, and wrong capitals in True/False.",
+  "exercises": [
+    {
+      "id": "u21l08e01",
+      "type": "multipleChoice",
+      "prompt": "What is missing here?\n\nif score > 100\n    print(\"Trophy\")",
+      "options": [
+        "The colon at the end of the if line",
+        "The word print",
+        "Quotes around score",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "An if line must end with a colon: if score > 100: . Forgetting the colon is the most common if error."
+    },
+    {
+      "id": "u21l08e02",
+      "type": "multipleChoice",
+      "prompt": "What is wrong here?\n\nif score > 100:\nprint(\"Trophy\")",
+      "options": [
+        "The print must be indented under the if",
+        "The if needs a comma",
+        "score should be in quotes",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "After the colon, the step must be indented. An un-indented line is not part of the if and causes an error here."
+    },
+    {
+      "id": "u21l08e03",
+      "type": "multipleChoice",
+      "prompt": "What is wrong here?\n\nif level = 5:\n    print(\"Max\")",
+      "options": [
+        "It uses = (store) but a condition needs == (compare)",
+        "It needs more spaces",
+        "Max should be a number",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "An if condition checks, so it needs ==. A single = means store, which is not a valid condition."
+    },
+    {
+      "id": "u21l08e04",
+      "type": "multipleChoice",
+      "prompt": "What is wrong here?\n\nis_ready = true\nif is_ready:\n    print(\"Go\")",
+      "options": [
+        "true should be True with a capital T",
+        "The if needs a comparison",
+        "print should be indented more",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "Python's boolean is True with a capital T. Lowercase true is not recognized. (A review of Unit 19.)"
+    },
+    {
+      "id": "u21l08e05",
+      "type": "multiSelect",
+      "prompt": "Select EVERY line that is a correct, complete if header.",
+      "options": [
+        "if total >= 50:",
+        "if total >= 50",
+        "if total = 50:",
+        "if count == 0:"
+      ],
+      "answer": [0, 3],
+      "explanation": "The first and last are correct: comparison plus colon. The second misses the colon; the third uses = instead of ==."
+    },
+    {
+      "id": "u21l08e06",
+      "type": "fillBlank",
+      "prompt": "Fix the missing piece so this is a valid if header:\n\nif temp > 30____\n    print(\"Hot\")",
+      "answer": ":",
+      "acceptable": [":"],
+      "explanation": "Add the colon at the end of the if line. Then the indented step belongs to it."
+    },
+    {
+      "id": "u21l08e07",
+      "type": "multipleChoice",
+      "prompt": "Which version correctly checks whether code is 1234?",
+      "options": [
+        "if code == 1234:",
+        "if code = 1234:",
+        "if code == 1234",
+        "if code 1234:"
+      ],
+      "answer": 0,
+      "explanation": "== for the check, and a colon to end the line. The others drop the colon or use the wrong symbol."
+    },
+    {
+      "id": "u21l08e08",
+      "type": "trueFalse",
+      "prompt": "A missing colon and a missing indent are both common if mistakes.",
+      "answer": true,
+      "explanation": "Yes — the colon ends the header, and the indent marks the step. Forgetting either breaks the if."
+    },
+    {
+      "id": "u21l08e09",
+      "type": "orderBlocks",
+      "prompt": "Arrange these into a fully correct if for 'if age is at least 18, print Adult'.",
+      "blocks": [
+        "    print(\"Adult\")",
+        "if age >= 18:"
+      ],
+      "answer": [1, 0],
+      "explanation": "Header with >= and a colon, then the indented print. Correct comparison, colon, and indent all present."
+    },
+    {
+      "id": "u21l08e10",
+      "type": "multipleChoice",
+      "prompt": "What is the checklist for a correct if?",
+      "options": [
+        "Use == to check, end the header with a colon, indent the step, spell True/False with capitals",
+        "Use = to check and skip the colon",
+        "Never indent anything",
+        "Put the whole if on one line with a comma"
+      ],
+      "answer": 0,
+      "explanation": "Compare with ==, colon at the end, indent the step, capital True/False. Run through this checklist and the classic slips disappear."
+    }
+  ]
+}

@@ -1,0 +1,130 @@
+{
+  "unitId": "u25",
+  "lessonId": "u25l09",
+  "title": "How many branches do you need?",
+  "idea": "Decide how many elif branches a problem needs by counting its distinct outcomes. Design choice. Thinking.",
+  "exercises": [
+    {
+      "id": "u25l09e01",
+      "type": "multipleChoice",
+      "prompt": "A problem has exactly three possible labels. How many branches does the chain need?",
+      "options": [
+        "if + one elif + else (three paths)",
+        "just one if",
+        "ten elifs",
+        "no branches"
+      ],
+      "answer": 0,
+      "explanation": "Three outcomes map to three paths: an if, one elif, and an else. Count the outcomes to count the branches."
+    },
+    {
+      "id": "u25l09e02",
+      "type": "multipleChoice",
+      "prompt": "Five grade labels (A, B, C, D, F). How many total paths?",
+      "options": [
+        "Five: if + three elifs + else",
+        "Two",
+        "One",
+        "Ten"
+      ],
+      "answer": 0,
+      "explanation": "Five buckets need five paths: the if, three elifs, and the else. One path per outcome."
+    },
+    {
+      "id": "u25l09e03",
+      "type": "trueFalse",
+      "prompt": "A two-outcome problem does not need elif at all - if/else is enough.",
+      "answer": true,
+      "explanation": "Right - only reach for elif when there are three or more outcomes. Two outcomes are just if/else."
+    },
+    {
+      "id": "u25l09e04",
+      "type": "multipleChoice",
+      "prompt": "You wrote four elif branches but the problem only has three outcomes. What is likely wrong?",
+      "options": [
+        "You have an extra, unreachable or redundant branch",
+        "elif is broken",
+        "the computer is slow",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "More branches than outcomes usually means a redundant or dead branch. Match the count to the outcomes."
+    },
+    {
+      "id": "u25l09e05",
+      "type": "matchPairs",
+      "prompt": "Match each problem to how many outcomes it has.",
+      "pairs": [
+        {
+          "left": "Pass or Fail",
+          "right": "2"
+        },
+        {
+          "left": "Hot, Mild, Cold",
+          "right": "3"
+        },
+        {
+          "left": "A, B, C, D, F",
+          "right": "5"
+        }
+      ],
+      "explanation": "Counting distinct outcomes tells you how many branches (paths) the decision needs."
+    },
+    {
+      "id": "u25l09e06",
+      "type": "multipleChoice",
+      "prompt": "For 'positive, negative, or zero', the cleanest structure is...",
+      "options": [
+        "if (> 0) / elif (< 0) / else (zero)",
+        "one if only",
+        "four elifs",
+        "no else"
+      ],
+      "answer": 0,
+      "explanation": "Three outcomes, three paths. The else neatly captures the only leftover case, zero."
+    },
+    {
+      "id": "u25l09e07",
+      "type": "trueFalse",
+      "prompt": "Using else for the last outcome often saves writing one more explicit test.",
+      "answer": true,
+      "explanation": "Yes - the final else catches 'everything else', so you do not need to spell out the last band's condition."
+    },
+    {
+      "id": "u25l09e08",
+      "type": "multipleChoice",
+      "prompt": "A sign-up offers Child / Teen / Adult / Senior by age. How many paths?",
+      "options": [
+        "Four",
+        "Two",
+        "One",
+        "Six"
+      ],
+      "answer": 0,
+      "explanation": "Four age groups need four paths: if + two elifs + else. Count the groups."
+    },
+    {
+      "id": "u25l09e09",
+      "type": "fillBlank",
+      "prompt": "For a 4-outcome age chain, fill in the keyword for the SECOND group's branch:\n\nif age >= 65:\n    print(\"Senior\")\n____ age >= 18:\n    print(\"Adult\")\nelif age >= 13:\n    print(\"Teen\")\nelse:\n    print(\"Child\")",
+      "answer": "elif",
+      "acceptable": [
+        "elif"
+      ],
+      "explanation": "Each middle group is an elif. Four outcomes give one if, two elifs, and an else."
+    },
+    {
+      "id": "u25l09e10",
+      "type": "multipleChoice",
+      "prompt": "The design rule is...",
+      "options": [
+        "count the distinct outcomes, then use that many paths (else covers the last)",
+        "always use three branches",
+        "never use else",
+        "branches are random"
+      ],
+      "answer": 0,
+      "explanation": "Outcomes drive the shape: one path per outcome, with else often handling the final leftover group."
+    }
+  ]
+}

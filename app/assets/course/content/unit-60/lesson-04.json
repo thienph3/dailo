@@ -1,0 +1,129 @@
+{
+  "unitId": "u60",
+  "lessonId": "u60l04",
+  "title": "Spot the broken min",
+  "idea": "TOOL: recognise min mistakes — wrong comparison (forgot to flip), wrong start, backwards assignment.",
+  "exercises": [
+    {
+      "id": "u60l04e01",
+      "type": "multipleChoice",
+      "prompt": "This was meant to find the SMALLEST, but someone copied the max loop and forgot one change:\n\nbest = nums[0]\nfor n in nums:\n    if n > best:\n        best = n\n\nWhat went wrong?",
+      "options": [
+        "They forgot to flip > to < — this still finds the biggest",
+        "best should start at 0",
+        "The loop variable is wrong",
+        "Nothing is wrong"
+      ],
+      "answer": 0,
+      "explanation": "The one change that makes min out of max is flipping > to <. Leaving > means it still finds the maximum."
+    },
+    {
+      "id": "u60l04e02",
+      "type": "multipleChoice",
+      "prompt": "What is the one-character fix for the code above?",
+      "options": [
+        "Change > to <",
+        "Change nums[0] to 0",
+        "Add a second loop",
+        "Change print to input"
+      ],
+      "answer": 0,
+      "explanation": "Flip the sign: 'if n < best'. That single change turns the max loop into a min loop."
+    },
+    {
+      "id": "u60l04e03",
+      "type": "multipleChoice",
+      "prompt": "A learner starts the smallest at a big number: best = 9999. Why can that be risky?",
+      "options": [
+        "If a value is bigger than 9999, or you guess wrong, best may never match a real value — start at nums[0] to be safe",
+        "9999 is not a number",
+        "It always finds the biggest",
+        "Big numbers are not allowed"
+      ],
+      "answer": 0,
+      "explanation": "Guessing a 'big enough' start is fragile. Starting at the first real value always works and mirrors the max start."
+    },
+    {
+      "id": "u60l04e04",
+      "type": "multipleChoice",
+      "prompt": "Spot the bug:\n\nbest = nums[0]\nfor n in nums:\n    if n < best:\n        n = best\n\nMeant to find the smallest.",
+      "options": [
+        "The assignment is backwards — it should be best = n",
+        "It should use >",
+        "best should start at 0",
+        "Nothing is wrong"
+      ],
+      "answer": 0,
+      "explanation": "'n = best' loses the smaller value. Save the winner INTO best. This is the exact same bug you watched for in max."
+    },
+    {
+      "id": "u60l04e05",
+      "type": "trueFalse",
+      "prompt": "Leaving 'best = n' un-indented (outside the if) would make best end up as the LAST value, not the smallest.",
+      "answer": true,
+      "explanation": "Without the if guard it runs every pass, overwriting best each time. Same indentation trap as the max loop."
+    },
+    {
+      "id": "u60l04e06",
+      "type": "multipleChoice",
+      "prompt": "Someone claims 'min needs a totally different loop from max.' Are they right?",
+      "options": [
+        "No — it is the same loop with > flipped to <",
+        "Yes — min is unrelated",
+        "Yes — min needs two loops",
+        "No — min needs no loop at all"
+      ],
+      "answer": 0,
+      "explanation": "That is the core message: min and max share one pattern. Only the comparison differs."
+    },
+    {
+      "id": "u60l04e07",
+      "type": "multipleChoice",
+      "prompt": "You run a 'smallest' loop on [-3, -1, -7] and it returns 0. What is the likely bug?",
+      "options": [
+        "best was started at 0 instead of nums[0]",
+        "the list is empty",
+        "the loop variable is wrong",
+        "there is no bug — 0 is correct"
+      ],
+      "answer": 0,
+      "explanation": "0 is not even in the list. Starting best at 0 (and perhaps a leftover > ) breaks it. Start at nums[0] and use <."
+    },
+    {
+      "id": "u60l04e08",
+      "type": "multiSelect",
+      "prompt": "Which of these correctly find the SMALLEST? (pick all)",
+      "options": [
+        "start best at nums[0], replace when n < best",
+        "start best at nums[0], replace when n <= best",
+        "start best at nums[0], replace when n > best",
+        "start best at 0, replace when n < best"
+      ],
+      "answer": [
+        0,
+        1
+      ],
+      "explanation": "First two use the flipped comparison and a safe start (< and <= land on the same min). The third finds the biggest; the fourth breaks on negatives."
+    },
+    {
+      "id": "u60l04e09",
+      "type": "multipleChoice",
+      "prompt": "You test your min on [1, 2, 3] (already rising) and it returns 1. Why is that a weak test?",
+      "options": [
+        "The smallest is conveniently first; test lists where it sits in the middle or is negative",
+        "Rising lists are not allowed",
+        "It is a perfect test",
+        "You should never test min"
+      ],
+      "answer": 0,
+      "explanation": "A rising list puts the min first, hiding bugs. Put the smallest in the middle, and try negatives, to really check."
+    },
+    {
+      "id": "u60l04e10",
+      "type": "trueFalse",
+      "prompt": "A quick way to tell a min loop from a max loop at a glance is to look at the comparison sign.",
+      "answer": true,
+      "explanation": "< means smallest, > means biggest. Reading the sign tells you which the loop finds."
+    }
+  ]
+}

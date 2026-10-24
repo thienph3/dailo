@@ -1,0 +1,139 @@
+{
+  "unitId": "u47",
+  "lessonId": "u47l05",
+  "title": "Reading how many times from range",
+  "idea": "MEET. For count-controlled problems, read the repeat count straight from range(n) / range(start,stop) / range(start,stop,step). Thinking, no writing.",
+  "exercises": [
+    {
+      "id": "u47l05e01",
+      "type": "multipleChoice",
+      "prompt": "range(4) produces which values?",
+      "options": [
+        "0, 1, 2, 3",
+        "1, 2, 3, 4",
+        "0, 1, 2, 3, 4",
+        "4"
+      ],
+      "answer": 0,
+      "explanation": "range(4) starts at 0 and stops BEFORE 4: 0,1,2,3 — four values, so the loop runs 4 times."
+    },
+    {
+      "id": "u47l05e02",
+      "type": "multipleChoice",
+      "prompt": "How many times does a for loop over range(4) run its body?",
+      "options": [
+        "4 times",
+        "3 times",
+        "5 times",
+        "0 times"
+      ],
+      "answer": 0,
+      "explanation": "Four values (0,1,2,3) means four repeats. range(n) always runs n times."
+    },
+    {
+      "id": "u47l05e03",
+      "type": "multipleChoice",
+      "prompt": "range(2, 6) produces which values?",
+      "options": [
+        "2, 3, 4, 5",
+        "2, 3, 4, 5, 6",
+        "2, 6",
+        "0, 1, 2, 3, 4, 5"
+      ],
+      "answer": 0,
+      "explanation": "range(start, stop) begins at 2 and stops before 6: 2,3,4,5 — four values."
+    },
+    {
+      "id": "u47l05e04",
+      "type": "multipleChoice",
+      "prompt": "How many repeats is range(2, 6)?",
+      "options": [
+        "4",
+        "5",
+        "6",
+        "2"
+      ],
+      "answer": 0,
+      "explanation": "From 2 up to but not including 6 is 2,3,4,5 — four values, so four repeats. (stop minus start.)"
+    },
+    {
+      "id": "u47l05e05",
+      "type": "multipleChoice",
+      "prompt": "range(1, 10, 2) produces which values?",
+      "options": [
+        "1, 3, 5, 7, 9",
+        "1, 2, 3, ..., 10",
+        "2, 4, 6, 8",
+        "1, 10"
+      ],
+      "answer": 0,
+      "explanation": "Start at 1, step by 2, stop before 10: 1,3,5,7,9 — five values."
+    },
+    {
+      "id": "u47l05e06",
+      "type": "trueFalse",
+      "prompt": "range(0) runs its loop body zero times.",
+      "answer": true,
+      "explanation": "True. range(0) is empty — no values — so the body never runs. A good edge case to remember."
+    },
+    {
+      "id": "u47l05e07",
+      "type": "multipleChoice",
+      "prompt": "You need a loop that runs exactly 7 times. Which range?",
+      "options": [
+        "range(7)",
+        "range(1, 7)",
+        "range(7, 0)",
+        "range(0, 7, 2)"
+      ],
+      "answer": 0,
+      "explanation": "range(7) gives 0..6, seven values — exactly 7 repeats. range(1,7) is only 6."
+    },
+    {
+      "id": "u47l05e08",
+      "type": "matchPairs",
+      "prompt": "Match each range to how many times it repeats.",
+      "pairs": [
+        {
+          "left": "range(3)",
+          "right": "3 times"
+        },
+        {
+          "left": "range(5, 8)",
+          "right": "3 times"
+        },
+        {
+          "left": "range(0, 10, 2)",
+          "right": "5 times"
+        }
+      ],
+      "explanation": "range(3): 0,1,2. range(5,8): 5,6,7. range(0,10,2): 0,2,4,6,8. Count the values to get the repeats."
+    },
+    {
+      "id": "u47l05e09",
+      "type": "multipleChoice",
+      "prompt": "Which runs the body 10 times?",
+      "options": [
+        "range(10)",
+        "range(1, 10)",
+        "range(10, 20, 2)",
+        "range(0, 5)"
+      ],
+      "answer": 0,
+      "explanation": "range(10) is 0..9, ten values. range(1,10) is only 9; range(10,20,2) is 5; range(0,5) is 5."
+    },
+    {
+      "id": "u47l05e10",
+      "type": "multipleChoice",
+      "prompt": "Why read the range carefully before trusting a count?",
+      "options": [
+        "range stops BEFORE the stop value, so it is easy to be off by one",
+        "range is random",
+        "range always runs once",
+        "range needs a while loop"
+      ],
+      "answer": 0,
+      "explanation": "range never includes the stop value, so 'off by one' mistakes are common. Count the values to be sure."
+    }
+  ]
+}

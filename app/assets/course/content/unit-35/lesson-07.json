@@ -1,0 +1,133 @@
+{
+  "unitId": "u35",
+  "lessonId": "u35l07",
+  "title": "Spotting repetition in real problems",
+  "idea": "Real-world problems hide repetition in everyday words. Practice pulling out the repeated action and its count from a sentence.",
+  "exercises": [
+    {
+      "id": "u35l07e01",
+      "type": "multipleChoice",
+      "prompt": "'A teacher stamps each of 25 homework sheets.' What repeats?",
+      "options": [
+        "Stamping one sheet",
+        "Counting to 25",
+        "Grading",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "The repeated action is stamping one sheet; it happens 25 times — once per sheet."
+    },
+    {
+      "id": "u35l07e02",
+      "type": "multipleChoice",
+      "prompt": "'Play the alarm sound 3 times to wake someone.' What is the count?",
+      "options": [
+        "3",
+        "1",
+        "0",
+        "Unknown"
+      ],
+      "answer": 0,
+      "explanation": "The sound plays 3 times, clearly stated. The action 'play the alarm sound' is the body."
+    },
+    {
+      "id": "u35l07e03",
+      "type": "trueFalse",
+      "prompt": "'Hand a flyer to each person walking by' is a repetition, even though the count is not a fixed number.",
+      "answer": true,
+      "explanation": "It repeats the 'hand a flyer' action for each person. The count depends on how many walk by — repetition can have an open count."
+    },
+    {
+      "id": "u35l07e04",
+      "type": "multipleChoice",
+      "prompt": "'Charge the phone once overnight.' Is this a repetition?",
+      "options": [
+        "No — it happens one time",
+        "Yes — it repeats nightly forever",
+        "Yes — 8 times",
+        "It is a decision"
+      ],
+      "answer": 0,
+      "explanation": "'Once' means a single step, not a repetition. Reading carefully keeps you from forcing a loop where none belongs."
+    },
+    {
+      "id": "u35l07e05",
+      "type": "matchPairs",
+      "prompt": "Match each sentence to its repeated action.",
+      "pairs": [
+        {
+          "left": "Water each of 9 plants",
+          "right": "Water one plant"
+        },
+        {
+          "left": "Flip each of 4 pancakes",
+          "right": "Flip one pancake"
+        },
+        {
+          "left": "Scan each of 30 items at checkout",
+          "right": "Scan one item"
+        }
+      ],
+      "explanation": "'Each of N' always gives you the body (do it for one) and the count (N)."
+    },
+    {
+      "id": "u35l07e06",
+      "type": "multipleChoice",
+      "prompt": "'Send a thank-you message to all 15 donors.' Body and count?",
+      "options": [
+        "Body: send one message; Count: 15",
+        "Body: count donors; Count: 1",
+        "Body: send 15 messages at once; Count: 1",
+        "Body: thank; Count: unknown"
+      ],
+      "answer": 0,
+      "explanation": "One message per donor, fifteen donors — body is 'send one message', count is 15."
+    },
+    {
+      "id": "u35l07e07",
+      "type": "multipleChoice",
+      "prompt": "Which sentence has NO repetition?",
+      "options": [
+        "Lock the front door before leaving",
+        "Knock on each of 5 doors",
+        "Ring the bell twice",
+        "Greet each customer"
+      ],
+      "answer": 0,
+      "explanation": "Locking the door once is a single step. The others repeat an action across items or a count."
+    },
+    {
+      "id": "u35l07e08",
+      "type": "trueFalse",
+      "prompt": "The phrase 'for every' usually signals a repetition.",
+      "answer": true,
+      "explanation": "'For every X' means do something once per X — a repetition. Watch for 'each', 'every', 'per', and 'N times'."
+    },
+    {
+      "id": "u35l07e09",
+      "type": "multipleChoice",
+      "prompt": "'Print a receipt line for each of the 3 items bought.' How many receipt lines?",
+      "options": [
+        "3",
+        "1",
+        "6",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "One line per item, three items — 3 lines. 'For each of 3' is a repetition with count 3."
+    },
+    {
+      "id": "u35l07e10",
+      "type": "multipleChoice",
+      "prompt": "A shop owner says 'I write the same restock note for all 8 shelves.' What is the smarter plan?",
+      "options": [
+        "Write one note step and repeat it for each shelf",
+        "Write 8 totally different programs",
+        "Write nothing",
+        "Only write it for one shelf"
+      ],
+      "answer": 0,
+      "explanation": "Same note for each shelf is a repetition: one body, repeated 8 times. You're reading repetition out of plain language."
+    }
+  ]
+}

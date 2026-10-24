@@ -1,0 +1,134 @@
+{
+  "unitId": "u12",
+  "lessonId": "u12l01",
+  "title": "Sharing into whole groups with //",
+  "idea": "// divides and keeps only the whole part — how many full groups you can make.",
+  "exercises": [
+    {
+      "id": "u12l01e01",
+      "type": "multipleChoice",
+      "prompt": "You have 7 cookies to share into groups of 3. How many FULL groups of 3 can you make?",
+      "options": [
+        "2 full groups",
+        "3 full groups",
+        "7 full groups",
+        "1 full group"
+      ],
+      "answer": 0,
+      "explanation": "3 + 3 = 6 cookies make 2 full groups. The 7th cookie can't make another group of 3. So 2 full groups."
+    },
+    {
+      "id": "u12l01e02",
+      "type": "multipleChoice",
+      "prompt": "The // sign means 'divide and keep only the whole part'. What will this show?\n\nprint(7 // 3)",
+      "options": [
+        "2",
+        "2.33",
+        "3",
+        "1"
+      ],
+      "answer": 0,
+      "explanation": "7 // 3 asks how many whole 3s fit in 7. Two 3s fit (that's 6). So it shows 2. The leftover is ignored by //."
+    },
+    {
+      "id": "u12l01e03",
+      "type": "trueFalse",
+      "prompt": "// always gives a whole number, never something like 2.5",
+      "answer": true,
+      "explanation": "That's the whole point of //. It keeps only the whole part of the division, so the result is always a whole number."
+    },
+    {
+      "id": "u12l01e04",
+      "type": "multipleChoice",
+      "prompt": "What will this show?\n\nprint(10 // 2)",
+      "options": [
+        "5",
+        "4",
+        "20",
+        "2"
+      ],
+      "answer": 0,
+      "explanation": "Two fits into 10 exactly five times. 10 // 2 is 5. When it divides evenly, // gives the same answer as regular division."
+    },
+    {
+      "id": "u12l01e05",
+      "type": "multipleChoice",
+      "prompt": "What will this show?\n\nprint(9 // 4)",
+      "options": [
+        "2",
+        "2.25",
+        "3",
+        "1"
+      ],
+      "answer": 0,
+      "explanation": "How many whole 4s fit in 9? Two (that's 8), and 1 is left over. // keeps only the whole part: 2."
+    },
+    {
+      "id": "u12l01e06",
+      "type": "multipleChoice",
+      "prompt": "Which is the 'whole groups' sign?",
+      "options": [
+        "//",
+        "/",
+        "*",
+        "+"
+      ],
+      "answer": 0,
+      "explanation": "// keeps only the whole part — the number of full groups. A single / keeps the fraction too."
+    },
+    {
+      "id": "u12l01e07",
+      "type": "fillBlank",
+      "prompt": "Fill the blank so this shows how many whole 5s fit in 17.\n\nprint(17 __ 5)",
+      "answer": "//",
+      "acceptable": [
+        "//"
+      ],
+      "explanation": "17 // 5 is 3, because three 5s make 15 and fit inside 17. // gives the whole count."
+    },
+    {
+      "id": "u12l01e08",
+      "type": "trueFalse",
+      "prompt": "8 // 2 and 8 / 2 both give 4 here, because 8 shares evenly into 2s.",
+      "answer": true,
+      "explanation": "When the division is exact, // and / land on the same number. The difference shows up only when there's a leftover."
+    },
+    {
+      "id": "u12l01e09",
+      "type": "matchPairs",
+      "prompt": "Match each // expression to what it shows.",
+      "pairs": [
+        {
+          "left": "6 // 2",
+          "right": "3"
+        },
+        {
+          "left": "6 // 4",
+          "right": "1"
+        },
+        {
+          "left": "6 // 5",
+          "right": "1"
+        },
+        {
+          "left": "6 // 6",
+          "right": "1"
+        }
+      ],
+      "explanation": "Each asks 'how many whole copies fit?' Two fits 3 times in 6; four, five, and six each fit just once."
+    },
+    {
+      "id": "u12l01e10",
+      "type": "multipleChoice",
+      "prompt": "A pizza has 12 slices. Four friends share it into equal whole slices each. Which line finds slices per friend?",
+      "options": [
+        "print(12 // 4)",
+        "print(12 + 4)",
+        "print(12 * 4)",
+        "print(4 // 12)"
+      ],
+      "answer": 0,
+      "explanation": "12 // 4 is 3 — each friend gets 3 whole slices. You just used // to share into whole groups!"
+    }
+  ]
+}

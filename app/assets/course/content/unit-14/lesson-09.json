@@ -1,0 +1,129 @@
+{
+  "unitId": "u14",
+  "lessonId": "u14l09",
+  "title": "Solve it: average price of a mixed basket",
+  "idea": "GUIDED PROBLEM. Combine a two-item total (review of Unit 11) with an average using parentheses and division. Reviews * and + heavily; new skill is grouping the whole total before dividing. Every value named.",
+  "problem": "You buy 2 books at 15 each and 3 pens at 4 each. Show the average price per item across all 5 items.",
+  "exercises": [
+    {
+      "id": "u14l09e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: 2 books at 15, 3 pens at 4. Show the AVERAGE price per item across all 5 items.\n\nUnderstand — what is the OUTPUT?",
+      "options": [
+        "The average price per item",
+        "The total cost only",
+        "The number of items",
+        "The cheaper item"
+      ],
+      "answer": 0,
+      "explanation": "Output = average per item. Average means total cost shared over the number of items."
+    },
+    {
+      "id": "u14l09e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "What are the INPUTS?",
+      "options": [
+        "Book count (2), book price (15), pen count (3), pen price (4)",
+        "Only the number 5",
+        "The word 'average'",
+        "None"
+      ],
+      "answer": 0,
+      "explanation": "Four inputs, all named. The total item count (5) comes from adding the two counts, so it isn't a separate input."
+    },
+    {
+      "id": "u14l09e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example by hand: books 2 x 15 = 30, pens 3 x 4 = 12. Total 42 over 5 items. Average?",
+      "options": ["8.4", "42", "5", "21"],
+      "answer": 0,
+      "explanation": "Total 30 + 12 = 42; items 2 + 3 = 5; 42 / 5 = 8.4. Check value: 8.4."
+    },
+    {
+      "id": "u14l09e04",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Put the plan in order.",
+      "blocks": [
+        "Add the two costs to get the total cost",
+        "Work out the books' cost and the pens' cost",
+        "Remember all four values",
+        "Divide total cost by total items",
+        "Show the average"
+      ],
+      "answer": [2, 1, 0, 3, 4],
+      "explanation": "Remember inputs, compute each cost, add for total, divide by total items, show. Several steps, done in order."
+    },
+    {
+      "id": "u14l09e05",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "For the average, why wrap the item count in brackets: total_cost / (book_count + pen_count)?",
+      "options": [
+        "So the counts are added BEFORE dividing — otherwise / acts on pen_count alone",
+        "Brackets are just decoration",
+        "To multiply instead",
+        "To find the remainder"
+      ],
+      "answer": 0,
+      "explanation": "Without brackets, total_cost / book_count + pen_count divides by book_count first, then adds pen_count — wrong. Brackets group the add first."
+    },
+    {
+      "id": "u14l09e06",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Complete the books' cost step:\n\nbook_count = 2\nbook_price = 15\nbooks_cost = book_count ____ book_price",
+      "answer": "*",
+      "acceptable": ["*"],
+      "explanation": "Count times price: 2 * 15 = 30. Same multiply pattern you learned earlier."
+    },
+    {
+      "id": "u14l09e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Arrange the full solution.",
+      "blocks": [
+        "book_count = 2",
+        "book_price = 15",
+        "pen_count = 3",
+        "pen_price = 4",
+        "books_cost = book_count * book_price",
+        "pens_cost = pen_count * pen_price",
+        "total_cost = books_cost + pens_cost",
+        "average = total_cost / (book_count + pen_count)",
+        "print(average)"
+      ],
+      "answer": [0, 1, 2, 3, 4, 5, 6, 7, 8],
+      "explanation": "Store all four values, compute each cost, add for total_cost, then divide by the grouped item count, print. Every number is named."
+    },
+    {
+      "id": "u14l09e08",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "The code prints 8.4. Hand example said 8.4. Verdict?",
+      "options": ["Passes", "Fails", "Unknown", "Rewrite example"],
+      "answer": 0,
+      "explanation": "Output matches the hand example, so it's correct."
+    },
+    {
+      "id": "u14l09e09",
+      "type": "trueFalse",
+      "uepcc": "Check",
+      "prompt": "Sanity check: average times total items should equal the total cost (42).",
+      "answer": true,
+      "explanation": "Yes! 8.4 x 5 = 42. Rebuilding the total cost confirms the average is right."
+    },
+    {
+      "id": "u14l09e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "New basket: 1 book at 20, 3 pens at 4. Same plan. What is the average?",
+      "options": ["8.0", "32", "4.0", "12.0"],
+      "answer": 0,
+      "explanation": "Total 1*20 + 3*4 = 20 + 12 = 32; items 1 + 3 = 4; 32 / 4 = 8.0. The grouped plan generalizes."
+    }
+  ]
+}

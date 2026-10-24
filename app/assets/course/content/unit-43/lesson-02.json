@@ -1,0 +1,152 @@
+{
+  "unitId": "u43",
+  "lessonId": "u43l02",
+  "title": "Solve it together: total of a shopping trip",
+  "idea": "GUIDED. Add up a sequence of prices with an accumulator inside a for-loop.",
+  "problem": "You buy 4 apples at 3 each. Show the total cost.",
+  "exercises": [
+    {
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: You buy 4 apples at 3 each. Show the total cost.\n\nUnderstand first -- what is the OUTPUT?",
+      "options": [
+        "The total cost of all the apples",
+        "The number of apples",
+        "The price of one apple",
+        "The cheapest apple"
+      ],
+      "answer": 0,
+      "explanation": "The output is the TOTAL cost. Naming it first keeps the whole solution aimed at the right result.",
+      "id": "u43l02e01"
+    },
+    {
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "What are the INPUTS you start with?",
+      "options": [
+        "The count of apples (4) and the price each (3)",
+        "Only the number 12",
+        "The word total",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "The inputs are apple_count = 4 and apple_price = 3. Both numbers must appear in the code, not be hardcoded away.",
+      "id": "u43l02e02"
+    },
+    {
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Work it by hand. 4 apples at 3 each -- what's the total?",
+      "options": [
+        "12",
+        "7",
+        "43",
+        "3"
+      ],
+      "answer": 0,
+      "explanation": "4 times 3 is 12. This hand answer (12) becomes the value we check the code against.",
+      "id": "u43l02e03"
+    },
+    {
+      "type": "trueFalse",
+      "uepcc": "E",
+      "prompt": "Adding 3 four times (3+3+3+3) gives the same total as the hand example.",
+      "answer": true,
+      "explanation": "True -- 3+3+3+3 = 12, matching 4 x 3. An accumulator adds the price once per apple, pass by pass.",
+      "id": "u43l02e04"
+    },
+    {
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Plan the steps in order.",
+      "blocks": [
+        "Start a total at 0",
+        "For each of the 4 apples, add the price (3) to the total",
+        "Show the total"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Plan: start the total, add the price once per apple, then show it. The loop repeats the add.",
+      "id": "u43l02e05"
+    },
+    {
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Your plan repeats 'once per apple.' Which tool gives exactly apple_count passes?",
+      "options": [
+        "for n in range(apple_count)",
+        "a single if",
+        "print by itself",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "range(apple_count) runs once per apple. Each pass adds one apple's price to the total.",
+      "id": "u43l02e06"
+    },
+    {
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Fill the add-step so each pass adds one apple's price to the running total:\n\napple_count = 4\napple_price = 3\ntotal = 0\nfor n in range(apple_count):\n    total = total ____ apple_price\nprint(total)",
+      "answer": "+",
+      "acceptable": [
+        "+"
+      ],
+      "explanation": "Add the price each pass: total = total + apple_price. After 4 passes total is 12.",
+      "id": "u43l02e07"
+    },
+    {
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Arrange the full solution.",
+      "blocks": [
+        "apple_count = 4",
+        "apple_price = 3",
+        "total = 0",
+        "for n in range(apple_count):",
+        "    total = total + apple_price",
+        "print(total)"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "explanation": "Both inputs named, total starts at 0, loop once per apple adding the price, then print. Every number maps to a variable.",
+      "id": "u43l02e08"
+    },
+    {
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "It prints 12. Your hand example said 12. What does that tell you?",
+      "options": [
+        "The solution is correct for this input",
+        "The solution is wrong",
+        "Nothing useful",
+        "The example was wrong"
+      ],
+      "answer": 0,
+      "explanation": "Matching the hand answer (12) confirms the code is right. Always check output against the example.",
+      "id": "u43l02e09"
+    },
+    {
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Re-check with new numbers: 5 apples at 2 each. What should it print?",
+      "options": [
+        "10",
+        "7",
+        "52",
+        "25"
+      ],
+      "answer": 0,
+      "explanation": "5 times 2 is 10. The same loop, driven by apple_count and apple_price, handles new inputs correctly.",
+      "id": "u43l02e10"
+    }
+  ]
+}

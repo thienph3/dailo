@@ -1,0 +1,136 @@
+{
+  "unitId": "u34",
+  "lessonId": "u34l02",
+  "title": "Decide: does it divide evenly?",
+  "idea": "REVIEW MIX. Divisibility check with % and a decision, plus f-string review for a friendly message.",
+  "exercises": [
+    {
+      "id": "u34l02e01",
+      "type": "multipleChoice",
+      "prompt": "UNSEEN PROBLEM: tell whether a number of sweets shares evenly among 5 kids. What makes 'shares evenly'?",
+      "options": [
+        "sweets % 5 == 0",
+        "sweets == 5",
+        "sweets // 5 == 5",
+        "sweets + 5 == 0"
+      ],
+      "answer": 0,
+      "explanation": "It shares evenly when the remainder after dividing by 5 is 0, i.e. sweets % 5 == 0."
+    },
+    {
+      "id": "u34l02e02",
+      "type": "multipleChoice",
+      "prompt": "What is 20 % 5?",
+      "options": [
+        "0",
+        "4",
+        "5",
+        "1"
+      ],
+      "answer": 0,
+      "explanation": "20 divides evenly by 5, remainder 0. So 20 sweets share perfectly among 5 kids."
+    },
+    {
+      "id": "u34l02e03",
+      "type": "multipleChoice",
+      "prompt": "What is 23 % 5?",
+      "options": [
+        "3",
+        "0",
+        "4",
+        "5"
+      ],
+      "answer": 0,
+      "explanation": "23 is 4 fives (20) with 3 left over, so 23 % 5 is 3 - not an even share."
+    },
+    {
+      "id": "u34l02e04",
+      "type": "orderBlocks",
+      "prompt": "Arrange a program that prints 'Shares evenly' or 'Some left over'.",
+      "blocks": [
+        "sweets = 20",
+        "if sweets % 5 == 0:",
+        "    print(\"Shares evenly\")",
+        "else:",
+        "    print(\"Some left over\")"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "explanation": "Store the count, test % 5 == 0, branch to the two messages."
+    },
+    {
+      "id": "u34l02e05",
+      "type": "multipleChoice",
+      "prompt": "With sweets = 23, what prints?",
+      "options": [
+        "Some left over",
+        "Shares evenly",
+        "3",
+        "23"
+      ],
+      "answer": 0,
+      "explanation": "23 % 5 is 3 (not 0), so the else runs: 'Some left over'."
+    },
+    {
+      "id": "u34l02e06",
+      "type": "multipleChoice",
+      "prompt": "Review f-strings: if leftover = 3, what does print(f\"{leftover} left over\") show?",
+      "options": [
+        "3 left over",
+        "{leftover} left over",
+        "leftover left over",
+        "3"
+      ],
+      "answer": 0,
+      "explanation": "An f-string drops the value of leftover into the text, showing '3 left over'. That's Lap 1 string work."
+    },
+    {
+      "id": "u34l02e07",
+      "type": "fillBlank",
+      "prompt": "Compute the leftover with modulo:\n\nsweets = 23\nleftover = sweets ____ 5\nprint(leftover)",
+      "answer": "%",
+      "acceptable": [
+        "%"
+      ],
+      "explanation": "% gives the remainder: 23 % 5 is 3, so leftover is 3. Modulo both tests divisibility and finds the leftover."
+    },
+    {
+      "id": "u34l02e08",
+      "type": "multipleChoice",
+      "prompt": "Edge case: sweets = 0. What prints from the branching program?",
+      "options": [
+        "Shares evenly",
+        "Some left over",
+        "0",
+        "an error"
+      ],
+      "answer": 0,
+      "explanation": "0 % 5 is 0, so 'Shares evenly' - zero sweets split evenly (everyone gets none). A tidy edge case."
+    },
+    {
+      "id": "u34l02e09",
+      "type": "trueFalse",
+      "prompt": "Review: // gives the whole number of times 5 fits, while % gives what's left over.",
+      "answer": true,
+      "explanation": "True. 23 // 5 is 4 (whole groups) and 23 % 5 is 3 (leftover). The two together describe the division."
+    },
+    {
+      "id": "u34l02e10",
+      "type": "multipleChoice",
+      "prompt": "What earlier tools did this reuse?",
+      "options": [
+        "Modulo, floor-divide, f-strings, and if/else",
+        "Only loops",
+        "Only functions",
+        "Nothing earlier"
+      ],
+      "answer": 0,
+      "explanation": "It reused %, //, f-strings, and if/else - all from earlier laps - on a fresh sharing problem."
+    }
+  ]
+}

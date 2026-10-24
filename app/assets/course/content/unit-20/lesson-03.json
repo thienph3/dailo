@@ -1,0 +1,132 @@
+{
+  "unitId": "u20",
+  "lessonId": "u20l03",
+  "title": "Are they equal? The == test",
+  "idea": "== asks 'are these two values the same?'. It is a question, written with TWO equals signs, and very different from one = which stores a value.",
+  "exercises": [
+    {
+      "id": "u20l03e01",
+      "type": "multipleChoice",
+      "prompt": "What does == ask?",
+      "options": [
+        "Are the two values equal?",
+        "Store a value",
+        "Is the left bigger?",
+        "Is the left smaller?"
+      ],
+      "answer": 0,
+      "explanation": "== is a question: are the two sides equal? The answer is a boolean."
+    },
+    {
+      "id": "u20l03e02",
+      "type": "multipleChoice",
+      "prompt": "What does this print?\n\nprint(4 == 4)",
+      "options": [
+        "True",
+        "False",
+        "4",
+        "8"
+      ],
+      "answer": 0,
+      "explanation": "4 equals 4, so 4 == 4 is True."
+    },
+    {
+      "id": "u20l03e03",
+      "type": "multipleChoice",
+      "prompt": "What does this print?\n\nprint(4 == 5)",
+      "options": [
+        "False",
+        "True",
+        "4",
+        "5"
+      ],
+      "answer": 0,
+      "explanation": "4 does not equal 5, so the result is False."
+    },
+    {
+      "id": "u20l03e04",
+      "type": "multipleChoice",
+      "prompt": "How many equals signs does the 'are they equal?' test use?",
+      "options": [
+        "Two: ==",
+        "One: =",
+        "Three: ===",
+        "Zero"
+      ],
+      "answer": 0,
+      "explanation": "The equality test uses two signs: ==. One sign (=) means 'store a value' instead."
+    },
+    {
+      "id": "u20l03e05",
+      "type": "multipleChoice",
+      "prompt": "Which line STORES the number 7 in a variable (not a comparison)?",
+      "options": [
+        "score = 7",
+        "score == 7",
+        "score > 7",
+        "7 == score"
+      ],
+      "answer": 0,
+      "explanation": "One = stores a value: score = 7. Two == would instead ask if they're equal."
+    },
+    {
+      "id": "u20l03e06",
+      "type": "fillBlank",
+      "prompt": "Complete the equality test so it asks if x matches 10:\n\nx = 10\nprint(x ____ 10)   # shows: True",
+      "answer": "==",
+      "acceptable": [
+        "=="
+      ],
+      "explanation": "Use == to compare. x holds 10, and 10 == 10 is True."
+    },
+    {
+      "id": "u20l03e07",
+      "type": "multipleChoice",
+      "prompt": "What does this print?\n\na = 3\nb = 3\nprint(a == b)",
+      "options": [
+        "True",
+        "False",
+        "3",
+        "6"
+      ],
+      "answer": 0,
+      "explanation": "a and b both hold 3, so a == b is True."
+    },
+    {
+      "id": "u20l03e08",
+      "type": "trueFalse",
+      "prompt": "Writing score = 7 asks whether score equals 7.",
+      "answer": false,
+      "explanation": "No - one = STORES 7 into score. To ask 'does it equal 7?' you need two: score == 7."
+    },
+    {
+      "id": "u20l03e09",
+      "type": "matchPairs",
+      "prompt": "Match each line to what it does.",
+      "pairs": [
+        {
+          "left": "x = 5",
+          "right": "stores 5 in x"
+        },
+        {
+          "left": "x == 5",
+          "right": "asks if x equals 5"
+        }
+      ],
+      "explanation": "One = stores; two == compares. Mixing them up is a very common beginner slip."
+    },
+    {
+      "id": "u20l03e10",
+      "type": "multipleChoice",
+      "prompt": "Why is the difference between = and == important?",
+      "options": [
+        "They do completely different things: store vs compare",
+        "They are the same",
+        "== is faster",
+        "= is not allowed"
+      ],
+      "answer": 0,
+      "explanation": "= changes a variable; == answers a yes/no question. Confusing them causes bugs, so keep them straight."
+    }
+  ]
+}

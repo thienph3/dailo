@@ -1,0 +1,136 @@
+{
+  "unitId": "u46",
+  "lessonId": "u46l01",
+  "title": "Stopping early or skipping one",
+  "idea": "Motivate break and continue: sometimes you want to STOP a loop the moment you find something, or SKIP just one pass and keep going.",
+  "exercises": [
+    {
+      "id": "u46l01e01",
+      "type": "multipleChoice",
+      "prompt": "You loop through numbers looking for the first one over 100. Once you find it, you want to...",
+      "explanation": "Stop immediately - there is no reason to keep looping after the first match. That is what break does.",
+      "options": [
+        "Stop the loop right away",
+        "Keep going to the end anyway",
+        "Start over",
+        "Print every number"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u46l01e02",
+      "type": "multipleChoice",
+      "prompt": "You loop through numbers and want to IGNORE the even ones but keep handling the rest. For an even number you want to...",
+      "explanation": "Skip just that one pass and move to the next number. That is what continue does.",
+      "options": [
+        "Skip this pass and move to the next",
+        "Stop the whole loop",
+        "Print it anyway",
+        "Restart the loop"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u46l01e03",
+      "type": "matchPairs",
+      "prompt": "Match each need to the tool.",
+      "explanation": "break ends the loop; continue skips the current pass and goes on to the next.",
+      "pairs": [
+        {
+          "left": "Stop at the first match",
+          "right": "break"
+        },
+        {
+          "left": "Skip this one, keep looping",
+          "right": "continue"
+        },
+        {
+          "left": "End the loop immediately",
+          "right": "break"
+        }
+      ]
+    },
+    {
+      "id": "u46l01e04",
+      "type": "trueFalse",
+      "prompt": "break and continue both change how a loop repeats, but in different ways: one ends it, one skips a pass.",
+      "explanation": "Yes - break leaves the loop entirely; continue only skips the rest of the current pass.",
+      "answer": true
+    },
+    {
+      "id": "u46l01e05",
+      "type": "multipleChoice",
+      "prompt": "Before these tools, a loop always ran its body fully on every pass and only stopped at its condition. What is new?",
+      "explanation": "You can now stop early (break) or skip the rest of one pass (continue), giving finer control.",
+      "options": [
+        "You can stop early or skip a single pass",
+        "Loops can now print",
+        "Loops can do math",
+        "Loops need no condition"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u46l01e06",
+      "type": "trueFalse",
+      "prompt": "'Stop at the first match' is wasteful without break, because the loop would keep checking after it already found the answer.",
+      "explanation": "True - break saves that wasted work by leaving as soon as the goal is met.",
+      "answer": true
+    },
+    {
+      "id": "u46l01e07",
+      "type": "multipleChoice",
+      "prompt": "Which phrase hints you may want CONTINUE?",
+      "explanation": "'Skip the ones that ...' means ignore certain passes but keep going - exactly continue.",
+      "options": [
+        "'skip the ones that ...'",
+        "'exactly 5 times'",
+        "'stop at the first ...'",
+        "'print everything'"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u46l01e08",
+      "type": "multipleChoice",
+      "prompt": "Which phrase hints you may want BREAK?",
+      "explanation": "'Stop as soon as ...' means end the loop at the first success - that is break.",
+      "options": [
+        "'stop as soon as ...'",
+        "'for each and every ...'",
+        "'skip the even ones'",
+        "'count them all'"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u46l01e09",
+      "type": "orderBlocks",
+      "prompt": "Put the idea of break in order: what happens when break runs.",
+      "explanation": "The loop stops at once and the program continues after the loop - remaining passes are skipped.",
+      "blocks": [
+        "break runs inside the loop",
+        "The loop ends immediately",
+        "The program continues after the loop"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "id": "u46l01e10",
+      "type": "multipleChoice",
+      "prompt": "You are about to meet two small keywords. In one line, what do they give you?",
+      "explanation": "Fine control inside a loop: leave early (break) or skip one pass (continue).",
+      "options": [
+        "Leave the loop early, or skip a single pass",
+        "A faster computer",
+        "New kinds of numbers",
+        "A way to print colors"
+      ],
+      "answer": 0
+    }
+  ]
+}

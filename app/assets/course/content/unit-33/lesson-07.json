@@ -1,0 +1,145 @@
+{
+  "unitId": "u33",
+  "lessonId": "u33l07",
+  "title": "Fix it: the backwards comparison",
+  "idea": "GUIDED BUG. A 'too cold' alert uses the comparison the wrong way round. Flip the reasoning.",
+  "problem": "Rule: print 'Too cold' when temp is BELOW 0. Broken: if temp > 0: print('Too cold') else: print('OK').",
+  "exercises": [
+    {
+      "id": "u33l07e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: 'Too cold' when temp is below 0, else 'OK'.\n\nWhat is the OUTPUT?",
+      "options": [
+        "'Too cold' or 'OK'",
+        "The temperature",
+        "A count",
+        "Always 'OK'"
+      ],
+      "answer": 0,
+      "explanation": "One of two labels. 'Below 0' means less than zero, so the comparison must point the right way."
+    },
+    {
+      "id": "u33l07e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "'Below 0' translates to which comparison?",
+      "options": [
+        "temp < 0",
+        "temp > 0",
+        "temp == 0",
+        "temp >= 0"
+      ],
+      "answer": 0,
+      "explanation": "Below zero means temp < 0. The broken code used > 0, which is the opposite."
+    },
+    {
+      "id": "u33l07e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Work it by hand: temp = -5. The CORRECT answer is?",
+      "options": [
+        "Too cold",
+        "OK",
+        "-5",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "-5 is below 0, so 'Too cold'. Check value."
+    },
+    {
+      "id": "u33l07e04",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Run the BROKEN code with temp = -5: if temp > 0. What prints?",
+      "options": [
+        "OK (wrong)",
+        "Too cold",
+        "-5",
+        "an error"
+      ],
+      "answer": 0,
+      "explanation": "-5 > 0 is False, so it prints 'OK' — but -5 should be 'Too cold'. The comparison is backwards."
+    },
+    {
+      "id": "u33l07e05",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Plan the fix: which comparison matches 'below 0'?",
+      "options": [
+        "temp < 0",
+        "temp > 0",
+        "temp == 0",
+        "temp >= 0"
+      ],
+      "answer": 0,
+      "explanation": "Flip > to < so the alert fires for temperatures under zero."
+    },
+    {
+      "id": "u33l07e06",
+      "type": "trueFalse",
+      "uepcc": "P",
+      "prompt": "Reading the rule in plain words ('below 0' = less than) tells you which way the comparison points.",
+      "answer": true,
+      "explanation": "True. Translate the rule to a comparison first; that prevents backwards-comparison bugs."
+    },
+    {
+      "id": "u33l07e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Arrange the FIXED code.",
+      "blocks": [
+        "if temp < 0:",
+        "    print(\"Too cold\")",
+        "else:",
+        "    print(\"OK\")"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "Use < 0 so below-zero temperatures trigger 'Too cold'."
+    },
+    {
+      "id": "u33l07e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Write the fixed comparison:\n\nif temp ____ 0:\n    print(\"Too cold\")\nelse:\n    print(\"OK\")",
+      "answer": "<",
+      "acceptable": [
+        "<"
+      ],
+      "explanation": "< 0 means below zero, matching the rule."
+    },
+    {
+      "id": "u33l07e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check with the fix: temp = -5. What prints?",
+      "options": [
+        "Too cold",
+        "OK",
+        "-5",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "-5 < 0 is True -> 'Too cold'. Matches the hand answer. Fixed."
+    },
+    {
+      "id": "u33l07e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Re-check a fresh value: temp = 8. What prints?",
+      "options": [
+        "OK",
+        "Too cold",
+        "8",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "8 < 0 is False -> 'OK'. Correct for a warm reading. The flip fixed it without side effects."
+    }
+  ]
+}

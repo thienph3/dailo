@@ -1,0 +1,133 @@
+{
+  "unitId": "u28",
+  "lessonId": "u28l01",
+  "title": "Meet the nested if: a choice inside a choice",
+  "idea": "A nested if puts a second decision INSIDE the body of a first if. The inner question is only asked when the outer one was already True. Meet it with visible output.",
+  "exercises": [
+    {
+      "id": "u28l01e01",
+      "type": "multipleChoice",
+      "prompt": "Sometimes you only ask a second question AFTER the first answer is yes. Example: 'Is the shop open? If so, do they have milk?' What is a 'nested if'?",
+      "options": [
+        "An if written inside the body of another if",
+        "Two separate programs",
+        "A faster kind of if",
+        "An if with no condition"
+      ],
+      "answer": 0,
+      "explanation": "Nested means 'one inside another'. The inner if lives inside the outer if's indented body, so it is only reached when the outer condition was True."
+    },
+    {
+      "id": "u28l01e02",
+      "type": "multipleChoice",
+      "prompt": "What does this print?\n\nlogged_in = True\nis_admin = True\nif logged_in:\n    if is_admin:\n        print(\"Admin panel\")\n    else:\n        print(\"User page\")\nelse:\n    print(\"Please log in\")",
+      "options": [
+        "Admin panel",
+        "User page",
+        "Please log in",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "The outer if is True (logged_in), so we step inside. There the inner if is True too (is_admin), so 'Admin panel' prints."
+    },
+    {
+      "id": "u28l01e03",
+      "type": "multipleChoice",
+      "prompt": "Same code, but is_admin = False. What prints?\n\nlogged_in = True\nis_admin = False\nif logged_in:\n    if is_admin:\n        print(\"Admin panel\")\n    else:\n        print(\"User page\")\nelse:\n    print(\"Please log in\")",
+      "options": [
+        "User page",
+        "Admin panel",
+        "Please log in",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "Outer if is still True, so we go inside. Now the inner if is False, so its else runs: 'User page'."
+    },
+    {
+      "id": "u28l01e04",
+      "type": "multipleChoice",
+      "prompt": "Same code, but logged_in = False. What prints?\n\nlogged_in = False\nis_admin = True\nif logged_in:\n    if is_admin:\n        print(\"Admin panel\")\n    else:\n        print(\"User page\")\nelse:\n    print(\"Please log in\")",
+      "options": [
+        "Please log in",
+        "Admin panel",
+        "User page",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "The outer if is False, so Python skips its whole body - the inner if is never even looked at - and runs the outer else: 'Please log in'."
+    },
+    {
+      "id": "u28l01e05",
+      "type": "trueFalse",
+      "prompt": "The inner if is only checked when the outer if's condition was True.",
+      "answer": true,
+      "explanation": "Yes. The inner if lives inside the outer body. If the outer condition is False, the whole body (including the inner if) is skipped."
+    },
+    {
+      "id": "u28l01e06",
+      "type": "multipleChoice",
+      "prompt": "Why does the inner if need to be indented MORE than the outer if?",
+      "options": [
+        "The extra indent shows it belongs inside the outer if's body",
+        "It makes the code run faster",
+        "Python ignores the indent anyway",
+        "So it runs first"
+      ],
+      "answer": 0,
+      "explanation": "Indentation is how Python groups lines. Deeper indent = 'this belongs to the block above it'. The inner if sits inside the outer body."
+    },
+    {
+      "id": "u28l01e07",
+      "type": "trueFalse",
+      "prompt": "A nested if asks the second question only in some cases, not every time.",
+      "answer": true,
+      "explanation": "That is the whole point. The second decision is reached only on the path where the first condition held - a choice inside a choice."
+    },
+    {
+      "id": "u28l01e08",
+      "type": "multipleChoice",
+      "prompt": "What does this print?\n\nhas_ticket = True\nseat_free = False\nif has_ticket:\n    if seat_free:\n        print(\"Sit down\")\n    else:\n        print(\"Stand\")\nelse:\n    print(\"Buy a ticket\")",
+      "options": [
+        "Stand",
+        "Sit down",
+        "Buy a ticket",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "has_ticket is True, so we go inside. seat_free is False, so the inner else runs: 'Stand'."
+    },
+    {
+      "id": "u28l01e09",
+      "type": "matchPairs",
+      "prompt": "For the ticket code above, match each situation to what prints.",
+      "pairs": [
+        {
+          "left": "has_ticket True, seat_free True",
+          "right": "Sit down"
+        },
+        {
+          "left": "has_ticket True, seat_free False",
+          "right": "Stand"
+        },
+        {
+          "left": "has_ticket False",
+          "right": "Buy a ticket"
+        }
+      ],
+      "explanation": "The seat question only matters once you have a ticket. No ticket means the inner question is never asked."
+    },
+    {
+      "id": "u28l01e10",
+      "type": "multipleChoice",
+      "prompt": "The big idea of a nested if is...",
+      "options": [
+        "ask a second question only after the first one was answered yes",
+        "ask both questions at the same time",
+        "repeat a question many times",
+        "skip all questions"
+      ],
+      "answer": 0,
+      "explanation": "A nested if is a choice inside a choice: the inner decision is reached only along the branch where the outer condition was True."
+    }
+  ]
+}

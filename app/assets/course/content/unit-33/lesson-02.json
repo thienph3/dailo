@@ -1,0 +1,158 @@
+{
+  "unitId": "u33",
+  "lessonId": "u33l02",
+  "title": "Fix it: the shadowed top grade",
+  "idea": "GUIDED BUG. A grade chain lists the broad band first, so the top band never runs. Fix by reordering.",
+  "problem": "Rule: 'Top' for 90+, 'Pass' for 50+, else 'Fail'. Broken: if score >= 50: 'Pass' elif score >= 90: 'Top' else: 'Fail'.",
+  "exercises": [
+    {
+      "id": "u33l02e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: 'Top' (90+), 'Pass' (50-89), 'Fail' (below 50).\n\nWhat is the OUTPUT?",
+      "options": [
+        "'Top', 'Pass', or 'Fail'",
+        "The score",
+        "A number of students",
+        "Always 'Pass'"
+      ],
+      "answer": 0,
+      "explanation": "One of three labels. Knowing the three bands lets us check each one is reachable."
+    },
+    {
+      "id": "u33l02e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "In an if/elif chain, which branch wins?",
+      "options": [
+        "The first branch whose condition is True",
+        "The last branch",
+        "All true branches",
+        "A random one"
+      ],
+      "answer": 0,
+      "explanation": "The FIRST branch whose condition is True runs; the rest are skipped. Order is everything here."
+    },
+    {
+      "id": "u33l02e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Work it by hand: score = 95. The CORRECT label is?",
+      "options": [
+        "Top",
+        "Pass",
+        "Fail",
+        "95"
+      ],
+      "answer": 0,
+      "explanation": "95 is 90+, so 'Top'. That is our check value."
+    },
+    {
+      "id": "u33l02e04",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Run the BROKEN chain with score = 95 (>=50 first). What prints?",
+      "options": [
+        "Pass (wrong)",
+        "Top",
+        "Fail",
+        "95"
+      ],
+      "answer": 0,
+      "explanation": "95 >= 50 is True first, so 'Pass' prints and 'Top' is never reached. Bug confirmed."
+    },
+    {
+      "id": "u33l02e05",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Plan the fix. What is the problem with the order?",
+      "options": [
+        "The broad >=50 is before the specific >=90",
+        "90 is too big",
+        "else is missing",
+        "elif is misspelled"
+      ],
+      "answer": 0,
+      "explanation": "The broad band (>=50) sits above the specific band (>=90), shadowing it. Put the specific band first."
+    },
+    {
+      "id": "u33l02e06",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Plan the correct band order.",
+      "blocks": [
+        "If score >= 90 -> Top",
+        "Else if score >= 50 -> Pass",
+        "Else -> Fail"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Highest band first, then widen downward, so each branch is reachable."
+    },
+    {
+      "id": "u33l02e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Arrange the FIXED code.",
+      "blocks": [
+        "if score >= 90:",
+        "    print(\"Top\")",
+        "elif score >= 50:",
+        "    print(\"Pass\")",
+        "else:",
+        "    print(\"Fail\")"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "explanation": "Test 90+ first, then 50+, then else. 95 now reaches 'Top'."
+    },
+    {
+      "id": "u33l02e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Complete the first (highest) band so it is tested first:\n\nif score >= ____:\n    print(\"Top\")\nelif score >= 50:\n    print(\"Pass\")\nelse:\n    print(\"Fail\")",
+      "answer": "90",
+      "acceptable": [
+        "90"
+      ],
+      "explanation": "Testing 90 first makes the top band reachable before the broader 50 band."
+    },
+    {
+      "id": "u33l02e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check with the fix: score = 95. What prints?",
+      "options": [
+        "Top",
+        "Pass",
+        "Fail",
+        "95"
+      ],
+      "answer": 0,
+      "explanation": "95 >= 90 is True first, so 'Top' — matching the hand answer. Fixed."
+    },
+    {
+      "id": "u33l02e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Re-check a fresh value: score = 60. What prints?",
+      "options": [
+        "Pass",
+        "Top",
+        "Fail",
+        "60"
+      ],
+      "answer": 0,
+      "explanation": "60 fails 90+, passes 50+, so 'Pass' — still correct. The reorder did not break the middle band."
+    }
+  ]
+}

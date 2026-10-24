@@ -1,0 +1,125 @@
+{
+  "unitId": "u18",
+  "lessonId": "u18l08",
+  "title": "Loop back: update a saved total",
+  "idea": "REVIEW. Reassignment to update a value across steps. Interleaves variables + reassignment (Lap 0) with arithmetic (Lap 1).",
+  "problem": "Your wallet starts with 50. You spend 12, then earn 7. Report how much is in the wallet at the end.",
+  "exercises": [
+    {
+      "id": "u18l08e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: Wallet starts at 50, spend 12, then earn 7. Report the final amount.\n\nWhat is the OUTPUT?",
+      "options": [
+        "The final wallet amount",
+        "The starting amount, 50",
+        "The amount spent, 12",
+        "The word wallet"
+      ],
+      "answer": 0,
+      "explanation": "Output = the wallet's final amount after both changes."
+    },
+    {
+      "id": "u18l08e02",
+      "type": "multiSelect",
+      "uepcc": "U",
+      "prompt": "What are the INPUTS? Pick all three — each number is its own variable.",
+      "options": [
+        "The start (50)",
+        "The amount spent (12)",
+        "The amount earned (7)",
+        "The word final"
+      ],
+      "answer": [0, 1, 2],
+      "explanation": "Three numbers, three named variables. Value-mapping means none is dropped."
+    },
+    {
+      "id": "u18l08e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example by hand. 50 - 12 = 38, then 38 + 7 = ?",
+      "options": ["45", "38", "55", "69"],
+      "answer": 0,
+      "explanation": "After spending and earning, the wallet holds 45. Check value: 45."
+    },
+    {
+      "id": "u18l08e04",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Plan the steps in order.",
+      "blocks": [
+        "Subtract what you spent from the wallet",
+        "Start the wallet at 50",
+        "Add what you earned to the wallet",
+        "Report the final wallet"
+      ],
+      "answer": [1, 0, 2, 3],
+      "explanation": "Start, spend, earn, report. Each middle step UPDATES the same wallet value."
+    },
+    {
+      "id": "u18l08e05",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Each change rewrites the wallet. What is that called?",
+      "options": [
+        "Reassignment — giving a variable a new value",
+        "A brand new variable each time",
+        "Printing",
+        "Type conversion"
+      ],
+      "answer": 0,
+      "explanation": "wallet = wallet - spent reassigns wallet: it reads the old value, computes, and stores the new one back."
+    },
+    {
+      "id": "u18l08e06",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code it. Arrange the lines.",
+      "blocks": [
+        "wallet = 50",
+        "spent = 12",
+        "earned = 7",
+        "wallet = wallet - spent",
+        "wallet = wallet + earned",
+        "print(f\"Wallet: {wallet}\")"
+      ],
+      "answer": [0, 1, 2, 3, 4, 5],
+      "explanation": "Store all three numbers, then update wallet twice by reassignment, then report."
+    },
+    {
+      "id": "u18l08e07",
+      "type": "multipleChoice",
+      "uepcc": "C",
+      "prompt": "After wallet = 50 and wallet = wallet - spent (spent = 12), what does wallet hold?",
+      "options": ["38", "50", "12", "62"],
+      "answer": 0,
+      "explanation": "The right side uses the OLD wallet (50): 50 - 12 = 38, stored back into wallet."
+    },
+    {
+      "id": "u18l08e08",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "It prints 'Wallet: 45'. Your example said 45. Verdict?",
+      "options": ["Passes", "Fails", "Can't tell", "Change the example"],
+      "answer": 0,
+      "explanation": "Computed 45 matches the hand example 45 — correct."
+    },
+    {
+      "id": "u18l08e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "New inputs: start = 100, spent = 40, earned = 10. Final wallet prints?",
+      "options": ["Wallet: 70", "Wallet: 45", "Wallet: 150", "Wallet: 50"],
+      "answer": 0,
+      "explanation": "100 - 40 = 60, then 60 + 10 = 70. The step-by-step updates generalize."
+    },
+    {
+      "id": "u18l08e10",
+      "type": "trueFalse",
+      "uepcc": "P",
+      "prompt": "The order of the two updates matters: spending 12 then earning 7 can land on the same final number as earning 7 then spending 12 here, because + and - just move the total.",
+      "answer": true,
+      "explanation": "With only + and - on the same value, order doesn't change the final sum here (both give 45). Still, plan the order that matches the story so the code reads clearly."
+    }
+  ]
+}

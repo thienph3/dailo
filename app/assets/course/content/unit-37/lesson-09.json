@@ -1,0 +1,133 @@
+{
+  "unitId": "u37",
+  "lessonId": "u37l09",
+  "title": "How many repeats? Counting carefully",
+  "idea": "Translate everyday counts into range(n) and avoid off-by-one slips. range(n) runs n times — no more, no less.",
+  "exercises": [
+    {
+      "id": "u37l09e01",
+      "type": "multipleChoice",
+      "prompt": "You want to knock 3 times. Which range?",
+      "options": [
+        "range(3)",
+        "range(2)",
+        "range(4)",
+        "range(0)"
+      ],
+      "answer": 0,
+      "explanation": "Three knocks, three passes — range(3). The number in range equals the repeats you want."
+    },
+    {
+      "id": "u37l09e02",
+      "type": "multipleChoice",
+      "prompt": "range(10) runs how many times? (Watch for off-by-one.)",
+      "options": [
+        "10",
+        "9",
+        "11",
+        "1"
+      ],
+      "answer": 0,
+      "explanation": "Exactly 10. range(n) runs n times — no need to add or subtract one for this simple count."
+    },
+    {
+      "id": "u37l09e03",
+      "type": "trueFalse",
+      "prompt": "To repeat something N times, you write range(N).",
+      "answer": true,
+      "explanation": "Direct and simple: N repeats means range(N). Keep this rule handy."
+    },
+    {
+      "id": "u37l09e04",
+      "type": "multipleChoice",
+      "prompt": "A bell should ring once per hour for 8 hours. Which range?",
+      "options": [
+        "range(8)",
+        "range(7)",
+        "range(9)",
+        "range(1)"
+      ],
+      "answer": 0,
+      "explanation": "Eight hours, eight rings — range(8). One ring per thing, count the things."
+    },
+    {
+      "id": "u37l09e05",
+      "type": "multipleChoice",
+      "prompt": "You wrote range(6) but needed 7 repeats. The output is...",
+      "options": [
+        "One short — only 6 repeats happen",
+        "Correct",
+        "One too many",
+        "Infinite"
+      ],
+      "answer": 0,
+      "explanation": "range(6) is six passes, but you wanted seven. Off-by-one: fix it to range(7)."
+    },
+    {
+      "id": "u37l09e06",
+      "type": "matchPairs",
+      "prompt": "Match each real task to the range that repeats correctly.",
+      "pairs": [
+        {
+          "left": "Stamp 12 letters",
+          "right": "range(12)"
+        },
+        {
+          "left": "Do 3 push-ups",
+          "right": "range(3)"
+        },
+        {
+          "left": "Greet 20 guests",
+          "right": "range(20)"
+        }
+      ],
+      "explanation": "Count the things, put that number in range. 12 letters -> range(12)."
+    },
+    {
+      "id": "u37l09e07",
+      "type": "multipleChoice",
+      "prompt": "range(100) with one print in the body makes how many lines?",
+      "options": [
+        "100",
+        "99",
+        "101",
+        "10"
+      ],
+      "answer": 0,
+      "explanation": "Exactly 100 lines. Loops make big counts trivial — imagine copy-pasting 100 prints instead."
+    },
+    {
+      "id": "u37l09e08",
+      "type": "trueFalse",
+      "prompt": "range(0) does nothing — zero repeats is a valid, safe count.",
+      "answer": true,
+      "explanation": "Zero passes, no error, no output. Loops handle 'none' cleanly — useful at the edges."
+    },
+    {
+      "id": "u37l09e09",
+      "type": "multipleChoice",
+      "prompt": "A quiz has 15 questions, each needing one 'Question' header line. Which range?",
+      "options": [
+        "range(15)",
+        "range(14)",
+        "range(16)",
+        "range(5)"
+      ],
+      "answer": 0,
+      "explanation": "Fifteen questions, fifteen headers — range(15). Match range to the count of things."
+    },
+    {
+      "id": "u37l09e10",
+      "type": "multipleChoice",
+      "prompt": "Best way to be sure your count is right before trusting the loop?",
+      "options": [
+        "Trace a small case by hand and count the output lines",
+        "Guess and hope",
+        "Always use range(10)",
+        "Skip checking"
+      ],
+      "answer": 0,
+      "explanation": "A quick hand-trace catches off-by-one mistakes. Count the lines, compare to the goal."
+    }
+  ]
+}

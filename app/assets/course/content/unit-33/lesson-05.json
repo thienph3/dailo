@@ -1,0 +1,158 @@
+{
+  "unitId": "u33",
+  "lessonId": "u33l05",
+  "title": "Finish it: add the missing middle",
+  "idea": "GUIDED GAP. A temperature chain handles hot and cold but forgets the mild middle. Complete it.",
+  "problem": "Rule: 'Hot' if temp > 25, 'Cold' if temp < 10, otherwise 'Mild'. The code only has the Hot and Cold branches.",
+  "exercises": [
+    {
+      "id": "u33l05e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: 'Hot' (>25), 'Cold' (<10), else 'Mild'.\n\nHow many outcomes are there?",
+      "options": [
+        "Three outcomes",
+        "Two outcomes",
+        "One outcome",
+        "No outcomes"
+      ],
+      "answer": 0,
+      "explanation": "Three: hot, cold, and the mild range between. Every input must land in one of them."
+    },
+    {
+      "id": "u33l05e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "What range does the incomplete code forget?",
+      "options": [
+        "The mild middle (10 to 25)",
+        "Only 25",
+        "Only negatives",
+        "Nothing is missed"
+      ],
+      "answer": 0,
+      "explanation": "It handles >25 and <10 but not the values from 10 to 25, the mild middle."
+    },
+    {
+      "id": "u33l05e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Work it by hand: temp = 18. The CORRECT answer is?",
+      "options": [
+        "Mild",
+        "Hot",
+        "Cold",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "18 is not >25 and not <10, so it is 'Mild'. Check value for the middle."
+    },
+    {
+      "id": "u33l05e04",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Run the INCOMPLETE code (only Hot and Cold) with temp = 18. What happens?",
+      "options": [
+        "Nothing prints (wrong)",
+        "Mild",
+        "Hot",
+        "an error"
+      ],
+      "answer": 0,
+      "explanation": "18 matches neither branch, so nothing prints. The missing middle is the gap. Confirmed."
+    },
+    {
+      "id": "u33l05e05",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Plan the finish: which branch catches 'everything else'?",
+      "options": [
+        "An else branch for 'Mild'",
+        "A second if temp > 25",
+        "Remove the Cold branch",
+        "Another input"
+      ],
+      "answer": 0,
+      "explanation": "An else branch, with no condition, catches every value that missed Hot and Cold — the mild range."
+    },
+    {
+      "id": "u33l05e06",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Plan the complete chain.",
+      "blocks": [
+        "If temp > 25 -> Hot",
+        "Else if temp < 10 -> Cold",
+        "Else -> Mild"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Test Hot, then Cold, then let else handle the mild remainder so nothing falls through."
+    },
+    {
+      "id": "u33l05e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Arrange the COMPLETED code.",
+      "blocks": [
+        "if temp > 25:",
+        "    print(\"Hot\")",
+        "elif temp < 10:",
+        "    print(\"Cold\")",
+        "else:",
+        "    print(\"Mild\")"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "explanation": "Hot, then elif Cold, then else Mild — full coverage."
+    },
+    {
+      "id": "u33l05e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Add the missing catch-all keyword:\n\nif temp > 25:\n    print(\"Hot\")\nelif temp < 10:\n    print(\"Cold\")\n____:\n    print(\"Mild\")",
+      "answer": "else",
+      "acceptable": [
+        "else"
+      ],
+      "explanation": "else has no condition and catches the mild range that the other two branches missed."
+    },
+    {
+      "id": "u33l05e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check with the completed code: temp = 18. What prints?",
+      "options": [
+        "Mild",
+        "Hot",
+        "Cold",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "18 misses Hot and Cold, so the else runs: 'Mild'. Matches the hand answer. Gap closed."
+    },
+    {
+      "id": "u33l05e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Re-check a fresh value: temp = 30. What prints?",
+      "options": [
+        "Hot",
+        "Mild",
+        "Cold",
+        "30"
+      ],
+      "answer": 0,
+      "explanation": "30 > 25 is True, so 'Hot' — still correct. Completing the middle did not break the extremes."
+    }
+  ]
+}

@@ -1,0 +1,142 @@
+{
+  "unitId": "u78",
+  "lessonId": "u78l10",
+  "title": "Helpers on every value, pulled together",
+  "idea": "TOOL, review-heavy. Pull the pattern together and preview composing (Unit 79).",
+  "exercises": [
+    {
+      "type": "multipleChoice",
+      "prompt": "The one idea of this unit:",
+      "options": [
+        "Call a one-item helper inside a loop to handle every item",
+        "helpers can't loop",
+        "loops replace helpers",
+        "only print loops"
+      ],
+      "answer": 0,
+      "explanation": "A helper does one item's job; the loop applies it to all.",
+      "id": "u78l10e01"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Predict:\n\ndef double(n):\n    return n * 2\n\nfor n in [3, 4]:\n    print(double(n))",
+      "options": [
+        "6, 8",
+        "3, 4",
+        "8",
+        "error"
+      ],
+      "answer": 0,
+      "explanation": "double(3)=6, double(4)=8.",
+      "id": "u78l10e02"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "REVIEW: total of each item's double for [3, 4]:",
+      "options": [
+        "14",
+        "7",
+        "8",
+        "error"
+      ],
+      "answer": 0,
+      "explanation": "6 + 8 = 14.",
+      "id": "u78l10e03"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "REVIEW (scope): each call keeps its own private notes, so repeated calls don't interfere.",
+      "answer": true,
+      "explanation": "Independent calls — that's why repeating a helper is safe.",
+      "id": "u78l10e04"
+    },
+    {
+      "type": "orderBlocks",
+      "prompt": "Arrange a full helper-in-loop accumulate.",
+      "blocks": [
+        "def double(n):",
+        "    return n * 2",
+        "total = 0",
+        "for n in [1, 2, 3]:",
+        "    total = total + double(n)",
+        "print(total)"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "explanation": "12, built by hand with the helper. No sum().",
+      "id": "u78l10e05"
+    },
+    {
+      "type": "fillBlank",
+      "prompt": "Accumulate the helper result:\n\ntotal = total + ____(n)\n\n(helper is double)",
+      "answer": "double",
+      "acceptable": [
+        "double"
+      ],
+      "explanation": "Add double(n) each loop.",
+      "id": "u78l10e06"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Which patterns can a helper-in-loop drive?",
+      "options": [
+        "total, count, filter, or a new list",
+        "only printing",
+        "only max",
+        "none"
+      ],
+      "answer": 0,
+      "explanation": "All the loop patterns: accumulate, count, filter, build.",
+      "id": "u78l10e07"
+    },
+    {
+      "type": "multiSelect",
+      "prompt": "TRUE about this unit? (choose all)",
+      "options": [
+        "helper = one item's job",
+        "loop repeats it",
+        "results can be totalled/counted/collected",
+        "it requires sorted()"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "First three true; no builtins.",
+      "id": "u78l10e08"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Spot the fix:\n\nfor n in [1, 2]:\n    total = total + n   # wanted doubles",
+      "options": [
+        "change n to double(n)",
+        "change + to -",
+        "remove total",
+        "add max"
+      ],
+      "answer": 0,
+      "explanation": "Call the helper: total + double(n).",
+      "id": "u78l10e09"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "You can now apply a tested helper to every item. Next you'll PRACTICE composing several helpers to solve bigger problems. That means...",
+      "options": [
+        "breaking a problem into helpers and running/combining them",
+        "avoiding functions",
+        "only single items",
+        "only one helper ever"
+      ],
+      "answer": 0,
+      "explanation": "Exactly what Unit 79 practises: compose sub-plans.",
+      "id": "u78l10e10"
+    }
+  ]
+}

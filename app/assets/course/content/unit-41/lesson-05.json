@@ -1,0 +1,134 @@
+{
+  "unitId": "u41",
+  "lessonId": "u41l05",
+  "title": "Tracing a running total pass by pass",
+  "idea": "Follow the total's value on each pass to predict the final sum.",
+  "exercises": [
+    {
+      "id": "u41l05e01",
+      "type": "multipleChoice",
+      "prompt": "Trace:\n\ntotal = 0\nfor i in range(1, 4):\n    total += i\n\nWhat is total after the FIRST pass (i = 1)?",
+      "options": [
+        "1",
+        "0",
+        "2",
+        "3"
+      ],
+      "answer": 0,
+      "explanation": "It started at 0 and added 1, so after pass one it is 1."
+    },
+    {
+      "id": "u41l05e02",
+      "type": "multipleChoice",
+      "prompt": "Same loop. After the SECOND pass (i = 2), what is total?",
+      "options": [
+        "3",
+        "1",
+        "2",
+        "6"
+      ],
+      "answer": 0,
+      "explanation": "It was 1, then adds 2, making 3."
+    },
+    {
+      "id": "u41l05e03",
+      "type": "multipleChoice",
+      "prompt": "Same loop. After the THIRD pass (i = 3), what is total?",
+      "options": [
+        "6",
+        "3",
+        "5",
+        "9"
+      ],
+      "answer": 0,
+      "explanation": "It was 3, then adds 3, reaching 6 — the final sum."
+    },
+    {
+      "id": "u41l05e04",
+      "type": "orderBlocks",
+      "prompt": "Put the total's values in order for range(1, 4), starting from its start value.",
+      "blocks": [
+        "0",
+        "1",
+        "3",
+        "6"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "total is 0 before the loop, then 1, 3, 6 after adding 1, 2, 3."
+    },
+    {
+      "id": "u41l05e05",
+      "type": "multipleChoice",
+      "prompt": "Trace a fixed-amount total:\n\ntotal = 0\nfor i in range(3):\n    total += 4\n\nAfter the first pass, what is total?",
+      "options": [
+        "4",
+        "0",
+        "8",
+        "1"
+      ],
+      "answer": 0,
+      "explanation": "Starts at 0, adds 4, so it is 4 after pass one."
+    },
+    {
+      "id": "u41l05e06",
+      "type": "multipleChoice",
+      "prompt": "Same +4 loop. What is the FINAL total after three passes?",
+      "options": [
+        "12",
+        "4",
+        "8",
+        "3"
+      ],
+      "answer": 0,
+      "explanation": "4, 8, 12 — three passes of +4 from 0."
+    },
+    {
+      "id": "u41l05e07",
+      "type": "trueFalse",
+      "prompt": "Tracing means writing down the running total after each pass.",
+      "answer": true,
+      "explanation": "True. A pass-by-pass trace makes the final sum easy to predict and to check against the output."
+    },
+    {
+      "id": "u41l05e08",
+      "type": "fillBlank",
+      "prompt": "Trace and fill the final value:\n\ntotal = 0\nfor i in range(1, 5):\n    total += i\nprint(total)  # prints ____",
+      "answer": "10",
+      "acceptable": [
+        "10"
+      ],
+      "explanation": "1 + 2 + 3 + 4 = 10."
+    },
+    {
+      "id": "u41l05e09",
+      "type": "multipleChoice",
+      "prompt": "A total prints a wrong, too-small sum. Tracing shows it resets mid-loop. Likely cause?",
+      "options": [
+        "total = 0 is inside the loop",
+        "range is too big",
+        "print is broken",
+        "i is misspelled"
+      ],
+      "answer": 0,
+      "explanation": "If the total keeps dropping back, total = 0 is probably inside the loop, wiping the running sum."
+    },
+    {
+      "id": "u41l05e10",
+      "type": "multipleChoice",
+      "prompt": "Why trace a running total before trusting the output?",
+      "options": [
+        "To predict and verify the final sum",
+        "To make it run faster",
+        "It is required syntax",
+        "To avoid loops"
+      ],
+      "answer": 0,
+      "explanation": "A trace catches a total that starts wrong, resets, or adds the wrong value before you rely on it."
+    }
+  ]
+}

@@ -1,0 +1,142 @@
+{
+  "unitId": "u59",
+  "lessonId": "u59l10",
+  "title": "You can find the biggest",
+  "idea": "Review-heavy close of the max unit; consolidate and hint that the smallest uses the same pattern flipped.",
+  "exercises": [
+    {
+      "id": "u59l10e01",
+      "type": "multipleChoice",
+      "prompt": "In one sentence, how do you find the biggest value in a list?",
+      "options": [
+        "Keep a best-so-far starting at the first value, and replace it whenever you meet something bigger",
+        "Add every value together",
+        "Count the items",
+        "Print the last value"
+      ],
+      "answer": 0,
+      "explanation": "That is the whole max pattern: a best-so-far you replace on a bigger value."
+    },
+    {
+      "id": "u59l10e02",
+      "type": "multipleChoice",
+      "prompt": "Biggest of [15, 42, 8, 23]?",
+      "options": [
+        "42",
+        "8",
+        "88",
+        "15"
+      ],
+      "answer": 0,
+      "explanation": "42 is the largest. best climbs to 42 and nothing beats it."
+    },
+    {
+      "id": "u59l10e03",
+      "type": "trueFalse",
+      "prompt": "To find the SMALLEST, you would keep a 'best so far' too — but replace when you meet something SMALLER.",
+      "answer": true,
+      "explanation": "A sneak peek at the next unit: smallest is the SAME pattern as biggest, just flipped. You'll change one comparison."
+    },
+    {
+      "id": "u59l10e04",
+      "type": "multipleChoice",
+      "prompt": "If max uses 'if n > best', what comparison would 'find the smallest' likely use?",
+      "options": [
+        "if n < best",
+        "if n == best",
+        "if n > best still",
+        "if n + best"
+      ],
+      "answer": 0,
+      "explanation": "Flip > to < and the same loop finds the smallest. Next unit makes this exact move."
+    },
+    {
+      "id": "u59l10e05",
+      "type": "orderBlocks",
+      "prompt": "REVIEW: put the max program in order one more time.",
+      "answer": [
+        1,
+        0,
+        3,
+        2,
+        4
+      ],
+      "blocks": [
+        "for v in vals:",
+        "best = vals[0]",
+        "        best = v",
+        "    if v > best:",
+        "print(best)"
+      ],
+      "explanation": "Start best, loop, test with >, replace on a win, print. You know this now."
+    },
+    {
+      "id": "u59l10e06",
+      "type": "multipleChoice",
+      "prompt": "REVIEW: 'add up all the donations' uses which tool?",
+      "options": [
+        "sum (running total)",
+        "max",
+        "count",
+        "len"
+      ],
+      "answer": 0,
+      "explanation": "'Add up all' is the running-total sum pattern from Unit 57."
+    },
+    {
+      "id": "u59l10e07",
+      "type": "multipleChoice",
+      "prompt": "REVIEW: 'how many donations were over 100' uses which tool?",
+      "options": [
+        "conditional count",
+        "max",
+        "sum",
+        "len"
+      ],
+      "answer": 0,
+      "explanation": "'How many fit a rule' is the counter-with-if from Unit 58."
+    },
+    {
+      "id": "u59l10e08",
+      "type": "multiSelect",
+      "prompt": "Which statements about max are true? (pick all)",
+      "options": [
+        "Start best at the first value",
+        "Replace best when you meet something bigger",
+        "Start best at 0 for any list",
+        "Max adds the values together"
+      ],
+      "answer": [
+        0,
+        1
+      ],
+      "explanation": "First two are the correct pattern. Starting at 0 breaks on negatives, and adding is sum, not max."
+    },
+    {
+      "id": "u59l10e09",
+      "type": "multipleChoice",
+      "prompt": "Biggest of [-1, -1, -1]?",
+      "options": [
+        "-1",
+        "0",
+        "-3",
+        "3"
+      ],
+      "answer": 0,
+      "explanation": "All equal to -1, so the biggest is -1. Starting at the first value handles all-negative lists."
+    },
+    {
+      "id": "u59l10e10",
+      "type": "multipleChoice",
+      "prompt": "You finished the max unit. What is the big takeaway?",
+      "options": [
+        "A best-so-far that you replace on a bigger value finds the biggest — and flipping the test finds the smallest",
+        "Max is unrelated to everything else",
+        "You must sort first",
+        "Only sorted lists have a biggest"
+      ],
+      "answer": 0,
+      "explanation": "Best-so-far is the core idea, and it flips cleanly to the smallest. That transfer is exactly next unit's point."
+    }
+  ]
+}

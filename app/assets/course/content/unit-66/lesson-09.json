@@ -1,0 +1,132 @@
+{
+  "unitId": "u66",
+  "lessonId": "u66l09",
+  "title": "Predict the buggy output",
+  "idea": "Trace a buggy loop and predict the WRONG number it will actually print, then state what the right answer was.",
+  "exercises": [
+    {
+      "id": "u66l09e01",
+      "type": "multipleChoice",
+      "prompt": "Predict the ACTUAL output:\n\ntotal = 10\nfor n in [1, 2, 3]:\n    total = total + n\nprint(total)",
+      "options": [
+        "16",
+        "6",
+        "10",
+        "3"
+      ],
+      "answer": 0,
+      "explanation": "10 + 1 + 2 + 3 = 16. The right sum is 6; starting at 10 makes it 10 too high. Predicting the wrong value proves you found the bug."
+    },
+    {
+      "id": "u66l09e02",
+      "type": "multipleChoice",
+      "prompt": "That code was meant to print the sum of the list. What SHOULD it have printed?",
+      "options": [
+        "6",
+        "16",
+        "10",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "A plain sum of [1,2,3] is 6. The gap between 16 (actual) and 6 (expected) is caused by the wrong start of 10."
+    },
+    {
+      "id": "u66l09e03",
+      "type": "multipleChoice",
+      "prompt": "Predict the ACTUAL output:\n\ncount = 0\nfor n in [3, 6, 9]:\n    if n > 10:\n        count = count + 1\nprint(count)",
+      "options": [
+        "0",
+        "3",
+        "1",
+        "2"
+      ],
+      "answer": 0,
+      "explanation": "None of 3, 6, 9 is over 10, so count stays 0. If you EXPECTED some to count, the threshold (10) is likely wrong."
+    },
+    {
+      "id": "u66l09e04",
+      "type": "multipleChoice",
+      "prompt": "Predict the ACTUAL output:\n\nfor n in [1, 2, 3]:\n    total = 0\n    total = total + n\nprint(total)",
+      "options": [
+        "3",
+        "6",
+        "0",
+        "1"
+      ],
+      "answer": 0,
+      "explanation": "The reset is inside the loop, so only the last item (3) survives. The right answer was 6; the reset-inside bug cut it to 3."
+    },
+    {
+      "id": "u66l09e05",
+      "type": "multipleChoice",
+      "prompt": "Predict the ACTUAL output:\n\nnums = [10, 20, 30]\nfor i in range(len(nums) - 1):\n    print(nums[i])",
+      "options": [
+        "10 then 20",
+        "10, 20, 30",
+        "20, 30",
+        "30"
+      ],
+      "answer": 0,
+      "explanation": "range(len-1) = range(2) = 0,1, so only nums[0] and nums[1] print. The last item 30 is dropped by the off-by-one."
+    },
+    {
+      "id": "u66l09e06",
+      "type": "multipleChoice",
+      "prompt": "Predict the ACTUAL output:\n\nbest = 0\nfor n in [-2, -5, -1]:\n    if n > best:\n        best = n\nprint(best)",
+      "options": [
+        "0",
+        "-1",
+        "-5",
+        "-2"
+      ],
+      "answer": 0,
+      "explanation": "No negative beats 0, so best stays 0, but the real biggest is -1. Starting best at 0 is the bug."
+    },
+    {
+      "id": "u66l09e07",
+      "type": "multipleChoice",
+      "prompt": "Predict the ACTUAL output:\n\ntotal = 0\nfor n in [4, 5]:\n    total = total + n\n    print(total)",
+      "options": [
+        "4 then 9",
+        "9",
+        "4",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "print is inside the loop, so it shows 4 then 9. If only the final 9 was wanted, print was indented by mistake."
+    },
+    {
+      "id": "u66l09e08",
+      "type": "trueFalse",
+      "prompt": "If you can predict the exact wrong number a buggy loop prints, you understand the bug.",
+      "answer": true,
+      "explanation": "Yes. Predicting the precise wrong output means you've traced the bug's effect. Now you know exactly what to fix."
+    },
+    {
+      "id": "u66l09e09",
+      "type": "multipleChoice",
+      "prompt": "Predict the ACTUAL output:\n\ncount = 1\nfor n in [2, 4]:\n    count = count + 1\nprint(count)",
+      "options": [
+        "3",
+        "2",
+        "1",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "Two passes add 2 to the start of 1, giving 3. A count of the two items should have been 2; the start of 1 is the bug."
+    },
+    {
+      "id": "u66l09e10",
+      "type": "multipleChoice",
+      "prompt": "What makes 'predict the output' such a powerful debugging drill?",
+      "options": [
+        "it forces you to trace the code exactly as the computer would",
+        "it changes the code",
+        "it's faster than reading",
+        "it avoids thinking"
+      ],
+      "answer": 0,
+      "explanation": "Predicting output is tracing in disguise. Do it honestly and the bug's effect appears in the number you predict."
+    }
+  ]
+}

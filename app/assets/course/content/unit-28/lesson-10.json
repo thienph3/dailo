@@ -1,0 +1,147 @@
+{
+  "unitId": "u28",
+  "lessonId": "u28l10",
+  "title": "Nested if: pulling it together",
+  "idea": "Review lesson. Consolidate nested if and interleave earlier decision tools (if/else, elif, and/or/not, comparisons, guards). Lean review-heavy.",
+  "exercises": [
+    {
+      "id": "u28l10e01",
+      "type": "multipleChoice",
+      "prompt": "In one sentence, what is a nested if for?",
+      "options": [
+        "Asking a second question only after the first was answered a certain way",
+        "Repeating a block many times",
+        "Storing a number",
+        "Printing on one line"
+      ],
+      "answer": 0,
+      "explanation": "A choice inside a choice: the inner decision is reached only along a particular outer branch."
+    },
+    {
+      "id": "u28l10e02",
+      "type": "multipleChoice",
+      "prompt": "Trace:\n\nactive = True\nscore = 95\nif active:\n    if score >= 90:\n        print(\"Gold\")\n    elif score >= 70:\n        print(\"Silver\")\n    else:\n        print(\"Bronze\")\nelse:\n    print(\"Inactive\")",
+      "options": [
+        "Gold",
+        "Silver",
+        "Bronze",
+        "Inactive"
+      ],
+      "answer": 0,
+      "explanation": "active is True; 95 >= 90 is True, so 'Gold'. Review: nested if with an inner elif chain."
+    },
+    {
+      "id": "u28l10e03",
+      "type": "multipleChoice",
+      "prompt": "Review elif (no nesting). What prints?\n\nn = 0\nif n > 0:\n    print(\"Positive\")\nelif n < 0:\n    print(\"Negative\")\nelse:\n    print(\"Zero\")",
+      "options": [
+        "Zero",
+        "Positive",
+        "Negative",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "0 is neither > 0 nor < 0, so the else runs: 'Zero'. Review of the flat elif chain from Unit 25."
+    },
+    {
+      "id": "u28l10e04",
+      "type": "multipleChoice",
+      "prompt": "Review and / not. What prints?\n\nopen_now = True\nfull = False\nif open_now and not full:\n    print(\"Come in\")\nelse:\n    print(\"Can't seat you\")",
+      "options": [
+        "Come in",
+        "Can't seat you",
+        "both",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "open_now is True and 'not full' is True (full is False), so both sides hold: 'Come in'. Review of and/not from Unit 26."
+    },
+    {
+      "id": "u28l10e05",
+      "type": "multipleChoice",
+      "prompt": "Review edge-case guard. What prints?\n\ncount = 0\nif count == 0:\n    print(\"Nothing to show\")\nelse:\n    print(\"We have items\")",
+      "options": [
+        "Nothing to show",
+        "We have items",
+        "0",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "The guard catches the empty case first: count == 0 is True, so 'Nothing to show'. Guards were seeded in Unit 24."
+    },
+    {
+      "id": "u28l10e06",
+      "type": "matchPairs",
+      "prompt": "Match each decision tool to what it is for.",
+      "pairs": [
+        {
+          "left": "if / else",
+          "right": "Two outcomes"
+        },
+        {
+          "left": "elif chain",
+          "right": "One of several buckets"
+        },
+        {
+          "left": "nested if",
+          "right": "A second question inside a branch"
+        }
+      ],
+      "explanation": "Each tool fits a shape of problem. Nesting is specifically for a dependent, inside-a-branch question."
+    },
+    {
+      "id": "u28l10e07",
+      "type": "orderBlocks",
+      "prompt": "Arrange: 'If the account exists, allow login when the password matches, else say wrong password; if no account, say not found.'",
+      "blocks": [
+        "if account_exists:",
+        "    if password_ok:",
+        "        print(\"Welcome\")",
+        "    else:",
+        "        print(\"Wrong password\")",
+        "else:",
+        "    print(\"Account not found\")"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "explanation": "The password question only matters once the account exists, so it nests inside that branch. No account skips it entirely."
+    },
+    {
+      "id": "u28l10e08",
+      "type": "trueFalse",
+      "prompt": "If the outer condition of a nested if is False, the inner condition is never evaluated.",
+      "answer": true,
+      "explanation": "Correct, and it is the single most important thing to remember: a False outer gate skips the whole inner block."
+    },
+    {
+      "id": "u28l10e09",
+      "type": "fillBlank",
+      "prompt": "Complete the inner test so a matching password logs the user in:\n\nif account_exists:\n    if password_ok __ True:\n        print(\"Welcome\")\n\n(Type the comparison operator.)",
+      "answer": "==",
+      "acceptable": [
+        "=="
+      ],
+      "explanation": "== compares. A single = would assign and is invalid in a condition. (Writing just 'if password_ok:' would also work.)"
+    },
+    {
+      "id": "u28l10e10",
+      "type": "multipleChoice",
+      "prompt": "You have finished the nested-if unit. What is the key skill you now have?",
+      "options": [
+        "Solving problems that need a second decision after the first",
+        "Repeating actions in a loop",
+        "Storing lists of items",
+        "Defining your own functions"
+      ],
+      "answer": 0,
+      "explanation": "You can now express 'a choice inside a choice' - the second decision that only matters after the first. Next you'll decide based on words."
+    }
+  ]
+}

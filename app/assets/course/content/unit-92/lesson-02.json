@@ -1,0 +1,132 @@
+{
+  "unitId": "u92",
+  "lessonId": "u92l02",
+  "title": "Call a helper on each item",
+  "idea": "TOOL: the cleanest weave - a loop that calls a function once per item, keeping the loop body tiny.",
+  "exercises": [
+    {
+      "type": "multipleChoice",
+      "prompt": "You want to apply the SAME computation to every item in a list. What's the tidiest weave?",
+      "options": [
+        "A loop that calls one helper function per item",
+        "Repeat the code by hand for each item",
+        "One if statement",
+        "No loop at all"
+      ],
+      "answer": 0,
+      "explanation": "Put the per-item work in a function, then let the loop call it each turn. The repeat (loop) reuses the sub-plan (function).",
+      "id": "u92l02e01"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\ndef double(n):\n    return n * 2\n\ntotal = 0\nfor x in [1, 2, 3]:\n    total = total + double(x)\nprint(total)",
+      "options": [
+        "12",
+        "6",
+        "3",
+        "9"
+      ],
+      "answer": 0,
+      "explanation": "double returns 2, 4, 6 for 1, 2, 3. total = 2 + 4 + 6 = 12. The helper does the per-item work; the loop accumulates.",
+      "id": "u92l02e02"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "The function runs once for each turn of the loop.",
+      "answer": true,
+      "explanation": "True. Each loop turn calls the function with the current item, gets a result back, and uses it. One call per item.",
+      "id": "u92l02e03"
+    },
+    {
+      "type": "fillBlank",
+      "prompt": "Complete the call inside the loop:\n\ndef triple(n):\n    return n * 3\n\ntotal = 0\nfor x in [2, 5]:\n    total = total + ____(x)\nprint(total)",
+      "answer": "triple",
+      "acceptable": [
+        "triple"
+      ],
+      "explanation": "Call triple(x) each turn. It returns 6 and 15, so total = 21.",
+      "id": "u92l02e04"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Why return a value from the helper instead of printing inside it?",
+      "options": [
+        "So the loop can USE the result (e.g. add it to a total)",
+        "print is faster",
+        "return breaks loops",
+        "You can't print in a helper"
+      ],
+      "answer": 0,
+      "explanation": "A returned value flows back into the loop to be accumulated or compared. A print would just show it and be gone - the return-vs-print idea.",
+      "id": "u92l02e05"
+    },
+    {
+      "type": "orderBlocks",
+      "prompt": "Arrange a loop that sums each number's square using a helper.",
+      "blocks": [
+        "def square(n):",
+        "    return n * n",
+        "total = 0",
+        "for x in [2, 3]:",
+        "    total = total + square(x)",
+        "print(total)"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "explanation": "Define the helper, start the total, loop calling square(x) each turn, print. square gives 4 and 9, total 13.",
+      "id": "u92l02e06"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\ndef square(n):\n    return n * n\n\ntotal = 0\nfor x in [2, 3]:\n    total = total + square(x)\nprint(total)",
+      "options": [
+        "13",
+        "10",
+        "6",
+        "25"
+      ],
+      "answer": 0,
+      "explanation": "square(2) = 4, square(3) = 9, total = 13. A helper inside a loop, accumulating.",
+      "id": "u92l02e07"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Moving the per-item work into a function makes the loop body short and easy to read.",
+      "answer": true,
+      "explanation": "True. The loop just says 'for each item, use the helper'. The detail lives in the function - clean weaving.",
+      "id": "u92l02e08"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "If the list were EMPTY, how many times would the helper be called?",
+      "options": [
+        "Zero - the loop body never runs",
+        "Once",
+        "As many as the list had before",
+        "It errors"
+      ],
+      "answer": 0,
+      "explanation": "An empty list means no turns, so the helper is never called and total stays at its start.",
+      "id": "u92l02e09"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "The pattern:",
+      "options": [
+        "Loop over items, calling a helper each turn and using what it returns",
+        "Print each item",
+        "Avoid functions in loops",
+        "Use one giant line"
+      ],
+      "answer": 0,
+      "explanation": "A helper-in-a-loop is the backbone of integration: the repeat drives the sub-plan.",
+      "id": "u92l02e10"
+    }
+  ]
+}

@@ -1,0 +1,155 @@
+{
+  "unitId": "u84",
+  "lessonId": "u84l08",
+  "title": "Loop back: a whole small problem, start to finish",
+  "idea": "LOOP (review). Walk one mixed problem through the familiar flow (understand, example, plan, code, check) using tools from several laps — no new concept.",
+  "exercises": [
+    {
+      "id": "u84l08e01",
+      "type": "multipleChoice",
+      "prompt": "PROBLEM: prices = [12, 5, 20, 8]; show the total of the items that cost 10 or less.\n\nWhat is the OUTPUT?",
+      "options": [
+        "One number: the total of items that are 10 or less",
+        "The whole list",
+        "How many items there are",
+        "The most expensive item"
+      ],
+      "answer": 0,
+      "explanation": "Output is a total, but only of the cheap items. Naming the output frames the two parts: filter, then sum."
+    },
+    {
+      "id": "u84l08e02",
+      "type": "multipleChoice",
+      "prompt": "Which two patterns combine here?",
+      "options": [
+        "Filter (keep items 10 or less), then sum the kept items",
+        "Count, then average",
+        "Track the biggest, then add a bonus",
+        "Search, then stop"
+      ],
+      "answer": 0,
+      "explanation": "Keep the affordable ones (filter), then add them up (sum). Two patterns from Lap 4, composed."
+    },
+    {
+      "id": "u84l08e03",
+      "type": "multipleChoice",
+      "prompt": "Example by hand. Items 10 or less are 5 and 8. Their total is...",
+      "options": [
+        "13",
+        "25",
+        "45",
+        "20"
+      ],
+      "answer": 0,
+      "explanation": "5 + 8 = 13. The 12 and 20 are over budget and excluded. The hand answer is what we check against."
+    },
+    {
+      "id": "u84l08e04",
+      "type": "trueFalse",
+      "prompt": "The 10-or-less rule uses <=, so an item priced exactly 10 would be included.",
+      "answer": true,
+      "explanation": "Yes — 'or less' means <=, including the boundary 10. Here there is no 10, but the rule still matters."
+    },
+    {
+      "id": "u84l08e05",
+      "type": "orderBlocks",
+      "prompt": "Plan it. Put the steps in order.",
+      "blocks": [
+        "Keep only items that are 10 or less",
+        "Add up the kept items into a total",
+        "Show the total"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Filter first, then sum the survivors, then show. The filter's output feeds the sum."
+    },
+    {
+      "id": "u84l08e06",
+      "type": "multipleChoice",
+      "prompt": "Will a sum helper need an empty guard if the filter keeps nothing?",
+      "options": [
+        "No — summing an empty list safely gives 0",
+        "Yes — it will crash",
+        "Yes — it returns the biggest",
+        "Only on Tuesdays"
+      ],
+      "answer": 0,
+      "explanation": "Summing handles empty fine (total stays 0). Unlike averaging, no guard is needed — an edge-case review from this lap."
+    },
+    {
+      "id": "u84l08e07",
+      "type": "orderBlocks",
+      "prompt": "Code it. Arrange: a cheap helper that filters, a total helper that sums, then compose.",
+      "blocks": [
+        "def cheap(prices, budget):",
+        "    kept = []",
+        "    for price in prices:",
+        "        if price <= budget:",
+        "            kept.append(price)",
+        "    return kept",
+        "def total_of(items):",
+        "    total = 0",
+        "    for x in items:",
+        "        total = total + x",
+        "    return total",
+        "prices = [12, 5, 20, 8]",
+        "print(total_of(cheap(prices, 10)))"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "explanation": "cheap returns [5, 8]; total_of sums it to 13. Two by-hand patterns composed — filter feeding sum. No builtins."
+    },
+    {
+      "id": "u84l08e08",
+      "type": "fillBlank",
+      "prompt": "Complete the composition so the cheap items are summed:\n\nprices = [12, 5, 20, 8]\nprint(total_of(_____(prices, 10)))",
+      "answer": "cheap",
+      "acceptable": [
+        "cheap"
+      ],
+      "explanation": "cheap(prices, 10) returns [5, 8] first; total_of sums it to 13. Inner result feeds the outer helper."
+    },
+    {
+      "id": "u84l08e09",
+      "type": "multipleChoice",
+      "prompt": "Check — the code prints 13; your example said 13. So...",
+      "options": [
+        "It passes — output matches the example",
+        "It fails",
+        "Cannot tell",
+        "Change the example"
+      ],
+      "answer": 0,
+      "explanation": "Output 13 matches your hand-worked 13. The filter-then-sum composition is correct."
+    },
+    {
+      "id": "u84l08e10",
+      "type": "multipleChoice",
+      "prompt": "Re-check with budget 20 on the same prices. Kept: 12, 5, 20, 8 (all <= 20); total...",
+      "options": [
+        "45",
+        "13",
+        "25",
+        "20"
+      ],
+      "answer": 0,
+      "explanation": "12 + 5 + 20 + 8 = 45. A bigger budget keeps more items. The composed solution works for new inputs — breaking down pays off."
+    }
+  ]
+}

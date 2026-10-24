@@ -1,0 +1,134 @@
+{
+  "unitId": "u22",
+  "lessonId": "u22l02",
+  "title": "else lines up with its if",
+  "idea": "The else keyword sits at the same indentation as its if, with its own indented branch below. Getting the shape right matters.",
+  "exercises": [
+    {
+      "id": "u22l02e01",
+      "type": "multipleChoice",
+      "prompt": "Where does else line up?",
+      "options": [
+        "At the same indentation as its if",
+        "Indented under the if branch",
+        "At the end of the if line",
+        "Anywhere"
+      ],
+      "answer": 0,
+      "explanation": "else lines up with if (same left edge). Its own guarded step is then indented below it."
+    },
+    {
+      "id": "u22l02e02",
+      "type": "multipleChoice",
+      "prompt": "What ends the else line?",
+      "options": [
+        "a colon :",
+        "a semicolon ;",
+        "nothing",
+        "a comma ,"
+      ],
+      "answer": 0,
+      "explanation": "Like if, the else line ends with a colon, introducing its branch below."
+    },
+    {
+      "id": "u22l02e03",
+      "type": "multipleChoice",
+      "prompt": "Which shape is correct?",
+      "options": [
+        "if x > 0:\n    print(\"pos\")\nelse:\n    print(\"not pos\")",
+        "if x > 0:\n    print(\"pos\")\n    else:\n    print(\"not pos\")",
+        "if x > 0:\nprint(\"pos\")\nelse\nprint(\"not pos\")",
+        "if x > 0 else:"
+      ],
+      "answer": 0,
+      "explanation": "if and else share the same indentation, each with a colon and an indented branch below."
+    },
+    {
+      "id": "u22l02e04",
+      "type": "trueFalse",
+      "prompt": "The branch under else must be indented, just like the branch under if.",
+      "answer": true,
+      "explanation": "Yes - each branch's guarded step is indented beneath its keyword line."
+    },
+    {
+      "id": "u22l02e05",
+      "type": "multipleChoice",
+      "prompt": "What's wrong?\n\nif x > 0:\n    print(\"pos\")\n    else:\n        print(\"neg\")",
+      "options": [
+        "else is indented; it must line up with if",
+        "Nothing",
+        "Missing colon on if",
+        "print is wrong"
+      ],
+      "answer": 0,
+      "explanation": "else is wrongly indented under the if branch. It must sit at the same left edge as if."
+    },
+    {
+      "id": "u22l02e06",
+      "type": "fillBlank",
+      "prompt": "Add the symbol that ends the else line:\n\nif win:\n    print(\"Yay\")\nelse____\n    print(\"Aww\")",
+      "answer": ":",
+      "acceptable": [
+        ":"
+      ],
+      "explanation": "else ends with a colon, just like if."
+    },
+    {
+      "id": "u22l02e07",
+      "type": "orderBlocks",
+      "prompt": "Arrange a correct if/else that prints 'big' or 'small'.",
+      "blocks": [
+        "    print(\"small\")",
+        "if n > 10:",
+        "else:",
+        "    print(\"big\")"
+      ],
+      "answer": [
+        1,
+        3,
+        2,
+        0
+      ],
+      "explanation": "if line, its indented 'big', then else at the same level, then its indented 'small'."
+    },
+    {
+      "id": "u22l02e08",
+      "type": "multipleChoice",
+      "prompt": "What's wrong?\n\nif x > 0:\n    print(\"pos\")\nelse\n    print(\"neg\")",
+      "options": [
+        "else is missing its colon",
+        "if is missing a colon",
+        "Nothing",
+        "x is undefined"
+      ],
+      "answer": 0,
+      "explanation": "The else line needs a colon: else:. Without it, Python reports an error."
+    },
+    {
+      "id": "u22l02e09",
+      "type": "multipleChoice",
+      "prompt": "What does this print?\n\nn = 2\nif n > 10:\n    print(\"big\")\nelse:\n    print(\"small\")",
+      "options": [
+        "small",
+        "big",
+        "both",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "2 > 10 is False, so the else branch runs: small."
+    },
+    {
+      "id": "u22l02e10",
+      "type": "multipleChoice",
+      "prompt": "Why does the shape (lining up, colons, indentation) matter for else?",
+      "options": [
+        "Python uses it to pair else with the right if and find each branch",
+        "It is only for looks",
+        "It changes the numbers",
+        "It does not matter"
+      ],
+      "answer": 0,
+      "explanation": "The layout tells Python which if the else belongs to and which steps are in each branch."
+    }
+  ]
+}

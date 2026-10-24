@@ -1,0 +1,139 @@
+{
+  "unitId": "u63",
+  "lessonId": "u63l10",
+  "title": "Filter wrap-up and review",
+  "idea": "TOOL wrap-up (review-heavy): recall the filter pattern and mix in sum, count, max, len from earlier units.",
+  "exercises": [
+    {
+      "type": "orderBlocks",
+      "prompt": "From memory, arrange the filter pattern.",
+      "blocks": [
+        "result = []",
+        "for n in nums:",
+        "    if n > 5:",
+        "        result.append(n)",
+        "print(result)"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "explanation": "Empty list, loop, test, append-inside-if, print. This is the shape you now know by heart.",
+      "id": "u63l10e01"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nnums = [3, 8, 5, 9]\nresult = []\nfor n in nums:\n    if n >= 5:\n        result.append(n)\nprint(result)",
+      "options": [
+        "[8, 5, 9]",
+        "[3]",
+        "[3, 8, 5, 9]",
+        "[]"
+      ],
+      "answer": 0,
+      "explanation": "8, 5 and 9 are all 5 or more, so they are kept in order. 3 is skipped.",
+      "id": "u63l10e02"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "REVIEW (Unit 57): what is sum([2, 4, 6])?",
+      "options": [
+        "12",
+        "3",
+        "6",
+        "246"
+      ],
+      "answer": 0,
+      "explanation": "sum adds the items: 2 + 4 + 6 = 12. You often filter first, then sum the keepers.",
+      "id": "u63l10e03"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "REVIEW (Unit 58): what is len([7, 7, 7])?",
+      "options": [
+        "3",
+        "7",
+        "21",
+        "1"
+      ],
+      "answer": 0,
+      "explanation": "len counts the items, giving 3. len(result) after a filter tells you how many passed.",
+      "id": "u63l10e04"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "REVIEW (Unit 59): what is max([4, 9, 2])?",
+      "options": [
+        "9",
+        "4",
+        "2",
+        "15"
+      ],
+      "answer": 0,
+      "explanation": "max finds the biggest item, 9. You can take the max of a filtered list to find the biggest keeper.",
+      "id": "u63l10e05"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Combine tools: predict the output.\n\nnums = [1, 6, 3, 8]\nbig = []\nfor n in nums:\n    if n > 4:\n        big.append(n)\nprint(sum(big))",
+      "options": [
+        "14",
+        "4",
+        "[6, 8]",
+        "2"
+      ],
+      "answer": 0,
+      "explanation": "The filter keeps 6 and 8, then sum(big) is 6 + 8 = 14. Filter, then reuse sum on the result.",
+      "id": "u63l10e06"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "REVIEW: a 'for n in nums' loop visits each item in the list once, in order.",
+      "answer": true,
+      "explanation": "That is the for-item-in-list loop from Unit 56. The filter rides on top of it, testing each item as it visits.",
+      "id": "u63l10e07"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Which ONE line is the heart of a filter — the part that keeps an item?",
+      "options": [
+        "result.append(n) inside the if",
+        "result = []",
+        "print(result)",
+        "for n in nums:"
+      ],
+      "answer": 0,
+      "explanation": "append-inside-the-if is where a keeper is actually collected. Everything else is scaffolding around it.",
+      "id": "u63l10e08"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nnums = [2, 2, 9, 2]\nresult = []\nfor n in nums:\n    if n == 2:\n        result.append(n)\nprint(len(result))",
+      "options": [
+        "3",
+        "1",
+        "4",
+        "9"
+      ],
+      "answer": 0,
+      "explanation": "The three 2s pass n == 2 and are kept; len(result) counts them as 3. Duplicates each count.",
+      "id": "u63l10e09"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "You now can solve 'keep only the ones that...' problems. What is the general recipe?",
+      "options": [
+        "start an empty list, loop every item, append the ones that pass a test, use the result",
+        "add everything up",
+        "sort then stop",
+        "find the biggest only"
+      ],
+      "answer": 0,
+      "explanation": "Empty list, loop, test, append the keepers — then sum, count, or print the result. That is filtering.",
+      "id": "u63l10e10"
+    }
+  ]
+}

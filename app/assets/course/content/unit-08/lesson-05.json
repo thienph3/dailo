@@ -1,0 +1,139 @@
+{
+  "unitId": "u08",
+  "lessonId": "u08l05",
+  "title": "Keeping two boxes at once",
+  "idea": "You can have several variables, each with its own name and value. Each box keeps its own value.",
+  "exercises": [
+    {
+      "id": "u08l05e01",
+      "type": "multipleChoice",
+      "prompt": "What does this show?\n\napples = 3\nbananas = 5\nprint(apples)\nprint(bananas)",
+      "options": [
+        "3, then 5",
+        "5, then 3",
+        "apples, then bananas",
+        "8"
+      ],
+      "answer": 0,
+      "explanation": "Two boxes, two values. print(apples) shows 3; print(bananas) shows 5. Each box keeps its own value."
+    },
+    {
+      "id": "u08l05e02",
+      "type": "trueFalse",
+      "prompt": "A program can have more than one variable at the same time.",
+      "answer": true,
+      "explanation": "Yes. Each variable is its own box with its own name and value."
+    },
+    {
+      "id": "u08l05e03",
+      "type": "multipleChoice",
+      "prompt": "Two boxes:\n\ncats = 2\ndogs = 4\n\nWhat does print(dogs) show?",
+      "options": [
+        "4",
+        "2",
+        "dogs",
+        "6"
+      ],
+      "answer": 0,
+      "explanation": "print(dogs) opens the dogs box, which holds 4. The cats box is separate."
+    },
+    {
+      "id": "u08l05e04",
+      "type": "matchPairs",
+      "prompt": "Each box holds its own value. Match the variable to what print shows.\n\nred = 1\nblue = 8",
+      "pairs": [
+        {
+          "left": "print(red)",
+          "right": "1"
+        },
+        {
+          "left": "print(blue)",
+          "right": "8"
+        }
+      ],
+      "explanation": "Each name opens its own box: red holds 1, blue holds 8."
+    },
+    {
+      "id": "u08l05e05",
+      "type": "multipleChoice",
+      "prompt": "What does this show?\n\nfirst = 10\nsecond = 20\nprint(second)\nprint(first)",
+      "options": [
+        "20, then 10",
+        "10, then 20",
+        "first, then second",
+        "30"
+      ],
+      "answer": 0,
+      "explanation": "Order of the print lines decides what shows first: second (20), then first (10)."
+    },
+    {
+      "id": "u08l05e06",
+      "type": "tapTokens",
+      "prompt": "You already stored width and height. Build a line that shows the value of height.",
+      "tokens": [
+        "print",
+        "(",
+        "height",
+        ")"
+      ],
+      "answer": [
+        "print",
+        "(",
+        "height",
+        ")"
+      ],
+      "explanation": "print(height) opens the height box and shows its value. The width box is untouched."
+    },
+    {
+      "id": "u08l05e07",
+      "type": "trueFalse",
+      "prompt": "Storing a value in one variable also changes the value in another variable.",
+      "answer": false,
+      "explanation": "No. Each box is separate. Filling one box does not touch any other box."
+    },
+    {
+      "id": "u08l05e08",
+      "type": "orderBlocks",
+      "prompt": "Put these lines in order: store two values, then show both (pens first, then erasers).",
+      "blocks": [
+        "pens = 6",
+        "erasers = 2",
+        "print(pens)",
+        "print(erasers)"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "Fill both boxes first, then read them. Reading order sets the output order."
+    },
+    {
+      "id": "u08l05e09",
+      "type": "multipleChoice",
+      "prompt": "Review from earlier units: print(\"Hello\") shows what?",
+      "options": [
+        "Hello",
+        "\"Hello\"",
+        "a variable named Hello",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "Quotes mean plain text, shown exactly: Hello. (No box involved here.)"
+    },
+    {
+      "id": "u08l05e10",
+      "type": "multipleChoice",
+      "prompt": "Spot the mix-up. Which print shows the VALUE 5, given 'coins = 5'?",
+      "options": [
+        "print(coins)",
+        "print(\"coins\")",
+        "print(\"5\")",
+        "print(\"coins = 5\")"
+      ],
+      "answer": 0,
+      "explanation": "Only print(coins) — no quotes — opens the box and shows its value, 5."
+    }
+  ]
+}

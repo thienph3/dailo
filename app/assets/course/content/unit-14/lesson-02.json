@@ -1,0 +1,122 @@
+{
+  "unitId": "u14",
+  "lessonId": "u14l02",
+  "title": "Solve it: how many full boxes",
+  "idea": "GUIDED PROBLEM. Packing items into boxes uses // for the number of FULL boxes. Pairs with lesson 1's % so learners feel the difference. Every value named.",
+  "problem": "You have 23 eggs and each box holds 6 eggs. Show how many FULL boxes you can fill.",
+  "exercises": [
+    {
+      "id": "u14l02e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: 23 eggs, each box holds 6. Show how many FULL boxes.\n\nUnderstand — what is the OUTPUT?",
+      "options": [
+        "The number of completely full boxes",
+        "The number of eggs left over",
+        "The number of eggs",
+        "The size of a box"
+      ],
+      "answer": 0,
+      "explanation": "The output is full boxes. A box only counts if it is completely filled."
+    },
+    {
+      "id": "u14l02e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "What are the INPUTS?",
+      "options": [
+        "The number of eggs (23) and the box size (6)",
+        "Only the number 3",
+        "The word 'boxes'",
+        "None"
+      ],
+      "answer": 0,
+      "explanation": "Two inputs: 23 eggs and a box size of 6. Both become named variables."
+    },
+    {
+      "id": "u14l02e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example by hand: 23 eggs, 6 per box. How many boxes fill up completely?",
+      "options": ["3", "4", "5", "2"],
+      "answer": 0,
+      "explanation": "6 + 6 + 6 = 18 fills 3 boxes; the 5 remaining eggs can't fill a 4th. So 3 full boxes. Check value: 3."
+    },
+    {
+      "id": "u14l02e04",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Plan — which operator gives the number of FULL groups (whole division, dropping the leftover)?",
+      "options": [
+        "// (whole division)",
+        "% (remainder)",
+        "/ (normal divide)",
+        "- (subtract)"
+      ],
+      "answer": 0,
+      "explanation": "// divides and keeps only the whole number — exactly the count of full boxes. % would give the leftover eggs instead."
+    },
+    {
+      "id": "u14l02e05",
+      "type": "trueFalse",
+      "uepcc": "P",
+      "prompt": "For 'how many full groups', plain / is a better choice than // here.",
+      "answer": false,
+      "explanation": "No. 23 / 6 gives 3.83..., but you can't fill 0.83 of a box. // drops the fraction and gives the whole count, 3."
+    },
+    {
+      "id": "u14l02e06",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Put the plan in order.",
+      "blocks": [
+        "Work out full boxes with //",
+        "Remember the eggs and the box size",
+        "Show the number of full boxes"
+      ],
+      "answer": [1, 0, 2],
+      "explanation": "Remember inputs, compute full boxes with //, show the result."
+    },
+    {
+      "id": "u14l02e07",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Complete the full-boxes step:\n\neggs = 23\nbox_size = 6\nfull_boxes = eggs ____ box_size\nprint(full_boxes)",
+      "answer": "//",
+      "acceptable": ["//"],
+      "explanation": "// gives whole division: 23 // 6 = 3. full_boxes holds 3."
+    },
+    {
+      "id": "u14l02e08",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Arrange the full solution.",
+      "blocks": [
+        "eggs = 23",
+        "box_size = 6",
+        "full_boxes = eggs // box_size",
+        "print(full_boxes)"
+      ],
+      "answer": [0, 1, 2, 3],
+      "explanation": "Store eggs, store box size, whole-divide into full_boxes, print. Every number from the problem is named."
+    },
+    {
+      "id": "u14l02e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "The code prints 3. Hand example said 3. Verdict?",
+      "options": ["Passes", "Fails", "Unknown", "Rewrite example"],
+      "answer": 0,
+      "explanation": "Output matches the example, so the solution is correct."
+    },
+    {
+      "id": "u14l02e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "New numbers: 30 eggs, box size 7. Same code (full_boxes = eggs // box_size). What shows?",
+      "options": ["4", "5", "2", "3"],
+      "answer": 0,
+      "explanation": "30 // 7 = 4 (4 boxes use 28; 2 eggs left can't fill a 5th). The plan handles new inputs."
+    }
+  ]
+}

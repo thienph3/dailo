@@ -1,0 +1,133 @@
+{
+  "unitId": "u66",
+  "lessonId": "u66l04",
+  "title": "The wrong starting value",
+  "idea": "A sum must start at 0; a count must start at 0; a 'best so far' must start at the first item or negatives break it. Spot bad starts.",
+  "exercises": [
+    {
+      "id": "u66l04e01",
+      "type": "multipleChoice",
+      "prompt": "To ADD UP a list of numbers, what should the total start at?",
+      "options": [
+        "0",
+        "1",
+        "the first item twice",
+        "the length"
+      ],
+      "answer": 0,
+      "explanation": "Adding starts from 0, the 'nothing yet' value for a sum. Start at anything else and every total is off."
+    },
+    {
+      "id": "u66l04e02",
+      "type": "multipleChoice",
+      "prompt": "BUGGY: total should be the sum of [2, 3, 4] = 9.\n\ntotal = 5\nfor n in [2, 3, 4]:\n    total = total + n\n\nWhat prints, and why is it wrong?",
+      "options": [
+        "14 — it started at 5 instead of 0, so it's 5 too high",
+        "9 — it's fine",
+        "0",
+        "2"
+      ],
+      "answer": 0,
+      "explanation": "5 + 2 + 3 + 4 = 14. The bug is the starting value: a sum must begin at 0, not 5."
+    },
+    {
+      "id": "u66l04e03",
+      "type": "multipleChoice",
+      "prompt": "To COUNT how many items pass a test, what should the counter start at?",
+      "options": [
+        "0",
+        "1",
+        "the first item",
+        "the total"
+      ],
+      "answer": 0,
+      "explanation": "Counting starts at 0 because you have counted nothing yet. Starting at 1 makes every count one too many."
+    },
+    {
+      "id": "u66l04e04",
+      "type": "multipleChoice",
+      "prompt": "BUGGY: count should be how many are > 4 in [5, 2, 9] (answer: 2).\n\ncount = 1\nfor n in [5, 2, 9]:\n    if n > 4:\n        count = count + 1\n\nWhat prints?",
+      "options": [
+        "3 — one too many, because it started at 1",
+        "2",
+        "1",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "Real matches are 5 and 9 (two), but starting at 1 gives 1 + 2 = 3. The wrong start adds a phantom item."
+    },
+    {
+      "id": "u66l04e05",
+      "type": "trueFalse",
+      "prompt": "Starting a sum at 0 and a count at 0 are both correct 'empty' starting points.",
+      "answer": true,
+      "explanation": "Yes. 0 means 'nothing added yet' and 'nothing counted yet'. Both accumulators start empty, which is 0."
+    },
+    {
+      "id": "u66l04e06",
+      "type": "multipleChoice",
+      "prompt": "Finding the BIGGEST of [3, 7, 5] by tracking a 'best so far'. A safe starting value for best is...",
+      "options": [
+        "the FIRST item of the list",
+        "0",
+        "100",
+        "the length"
+      ],
+      "answer": 0,
+      "explanation": "Start best at the first item, then compare the rest. Starting at 0 can be wrong, especially if the list has negative numbers."
+    },
+    {
+      "id": "u66l04e07",
+      "type": "multipleChoice",
+      "prompt": "BUGGY with negatives: find the biggest of [-5, -2, -9].\n\nbest = 0\nfor n in [-5, -2, -9]:\n    if n > best:\n        best = n\n\nWhat prints, and why is it wrong?",
+      "options": [
+        "0 — but 0 isn't even in the list; best should be -2",
+        "-2",
+        "-9",
+        "-5"
+      ],
+      "answer": 0,
+      "explanation": "No negative is greater than 0, so best stays 0, a value not in the list. Start best at the first item (-5) instead."
+    },
+    {
+      "id": "u66l04e08",
+      "type": "matchPairs",
+      "prompt": "Match each task to its correct STARTING value.",
+      "pairs": [
+        {
+          "left": "Sum a list",
+          "right": "0"
+        },
+        {
+          "left": "Count matches",
+          "right": "0"
+        },
+        {
+          "left": "Track the biggest",
+          "right": "the first item"
+        }
+      ],
+      "explanation": "Sums and counts start at 0 (nothing yet); 'biggest so far' starts at the first real item so negatives work."
+    },
+    {
+      "id": "u66l04e09",
+      "type": "trueFalse",
+      "prompt": "A wrong starting value can make code that looks correct give an answer that is off by a fixed amount.",
+      "answer": true,
+      "explanation": "Exactly. Start a sum at 5 and every answer is 5 too high. The loop body can be perfect and the start still ruins it."
+    },
+    {
+      "id": "u66l04e10",
+      "type": "multipleChoice",
+      "prompt": "When an accumulating loop is 'off by a constant' or ignores negatives, check...",
+      "options": [
+        "the starting value before the loop",
+        "the print statement",
+        "the list's name",
+        "the file name"
+      ],
+      "answer": 0,
+      "explanation": "A constant offset or a negatives problem almost always traces back to the wrong starting value. Check it first."
+    }
+  ]
+}

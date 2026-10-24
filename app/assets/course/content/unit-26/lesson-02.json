@@ -1,0 +1,136 @@
+{
+  "unitId": "u26",
+  "lessonId": "u26l02",
+  "title": "Meet 'or': at least one is enough",
+  "idea": "'or' joins two conditions into one that is True when AT LEAST ONE is True. Meet it with visible output.",
+  "exercises": [
+    {
+      "id": "u26l02e01",
+      "type": "multipleChoice",
+      "prompt": "'A or B' is True when...",
+      "options": [
+        "at least one of A or B is True",
+        "both must be True",
+        "both are False",
+        "never"
+      ],
+      "answer": 0,
+      "explanation": "'or' is generous: if either side (or both) is True, the whole thing is True."
+    },
+    {
+      "id": "u26l02e02",
+      "type": "multipleChoice",
+      "prompt": "What is the value of this?\n\nFalse or True",
+      "options": [
+        "True",
+        "False",
+        "neither",
+        "an error"
+      ],
+      "answer": 0,
+      "explanation": "One side is True, and 'or' only needs one, so the result is True."
+    },
+    {
+      "id": "u26l02e03",
+      "type": "multipleChoice",
+      "prompt": "What is the value of this?\n\nFalse or False",
+      "options": [
+        "False",
+        "True",
+        "neither",
+        "an error"
+      ],
+      "answer": 0,
+      "explanation": "Both sides are False, so 'or' has nothing True to grab - the result is False."
+    },
+    {
+      "id": "u26l02e04",
+      "type": "multipleChoice",
+      "prompt": "What does this print?\n\nis_weekend = False\nis_holiday = True\nif is_weekend or is_holiday:\n    print(\"Day off\")\nelse:\n    print(\"Work\")",
+      "options": [
+        "Day off",
+        "Work",
+        "both",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "is_holiday is True, and 'or' needs only one True side, so 'Day off' prints."
+    },
+    {
+      "id": "u26l02e05",
+      "type": "multipleChoice",
+      "prompt": "Same code, but both are False. What prints?",
+      "options": [
+        "Work",
+        "Day off",
+        "both",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "With both False, 'or' is False, so the else runs: 'Work'."
+    },
+    {
+      "id": "u26l02e06",
+      "type": "trueFalse",
+      "prompt": "'or' is True even if only one of the conditions is True.",
+      "answer": true,
+      "explanation": "Yes - one True side is enough for 'or'. It is only False when every side is False."
+    },
+    {
+      "id": "u26l02e07",
+      "type": "matchPairs",
+      "prompt": "Match each 'or' expression to its value.",
+      "pairs": [
+        {
+          "left": "True or False",
+          "right": "True"
+        },
+        {
+          "left": "False or True",
+          "right": "True"
+        },
+        {
+          "left": "False or False",
+          "right": "False"
+        }
+      ],
+      "explanation": "'or' is True whenever at least one side is True, and False only when all sides are False."
+    },
+    {
+      "id": "u26l02e08",
+      "type": "fillBlank",
+      "prompt": "Join two conditions so EITHER is enough:\n\nif is_member ____ has_coupon:\n    print(\"Discount\")",
+      "answer": "or",
+      "acceptable": [
+        "or"
+      ],
+      "explanation": "'or' grants the discount if is_member is True OR has_coupon is True - either one suffices."
+    },
+    {
+      "id": "u26l02e09",
+      "type": "multipleChoice",
+      "prompt": "Which everyday rule is an 'or'?",
+      "options": [
+        "Free entry if you are a member OR under 12",
+        "Free entry if member AND under 12",
+        "Free entry for nobody",
+        "Free entry always"
+      ],
+      "answer": 0,
+      "explanation": "'Either qualifies' is the signature of 'or'. Being a member alone, or being under 12 alone, is enough."
+    },
+    {
+      "id": "u26l02e10",
+      "type": "multipleChoice",
+      "prompt": "The big idea of 'or' is...",
+      "options": [
+        "combine conditions so at least one True makes it True",
+        "require all to be True",
+        "flip a condition",
+        "ignore conditions"
+      ],
+      "answer": 0,
+      "explanation": "'or' solves 'either ...' problems: any one True condition is enough."
+    }
+  ]
+}

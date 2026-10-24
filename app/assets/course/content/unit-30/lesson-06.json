@@ -1,0 +1,128 @@
+{
+  "unitId": "u30",
+  "lessonId": "u30l06",
+  "title": "Ask a number, then grade it",
+  "idea": "Combine int(input()) with a band chain: ask a number, convert it, and classify. Predict the band for typed values.",
+  "exercises": [
+    {
+      "id": "u30l06e01",
+      "type": "multipleChoice",
+      "prompt": "To ask a score and grade it into bands, the first step is...",
+      "options": [
+        "read it with input() and convert with int()",
+        "print the grade immediately",
+        "guess the number",
+        "skip the input"
+      ],
+      "answer": 0,
+      "explanation": "Get the number first: score = int(input(...)). Then an if/elif chain can compare it."
+    },
+    {
+      "id": "u30l06e02",
+      "type": "multipleChoice",
+      "prompt": "The user types 85:\n\nscore = int(input(\"Score: \"))\nif score >= 90:\n    print(\"A\")\nelif score >= 70:\n    print(\"B\")\nelse:\n    print(\"C\")\n\nWhat prints?",
+      "options": [
+        "B",
+        "A",
+        "C",
+        "85"
+      ],
+      "answer": 0,
+      "explanation": "85 fails 90+ but passes 70+, so it lands on B. int() made the comparison a real number test."
+    },
+    {
+      "id": "u30l06e03",
+      "type": "multipleChoice",
+      "prompt": "Same code, the user types 95. What prints?",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "95"
+      ],
+      "answer": 0,
+      "explanation": "95 passes the first band (90+), so \"A\" prints and the chain stops. Strictest band first."
+    },
+    {
+      "id": "u30l06e04",
+      "type": "multipleChoice",
+      "prompt": "Same code, the user types 50. What prints?",
+      "options": [
+        "C",
+        "B",
+        "A",
+        "50"
+      ],
+      "answer": 0,
+      "explanation": "50 fails both 90+ and 70+, so it falls to the else: \"C\"."
+    },
+    {
+      "id": "u30l06e05",
+      "type": "multipleChoice",
+      "prompt": "If you FORGOT the int() and compared the string \"85\" to 90, what is the risk?",
+      "options": [
+        "A type error or wrong behavior - text is not a number",
+        "It works perfectly",
+        "It prints 85",
+        "The bands reverse"
+      ],
+      "answer": 0,
+      "explanation": "Comparing text to a number is invalid. Always int() a numeric input before number comparisons."
+    },
+    {
+      "id": "u30l06e06",
+      "type": "fillBlank",
+      "prompt": "Convert the typed score to a number:\n\nscore = ____(input(\"Score: \"))",
+      "answer": "int",
+      "acceptable": ["int"],
+      "explanation": "int() turns the typed digits into a whole number ready for the band comparisons."
+    },
+    {
+      "id": "u30l06e07",
+      "type": "orderBlocks",
+      "prompt": "Arrange an age gate: ask the age, convert it, then 18+ prints \"Enter\" else \"Too young\".",
+      "blocks": [
+        "age = int(input(\"Age: \"))",
+        "if age >= 18:",
+        "    print(\"Enter\")",
+        "else:",
+        "    print(\"Too young\")"
+      ],
+      "answer": [0, 1, 2, 3, 4],
+      "explanation": "Ask and convert in one line, then branch on the number. Ask, convert, react."
+    },
+    {
+      "id": "u30l06e08",
+      "type": "multipleChoice",
+      "prompt": "For that age gate, the user types 18. What prints?",
+      "options": [
+        "Enter",
+        "Too young",
+        "18",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "18 >= 18 is True (the edge counts with >=), so \"Enter\" prints."
+    },
+    {
+      "id": "u30l06e09",
+      "type": "trueFalse",
+      "prompt": "int(input(...)) reads text and converts it to a number in one combined step.",
+      "answer": true,
+      "explanation": "Yes - input() runs first (inner), then int() wraps its result. One line, two actions."
+    },
+    {
+      "id": "u30l06e10",
+      "type": "multipleChoice",
+      "prompt": "The pattern for numeric input:",
+      "options": [
+        "Ask with input(), convert with int(), then compare or compute",
+        "Ask and compare raw text",
+        "Never convert",
+        "Only print"
+      ],
+      "answer": 0,
+      "explanation": "Ask, convert, then use. This unlocks number-driven decisions from user input."
+    }
+  ]
+}

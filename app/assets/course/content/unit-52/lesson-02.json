@@ -1,0 +1,128 @@
+{
+  "unitId": "u52",
+  "lessonId": "u52l02",
+  "title": "Why counting starts at zero",
+  "idea": "Lists count positions from 0. The index of a value is one LESS than its everyday 'first, second, third'. Build that habit.",
+  "exercises": [
+    {
+      "id": "u52l02e01",
+      "type": "multipleChoice",
+      "prompt": "In everyday life the first item is 'number 1'. In a list, what index is the first item?",
+      "options": [
+        "0",
+        "1",
+        "-1",
+        "It has no index"
+      ],
+      "answer": 0,
+      "explanation": "Lists start counting at 0. So the everyday 'first' is index 0. This off-by-one feeling fades with practice."
+    },
+    {
+      "id": "u52l02e02",
+      "type": "multipleChoice",
+      "prompt": "The THIRD item of a list is at which index?",
+      "options": [
+        "2",
+        "3",
+        "1",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "Index is one less than the everyday count: first is 0, second is 1, third is 2. So the third item lives at index 2."
+    },
+    {
+      "id": "u52l02e03",
+      "type": "matchPairs",
+      "prompt": "Match each everyday position to its list index.",
+      "pairs": [
+        {
+          "left": "First",
+          "right": "0"
+        },
+        {
+          "left": "Second",
+          "right": "1"
+        },
+        {
+          "left": "Fourth",
+          "right": "3"
+        }
+      ],
+      "explanation": "Always one less: first -> 0, second -> 1, fourth -> 3. Subtract one from the everyday count to get the index."
+    },
+    {
+      "id": "u52l02e04",
+      "type": "trueFalse",
+      "prompt": "For a list, the index of the 'fifth' item is 4.",
+      "answer": true,
+      "explanation": "Yes. Fifth in everyday counting is index 4, because the first is index 0. One less, every time."
+    },
+    {
+      "id": "u52l02e05",
+      "type": "multipleChoice",
+      "prompt": "nums = [10, 20, 30, 40]. You want the value 30 (the third one). Which index?",
+      "options": [
+        "nums[2]",
+        "nums[3]",
+        "nums[30]",
+        "nums[1]"
+      ],
+      "answer": 0,
+      "explanation": "Positions: 10 at 0, 20 at 1, 30 at 2, 40 at 3. The third value, 30, is at index 2."
+    },
+    {
+      "id": "u52l02e06",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nletters = [\"a\", \"b\", \"c\", \"d\"]\nprint(letters[3])",
+      "options": [
+        "d",
+        "c",
+        "a",
+        "4"
+      ],
+      "answer": 0,
+      "explanation": "Index 3 is the FOURTH item. a is 0, b is 1, c is 2, d is 3. So letters[3] gives \"d\"."
+    },
+    {
+      "id": "u52l02e07",
+      "type": "fillBlank",
+      "prompt": "To get the FOURTH value of a list, what index goes in the brackets?\n\nprint(data[____])",
+      "answer": "3",
+      "acceptable": ["3"],
+      "explanation": "Fourth means index 3 (one less than 4). The first value would be index 0."
+    },
+    {
+      "id": "u52l02e08",
+      "type": "multipleChoice",
+      "prompt": "Why does starting at 0 trip up beginners the most?",
+      "options": [
+        "Because in daily life we start counting at 1, not 0",
+        "Because 0 is not a real number",
+        "Because lists are random",
+        "Because the computer makes mistakes"
+      ],
+      "answer": 0,
+      "explanation": "We say first, second, third starting at 1 every day. Lists start at 0 instead, so the index is always one behind. Knowing the gap is the fix."
+    },
+    {
+      "id": "u52l02e09",
+      "type": "trueFalse",
+      "prompt": "nums[1] gives the FIRST value of the list.",
+      "answer": false,
+      "explanation": "No — nums[1] gives the SECOND value. The first value is nums[0]. Counting starts at zero."
+    },
+    {
+      "id": "u52l02e10",
+      "type": "multipleChoice",
+      "prompt": "ranks = [100, 90, 80, 70, 60]. Which line prints the FIRST value, 100?",
+      "options": [
+        "print(ranks[0])",
+        "print(ranks[1])",
+        "print(ranks[100])",
+        "print(ranks[5])"
+      ],
+      "answer": 0,
+      "explanation": "The first value is always at index 0, so ranks[0] gives 100. Lead with 0, not 1 — that is the whole habit of this lesson."
+    }
+  ]
+}

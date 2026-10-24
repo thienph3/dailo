@@ -1,0 +1,118 @@
+{
+  "unitId": "u96",
+  "lessonId": "u96l10",
+  "title": "Loop back: the whole course, working as one",
+  "idea": "LOOP (review), capstone: no new concept. Celebrate and consolidate the full Laps 0-6 toolkit, mixing every pattern one last time to close the lap.",
+  "exercises": [
+    {
+      "id": "u96l10e01",
+      "type": "multipleChoice",
+      "prompt": "In ONE sentence, what have Laps 0-6 given you?",
+      "options": [
+        "A full toolkit - variables, math, decisions, loops, lists, functions - and the skill to weave them into solutions",
+        "A single kind of loop",
+        "Only how to print",
+        "A list of unrelated tricks"
+      ],
+      "answer": 0,
+      "explanation": "You can store, compute, decide, repeat, collect, and reuse - and combine all of it to solve real, multi-part problems."
+    },
+    {
+      "id": "u96l10e02",
+      "type": "matchPairs",
+      "prompt": "Final review: match each pattern to its tell-tale problem phrase.",
+      "pairs": [
+        {"left": "Accumulate", "right": "The total of all"},
+        {"left": "Track maximum", "right": "The biggest / most"},
+        {"left": "Count with condition", "right": "How many pass"},
+        {"left": "Filter", "right": "Only the ones that"},
+        {"left": "Search", "right": "Is there any / find the first"}
+      ],
+      "explanation": "Each phrase points to a pattern. Hearing the phrase and reaching for the pattern is the heart of solving unseen problems."
+    },
+    {
+      "id": "u96l10e03",
+      "type": "multipleChoice",
+      "prompt": "Predict the output (accumulate + helper):\n\ndef square(n):\n    return n * n\n\ntotal = 0\nfor x in [2, 3]:\n    total = total + square(x)\nprint(total)",
+      "options": ["13", "5", "6", "25"],
+      "answer": 0,
+      "explanation": "square(2)=4, square(3)=9, total = 13. A helper feeding an accumulator - a weave you can now read on sight."
+    },
+    {
+      "id": "u96l10e04",
+      "type": "multipleChoice",
+      "prompt": "Predict the output (track maximum by hand):\n\nbest = nums[0]\nnums = [4, 9, 2, 9, 5]\nfor n in nums:\n    if n > best:\n        best = n\nprint(best)",
+      "options": [
+        "This crashes - nums is used before it is defined",
+        "9",
+        "4",
+        "5"
+      ],
+      "answer": 0,
+      "explanation": "Order matters: nums[0] is read before nums exists, so this errors. A reminder that lines run top to bottom - a Lap 0 truth that never stops mattering."
+    },
+    {
+      "id": "u96l10e05",
+      "type": "multipleChoice",
+      "prompt": "Fixed version of the above (nums defined first). Now what prints?\n\nnums = [4, 9, 2, 9, 5]\nbest = nums[0]\nfor n in nums:\n    if n > best:\n        best = n\nprint(best)",
+      "options": ["9", "4", "5", "2"],
+      "answer": 0,
+      "explanation": "With the order fixed, best tracks up to 9 (the first 9 wins; the second ties and > does not replace it). Track-the-maximum, built by hand."
+    },
+    {
+      "id": "u96l10e06",
+      "type": "multipleChoice",
+      "prompt": "Predict the output (filter into a count):\n\nkept = 0\nfor n in [11, 4, 8, 20]:\n    if n >= 8:\n        kept = kept + 1\nprint(kept)",
+      "options": ["3", "2", "4", "1"],
+      "answer": 0,
+      "explanation": "11, 8, and 20 are at least 8, so kept = 3. A filter expressed as a count-with-condition."
+    },
+    {
+      "id": "u96l10e07",
+      "type": "orderBlocks",
+      "prompt": "Order the universal problem-solving spine one last time.",
+      "blocks": [
+        "Understand: name inputs and output",
+        "Example: work one by hand",
+        "Plan: split into parts, choose a pattern for each",
+        "Code: weave the parts together",
+        "Check: re-run the example and a fresh one"
+      ],
+      "answer": [0, 1, 2, 3, 4],
+      "explanation": "Understand, Example, Plan, Code, Check. This spine carried you through every guided problem and works on anything new."
+    },
+    {
+      "id": "u96l10e08",
+      "type": "trueFalse",
+      "prompt": "This unit, and all of Lap 6, introduced zero brand-new syntax.",
+      "answer": true,
+      "explanation": "Lap 6 was about combining and consolidating. Every piece was already yours - the growth was in weaving them confidently."
+    },
+    {
+      "id": "u96l10e09",
+      "type": "multipleChoice",
+      "prompt": "Review (no-builtin rule, one last time): to total a list, you should...",
+      "options": [
+        "Build a running sum with a loop and an accumulator",
+        "Call sum() on the list",
+        "Call max() then divide",
+        "Sort it first"
+      ],
+      "answer": 0,
+      "explanation": "You build totals, biggests, counts, and filters yourself with loops - that understanding is the whole point, and builtins like sum/max are never used."
+    },
+    {
+      "id": "u96l10e10",
+      "type": "multipleChoice",
+      "prompt": "You have finished Lap 6. What can you now do?",
+      "options": [
+        "Take an unseen multi-part problem and solve it end-to-end by recombining everything you have learned",
+        "Only solve the exact problems you were shown",
+        "Only use one tool at a time",
+        "Only predict output, never write code"
+      ],
+      "answer": 0,
+      "explanation": "You can read a fresh problem, decompose it, pick patterns, weave them, and prove it works. That is real programming - congratulations on closing the lap!"
+    }
+  ]
+}

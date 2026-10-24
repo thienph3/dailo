@@ -1,0 +1,148 @@
+{
+  "unitId": "u23",
+  "lessonId": "u23l06",
+  "title": "Solve it: a fever warning",
+  "idea": "GUIDED. Show a warning only when a temperature is high - a one-sided choice where no else is needed.",
+  "problem": "If a body temperature is 38 or higher, show 'Fever'. Otherwise show nothing.",
+  "exercises": [
+    {
+      "id": "u23l06e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: show 'Fever' only when temp is 38+. What is the OUTPUT?",
+      "options": [
+        "'Fever' when temp is high, nothing otherwise",
+        "The temperature",
+        "Always 'Fever'",
+        "A number"
+      ],
+      "answer": 0,
+      "explanation": "Output is the word Fever, but only for a high temperature. Otherwise there is no output."
+    },
+    {
+      "id": "u23l06e02",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "By hand: temp = 39 prints what? temp = 37 prints what?",
+      "options": [
+        "Fever for 39; nothing for 37",
+        "Fever for both",
+        "nothing for both",
+        "37 then 39"
+      ],
+      "answer": 0,
+      "explanation": "39 is 38+ so Fever; 37 is not, so nothing. One-sided: only the high case produces output."
+    },
+    {
+      "id": "u23l06e03",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Does this problem need an else?",
+      "options": [
+        "No - nothing should happen when temp is normal",
+        "Yes, always",
+        "Only with two elifs",
+        "Yes, to print normal"
+      ],
+      "answer": 0,
+      "explanation": "The normal case does nothing, so a plain if with no else is enough. else is optional."
+    },
+    {
+      "id": "u23l06e04",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Which comparison means '38 or higher'?",
+      "options": [
+        "temp >= 38",
+        "temp > 38",
+        "temp < 38",
+        "temp == 38"
+      ],
+      "answer": 0,
+      "explanation": ">= 38 includes 38 itself. > 38 would wrongly skip exactly 38."
+    },
+    {
+      "id": "u23l06e05",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Plan the steps.",
+      "blocks": [
+        "Compare temp with 38",
+        "If 38 or higher, show Fever"
+      ],
+      "answer": [
+        0,
+        1
+      ],
+      "explanation": "Just compare and, on True, show Fever. There is no otherwise step."
+    },
+    {
+      "id": "u23l06e06",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Arrange the code (no else).",
+      "blocks": [
+        "if temp >= 38:",
+        "    print(\"Fever\")"
+      ],
+      "answer": [
+        0,
+        1
+      ],
+      "explanation": "A single if with its indented body. When False, the step is simply skipped."
+    },
+    {
+      "id": "u23l06e07",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Complete the comparison:\n\nif temp __ 38:\n    print(\"Fever\")",
+      "answer": ">=",
+      "acceptable": [
+        ">="
+      ],
+      "explanation": "Use >= so 38 itself counts as a fever."
+    },
+    {
+      "id": "u23l06e08",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Run with temp = 39. What prints?",
+      "options": [
+        "Fever",
+        "nothing",
+        "39",
+        "Normal"
+      ],
+      "answer": 0,
+      "explanation": "39 >= 38 is True, so Fever - matches the hand example."
+    },
+    {
+      "id": "u23l06e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Re-check with temp = 37. What prints?",
+      "options": [
+        "nothing",
+        "Fever",
+        "37",
+        "Normal"
+      ],
+      "answer": 0,
+      "explanation": "37 >= 38 is False, and there is no else, so nothing prints. Correct for a one-sided choice."
+    },
+    {
+      "id": "u23l06e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Re-check the exact edge: temp = 38. What prints?",
+      "options": [
+        "Fever",
+        "nothing",
+        "38",
+        "Normal"
+      ],
+      "answer": 0,
+      "explanation": "38 >= 38 is True, so Fever. Testing the edge confirms >= (not >) was the right choice."
+    }
+  ]
+}

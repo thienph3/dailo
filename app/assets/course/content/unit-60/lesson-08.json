@@ -1,0 +1,130 @@
+{
+  "unitId": "u60",
+  "lessonId": "u60l08",
+  "title": "Tricky lists for min",
+  "idea": "TOOL: reason about ties, negatives, and single-item lists for min; mirror the max edge cases.",
+  "exercises": [
+    {
+      "id": "u60l08e01",
+      "type": "multipleChoice",
+      "prompt": "Smallest of [-10, -3, -8]?",
+      "options": [
+        "-10",
+        "-3",
+        "-8",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "-10 is furthest below zero, so it is the smallest. Starting best at the first value handles negatives correctly."
+    },
+    {
+      "id": "u60l08e02",
+      "type": "multipleChoice",
+      "prompt": "Why can starting best at 0 give a WRONG smallest for [5, 8, 3]?",
+      "options": [
+        "0 is smaller than every value, so best would stay 0 — a value not in the list",
+        "0 is the smallest of the list",
+        "0 is not allowed",
+        "It would find 8"
+      ],
+      "answer": 0,
+      "explanation": "0 beats every positive value for 'smallest', so best never updates to a real value. Start at nums[0]."
+    },
+    {
+      "id": "u60l08e03",
+      "type": "multipleChoice",
+      "prompt": "Smallest of [5, 5, 5, 5]?",
+      "options": [
+        "5",
+        "20",
+        "0",
+        "4"
+      ],
+      "answer": 0,
+      "explanation": "All equal, so best stays 5. Same all-equal result as max — the value itself."
+    },
+    {
+      "id": "u60l08e04",
+      "type": "multipleChoice",
+      "prompt": "Smallest of a one-item list [42]?",
+      "options": [
+        "42",
+        "0",
+        "1",
+        "An error"
+      ],
+      "answer": 0,
+      "explanation": "One item means that item is both the smallest and the biggest."
+    },
+    {
+      "id": "u60l08e05",
+      "type": "trueFalse",
+      "prompt": "With ties for smallest (two 1s), the min loop still reports a single value, 1.",
+      "answer": true,
+      "explanation": "Min reports the smallest VALUE, not how many times it appears — mirror of max."
+    },
+    {
+      "id": "u60l08e06",
+      "type": "multipleChoice",
+      "prompt": "In [3, -2, 7, -9, -2], what does the min loop return?",
+      "options": [
+        "-9",
+        "-2",
+        "3",
+        "7"
+      ],
+      "answer": 0,
+      "explanation": "best drops to -9, the smallest. Mixed signs are fine because best started at a real value."
+    },
+    {
+      "id": "u60l08e07",
+      "type": "multiSelect",
+      "prompt": "Which lists have a smallest value of exactly 0? (pick all)",
+      "options": [
+        "[0, 1, 5]",
+        "[3, 0, 2]",
+        "[0, 0, 0]",
+        "[-1, 0, 1]"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "The first three bottom out at 0. The last has a -1, so its smallest is -1."
+    },
+    {
+      "id": "u60l08e08",
+      "type": "multipleChoice",
+      "prompt": "A savings balance can go negative (overdraft). For 'lowest balance', which start is safe?",
+      "options": [
+        "balances[0]",
+        "0",
+        "len(balances)",
+        "9999"
+      ],
+      "answer": 0,
+      "explanation": "Starting at the first real value handles negative balances. A fixed start like 0 can be wrong."
+    },
+    {
+      "id": "u60l08e09",
+      "type": "trueFalse",
+      "prompt": "An all-positive list is the case that can expose a 'started at 0' bug in a MIN loop.",
+      "answer": true,
+      "explanation": "If every value is above 0, a best started at 0 never updates. Testing an all-positive list catches it (the mirror of max's all-negative test)."
+    },
+    {
+      "id": "u60l08e10",
+      "type": "multipleChoice",
+      "prompt": "Smallest of [100, 100, 99, 100]?",
+      "options": [
+        "99",
+        "100",
+        "399",
+        "3"
+      ],
+      "answer": 0,
+      "explanation": "99 is the one dip below 100, so it is the smallest."
+    }
+  ]
+}

@@ -1,0 +1,137 @@
+{
+  "unitId": "u24",
+  "lessonId": "u24l09",
+  "title": "Think it through: a safe average",
+  "idea": "Reason end-to-end about a problem with an edge case, choosing the guard before any code - the MEET way of thinking.",
+  "exercises": [
+    {
+      "id": "u24l09e01",
+      "type": "multipleChoice",
+      "prompt": "PROBLEM: show the average of some test scores. The normal case computes total / count. What is the edge case?",
+      "options": [
+        "count is zero (no scores)",
+        "total is large",
+        "count is 3",
+        "a score is 100"
+      ],
+      "answer": 0,
+      "explanation": "No scores means count is zero - a divide-by-zero. That is the edge case to handle first."
+    },
+    {
+      "id": "u24l09e02",
+      "type": "multipleChoice",
+      "prompt": "What should the program do in the edge case?",
+      "options": [
+        "Say there is no average yet",
+        "Divide anyway",
+        "Show 0 as the average",
+        "Crash"
+      ],
+      "answer": 0,
+      "explanation": "With no scores, a clear 'no average yet' message is honest. Inventing a 0 average would be misleading."
+    },
+    {
+      "id": "u24l09e03",
+      "type": "multipleChoice",
+      "prompt": "By hand: 3 scores totalling 240 - what is the average?",
+      "options": [
+        "80",
+        "240",
+        "3",
+        "720"
+      ],
+      "answer": 0,
+      "explanation": "240 / 3 = 80. The normal case works fine when count is not zero."
+    },
+    {
+      "id": "u24l09e04",
+      "type": "multipleChoice",
+      "prompt": "By hand, the edge case: 0 scores - what average can you compute?",
+      "options": [
+        "None - there is nothing to average",
+        "0",
+        "the last score",
+        "a guess"
+      ],
+      "answer": 0,
+      "explanation": "With zero scores there is simply no average to compute. That is exactly why the guard exists."
+    },
+    {
+      "id": "u24l09e05",
+      "type": "orderBlocks",
+      "prompt": "Order the safe plan.",
+      "blocks": [
+        "Check if count is zero",
+        "If zero, say there is no average",
+        "Otherwise compute total / count",
+        "Show the result"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "Guard first, divide only when safe, then show. The edge case never reaches the division."
+    },
+    {
+      "id": "u24l09e06",
+      "type": "multipleChoice",
+      "prompt": "Which condition is the guard?",
+      "options": [
+        "if count == 0:",
+        "if total == 0:",
+        "if count > 0:",
+        "if total / count:"
+      ],
+      "answer": 0,
+      "explanation": "The guard checks the divisor: if count == 0. It catches the empty case before dividing."
+    },
+    {
+      "id": "u24l09e07",
+      "type": "multipleChoice",
+      "prompt": "Why not just divide and fix problems later?",
+      "options": [
+        "Dividing by zero crashes immediately - too late to fix",
+        "It is faster to fix later",
+        "Later is always better",
+        "There is no difference"
+      ],
+      "answer": 0,
+      "explanation": "The crash happens at the division itself. The only safe moment to act is before it, with the guard."
+    },
+    {
+      "id": "u24l09e08",
+      "type": "trueFalse",
+      "prompt": "The guard turns a would-be crash into a clear, chosen message.",
+      "answer": true,
+      "explanation": "Yes. Instead of an error, the empty case gets a deliberate, friendly answer."
+    },
+    {
+      "id": "u24l09e09",
+      "type": "multipleChoice",
+      "prompt": "Check the normal path: count = 3, total = 240 - what should the average line show?",
+      "options": [
+        "80",
+        "no average",
+        "0",
+        "240"
+      ],
+      "answer": 0,
+      "explanation": "80, matching the hand example. The guard was False, so the safe division ran."
+    },
+    {
+      "id": "u24l09e10",
+      "type": "multipleChoice",
+      "prompt": "Check the edge path: count = 0 - what should show?",
+      "options": [
+        "the 'no average' message",
+        "0",
+        "an error",
+        "80"
+      ],
+      "answer": 0,
+      "explanation": "The guard is True, so the 'no average' message shows and the division is skipped. Both paths handled."
+    }
+  ]
+}

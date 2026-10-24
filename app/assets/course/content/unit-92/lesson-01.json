@@ -1,0 +1,136 @@
+{
+  "unitId": "u92",
+  "lessonId": "u92l01",
+  "title": "Weaving the three threads together",
+  "idea": "TOOL (integration): a real solution braids three threads you already know - functions (sub-plans), loops (repeats), and decisions (choices). No new syntax, just combining them cleanly.",
+  "exercises": [
+    {
+      "type": "multipleChoice",
+      "prompt": "You've learned functions, loops, and if/else separately. What does a REAL program usually do with them?",
+      "options": [
+        "Weave all three together into one coherent solution",
+        "Use only one, ever",
+        "Keep them in separate files always",
+        "Never mix them"
+      ],
+      "answer": 0,
+      "explanation": "Real solutions braid sub-plans (functions), repeats (loops), and choices (decisions). This unit is about combining them cleanly - no new syntax.",
+      "id": "u92l01e01"
+    },
+    {
+      "type": "matchPairs",
+      "prompt": "Match each 'thread' to the tool that provides it.",
+      "pairs": [
+        {
+          "left": "A repeated action",
+          "right": "A loop"
+        },
+        {
+          "left": "A choice between paths",
+          "right": "An if/else"
+        },
+        {
+          "left": "A named sub-plan you can reuse",
+          "right": "A function"
+        }
+      ],
+      "explanation": "Repeats = loops, choices = decisions, sub-plans = functions. Integration is using the right thread for each part.",
+      "id": "u92l01e02"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Integrating these tools introduces brand-new syntax you haven't seen.",
+      "answer": false,
+      "explanation": "No new syntax at all. You already know every piece. The skill is weaving them into one tidy solution.",
+      "id": "u92l01e03"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\ndef label(n):\n    if n >= 50:\n        return 1\n    else:\n        return 0\n\npasses = 0\nfor s in [80, 30, 60]:\n    passes = passes + label(s)\nprint(passes)",
+      "options": [
+        "2",
+        "3",
+        "1",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "label returns 1 for a pass, 0 otherwise. 80 and 60 pass (1 each), 30 fails (0). passes = 2. A function, a loop, and a decision woven together.",
+      "id": "u92l01e04"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "In that code, what job does the FUNCTION 'label' do inside the loop?",
+      "options": [
+        "It makes the per-item decision, keeping the loop body tidy",
+        "It prints",
+        "It stores the list",
+        "It stops the loop"
+      ],
+      "answer": 0,
+      "explanation": "The function holds the choice (pass or not) as a reusable sub-plan. The loop calls it each turn - decision inside a function inside a loop.",
+      "id": "u92l01e05"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Putting a decision inside a function, then calling that function inside a loop, is a common way to combine the three threads.",
+      "answer": true,
+      "explanation": "True. Function wraps the choice; loop repeats it. This layering keeps each part small and readable.",
+      "id": "u92l01e06"
+    },
+    {
+      "type": "orderBlocks",
+      "prompt": "Order how to THINK about an integrated problem.",
+      "blocks": [
+        "Break it into parts (sub-plans, repeats, choices)",
+        "Pick the tool for each part",
+        "Weave them together in order"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Decompose, choose tools, then combine. Integration starts with seeing the parts.",
+      "id": "u92l01e07"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Which everyday task braids a repeat, a choice, AND a sub-plan?",
+      "options": [
+        "For each order (repeat), decide if it qualifies (choice), using a reusable discount rule (sub-plan)",
+        "Print one word",
+        "Add two numbers",
+        "Store a value"
+      ],
+      "answer": 0,
+      "explanation": "A loop over orders, an if to qualify each, and a function for the shared rule - all three threads in one task.",
+      "id": "u92l01e08"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Why weave with FUNCTIONS instead of one giant loop body?",
+      "options": [
+        "Named sub-plans keep each piece small, clear, and reusable",
+        "Functions run faster always",
+        "Loops aren't allowed otherwise",
+        "It uses less memory"
+      ],
+      "answer": 0,
+      "explanation": "A function names a sub-plan so the loop reads cleanly and the rule can be reused. Clarity is the point of integration.",
+      "id": "u92l01e09"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "This unit's focus is...",
+      "options": [
+        "Combining functions, loops, and decisions cleanly - no new syntax",
+        "A new loop type",
+        "A new data structure",
+        "A faster print"
+      ],
+      "answer": 0,
+      "explanation": "Weaving the three threads you already have into coherent solutions. Every lesson combines, never introduces.",
+      "id": "u92l01e10"
+    }
+  ]
+}

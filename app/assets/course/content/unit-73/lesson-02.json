@@ -1,0 +1,139 @@
+{
+  "unitId": "u73",
+  "lessonId": "u73l02",
+  "title": "The call becomes the value it returns",
+  "idea": "TOOL: a call to a returning sub-plan can be used anywhere a value can - stored, printed, or combined.",
+  "exercises": [
+    {
+      "id": "u73l02e01",
+      "type": "multipleChoice",
+      "prompt": "def triple(n):\n    return n * 3\n\nYou can use triple(4) anywhere you could write...",
+      "options": [
+        "the value 12",
+        "the word triple",
+        "a loop",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "triple(4) returns 12, so wherever you write triple(4) it stands in for 12. A call IS its returned value."
+    },
+    {
+      "id": "u73l02e02",
+      "type": "multipleChoice",
+      "prompt": "def add(a, b):\n    return a + b\n\ntotal = add(2, 3) + add(4, 1)\n\nWhat is total?",
+      "options": [
+        "10",
+        "5",
+        "9",
+        "add"
+      ],
+      "answer": 0,
+      "explanation": "add(2,3) is 5 and add(4,1) is 5. 5 + 5 = 10. Each call becomes its returned value, then they add."
+    },
+    {
+      "id": "u73l02e03",
+      "type": "multipleChoice",
+      "prompt": "def double(n):\n    return n * 2\n\nprint(double(3) + 6)\n\nWhat prints?",
+      "options": [
+        "12",
+        "6",
+        "3",
+        "double"
+      ],
+      "answer": 0,
+      "explanation": "double(3) returns 6; then 6 + 6 = 12. The call becomes its value, so you can add to it like any number."
+    },
+    {
+      "id": "u73l02e04",
+      "type": "trueFalse",
+      "prompt": "Because a call becomes a value, you can put a call right inside another expression.",
+      "answer": true,
+      "explanation": "Yes. add(2,3) is just 5, so 'add(2,3) * 2' is 5 * 2 = 10. A returning call behaves like the value it returns."
+    },
+    {
+      "id": "u73l02e05",
+      "type": "multipleChoice",
+      "prompt": "def price_with_tax(p):\n    return p + p * 0.1\n\ncost = price_with_tax(100)\n\nWhat is cost?",
+      "options": [
+        "110.0",
+        "100",
+        "10",
+        "price_with_tax"
+      ],
+      "answer": 0,
+      "explanation": "100 + 100 * 0.1 = 100 + 10 = 110.0. The returned value lands in cost."
+    },
+    {
+      "id": "u73l02e06",
+      "type": "orderBlocks",
+      "prompt": "A returning sub-plan runs in this order. Put the steps in order for 'x = double(5)'.",
+      "blocks": [
+        "double runs its body with n = 5",
+        "return hands 10 back",
+        "x is set to 10"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "The call runs the body, return hands a value back, and only then does x receive it. Call first, value second."
+    },
+    {
+      "id": "u73l02e07",
+      "type": "multipleChoice",
+      "prompt": "def add(a, b):\n    return a + b\n\nWhat is add(1, 2) + 3?",
+      "options": [
+        "6",
+        "3",
+        "5",
+        "add"
+      ],
+      "answer": 0,
+      "explanation": "add(1, 2) returns 3; then 3 + 3 = 6. The call becomes its value, then the + 3 runs."
+    },
+    {
+      "id": "u73l02e08",
+      "type": "matchPairs",
+      "prompt": "def sq(n): return n * n. Match each call to the value it becomes.",
+      "pairs": [
+        {
+          "left": "sq(2)",
+          "right": "4"
+        },
+        {
+          "left": "sq(5)",
+          "right": "25"
+        },
+        {
+          "left": "sq(10)",
+          "right": "100"
+        }
+      ],
+      "explanation": "Each call sq(n) returns n * n, so the call stands for that number: sq(2)=4, sq(5)=25, sq(10)=100."
+    },
+    {
+      "id": "u73l02e09",
+      "type": "multipleChoice",
+      "prompt": "REVIEW: earlier you printed inside a sub-plan. Why might returning be more flexible than printing?",
+      "options": [
+        "A returned value can be reused in more math; a printed one is gone",
+        "Printing is always wrong",
+        "Returning is slower",
+        "You can't print numbers"
+      ],
+      "answer": 0,
+      "explanation": "Once you print, the value is just on screen. Returned values can be stored, added, or passed on - far more reusable."
+    },
+    {
+      "id": "u73l02e10",
+      "type": "fillBlank",
+      "prompt": "def half(n):\n    return n / 2\n\nFill the blank so result holds 4.0:\nresult = ____(8)",
+      "answer": "half",
+      "acceptable": [
+        "half"
+      ],
+      "explanation": "half(8) returns 8 / 2 = 4.0. The call half(8) becomes 4.0, which is stored in result."
+    }
+  ]
+}

@@ -1,0 +1,146 @@
+{
+  "unitId": "u71",
+  "lessonId": "u71l07",
+  "title": "Several sub-plans in one program",
+  "idea": "TOOL: a program with two or three defs; trace which calls run and in what order.",
+  "exercises": [
+    {
+      "id": "u71l07e01",
+      "type": "multipleChoice",
+      "prompt": "Program:\n\ndef hello():\n    print(\"Hello\")\ndef bye():\n    print(\"Bye\")\nhello()\nbye()\n\nWhat prints?",
+      "options": [
+        "Hello\nBye",
+        "Bye\nHello",
+        "Hello",
+        "Bye"
+      ],
+      "answer": 0,
+      "explanation": "Both defs are setup. Then hello() prints 'Hello', bye() prints 'Bye'. Output follows the calls, in order."
+    },
+    {
+      "id": "u71l07e02",
+      "type": "multipleChoice",
+      "prompt": "Same two sub-plans, but the calls are: bye() then hello(). What prints?",
+      "options": [
+        "Bye\nHello",
+        "Hello\nBye",
+        "Bye",
+        "Hello"
+      ],
+      "answer": 0,
+      "explanation": "Calls run in the order written. bye() first (Bye), then hello() (Hello). The call order sets the output."
+    },
+    {
+      "id": "u71l07e03",
+      "type": "multipleChoice",
+      "prompt": "Program:\n\ndef a():\n    print(\"A\")\ndef b():\n    print(\"B\")\na()\na()\nb()\n\nWhat prints?",
+      "options": [
+        "A\nA\nB",
+        "A\nB",
+        "A\nB\nB",
+        "B\nA\nA"
+      ],
+      "answer": 0,
+      "explanation": "a() runs twice (A, A), then b() once (B). Count and order the calls: A, A, B."
+    },
+    {
+      "id": "u71l07e04",
+      "type": "trueFalse",
+      "prompt": "Defining b() before a() but calling a() first means a()'s output comes first.",
+      "answer": true,
+      "explanation": "Yes. Definition order doesn't set output - call order does. Whichever call runs first prints first."
+    },
+    {
+      "id": "u71l07e05",
+      "type": "orderBlocks",
+      "prompt": "A scoreboard uses border() (prints '==') and show_score() (prints 'Score: 10'). Order the calls to frame the score.",
+      "blocks": [
+        "border()  # bottom",
+        "border()  # top",
+        "show_score()"
+      ],
+      "answer": [
+        1,
+        2,
+        0
+      ],
+      "explanation": "border for the top, show_score in the middle, border for the bottom. One border def, two calls."
+    },
+    {
+      "id": "u71l07e06",
+      "type": "multipleChoice",
+      "prompt": "Program:\n\ndef a():\n    print(\"A\")\ndef b():\n    print(\"B\")\nb()\n\n(a is never called.) What prints?",
+      "options": [
+        "B",
+        "A\nB",
+        "A",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "Only b() is called, so only 'B' prints. a() is defined but never called, so it runs nothing."
+    },
+    {
+      "id": "u71l07e07",
+      "type": "multiSelect",
+      "prompt": "Which statements are TRUE about this multi-sub-plan program? (Pick all.)",
+      "options": [
+        "Each def is quiet until called",
+        "Call order decides output order",
+        "A sub-plan can be called zero times",
+        "Defining a sub-plan prints its body"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Defs are quiet; call order rules; zero calls is allowed. Defining does NOT print the body."
+    },
+    {
+      "id": "u71l07e08",
+      "type": "matchPairs",
+      "prompt": "Match each call line to its output (hello->'Hi', bye->'Bye').",
+      "pairs": [
+        {
+          "left": "hello()",
+          "right": "Hi"
+        },
+        {
+          "left": "bye()",
+          "right": "Bye"
+        },
+        {
+          "left": "hello() then bye()",
+          "right": "Hi then Bye"
+        }
+      ],
+      "explanation": "Each call produces its sub-plan's output. Read the calls top to bottom to get the full output."
+    },
+    {
+      "id": "u71l07e09",
+      "type": "multipleChoice",
+      "prompt": "Why keep each job in its own named sub-plan instead of one big def?",
+      "options": [
+        "Each job is clear and can be called when needed",
+        "To make it slower",
+        "To hide the jobs",
+        "One def is always best"
+      ],
+      "answer": 0,
+      "explanation": "Separate named jobs are readable and reusable; you call each exactly when its job is needed."
+    },
+    {
+      "id": "u71l07e10",
+      "type": "multipleChoice",
+      "prompt": "To predict output from several sub-plans, you...",
+      "options": [
+        "follow the calls top to bottom, running each body",
+        "read only the defs",
+        "ignore the order",
+        "assume defs print"
+      ],
+      "answer": 0,
+      "explanation": "Trace the calls in order; each runs its body. Definitions are setup and print nothing on their own."
+    }
+  ]
+}

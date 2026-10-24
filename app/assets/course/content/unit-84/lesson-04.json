@@ -1,0 +1,130 @@
+{
+  "unitId": "u84",
+  "lessonId": "u84l04",
+  "title": "Loop back: spot the bug (all laps)",
+  "idea": "LOOP. Find the one thing wrong in short programs that mix tools from every lap — the debugging eye from Unit 81 applied broadly.",
+  "exercises": [
+    {
+      "id": "u84l04e01",
+      "type": "multipleChoice",
+      "prompt": "Goal: print the total of [4, 8, 6] (=18). Code:\n\ntotal = 0\nfor n in [4, 8, 6]:\n    total = n\nprint(total)\n\nWhat's wrong?",
+      "options": [
+        "It uses 'total = n' (overwrite) instead of 'total = total + n' (add)",
+        "The list is wrong",
+        "print is misspelled",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "'total = n' replaces the total each time, leaving 6. To accumulate, add: total = total + n."
+    },
+    {
+      "id": "u84l04e02",
+      "type": "multipleChoice",
+      "prompt": "Goal: a helper that doubles. Code:\n\ndef double(n):\n    n * 2\n\nWhat's missing?",
+      "options": [
+        "return — it computes n*2 but never hands it back",
+        "A loop",
+        "A print",
+        "An if"
+      ],
+      "answer": 0,
+      "explanation": "Without 'return', the helper gives back nothing. return vs just-computing is the Lap-5 return lesson."
+    },
+    {
+      "id": "u84l04e03",
+      "type": "trueFalse",
+      "prompt": "Goal: pass means '50 or more'. The line 'return score > 50' is correct for that rule.",
+      "answer": false,
+      "explanation": "Wrong — > 50 fails an exact 50. '50 or more' needs >= 50. A boundary bug."
+    },
+    {
+      "id": "u84l04e04",
+      "type": "multipleChoice",
+      "prompt": "Goal: average, guarded. Code:\n\nif len(nums) == 0:\n    print(0)\nprint(total / len(nums))\n\nWhat's wrong?",
+      "options": [
+        "The divide runs even when empty — it needs 'else' so only one branch runs",
+        "Nothing",
+        "len is wrong",
+        "total is wrong"
+      ],
+      "answer": 0,
+      "explanation": "Without else, the second print always runs and crashes on empty. The guard needs else to truly protect the divide."
+    },
+    {
+      "id": "u84l04e05",
+      "type": "matchPairs",
+      "prompt": "Match each buggy snippet to its fix.",
+      "pairs": [
+        {
+          "left": "total = n (overwrite)",
+          "right": "total = total + n"
+        },
+        {
+          "left": "return inside the loop",
+          "right": "move return after the loop"
+        },
+        {
+          "left": "> 50 for '50 or more'",
+          "right": ">= 50"
+        }
+      ],
+      "explanation": "Common bugs and their fixes, spanning accumulate, return placement, and boundaries."
+    },
+    {
+      "id": "u84l04e06",
+      "type": "multipleChoice",
+      "prompt": "Goal: find the biggest of nums. Code starts 'best = 0'. Why can that be wrong?",
+      "options": [
+        "If all numbers are negative, 0 is wrongly reported as the biggest",
+        "0 is always fine",
+        "It should start at 100",
+        "best can't be a number"
+      ],
+      "answer": 0,
+      "explanation": "Starting best at 0 fails for all-negative lists. Start best at nums[0] so it reflects real data."
+    },
+    {
+      "id": "u84l04e07",
+      "type": "multipleChoice",
+      "prompt": "Goal: count items >= 5 in [3, 8, 9]. Code:\n\ncount = 0\nfor n in [3, 8, 9]:\n    if n >= 5:\n        count = count + 1\n        return count\n\nWhat's wrong?",
+      "options": [
+        "'return count' inside the loop stops after the first match",
+        "The condition is wrong",
+        "The list is wrong",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "Returning inside the loop quits on the first qualifying item. The count should finish the whole list first."
+    },
+    {
+      "id": "u84l04e08",
+      "type": "fillBlank",
+      "prompt": "Goal: print 10. Fix the operator:\n\nprint(2 ____ 5)",
+      "answer": "*",
+      "acceptable": [
+        "*"
+      ],
+      "explanation": "2 * 5 = 10. (2 + 5 would be 7.) Pick the operation that matches the goal."
+    },
+    {
+      "id": "u84l04e09",
+      "type": "trueFalse",
+      "prompt": "Goal: 'square then halve' of 4 = 8. The code half(square(4)) is correct.",
+      "answer": true,
+      "explanation": "Correct — square(4)=16 runs first (inner call), then half(16)=8. Right wiring order."
+    },
+    {
+      "id": "u84l04e10",
+      "type": "multipleChoice",
+      "prompt": "The debugging eye you looped back on:",
+      "options": [
+        "Compare code to the goal and a hand example to spot the one wrong thing",
+        "Rewrite everything always",
+        "Assume code is correct",
+        "Only check syntax"
+      ],
+      "answer": 0,
+      "explanation": "Spotting bugs means matching code against intent and a hand answer — the Unit 81 skill, across all laps."
+    }
+  ]
+}

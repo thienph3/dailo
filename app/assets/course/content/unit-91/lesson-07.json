@@ -1,0 +1,160 @@
+{
+  "unitId": "u91",
+  "lessonId": "u91l07",
+  "title": "Solve it: total three valid entries",
+  "idea": "GUIDED PROBLEM. Combine a collecting for loop, a validation while loop, and an accumulator - picking nested technique.",
+  "problem": "Read 3 numbers, each must be 0 or more, and show their total.",
+  "exercises": [
+    {
+      "id": "u91l07e01",
+      "uepcc": "U",
+      "type": "multipleChoice",
+      "prompt": "PROBLEM: read 3 numbers (each 0 or more), show the total.\n\nWhat is the OUTPUT?",
+      "options": [
+        "The total of the three valid numbers",
+        "The count",
+        "The biggest",
+        "Each number separately"
+      ],
+      "answer": 0,
+      "explanation": "Output = the total of three numbers, each of which must be valid (0 or more) before it counts."
+    },
+    {
+      "id": "u91l07e02",
+      "uepcc": "U",
+      "type": "multipleChoice",
+      "prompt": "How many SEPARATE jobs does this problem combine?",
+      "options": [
+        "Three - repeat 3 times, validate each input, and accumulate a total",
+        "One",
+        "Two",
+        "Four"
+      ],
+      "answer": 0,
+      "explanation": "Collect 3 (a counting loop), validate each (a validation loop), and keep a running total (an accumulator). Three familiar jobs together."
+    },
+    {
+      "id": "u91l07e03",
+      "uepcc": "E",
+      "type": "multipleChoice",
+      "prompt": "By hand: the user types 5, then -2 then 4, then 6. Which three VALID numbers get summed?",
+      "options": [
+        "5, 4, 6 (the -2 is rejected)",
+        "5, -2, 4",
+        "-2, 4, 6",
+        "5, 4"
+      ],
+      "answer": 0,
+      "explanation": "-2 is invalid and re-asked, replaced by 4. The three valid numbers are 5, 4, 6."
+    },
+    {
+      "id": "u91l07e04",
+      "uepcc": "E",
+      "type": "multipleChoice",
+      "prompt": "So by hand, the total is 5 + 4 + 6 = ?",
+      "options": [
+        "15",
+        "11",
+        "3",
+        "9"
+      ],
+      "answer": 0,
+      "explanation": "5 + 4 + 6 = 15. The rejected -2 never joins the total. Hand answer: 15."
+    },
+    {
+      "id": "u91l07e05",
+      "uepcc": "P",
+      "type": "orderBlocks",
+      "prompt": "Plan the steps.",
+      "blocks": [
+        "Start a total at 0",
+        "Repeat 3 times: read a number, re-ask until it is 0 or more, add it to the total",
+        "Show the total"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Accumulator outside, a count-3 loop with validation inside, then report. Nested loops plus a total."
+    },
+    {
+      "id": "u91l07e06",
+      "uepcc": "P",
+      "type": "multipleChoice",
+      "prompt": "Where does the validation loop sit?",
+      "options": [
+        "Inside the repeat-3 loop, around each input",
+        "Before everything",
+        "After the total",
+        "It isn't needed"
+      ],
+      "answer": 0,
+      "explanation": "Each of the three inputs needs its own validation, so the while sits inside the for, once per item."
+    },
+    {
+      "id": "u91l07e07",
+      "uepcc": "C",
+      "type": "orderBlocks",
+      "prompt": "Code the plan.",
+      "blocks": [
+        "total = 0",
+        "for i in range(3):",
+        "    n = int(input())",
+        "    while n < 0:",
+        "        n = int(input())",
+        "    total = total + n",
+        "print(total)"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "explanation": "Start the total, loop 3 times, validate each n, add the valid n, print. Three tools nested cleanly."
+    },
+    {
+      "id": "u91l07e08",
+      "uepcc": "C",
+      "type": "fillBlank",
+      "prompt": "Complete the repeat count:\n\ntotal = 0\nfor i in range(____):\n    n = int(input())\n    while n < 0:\n        n = int(input())\n    total = total + n",
+      "answer": "3",
+      "acceptable": [
+        "3"
+      ],
+      "explanation": "range(3) collects exactly three valid numbers, one per turn of the outer loop."
+    },
+    {
+      "id": "u91l07e09",
+      "uepcc": "Check",
+      "type": "multipleChoice",
+      "prompt": "Check: with inputs 5, -2, 4, 6 the code prints 15. Hand answer was 15. Verdict?",
+      "options": [
+        "Passes - the -2 was rejected and 5+4+6 = 15",
+        "Fails",
+        "Unknown",
+        "The -2 should count"
+      ],
+      "answer": 0,
+      "explanation": "Validation discarded the -2 and the accumulator summed the three valid values. Matches - correct."
+    },
+    {
+      "id": "u91l07e10",
+      "uepcc": "Check",
+      "type": "multipleChoice",
+      "prompt": "New run: inputs 1, 2, 3 (all valid first try). Total, and how many times does the inner while body run?",
+      "options": [
+        "6, and the inner body runs 0 times",
+        "6, runs 3 times",
+        "6, runs once",
+        "5, runs 0 times"
+      ],
+      "answer": 0,
+      "explanation": "All valid on the first try, so the validation body never runs. total = 1 + 2 + 3 = 6."
+    }
+  ]
+}

@@ -1,0 +1,156 @@
+{
+  "unitId": "u43",
+  "lessonId": "u43l09",
+  "title": "Solve it together: count and total the donations",
+  "idea": "GUIDED. Keep a counter AND an accumulator in the same loop.",
+  "problem": "Donations are 10, 0, 25, 0, 15. Count how many people gave (gave more than 0) and the total given.",
+  "exercises": [
+    {
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: Donations 10, 0, 25, 0, 15. Find how many gave (over 0) AND the total given.\n\nUnderstand -- how many OUTPUTS are there?",
+      "options": [
+        "Two: a count of givers and a total amount",
+        "One: just the total",
+        "One: just the count",
+        "Three"
+      ],
+      "answer": 0,
+      "explanation": "There are two outputs -- a count and a total. You can track both in one loop with two variables.",
+      "id": "u43l09e01"
+    },
+    {
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "By hand: how many donations are over 0, and what do they total?",
+      "options": [
+        "3 givers, total 50",
+        "5 givers, total 50",
+        "2 givers, total 35",
+        "3 givers, total 25"
+      ],
+      "answer": 0,
+      "explanation": "10, 25, 15 are over 0 -- 3 givers; 10+25+15 = 50. Our check values are 3 and 50.",
+      "id": "u43l09e02"
+    },
+    {
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "You need a counter and an accumulator. How many start lines before the loop?",
+      "options": [
+        "Two: count = 0 and total = 0",
+        "One: just total = 0",
+        "None",
+        "Three"
+      ],
+      "answer": 0,
+      "explanation": "Each tracker needs its own setup. Start both at 0 before the loop.",
+      "id": "u43l09e03"
+    },
+    {
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Plan the steps.",
+      "blocks": [
+        "Start count = 0 and total = 0",
+        "For each donation, check if it is over 0",
+        "If so, add 1 to count and add the amount to total",
+        "Show count and total"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "Two trackers started, one loop, update both on a giver, then show both. One if guards both updates.",
+      "id": "u43l09e04"
+    },
+    {
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Both updates go inside the same if. Why?",
+      "options": [
+        "A giver should raise the count AND add to the total together",
+        "Only the count matters",
+        "Only the total matters",
+        "They need separate loops"
+      ],
+      "answer": 0,
+      "explanation": "A donation over 0 is one giver worth one count and one addition. Both belong under the same condition.",
+      "id": "u43l09e05"
+    },
+    {
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Fill the line that raises the giver count by one:\n\ncount = 0\ntotal = 0\nfor n in range(1, 6):\n    if amount > 0:\n        count = count + 1\n        total = total ____ amount\nprint(count)\nprint(total)",
+      "answer": "+",
+      "acceptable": [
+        "+"
+      ],
+      "explanation": "The count rises by 1 and the total rises by the amount. The add for the total uses +.",
+      "id": "u43l09e06"
+    },
+    {
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Arrange the full solution (one donation per pass in `amount`).",
+      "blocks": [
+        "count = 0",
+        "total = 0",
+        "for n in range(1, 6):",
+        "    if amount > 0:",
+        "        count = count + 1",
+        "        total = total + amount",
+        "print(count)\nprint(total)"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "explanation": "Both trackers at 0, loop each donation, and on a giver update both, then print both.",
+      "id": "u43l09e07"
+    },
+    {
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "It prints 3 then 50, matching your hand answers. So...",
+      "options": [
+        "Both outputs are correct",
+        "Only one is correct",
+        "Both are wrong",
+        "It can't tell"
+      ],
+      "answer": 0,
+      "explanation": "Count (3) and total (50) both match the hand work, so the two-tracker loop is correct.",
+      "id": "u43l09e08"
+    },
+    {
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Re-check: donations 5, 0, 5. Count of givers and total?",
+      "options": [
+        "2 givers, total 10",
+        "3 givers, total 10",
+        "2 givers, total 5",
+        "1 giver, total 5"
+      ],
+      "answer": 0,
+      "explanation": "Two donations are over 0 (the 0 is skipped); 5 + 5 = 10. Both trackers handle new data.",
+      "id": "u43l09e09"
+    },
+    {
+      "type": "trueFalse",
+      "uepcc": "Check",
+      "prompt": "If both the count and the total updates were NOT inside the if, the zeros would wrongly count as givers.",
+      "answer": true,
+      "explanation": "True -- the if is what makes both trackers skip the 0 donations. Moving the updates outside would count everyone.",
+      "id": "u43l09e10"
+    }
+  ]
+}

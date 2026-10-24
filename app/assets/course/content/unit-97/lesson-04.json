@@ -1,0 +1,148 @@
+{
+  "unitId": "u97",
+  "lessonId": "u97l04",
+  "title": "Capstone: decide even or odd from the pattern",
+  "idea": "GUIDED CAPSTONE. Reason WHY % 2 tells even from odd, not memorize it — then branch with if/else.",
+  "problem": "Decide whether 7 is even or odd, and print the answer.",
+  "exercises": [
+    {
+      "id": "u97l04e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: is 7 even or odd? The OUTPUT is...",
+      "options": [
+        "One of two labels: 'even' or 'odd'",
+        "The number 7",
+        "The remainder 1",
+        "Half of 7"
+      ],
+      "answer": 0,
+      "explanation": "Two possible outputs, exactly one chosen. This is a decision problem — if/else territory."
+    },
+    {
+      "id": "u97l04e02",
+      "type": "trueFalse",
+      "uepcc": "U",
+      "prompt": "The input is a single number (7); there are only two possible outcomes.",
+      "answer": true,
+      "explanation": "One number in, one of two labels out. Framing it this way makes the if/else obvious."
+    },
+    {
+      "id": "u97l04e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example by hand: an even number splits into pairs with nothing left over. What is 7 % 2?",
+      "options": [
+        "1 — one left over, so odd",
+        "0 — so even",
+        "2",
+        "7"
+      ],
+      "answer": 0,
+      "explanation": "7 % 2 = 1. The leftover 1 means 7 can't be split into pairs, so it's odd. That remainder IS the reason, not a trick."
+    },
+    {
+      "id": "u97l04e04",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "What would an EVEN number, say 8, give for 8 % 2?",
+      "options": [
+        "0",
+        "1",
+        "4",
+        "8"
+      ],
+      "answer": 0,
+      "explanation": "8 % 2 = 0 — no leftover, perfectly paired, so even. Even % 2 is always 0; odd % 2 is always 1. Now you know WHY."
+    },
+    {
+      "id": "u97l04e05",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Plan the decision. Order the steps.",
+      "blocks": [
+        "If the remainder is 0, say 'even'",
+        "Compute number % 2",
+        "Otherwise say 'odd'"
+      ],
+      "answer": [
+        1,
+        0,
+        2
+      ],
+      "explanation": "Compute the remainder, then branch on it. The plan names the operation (%) before any code is written."
+    },
+    {
+      "id": "u97l04e06",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Since there are exactly two outcomes, which structure is cleanest?",
+      "options": [
+        "if / else",
+        "if / elif / elif / else",
+        "a while loop",
+        "three separate ifs"
+      ],
+      "answer": 0,
+      "explanation": "Two mutually exclusive outcomes = one if/else. elif would be overkill; separate ifs risk printing both."
+    },
+    {
+      "id": "u97l04e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code it. Arrange the branch.",
+      "blocks": [
+        "    print(\"even\")",
+        "if number % 2 == 0:",
+        "else:",
+        "    print(\"odd\")"
+      ],
+      "answer": [
+        1,
+        0,
+        2,
+        3
+      ],
+      "explanation": "Test %2==0 first; the else catches everything else (the odd case). Prints are indented under their branch."
+    },
+    {
+      "id": "u97l04e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Complete the even test:\n\nnumber = 7\nif number % 2 ____ 0:\n    print(\"even\")\nelse:\n    print(\"odd\")",
+      "answer": "==",
+      "acceptable": [
+        "=="
+      ],
+      "explanation": "Compare the remainder to 0 with ==. For 7 the remainder is 1, so the else runs and prints 'odd'."
+    },
+    {
+      "id": "u97l04e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Run it with 7: prints 'odd'. Hand example said odd. Verdict?",
+      "options": [
+        "Passes",
+        "Fails",
+        "Unknown",
+        "Rewrite example"
+      ],
+      "answer": 0,
+      "explanation": "Matches — 7 is odd. You derived even/odd from the remainder's meaning, not a memorized rule."
+    },
+    {
+      "id": "u97l04e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Re-check with number = 100. Same code. What prints?",
+      "options": [
+        "even",
+        "odd",
+        "100",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "100 % 2 == 0, so 'even'. Works for any number. Reasoning beats memorizing every time."
+    }
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "unitId": "u78",
+  "lessonId": "u78l01",
+  "title": "Call a helper for every item",
+  "idea": "TOOL. Introduce calling a RETURNING helper once per item inside a for-loop. The helper does one item's job; the loop repeats it. Visible output.",
+  "exercises": [
+    {
+      "type": "multipleChoice",
+      "prompt": "You have double(n) that returns n * 2, and a list [1, 2, 3]. You want each item doubled. The tidy way is to...",
+      "options": [
+        "Call double(n) inside a loop, once per item",
+        "Retype n * 2 three times",
+        "Use max",
+        "Call double once on the whole list"
+      ],
+      "answer": 0,
+      "explanation": "A helper does ONE item's job. The loop calls it for each item — a helper inside a loop.",
+      "id": "u78l01e01"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Predict:\n\ndef double(n):\n    return n * 2\n\nfor n in [1, 2, 3]:\n    print(double(n))",
+      "options": [
+        "2, then 4, then 6",
+        "1, 2, 3",
+        "6",
+        "error"
+      ],
+      "answer": 0,
+      "explanation": "The loop calls double once per item: double(1)=2, double(2)=4, double(3)=6, each printed.",
+      "id": "u78l01e02"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Inside the loop, the helper runs fresh for each item — its private variables don't carry over.",
+      "answer": true,
+      "explanation": "Each call is independent (that's scope from last unit). Perfect for repeating a job.",
+      "id": "u78l01e03"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Why use a helper inside a loop instead of writing the formula in the loop body?",
+      "options": [
+        "The helper names the job once and can be reused and tested on its own",
+        "It is slower",
+        "You must never use helpers",
+        "There is no reason"
+      ],
+      "answer": 0,
+      "explanation": "One named job, reused everywhere. The loop reads like 'do the job for each item'.",
+      "id": "u78l01e04"
+    },
+    {
+      "type": "matchPairs",
+      "prompt": "Match each part to its role.",
+      "pairs": [
+        {
+          "left": "The helper",
+          "right": "Does one item's job"
+        },
+        {
+          "left": "The loop",
+          "right": "Repeats the job for every item"
+        },
+        {
+          "left": "The loop variable",
+          "right": "The current item handed to the helper"
+        }
+      ],
+      "explanation": "Helper = one item's job; loop = repeat it; loop variable = the item passed in.",
+      "id": "u78l01e05"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Predict:\n\ndef square(n):\n    return n * n\n\nfor x in [2, 3, 4]:\n    print(square(x))",
+      "options": [
+        "4, 9, 16",
+        "2, 3, 4",
+        "16",
+        "error"
+      ],
+      "answer": 0,
+      "explanation": "square called per item: 4, 9, 16 printed on separate lines.",
+      "id": "u78l01e06"
+    },
+    {
+      "type": "fillBlank",
+      "prompt": "Call the helper for the current item:\n\nfor n in [5, 6]:\n    print(____(n))\n\n(the helper is double)",
+      "answer": "double",
+      "acceptable": [
+        "double"
+      ],
+      "explanation": "double(n) runs each loop: prints 10 then 12.",
+      "id": "u78l01e07"
+    },
+    {
+      "type": "orderBlocks",
+      "prompt": "Arrange: define double, then print its result for each item.",
+      "blocks": [
+        "def double(n):",
+        "    return n * 2",
+        "for n in [10, 20]:",
+        "    print(double(n))"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "double(10)=20, double(20)=40, each printed.",
+      "id": "u78l01e08"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "The loop variable (the current item) is passed to the helper as its argument.",
+      "answer": true,
+      "explanation": "Yes — each item takes its turn as the helper's input.",
+      "id": "u78l01e09"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "The one idea of this lesson:",
+      "options": [
+        "Call a one-item helper inside a loop to handle every item",
+        "Helpers can't go in loops",
+        "Loops replace helpers",
+        "Only print works in loops"
+      ],
+      "answer": 0,
+      "explanation": "A helper does one item's job; the loop applies it to all of them.",
+      "id": "u78l01e10"
+    }
+  ]
+}

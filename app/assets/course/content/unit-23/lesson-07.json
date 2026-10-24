@@ -1,0 +1,159 @@
+{
+  "unitId": "u23",
+  "lessonId": "u23l07",
+  "title": "Solve it: do we have enough?",
+  "idea": "GUIDED. Compare a saved amount to a goal and build a clear message with if/else and an f-string.",
+  "problem": "A toy costs 60. Given how much is saved, show 'Enough' or 'Need more'.",
+  "exercises": [
+    {
+      "id": "u23l07e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: toy costs 60; show 'Enough' or 'Need more'. What is the OUTPUT?",
+      "options": [
+        "One message: Enough or Need more",
+        "The amount saved",
+        "The price 60",
+        "A count"
+      ],
+      "answer": 0,
+      "explanation": "Output is one of two messages based on whether savings reach the price."
+    },
+    {
+      "id": "u23l07e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "What is the INPUT, and what is the fixed rule value?",
+      "options": [
+        "Input: amount saved. Rule value: 60",
+        "Input: 60. Rule: saved",
+        "There is no input",
+        "Both are 60"
+      ],
+      "answer": 0,
+      "explanation": "The amount saved is the input; 60 is the price you compare against."
+    },
+    {
+      "id": "u23l07e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "By hand: saved = 75 gives which message?",
+      "options": [
+        "Enough",
+        "Need more",
+        "75",
+        "60"
+      ],
+      "answer": 0,
+      "explanation": "75 is at least 60, so Enough. That is your check value."
+    },
+    {
+      "id": "u23l07e04",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "By hand: saved = 50 gives which message?",
+      "options": [
+        "Need more",
+        "Enough",
+        "50",
+        "60"
+      ],
+      "answer": 0,
+      "explanation": "50 is below 60, so Need more."
+    },
+    {
+      "id": "u23l07e05",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Which comparison means 'enough to buy'?",
+      "options": [
+        "saved >= 60",
+        "saved > 60",
+        "saved < 60",
+        "saved == 60"
+      ],
+      "answer": 0,
+      "explanation": ">= 60 means 60 is enough. Exactly 60 buys the toy, so include it with >=."
+    },
+    {
+      "id": "u23l07e06",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Plan the steps.",
+      "blocks": [
+        "Compare saved with 60",
+        "If enough, message is Enough",
+        "Otherwise message is Need more",
+        "Show the message"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "Compare, set the message in each branch, then print it."
+    },
+    {
+      "id": "u23l07e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Arrange the code.",
+      "blocks": [
+        "if saved >= 60:",
+        "    print(\"Enough\")",
+        "else:",
+        "    print(\"Need more\")"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "Print Enough on True and Need more on the else."
+    },
+    {
+      "id": "u23l07e08",
+      "type": "multipleChoice",
+      "uepcc": "C",
+      "prompt": "REVIEW (f-strings): which shows 'You saved 75'?\n\nsaved = 75",
+      "options": [
+        "print(f\"You saved {saved}\")",
+        "print(\"You saved saved\")",
+        "print(f\"You saved saved\")",
+        "print(You saved {saved})"
+      ],
+      "answer": 0,
+      "explanation": "An f-string puts the variable's value in {saved}. f\"You saved {saved}\" shows You saved 75."
+    },
+    {
+      "id": "u23l07e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Run with saved = 75. What prints?",
+      "options": [
+        "Enough",
+        "Need more",
+        "75",
+        "60"
+      ],
+      "answer": 0,
+      "explanation": "75 >= 60 is True, so Enough - matches the hand example."
+    },
+    {
+      "id": "u23l07e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Re-check the edge: saved = 60. What prints?",
+      "options": [
+        "Enough",
+        "Need more",
+        "60",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "60 >= 60 is True, so Enough. The edge confirms >= correctly counts exactly 60 as enough."
+    }
+  ]
+}

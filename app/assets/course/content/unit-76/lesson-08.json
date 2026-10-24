@@ -1,0 +1,124 @@
+{
+  "unitId": "u76",
+  "lessonId": "u76l08",
+  "title": "Composing to solve a real problem",
+  "idea": "Composing functions: break a problem into small returning sub-plans, then compose their answers in the main plan. Decomposition pays off.",
+  "exercises": [
+    {
+      "id": "u76l08e01",
+      "type": "multipleChoice",
+      "prompt": "Problem: find the final price = (price times count), then a 1 discount. Two small sub-plans:\n\ndef subtotal(price, count):\n    return price * count\n\ndef discounted(amount):\n    return amount - 1\n\nprint(discounted(subtotal(5, 3)))\n\nWhat prints?",
+      "options": [
+        "14",
+        "15",
+        "13",
+        "None"
+      ],
+      "answer": 0,
+      "explanation": "subtotal(5, 3) is 15; discounted(15) is 14. Each sub-plan does one job; composing solves the whole problem."
+    },
+    {
+      "id": "u76l08e02",
+      "type": "trueFalse",
+      "prompt": "Breaking a problem into small returning sub-plans makes composing them straightforward.",
+      "answer": true,
+      "explanation": "Yes. Each piece returns its answer; the main plan feeds one into the next. Decomposition plus return equals composition."
+    },
+    {
+      "id": "u76l08e03",
+      "type": "orderBlocks",
+      "prompt": "Trace discounted(subtotal(5, 3)) in order.",
+      "blocks": [
+        "subtotal(5, 3) returns 15",
+        "discounted(15) returns 14",
+        "print shows 14"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Inner subtotal first (15), then discounted (14), then print. Inside-out, as always."
+    },
+    {
+      "id": "u76l08e04",
+      "type": "multipleChoice",
+      "prompt": "Why split this into subtotal and discounted instead of one big sub-plan?",
+      "options": [
+        "Each piece is reusable and easy to test on its own",
+        "it runs faster",
+        "big sub-plans are illegal",
+        "no reason"
+      ],
+      "answer": 0,
+      "explanation": "subtotal and discounted each do one clear job, so you can reuse or check them separately. Small pieces compose flexibly."
+    },
+    {
+      "id": "u76l08e05",
+      "type": "fillBlank",
+      "prompt": "Compose: feed subtotal(5, 3) into discounted.\n\nprint(discounted(____(5, 3)))",
+      "answer": "subtotal",
+      "acceptable": ["subtotal"],
+      "explanation": "subtotal(5, 3) returns 15; discounted(15) returns 14. The inner answer feeds the outer call."
+    },
+    {
+      "id": "u76l08e06",
+      "type": "multipleChoice",
+      "prompt": "You could also use a middle variable. Predict:\n\nraw = subtotal(5, 3)\nfinal = discounted(raw)\nprint(final)",
+      "options": [
+        "14",
+        "15",
+        "13",
+        "None"
+      ],
+      "answer": 0,
+      "explanation": "raw is 15; final is discounted(15) = 14. Same result as nesting — a named middle step can be clearer."
+    },
+    {
+      "id": "u76l08e07",
+      "type": "multipleChoice",
+      "prompt": "Re-check with new inputs: discounted(subtotal(10, 2)). What prints?",
+      "options": [
+        "19",
+        "20",
+        "18",
+        "None"
+      ],
+      "answer": 0,
+      "explanation": "subtotal(10, 2) is 20; discounted(20) is 19. The composed solution generalizes to new numbers."
+    },
+    {
+      "id": "u76l08e08",
+      "type": "multipleChoice",
+      "prompt": "REVIEW: this skill (split a problem, solve pieces, combine) is the grown-up form of which early idea?",
+      "options": [
+        "Decomposition — now each piece hands its answer back to be combined",
+        "printing",
+        "looping only",
+        "comparing only"
+      ],
+      "answer": 0,
+      "explanation": "It's decomposition completed: each sub-piece returns a value, and composing combines them into the full answer."
+    },
+    {
+      "id": "u76l08e09",
+      "type": "trueFalse",
+      "prompt": "For composing to work here, both subtotal and discounted must RETURN their results.",
+      "answer": true,
+      "explanation": "Yes. If either printed instead, its value would be None and the chain would break. Return is what lets pieces connect."
+    },
+    {
+      "id": "u76l08e10",
+      "type": "multipleChoice",
+      "prompt": "The idea of this lesson:",
+      "options": [
+        "Solve a problem by composing small returning sub-plans",
+        "always write one giant sub-plan",
+        "composing needs printing",
+        "decomposition is unrelated"
+      ],
+      "answer": 0,
+      "explanation": "Split the problem, make each piece return its answer, then compose them. That's the heart of building bigger programs."
+    }
+  ]
+}

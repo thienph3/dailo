@@ -1,0 +1,158 @@
+{
+  "unitId": "u91",
+  "lessonId": "u91l09",
+  "title": "Solve it: a reusable grade summary",
+  "idea": "GUIDED PROBLEM. Wrap a multi-part solution (total + count + average) in a function and return it - composing earlier tools.",
+  "problem": "Write a function that takes a list of scores and returns their average (guarding the empty case), then use it on [10, 20, 30].",
+  "exercises": [
+    {
+      "id": "u91l09e01",
+      "uepcc": "U",
+      "type": "multipleChoice",
+      "prompt": "PROBLEM: a FUNCTION that returns the average of a list of scores.\n\nWhat should the function RETURN?",
+      "options": [
+        "The average value, for the caller to use",
+        "It should print only",
+        "The list",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "A function that RETURNS the average hands the value back so any caller can reuse it - return, not print."
+    },
+    {
+      "id": "u91l09e02",
+      "uepcc": "U",
+      "type": "multipleChoice",
+      "prompt": "What is the function's INPUT (its parameter)?",
+      "options": [
+        "The list of scores",
+        "A single number",
+        "Nothing",
+        "The average"
+      ],
+      "answer": 0,
+      "explanation": "The parameter is the list of scores. The function computes and returns the average from it."
+    },
+    {
+      "id": "u91l09e03",
+      "uepcc": "E",
+      "type": "multipleChoice",
+      "prompt": "By hand: for [10, 20, 30], total is 60 over 3 scores, so the average is?",
+      "options": [
+        "20",
+        "60",
+        "3",
+        "30"
+      ],
+      "answer": 0,
+      "explanation": "60 / 3 = 20. That's the value the function should return for this input."
+    },
+    {
+      "id": "u91l09e04",
+      "uepcc": "E",
+      "type": "trueFalse",
+      "prompt": "A good function should still behave sensibly if given an EMPTY list.",
+      "answer": true,
+      "explanation": "Yes - the empty case needs a guard so it doesn't divide by zero. We'll return 0 for an empty list."
+    },
+    {
+      "id": "u91l09e05",
+      "uepcc": "P",
+      "type": "orderBlocks",
+      "prompt": "Plan the function's steps.",
+      "blocks": [
+        "Take the list as a parameter",
+        "Walk it keeping total and count",
+        "If count is 0 return 0, else return total / count"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Parameter in, multiple-state loop, guarded return. The guard decides between 0 and the real average."
+    },
+    {
+      "id": "u91l09e06",
+      "uepcc": "P",
+      "type": "multipleChoice",
+      "prompt": "Which earlier tools does this function COMBINE?",
+      "options": [
+        "def/return, a multiple-state loop, and an edge-case guard",
+        "Only print",
+        "Only input",
+        "Lists and strings"
+      ],
+      "answer": 0,
+      "explanation": "Functions, multiple state, and a guard - all tools you already have, now composed. No new syntax."
+    },
+    {
+      "id": "u91l09e07",
+      "uepcc": "C",
+      "type": "orderBlocks",
+      "prompt": "Code the function.",
+      "blocks": [
+        "def average_of(scores):",
+        "    total = 0",
+        "    count = 0",
+        "    for s in scores:",
+        "        total = total + s",
+        "        count = count + 1",
+        "    if count == 0:",
+        "        return 0",
+        "    return total / count"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "explanation": "Header with a list parameter, multiple-state loop, a guard returning 0 for empty, else the average. A reusable summary."
+    },
+    {
+      "id": "u91l09e08",
+      "uepcc": "C",
+      "type": "fillBlank",
+      "prompt": "Complete the empty guard so it returns 0 for no scores:\n\nif count ____ 0:\n    return 0\nreturn total / count",
+      "answer": "==",
+      "acceptable": [
+        "=="
+      ],
+      "explanation": "count == 0 detects the empty list. (Note == compares, = assigns - a long-standing gotcha.)"
+    },
+    {
+      "id": "u91l09e09",
+      "uepcc": "Check",
+      "type": "multipleChoice",
+      "prompt": "Check: print(average_of([10, 20, 30])) shows 20.0. Hand answer was 20. Verdict?",
+      "options": [
+        "Passes - matches the hand example",
+        "Fails",
+        "Unknown",
+        "Rewrite example"
+      ],
+      "answer": 0,
+      "explanation": "The function returned 20.0, matching the hand-worked average. The composed function works."
+    },
+    {
+      "id": "u91l09e10",
+      "uepcc": "Check",
+      "type": "multipleChoice",
+      "prompt": "Call average_of([]) on an empty list. What comes back?",
+      "options": [
+        "0 - the guard returns 0 instead of dividing by zero",
+        "An error",
+        "Nothing",
+        "20"
+      ],
+      "answer": 0,
+      "explanation": "count is 0, so the guard returns 0 safely. The function generalises to the tricky empty input."
+    }
+  ]
+}

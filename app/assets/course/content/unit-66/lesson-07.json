@@ -1,0 +1,129 @@
+{
+  "unitId": "u66",
+  "lessonId": "u66l07",
+  "title": "The empty-list case",
+  "idea": "Averaging an empty list divides by zero and crashes. A missing empty-guard is a bug you spot by imagining the empty input.",
+  "exercises": [
+    {
+      "id": "u66l07e01",
+      "type": "multipleChoice",
+      "prompt": "The average is sum / count. If the list is EMPTY, what is count (len)?",
+      "options": [
+        "0",
+        "1",
+        "empty",
+        "-1"
+      ],
+      "answer": 0,
+      "explanation": "An empty list has len 0. Averaging then means dividing by 0, which is undefined and crashes the program."
+    },
+    {
+      "id": "u66l07e02",
+      "type": "trueFalse",
+      "prompt": "Dividing by zero makes a program crash with an error.",
+      "answer": true,
+      "explanation": "Yes. Division by zero is undefined, so Python stops with an error. An empty list is the usual way this sneaks in."
+    },
+    {
+      "id": "u66l07e03",
+      "type": "multipleChoice",
+      "prompt": "BUGGY: average of a list.\n\naverage = sum(nums) / len(nums)\n\nWhat input makes this crash?",
+      "options": [
+        "an empty list [] — len is 0, so it divides by zero",
+        "a list of one item",
+        "a big list",
+        "a list of zeros"
+      ],
+      "answer": 0,
+      "explanation": "When nums is [], len(nums) is 0 and the division fails. The missing EMPTY GUARD is the bug."
+    },
+    {
+      "id": "u66l07e04",
+      "type": "multipleChoice",
+      "prompt": "The fix is to guard the empty case first. Which plan is right?",
+      "options": [
+        "if len(nums) == 0: say there's no average; else compute sum / len",
+        "always divide anyway",
+        "start sum at 1",
+        "use a bigger list"
+      ],
+      "answer": 0,
+      "explanation": "Check for the empty list BEFORE dividing. If it's empty, report 'no average'; otherwise it's safe to divide."
+    },
+    {
+      "id": "u66l07e05",
+      "type": "orderBlocks",
+      "prompt": "Order the safe-average plan.",
+      "blocks": [
+        "If the list is empty, report 'no average' and stop",
+        "Otherwise, compute sum divided by count",
+        "Show the result"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Guard the empty case first, then it's safe to divide, then show. The guard prevents the divide-by-zero crash."
+    },
+    {
+      "id": "u66l07e06",
+      "type": "trueFalse",
+      "prompt": "Imagining the EMPTY input is a good habit for catching missing-guard bugs.",
+      "answer": true,
+      "explanation": "Yes. Many list bugs only show on the empty list. Ask 'what if there are zero items?' every time."
+    },
+    {
+      "id": "u66l07e07",
+      "type": "multipleChoice",
+      "prompt": "REVIEW: what is len([]) ?",
+      "options": [
+        "0",
+        "1",
+        "empty",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "An empty list has zero items, so len([]) is 0, exactly the value that breaks a divide."
+    },
+    {
+      "id": "u66l07e08",
+      "type": "multipleChoice",
+      "prompt": "Besides averaging, which other task also needs an empty-list check to avoid a wrong or crashing answer?",
+      "options": [
+        "finding the biggest item (there is no biggest of nothing)",
+        "printing a label",
+        "adding 2 + 2",
+        "making a variable"
+      ],
+      "answer": 0,
+      "explanation": "'The biggest of an empty list' has no answer, so that also needs a guard. Empty inputs trip up many list tools."
+    },
+    {
+      "id": "u66l07e09",
+      "type": "multipleChoice",
+      "prompt": "A program works on every test list but crashes once in a while in real use. A likely cause is...",
+      "options": [
+        "an empty list slipping in with no guard",
+        "too many items",
+        "a spelling mistake in a comment",
+        "the screen size"
+      ],
+      "answer": 0,
+      "explanation": "Rare crashes often mean a rare input. The empty list is the usual suspect when a guard is missing."
+    },
+    {
+      "id": "u66l07e10",
+      "type": "multipleChoice",
+      "prompt": "This lesson's rule:",
+      "options": [
+        "before dividing by a count, make sure the count isn't zero",
+        "always divide",
+        "empty lists never happen",
+        "len is always positive"
+      ],
+      "answer": 0,
+      "explanation": "Guard the zero-count case before any division. The empty list is a real input you must handle, not ignore."
+    }
+  ]
+}

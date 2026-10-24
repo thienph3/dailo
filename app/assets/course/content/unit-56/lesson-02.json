@@ -1,0 +1,146 @@
+{
+  "unitId": "u56",
+  "lessonId": "u56l02",
+  "title": "Solve it together: show each doubled price",
+  "idea": "GUIDED UEPCC. For each price in a list, print the price doubled.",
+  "problem": "A shop lists item prices. For each price, print what it would cost at double.",
+  "exercises": [
+    {
+      "id": "u56l02e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: For each price in a list, print the doubled price.\n\nWhat is the OUTPUT?",
+      "options": [
+        "One doubled price printed per item",
+        "A single total",
+        "The count of prices",
+        "The first price"
+      ],
+      "answer": 0,
+      "explanation": "One result per price — a per-item transform. Not a total."
+    },
+    {
+      "id": "u56l02e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "What is the INPUT, and what do you do to each value?",
+      "options": [
+        "The list of prices; multiply each by 2",
+        "One price; add 2",
+        "The word 'double'",
+        "Nothing to do"
+      ],
+      "answer": 0,
+      "explanation": "Input is the price list; the action is multiply-by-2 for each item."
+    },
+    {
+      "id": "u56l02e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example by hand. If prices = [10, 20, 30], what should print?",
+      "options": [
+        "20, 40, 60",
+        "10, 20, 30",
+        "60",
+        "120"
+      ],
+      "answer": 0,
+      "explanation": "Double each: 20, 40, 60. This is your check target."
+    },
+    {
+      "id": "u56l02e04",
+      "type": "trueFalse",
+      "uepcc": "E",
+      "prompt": "For prices = [5], the expected printed value is 10.",
+      "answer": true,
+      "explanation": "5 doubled is 10. A tiny example still pins down the behaviour."
+    },
+    {
+      "id": "u56l02e05",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Plan it. Order the steps.",
+      "blocks": [
+        "Print that doubled value",
+        "Take each price from the list",
+        "Multiply it by 2"
+      ],
+      "answer": [
+        1,
+        2,
+        0
+      ],
+      "explanation": "Take each price, double it, print it. Repeat for all."
+    },
+    {
+      "id": "u56l02e06",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Which operation does 'multiply by 2' need?",
+      "options": [
+        "*",
+        "+",
+        "//",
+        "%"
+      ],
+      "answer": 0,
+      "explanation": "Doubling is multiplication: price * 2."
+    },
+    {
+      "id": "u56l02e07",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Code it. Fill the blank:\n\nprices = [10, 20, 30]\nfor price in prices:\n    print(price ____ 2)",
+      "answer": "*",
+      "acceptable": [
+        "*"
+      ],
+      "explanation": "price * 2 doubles the current value each pass."
+    },
+    {
+      "id": "u56l02e08",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Arrange the full solution.",
+      "blocks": [
+        "    print(price * 2)",
+        "prices = [10, 20, 30]",
+        "for price in prices:"
+      ],
+      "answer": [
+        1,
+        2,
+        0
+      ],
+      "explanation": "List, loop header, indented body. Prints 20, 40, 60."
+    },
+    {
+      "id": "u56l02e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check. The code prints 20, 40, 60. Your hand example said 20, 40, 60. Verdict?",
+      "options": [
+        "Passes",
+        "Fails",
+        "Unknown",
+        "Rewrite the example"
+      ],
+      "answer": 0,
+      "explanation": "Matches the hand example — correct."
+    },
+    {
+      "id": "u56l02e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Re-check with new input prices = [7, 1]. What prints?",
+      "options": [
+        "14, 2",
+        "7, 1",
+        "8, 2",
+        "16"
+      ],
+      "answer": 0,
+      "explanation": "7*2=14, 1*2=2. Works for fresh numbers too."
+    }
+  ]
+}

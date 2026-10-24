@@ -1,0 +1,154 @@
+{
+  "unitId": "u27",
+  "lessonId": "u27l02",
+  "title": "Solve it: free entry on weekend OR holiday",
+  "idea": "GUIDED. One problem through UEPCC using 'or': entry is free if EITHER of two conditions holds.",
+  "problem": "A park gives free entry if it is the weekend OR a public holiday. Given is_weekend and is_holiday, print 'Free' or 'Pay'.",
+  "exercises": [
+    {
+      "id": "u27l02e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: Free entry on weekend OR holiday. Print 'Free' or 'Pay'.\n\nWhat is the OUTPUT?",
+      "options": [
+        "The label 'Free' or 'Pay'",
+        "The day of the week",
+        "The ticket count",
+        "The year"
+      ],
+      "answer": 0,
+      "explanation": "The output is one of two labels. Pin that down before anything else."
+    },
+    {
+      "id": "u27l02e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "What are the INPUTS?",
+      "options": [
+        "Whether it is the weekend, and whether it is a holiday",
+        "Only the weekend",
+        "Only the holiday",
+        "The word 'Free'"
+      ],
+      "answer": 0,
+      "explanation": "Two yes/no inputs: is_weekend and is_holiday. The rule looks at both."
+    },
+    {
+      "id": "u27l02e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "By hand: a weekday that is a holiday. Free or Pay?",
+      "options": [
+        "Free",
+        "Pay",
+        "both",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "Not a weekend, but it IS a holiday. With 'or', one true side is enough, so 'Free'."
+    },
+    {
+      "id": "u27l02e04",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "By hand: an ordinary weekday, not a holiday. Free or Pay?",
+      "options": [
+        "Pay",
+        "Free",
+        "both",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "Neither condition holds, so 'or' is false: 'Pay'. Testing the both-false case confirms the other branch."
+    },
+    {
+      "id": "u27l02e05",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Plan: which tool means 'either one is enough'?",
+      "options": [
+        "or",
+        "and",
+        "not",
+        "=="
+      ],
+      "answer": 0,
+      "explanation": "'Either side true' is 'or'. It is false only when BOTH sides are false."
+    },
+    {
+      "id": "u27l02e06",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Order the plain-English plan.",
+      "blocks": [
+        "Check if it is weekend or holiday",
+        "If so, print Free",
+        "Otherwise print Pay"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Check the combined condition, then branch. Plan in words before writing code."
+    },
+    {
+      "id": "u27l02e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Arrange the code.",
+      "blocks": [
+        "if is_weekend or is_holiday:",
+        "    print(\"Free\")",
+        "else:",
+        "    print(\"Pay\")"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "One 'or' condition, then the else for the both-false case."
+    },
+    {
+      "id": "u27l02e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Complete the joining word:\n\nif is_weekend ____ is_holiday:\n    print(\"Free\")\nelse:\n    print(\"Pay\")",
+      "answer": "or",
+      "acceptable": [
+        "or"
+      ],
+      "explanation": "'or' makes either condition enough to print 'Free'."
+    },
+    {
+      "id": "u27l02e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check the first example: is_weekend False, is_holiday True. What prints?",
+      "options": [
+        "Free",
+        "Pay",
+        "both",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "False or True = True, so 'Free' - matching the hand answer."
+    },
+    {
+      "id": "u27l02e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Fresh case: is_weekend True, is_holiday True. What prints?",
+      "options": [
+        "Free",
+        "Pay",
+        "both",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "Both true is still true for 'or', so 'Free'. 'or' only fails when both are false."
+    }
+  ]
+}

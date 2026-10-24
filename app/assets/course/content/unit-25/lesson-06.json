@@ -1,0 +1,149 @@
+{
+  "unitId": "u25",
+  "lessonId": "u25l06",
+  "title": "Solve it: label a temperature",
+  "idea": "Walk a classify-into-bands problem: sort a temperature into Hot/Mild/Cold. Apply understand-plan-code-check with elif.",
+  "exercises": [
+    {
+      "id": "u25l06e01",
+      "type": "multipleChoice",
+      "prompt": "PROBLEM: Label a temperature as 'Hot' (30+), 'Mild' (10-29), or 'Cold' (below 10). What is the OUTPUT?",
+      "options": [
+        "One of three labels",
+        "The temperature number",
+        "Only 'Hot'",
+        "A yes/no"
+      ],
+      "answer": 0,
+      "explanation": "This is a three-bucket problem: the output is one of three labels. That is a job for if/elif/else."
+    },
+    {
+      "id": "u25l06e02",
+      "type": "multipleChoice",
+      "prompt": "What is the single INPUT?",
+      "options": [
+        "The temperature",
+        "The three labels",
+        "The number 30 only",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "The one value you sort is the temperature. The 30 and 10 are band boundaries in the rule."
+    },
+    {
+      "id": "u25l06e03",
+      "type": "multipleChoice",
+      "prompt": "Example by hand: a temperature of 22. Which label?",
+      "options": [
+        "Mild",
+        "Hot",
+        "Cold",
+        "Cannot tell"
+      ],
+      "answer": 0,
+      "explanation": "22 is in the 10-29 range, so 'Mild'. Working one example by hand gives you a check value."
+    },
+    {
+      "id": "u25l06e04",
+      "type": "orderBlocks",
+      "prompt": "Plan the chain from strictest band to loosest.",
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "blocks": [
+        "If temperature is 30 or more, it is Hot",
+        "Else if temperature is 10 or more, it is Mild",
+        "Otherwise it is Cold"
+      ],
+      "explanation": "Strictest first (30+), then 10+, then the Cold catch-all. Order makes each band land correctly."
+    },
+    {
+      "id": "u25l06e05",
+      "type": "multipleChoice",
+      "prompt": "Which comparison matches 'Hot is 30 or more'?",
+      "options": [
+        "temperature >= 30",
+        "temperature > 30",
+        "temperature <= 30",
+        "temperature == 30"
+      ],
+      "answer": 0,
+      "explanation": "'30 or more' includes 30, so >= is right."
+    },
+    {
+      "id": "u25l06e06",
+      "type": "orderBlocks",
+      "prompt": "Code the classifier.",
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "blocks": [
+        "temperature = 22",
+        "if temperature >= 30:",
+        "    print(\"Hot\")",
+        "elif temperature >= 10:",
+        "    print(\"Mild\")",
+        "else:",
+        "    print(\"Cold\")"
+      ],
+      "explanation": "Store the temperature, then the strict-first chain prints exactly one label."
+    },
+    {
+      "id": "u25l06e07",
+      "type": "fillBlank",
+      "prompt": "Complete the middle band keyword:\n\nif temperature >= 30:\n    print(\"Hot\")\n____ temperature >= 10:\n    print(\"Mild\")\nelse:\n    print(\"Cold\")",
+      "answer": "elif",
+      "acceptable": [
+        "elif"
+      ],
+      "explanation": "elif links the Mild test so it is only reached when Hot was False."
+    },
+    {
+      "id": "u25l06e08",
+      "type": "multipleChoice",
+      "prompt": "Check. With temperature = 22 the code prints 'Mild'. Hand answer was 'Mild'. Verdict?",
+      "options": [
+        "Pass - matches",
+        "Fail",
+        "Cannot tell",
+        "Change the example"
+      ],
+      "answer": 0,
+      "explanation": "Output matches the hand-worked label, so the classifier is correct for 22."
+    },
+    {
+      "id": "u25l06e09",
+      "type": "multipleChoice",
+      "prompt": "Re-check with temperature = 5. What prints?",
+      "options": [
+        "Cold",
+        "Mild",
+        "Hot",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "5 fails >= 30 and >= 10, so the else runs: 'Cold'. The classifier generalizes to new inputs."
+    },
+    {
+      "id": "u25l06e10",
+      "type": "multipleChoice",
+      "prompt": "Re-check at a boundary: temperature = 30. What prints?",
+      "options": [
+        "Hot",
+        "Mild",
+        "Cold",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "30 >= 30 is True, so 'Hot' prints. The boundary belongs to the band whose >= includes it."
+    }
+  ]
+}

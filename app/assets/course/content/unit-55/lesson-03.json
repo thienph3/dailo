@@ -1,0 +1,141 @@
+{
+  "unitId": "u55",
+  "lessonId": "u55l03",
+  "title": "Using each value in the loop",
+  "idea": "The loop variable is a normal variable: you can compute with it and print a result for each item.",
+  "exercises": [
+    {
+      "id": "u55l03e01",
+      "type": "multipleChoice",
+      "prompt": "prices = [10, 20, 30]\nfor price in prices:\n    print(price * 2)\n\nWhat is printed?",
+      "options": [
+        "20, 40, 60 — each on its own line",
+        "10, 20, 30",
+        "60",
+        "[20, 40, 60]"
+      ],
+      "answer": 0,
+      "explanation": "Each pass doubles the current value and prints it: 10->20, 20->40, 30->60."
+    },
+    {
+      "id": "u55l03e02",
+      "type": "multipleChoice",
+      "prompt": "The loop variable 'price' — can you use it in math like any other variable?",
+      "options": [
+        "Yes, it's an ordinary variable holding the current value",
+        "No, loop variables are read-only words",
+        "Only if the list is sorted",
+        "Only with print"
+      ],
+      "answer": 0,
+      "explanation": "It's just a variable. Inside the loop you can add, multiply, compare — whatever you need with the current value."
+    },
+    {
+      "id": "u55l03e03",
+      "type": "fillBlank",
+      "prompt": "Make the loop print each number plus 1:\n\nnums = [5, 8, 2]\nfor n in nums:\n    print(n ____ 1)",
+      "answer": "+",
+      "acceptable": [
+        "+"
+      ],
+      "explanation": "n + 1 adds one to the current value each pass, printing 6, 9, 3."
+    },
+    {
+      "id": "u55l03e04",
+      "type": "multipleChoice",
+      "prompt": "celsius = [0, 100]\nfor c in celsius:\n    print(c + 273)\n\nWhat shows?",
+      "options": [
+        "273, then 373",
+        "0, then 100",
+        "646",
+        "273373"
+      ],
+      "answer": 0,
+      "explanation": "Each value gets 273 added: 0->273, 100->373, on two lines."
+    },
+    {
+      "id": "u55l03e05",
+      "type": "orderBlocks",
+      "prompt": "Arrange the code: for each score, print the score with 5 bonus points added.",
+      "blocks": [
+        "    print(score + 5)",
+        "for score in scores:",
+        "scores = [10, 20]"
+      ],
+      "answer": [
+        2,
+        1,
+        0
+      ],
+      "explanation": "Make the list, open the loop, then the indented body that adds the bonus: prints 15, 25."
+    },
+    {
+      "id": "u55l03e06",
+      "type": "trueFalse",
+      "prompt": "The list itself is NOT changed when you just read each value and print a calculation.",
+      "answer": true,
+      "explanation": "Reading a value and printing price * 2 doesn't touch the list. The list still holds its original values."
+    },
+    {
+      "id": "u55l03e07",
+      "type": "multipleChoice",
+      "prompt": "You want to show each item's value AND a label, using an f-string:\n\nfor price in prices:\n    print(f\"Price: {price}\")\n\nIf prices = [3, 7], what prints?",
+      "options": [
+        "Price: 3  then  Price: 7",
+        "Price: {price} twice",
+        "3 7",
+        "Price: 37"
+      ],
+      "answer": 0,
+      "explanation": "The f-string drops the current value in where {price} is, so each pass labels its own value."
+    },
+    {
+      "id": "u55l03e08",
+      "type": "multipleChoice",
+      "prompt": "nums = [2, 4, 6]\nfor n in nums:\n    print(n % 2)\n\nWhat is printed?",
+      "options": [
+        "0, 0, 0 — all even",
+        "2, 4, 6",
+        "1, 1, 1",
+        "12"
+      ],
+      "answer": 0,
+      "explanation": "% gives the remainder. Every value here is even, so each remainder-by-2 is 0."
+    },
+    {
+      "id": "u55l03e09",
+      "type": "multipleChoice",
+      "prompt": "After the loop finishes, what does the loop variable hold?",
+      "options": [
+        "The last value it visited",
+        "The first value",
+        "The whole list",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "When the loop ends, the loop variable is left holding whatever it held last — the final item. Usually you don't rely on that, but it's good to know."
+    },
+    {
+      "id": "u55l03e10",
+      "type": "tapTokens",
+      "prompt": "Build the body line that prints each value multiplied by 3. (Tap in order.)",
+      "tokens": [
+        "print",
+        "(",
+        "value",
+        "*",
+        "3",
+        ")"
+      ],
+      "answer": [
+        "print",
+        "(",
+        "value",
+        "*",
+        "3",
+        ")"
+      ],
+      "explanation": "print(value * 3) — compute with the loop variable, then print the result each pass."
+    }
+  ]
+}

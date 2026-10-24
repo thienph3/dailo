@@ -1,0 +1,152 @@
+{
+  "unitId": "u98",
+  "lessonId": "u98l09",
+  "title": "Capstone: show the record high after each game",
+  "idea": "GUIDED CAPSTONE. Track a running best and print it each pass — the max pattern, but reporting progress as it builds.",
+  "problem": "For scores [3, 7, 5, 9], print the best-so-far after each game: 3, 7, 7, 9.",
+  "exercises": [
+    {
+      "id": "u98l09e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: after each score in [3, 7, 5, 9], print the record high so far. OUTPUT is...",
+      "options": [
+        "A best-so-far value after each game (several lines)",
+        "One final best",
+        "The total",
+        "The average"
+      ],
+      "answer": 0,
+      "explanation": "Output is a running report — one best-so-far per game, not just the final max."
+    },
+    {
+      "id": "u98l09e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "How does this differ from plain 'find the max'?",
+      "options": [
+        "We print the current best every pass, not just at the end",
+        "It's identical",
+        "We sum instead",
+        "We count instead"
+      ],
+      "answer": 0,
+      "explanation": "Same max tracking, but we report progress each step. The pattern is reused, the reporting changes."
+    },
+    {
+      "id": "u98l09e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example by hand. best starts at 3 (first game). After 3, print 3. Next 7 > 3, best = 7, print...",
+      "options": [
+        "7",
+        "3",
+        "10",
+        "5"
+      ],
+      "answer": 0,
+      "explanation": "7 beats 3, best updates to 7, we print 7. Each line is the record AFTER that game."
+    },
+    {
+      "id": "u98l09e04",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Next 5 (not > 7) print 7; then 9 > 7 print 9. Full output?",
+      "options": [
+        "3, 7, 7, 9",
+        "3, 7, 5, 9",
+        "3, 3, 3, 3",
+        "9, 9, 9, 9"
+      ],
+      "answer": 0,
+      "explanation": "3, 7, 7, 9 — the best never drops. That's our check sequence."
+    },
+    {
+      "id": "u98l09e05",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Plan it. Order the per-pass steps.",
+      "blocks": [
+        "If the score beats best, update best",
+        "Print best (the record so far)",
+        "Start best at the first score"
+      ],
+      "answer": [
+        2,
+        0,
+        1
+      ],
+      "explanation": "Seed best, then each pass: update if bigger, then print the current best. Printing comes after the possible update."
+    },
+    {
+      "id": "u98l09e06",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Why print best AFTER checking the new score, not before?",
+      "options": [
+        "So the printed record already includes the newest game",
+        "Order doesn't matter",
+        "To skip the first",
+        "To print less"
+      ],
+      "answer": 0,
+      "explanation": "We want the record THROUGH the current game, so update first, then print. Sequencing is the puzzle here."
+    },
+    {
+      "id": "u98l09e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code the loop body. Arrange the lines.",
+      "blocks": [
+        "    print(best)",
+        "    if score > best:",
+        "        best = score"
+      ],
+      "answer": [
+        1,
+        2,
+        0
+      ],
+      "explanation": "Check-and-maybe-update first, then print best. The print sits at the loop's indentation, outside the if."
+    },
+    {
+      "id": "u98l09e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Complete the update test:\n\nscores = [3, 7, 5, 9]\nbest = scores[0]\nfor score in scores:\n    if score ____ best:\n        best = score\n    print(best)",
+      "answer": ">",
+      "acceptable": [
+        ">"
+      ],
+      "explanation": "Use > to raise the record. Prints 3, 7, 7, 9 — the best-so-far after each game."
+    },
+    {
+      "id": "u98l09e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Run it: prints 3, 7, 7, 9. Hand matched. Verdict?",
+      "options": [
+        "Passes",
+        "Fails",
+        "Unknown",
+        "Rewrite example"
+      ],
+      "answer": 0,
+      "explanation": "Matches. A running max that reports progress — same pattern, new use."
+    },
+    {
+      "id": "u98l09e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Re-run on [5, 2, 8]. What lines print?",
+      "options": [
+        "5, 5, 8",
+        "5, 2, 8",
+        "2, 5, 8",
+        "8, 8, 8"
+      ],
+      "answer": 0,
+      "explanation": "best seeds 5; 2 doesn't beat it (print 5); 8 does (print 8). Output 5, 5, 8. The record only ever rises."
+    }
+  ]
+}

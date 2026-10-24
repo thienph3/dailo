@@ -1,0 +1,127 @@
+{
+  "unitId": "u08",
+  "lessonId": "u08l01",
+  "title": "A box with a name",
+  "idea": "A variable is a named box that remembers a value for you to use later. We meet the idea before the code.",
+  "exercises": [
+    {
+      "id": "u08l01e01",
+      "type": "multipleChoice",
+      "prompt": "What is a 'variable'?",
+      "options": [
+        "A named box that remembers a value",
+        "A kind of printer",
+        "A word you cannot use",
+        "A line that does nothing"
+      ],
+      "answer": 0,
+      "explanation": "A variable is a named box. You put a value in it, and the computer remembers it for later."
+    },
+    {
+      "id": "u08l01e02",
+      "type": "trueFalse",
+      "prompt": "A variable lets the computer remember a value so you can use it again later.",
+      "answer": true,
+      "explanation": "That's the whole point. Save it once, use it as many times as you like."
+    },
+    {
+      "id": "u08l01e03",
+      "type": "multipleChoice",
+      "prompt": "Why is remembering a value useful?",
+      "options": [
+        "So you can use the same value later without retyping it",
+        "So the computer runs slower",
+        "So the screen stays empty",
+        "So you never have to print anything"
+      ],
+      "answer": 0,
+      "explanation": "Save a value once, then reuse it. Less typing, fewer mistakes."
+    },
+    {
+      "id": "u08l01e04",
+      "type": "matchPairs",
+      "prompt": "Match each word to what it means.",
+      "pairs": [
+        {
+          "left": "Variable",
+          "right": "A named box for a value"
+        },
+        {
+          "left": "Value",
+          "right": "The thing stored in the box"
+        },
+        {
+          "left": "Name",
+          "right": "The label on the box"
+        }
+      ],
+      "explanation": "A variable has a name (the label) and holds a value (the contents)."
+    },
+    {
+      "id": "u08l01e05",
+      "type": "multipleChoice",
+      "prompt": "Which everyday thing is most like a variable?",
+      "options": [
+        "A jar labeled 'sugar' that holds sugar",
+        "A closed door",
+        "A song on the radio",
+        "A clock on the wall"
+      ],
+      "answer": 0,
+      "explanation": "A labeled jar is a perfect picture: the label is the name, the sugar inside is the value."
+    },
+    {
+      "id": "u08l01e06",
+      "type": "trueFalse",
+      "prompt": "Without a variable, you would have to type the same value every time you need it.",
+      "answer": true,
+      "explanation": "Yes. A variable saves the value once so you don't repeat yourself."
+    },
+    {
+      "id": "u08l01e07",
+      "type": "multipleChoice",
+      "prompt": "Last unit you planned steps in order. A variable helps a plan by...",
+      "options": [
+        "remembering a value from an early step to use in a later step",
+        "skipping steps you don't like",
+        "running steps backwards",
+        "deleting the plan"
+      ],
+      "answer": 0,
+      "explanation": "Plans often need a value from step 1 again in step 3. A variable holds onto it for you."
+    },
+    {
+      "id": "u08l01e08",
+      "type": "multipleChoice",
+      "prompt": "A box is labeled 'score' and holds 10. What is the name, and what is the value?",
+      "options": [
+        "Name: score, Value: 10",
+        "Name: 10, Value: score",
+        "Name: box, Value: label",
+        "There is no name"
+      ],
+      "answer": 0,
+      "explanation": "The label 'score' is the name. The 10 inside is the value."
+    },
+    {
+      "id": "u08l01e09",
+      "type": "trueFalse",
+      "prompt": "A variable's name helps you remember what the value means.",
+      "answer": true,
+      "explanation": "A good name like 'score' tells you what is inside, so your code reads clearly."
+    },
+    {
+      "id": "u08l01e10",
+      "type": "multipleChoice",
+      "prompt": "You're about to make your first variable. What will it do for you?",
+      "options": [
+        "Hold a value you can use again later",
+        "Print the whole alphabet",
+        "Erase your program",
+        "Run nothing at all"
+      ],
+      "answer": 0,
+      "explanation": "It holds a value for later. Next lesson, you'll write your first one!"
+    }
+  ]
+}

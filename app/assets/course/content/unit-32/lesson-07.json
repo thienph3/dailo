@@ -1,0 +1,126 @@
+{
+  "unitId": "u32",
+  "lessonId": "u32l07",
+  "title": "Forgetting int(): comparing text to numbers",
+  "idea": "input() gives text. Comparing that text as if it were a number makes the reasoning go wrong.",
+  "exercises": [
+    {
+      "id": "u32l07e01",
+      "type": "multipleChoice",
+      "prompt": "What type does input() always hand back?",
+      "options": [
+        "Text (a string)",
+        "A number",
+        "True or False",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "input() always returns text (a string), even when the user types digits like 42."
+    },
+    {
+      "id": "u32l07e02",
+      "type": "multipleChoice",
+      "prompt": "A learner wrote age = input('Age: ') then if age >= 18. Why is the reasoning shaky?",
+      "options": [
+        "age is text, so comparing it to 18 is comparing text to a number",
+        "18 is too small",
+        ">= cannot be used",
+        "input needs two arguments"
+      ],
+      "answer": 0,
+      "explanation": "age is text, not a number. Comparing text to the number 18 is the flaw; convert with int() first."
+    },
+    {
+      "id": "u32l07e03",
+      "type": "multipleChoice",
+      "prompt": "What fixes the reasoning?",
+      "options": [
+        "Wrap the input in int()",
+        "Add quotes to 18",
+        "Use = instead of >=",
+        "Print age twice"
+      ],
+      "answer": 0,
+      "explanation": "Convert the text to a number with int() before comparing: age = int(input(...))."
+    },
+    {
+      "id": "u32l07e04",
+      "type": "trueFalse",
+      "prompt": "The digits '42' as text and the number 42 are the same thing to Python.",
+      "answer": false,
+      "explanation": "False. '42' is text; 42 is a number. They look alike but behave differently, which is the trap."
+    },
+    {
+      "id": "u32l07e05",
+      "type": "multipleChoice",
+      "prompt": "For a price comparison like if cost < 100, what must cost be?",
+      "options": [
+        "A number, via int() or float()",
+        "Text with quotes",
+        "True or False",
+        "A day name"
+      ],
+      "answer": 0,
+      "explanation": "cost must be a number for < to mean 'less than'. So convert the input with int() (or float())."
+    },
+    {
+      "id": "u32l07e06",
+      "type": "multipleChoice",
+      "prompt": "When is it CORRECT to skip int() on an input?",
+      "options": [
+        "When you are comparing words, not doing number math",
+        "Never — always use int()",
+        "Only on Sundays",
+        "When the number is big"
+      ],
+      "answer": 0,
+      "explanation": "When you compare words, like day == 'Saturday', the text is exactly what you want — no int() needed."
+    },
+    {
+      "id": "u32l07e07",
+      "type": "multipleChoice",
+      "prompt": "You have pin = input('PIN: ') and need to compare with the number 1234. The fix is…",
+      "options": [
+        "pin = int(input('PIN: '))",
+        "pin == '1234' with no change",
+        "pin = 1234 always",
+        "remove the comparison"
+      ],
+      "answer": 0,
+      "explanation": "Convert the PIN to a number: pin = int(input(...)), so pin == 1234 compares number to number."
+    },
+    {
+      "id": "u32l07e08",
+      "type": "trueFalse",
+      "prompt": "Choosing int() vs keeping text is a reasoning decision based on 'number math or word match?'",
+      "answer": true,
+      "explanation": "True. Ask what the comparison is for: number math needs int(); matching words keeps the text."
+    },
+    {
+      "id": "u32l07e09",
+      "type": "multipleChoice",
+      "prompt": "A quantity check if amount > 10 keeps giving odd results and amount came straight from input(). First suspect?",
+      "options": [
+        "amount was never converted to a number",
+        "10 is the wrong limit",
+        "> should be <",
+        "print is broken"
+      ],
+      "answer": 0,
+      "explanation": "amount is still text. Comparing text with > is the likely flaw; convert with int() first."
+    },
+    {
+      "id": "u32l07e10",
+      "type": "multipleChoice",
+      "prompt": "Summary: what reasoning question prevents this bug?",
+      "options": [
+        "Am I doing number math (int needed) or matching words (text ok)?",
+        "Is the number even?",
+        "Is input spelled right?",
+        "How long is the text?"
+      ],
+      "answer": 0,
+      "explanation": "'Is this a number comparison or a word match?' Numbers need int(); words stay as text."
+    }
+  ]
+}

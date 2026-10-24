@@ -1,0 +1,163 @@
+{
+  "unitId": "u91",
+  "lessonId": "u91l08",
+  "title": "Solve it: pick the right tool first",
+  "idea": "GUIDED PROBLEM. Emphasise the PLAN step - reading a problem and choosing which technique each part needs.",
+  "problem": "Scores [60, 45, 80]. Show the average, but only after making sure there is at least one score.",
+  "exercises": [
+    {
+      "id": "u91l08e01",
+      "uepcc": "U",
+      "type": "multipleChoice",
+      "prompt": "PROBLEM: scores [60, 45, 80]. Show the average, guarding against an empty list.\n\nWhat is the OUTPUT?",
+      "options": [
+        "The average of the scores",
+        "The total only",
+        "The count only",
+        "The biggest"
+      ],
+      "answer": 0,
+      "explanation": "Output = the average. But averages divide by the count, so an empty list would be a problem - hence the guard."
+    },
+    {
+      "id": "u91l08e02",
+      "uepcc": "U",
+      "type": "multipleChoice",
+      "prompt": "Why does an EMPTY list need a guard before computing an average?",
+      "options": [
+        "Dividing by a count of 0 is undefined - you must avoid it",
+        "Empty lists are faster",
+        "It is never a problem",
+        "The average of nothing is 0"
+      ],
+      "answer": 0,
+      "explanation": "Average = total / count. If count is 0, that division is invalid. The guard checks there's at least one score first."
+    },
+    {
+      "id": "u91l08e03",
+      "uepcc": "E",
+      "type": "multipleChoice",
+      "prompt": "By hand: total of 60, 45, 80 is 185, over 3 scores. The average is?",
+      "options": [
+        "About 61.7",
+        "185",
+        "3",
+        "61 exactly"
+      ],
+      "answer": 0,
+      "explanation": "185 / 3 is about 61.7. Hand-working it gives the number to check against."
+    },
+    {
+      "id": "u91l08e04",
+      "uepcc": "E",
+      "type": "trueFalse",
+      "prompt": "For THIS list the guard passes (there are 3 scores), so the average is computed normally.",
+      "answer": true,
+      "explanation": "Right - the list isn't empty, so count is 3 and the division is safe. The guard matters for the empty case."
+    },
+    {
+      "id": "u91l08e05",
+      "uepcc": "P",
+      "type": "matchPairs",
+      "prompt": "Match each PART of the problem to the technique it needs.",
+      "pairs": [
+        {
+          "left": "Total and count the scores",
+          "right": "Multiple state in one loop"
+        },
+        {
+          "left": "Only average if there's at least one",
+          "right": "An edge-case guard (if count > 0)"
+        },
+        {
+          "left": "Average",
+          "right": "Divide total by count"
+        }
+      ],
+      "explanation": "Each part maps to a tool: multiple state for total+count, a guard for the empty case, a division for the average. Planning is matching parts to tools."
+    },
+    {
+      "id": "u91l08e06",
+      "uepcc": "P",
+      "type": "orderBlocks",
+      "prompt": "Plan the ordered steps.",
+      "blocks": [
+        "Walk the scores keeping total and count",
+        "If count is more than 0, average = total / count",
+        "Show the average"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Gather total and count, guard the division, then show. The guard sits between gathering and dividing."
+    },
+    {
+      "id": "u91l08e07",
+      "uepcc": "C",
+      "type": "orderBlocks",
+      "prompt": "Code the plan.",
+      "blocks": [
+        "total = 0",
+        "count = 0",
+        "for score in [60, 45, 80]:",
+        "    total = total + score",
+        "    count = count + 1",
+        "if count > 0:",
+        "    average = total / count",
+        "    print(average)"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "explanation": "Multiple state for total+count, then an if-guard before dividing and printing. The guard prevents a divide-by-zero on an empty list."
+    },
+    {
+      "id": "u91l08e08",
+      "uepcc": "C",
+      "type": "fillBlank",
+      "prompt": "Complete the empty-list guard:\n\nif count ____ 0:\n    average = total / count\n    print(average)",
+      "answer": ">",
+      "acceptable": [
+        ">"
+      ],
+      "explanation": "Only divide when there is at least one score: count > 0. That skips the unsafe division for an empty list."
+    },
+    {
+      "id": "u91l08e09",
+      "uepcc": "Check",
+      "type": "multipleChoice",
+      "prompt": "Check: code prints about 61.7. Hand answer was about 61.7. Verdict?",
+      "options": [
+        "Passes",
+        "Fails",
+        "Unknown",
+        "Rewrite example"
+      ],
+      "answer": 0,
+      "explanation": "The output matches the hand-worked average, and the guard let the safe division happen. Correct."
+    },
+    {
+      "id": "u91l08e10",
+      "uepcc": "Check",
+      "type": "multipleChoice",
+      "prompt": "New data: an EMPTY list. With the guard, what happens?",
+      "options": [
+        "count is 0, the if is skipped, and no unsafe division runs",
+        "It divides by 0 and errors",
+        "It prints 0",
+        "It prints the total"
+      ],
+      "answer": 0,
+      "explanation": "count > 0 is false for an empty list, so the division is skipped entirely. The guard did its job - choosing it was the key plan decision."
+    }
+  ]
+}

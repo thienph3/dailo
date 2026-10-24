@@ -1,0 +1,147 @@
+{
+  "unitId": "u93",
+  "lessonId": "u93l07",
+  "title": "Spot the broken integration",
+  "idea": "GUIDED DEBUGGING. The code runs but the APPROACH is wrong — accumulator reset inside the loop, wrong comparison, guard in the wrong place.",
+  "exercises": [
+    {
+      "id": "u93l07e01",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Goal: total of [2, 3, 5] (should be 10). Code:\n\ntotal = 0\nfor n in nums:\n    total = 0\n    total = total + n\nprint(total)\n\nWhat prints, and why?",
+      "explanation": "total is reset to 0 every turn, so only the last value survives. It prints 5. The reset belongs BEFORE the loop, not inside it.",
+      "options": [
+        "5 — total is reset inside the loop, wiping earlier additions",
+        "10 — correct",
+        "0 — nothing adds",
+        "3 — the middle value"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u93l07e02",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Fix it — put the reset in the right place. Arrange the lines.",
+      "explanation": "Initialise total ONCE before the loop; inside, only add. That keeps the running total alive across turns.",
+      "blocks": [
+        "total = 0",
+        "for n in nums:",
+        "    total = total + n",
+        "print(total)"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "id": "u93l07e03",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Goal: count scores >= 50 in [50, 60]. Code uses 'if score > 50'. With this data it prints 1. What's wrong?",
+      "explanation": "> excludes 50 itself, but the rule is 'or more' (>=). 50 should count. Wrong comparison, not a typo.",
+      "options": [
+        "It used > instead of >=, so the exact value 50 is wrongly skipped",
+        "Nothing is wrong",
+        "It should use <",
+        "The loop is missing"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u93l07e04",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Fix the pass rule so 50 counts:\n\nif score ____ 50:\n    count = count + 1",
+      "explanation": ">= includes the boundary 50. Choosing > vs >= on purpose is a planning decision.",
+      "answer": ">=",
+      "acceptable": [
+        ">="
+      ]
+    },
+    {
+      "id": "u93l07e05",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Goal: safe average. Code divides total/count FIRST, then checks if count==0. On an empty list, what happens?",
+      "explanation": "Dividing before the guard crashes on an empty list — the guard runs too late. The check must come BEFORE the division.",
+      "options": [
+        "It crashes — the guard is after the division, so it can't protect it",
+        "It returns 0 safely",
+        "It returns the total",
+        "Nothing, it's fine"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u93l07e06",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Fix the order so the guard protects the division.",
+      "explanation": "Check count == 0 first and return 0; only reach the division when count is safe. Guards go before the risky step.",
+      "blocks": [
+        "if count == 0:",
+        "    return 0",
+        "return total / count"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "id": "u93l07e07",
+      "type": "trueFalse",
+      "uepcc": "Check",
+      "prompt": "A program can run with no error and still give the wrong answer.",
+      "explanation": "Yes — a reset in the wrong place or a > instead of >= runs fine but is wrong. That's why you Check against a hand example.",
+      "answer": true
+    },
+    {
+      "id": "u93l07e08",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Goal: highest bid. Someone starts 'best = 0' then loops with 'if bid > best'. When is that subtly wrong?",
+      "explanation": "If every bid were negative, best would stay 0 — a value never in the list. Seeding with bids[0] avoids this.",
+      "options": [
+        "When all bids are negative — best wrongly stays 0",
+        "Never — 0 is always safe",
+        "Only for empty lists",
+        "Only with one bid"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u93l07e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "You expected 10 but got 5. Best first move?",
+      "explanation": "Compare against the hand example and trace where it diverges. The reset-in-loop bug shows up exactly there.",
+      "options": [
+        "Trace the code against the hand example to find where it diverges",
+        "Delete everything",
+        "Assume the computer is broken",
+        "Change the hand example"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u93l07e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "What links all these bugs — reset inside the loop, > vs >=, guard after division?",
+      "explanation": "None are typos; all are flawed PLANS. Spotting plan bugs is exactly what the Check step trains.",
+      "options": [
+        "They are planning mistakes, not typos — the logic is wrong",
+        "They are spelling errors",
+        "They are missing brackets",
+        "They are print problems"
+      ],
+      "answer": 0
+    }
+  ]
+}

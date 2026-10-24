@@ -1,0 +1,129 @@
+{
+  "unitId": "u88",
+  "lessonId": "u88l07",
+  "title": "Counting pairs that fit a rule",
+  "idea": "TOOL: combine a nested loop, an if, and a counter to count matching pairs. Reuses the counter pattern. Thinking-heavy.",
+  "exercises": [
+    {
+      "id": "u88l07e01",
+      "type": "multipleChoice",
+      "prompt": "To COUNT how many pairs add up to 10, which three tools combine?",
+      "options": [
+        "A nested loop (every pair), an if (the rule), and a counter (+1 per match)",
+        "Only a counter",
+        "Only an if",
+        "Only one loop"
+      ],
+      "answer": 0,
+      "explanation": "Nested loops make every pair, the if tests the rule, and the counter tallies matches. Three familiar tools working together."
+    },
+    {
+      "id": "u88l07e02",
+      "type": "multipleChoice",
+      "prompt": "Where should the counter START, and where does it go +1?",
+      "options": [
+        "Start at 0 before both loops; +1 inside the if",
+        "Start at 1 inside the inner loop",
+        "Start at 0 after the loops",
+        "It never changes"
+      ],
+      "answer": 0,
+      "explanation": "Set the counter to 0 before looping, then add 1 each time a pair passes the if. Same counter habit, now counting pairs."
+    },
+    {
+      "id": "u88l07e03",
+      "type": "orderBlocks",
+      "prompt": "Order the lines to count equal pairs:\n\n(blocks below)",
+      "blocks": [
+        "matches = 0",
+        "for a in nums:",
+        "    for b in nums:",
+        "        if a == b:",
+        "            matches = matches + 1",
+        "print(matches)"
+      ],
+      "answer": [0, 1, 2, 3, 4, 5],
+      "explanation": "Start the counter, nest the loops, test each pair, add 1 on a match, then print the total. The counter lives outside both loops."
+    },
+    {
+      "id": "u88l07e04",
+      "type": "multipleChoice",
+      "prompt": "Predict the count printed:\n\nnums = [1, 2, 3]\nmatches = 0\nfor a in nums:\n    for b in nums:\n        if a == b:\n            matches = matches + 1\nprint(matches)",
+      "options": [
+        "3 (the self-pairs 1 1, 2 2, 3 3)",
+        "9",
+        "6",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "Only equal pairs count: 1 1, 2 2, 3 3 — three of them. The counter lands on 3."
+    },
+    {
+      "id": "u88l07e05",
+      "type": "trueFalse",
+      "prompt": "The counter must be created OUTSIDE both loops, or it would reset to 0 on every pass.",
+      "answer": true,
+      "explanation": "Yes — put 'matches = 0' before the loops. Inside, it would reset each time and never accumulate. This is the counter rule from earlier laps."
+    },
+    {
+      "id": "u88l07e06",
+      "type": "multipleChoice",
+      "prompt": "Predict the count:\n\nnums = [1, 2, 3, 4]\nmatches = 0\nfor a in nums:\n    for b in nums:\n        if a + b == 5:\n            matches = matches + 1\nprint(matches)",
+      "options": [
+        "4 (1+4, 2+3, 3+2, 4+1)",
+        "2",
+        "8",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "Pairs summing to 5: (1,4), (2,3), (3,2), (4,1) — four, because both orderings count. The counter reaches 4."
+    },
+    {
+      "id": "u88l07e07",
+      "type": "multipleChoice",
+      "prompt": "If you only want each unordered pair counted ONCE, what if-condition helps?",
+      "options": [
+        "if a < b (keeps one ordering of each pair)",
+        "if a == b",
+        "if a > 0",
+        "no condition"
+      ],
+      "answer": 0,
+      "explanation": "'a < b' keeps just one ordering, so (2,3) counts but (3,2) doesn't. For summing-to-5 that would give 2 pairs, not 4."
+    },
+    {
+      "id": "u88l07e08",
+      "type": "fillBlank",
+      "prompt": "Complete the counting step:\n\nmatches = 0\nfor a in nums:\n    for b in nums:\n        if a + b == 10:\n            matches = matches ____ 1\nprint(matches)",
+      "answer": "+",
+      "acceptable": ["+"],
+      "explanation": "Add 1 to the counter each time a pair matches: matches = matches + 1. The + makes the counter grow."
+    },
+    {
+      "id": "u88l07e09",
+      "type": "multipleChoice",
+      "prompt": "Hand-check: nums = [5, 5, 0], count pairs where a + b == 10. What should the counter be?",
+      "options": [
+        "2 (the two 5+5 pairs: first5+second5 and second5+first5)",
+        "1",
+        "3",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "Only the two fives pair to 10, in both orderings, so 2. Zero can't help reach 10. Hand-checking a small case verifies the loop."
+    },
+    {
+      "id": "u88l07e10",
+      "type": "multipleChoice",
+      "prompt": "What have you built by combining these tools?",
+      "options": [
+        "A way to count how many pairs satisfy any rule you choose",
+        "A single-loop total",
+        "A print with no logic",
+        "A list reversal"
+      ],
+      "answer": 0,
+      "explanation": "Nested loops plus an if plus a counter counts matching pairs. Change the if and you count any pair-rule you like."
+    }
+  ]
+}

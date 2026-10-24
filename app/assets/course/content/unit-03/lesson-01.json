@@ -1,0 +1,117 @@
+{
+  "unitId": "u03",
+  "lessonId": "u03l01",
+  "title": "Solve it together: show a shopping list",
+  "idea": "GUIDED PROBLEM. Report three facts with three print lines, walked through UEPCC. The output is several lines, and their order matters.",
+  "problem": "Show a shopping list with three items, one per line: milk, bread, eggs.",
+  "exercises": [
+    {
+      "id": "u03l01e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: Show a shopping list — milk, bread, eggs — one item per line.\n\nFirst, Understand. What is the OUTPUT you must produce?",
+      "options": [
+        "Three lines of text: milk, bread, eggs",
+        "One line that adds them up",
+        "A single word",
+        "A question for the shopper"
+      ],
+      "answer": 0,
+      "explanation": "The output is three separate lines, one for each item. Naming the output first keeps you on track."
+    },
+    {
+      "id": "u03l01e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "Still understanding. What facts (the things to show) does the problem give you?",
+      "options": [
+        "The three items: milk, bread, eggs",
+        "Only milk",
+        "The shop's address",
+        "Nothing at all"
+      ],
+      "answer": 0,
+      "explanation": "The facts are the three items. You will print each one."
+    },
+    {
+      "id": "u03l01e03",
+      "type": "orderBlocks",
+      "uepcc": "E",
+      "prompt": "Next, Example. Work the output by hand — put the lines in the order the list should appear.",
+      "blocks": ["milk", "bread", "eggs"],
+      "answer": [0, 1, 2],
+      "explanation": "By hand, the three lines are milk, then bread, then eggs. This hand example is what you will check the code against."
+    },
+    {
+      "id": "u03l01e04",
+      "type": "trueFalse",
+      "uepcc": "P",
+      "prompt": "Plan: to show three separate lines, you will use three separate print instructions.",
+      "answer": true,
+      "explanation": "One print per line. Three lines means three prints. The plan picks the tool before you code."
+    },
+    {
+      "id": "u03l01e05",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Which tool from Unit 1 shows one line of text?",
+      "options": ["print()", "a blank line", "quotes alone", "a bracket"],
+      "answer": 0,
+      "explanation": "print() shows text. You already know this tool — now you use it three times."
+    },
+    {
+      "id": "u03l01e06",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Now, Code. Arrange the print lines so the list comes out milk, bread, eggs.",
+      "blocks": ["print(\"milk\")", "print(\"bread\")", "print(\"eggs\")"],
+      "answer": [0, 1, 2],
+      "explanation": "The lines run top to bottom, so put milk first, bread next, eggs last. Code order equals output order."
+    },
+    {
+      "id": "u03l01e07",
+      "type": "tapTokens",
+      "uepcc": "C",
+      "prompt": "Build just the first line of the list (it should show milk).",
+      "tokens": ["print", "(", "\"milk\"", ")"],
+      "answer": ["print", "(", "\"milk\"", ")"],
+      "explanation": "print(\"milk\") shows the word milk on its own line. The text in quotes appears exactly."
+    },
+    {
+      "id": "u03l01e08",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check. You run the code and it shows:\n\nmilk\nbread\neggs\n\nYour hand example said milk, bread, eggs in that order. Verdict?",
+      "options": [
+        "It passes — the lines match in the right order",
+        "It fails — the order is wrong",
+        "You can't tell",
+        "Change the example to match"
+      ],
+      "answer": 0,
+      "explanation": "Output matches the hand example line for line, in order. That is what Check means."
+    },
+    {
+      "id": "u03l01e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "What if the prints were in the order bread, eggs, milk instead? Would it still pass?",
+      "options": [
+        "No — the lines would show in the wrong order",
+        "Yes — order never matters",
+        "Yes — the words are the same",
+        "It would cause an error"
+      ],
+      "answer": 0,
+      "explanation": "The computer prints in the order you write. Wrong order means the output does not match the example, so it fails."
+    },
+    {
+      "id": "u03l01e10",
+      "type": "trueFalse",
+      "uepcc": "U",
+      "prompt": "A 'report a few facts' problem means: show some known facts as output, each on its own line.",
+      "answer": true,
+      "explanation": "Exactly. You take the facts the problem gives and print them in order. You just solved one with UEPCC!"
+    }
+  ]
+}

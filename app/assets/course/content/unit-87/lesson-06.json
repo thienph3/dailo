@@ -1,0 +1,140 @@
+{
+  "unitId": "u87",
+  "lessonId": "u87l06",
+  "title": "'Is it there?' means search",
+  "idea": "MEET: a sub-problem asking whether a value is present signals the search/membership pattern — a yes/no result, not a number.",
+  "exercises": [
+    {
+      "type": "multipleChoice",
+      "prompt": "Sub-problem: 'is the code 7 somewhere in the list?' Which pattern?",
+      "options": [
+        "Search / membership",
+        "Running total",
+        "Track the biggest",
+        "Average"
+      ],
+      "answer": 0,
+      "explanation": "Asking whether a value is present is a search: walk the list looking for a match, report found or not.",
+      "id": "u87l06e01"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "A search produces...",
+      "options": [
+        "a yes/no (found or not found)",
+        "a sum",
+        "the biggest value",
+        "an average"
+      ],
+      "answer": 0,
+      "explanation": "Search answers presence with a yes/no, unlike total or count which produce numbers.",
+      "id": "u87l06e02"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "'Contains', 'is present', 'is there a', and 'do any' point to a search.",
+      "answer": true,
+      "explanation": "Yes — all ask about the presence of something, which the search pattern answers.",
+      "id": "u87l06e03"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Once a search FINDS the value, it can...",
+      "options": [
+        "stop early — the answer is already yes",
+        "keep looping pointlessly",
+        "start over",
+        "count everything"
+      ],
+      "answer": 0,
+      "explanation": "A search can stop as soon as it finds a match. There's no need to keep looking (break, from Lap 3).",
+      "id": "u87l06e04"
+    },
+    {
+      "type": "multiSelect",
+      "prompt": "Select the search sub-problems.",
+      "options": [
+        "is 42 in the list?",
+        "does any score equal 100?",
+        "what is the total?",
+        "is the password in the list of banned words?"
+      ],
+      "answer": [
+        0,
+        1,
+        3
+      ],
+      "explanation": "Three ask 'is it present?'. 'What is the total?' asks for a sum — a different pattern.",
+      "id": "u87l06e05"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "How is 'is 100 in the list?' different from 'how many are 100?'",
+      "options": [
+        "Search gives yes/no; count gives a number",
+        "They're identical",
+        "Search gives a number too",
+        "Count gives yes/no"
+      ],
+      "answer": 0,
+      "explanation": "Presence (yes/no) vs quantity (a number). Same list, different question, different pattern.",
+      "id": "u87l06e06"
+    },
+    {
+      "type": "matchPairs",
+      "prompt": "Match each question to its pattern.",
+      "pairs": [
+        {
+          "left": "'is 5 in the list?'",
+          "right": "search (yes/no)"
+        },
+        {
+          "left": "'how many 5s?'",
+          "right": "count (number)"
+        },
+        {
+          "left": "'total of the list'",
+          "right": "running total (sum)"
+        }
+      ],
+      "explanation": "The question word decides: 'is it there' -> search; 'how many' -> count; 'total' -> sum.",
+      "id": "u87l06e07"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "A search must always look at every item, even after finding a match.",
+      "answer": false,
+      "explanation": "No — once found, the answer is yes and the search can stop early. That's what break is for.",
+      "id": "u87l06e08"
+    },
+    {
+      "type": "orderBlocks",
+      "prompt": "Order the search pattern.",
+      "blocks": [
+        "Assume 'not found' to start",
+        "Walk the list; if an item matches, mark 'found' (and can stop)",
+        "Report found or not found"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Start pessimistic, look for a match, report the yes/no. The membership pattern.",
+      "id": "u87l06e09"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "The big idea:",
+      "options": [
+        "'Is it there / contains / do any' means search — a yes/no, and you can stop when found",
+        "Search produces a sum",
+        "Search is the same as counting",
+        "Search can't stop early"
+      ],
+      "answer": 0,
+      "explanation": "A presence question is a search: a yes/no answer, with the option to stop as soon as you find it.",
+      "id": "u87l06e10"
+    }
+  ]
+}

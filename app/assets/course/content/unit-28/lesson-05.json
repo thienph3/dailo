@@ -1,0 +1,144 @@
+{
+  "unitId": "u28",
+  "lessonId": "u28l05",
+  "title": "Tracing every path",
+  "idea": "A nested if has several paths. Tracing each one by hand builds confidence that you know exactly which branch runs. Predict output for all cases.",
+  "exercises": [
+    {
+      "id": "u28l05e01",
+      "type": "multipleChoice",
+      "prompt": "Count the paths. This nested if has an outer if/else and an inner if/else inside the outer if. How many possible printed results?",
+      "options": [
+        "Three",
+        "One",
+        "Two",
+        "Four"
+      ],
+      "answer": 0,
+      "explanation": "Outer-False gives one result. Outer-True then splits into inner-True and inner-False. That is 1 + 2 = 3 paths."
+    },
+    {
+      "id": "u28l05e02",
+      "type": "multipleChoice",
+      "prompt": "Trace it:\n\ntemp = 30\nsunny = True\nif temp >= 25:\n    if sunny:\n        print(\"Beach day\")\n    else:\n        print(\"Warm but grey\")\nelse:\n    print(\"Too cold\")",
+      "options": [
+        "Beach day",
+        "Warm but grey",
+        "Too cold",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "30 >= 25 is True, so we enter; sunny is True, so 'Beach day'."
+    },
+    {
+      "id": "u28l05e03",
+      "type": "multipleChoice",
+      "prompt": "Same code, temp = 30, sunny = False. What prints?",
+      "options": [
+        "Warm but grey",
+        "Beach day",
+        "Too cold",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "Still warm (30 >= 25), but sunny is False, so the inner else runs: 'Warm but grey'."
+    },
+    {
+      "id": "u28l05e04",
+      "type": "multipleChoice",
+      "prompt": "Same code, temp = 10, sunny = True. What prints?",
+      "options": [
+        "Too cold",
+        "Beach day",
+        "Warm but grey",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "10 >= 25 is False, so the outer else runs: 'Too cold'. The sunny check is skipped because we never entered the outer body."
+    },
+    {
+      "id": "u28l05e05",
+      "type": "matchPairs",
+      "prompt": "Match each (temp, sunny) case to its output for the beach code.",
+      "pairs": [
+        {
+          "left": "temp 30, sunny True",
+          "right": "Beach day"
+        },
+        {
+          "left": "temp 30, sunny False",
+          "right": "Warm but grey"
+        },
+        {
+          "left": "temp 10, sunny True",
+          "right": "Too cold"
+        }
+      ],
+      "explanation": "When temp is below 25, 'sunny' never gets checked - the outer gate decides first."
+    },
+    {
+      "id": "u28l05e06",
+      "type": "trueFalse",
+      "prompt": "When temp is 10, the value of 'sunny' makes no difference to the output.",
+      "answer": true,
+      "explanation": "Correct. A False outer condition skips the whole body, so the inner check on 'sunny' never runs."
+    },
+    {
+      "id": "u28l05e07",
+      "type": "multipleChoice",
+      "prompt": "Trace:\n\nbalance = 100\nwithdraw = 40\nif balance >= withdraw:\n    if withdraw >= 50:\n        print(\"Large withdrawal\")\n    else:\n        print(\"Normal withdrawal\")\nelse:\n    print(\"Insufficient funds\")",
+      "options": [
+        "Normal withdrawal",
+        "Large withdrawal",
+        "Insufficient funds",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "100 >= 40 so funds are fine; then 40 >= 50 is False, so the inner else: 'Normal withdrawal'."
+    },
+    {
+      "id": "u28l05e08",
+      "type": "multipleChoice",
+      "prompt": "Same code, balance = 30, withdraw = 40. What prints?",
+      "options": [
+        "Insufficient funds",
+        "Normal withdrawal",
+        "Large withdrawal",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "30 >= 40 is False, so we go straight to the outer else: 'Insufficient funds'. The size check never happens."
+    },
+    {
+      "id": "u28l05e09",
+      "type": "orderBlocks",
+      "prompt": "Put the tracing steps in the order a careful reader uses.",
+      "blocks": [
+        "Check the outer condition first",
+        "If outer is False, run the outer else and stop",
+        "If outer is True, check the inner condition",
+        "Run the inner branch that matches"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "Outer first, then inner only if you got inside. Tracing in this order never misleads you."
+    },
+    {
+      "id": "u28l05e10",
+      "type": "multipleChoice",
+      "prompt": "Why trace every path before trusting a nested if?",
+      "options": [
+        "To be sure each real-life case lands in the branch you intended",
+        "To make the code longer",
+        "Because tracing changes the output",
+        "There is no reason to trace"
+      ],
+      "answer": 0,
+      "explanation": "Tracing each case proves your branches match the rules. A missed path is the classic nested-if bug."
+    }
+  ]
+}

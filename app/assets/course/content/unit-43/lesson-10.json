@@ -1,0 +1,159 @@
+{
+  "unitId": "u43",
+  "lessonId": "u43l10",
+  "title": "Wrap-up: choose count or accumulate",
+  "idea": "REVIEW. Pick the right pattern -- counter, accumulator, or both -- and reuse UEPCC.",
+  "problem": "Mixed practice: decide whether each problem needs a count, a total, or both, then solve one.",
+  "exercises": [
+    {
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "A problem asks 'how many items cost more than 10?' What are you producing?",
+      "options": [
+        "A count",
+        "A total",
+        "Both",
+        "Neither"
+      ],
+      "answer": 0,
+      "explanation": "'How many' is a COUNT. You add 1 per match, not the values themselves.",
+      "id": "u43l10e01"
+    },
+    {
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "A problem asks 'what is the total of all the prices?' What are you producing?",
+      "options": [
+        "A total (accumulator)",
+        "A count",
+        "Both",
+        "Neither"
+      ],
+      "answer": 0,
+      "explanation": "'Total' is an ACCUMULATOR -- you add the values together, not count them.",
+      "id": "u43l10e02"
+    },
+    {
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Match the phrase to the tool: 'how many ___' usually needs a...",
+      "options": [
+        "counter that adds 1 on each match",
+        "accumulator that adds the value",
+        "print only",
+        "input only"
+      ],
+      "answer": 0,
+      "explanation": "'How many' -> counter (+1 per match). 'Total of' -> accumulator (+ the value).",
+      "id": "u43l10e03"
+    },
+    {
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Both a counter and an accumulator share which habit?",
+      "options": [
+        "Start at 0 before the loop",
+        "Start at 1",
+        "Print inside the loop",
+        "Never change"
+      ],
+      "answer": 0,
+      "explanation": "Both trackers start at 0 before the loop, then update inside it. That shared habit prevents off-by-one bugs.",
+      "id": "u43l10e04"
+    },
+    {
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "By hand: prices 4, 12, 8, 20. How many are over 10, and what do those total?",
+      "options": [
+        "2 over 10, totaling 32",
+        "3 over 10, totaling 40",
+        "2 over 10, totaling 12",
+        "4 over 10, totaling 44"
+      ],
+      "answer": 0,
+      "explanation": "12 and 20 are over 10 -- 2 of them; 12 + 20 = 32. Hand-working first gives the check values.",
+      "id": "u43l10e05"
+    },
+    {
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Plan a loop that counts prices over 10 (count only).",
+      "blocks": [
+        "Start count = 0",
+        "For each price, check if it is over 10",
+        "If so, add 1 to count",
+        "Show count"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "Counter at 0, loop, test > 10, add 1 on a match, show. This is the count pattern.",
+      "id": "u43l10e06"
+    },
+    {
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Fill the comparison for 'over 10':\n\ncount = 0\nfor n in range(1, 5):\n    if price ____ 10:\n        count = count + 1\nprint(count)",
+      "answer": ">",
+      "acceptable": [
+        ">",
+        "&gt;"
+      ],
+      "explanation": "'Over 10' means strictly greater than: price > 10. 12 and 20 pass; 4 and 8 do not.",
+      "id": "u43l10e07"
+    },
+    {
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Arrange the full count-only solution (one price per pass in `price`).",
+      "blocks": [
+        "count = 0",
+        "for n in range(1, 5):",
+        "    if price > 10:",
+        "        count = count + 1",
+        "print(count)"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "explanation": "Counter at 0, loop each price, add 1 when over 10, print the count.",
+      "id": "u43l10e08"
+    },
+    {
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "The count code prints 2, matching your hand answer. The solution is...",
+      "options": [
+        "Correct",
+        "Wrong",
+        "Untested",
+        "Random"
+      ],
+      "answer": 0,
+      "explanation": "Output (2) matches the hand count (2), so the count pattern is right.",
+      "id": "u43l10e09"
+    },
+    {
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "You've practiced count and accumulate with UEPCC. What's the takeaway?",
+      "options": [
+        "Name the output first, hand-work an example, plan the pattern, code it, then check",
+        "Skip straight to code",
+        "Always accumulate",
+        "Never check your answer"
+      ],
+      "answer": 0,
+      "explanation": "Understand, Example, Plan, Code, Check -- that spine turns any count/total problem into a reliable solution.",
+      "id": "u43l10e10"
+    }
+  ]
+}

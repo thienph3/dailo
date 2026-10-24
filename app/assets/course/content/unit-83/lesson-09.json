@@ -1,0 +1,146 @@
+{
+  "unitId": "u83",
+  "lessonId": "u83l09",
+  "title": "Fix it together: find the one lying helper",
+  "idea": "GUIDED (UEPCC), bug-focused. Two helpers feed a final answer; one is correct, one is wrong. Isolate each against a hand value to find the culprit, then fix only it.",
+  "problem": "area(w, h) should be w*h and perimeter(w, h) should be 2*(w+h). For w=3, h=4, the final 'area plus perimeter' prints 26 instead of 26... wait: area gives 12 (right), perimeter gives 12 but should be 14. Fix the broken helper.",
+  "exercises": [
+    {
+      "id": "u83l09e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: for w=3, h=4, area is 12 (correct) but perimeter prints 12 when it should be 14. Which helper is lying?",
+      "options": [
+        "perimeter — it should give 14, not 12",
+        "area — 12 is wrong",
+        "both",
+        "neither"
+      ],
+      "answer": 0,
+      "explanation": "area (12) matches its hand value; perimeter (12) doesn't match the correct 14. perimeter is the culprit."
+    },
+    {
+      "id": "u83l09e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "Understand — how did we PROVE area is innocent?",
+      "options": [
+        "Its output (12) matched the hand value (3*4=12)",
+        "We guessed",
+        "It has fewer lines",
+        "It runs faster"
+      ],
+      "answer": 0,
+      "explanation": "area's output equals its hand-worked value, so it's cleared. The mismatch is in perimeter — isolation found it."
+    },
+    {
+      "id": "u83l09e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example — by hand. Perimeter of a 3-by-4 rectangle is 2*(3+4) = ?",
+      "options": [
+        "14",
+        "12",
+        "7",
+        "24"
+      ],
+      "answer": 0,
+      "explanation": "2*(3+4) = 2*7 = 14. Hand answer = 14. perimeter's 12 is wrong — it likely forgot the doubling or a side."
+    },
+    {
+      "id": "u83l09e04",
+      "type": "trueFalse",
+      "uepcc": "E",
+      "prompt": "Comparing each helper's output to its own hand value is how we found WHICH one is broken.",
+      "answer": true,
+      "explanation": "Yes — isolate and compare. The helper whose output disagrees with its hand value is the broken one."
+    },
+    {
+      "id": "u83l09e05",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Plan — the correct perimeter formula is...",
+      "options": [
+        "2 * (w + h)",
+        "w + h",
+        "w * h",
+        "2 * w * h"
+      ],
+      "answer": 0,
+      "explanation": "Perimeter is twice the sum of the two sides: 2 * (w + h). We'll write exactly that — parentheses group the sum first."
+    },
+    {
+      "id": "u83l09e06",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Order the diagnose-and-fix routine.",
+      "blocks": [
+        "Hand-work both helpers' values (12 and 14)",
+        "Compare outputs: area matches, perimeter doesn't",
+        "Fix perimeter to 2 * (w + h)",
+        "Re-check: perimeter now gives 14"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "Hand values, isolate-and-compare, fix the lying helper, re-check. Leave the correct helper untouched."
+    },
+    {
+      "id": "u83l09e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code the fixed perimeter helper (area is already correct).",
+      "blocks": [
+        "def perimeter(w, h):",
+        "    return 2 * (w + h)"
+      ],
+      "answer": [
+        0,
+        1
+      ],
+      "explanation": "Perimeter adds the sides then doubles: 2 * (w + h). Parentheses add first, then multiply by 2. perimeter(3, 4) = 14."
+    },
+    {
+      "id": "u83l09e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Repair perimeter so it doubles the sum of the sides:\n\ndef perimeter(w, h):\n    return 2 * (w ____ h)",
+      "answer": "+",
+      "acceptable": [
+        "+"
+      ],
+      "explanation": "Inside the parentheses we ADD the two sides (w + h = 7), then the 2 * doubles it to 14."
+    },
+    {
+      "id": "u83l09e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check — fixed perimeter(3, 4) gives 14, area(3, 4) still gives 12. The final 'area plus perimeter' now prints...",
+      "options": [
+        "26 — 12 + 14",
+        "24",
+        "28",
+        "12"
+      ],
+      "answer": 0,
+      "explanation": "12 + 14 = 26. With perimeter fixed and area untouched, the final answer is correct."
+    },
+    {
+      "id": "u83l09e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Re-check: w=2, h=5. Fixed perimeter gives...",
+      "options": [
+        "14 — 2*(2+5)",
+        "10",
+        "7",
+        "20"
+      ],
+      "answer": 0,
+      "explanation": "2*(2+5) = 2*7 = 14. The fixed helper works for new sides. You isolated and fixed the one lying helper!"
+    }
+  ]
+}

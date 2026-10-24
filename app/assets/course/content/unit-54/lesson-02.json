@@ -1,0 +1,116 @@
+{
+  "unitId": "u54",
+  "lessonId": "u54l02",
+  "title": "append() adds to the end",
+  "idea": "Introduce list.append(value): it adds one item at the end, making the list longer. Visible output when you print after.",
+  "exercises": [
+    {
+      "id": "u54l02e01",
+      "type": "multipleChoice",
+      "prompt": "To add an item to the end of a list, you write the list's name, a dot, then append(value). Which line adds 7 to a list named nums?",
+      "options": [
+        "nums.append(7)",
+        "append(nums, 7)",
+        "nums.add(7)",
+        "nums[7]"
+      ],
+      "answer": 0,
+      "explanation": "The form is nums.append(7): list name, dot, append, and the value to add in round brackets."
+    },
+    {
+      "id": "u54l02e02",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nnums = [1, 2]\nnums.append(3)\nprint(nums)",
+      "options": [
+        "[1, 2, 3]",
+        "[3, 1, 2]",
+        "[1, 2]",
+        "6"
+      ],
+      "answer": 0,
+      "explanation": "append adds 3 at the END, so the list becomes [1, 2, 3]. The new item always goes last."
+    },
+    {
+      "id": "u54l02e03",
+      "type": "trueFalse",
+      "prompt": "append adds the new item at the end of the list, not the beginning.",
+      "answer": true,
+      "explanation": "append always adds to the end. The item you add becomes the new last item."
+    },
+    {
+      "id": "u54l02e04",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nitems = []\nitems.append(5)\nitems.append(8)\nprint(items)",
+      "options": [
+        "[5, 8]",
+        "[8, 5]",
+        "[]",
+        "[13]"
+      ],
+      "answer": 0,
+      "explanation": "Start empty, add 5 (now [5]), add 8 (now [5, 8]). Items pile up at the end in the order you append them."
+    },
+    {
+      "id": "u54l02e05",
+      "type": "trueFalse",
+      "prompt": "append CHANGES the list it's called on — it doesn't make a separate new list.",
+      "answer": true,
+      "explanation": "nums.append(3) modifies nums itself. After the call, nums is longer; there's no second list."
+    },
+    {
+      "id": "u54l02e06",
+      "type": "fillBlank",
+      "prompt": "Complete the line so it adds 9 to the end of scores:\n\nscores = [4, 6]\nscores.____(9)\nprint(scores)",
+      "answer": "append",
+      "acceptable": ["append"],
+      "explanation": "scores.append(9) adds 9 at the end, giving [4, 6, 9]. append is the tool that grows a list."
+    },
+    {
+      "id": "u54l02e07",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nwords = [\"hi\"]\nwords.append(\"bye\")\nprint(words)",
+      "options": [
+        "['hi', 'bye']",
+        "['bye', 'hi']",
+        "['hi']",
+        "hibye"
+      ],
+      "answer": 0,
+      "explanation": "append works for words too: \"bye\" joins the end, giving ['hi', 'bye']."
+    },
+    {
+      "id": "u54l02e08",
+      "type": "tapTokens",
+      "prompt": "Arrange tokens to add the number 4 to the end of a list named bag.",
+      "tokens": ["bag", ".", "append", "(", "4", ")"],
+      "answer": ["bag", ".", "append", "(", "4", ")"],
+      "explanation": "bag.append(4) adds 4 to the end. Dot, append, then the value in round brackets."
+    },
+    {
+      "id": "u54l02e09",
+      "type": "multipleChoice",
+      "prompt": "A learner writes nums.append(2, 3) hoping to add two items. Why is that a problem?",
+      "options": [
+        "append adds ONE item at a time",
+        "append needs square brackets",
+        "You can't append numbers",
+        "Nothing is wrong"
+      ],
+      "answer": 0,
+      "explanation": "append takes a single value. To add two items, call append twice: nums.append(2) then nums.append(3)."
+    },
+    {
+      "id": "u54l02e10",
+      "type": "multipleChoice",
+      "prompt": "What new tool did this lesson introduce?",
+      "options": [
+        "append() — adds one item to the end of a list",
+        "A way to count items",
+        "A way to pick the first item",
+        "A way to empty a list"
+      ],
+      "answer": 0,
+      "explanation": "list.append(value) grows a list by one item at the end. Next we practice it, including building a list inside a loop."
+    }
+  ]
+}

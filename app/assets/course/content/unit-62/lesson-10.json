@@ -1,0 +1,160 @@
+{
+  "unitId": "u62",
+  "lessonId": "u62l10",
+  "title": "You can compute an average safely",
+  "idea": "Review-heavy close: average = sum / count, always guarded for the empty list. Consolidate the lap's tools.",
+  "exercises": [
+    {
+      "id": "u62l10e01",
+      "type": "multipleChoice",
+      "prompt": "In one sentence, how do you compute an average safely?",
+      "options": [
+        "Add up the values, count them, and — if the count is not 0 — divide the sum by the count",
+        "Just divide by zero",
+        "Find the biggest value",
+        "Count the items only"
+      ],
+      "answer": 0,
+      "explanation": "Sum / count, with a guard for the empty list. That is the whole safe-average recipe."
+    },
+    {
+      "id": "u62l10e02",
+      "type": "multipleChoice",
+      "prompt": "Average of [2, 4, 6, 8]?",
+      "options": [
+        "5.0",
+        "20",
+        "4",
+        "8"
+      ],
+      "answer": 0,
+      "explanation": "Sum 20, count 4, 20 / 4 = 5.0."
+    },
+    {
+      "id": "u62l10e03",
+      "type": "trueFalse",
+      "prompt": "The empty-list guard is the same edge-case-checking habit from earlier laps, applied to count == 0.",
+      "answer": true,
+      "explanation": "No new idea — just the familiar 'check the troublesome case first' habit protecting the divide."
+    },
+    {
+      "id": "u62l10e04",
+      "type": "matchPairs",
+      "prompt": "Match each piece of the average to the tool it comes from.",
+      "pairs": [
+        {
+          "left": "total",
+          "right": "sum loop (Unit 57)"
+        },
+        {
+          "left": "count",
+          "right": "len() (Unit 58)"
+        },
+        {
+          "left": "if count == 0",
+          "right": "edge-case guard"
+        },
+        {
+          "left": "total / count",
+          "right": "the new divide step"
+        }
+      ],
+      "explanation": "Average stitches together a sum, a count, a guard, and one division. Mostly tools you already had."
+    },
+    {
+      "id": "u62l10e05",
+      "type": "orderBlocks",
+      "prompt": "REVIEW: put the safe-average program in order one more time.",
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "blocks": [
+        "count = len(vals)",
+        "if count == 0:",
+        "    print(\"No average\")",
+        "else:",
+        "    total = 0",
+        "    for v in vals:",
+        "        total = total + v",
+        "    print(total / count)"
+      ],
+      "explanation": "Count, guard, else sum-and-divide. You can write this now."
+    },
+    {
+      "id": "u62l10e06",
+      "type": "multipleChoice",
+      "prompt": "REVIEW: 'the highest of the values' uses which tool?",
+      "options": [
+        "max",
+        "average",
+        "sum",
+        "count"
+      ],
+      "answer": 0,
+      "explanation": "'Highest' is the biggest value — max."
+    },
+    {
+      "id": "u62l10e07",
+      "type": "multipleChoice",
+      "prompt": "REVIEW: 'how many values are above the average'... which tool counts them?",
+      "options": [
+        "count (with a condition)",
+        "max",
+        "min",
+        "sum"
+      ],
+      "answer": 0,
+      "explanation": "'How many fit a rule' is the count pattern. (You'd compute the average first, then count.)"
+    },
+    {
+      "id": "u62l10e08",
+      "type": "multiSelect",
+      "prompt": "Which statements about averages are true? (pick all)",
+      "options": [
+        "Average = sum / count",
+        "Guard against an empty list (count 0)",
+        "A list of zeros crashes the average",
+        "The average can fall between the values"
+      ],
+      "answer": [
+        0,
+        1,
+        3
+      ],
+      "explanation": "First, second, and fourth are true. A list of zeros is safe (count is not 0); only an empty list crashes."
+    },
+    {
+      "id": "u62l10e09",
+      "type": "multipleChoice",
+      "prompt": "Average of a single-item list [99]?",
+      "options": [
+        "99.0",
+        "0",
+        "1",
+        "No average"
+      ],
+      "answer": 0,
+      "explanation": "99 / 1 = 99.0. One value is safe — the count is 1."
+    },
+    {
+      "id": "u62l10e10",
+      "type": "multipleChoice",
+      "prompt": "You finished the average unit. What is the big takeaway?",
+      "options": [
+        "Average combines sum and count with one divide — and you always guard the empty list first",
+        "Averages need no care",
+        "Average replaces max and min",
+        "You must sort before averaging"
+      ],
+      "answer": 0,
+      "explanation": "Sum + count + guarded divide. Reusing tools you know, plus the edge-case habit, gives a safe average."
+    }
+  ]
+}

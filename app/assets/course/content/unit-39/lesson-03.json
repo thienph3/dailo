@@ -1,0 +1,155 @@
+{
+  "unitId": "u39",
+  "lessonId": "u39l03",
+  "title": "Solve it together: the 3 times table",
+  "idea": "GUIDED PROBLEM. Use the loop variable to vary the output each pass (3*1 ... 3*5).",
+  "problem": "Print 3 times 1, 3 times 2, up to 3 times 5 (the first five lines of the 3 times table).",
+  "exercises": [
+    {
+      "id": "u39l03e01",
+      "type": "multipleChoice",
+      "prompt": "PROBLEM: Print 3x1, 3x2, ... up to 3x5.\n\nUnderstand. What is the OUTPUT?",
+      "uepcc": "U",
+      "options": [
+        "Five lines: 3, 6, 9, 12, 15",
+        "Just the number 15",
+        "The number 3 five times",
+        "How many lines there are"
+      ],
+      "answer": 0,
+      "explanation": "The output is five results: 3, 6, 9, 12, 15."
+    },
+    {
+      "id": "u39l03e02",
+      "type": "multipleChoice",
+      "prompt": "Understand: what changes from one line to the next?",
+      "uepcc": "U",
+      "options": [
+        "The number we multiply 3 by",
+        "The number 3",
+        "Nothing changes",
+        "The word 'times'"
+      ],
+      "answer": 0,
+      "explanation": "The multiplier grows: 1, then 2, up to 5. The loop variable can carry that."
+    },
+    {
+      "id": "u39l03e03",
+      "type": "multipleChoice",
+      "prompt": "Example. By hand, what is 3 times 4?",
+      "uepcc": "E",
+      "options": [
+        "12",
+        "7",
+        "34",
+        "9"
+      ],
+      "answer": 0,
+      "explanation": "3 x 4 = 12. Working one case by hand gives a value to check later."
+    },
+    {
+      "id": "u39l03e04",
+      "type": "orderBlocks",
+      "prompt": "Example: list the five results by hand, in order.",
+      "uepcc": "E",
+      "blocks": [
+        "3",
+        "6",
+        "9",
+        "12",
+        "15"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "explanation": "3, 6, 9, 12, 15 — the target output. Re-order the blocks to match 3x1..3x5."
+    },
+    {
+      "id": "u39l03e05",
+      "type": "orderBlocks",
+      "prompt": "Plan. Order the plain-English steps.",
+      "uepcc": "P",
+      "blocks": [
+        "Each pass, print 3 times the current number",
+        "Repeat for the numbers 1 to 5"
+      ],
+      "answer": [
+        1,
+        0
+      ],
+      "explanation": "Repeat for i = 1..5, and each pass print 3 multiplied by i."
+    },
+    {
+      "id": "u39l03e06",
+      "type": "multipleChoice",
+      "prompt": "Plan: which range makes the loop variable take 1, 2, 3, 4, 5?",
+      "uepcc": "P",
+      "options": [
+        "range(1, 6)",
+        "range(5)",
+        "range(1, 5)",
+        "range(3, 6)"
+      ],
+      "answer": 0,
+      "explanation": "range(1, 6) gives 1 through 5 — the multipliers we need."
+    },
+    {
+      "id": "u39l03e07",
+      "type": "fillBlank",
+      "prompt": "Code. Fill the operator so each pass prints 3 times i:\n\nfor i in range(1, 6):\n    print(3 ____ i)",
+      "uepcc": "C",
+      "answer": "*",
+      "acceptable": [
+        "*"
+      ],
+      "explanation": "Multiplication uses *. So 3 * i gives 3, 6, 9, 12, 15."
+    },
+    {
+      "id": "u39l03e08",
+      "type": "orderBlocks",
+      "prompt": "Code. Arrange the lines.",
+      "uepcc": "C",
+      "blocks": [
+        "    print(3 * i)",
+        "for i in range(1, 6):"
+      ],
+      "answer": [
+        1,
+        0
+      ],
+      "explanation": "for header first, then the indented print of 3 * i."
+    },
+    {
+      "id": "u39l03e09",
+      "type": "multipleChoice",
+      "prompt": "Check. The output is 3, 6, 9, 12, 15. Your hand list matched. So...",
+      "uepcc": "Check",
+      "options": [
+        "It passes",
+        "It fails",
+        "Can't tell",
+        "Fix the example"
+      ],
+      "answer": 0,
+      "explanation": "Output matches the by-hand list, so it passes."
+    },
+    {
+      "id": "u39l03e10",
+      "type": "multipleChoice",
+      "prompt": "Check with a new table: change 3 to 4 in the code. What is the first line now?",
+      "uepcc": "Check",
+      "options": [
+        "4",
+        "3",
+        "8",
+        "14"
+      ],
+      "answer": 0,
+      "explanation": "4 * 1 = 4. Swapping the number gives a different table — the plan generalizes."
+    }
+  ]
+}

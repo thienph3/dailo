@@ -1,0 +1,133 @@
+{
+  "unitId": "u64",
+  "lessonId": "u64l01",
+  "title": "Is this value in the list?",
+  "idea": "Opener: the idea of searching — ask whether a value is present, answer yes or no. Thinking first.",
+  "exercises": [
+    {
+      "type": "multipleChoice",
+      "prompt": "You have [4, 8, 2, 9] and want to know: is 8 in this list?",
+      "options": [
+        "Yes — 8 is one of the items",
+        "No — 8 is not there",
+        "Maybe",
+        "You cannot tell"
+      ],
+      "answer": 0,
+      "explanation": "8 appears in the list, so the answer is yes. Searching asks a simple yes/no: is the value present?",
+      "id": "u64l01e01"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Searching a list means...",
+      "options": [
+        "checking whether a particular value is present (yes or no)",
+        "adding all the items",
+        "keeping only some items",
+        "counting the items"
+      ],
+      "answer": 0,
+      "explanation": "A search answers 'is it in there?'. The output is a yes/no, not a new list.",
+      "id": "u64l01e02"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "A search question has a yes-or-no answer: the value is either present or it is not.",
+      "answer": true,
+      "explanation": "That is the heart of searching — present or absent. Later you can also ask WHERE it is.",
+      "id": "u64l01e03"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Is 7 in [1, 3, 5]?",
+      "options": [
+        "No",
+        "Yes",
+        "Sometimes",
+        "Only on Tuesdays"
+      ],
+      "answer": 0,
+      "explanation": "None of the items equals 7, so the answer is no. The value is absent.",
+      "id": "u64l01e04"
+    },
+    {
+      "type": "multiSelect",
+      "prompt": "Which of these are 'is it in there?' (search) questions? (pick all)",
+      "options": [
+        "Is 5 one of the scores?",
+        "Does anyone have a score of 100?",
+        "What is the total score?",
+        "Is the number 13 in the list?"
+      ],
+      "answer": [
+        0,
+        1,
+        3
+      ],
+      "explanation": "Three ask whether a value is present. 'What is the total' is a sum, not a search.",
+      "id": "u64l01e05"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "How is searching DIFFERENT from filtering?",
+      "options": [
+        "search answers yes/no about one value; filter builds a list of all matches",
+        "they are exactly the same",
+        "search adds numbers",
+        "filter answers yes/no"
+      ],
+      "answer": 0,
+      "explanation": "Filter collects every match into a list; search just checks whether one value is present at all.",
+      "id": "u64l01e06"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "To search, you still look through the items one by one, just like other list tools.",
+      "answer": true,
+      "explanation": "You visit the items with a loop and compare each to the value you are looking for.",
+      "id": "u64l01e07"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Is 2 in [2, 2, 2]?",
+      "options": [
+        "Yes",
+        "No",
+        "Three times, so no",
+        "Only the first one counts"
+      ],
+      "answer": 0,
+      "explanation": "2 is present (several times, in fact), so the answer is simply yes. Duplicates do not change a yes/no.",
+      "id": "u64l01e08"
+    },
+    {
+      "type": "orderBlocks",
+      "prompt": "Put the plain-English steps of a search in order.",
+      "blocks": [
+        "Assume 'not found' to begin with",
+        "Go through each item, comparing it to the value you want",
+        "If an item matches, remember that you found it"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Start by assuming it is absent, check every item, and flip to 'found' the moment one matches.",
+      "id": "u64l01e09"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "This unit's tool is...",
+      "options": [
+        "searching a list: checking whether (and where) a value is present",
+        "sorting a list",
+        "finding the average",
+        "building a filtered list"
+      ],
+      "answer": 0,
+      "explanation": "You will search a list to answer 'is it in there?' and 'where is it?'.",
+      "id": "u64l01e10"
+    }
+  ]
+}

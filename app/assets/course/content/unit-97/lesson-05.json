@@ -1,0 +1,148 @@
+{
+  "unitId": "u97",
+  "lessonId": "u97l05",
+  "title": "Capstone: add up every number from 1 to N",
+  "idea": "GUIDED CAPSTONE. Build a running total over a range — the accumulator pattern — and resist the urge to reach for a builtin.",
+  "problem": "Add every whole number from 1 to 5 (1 + 2 + 3 + 4 + 5 = 15).",
+  "exercises": [
+    {
+      "id": "u97l05e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: add 1 to 5. OUTPUT is...",
+      "options": [
+        "One number: the running total",
+        "The list 1,2,3,4,5",
+        "The count 5",
+        "The biggest, 5"
+      ],
+      "answer": 0,
+      "explanation": "Output is a single total. Naming it rules out confusing it with 'how many numbers' (which is 5)."
+    },
+    {
+      "id": "u97l05e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "The given input is the limit N (here 5). The numbers 1..5 are...",
+      "options": [
+        "Generated from N by a loop",
+        "Typed out one by one forever",
+        "The same as N",
+        "Not needed"
+      ],
+      "answer": 0,
+      "explanation": "We don't list them by hand — range(1, N+1) generates them. The input is just N."
+    },
+    {
+      "id": "u97l05e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example by hand: 1 + 2 + 3 + 4 + 5 = ?",
+      "options": [
+        "15",
+        "10",
+        "120",
+        "5"
+      ],
+      "answer": 0,
+      "explanation": "15. This hand total is our check value. (Yes, there's a famous formula — but the loop teaches the accumulate pattern, which is the point.)"
+    },
+    {
+      "id": "u97l05e04",
+      "type": "trueFalse",
+      "uepcc": "E",
+      "prompt": "We could call a builtin to sum the numbers, but this course wants us to build the total ourselves with a loop.",
+      "answer": true,
+      "explanation": "The whole skill is the accumulator: total starts at 0 and grows each pass. Builtins would hide the lesson."
+    },
+    {
+      "id": "u97l05e05",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Plan the accumulator. Order the steps.",
+      "blocks": [
+        "For each number from 1 to 5, add it to the total",
+        "Start the total at 0",
+        "Show the total"
+      ],
+      "answer": [
+        1,
+        0,
+        2
+      ],
+      "explanation": "Start at 0, add each number as you go, then show. The initial 0 matters — starting elsewhere gives a wrong total."
+    },
+    {
+      "id": "u97l05e06",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Why must total start at 0, not be left unset?",
+      "options": [
+        "So the first addition has something to add onto",
+        "It doesn't matter",
+        "So the loop runs faster",
+        "To make it odd"
+      ],
+      "answer": 0,
+      "explanation": "total = total + number needs a starting value. 0 is the neutral start for a sum. This is the accumulator discipline."
+    },
+    {
+      "id": "u97l05e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code it. Arrange the running-total loop over 1..5.",
+      "blocks": [
+        "    total = total + number",
+        "total = 0",
+        "for number in range(1, 6):",
+        "print(total)"
+      ],
+      "answer": [
+        1,
+        2,
+        0,
+        3
+      ],
+      "explanation": "total=0, loop 1..5 (range stop 6), add each number, print once AFTER the loop. Printing inside would show every partial step."
+    },
+    {
+      "id": "u97l05e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Complete the accumulate step:\n\ntotal = 0\nfor number in range(1, 6):\n    total = total ____ number\nprint(total)",
+      "answer": "+",
+      "acceptable": [
+        "+"
+      ],
+      "explanation": "Add each number onto the running total with +. After the loop total holds 15."
+    },
+    {
+      "id": "u97l05e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Run it: prints 15. Hand example said 15. Verdict?",
+      "options": [
+        "Passes",
+        "Fails",
+        "Unknown",
+        "Rewrite example"
+      ],
+      "answer": 0,
+      "explanation": "Matches. The accumulator grew 1,3,6,10,15 across the passes and landed on 15."
+    },
+    {
+      "id": "u97l05e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Generalize to 1..10 (range(1, 11)). What should it total?",
+      "options": [
+        "55",
+        "45",
+        "100",
+        "15"
+      ],
+      "answer": 0,
+      "explanation": "1+2+...+10 = 55. Same pattern, bigger range. You own the accumulator now."
+    }
+  ]
+}

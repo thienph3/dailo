@@ -1,0 +1,170 @@
+{
+  "unitId": "u82",
+  "lessonId": "u82l10",
+  "title": "Solve it together: your decomposition checklist",
+  "idea": "GUIDED (UEPCC) + review. Walk one harder problem end to end while naming the decomposition habit: find the repeated job, make it a helper, pick each stage's pattern, then check with edges.",
+  "problem": "Weights are [3, 9, 6, 12]. Show how many are above the average weight, using helpers total(nums) and above(weight, limit).",
+  "exercises": [
+    {
+      "id": "u82l10e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: weights [3, 9, 6, 12]. How many are ABOVE the average? Use total(nums) and above(weight, limit).\n\nOUTPUT?",
+      "options": [
+        "A count of weights above the average",
+        "The average itself",
+        "The biggest weight",
+        "The total weight"
+      ],
+      "answer": 0,
+      "explanation": "Output = a count of above-average weights. We'll need the average first, then a count."
+    },
+    {
+      "id": "u82l10e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "INPUTS?",
+      "options": [
+        "The list of weights (the average is computed from them)",
+        "A separate average value given to us",
+        "The word count",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "Only the weights are given; the average is something we compute, then compare against."
+    },
+    {
+      "id": "u82l10e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example — by hand. Total is 30 over 4 weights, so average is 7.5. How many of [3, 9, 6, 12] are above 7.5?",
+      "options": [
+        "2 — 9 and 12",
+        "3",
+        "1",
+        "4"
+      ],
+      "answer": 0,
+      "explanation": "Average = 30/4 = 7.5. Above it: 9 and 12. Hand count = 2. (3 and 6 are below.)"
+    },
+    {
+      "id": "u82l10e04",
+      "type": "trueFalse",
+      "uepcc": "E",
+      "prompt": "We must compute the average BEFORE we can count how many beat it.",
+      "answer": true,
+      "explanation": "Yes — the average is the limit for the count. Stage 1 (average) must finish before stage 2 (count above it)."
+    },
+    {
+      "id": "u82l10e05",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Plan — order the decomposition.",
+      "blocks": [
+        "Compute the total with total(nums)",
+        "Divide by len(nums) to get the average",
+        "Count weights where above(weight, average) is True",
+        "Show the count"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "Total, then average, then count-above, then show. Each stage reuses a pattern you know."
+    },
+    {
+      "id": "u82l10e06",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Decomposition habit — what makes above(weight, limit) a good helper here?",
+      "options": [
+        "It names one clear yes/no rule and is reused for every weight",
+        "It makes the code longer for no reason",
+        "Helpers can't take two parameters",
+        "It replaces the loop"
+      ],
+      "answer": 0,
+      "explanation": "above(weight, limit) states the comparison rule once and is reused each pass — exactly what a helper is for."
+    },
+    {
+      "id": "u82l10e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code it.",
+      "blocks": [
+        "def total(nums):",
+        "    running = 0",
+        "    for n in nums:",
+        "        running = running + n",
+        "    return running",
+        "def above(weight, limit):",
+        "    return weight > limit",
+        "weights = [3, 9, 6, 12]",
+        "average = total(weights) / len(weights)",
+        "count = 0",
+        "for w in weights:",
+        "    if above(w, average):",
+        "        count = count + 1",
+        "print(count)"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "explanation": "total helper (accumulate), above helper (the rule), compute the average, then count where above is True. Two helpers, two stages, no builtins."
+    },
+    {
+      "id": "u82l10e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Complete the average step:\n\naverage = total(weights) / ____(weights)",
+      "answer": "len",
+      "acceptable": [
+        "len"
+      ],
+      "explanation": "We divide the total by how many weights there are — len(weights). len gives the SIZE of the list."
+    },
+    {
+      "id": "u82l10e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check — the code prints 2; your hand count was 2. Verdict?",
+      "options": [
+        "Passes",
+        "Fails",
+        "Unknown",
+        "Rewrite example"
+      ],
+      "answer": 0,
+      "explanation": "Output (2) matches the hand count (2). The two-stage, two-helper decomposition is correct."
+    },
+    {
+      "id": "u82l10e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Re-check: weights [2, 2, 2, 10]. Average is 4. How many are above 4?",
+      "options": [
+        "1 — only 10",
+        "0",
+        "2",
+        "4"
+      ],
+      "answer": 0,
+      "explanation": "Total 16 / 4 = average 4. Only 10 is above 4. Count = 1. The same decomposition handles a lopsided list. You split a harder problem!"
+    }
+  ]
+}

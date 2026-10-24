@@ -1,0 +1,126 @@
+{
+  "unitId": "u12",
+  "lessonId": "u12l07",
+  "title": "Updating a value with // and %",
+  "idea": "You can reassign a variable using // or %, giving it a new value from its old one.",
+  "exercises": [
+    {
+      "id": "u12l07e01",
+      "type": "multipleChoice",
+      "prompt": "Reassigning means giving a variable a new value. What does total hold at the end?\n\ntotal = 30\ntotal = total // 4\nprint(total)",
+      "options": [
+        "7",
+        "30",
+        "4",
+        "8"
+      ],
+      "answer": 0,
+      "explanation": "First total is 30. Then total = total // 4 means 30 // 4, which is 7. So total becomes 7."
+    },
+    {
+      "id": "u12l07e02",
+      "type": "multipleChoice",
+      "prompt": "What does total hold at the end?\n\ntotal = 30\ntotal = total % 4\nprint(total)",
+      "options": [
+        "2",
+        "7",
+        "30",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "30 % 4 is 2 (seven 4s make 28, leaving 2). The new value of total is 2."
+    },
+    {
+      "id": "u12l07e03",
+      "type": "trueFalse",
+      "prompt": "In total = total // 4, the computer works out the right side first, then stores it back in total.",
+      "answer": true,
+      "explanation": "Right. It computes total // 4 using the old value, then that answer becomes the new total. Right side first, always."
+    },
+    {
+      "id": "u12l07e04",
+      "type": "multipleChoice",
+      "prompt": "What will this show?\n\ncandies = 50\ncandies = candies // 10\nprint(candies)",
+      "options": [
+        "5",
+        "50",
+        "0",
+        "10"
+      ],
+      "answer": 0,
+      "explanation": "50 // 10 is 5, so candies is updated from 50 to 5."
+    },
+    {
+      "id": "u12l07e05",
+      "type": "multipleChoice",
+      "prompt": "What is the final value?\n\nx = 17\nx = x % 5\nx = x + 1\nprint(x)",
+      "options": [
+        "3",
+        "2",
+        "17",
+        "6"
+      ],
+      "answer": 0,
+      "explanation": "17 % 5 is 2, so x becomes 2. Then x + 1 makes x become 3. Each line updates x in order."
+    },
+    {
+      "id": "u12l07e06",
+      "type": "orderBlocks",
+      "prompt": "Put these lines in order: set money to 47, then update it to the leftover after sharing into 10s, then show it.",
+      "blocks": [
+        "money = 47",
+        "money = money % 10",
+        "print(money)"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Set first, update second, show last. 47 % 10 is 7, so it prints 7. Order matters when reassigning."
+    },
+    {
+      "id": "u12l07e07",
+      "type": "multipleChoice",
+      "prompt": "What does count hold after both lines?\n\ncount = 24\ncount = count // 2\nprint(count)",
+      "options": [
+        "12",
+        "24",
+        "2",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "24 // 2 is 12. Reassigning halves count from 24 to 12."
+    },
+    {
+      "id": "u12l07e08",
+      "type": "fillBlank",
+      "prompt": "Fill the blank so pages updates to the leftover after sharing into 8s.\n\npages = 35\npages = pages _ 8\nprint(pages)",
+      "answer": "%",
+      "acceptable": [
+        "%"
+      ],
+      "explanation": "35 % 8 is 3 (four 8s make 32, leaving 3). pages is reassigned from 35 to 3."
+    },
+    {
+      "id": "u12l07e09",
+      "type": "trueFalse",
+      "prompt": "After n = 12 then n = n // 5, the value of n is 2.",
+      "answer": true,
+      "explanation": "12 // 5 is 2 (two 5s make 10, fits in 12). So n is reassigned to 2."
+    },
+    {
+      "id": "u12l07e10",
+      "type": "multipleChoice",
+      "prompt": "What prints?\n\nseconds = 130\nminutes = seconds // 60\nleftover_seconds = seconds % 60\nprint(minutes)\nprint(leftover_seconds)",
+      "options": [
+        "2 then 10",
+        "10 then 2",
+        "130 then 0",
+        "2 then 60"
+      ],
+      "answer": 0,
+      "explanation": "130 // 60 is 2 whole minutes, and 130 % 60 is 10 leftover seconds. // and % turn seconds into minutes-and-seconds!"
+    }
+  ]
+}

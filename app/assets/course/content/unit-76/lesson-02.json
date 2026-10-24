@@ -1,0 +1,130 @@
+{
+  "unitId": "u76",
+  "lessonId": "u76l02",
+  "title": "Resolve the innermost call first",
+  "idea": "Composing functions: trace nested calls by evaluating the innermost one first, replacing it with its returned value, and repeating.",
+  "exercises": [
+    {
+      "id": "u76l02e01",
+      "type": "multipleChoice",
+      "prompt": "To trace add_one(double(5)), what do you replace double(5) with?",
+      "options": [
+        "Its returned value, 10",
+        "The word double",
+        "Nothing",
+        "add_one"
+      ],
+      "answer": 0,
+      "explanation": "Replace the inner call with what it returns: double(5) becomes 10. Now you have add_one(10)."
+    },
+    {
+      "id": "u76l02e02",
+      "type": "multipleChoice",
+      "prompt": "Continue: after add_one(double(5)) becomes add_one(10), the final value is...",
+      "options": [
+        "11",
+        "10",
+        "6",
+        "5"
+      ],
+      "answer": 0,
+      "explanation": "add_one(10) returns 11. Replacing inside-out, step by step, gives the final answer."
+    },
+    {
+      "id": "u76l02e03",
+      "type": "multipleChoice",
+      "prompt": "Trace:\n\ndef triple(n):\n    return n * 3\n\nprint(triple(triple(2)))",
+      "options": [
+        "18",
+        "12",
+        "6",
+        "8"
+      ],
+      "answer": 0,
+      "explanation": "Inner triple(2) is 6; outer triple(6) is 18. Same sub-plan composed with itself — inner first."
+    },
+    {
+      "id": "u76l02e04",
+      "type": "trueFalse",
+      "prompt": "When calls are nested, you always evaluate the innermost one first.",
+      "answer": true,
+      "explanation": "Yes. The outer call needs the inner call's value before it can run, so the inner one goes first."
+    },
+    {
+      "id": "u76l02e05",
+      "type": "orderBlocks",
+      "prompt": "Put the trace steps for triple(triple(2)) in order.",
+      "blocks": [
+        "triple(2) returns 6",
+        "triple(6) returns 18",
+        "print shows 18"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Inner call (6), then outer call (18), then print. Inside-out, one step at a time."
+    },
+    {
+      "id": "u76l02e06",
+      "type": "multipleChoice",
+      "prompt": "Trace:\n\ndef half(n):\n    return n / 2\n\ndef add_ten(n):\n    return n + 10\n\nprint(add_ten(half(8)))",
+      "options": [
+        "14.0",
+        "9.0",
+        "4.0",
+        "18"
+      ],
+      "answer": 0,
+      "explanation": "half(8) is 4.0; add_ten(4.0) is 14.0. Division makes it a decimal, so 14.0."
+    },
+    {
+      "id": "u76l02e07",
+      "type": "fillBlank",
+      "prompt": "Trace by hand. For add_ten(half(8)), first half(8) becomes ____ .\n\ndef half(n):\n    return n / 2",
+      "answer": "4.0",
+      "acceptable": ["4.0", "4"],
+      "explanation": "half(8) is 8 / 2 = 4.0. Replace the inner call with 4.0, then run add_ten on it."
+    },
+    {
+      "id": "u76l02e08",
+      "type": "multipleChoice",
+      "prompt": "A classmate reads add_ten(half(8)) left to right and does add_ten first. Why is that wrong?",
+      "options": [
+        "The outer call needs half(8)'s value before it can run",
+        "add_ten doesn't exist",
+        "half is slower",
+        "it isn't wrong"
+      ],
+      "answer": 0,
+      "explanation": "add_ten can't run until it has its argument, which is half(8)'s result. Inner first, always."
+    },
+    {
+      "id": "u76l02e09",
+      "type": "multipleChoice",
+      "prompt": "REVIEW: this inside-out rule is the same one you used for which earlier case?",
+      "options": [
+        "print(area(6, 4)) — the call runs before print shows it",
+        "a for loop",
+        "a list index",
+        "an if/else"
+      ],
+      "answer": 0,
+      "explanation": "Same idea: the inner call becomes a value first, then the outer thing uses it. Nesting calls just does it twice."
+    },
+    {
+      "id": "u76l02e10",
+      "type": "multipleChoice",
+      "prompt": "The idea of this lesson:",
+      "options": [
+        "Trace nested calls inside-out: resolve the innermost first, then work outward",
+        "trace left to right",
+        "the outer call runs first",
+        "order doesn't matter"
+      ],
+      "answer": 0,
+      "explanation": "Resolve the innermost call, replace it with its value, repeat. That's how to read any composed expression."
+    }
+  ]
+}

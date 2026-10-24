@@ -1,0 +1,145 @@
+{
+  "unitId": "u33",
+  "lessonId": "u33l01",
+  "title": "Fix it: the 'or more' discount",
+  "idea": "GUIDED BUG. A discount rule uses > where it needs >=. Walk UEPCC to find and fix the boundary.",
+  "problem": "Rule: spend 100 or more to get 'Discount'. The broken code is: if spend > 100: print('Discount') else: print('Full price').",
+  "exercises": [
+    {
+      "id": "u33l01e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: 'Discount' when spend is 100 OR MORE.\n\nWhat is the OUTPUT?",
+      "options": [
+        "'Discount' or 'Full price'",
+        "The amount spent",
+        "The number 100",
+        "A total"
+      ],
+      "answer": 0,
+      "explanation": "One of two labels. Naming the output frames what 'correct' means before we hunt the bug."
+    },
+    {
+      "id": "u33l01e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "What does 'or more' tell you about the boundary value 100?",
+      "options": [
+        "100 itself should get the discount",
+        "100 should not get it",
+        "100 is impossible",
+        "100 means full price always"
+      ],
+      "answer": 0,
+      "explanation": "'or more' includes 100 itself, so a spend of exactly 100 should get the discount."
+    },
+    {
+      "id": "u33l01e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Work the boundary by hand: spend = 100. The CORRECT answer is?",
+      "options": [
+        "Discount",
+        "Full price",
+        "100",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "By the rule, 100 or more gets 'Discount', so 100 -> 'Discount'. This is our check value."
+    },
+    {
+      "id": "u33l01e04",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Now run the BROKEN code with spend = 100: if spend > 100. What does it print?",
+      "options": [
+        "Full price (wrong)",
+        "Discount",
+        "100",
+        "an error"
+      ],
+      "answer": 0,
+      "explanation": "100 > 100 is False, so it prints 'Full price' — but we proved it should be 'Discount'. Bug confirmed."
+    },
+    {
+      "id": "u33l01e05",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Plan the fix: which single change makes 100 count?",
+      "options": [
+        "Change > to >=",
+        "Change 100 to 99",
+        "Change else to elif",
+        "Remove the print"
+      ],
+      "answer": 0,
+      "explanation": "Change > to >= so the boundary 100 is included, matching 'or more'."
+    },
+    {
+      "id": "u33l01e06",
+      "type": "trueFalse",
+      "uepcc": "P",
+      "prompt": "Only the boundary value (100) behaves differently between > and >=.",
+      "answer": true,
+      "explanation": "True. Values like 80 or 150 act the same; only exactly 100 reveals the bug."
+    },
+    {
+      "id": "u33l01e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Arrange the FIXED code.",
+      "blocks": [
+        "if spend >= 100:",
+        "    print(\"Discount\")",
+        "else:",
+        "    print(\"Full price\")"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "Use >= so 100 and above get the discount; else handles everything under 100."
+    },
+    {
+      "id": "u33l01e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Write the fixed comparison:\n\nif spend ____ 100:\n    print(\"Discount\")\nelse:\n    print(\"Full price\")",
+      "answer": ">=",
+      "acceptable": [
+        ">="
+      ],
+      "explanation": ">= includes 100, so the boundary now gets the discount."
+    },
+    {
+      "id": "u33l01e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check the boundary again with the fix: spend = 100. What prints?",
+      "options": [
+        "Discount",
+        "Full price",
+        "100",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "100 >= 100 is True, so 'Discount' — now matching the hand answer. Fixed."
+    },
+    {
+      "id": "u33l01e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Re-check a fresh value: spend = 80. What prints?",
+      "options": [
+        "Full price",
+        "Discount",
+        "80",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "80 >= 100 is False, so 'Full price' — still correct below the limit. The fix did not break other cases."
+    }
+  ]
+}

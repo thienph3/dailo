@@ -1,0 +1,143 @@
+{
+  "unitId": "u12",
+  "lessonId": "u12l08",
+  "title": "Spot the right sign",
+  "idea": "/ keeps the fraction, // keeps whole groups, % keeps the leftover — pick the one the problem needs.",
+  "exercises": [
+    {
+      "id": "u12l08e01",
+      "type": "multipleChoice",
+      "prompt": "You want FULL groups only, no fraction. Which sign?",
+      "options": [
+        "//",
+        "/",
+        "%",
+        "*"
+      ],
+      "answer": 0,
+      "explanation": "// keeps only the whole groups. A single / would keep the fraction part too."
+    },
+    {
+      "id": "u12l08e02",
+      "type": "multipleChoice",
+      "prompt": "You want the LEFTOVER after full groups. Which sign?",
+      "options": [
+        "%",
+        "//",
+        "/",
+        "-"
+      ],
+      "answer": 0,
+      "explanation": "% gives the leftover. // would give the groups, not what's left."
+    },
+    {
+      "id": "u12l08e03",
+      "type": "multipleChoice",
+      "prompt": "A friend wants full boxes from 23 items, 5 per box, and writes print(23 % 5). What's the mistake?",
+      "options": [
+        "% gives the leftover (3), but they wanted the full boxes — use //",
+        "Nothing is wrong",
+        "They should use *",
+        "5 and 23 are swapped"
+      ],
+      "answer": 0,
+      "explanation": "They asked for full boxes, which is 23 // 5 (4). % gives the leftover 3 instead. Right question, wrong sign."
+    },
+    {
+      "id": "u12l08e04",
+      "type": "multipleChoice",
+      "prompt": "Someone wants the leftover candies from 23 shared into 5s and writes print(23 // 5). What should they use?",
+      "options": [
+        "% — the leftover is 23 % 5",
+        "// is correct",
+        "* — the leftover is 23 * 5",
+        "+ — the leftover is 23 + 5"
+      ],
+      "answer": 0,
+      "explanation": "The leftover uses %. 23 % 5 is 3. They wrote // by mistake, which gives the groups (4), not the leftover."
+    },
+    {
+      "id": "u12l08e05",
+      "type": "trueFalse",
+      "prompt": "To test if a number is even, % 2 is the right sign (not // 2).",
+      "answer": true,
+      "explanation": "Even means leftover 0 after 2s, so you need the leftover — that's %. // 2 would give half the number, not the even test."
+    },
+    {
+      "id": "u12l08e06",
+      "type": "multipleChoice",
+      "prompt": "Which line correctly shows how many whole dozens are in 40 eggs?",
+      "options": [
+        "print(40 // 12)",
+        "print(40 % 12)",
+        "print(40 / 12)",
+        "print(12 // 40)"
+      ],
+      "answer": 0,
+      "explanation": "40 // 12 is 3 whole dozens. % would give the 4 leftover eggs, and / would keep a fraction."
+    },
+    {
+      "id": "u12l08e07",
+      "type": "multipleChoice",
+      "prompt": "Which line shows how many loose eggs are left after the whole dozens in 40?",
+      "options": [
+        "print(40 % 12)",
+        "print(40 // 12)",
+        "print(40 - 12)",
+        "print(40 * 12)"
+      ],
+      "answer": 0,
+      "explanation": "40 % 12 is 4 loose eggs. // gives the 3 full dozens, not the leftover."
+    },
+    {
+      "id": "u12l08e08",
+      "type": "matchPairs",
+      "prompt": "Match each goal to the correct sign.",
+      "pairs": [
+        {
+          "left": "Full groups, whole number only",
+          "right": "//"
+        },
+        {
+          "left": "What's left over",
+          "right": "%"
+        },
+        {
+          "left": "Even or odd test",
+          "right": "%"
+        },
+        {
+          "left": "Repeat a value many times",
+          "right": "*"
+        }
+      ],
+      "explanation": "// for full groups, % for leftover and the even/odd test, * for repeating. Match the sign to the question."
+    },
+    {
+      "id": "u12l08e09",
+      "type": "multipleChoice",
+      "prompt": "A line reads print(18 // 0). Why is dividing by 0 a problem?",
+      "options": [
+        "You can't make groups of size 0 — there's no sensible answer",
+        "0 makes the number bigger",
+        "// only works with even numbers",
+        "It gives 18"
+      ],
+      "answer": 0,
+      "explanation": "Sharing into groups of 0 makes no sense — how many empty groups fit? So dividing by 0 is not allowed, with // or %."
+    },
+    {
+      "id": "u12l08e10",
+      "type": "multipleChoice",
+      "prompt": "You need BOTH the full buses and the students left over for 45 students, 20 per bus. Which pair is right?",
+      "options": [
+        "print(45 // 20) and print(45 % 20)",
+        "print(45 / 20) and print(45 - 20)",
+        "print(45 % 20) and print(45 % 20)",
+        "print(45 // 20) and print(45 // 20)"
+      ],
+      "answer": 0,
+      "explanation": "// gives 2 full buses, % gives 5 students left over. You need both signs — one for groups, one for leftover."
+    }
+  ]
+}

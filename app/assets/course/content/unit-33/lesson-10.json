@@ -1,0 +1,143 @@
+{
+  "unitId": "u33",
+  "lessonId": "u33l10",
+  "title": "Fix and finish: a program with two bugs",
+  "idea": "GUIDED PROBLEM via UEPCC, bug-focused and review-heavy. One ticket program has a forgotten int() AND a wrong boundary. Diagnose both and finish it. Last lesson of the unit.",
+  "problem": "A ride charges riders 13 and older. Broken code: age = input(\"Age: \") / if age > 13: print(\"Pay 5\") else: print(\"Free\"). Two bugs: the input is not converted, and 13 itself is wrongly free. Fix both.",
+  "exercises": [
+    {
+      "id": "u33l10e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "BROKEN: 'age = input(...)' then 'if age > 13: Pay 5 else: Free'. Rule: 13 and older pay.\n\nUnderstand. First bug: what is wrong with 'age = input(...)' for a numeric comparison?",
+      "options": [
+        "age is text, so comparing it to 13 does not work as a number - int() is missing",
+        "input is misspelled",
+        "13 is too big",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "input() gives text. Without int(), age >= 13 is not a proper numeric test. That is the first bug."
+    },
+    {
+      "id": "u33l10e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "Second bug. The rule is '13 and older pay', but the code says 'age > 13'. What is wrong?",
+      "options": [
+        "'> 13' excludes 13 itself, so a 13-year-old is wrongly free; it should be >=",
+        "> is always wrong",
+        "13 should be 12",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "'13 and older' includes 13, so the boundary needs >=. Using > makes 13 free by mistake. That is the second bug."
+    },
+    {
+      "id": "u33l10e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example by hand. By the rule, what should a 13-year-old get?",
+      "options": [
+        "Pay 5 - 13 is old enough to pay",
+        "Free",
+        "An error",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "13 is in the paying group, so 'Pay 5'. This is the expected result for the boundary you will check."
+    },
+    {
+      "id": "u33l10e04",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Also by hand: what should a 10-year-old get?",
+      "options": [
+        "Free - 10 is under 13",
+        "Pay 5",
+        "An error",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "10 is below 13, so 'Free'. Two hand results (13 -> Pay 5, 10 -> Free) now guide both fixes."
+    },
+    {
+      "id": "u33l10e05",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Plan the fixes. Which TWO changes are needed?",
+      "options": [
+        "Wrap the input in int(), and change > to >=",
+        "Only add int()",
+        "Only change > to >=",
+        "Swap the print lines"
+      ],
+      "answer": 0,
+      "explanation": "Both bugs must be fixed: convert the input AND correct the boundary. Fixing one alone leaves the program wrong."
+    },
+    {
+      "id": "u33l10e06",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Order the plain-English plan for the corrected program.",
+      "blocks": [
+        "If the age is at least 13, print 'Pay 5'; otherwise print 'Free'",
+        "Ask for the age and convert it to a number"
+      ],
+      "answer": [1, 0],
+      "explanation": "Ask and convert first, then branch with the correct >= boundary. The plan names both fixes."
+    },
+    {
+      "id": "u33l10e07",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Apply BOTH fixes - fill the conversion and the comparison:\n\nage = int(input(\"Age: \"))\nif age ____ 13:\n    print(\"Pay 5\")\nelse:\n    print(\"Free\")",
+      "answer": ">=",
+      "acceptable": [">="],
+      "explanation": "The int() is now in place; the comparison must be >= so 13 counts as paying. Both bugs fixed."
+    },
+    {
+      "id": "u33l10e08",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Arrange the fully fixed program.",
+      "blocks": [
+        "    print(\"Free\")",
+        "age = int(input(\"Age: \"))",
+        "if age >= 13:",
+        "else:",
+        "    print(\"Pay 5\")"
+      ],
+      "answer": [1, 2, 4, 3, 0],
+      "explanation": "Ask+convert with int(), then if age >= 13 print 'Pay 5', else 'Free'. Both the conversion and the boundary are corrected."
+    },
+    {
+      "id": "u33l10e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check. Type 13. What prints now?",
+      "options": [
+        "Pay 5 - matches the expected result for the boundary",
+        "Free - still broken",
+        "An error",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "age is now the number 13, and 13 >= 13 is true, so 'Pay 5'. Both fixes worked for the boundary."
+    },
+    {
+      "id": "u33l10e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Re-check the other branch with fresh input: type 10. What prints?",
+      "options": [
+        "Free - 10 is under 13",
+        "Pay 5",
+        "An error",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "10 >= 13 is false, so 'Free' - correct. You fixed and finished a program with two bugs using UEPCC!"
+    }
+  ]
+}

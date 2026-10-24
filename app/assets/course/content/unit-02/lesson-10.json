@@ -1,0 +1,127 @@
+{
+  "unitId": "u02",
+  "lessonId": "u02l10",
+  "title": "Put it together: inputs, outputs, and print",
+  "idea": "Review the whole unit and tie input/output back to the print tool from Unit 1.",
+  "exercises": [
+    {
+      "id": "u02l10e01",
+      "type": "matchPairs",
+      "prompt": "Match each word to its meaning.",
+      "pairs": [
+        { "left": "Input", "right": "What goes in" },
+        { "left": "Output", "right": "What comes out" },
+        { "left": "print()", "right": "Shows output on the screen" }
+      ],
+      "explanation": "Input goes in, output comes out, and print is how you make screen output."
+    },
+    {
+      "id": "u02l10e02",
+      "type": "multipleChoice",
+      "prompt": "Naming the input and output of a task is which UEPCC step?",
+      "options": [
+        "U — Understand",
+        "E — Examples",
+        "P — Plan",
+        "C — Code"
+      ],
+      "answer": 0,
+      "explanation": "U, Understand, means naming the input and output. You've been practicing it all unit."
+    },
+    {
+      "id": "u02l10e03",
+      "type": "multipleChoice",
+      "prompt": "Review: what does print(\"Hi\") show?",
+      "options": [
+        "Hi",
+        "\"Hi\"",
+        "print",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "print shows the text inside the quotes, exactly: Hi. The quotes aren't shown."
+    },
+    {
+      "id": "u02l10e04",
+      "type": "multipleChoice",
+      "prompt": "Task: 'Average four scores.' How many inputs?",
+      "options": [
+        "Four",
+        "One",
+        "Two",
+        "None"
+      ],
+      "answer": 0,
+      "explanation": "Four scores go in. Count every value you start with."
+    },
+    {
+      "id": "u02l10e05",
+      "type": "orderBlocks",
+      "prompt": "Order the shape of any task.",
+      "blocks": [
+        "Input",
+        "Do the work",
+        "Output"
+      ],
+      "answer": [0, 1, 2],
+      "explanation": "Input first, then the work, then the output. Every task has this shape."
+    },
+    {
+      "id": "u02l10e06",
+      "type": "trueFalse",
+      "prompt": "A program can run with no error yet still give an output that doesn't match the task.",
+      "answer": true,
+      "explanation": "Running isn't the same as being right. Always compare the output to what the task asked for."
+    },
+    {
+      "id": "u02l10e07",
+      "type": "fillBlank",
+      "prompt": "Review: write a full program whose output is the word Hi.",
+      "answer": "print(\"Hi\")",
+      "acceptable": [
+        "print(\"Hi\")",
+        "print('Hi')"
+      ],
+      "explanation": "print, brackets, the text in quotes: print(\"Hi\"). You remembered your Unit 1 tool!"
+    },
+    {
+      "id": "u02l10e08",
+      "type": "multipleChoice",
+      "prompt": "Task: 'Given a name, greet that person.' What is the input?",
+      "options": [
+        "The name",
+        "The greeting",
+        "The screen",
+        "A number"
+      ],
+      "answer": 0,
+      "explanation": "The name you're given is the input. The greeting shown is the output."
+    },
+    {
+      "id": "u02l10e09",
+      "type": "multiSelect",
+      "prompt": "Which of these are TRUE about tasks? (Choose all.)",
+      "options": [
+        "Every task has an output",
+        "A task can have more than one input",
+        "You should name the output before solving",
+        "Inputs always come after the output"
+      ],
+      "answer": [0, 1, 2],
+      "explanation": "The first three are true. Inputs come BEFORE the output, so the last is false."
+    },
+    {
+      "id": "u02l10e10",
+      "type": "multipleChoice",
+      "prompt": "You finished Unit 2! What can you now do?",
+      "options": [
+        "Name the input and output of a tiny task",
+        "Write loops",
+        "Use variables",
+        "Ask the user questions"
+      ],
+      "answer": 0,
+      "explanation": "You can now name the input and output of a task — the U of UEPCC. Great start! The other tools come later."
+    }
+  ]
+}

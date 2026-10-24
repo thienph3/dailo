@@ -1,0 +1,139 @@
+{
+  "unitId": "u57",
+  "lessonId": "u57l08",
+  "title": "Totals in real problems",
+  "idea": "Apply the sum tool to everyday framings: receipts, points, rainfall. Review-leaning.",
+  "exercises": [
+    {
+      "id": "u57l08e01",
+      "type": "multipleChoice",
+      "prompt": "A receipt has prices [4, 6, 10]. Which code totals it correctly?",
+      "options": [
+        "total=0; for p in prices: total=total+p",
+        "total=prices[0]",
+        "for p in prices: print(p)",
+        "total=len(prices)"
+      ],
+      "answer": 0,
+      "explanation": "Start 0, add each price. That's the sum pattern; the others don't total."
+    },
+    {
+      "id": "u57l08e02",
+      "type": "multipleChoice",
+      "prompt": "points = [10, 10, 5]\ntotal = 0\nfor p in points:\n    total = total + p\nprint(f\"Score: {total}\")\n\nWhat prints?",
+      "options": [
+        "Score: 25",
+        "Score: 10",
+        "Score: 3",
+        "25"
+      ],
+      "answer": 0,
+      "explanation": "10 + 10 + 5 = 25, shown as 'Score: 25'."
+    },
+    {
+      "id": "u57l08e03",
+      "type": "orderBlocks",
+      "prompt": "Arrange: total this week's rainfall and print it.",
+      "blocks": [
+        "print(total)",
+        "    total = total + mm",
+        "total = 0",
+        "for mm in rain:",
+        "rain = [3, 0, 7]"
+      ],
+      "answer": [
+        4,
+        2,
+        3,
+        1,
+        0
+      ],
+      "explanation": "List, start total, loop + add, print. 3 + 0 + 7 = 10."
+    },
+    {
+      "id": "u57l08e04",
+      "type": "multipleChoice",
+      "prompt": "You totalled a bill as 'total'. To add a fixed 2 delivery fee, what do you do AFTER the loop?",
+      "options": [
+        "total = total + 2",
+        "total = 2",
+        "start total at 2",
+        "add 2 each pass"
+      ],
+      "answer": 0,
+      "explanation": "Add the one-off fee once, after the loop: total = total + 2. Adding it each pass would be wrong."
+    },
+    {
+      "id": "u57l08e05",
+      "type": "trueFalse",
+      "prompt": "A delivery fee added per item (inside the loop) would overcharge — it should be added once after the loop.",
+      "answer": true,
+      "explanation": "A one-time fee is added once. Inside the loop it would be added once per item."
+    },
+    {
+      "id": "u57l08e06",
+      "type": "multipleChoice",
+      "prompt": "donations = [5, 5, 5, 5]\ntotal = 0\nfor d in donations:\n    total = total + d\nprint(total)\n\nWhat prints?",
+      "options": [
+        "20",
+        "5",
+        "4",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "Four 5s is 20."
+    },
+    {
+      "id": "u57l08e07",
+      "type": "multipleChoice",
+      "prompt": "Which value must appear in the code as a named variable, per the value-mapping habit?",
+      "options": [
+        "Every stated number (e.g. the fee, the prices)",
+        "Only the first price",
+        "None — hardcode is fine",
+        "Only the total"
+      ],
+      "answer": 0,
+      "explanation": "Each stated number becomes a named variable so the code mirrors the problem."
+    },
+    {
+      "id": "u57l08e08",
+      "type": "multipleChoice",
+      "prompt": "minutes = [30, 45, 15]\ntotal = 0\nfor m in minutes:\n    total = total + m\nprint(total)\n\nHow many minutes total?",
+      "options": [
+        "90",
+        "45",
+        "3",
+        "75"
+      ],
+      "answer": 0,
+      "explanation": "30 + 45 + 15 = 90 minutes."
+    },
+    {
+      "id": "u57l08e09",
+      "type": "multipleChoice",
+      "prompt": "Why is the sum pattern so reusable?",
+      "options": [
+        "Many problems are 'add up all of them'",
+        "It only works for money",
+        "It sorts the list",
+        "It needs input()"
+      ],
+      "answer": 0,
+      "explanation": "Totalling shows up everywhere — bills, scores, distances. One pattern, many uses."
+    },
+    {
+      "id": "u57l08e10",
+      "type": "multipleChoice",
+      "prompt": "The three parts of a working sum are...",
+      "options": [
+        "total = 0, a for-each loop, total = total + value",
+        "print, input, if",
+        "range, append, len",
+        "a counter only"
+      ],
+      "answer": 0,
+      "explanation": "Initialise, walk, accumulate. That's the sum tool."
+    }
+  ]
+}

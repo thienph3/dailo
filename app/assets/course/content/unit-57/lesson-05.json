@@ -1,0 +1,126 @@
+{
+  "unitId": "u57",
+  "lessonId": "u57l05",
+  "title": "Spot the total mistake",
+  "idea": "Recognise accumulator bugs: no initialisation, reset inside the loop, printing inside, adding 1 instead of the value.",
+  "exercises": [
+    {
+      "id": "u57l05e01",
+      "type": "multipleChoice",
+      "prompt": "What's wrong?\n\nfor n in nums:\n    total = total + n\nprint(total)",
+      "options": [
+        "total is never set to 0 before the loop",
+        "Nothing",
+        "print should be inside",
+        "+ should be -"
+      ],
+      "answer": 0,
+      "explanation": "Without 'total = 0' first, the very first 'total + n' has no starting value. Initialise before the loop."
+    },
+    {
+      "id": "u57l05e02",
+      "type": "multipleChoice",
+      "prompt": "This always gives the last value, not the sum. Why?\n\ntotal = 0\nfor n in nums:\n    total = 0\n    total = total + n\nprint(total)",
+      "options": [
+        "total is reset to 0 inside the loop every pass",
+        "print is wrong",
+        "nums is empty",
+        "+ is wrong"
+      ],
+      "answer": 0,
+      "explanation": "Resetting total to 0 inside the loop wipes the running sum each pass, leaving only the last value. Set 0 once, outside."
+    },
+    {
+      "id": "u57l05e03",
+      "type": "multipleChoice",
+      "prompt": "This counts items instead of summing them. Spot the bug:\n\ntotal = 0\nfor n in nums:\n    total = total + 1",
+      "options": [
+        "It adds 1 each pass, not the value n",
+        "It adds n twice",
+        "It prints wrong",
+        "total starts wrong"
+      ],
+      "answer": 0,
+      "explanation": "Adding 1 counts passes (a counter). To SUM, add the value: total = total + n."
+    },
+    {
+      "id": "u57l05e04",
+      "type": "trueFalse",
+      "prompt": "Putting print(total) inside the loop is not a crash, but it prints every partial sum instead of one final total.",
+      "answer": true,
+      "explanation": "It still runs, just noisily. For one final answer, print after the loop."
+    },
+    {
+      "id": "u57l05e05",
+      "type": "multipleChoice",
+      "prompt": "nums = [4, 6]\ntotal = 0\nfor n in nums:\n    total = n\nprint(total)\n\nWhat prints, and why is it wrong for a sum?",
+      "options": [
+        "6 — it overwrites instead of adding",
+        "10 — correct",
+        "4",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "'total = n' replaces total with the current value, so you end with the last one (6). Summing needs total = total + n."
+    },
+    {
+      "id": "u57l05e06",
+      "type": "multipleChoice",
+      "prompt": "Which is the correct accumulate line?",
+      "options": [
+        "total = total + n",
+        "total = n",
+        "total + n",
+        "total = total + 1"
+      ],
+      "answer": 0,
+      "explanation": "Add the value into the old total and store it back: total = total + n."
+    },
+    {
+      "id": "u57l05e07",
+      "type": "trueFalse",
+      "prompt": "Starting total at 1 instead of 0 makes every sum one too big.",
+      "answer": true,
+      "explanation": "The extra 1 is carried through the whole sum. Start at 0 for a correct total."
+    },
+    {
+      "id": "u57l05e08",
+      "type": "multipleChoice",
+      "prompt": "Where must 'total = 0' go?",
+      "options": [
+        "Before the loop, once",
+        "Inside the loop, each pass",
+        "After the loop",
+        "It isn't needed"
+      ],
+      "answer": 0,
+      "explanation": "Initialise once, before the loop, so the sum can build up across passes."
+    },
+    {
+      "id": "u57l05e09",
+      "type": "multipleChoice",
+      "prompt": "A learner writes total += 1 inside the loop and is surprised the 'sum' of [10, 20] is 2. What should they write?",
+      "options": [
+        "total += n",
+        "total += 2",
+        "total = 1",
+        "total -= n"
+      ],
+      "answer": 0,
+      "explanation": "They counted items (got 2). To sum the values, add n: total += n gives 30."
+    },
+    {
+      "id": "u57l05e10",
+      "type": "multipleChoice",
+      "prompt": "Correct order of the three essentials for summing a list?",
+      "options": [
+        "start at 0, loop the list, add each value",
+        "loop, start at 0, add",
+        "add, loop, start",
+        "print, loop, add"
+      ],
+      "answer": 0,
+      "explanation": "Initialise to 0, then loop, adding each value. Get the order right and the sum is correct."
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "unitId": "u50",
+  "lessonId": "u50l08",
+  "title": "Loop back: predict and trace",
+  "idea": "REVIEW. Revisit tracing from Unit 48 - loop variable, counter, accumulator, while, break/continue, off-by-one. No new concepts.",
+  "exercises": [
+    {
+      "id": "u50l08e01",
+      "type": "multipleChoice",
+      "prompt": "Trace: for i in range(2, 7). The values of i are:",
+      "options": ["2, 3, 4, 5, 6", "2, 3, 4, 5, 6, 7", "0, 1, 2", "2, 7"],
+      "answer": 0,
+      "explanation": "range(2, 7) is 2 through 6 - stops before 7. Five values."
+    },
+    {
+      "id": "u50l08e02",
+      "type": "multipleChoice",
+      "prompt": "Trace:\n\ntotal = 0\nfor i in range(1, 6):\n    total = total + i\n\nFinal total?",
+      "options": ["15", "10", "6", "5"],
+      "answer": 0,
+      "explanation": "1 + 2 + 3 + 4 + 5 = 15. The accumulator sums the loop variable."
+    },
+    {
+      "id": "u50l08e03",
+      "type": "multipleChoice",
+      "prompt": "Trace:\n\nn = 0\nwhile n < 6:\n    n = n + 2\n\nFinal n?",
+      "options": ["6", "4", "8", "0"],
+      "answer": 0,
+      "explanation": "n goes 0, 2, 4, 6. At 6 the condition n < 6 is false, so it stops. Final 6."
+    },
+    {
+      "id": "u50l08e04",
+      "type": "multipleChoice",
+      "prompt": "Trace:\n\nfor i in range(10):\n    if i == 4:\n        break\n    print(i)\n\nWhat prints?",
+      "options": ["0, 1, 2, 3", "0 to 9", "0, 1, 2, 3, 4", "nothing"],
+      "answer": 0,
+      "explanation": "break stops at i = 4 before printing, so 0, 1, 2, 3 appear."
+    },
+    {
+      "id": "u50l08e05",
+      "type": "multipleChoice",
+      "prompt": "Trace:\n\nfor i in range(6):\n    if i % 2 == 0:\n        continue\n    print(i)\n\nWhat prints?",
+      "options": ["1, 3, 5", "0, 2, 4", "0, 1, 2, 3, 4, 5", "nothing"],
+      "answer": 0,
+      "explanation": "continue skips the even i, so only odd 1, 3, 5 print."
+    },
+    {
+      "id": "u50l08e06",
+      "type": "multipleChoice",
+      "prompt": "Off-by-one review: to print 1 through 8, which range?",
+      "options": ["range(1, 9)", "range(1, 8)", "range(8)", "range(0, 8)"],
+      "answer": 0,
+      "explanation": "The stop isn't included, so 9 is needed to reach 8. range(1, 9) gives 1..8."
+    },
+    {
+      "id": "u50l08e07",
+      "type": "multipleChoice",
+      "prompt": "Trace two variables:\n\ncount = 0\ntotal = 0\nfor i in range(1, 4):\n    count = count + 1\n    total = total + i\n\nFinal (count, total)?",
+      "options": ["(3, 6)", "(6, 3)", "(3, 3)", "(4, 6)"],
+      "answer": 0,
+      "explanation": "count rises 1, 2, 3; total rises 1, 3, 6. Side by side: (3, 6)."
+    },
+    {
+      "id": "u50l08e08",
+      "type": "fillBlank",
+      "prompt": "Trace:\n\ncount = 0\nfor i in range(7):\n    count = count + 1\n\nFinal count? (a number)",
+      "answer": "7",
+      "acceptable": ["7"],
+      "explanation": "range(7) is seven passes, +1 each. The counter ends at 7."
+    },
+    {
+      "id": "u50l08e09",
+      "type": "multipleChoice",
+      "prompt": "Predict:\n\nfor i in range(1, 10, 2):\n    print(i)",
+      "options": ["1, 3, 5, 7, 9", "1, 2, 3, ... 9", "2, 4, 6, 8", "1, 9"],
+      "answer": 0,
+      "explanation": "Start 1, step 2, stop before 10: 1, 3, 5, 7, 9. A stepped range skips values."
+    },
+    {
+      "id": "u50l08e10",
+      "type": "multipleChoice",
+      "prompt": "Why trace a loop before running it?",
+      "options": [
+        "To predict the result and catch bugs like off-by-one or infinite loops",
+        "To make it run faster",
+        "To avoid using loops",
+        "To change the colors"
+      ],
+      "answer": 0,
+      "explanation": "A hand trace turns invisible bugs into something you spot on paper. Predict, then confirm."
+    }
+  ]
+}

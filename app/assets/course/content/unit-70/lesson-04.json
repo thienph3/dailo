@@ -1,0 +1,136 @@
+{
+  "unitId": "u70",
+  "lessonId": "u70l04",
+  "title": "Reading a plan that uses named jobs",
+  "idea": "MEET: follow a plan written with named sub-plans and predict what happens. No code.",
+  "exercises": [
+    {
+      "id": "u70l04e01",
+      "type": "multipleChoice",
+      "prompt": "A plan: define 'greet' (it shows 'Hi there'). Then: use greet. What appears?",
+      "options": [
+        "Hi there",
+        "greet",
+        "nothing",
+        "Hi there, twice"
+      ],
+      "answer": 0,
+      "explanation": "Defining greet describes it; using greet does it, showing 'Hi there' once."
+    },
+    {
+      "id": "u70l04e02",
+      "type": "multipleChoice",
+      "prompt": "Same 'greet' job. Plan: use greet, use greet, use greet. How many times does 'Hi there' appear?",
+      "options": [
+        "Three times",
+        "Once",
+        "Zero",
+        "Nine times"
+      ],
+      "answer": 0,
+      "explanation": "Each use does the job once. Three uses show 'Hi there' three times. Define once, use many."
+    },
+    {
+      "id": "u70l04e03",
+      "type": "orderBlocks",
+      "prompt": "A plan shows a bordered title. Order what the reader SEES, given border = a line of stars.",
+      "blocks": [
+        "the stars (bottom border)",
+        "the stars (top border)",
+        "the title"
+      ],
+      "answer": [
+        1,
+        2,
+        0
+      ],
+      "explanation": "Top border, then title, then bottom border - the order the uses appear in the plan."
+    },
+    {
+      "id": "u70l04e04",
+      "type": "trueFalse",
+      "prompt": "To predict a plan's output, you follow each USE of a named job in order.",
+      "answer": true,
+      "explanation": "Yes. The definition just describes the job; the output comes from each use, read top to bottom."
+    },
+    {
+      "id": "u70l04e05",
+      "type": "multipleChoice",
+      "prompt": "A plan defines 'show_menu' but the main plan never uses it. What does the reader see?",
+      "options": [
+        "Nothing from show_menu",
+        "The menu once",
+        "The menu twice",
+        "An error"
+      ],
+      "answer": 0,
+      "explanation": "A defined-but-unused job never runs, so it shows nothing. Only uses produce output."
+    },
+    {
+      "id": "u70l04e06",
+      "type": "matchPairs",
+      "prompt": "Match each plan line to what it DOES.",
+      "pairs": [
+        {
+          "left": "define print_border",
+          "right": "describe the border job"
+        },
+        {
+          "left": "use print_border",
+          "right": "show the border now"
+        },
+        {
+          "left": "use print_border again",
+          "right": "show the border a second time"
+        }
+      ],
+      "explanation": "Defining sets up; each use produces output. Reading a plan means tracking the uses in order."
+    },
+    {
+      "id": "u70l04e07",
+      "type": "multipleChoice",
+      "prompt": "Plan: define greet (shows 'Hi'). Print 'Welcome'. Use greet. In what order does text appear?",
+      "options": [
+        "Welcome, then Hi",
+        "Hi, then Welcome",
+        "only Hi",
+        "only Welcome"
+      ],
+      "answer": 0,
+      "explanation": "The define does nothing visible. Then 'Welcome' prints, then greet runs showing 'Hi'. Order: Welcome, Hi."
+    },
+    {
+      "id": "u70l04e08",
+      "type": "trueFalse",
+      "prompt": "Where you DEFINE a job in the plan does not matter for output; where you USE it does.",
+      "answer": true,
+      "explanation": "Right. Output follows the uses, in order. A definition is quiet setup wherever it sits."
+    },
+    {
+      "id": "u70l04e09",
+      "type": "multipleChoice",
+      "prompt": "REVIEW: reading code top-to-bottom to predict output is a skill from...",
+      "options": [
+        "Unit 1 - predicting what print shows",
+        "nowhere - it's brand new",
+        "only loops",
+        "only lists"
+      ],
+      "answer": 0,
+      "explanation": "You've predicted output since Unit 1. Now you also track which named jobs get used, and when."
+    },
+    {
+      "id": "u70l04e10",
+      "type": "multipleChoice",
+      "prompt": "To read a plan built from named jobs, you should...",
+      "options": [
+        "follow each use of a named job, in order, to see the output",
+        "ignore the uses",
+        "read only the definitions",
+        "guess randomly"
+      ],
+      "answer": 0,
+      "explanation": "Track the uses top to bottom. Definitions describe; uses produce the visible result."
+    }
+  ]
+}

@@ -1,0 +1,139 @@
+{
+  "unitId": "u52",
+  "lessonId": "u52l04",
+  "title": "Predict what an index gives",
+  "idea": "Read list-and-index code and predict the single value it produces. Pure thinking practice to cement positions.",
+  "exercises": [
+    {
+      "id": "u52l04e01",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nnums = [5, 10, 15, 20]\nprint(nums[2])",
+      "options": [
+        "15",
+        "10",
+        "20",
+        "2"
+      ],
+      "answer": 0,
+      "explanation": "Positions: 5 at 0, 10 at 1, 15 at 2, 20 at 3. So nums[2] is 15."
+    },
+    {
+      "id": "u52l04e02",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\ndata = [100, 200, 300]\nprint(data[0])",
+      "options": [
+        "100",
+        "200",
+        "300",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "Index 0 is the first value, 100. Always start your count at 0."
+    },
+    {
+      "id": "u52l04e03",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nmix = [\"x\", \"y\", \"z\"]\nprint(mix[1])",
+      "options": [
+        "y",
+        "x",
+        "z",
+        "1"
+      ],
+      "answer": 0,
+      "explanation": "x at 0, y at 1, z at 2. So mix[1] gives \"y\", the second value."
+    },
+    {
+      "id": "u52l04e04",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nnums = [4, 9, 16, 25, 36]\nprint(nums[-1])",
+      "options": [
+        "36",
+        "4",
+        "25",
+        "-1"
+      ],
+      "answer": 0,
+      "explanation": "-1 is the last value, 36. The end shortcut saves you from counting all five positions."
+    },
+    {
+      "id": "u52l04e05",
+      "type": "matchPairs",
+      "prompt": "For vals = [11, 22, 33, 44], match each index to its value.",
+      "pairs": [
+        {
+          "left": "vals[0]",
+          "right": "11"
+        },
+        {
+          "left": "vals[2]",
+          "right": "33"
+        },
+        {
+          "left": "vals[-1]",
+          "right": "44"
+        }
+      ],
+      "explanation": "0 -> 11 (first), 2 -> 33 (third), -1 -> 44 (last). Trace the position carefully each time."
+    },
+    {
+      "id": "u52l04e06",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\ntemps = [14, 17, 21]\nfirst = temps[0]\nprint(first)",
+      "options": [
+        "14",
+        "17",
+        "21",
+        "[14, 17, 21]"
+      ],
+      "answer": 0,
+      "explanation": "temps[0] is 14, and that gets stored in first. Printing first shows 14. You can save an indexed value in a variable."
+    },
+    {
+      "id": "u52l04e07",
+      "type": "trueFalse",
+      "prompt": "The value from indexing can be stored in a variable, like  top = scores[0].",
+      "answer": true,
+      "explanation": "Yes. Indexing gives a single value, and any single value can go into a variable. Here top would hold the first score."
+    },
+    {
+      "id": "u52l04e08",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nnums = [3, 6, 9]\nprint(nums[1])\nprint(nums[2])",
+      "options": [
+        "6\n9",
+        "9\n6",
+        "3\n6",
+        "[3, 6, 9]"
+      ],
+      "answer": 0,
+      "explanation": "nums[1] is 6, nums[2] is 9. Two prints, two lines, in order: 6 then 9."
+    },
+    {
+      "id": "u52l04e09",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nnums = [50, 40, 30, 20, 10]\nprint(nums[-2])",
+      "options": [
+        "20",
+        "10",
+        "30",
+        "40"
+      ],
+      "answer": 0,
+      "explanation": "-1 is 10 (last), so -2 is the one before it, 20. Negative indexes count back from the end."
+    },
+    {
+      "id": "u52l04e10",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nnums = [7, 7, 7]\nprint(nums[0])",
+      "options": [
+        "7",
+        "21",
+        "[7, 7, 7]",
+        "3"
+      ],
+      "answer": 0,
+      "explanation": "All values are 7, so nums[0] is 7. Indexing gives the one value at that spot, even when the values repeat."
+    }
+  ]
+}

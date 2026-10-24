@@ -1,0 +1,135 @@
+{
+  "unitId": "u15",
+  "lessonId": "u15l04",
+  "title": "Building a message",
+  "idea": "Join string variables and little bits of text to build a full sentence.",
+  "exercises": [
+    {
+      "id": "u15l04e01",
+      "type": "multipleChoice",
+      "prompt": "What will this show?\n\nname = \"Mia\"\nprint(\"Hello, \" + name)",
+      "options": [
+        "Hello, Mia",
+        "Hello, name",
+        "Hello,Mia",
+        "Hello, \"Mia\""
+      ],
+      "answer": 0,
+      "explanation": "The fixed text \"Hello, \" (with its space) joins the value of name: Hello, Mia."
+    },
+    {
+      "id": "u15l04e02",
+      "type": "multipleChoice",
+      "prompt": "What will this show?\n\nname = \"Mia\"\nprint(\"Hi \" + name + \"!\")",
+      "options": [
+        "Hi Mia!",
+        "Hi Mia !",
+        "HiMia!",
+        "Hi name!"
+      ],
+      "answer": 0,
+      "explanation": "Three pieces joined: \"Hi \", the name, and \"!\". The space lives inside \"Hi \"."
+    },
+    {
+      "id": "u15l04e03",
+      "type": "trueFalse",
+      "prompt": "You can mix fixed text and variables in the same join to build a sentence.",
+      "answer": true,
+      "explanation": "That's the whole point. \"Welcome, \" + name + \"!\" mixes text you type with text you stored."
+    },
+    {
+      "id": "u15l04e04",
+      "type": "multipleChoice",
+      "prompt": "What will this show?\n\ncity = \"Hanoi\"\nprint(\"I live in \" + city)",
+      "options": [
+        "I live in Hanoi",
+        "I live in city",
+        "I live inHanoi",
+        "Hanoi"
+      ],
+      "answer": 0,
+      "explanation": "\"I live in \" ends with a space, then the value of city joins on: I live in Hanoi."
+    },
+    {
+      "id": "u15l04e05",
+      "type": "orderBlocks",
+      "prompt": "Arrange these pieces to print the message: Dear Sam,\n\nThe pieces are joined left to right with +.",
+      "blocks": [
+        "\"Dear \"",
+        "name",
+        "\",\""
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "\"Dear \" + name + \",\" builds Dear Sam, when name holds \"Sam\"."
+    },
+    {
+      "id": "u15l04e06",
+      "type": "fillBlank",
+      "prompt": "Finish the line so it prints: Bye, Mia\n\nname = \"Mia\"\nprint(\"Bye, \" + ____)",
+      "answer": "name",
+      "acceptable": [
+        "name"
+      ],
+      "explanation": "No quotes! We want the value stored in name, so we write the bare variable name."
+    },
+    {
+      "id": "u15l04e07",
+      "type": "multipleChoice",
+      "prompt": "Spot the mistake:\n\nname = \"Mia\"\nprint(\"Hello, \" + \"name\")",
+      "options": [
+        "name is in quotes, so it shows the word name, not Mia",
+        "Missing a bracket",
+        "+ is wrong here",
+        "Nothing is wrong"
+      ],
+      "answer": 0,
+      "explanation": "Quotes around name make it the literal text 'name'. Drop the quotes to use the variable's value."
+    },
+    {
+      "id": "u15l04e08",
+      "type": "tapTokens",
+      "prompt": "Build a line that prints: Welcome, Mia (name holds \"Mia\").",
+      "tokens": [
+        "print",
+        "(",
+        "\"Welcome, \"",
+        "+",
+        "name",
+        ")"
+      ],
+      "answer": [
+        "print",
+        "(",
+        "\"Welcome, \"",
+        "+",
+        "name",
+        ")"
+      ],
+      "explanation": "The text \"Welcome, \" (with a trailing space) joins the value of name: Welcome, Mia."
+    },
+    {
+      "id": "u15l04e09",
+      "type": "multipleChoice",
+      "prompt": "What will this show?\n\npet = \"dog\"\nsound = \"woof\"\nprint(\"The \" + pet + \" says \" + sound)",
+      "options": [
+        "The dog says woof",
+        "The pet says sound",
+        "Thedogsayswoof",
+        "The dog sayswoof"
+      ],
+      "answer": 0,
+      "explanation": "Four pieces joined with spaces tucked into the text parts: The dog says woof."
+    },
+    {
+      "id": "u15l04e10",
+      "type": "trueFalse",
+      "prompt": "Building messages by + works, but it is easy to forget a space or a quote.",
+      "answer": true,
+      "explanation": "It works, but it's fiddly. Next lesson shows a cleaner way: f-strings."
+    }
+  ]
+}

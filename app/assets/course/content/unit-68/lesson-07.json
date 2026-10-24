@@ -1,0 +1,148 @@
+{
+  "unitId": "u68",
+  "lessonId": "u68l07",
+  "title": "Solve it: is it there, and where?",
+  "idea": "LOOP: search for presence and first position, reusing index loops, len, break. No new concept.",
+  "exercises": [
+    {
+      "id": "u68l07e01",
+      "type": "multipleChoice",
+      "prompt": "PROBLEM: codes = [11, 22, 33, 22]. Is 22 present? Which tool?",
+      "options": [
+        "search (a yes/no)",
+        "sum",
+        "max",
+        "average"
+      ],
+      "answer": 0,
+      "explanation": "'Is it present' is a search — answer yes or no."
+    },
+    {
+      "id": "u68l07e02",
+      "type": "multipleChoice",
+      "prompt": "By hand, is 22 in [11, 22, 33, 22]?",
+      "options": [
+        "Yes",
+        "No",
+        "Maybe",
+        "Only once"
+      ],
+      "answer": 0,
+      "explanation": "22 appears (twice, in fact), so yes. Duplicates don't change a yes/no."
+    },
+    {
+      "id": "u68l07e03",
+      "type": "orderBlocks",
+      "prompt": "Arrange the presence search.",
+      "blocks": [
+        "found = False",
+        "for c in codes:",
+        "    if c == 22:",
+        "        found = True",
+        "print(found)"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "explanation": "Assume not found, compare each item, flip True on a match, print. Prints True here."
+    },
+    {
+      "id": "u68l07e04",
+      "type": "multipleChoice",
+      "prompt": "Now: at WHICH position does 22 FIRST appear? (positions start at 0)",
+      "options": [
+        "1",
+        "0",
+        "3",
+        "2"
+      ],
+      "answer": 0,
+      "explanation": "11 is at 0, 22 is at 1. The first 22 is at index 1."
+    },
+    {
+      "id": "u68l07e05",
+      "type": "multipleChoice",
+      "prompt": "To find the FIRST position, which loop lets you read indexes?",
+      "options": [
+        "for i in range(len(codes)): then codes[i]",
+        "for c in codes",
+        "while True",
+        "print(codes)"
+      ],
+      "answer": 0,
+      "explanation": "range(len(codes)) gives indexes 0..last, and codes[i] reads each item. You need the index to report a position."
+    },
+    {
+      "id": "u68l07e06",
+      "type": "multipleChoice",
+      "prompt": "Why add 'break' once you find the first match while searching for a position?",
+      "options": [
+        "to stop at the FIRST match so a later duplicate doesn't overwrite it",
+        "to make it slower",
+        "to skip the first match",
+        "break does nothing here"
+      ],
+      "answer": 0,
+      "explanation": "Without break, the second 22 (at index 3) would overwrite the position. break locks in the first match."
+    },
+    {
+      "id": "u68l07e07",
+      "type": "orderBlocks",
+      "prompt": "Arrange the first-position search (start at -1 meaning 'not found').",
+      "blocks": [
+        "where = -1",
+        "for i in range(len(codes)):",
+        "    if codes[i] == 22:",
+        "        where = i",
+        "        break",
+        "print(where)"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "explanation": "Start where at -1, scan indexes, record i and break on the first match, print. Prints 1."
+    },
+    {
+      "id": "u68l07e08",
+      "type": "multipleChoice",
+      "prompt": "If 22 were NOT in the list, what would 'where' stay as?",
+      "options": [
+        "-1 — the 'not found' starting value",
+        "0",
+        "the length",
+        "an error"
+      ],
+      "answer": 0,
+      "explanation": "No match means the loop never sets where, so it keeps its start of -1, a clear 'not found' signal."
+    },
+    {
+      "id": "u68l07e09",
+      "type": "trueFalse",
+      "prompt": "REVIEW: range(len(codes)) for a 4-item list gives indexes 0, 1, 2, 3.",
+      "answer": true,
+      "explanation": "Yes — len is 4, range(4) is 0,1,2,3, exactly the valid indexes. No off-by-one."
+    },
+    {
+      "id": "u68l07e10",
+      "type": "multipleChoice",
+      "prompt": "The takeaway:",
+      "options": [
+        "a presence search and a position search share the scan; position also needs the index and a break",
+        "they're unrelated",
+        "you can't find positions",
+        "search needs sum"
+      ],
+      "answer": 0,
+      "explanation": "Both scan the list; position search adds index reading and a break to catch the FIRST match. Familiar parts, new combination."
+    }
+  ]
+}

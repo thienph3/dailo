@@ -1,0 +1,116 @@
+{
+  "unitId": "u02",
+  "lessonId": "u02l04",
+  "title": "Then name the input",
+  "idea": "The input is what you start with. Name it so you know what the task has to work from.",
+  "exercises": [
+    {
+      "id": "u02l04e01",
+      "type": "multipleChoice",
+      "prompt": "Which question helps you name the input?",
+      "options": [
+        "What do I start with?",
+        "What is the task called?",
+        "How tired am I?",
+        "What comes out at the end?"
+      ],
+      "answer": 0,
+      "explanation": "Asking 'what do I start with?' points straight at the input."
+    },
+    {
+      "id": "u02l04e02",
+      "type": "multipleChoice",
+      "prompt": "Task: 'Count how many apples are in a basket.' What is the input?",
+      "options": [
+        "The apples in the basket",
+        "The number you end with",
+        "The basket's color",
+        "The word count"
+      ],
+      "answer": 0,
+      "explanation": "You start with the apples. The input is the apples; the output is the count."
+    },
+    {
+      "id": "u02l04e03",
+      "type": "multipleChoice",
+      "prompt": "Task: 'Count how many apples are in a basket.' What is the output?",
+      "options": [
+        "A number: how many apples",
+        "The apples",
+        "The basket",
+        "A banana"
+      ],
+      "answer": 0,
+      "explanation": "The output is the count — a number telling you how many apples there are."
+    },
+    {
+      "id": "u02l04e04",
+      "type": "matchPairs",
+      "prompt": "Match each task to its INPUT.",
+      "pairs": [
+        { "left": "Average three test scores", "right": "Three scores" },
+        { "left": "Translate a word", "right": "A word" },
+        { "left": "Draw a square of a given size", "right": "A size" }
+      ],
+      "explanation": "The input is the value or values the task is given to work from."
+    },
+    {
+      "id": "u02l04e05",
+      "type": "trueFalse",
+      "prompt": "A task can have more than one input.",
+      "answer": true,
+      "explanation": "Yes — 'add two prices' has two inputs. We'll look at multi-input tasks soon."
+    },
+    {
+      "id": "u02l04e06",
+      "type": "multipleChoice",
+      "prompt": "Task: 'Make a cup of tea.' Which of these is an input?",
+      "options": [
+        "A tea bag and hot water",
+        "A finished cup of tea",
+        "The word tea",
+        "The kettle's brand"
+      ],
+      "answer": 0,
+      "explanation": "You start with a tea bag and hot water — those are the inputs. The finished tea is the output."
+    },
+    {
+      "id": "u02l04e07",
+      "type": "trueFalse",
+      "prompt": "For 'print the word Hello', there is no number to start with, but the text Hello is still what goes in.",
+      "answer": true,
+      "explanation": "Input doesn't have to be a number. Here the text Hello is the input, and the screen showing Hello is the output."
+    },
+    {
+      "id": "u02l04e08",
+      "type": "matchPairs",
+      "prompt": "Match each task to its OUTPUT.",
+      "pairs": [
+        { "left": "Average three test scores", "right": "One average score" },
+        { "left": "Translate a word", "right": "The translated word" },
+        { "left": "Draw a square of a given size", "right": "A square" }
+      ],
+      "explanation": "Pairing inputs with outputs makes the task's shape clear before you solve it."
+    },
+    {
+      "id": "u02l04e09",
+      "type": "multipleChoice",
+      "prompt": "You named the input and output of a task. What is the next thing UEPCC suggests?",
+      "options": [
+        "Work one example by hand (we'll learn this soon)",
+        "Quit the task",
+        "Rename the task",
+        "Ignore the output"
+      ],
+      "answer": 0,
+      "explanation": "After Understand (input/output) comes Examples. You'll meet that step in a later unit."
+    },
+    {
+      "id": "u02l04e10",
+      "type": "trueFalse",
+      "prompt": "Naming inputs and outputs is the 'Understand' step — the U of UEPCC.",
+      "answer": true,
+      "explanation": "Exactly. U means understand the task by naming what goes in and what must come out."
+    }
+  ]
+}

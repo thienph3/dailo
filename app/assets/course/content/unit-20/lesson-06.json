@@ -1,0 +1,139 @@
+{
+  "unitId": "u20",
+  "lessonId": "u20l06",
+  "title": "Storing a comparison's answer",
+  "idea": "The boolean that a comparison produces can be stored in a variable, just like last unit's hand-written facts - but now the computer computes it.",
+  "exercises": [
+    {
+      "id": "u20l06e01",
+      "type": "multipleChoice",
+      "prompt": "What does this print?\n\nis_adult = 20 > 18\nprint(is_adult)",
+      "options": [
+        "True",
+        "False",
+        "20",
+        "18"
+      ],
+      "answer": 0,
+      "explanation": "20 > 18 is True, and that boolean is stored in is_adult, so it prints True."
+    },
+    {
+      "id": "u20l06e02",
+      "type": "multipleChoice",
+      "prompt": "What does this print?\n\nenough = 3 >= 5\nprint(enough)",
+      "options": [
+        "False",
+        "True",
+        "3",
+        "5"
+      ],
+      "answer": 0,
+      "explanation": "3 >= 5 is False, so enough holds False."
+    },
+    {
+      "id": "u20l06e03",
+      "type": "trueFalse",
+      "prompt": "A variable can store the True/False result of a comparison.",
+      "answer": true,
+      "explanation": "Yes - the comparison runs first, then its boolean answer is stored in the variable."
+    },
+    {
+      "id": "u20l06e04",
+      "type": "orderBlocks",
+      "prompt": "Arrange: set a score, compute whether it passed (>= 50), then show the result.",
+      "blocks": [
+        "print(passed)",
+        "passed = score >= 50",
+        "score = 72"
+      ],
+      "answer": [
+        2,
+        1,
+        0
+      ],
+      "explanation": "Store score, compute passed from the comparison, then print passed. The comparison needs score to exist first."
+    },
+    {
+      "id": "u20l06e05",
+      "type": "fillBlank",
+      "prompt": "Compute whether the cart total is over the free-shipping line of 50:\n\ntotal = 60\nfree_shipping = total ____ 50\nprint(free_shipping)   # shows: True",
+      "answer": ">",
+      "acceptable": [
+        ">"
+      ],
+      "explanation": "total > 50 is 60 > 50, which is True, and that's stored in free_shipping."
+    },
+    {
+      "id": "u20l06e06",
+      "type": "multipleChoice",
+      "prompt": "What type of value does free_shipping = total > 50 store?",
+      "options": [
+        "a boolean",
+        "a number",
+        "text",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "A comparison produces a boolean, so the variable holds True or False."
+    },
+    {
+      "id": "u20l06e07",
+      "type": "multipleChoice",
+      "prompt": "What does this print?\n\nlevel = 5\nmaxed = level == 10\nprint(maxed)",
+      "options": [
+        "False",
+        "True",
+        "5",
+        "10"
+      ],
+      "answer": 0,
+      "explanation": "level is 5, and 5 == 10 is False, so maxed holds False."
+    },
+    {
+      "id": "u20l06e08",
+      "type": "tapTokens",
+      "prompt": "Arrange the tokens to store whether age is at least 18.",
+      "tokens": [
+        "is_adult",
+        "=",
+        "age",
+        ">=",
+        "18"
+      ],
+      "answer": [
+        "is_adult",
+        "=",
+        "age",
+        ">=",
+        "18"
+      ],
+      "explanation": "is_adult = age >= 18 computes the comparison and stores its boolean in is_adult."
+    },
+    {
+      "id": "u20l06e09",
+      "type": "multipleChoice",
+      "prompt": "What does this print?\n\nx = 4\ny = 4\nsame = x == y\nprint(same)",
+      "options": [
+        "True",
+        "False",
+        "4",
+        "8"
+      ],
+      "answer": 0,
+      "explanation": "x and y are both 4, so x == y is True, and same holds True."
+    },
+    {
+      "id": "u20l06e10",
+      "type": "multipleChoice",
+      "prompt": "Why store a comparison's result in a well-named variable?",
+      "options": [
+        "It names the yes/no fact so later steps can read it clearly",
+        "Because comparisons can't be printed",
+        "Because variables are required",
+        "It is pointless"
+      ],
+      "answer": 0,
+      "explanation": "A name like is_adult makes the fact readable and reusable - exactly the habit from the booleans unit, now computed."
+    }
+  ]
+}

@@ -1,0 +1,128 @@
+{
+  "unitId": "u18",
+  "lessonId": "u18l07",
+  "title": "Loop back: mix words and numbers safely",
+  "idea": "REVIEW. Type awareness and str()/int() conversion in a store->compute->report. Interleaves concatenation with type conversion from Lap 1.",
+  "problem": "You collected 5 stamps on Monday and 8 on Tuesday. Report 'You have 13 stamps' by building the sentence with the + operator on strings.",
+  "exercises": [
+    {
+      "id": "u18l07e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: 5 stamps Monday, 8 Tuesday. Report 'You have 13 stamps'.\n\nWhat is the OUTPUT?",
+      "options": [
+        "A sentence reporting the total stamps",
+        "The number 5",
+        "The number 8",
+        "The word Monday"
+      ],
+      "answer": 0,
+      "explanation": "Output = a sentence that reports the total count."
+    },
+    {
+      "id": "u18l07e02",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example by hand. 5 + 8 stamps = ? (this is the number that must appear in the sentence)",
+      "options": ["13", "58", "40", "3"],
+      "answer": 0,
+      "explanation": "5 + 8 = 13. The finished sentence is 'You have 13 stamps'. Check value: 13."
+    },
+    {
+      "id": "u18l07e03",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Plan. You compute total = 13 (a number) and want to glue it between the words 'You have ' and ' stamps' using the + operator on strings. What must you do to the number first?",
+      "options": [
+        "Convert it to a string with str(total)",
+        "Multiply it by 2",
+        "Leave it a number — Python glues numbers to text with +",
+        "Convert the words to numbers"
+      ],
+      "answer": 0,
+      "explanation": "The + operator can't glue a number directly onto text. str(total) turns 13 into the text '13' so it can join the words."
+    },
+    {
+      "id": "u18l07e04",
+      "type": "trueFalse",
+      "uepcc": "P",
+      "prompt": "\"You have \" + 13 + \" stamps\" works fine because Python mixes text and numbers automatically with +.",
+      "answer": false,
+      "explanation": "It does NOT. Joining text with + needs text on both sides. You must write str(13) — that is exactly why str() exists."
+    },
+    {
+      "id": "u18l07e05",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Reminder on types: in \"5\" + \"8\" (both strings), what does + do?",
+      "options": [
+        "Glues them into \"58\"",
+        "Adds them into 13",
+        "Causes an error",
+        "Gives 40"
+      ],
+      "answer": 0,
+      "explanation": "On strings, + joins (concatenates): \"5\" + \"8\" is \"58\". On numbers, + adds. The TYPE decides what + means."
+    },
+    {
+      "id": "u18l07e06",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code it. Arrange the lines (store both counts, add, report with str()).",
+      "blocks": [
+        "monday = 5",
+        "tuesday = 8",
+        "total = monday + tuesday",
+        "print(\"You have \" + str(total) + \" stamps\")"
+      ],
+      "answer": [0, 1, 2, 3],
+      "explanation": "Store monday and tuesday, add into total (a number), then join it into text with str(total)."
+    },
+    {
+      "id": "u18l07e07",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Complete the report line so the number joins the words:\n\ntotal = 13\nprint(\"You have \" + ____(total) + \" stamps\")",
+      "answer": "str",
+      "acceptable": ["str"],
+      "explanation": "str(total) converts 13 to '13' so the + operator can glue it between the words."
+    },
+    {
+      "id": "u18l07e08",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "It prints 'You have 13 stamps'. Your example said 13. Verdict?",
+      "options": ["Passes", "Fails", "Can't tell", "Rewrite the example"],
+      "answer": 0,
+      "explanation": "Computed total 13 appears in the sentence, matching the hand example — correct."
+    },
+    {
+      "id": "u18l07e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "New inputs: monday = 10, tuesday = 10. What prints?",
+      "options": [
+        "You have 20 stamps",
+        "You have 1010 stamps",
+        "You have 13 stamps",
+        "You have monday stamps"
+      ],
+      "answer": 0,
+      "explanation": "10 + 10 = 20 (numbers add), then str(20) joins the words: 'You have 20 stamps'. Generalizes correctly."
+    },
+    {
+      "id": "u18l07e10",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "An f-string could report the same thing with less fuss. Which line also prints 'You have 13 stamps'?",
+      "options": [
+        "print(f\"You have {total} stamps\")",
+        "print(f\"You have total stamps\")",
+        "print(\"You have {total} stamps\")",
+        "print(f\"You have \" + total + \" stamps\")"
+      ],
+      "answer": 0,
+      "explanation": "f\"You have {total} stamps\" drops the value in with no str() needed. f-strings handle the conversion for you — a cleaner tool for the same job."
+    }
+  ]
+}

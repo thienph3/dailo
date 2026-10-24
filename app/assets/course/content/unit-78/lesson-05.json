@@ -1,0 +1,142 @@
+{
+  "unitId": "u78",
+  "lessonId": "u78l05",
+  "title": "Build a new list with a helper",
+  "idea": "TOOL. Build a new, transformed list with a helper + append inside a loop.",
+  "exercises": [
+    {
+      "type": "multipleChoice",
+      "prompt": "Goal: a new list of each item doubled. You build it with...",
+      "options": [
+        "an empty list and append inside the loop",
+        "max",
+        "one print",
+        "a counter"
+      ],
+      "answer": 0,
+      "explanation": "Start empty, append the helper's result each loop.",
+      "id": "u78l05e01"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Predict:\n\ndef double(n):\n    return n * 2\n\nout = []\nfor n in [1, 2, 3]:\n    out.append(double(n))\nprint(out)",
+      "options": [
+        "[2, 4, 6]",
+        "[1, 2, 3]",
+        "6",
+        "error"
+      ],
+      "answer": 0,
+      "explanation": "Append 2, 4, 6 -> [2, 4, 6].",
+      "id": "u78l05e02"
+    },
+    {
+      "type": "orderBlocks",
+      "prompt": "Arrange: build a list of squares.",
+      "blocks": [
+        "def square(n):",
+        "    return n * n",
+        "out = []",
+        "for n in [2, 3, 4]:",
+        "    out.append(square(n))",
+        "print(out)"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "explanation": "[4, 9, 16].",
+      "id": "u78l05e03"
+    },
+    {
+      "type": "fillBlank",
+      "prompt": "Append each helper result:\n\nfor n in nums:\n    out.append(____(n))\n\n(helper is double)",
+      "answer": "double",
+      "acceptable": [
+        "double"
+      ],
+      "explanation": "out collects double(n) for each item.",
+      "id": "u78l05e04"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "append adds the helper's returned value to the end of the new list each loop.",
+      "answer": true,
+      "explanation": "Yes — build the list item by item.",
+      "id": "u78l05e05"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Predict:\n\ndef add5(n):\n    return n + 5\n\nout = []\nfor n in [10, 20]:\n    out.append(add5(n))\nprint(out)",
+      "options": [
+        "[15, 25]",
+        "[10, 20]",
+        "[5]",
+        "error"
+      ],
+      "answer": 0,
+      "explanation": "15 and 25 appended.",
+      "id": "u78l05e06"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "out must be created...",
+      "options": [
+        "before the loop, empty",
+        "inside the loop",
+        "after print",
+        "never"
+      ],
+      "answer": 0,
+      "explanation": "Start with an empty list, then fill it.",
+      "id": "u78l05e07"
+    },
+    {
+      "type": "multiSelect",
+      "prompt": "TRUE about building a list with a helper? (choose all)",
+      "options": [
+        "append adds one item at a time",
+        "the helper gives the value to append",
+        "the list starts empty",
+        "sorted() builds the list"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "First three true; no builtins needed.",
+      "id": "u78l05e08"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "REVIEW (len): after building [2, 4, 6], len(out) is...",
+      "options": [
+        "3",
+        "6",
+        "2",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "Three items were appended.",
+      "id": "u78l05e09"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Lesson point:",
+      "options": [
+        "Use a helper inside a loop with append to build a transformed list",
+        "Lists need sorted()",
+        "Helpers can't build lists",
+        "append replaces the list"
+      ],
+      "answer": 0,
+      "explanation": "Helper + loop + append builds a new list.",
+      "id": "u78l05e10"
+    }
+  ]
+}

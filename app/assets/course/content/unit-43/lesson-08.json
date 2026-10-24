@@ -1,0 +1,153 @@
+{
+  "unitId": "u43",
+  "lessonId": "u43l08",
+  "title": "Solve it together: count the low-battery days",
+  "idea": "GUIDED. Count values under a threshold; includes spotting a wrong approach.",
+  "problem": "Battery readings over 5 days are 80, 15, 40, 10, 95. Count days the battery was under 20.",
+  "exercises": [
+    {
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: Readings 80, 15, 40, 10, 95. Count days under 20.\n\nUnderstand -- what is the OUTPUT?",
+      "options": [
+        "A count of readings under 20",
+        "The total of the readings",
+        "The lowest reading",
+        "Every reading"
+      ],
+      "answer": 0,
+      "explanation": "The output is a COUNT of low readings (under 20).",
+      "id": "u43l08e01"
+    },
+    {
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "By hand: which readings are under 20, and how many?",
+      "options": [
+        "15 and 10 -> 2",
+        "15, 40, 10 -> 3",
+        "only 10 -> 1",
+        "80 and 95 -> 2"
+      ],
+      "answer": 0,
+      "explanation": "15 and 10 are under 20 -- two of them. The hand count (2) is our check value.",
+      "id": "u43l08e02"
+    },
+    {
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Which comparison tests 'under 20' (less than 20, not equal to it)?",
+      "options": [
+        "reading < 20",
+        "reading <= 20",
+        "reading > 20",
+        "reading == 20"
+      ],
+      "answer": 0,
+      "explanation": "'Under 20' means strictly less than, so <. Using <= would wrongly include a reading of exactly 20.",
+      "id": "u43l08e03"
+    },
+    {
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "A learner plans: 'start the counter at 1 so I don't miss the first one.' Why is that wrong?",
+      "options": [
+        "A counter must start at 0, or every count is one too high",
+        "It should start at 5",
+        "Counters can't start at 0",
+        "Nothing, it's fine"
+      ],
+      "answer": 0,
+      "explanation": "Starting at 1 adds a phantom count before any reading is checked. Counters start at 0.",
+      "id": "u43l08e04"
+    },
+    {
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Plan the (corrected) steps.",
+      "blocks": [
+        "Start a counter at 0",
+        "For each reading, check if it is under 20",
+        "If it is, add 1 to the counter",
+        "Show the counter"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "Counter at 0, loop, test < 20, add on a match, show. The correct start is 0.",
+      "id": "u43l08e05"
+    },
+    {
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Fill the comparison so only readings under 20 are counted:\n\nlow = 0\nfor n in range(1, 6):\n    if reading ____ 20:\n        low = low + 1\nprint(low)",
+      "answer": "<",
+      "acceptable": [
+        "<",
+        "&lt;"
+      ],
+      "explanation": "'Under 20' is strictly less than: reading < 20. Only 15 and 10 pass.",
+      "id": "u43l08e06"
+    },
+    {
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Arrange the full solution (one reading per pass in `reading`).",
+      "blocks": [
+        "low = 0",
+        "for n in range(1, 6):",
+        "    if reading < 20:",
+        "        low = low + 1",
+        "print(low)"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "explanation": "Counter at 0 (not 1), loop each reading, add 1 when under 20, print the count.",
+      "id": "u43l08e07"
+    },
+    {
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "It prints 2, matching your hand answer. So...",
+      "options": [
+        "The solution is correct",
+        "The solution is wrong",
+        "The counter was too high",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "Output (2) matches the hand count (2). Starting the counter at 0 gave the right number.",
+      "id": "u43l08e08"
+    },
+    {
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Re-check: readings 5, 19, 20, 21 with the rule 'under 20'. How many?",
+      "options": [
+        "2",
+        "3",
+        "1",
+        "4"
+      ],
+      "answer": 0,
+      "explanation": "5 and 19 are under 20; 20 is NOT (it's not less than 20), and 21 isn't. Count is 2 -- the < vs <= detail matters.",
+      "id": "u43l08e09"
+    },
+    {
+      "type": "trueFalse",
+      "uepcc": "Check",
+      "prompt": "If the counter had started at 1, this check would have printed 3 instead of 2.",
+      "answer": true,
+      "explanation": "True -- a start of 1 adds one too many every time. That's why the corrected plan starts at 0.",
+      "id": "u43l08e10"
+    }
+  ]
+}

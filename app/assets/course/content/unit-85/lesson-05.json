@@ -1,0 +1,139 @@
+{
+  "unitId": "u85",
+  "lessonId": "u85l05",
+  "title": "Spotting a hidden extra output",
+  "idea": "MEET: some problems sneak in a second output with a small word like 'and', 'also', or 'then' — read to the end before deciding what's asked.",
+  "exercises": [
+    {
+      "type": "multipleChoice",
+      "prompt": "PROBLEM: 'Total the prices, and also show the most expensive one.' How many outputs?",
+      "options": [
+        "Two — the total, and the most expensive",
+        "One — just the total",
+        "Three",
+        "Zero"
+      ],
+      "answer": 0,
+      "explanation": "The word 'also' adds a second output: the most expensive price. Small words carry big meaning.",
+      "id": "u85l05e01"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Which word most often signals a HIDDEN extra output?",
+      "options": [
+        "'also' / 'and' / 'then'",
+        "'the'",
+        "'a'",
+        "'list'"
+      ],
+      "answer": 0,
+      "explanation": "Little joining words like 'also', 'and', 'then' often tack on a second thing to produce. Watch for them.",
+      "id": "u85l05e02"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Reading only the first sentence of a problem is enough to find all the outputs.",
+      "answer": false,
+      "explanation": "No — extra outputs often hide in a later clause. Read to the very end before deciding.",
+      "id": "u85l05e03"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "PROBLEM: 'Count the passing scores, then report whether more than half passed.' The SECOND output is...",
+      "options": [
+        "a yes/no: did more than half pass?",
+        "the list of scores",
+        "the number 60",
+        "there is no second output"
+      ],
+      "answer": 0,
+      "explanation": "'then report whether...' is a second, hidden output — a yes/no. The word 'then' introduced it.",
+      "id": "u85l05e04"
+    },
+    {
+      "type": "multiSelect",
+      "prompt": "Select the problems that contain a HIDDEN second output.",
+      "options": [
+        "Show the total, and also the average",
+        "Find the smallest, then say if it's below zero",
+        "Add two numbers",
+        "Show how many orders there are"
+      ],
+      "answer": [
+        0,
+        1
+      ],
+      "explanation": "The first two use 'also'/'then' to add a second ask. The last two have a single output.",
+      "id": "u85l05e05"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Why are hidden outputs dangerous?",
+      "options": [
+        "They're easy to skim past, leaving the answer incomplete",
+        "They make code faster",
+        "They never happen",
+        "They are always the main output"
+      ],
+      "answer": 0,
+      "explanation": "A skimmed-past output is a missing feature. Slow reading is the fix.",
+      "id": "u85l05e06"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Underlining every verb that asks you to 'show', 'count', 'report', or 'find' helps catch hidden outputs.",
+      "answer": true,
+      "explanation": "Yes — each asking-verb usually points at an output. Underline them all and nothing hides.",
+      "id": "u85l05e07"
+    },
+    {
+      "type": "matchPairs",
+      "prompt": "Match the signal word to what it often adds.",
+      "pairs": [
+        {
+          "left": "'also'",
+          "right": "A second output"
+        },
+        {
+          "left": "'then'",
+          "right": "A later step or output"
+        },
+        {
+          "left": "'but only if'",
+          "right": "A condition on the rule"
+        }
+      ],
+      "explanation": "Signal words change the shape of a problem. Learning them makes slow reading faster.",
+      "id": "u85l05e08"
+    },
+    {
+      "type": "orderBlocks",
+      "prompt": "Order the habit that catches hidden outputs.",
+      "blocks": [
+        "Read the WHOLE problem to the end",
+        "Underline every asking-verb (show, count, find, report)",
+        "List each underlined ask as an output"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Read fully, underline the asks, list them. Hidden outputs can't hide from a list.",
+      "id": "u85l05e09"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "The big idea:",
+      "options": [
+        "Read to the end — little words like 'also' and 'then' often hide a second output",
+        "The first sentence always says everything",
+        "Hidden outputs are made up",
+        "Outputs never hide"
+      ],
+      "answer": 0,
+      "explanation": "Finish reading before you decide what's asked. The sneaky second output is usually near the end.",
+      "id": "u85l05e10"
+    }
+  ]
+}

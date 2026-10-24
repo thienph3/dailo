@@ -1,0 +1,102 @@
+{
+  "unitId": "u10",
+  "lessonId": "u10l06",
+  "title": "Store the result, then show it",
+  "idea": "You can save a calculation into a new variable, then print that variable.",
+  "exercises": [
+    {
+      "id": "u10l06e01",
+      "type": "multipleChoice",
+      "prompt": "What will this show?\n\ntotal = 3 + 4\nprint(total)",
+      "options": ["7", "3 + 4", "total", "34"],
+      "answer": 0,
+      "explanation": "The right side is done first: 3 + 4 is 7. That 7 is stored in total, then printed."
+    },
+    {
+      "id": "u10l06e02",
+      "type": "trueFalse",
+      "prompt": "In total = 3 + 4, the computer stores the number 7 — not the text '3 + 4'.",
+      "answer": true,
+      "explanation": "The math on the right runs first. total ends up holding 7, the result."
+    },
+    {
+      "id": "u10l06e03",
+      "type": "multipleChoice",
+      "prompt": "What will this show?\n\narea = 5 * 2\nprint(area)",
+      "options": ["10", "52", "5 * 2", "area"],
+      "answer": 0,
+      "explanation": "5 * 2 is 10. That value is saved in area, then shown."
+    },
+    {
+      "id": "u10l06e04",
+      "type": "orderBlocks",
+      "prompt": "Put these in the right order to compute a total and show it.",
+      "blocks": [
+        "apples = 6",
+        "bananas = 4",
+        "total = apples + bananas",
+        "print(total)"
+      ],
+      "answer": [0, 1, 2, 3],
+      "explanation": "Give each variable a value first, then combine them, then show the result. Order matters."
+    },
+    {
+      "id": "u10l06e05",
+      "type": "multipleChoice",
+      "prompt": "What will this show?\n\ncount = 4\nprice = 5\nbill = count * price\nprint(bill)",
+      "options": ["20", "45", "9", "bill"],
+      "answer": 0,
+      "explanation": "4 * 5 is 20, saved in bill, then printed."
+    },
+    {
+      "id": "u10l06e06",
+      "type": "fillBlank",
+      "prompt": "Fill the blank so change holds what's left after spending:\n\nmoney = 20\nspent = 7\nchange = money ____ spent\nprint(change)",
+      "answer": "-",
+      "acceptable": ["-"],
+      "explanation": "Money left means subtract: 20 - 7 is 13, saved in change."
+    },
+    {
+      "id": "u10l06e07",
+      "type": "tapTokens",
+      "prompt": "The variables length and width exist. Build the line that stores their product in a variable named area.",
+      "tokens": ["area", "=", "length", "*", "width"],
+      "answer": ["area", "=", "length", "*", "width"],
+      "explanation": "area = length * width computes the product and saves it in area."
+    },
+    {
+      "id": "u10l06e08",
+      "type": "multipleChoice",
+      "prompt": "Why store the result in a variable instead of just printing the math?",
+      "options": [
+        "So you can use the result again later",
+        "Because printing math is not allowed",
+        "It changes the answer",
+        "There is no reason"
+      ],
+      "answer": 0,
+      "explanation": "A named result like total can be shown, combined again, or reused. It makes bigger problems easier."
+    },
+    {
+      "id": "u10l06e09",
+      "type": "multipleChoice",
+      "prompt": "Spot the mistake.\n\nprint(total)\ntotal = 3 + 4",
+      "options": [
+        "total is printed before it is given a value",
+        "The math is wrong",
+        "print needs quotes",
+        "Nothing is wrong"
+      ],
+      "answer": 0,
+      "explanation": "Lines run top to bottom. You must store the value before you print it, not after."
+    },
+    {
+      "id": "u10l06e10",
+      "type": "fillBlank",
+      "prompt": "The variables first and second exist. Write the line that stores their sum in a variable named total.",
+      "answer": "total = first + second",
+      "acceptable": ["total = first + second", "total=first+second"],
+      "explanation": "total = first + second adds the two values and saves the result in total."
+    }
+  ]
+}

@@ -1,0 +1,111 @@
+{
+  "unitId": "u06",
+  "lessonId": "u06l10",
+  "title": "Mixed loop: you drive the rhythm",
+  "idea": "Review-heavy finale of Lap 0. Mix input/output naming, examples, multi-line output, and checking across units 1-5.",
+  "exercises": [
+    {
+      "id": "u06l10e01",
+      "type": "multipleChoice",
+      "prompt": "The three steps of the mini-rhythm for a show-task are:",
+      "options": [
+        "Example -> code -> check",
+        "Check -> code -> example",
+        "Code -> code -> code",
+        "Guess -> run -> hope"
+      ],
+      "answer": 0,
+      "explanation": "Example first (the target), then the code, then check the output against it."
+    },
+    {
+      "id": "u06l10e02",
+      "type": "multipleChoice",
+      "prompt": "TASK: show Good morning. The output (and example) is:",
+      "options": ["Good morning", "goodmorning", "GOOD MORNING", "Good Morning!"],
+      "answer": 0,
+      "explanation": "Exactly Good morning — same words, same case, no extra punctuation."
+    },
+    {
+      "id": "u06l10e03",
+      "type": "tapTokens",
+      "prompt": "Build the code to show Good morning.",
+      "tokens": ["print", "(", "\"Good morning\"", ")"],
+      "answer": ["print", "(", "\"Good morning\"", ")"],
+      "explanation": "The whole phrase in one set of quotes inside the brackets."
+    },
+    {
+      "id": "u06l10e04",
+      "type": "multipleChoice",
+      "prompt": "Output was Good morning; example was Good morning. Check result?",
+      "options": ["Pass", "Fail", "Unknown", "Rewrite"],
+      "answer": 0,
+      "explanation": "They match — it passes."
+    },
+    {
+      "id": "u06l10e05",
+      "type": "orderBlocks",
+      "prompt": "Arrange a program that shows Start, a blank line, then Done.",
+      "blocks": [
+        "print(\"Start\")",
+        "print()",
+        "print(\"Done\")"
+      ],
+      "answer": [0, 1, 2],
+      "explanation": "Start, empty print() for the gap, then Done — review of multi-line output."
+    },
+    {
+      "id": "u06l10e06",
+      "type": "multiSelect",
+      "prompt": "Which of these are fully correct instructions? (pick all)",
+      "options": [
+        "print(\"Hi\")",
+        "print(5)",
+        "print(Hi)",
+        "Print(\"Hi\")"
+      ],
+      "answer": [0, 1],
+      "explanation": "Text in quotes and a bare number are both fine. A bare word fails; capital Print fails."
+    },
+    {
+      "id": "u06l10e07",
+      "type": "multipleChoice",
+      "prompt": "For the task 'show Cat then Dog on two lines', what is the INPUT?",
+      "options": [
+        "The two words you were given: Cat and Dog",
+        "A single number",
+        "The screen",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "The input is the words you start with. The output is those words on two lines."
+    },
+    {
+      "id": "u06l10e08",
+      "type": "trueFalse",
+      "prompt": "Working the example by hand before coding gives you a target to check against.",
+      "answer": true,
+      "explanation": "Always. The example is the target; checking compares the real output to it."
+    },
+    {
+      "id": "u06l10e09",
+      "type": "multipleChoice",
+      "prompt": "Example: Cat then Dog. Output: CatDog on one line. Pass or fail?",
+      "options": ["Fail — one line instead of two", "Pass", "Can't tell", "Both"],
+      "answer": 0,
+      "explanation": "The example wanted two lines. One joined line is a mismatch, so it fails."
+    },
+    {
+      "id": "u06l10e10",
+      "type": "multipleChoice",
+      "prompt": "You finished Lap 0! What can you now do?",
+      "options": [
+        "Take a small show-task and run example -> code -> check on it",
+        "Only print one fixed word",
+        "Nothing new",
+        "Write loops and conditions"
+      ],
+      "answer": 0,
+      "explanation": "You can run the whole mini-circle on small tasks. Next lap: remembering a value and computing a result."
+    }
+  ]
+}

@@ -1,0 +1,130 @@
+{
+  "unitId": "u90",
+  "lessonId": "u90l05",
+  "title": "Give a helpful message on retry",
+  "idea": "TOOL: pair the validation loop with a print so the user understands WHY they're being asked again.",
+  "exercises": [
+    {
+      "type": "multipleChoice",
+      "prompt": "When your loop rejects input, what makes the retry friendlier?",
+      "options": [
+        "Printing a short message saying what was wrong before re-asking",
+        "Staying silent",
+        "Printing the whole program",
+        "Changing the rule"
+      ],
+      "answer": 0,
+      "explanation": "A message like 'Please enter 1 to 5' tells the user why and what to do. Silent re-asking is confusing.",
+      "id": "u90l05e01"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Predict the behaviour:\n\nn = int(input())\nwhile n < 1:\n    print(\"Too small, try again\")\n    n = int(input())\nprint(n)\n\nUser types 0 then 3. What is printed overall?",
+      "options": [
+        "Too small, try again (then) 3",
+        "3 only",
+        "Too small, try again only",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "0 is invalid so the message prints and it re-asks; 3 is valid, the loop ends, and 3 is printed. The message appears once, for the one bad try.",
+      "id": "u90l05e02"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "The retry message goes INSIDE the while loop so it only shows when the input was bad.",
+      "answer": true,
+      "explanation": "True. Inside the loop, the message prints once per bad attempt. A valid first input skips the loop and never sees the message.",
+      "id": "u90l05e03"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "If you put the 'try again' message BEFORE the loop instead of inside it, what's the downside?",
+      "options": [
+        "It prints even when the first input was perfectly valid",
+        "It never prints",
+        "It errors",
+        "It prints twice"
+      ],
+      "answer": 0,
+      "explanation": "Outside the loop it always shows, even for good input - misleading. Keep the 'that was wrong' message inside, tied to an actual failure.",
+      "id": "u90l05e04"
+    },
+    {
+      "type": "fillBlank",
+      "prompt": "Complete so the message shows on each bad try:\n\nn = int(input())\nwhile n < 1:\n    ____(\"Please enter a positive number\")\n    n = int(input())\nprint(n)",
+      "answer": "print",
+      "acceptable": [
+        "print"
+      ],
+      "explanation": "print shows the guidance inside the loop, once per invalid attempt.",
+      "id": "u90l05e05"
+    },
+    {
+      "type": "orderBlocks",
+      "prompt": "Arrange a validator that explains itself on retry.",
+      "blocks": [
+        "n = int(input())",
+        "while n < 1:",
+        "    print(\"Too small, try again\")",
+        "    n = int(input())",
+        "print(n)"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "explanation": "Read, loop while invalid, explain, re-read, then use. The message lives inside the loop.",
+      "id": "u90l05e06"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "User types 0, 0, 5 with a 'Too small' message inside the loop. How many times does the message print?",
+      "options": [
+        "Twice - once per bad 0",
+        "Once",
+        "Three times",
+        "Never"
+      ],
+      "answer": 0,
+      "explanation": "Each bad 0 triggers one message, so it prints twice. The valid 5 ends the loop with no further message.",
+      "id": "u90l05e07"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "A clear message plus a validation loop makes a program feel forgiving instead of frustrating.",
+      "answer": true,
+      "explanation": "True. The user learns what went wrong and fixes it. Good validation guides rather than blocks.",
+      "id": "u90l05e08"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Which message is most helpful on a rejected 1-to-5 rating?",
+      "options": [
+        "Please enter a number from 1 to 5",
+        "Wrong",
+        "Error 42",
+        "Nope"
+      ],
+      "answer": 0,
+      "explanation": "A good message states the rule so the user can comply. Vague messages leave them guessing.",
+      "id": "u90l05e09"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "The habit:",
+      "options": [
+        "Put a short, specific why-message inside the validation loop",
+        "Never explain errors",
+        "Print the message before the loop",
+        "Change the input for the user"
+      ],
+      "answer": 0,
+      "explanation": "A targeted message inside the loop turns a rejection into guidance - the mark of a polite program.",
+      "id": "u90l05e10"
+    }
+  ]
+}

@@ -1,0 +1,128 @@
+{
+  "unitId": "u90",
+  "lessonId": "u90l04",
+  "title": "Menu choice must be on the menu",
+  "idea": "TOOL: validate that a choice is one of a small set of allowed values - a very common real check.",
+  "exercises": [
+    {
+      "type": "multipleChoice",
+      "prompt": "A menu offers options 1, 2, or 3. The input is valid only if it is one of those. How do you phrase 'invalid'?",
+      "options": [
+        "choice < 1 or choice > 3 (anything outside 1-3)",
+        "choice == 1",
+        "choice > 0",
+        "choice != 1"
+      ],
+      "answer": 0,
+      "explanation": "For a tidy numbered menu 1-3, invalid means below 1 or above 3. The same range check as before, applied to a menu.",
+      "id": "u90l04e01"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Predict: user types 5, then 2, for a 1-3 menu.\n\nchoice = int(input())\nwhile choice < 1 or choice > 3:\n    choice = int(input())\nprint(choice)",
+      "options": [
+        "2",
+        "5",
+        "nothing",
+        "3"
+      ],
+      "answer": 0,
+      "explanation": "5 is above 3 (invalid, re-ask), 2 is in 1-3 (valid), so it prints 2.",
+      "id": "u90l04e02"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Validating a menu choice stops the program from acting on an option that doesn't exist.",
+      "answer": true,
+      "explanation": "True. If option 9 isn't on the menu, you don't want code trying to run it. Validation keeps choices on the menu.",
+      "id": "u90l04e03"
+    },
+    {
+      "type": "fillBlank",
+      "prompt": "Complete the menu guard (valid options are 1 to 4):\n\npick = int(input())\nwhile pick < 1 or pick ____ 4:\n    pick = int(input())\nprint(pick)",
+      "answer": ">",
+      "acceptable": [
+        ">"
+      ],
+      "explanation": "Invalid if above 4, so the high test is pick > 4.",
+      "id": "u90l04e04"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Why re-ask on a bad menu choice instead of just picking option 1 for them?",
+      "options": [
+        "Choosing for the user could do something they didn't want - better to let them pick correctly",
+        "It's faster",
+        "Option 1 is always right",
+        "Users like surprises"
+      ],
+      "answer": 0,
+      "explanation": "Silently substituting a value can take an action the user never intended. Re-asking keeps the user in control.",
+      "id": "u90l04e05"
+    },
+    {
+      "type": "orderBlocks",
+      "prompt": "Arrange a 1-3 menu validator.",
+      "blocks": [
+        "choice = int(input())",
+        "while choice < 1 or choice > 3:",
+        "    choice = int(input())",
+        "print(choice)"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "Read, loop while off-menu, re-read, then act on a valid choice.",
+      "id": "u90l04e06"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "After the validation loop ends, what do you KNOW about 'choice'?",
+      "options": [
+        "It is definitely one of the allowed options (1, 2, or 3)",
+        "It might still be invalid",
+        "It is always 1",
+        "It is a string"
+      ],
+      "answer": 0,
+      "explanation": "The loop only ends when the condition fails, i.e. the value is valid. Code after the loop can trust it completely.",
+      "id": "u90l04e07"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Predict: user types 0, 7, 9, 2 for a 1-3 menu. How many re-asks?",
+      "options": [
+        "Three (0, 7, 9 all off-menu), then 2 is accepted",
+        "Four",
+        "Two",
+        "Zero"
+      ],
+      "answer": 0,
+      "explanation": "0, 7, and 9 are all outside 1-3, so three re-asks; 2 is valid and ends the loop.",
+      "id": "u90l04e08"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "A menu validator is just a range check with the menu's lowest and highest option numbers.",
+      "answer": true,
+      "explanation": "True for a tidy numbered menu. 'below the first option or above the last' is the invalid test.",
+      "id": "u90l04e09"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "The takeaway:",
+      "options": [
+        "Keep re-asking until the choice is actually on the menu, then trust it",
+        "Accept any number",
+        "Pick for the user",
+        "Skip the menu check"
+      ],
+      "answer": 0,
+      "explanation": "Validate the choice against the real options; afterwards the rest of your code can rely on it.",
+      "id": "u90l04e10"
+    }
+  ]
+}

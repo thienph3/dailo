@@ -1,0 +1,154 @@
+{
+  "unitId": "u75",
+  "lessonId": "u75l09",
+  "title": "Solve it: use a returned answer in the main plan",
+  "idea": "GUIDED PROBLEM (UEPCC). A sub-plan returns a subtotal; the MAIN plan uses that returned value in a further step. Practices return + reuse.",
+  "problem": "Write subtotal(count, price) that hands back count times price. In the main plan, add a flat 2 delivery fee and show the final amount for 3 items at 5 each.",
+  "exercises": [
+    {
+      "id": "u75l09e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: subtotal(count, price) returns count * price; the main plan adds a 2 delivery fee for 3 items at 5 each.\n\nWhat is the FINAL output the main plan shows?",
+      "options": [
+        "The subtotal plus the 2 delivery fee",
+        "Just the subtotal",
+        "Just the fee",
+        "The count"
+      ],
+      "answer": 0,
+      "explanation": "The final output is subtotal + fee. The sub-plan computes the subtotal; the main plan adds the fee."
+    },
+    {
+      "id": "u75l09e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "Which values are the sub-plan's INPUTS, and which number belongs to the MAIN plan?",
+      "options": [
+        "Inputs: count and price; the 2 fee is used in the main plan",
+        "Inputs: count, price, and fee",
+        "Input: only the fee",
+        "No inputs"
+      ],
+      "answer": 0,
+      "explanation": "subtotal takes count and price. The 2 fee is added afterward by the main plan — keep the jobs separate."
+    },
+    {
+      "id": "u75l09e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example by hand — 3 items at 5 each is the subtotal...",
+      "options": [
+        "15",
+        "8",
+        "35",
+        "2"
+      ],
+      "answer": 0,
+      "explanation": "3 * 5 = 15 is the subtotal. We'll add the fee next."
+    },
+    {
+      "id": "u75l09e04",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Finish the hand example — add the 2 delivery fee to the subtotal of 15. Final amount?",
+      "options": [
+        "17",
+        "15",
+        "13",
+        "30"
+      ],
+      "answer": 0,
+      "explanation": "15 + 2 = 17. This is the final value the main plan should print."
+    },
+    {
+      "id": "u75l09e05",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Plan the whole thing in plain English.",
+      "blocks": [
+        "Sub-plan: return count times price",
+        "Main plan: call subtotal and catch the returned value",
+        "Main plan: add the 2 fee, then show the final amount"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "The sub-plan returns the subtotal; the main plan catches it, adds the fee, and shows the result."
+    },
+    {
+      "id": "u75l09e06",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "For the main plan to ADD the fee, the subtotal must be...",
+      "options": [
+        "returned as a value (not just printed inside the sub-plan)",
+        "printed inside the sub-plan",
+        "thrown away",
+        "turned into None"
+      ],
+      "answer": 0,
+      "explanation": "You can only add the fee to a value you have. So the sub-plan must RETURN the subtotal, not just print it."
+    },
+    {
+      "id": "u75l09e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code it: define subtotal returning count * price, catch subtotal(3, 5) in a variable, add the fee, print the final.",
+      "blocks": [
+        "def subtotal(count, price):",
+        "    return count * price",
+        "amount = subtotal(3, 5)",
+        "final = amount + 2",
+        "print(final)"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "explanation": "subtotal returns 15 into amount; final = 15 + 2 = 17; print it. The returned value flows into the fee step."
+    },
+    {
+      "id": "u75l09e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Catch the returned subtotal in a variable named amount:\n\ndef subtotal(count, price):\n    return count * price\n\n____ = subtotal(3, 5)",
+      "answer": "amount",
+      "acceptable": ["amount"],
+      "explanation": "subtotal(3, 5) hands back 15; store it in amount so the main plan can add the fee."
+    },
+    {
+      "id": "u75l09e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check — it prints 17 and your hand example was 17. Verdict?",
+      "options": [
+        "Passes",
+        "Fails",
+        "Unknown",
+        "Rewrite the example"
+      ],
+      "answer": 0,
+      "explanation": "Output (17) matches the hand example (17). The returned subtotal fed the fee step correctly."
+    },
+    {
+      "id": "u75l09e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Re-check with new inputs: 4 items at 10 each, same 2 fee. Final amount?",
+      "options": [
+        "42",
+        "40",
+        "17",
+        "14"
+      ],
+      "answer": 0,
+      "explanation": "subtotal(4, 10) is 40; 40 + 2 = 42. The sub-plan plus main-plan step generalizes to new numbers."
+    }
+  ]
+}

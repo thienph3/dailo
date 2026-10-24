@@ -1,0 +1,134 @@
+{
+  "unitId": "u08",
+  "lessonId": "u08l04",
+  "title": "Using the same box again and again",
+  "idea": "Once a variable holds a value, you can use it in many lines. Store once, reuse as often as you like.",
+  "exercises": [
+    {
+      "id": "u08l04e01",
+      "type": "multipleChoice",
+      "prompt": "What does this show?\n\nname = 7\nprint(name)\nprint(name)",
+      "options": [
+        "7 on one line, then 7 on the next line",
+        "7 only once",
+        "name, then name",
+        "14"
+      ],
+      "answer": 0,
+      "explanation": "The box still holds 7, so each print(name) shows 7. Reusing a variable gives the same value each time."
+    },
+    {
+      "id": "u08l04e02",
+      "type": "trueFalse",
+      "prompt": "After you store a value in a variable, you can print it more than once.",
+      "answer": true,
+      "explanation": "Yes! Store it once, then use it as many times as your program needs."
+    },
+    {
+      "id": "u08l04e03",
+      "type": "multipleChoice",
+      "prompt": "What does this show?\n\nscore = 20\nprint(score)\nprint(\"Great!\")\nprint(score)",
+      "options": [
+        "20, then Great!, then 20",
+        "20, then 20, then Great!",
+        "Great!, then 20, then 20",
+        "20 only once"
+      ],
+      "answer": 0,
+      "explanation": "Lines run top to bottom: the value 20, then the text Great!, then the value 20 again."
+    },
+    {
+      "id": "u08l04e04",
+      "type": "multipleChoice",
+      "prompt": "The value stored in a variable stays the same each time you read it (in this unit). So print(count) twice shows...",
+      "options": [
+        "the same value both times",
+        "a bigger value the second time",
+        "nothing the second time",
+        "the word count"
+      ],
+      "answer": 0,
+      "explanation": "Reading a box doesn't change it. Same value every time you print it."
+    },
+    {
+      "id": "u08l04e05",
+      "type": "tapTokens",
+      "prompt": "The variable pet holds a value. Build a SECOND line to show it again (a copy of print(pet)).",
+      "tokens": [
+        "print",
+        "(",
+        "pet",
+        ")"
+      ],
+      "answer": [
+        "print",
+        "(",
+        "pet",
+        ")"
+      ],
+      "explanation": "print(pet) shows the stored value. Writing it again shows the same value again."
+    },
+    {
+      "id": "u08l04e06",
+      "type": "multipleChoice",
+      "prompt": "What does this show?\n\nstars = 3\nprint(stars)\nprint(stars)\nprint(stars)",
+      "options": [
+        "3, then 3, then 3",
+        "3, then 6, then 9",
+        "3 only once",
+        "stars three times"
+      ],
+      "answer": 0,
+      "explanation": "The box holds 3 the whole time, so every line shows 3. Reuse keeps the same value."
+    },
+    {
+      "id": "u08l04e07",
+      "type": "trueFalse",
+      "prompt": "Printing a variable uses up its value, so the second print shows nothing.",
+      "answer": false,
+      "explanation": "No — printing just looks inside the box. The value stays, so you can print it again and again."
+    },
+    {
+      "id": "u08l04e08",
+      "type": "orderBlocks",
+      "prompt": "Put these lines in order: store a value, show it, then show it once more.",
+      "blocks": [
+        "points = 5",
+        "print(points)",
+        "print(points)"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Fill the box first, then read it twice. Each read shows 5."
+    },
+    {
+      "id": "u08l04e09",
+      "type": "multipleChoice",
+      "prompt": "Why is it handy to store a value in a variable instead of typing it each time?",
+      "options": [
+        "You write the value once and reuse the name everywhere",
+        "It makes the program crash",
+        "It hides the value forever",
+        "It prints the value backwards"
+      ],
+      "answer": 0,
+      "explanation": "One source of truth. Store it once, use the name as many times as you like."
+    },
+    {
+      "id": "u08l04e10",
+      "type": "multipleChoice",
+      "prompt": "What does this show?\n\ngift = 9\nprint(\"Your number:\")\nprint(gift)",
+      "options": [
+        "Your number:, then 9",
+        "Your number:, then gift",
+        "9, then Your number:",
+        "gift, then 9"
+      ],
+      "answer": 0,
+      "explanation": "The text line shows first, then print(gift) shows the stored value 9."
+    }
+  ]
+}

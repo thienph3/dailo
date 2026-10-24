@@ -1,0 +1,123 @@
+{
+  "unitId": "u74",
+  "lessonId": "u74l02",
+  "title": "What print does, what return does",
+  "idea": "TOOL: print writes to the screen and gives the code nothing back; return gives a value to the code but writes nothing to the screen.",
+  "exercises": [
+    {
+      "id": "u74l02e01",
+      "type": "multipleChoice",
+      "prompt": "Look:\n\ndef show_double(n):\n    print(n * 2)\n\nWhen you call show_double(5), what happens?",
+      "options": [
+        "10 appears on the screen",
+        "the code receives the value 10 to use",
+        "nothing happens at all",
+        "an error"
+      ],
+      "answer": 0,
+      "explanation": "print(n * 2) writes 10 to the screen. It SHOWS the answer. It does not hand anything back to the code."
+    },
+    {
+      "id": "u74l02e02",
+      "type": "multipleChoice",
+      "prompt": "Look:\n\ndef give_double(n):\n    return n * 2\n\nWhen you call give_double(5), what happens?",
+      "options": [
+        "the value 10 is handed back to the code; nothing appears on screen",
+        "10 appears on the screen",
+        "the word 'return' appears",
+        "an error"
+      ],
+      "answer": 0,
+      "explanation": "return n * 2 hands 10 back to whoever called it. By itself it prints NOTHING. If you want to see it, the caller must print it."
+    },
+    {
+      "id": "u74l02e03",
+      "type": "trueFalse",
+      "prompt": "print puts something on the screen; return does not put anything on the screen.",
+      "answer": true,
+      "explanation": "Exactly. print is the only one of the two that writes to the screen. return quietly hands a value back to the code."
+    },
+    {
+      "id": "u74l02e04",
+      "type": "trueFalse",
+      "prompt": "return hands a value back to the code; print does not hand a value back to the code.",
+      "answer": true,
+      "explanation": "Right. return is the only one that gives the code a value to keep using. print just displays and gives the code nothing useful back."
+    },
+    {
+      "id": "u74l02e05",
+      "type": "matchPairs",
+      "prompt": "Match each line to what it does.",
+      "pairs": [
+        {
+          "left": "print(n * 2)",
+          "right": "writes the answer on the screen"
+        },
+        {
+          "left": "return n * 2",
+          "right": "hands the answer back to the code"
+        }
+      ],
+      "explanation": "Same arithmetic, two different destinations: the screen (print) versus the calling code (return)."
+    },
+    {
+      "id": "u74l02e06",
+      "type": "multipleChoice",
+      "prompt": "A friend says 'return shows the answer on the screen.' Are they right?",
+      "options": [
+        "No - return hands it to the code; it shows nothing by itself",
+        "Yes, return always prints",
+        "Yes, but only for big numbers",
+        "Only on Tuesdays"
+      ],
+      "answer": 0,
+      "explanation": "This is the classic mix-up. return is silent on screen. To SEE a returned value, the caller has to print it."
+    },
+    {
+      "id": "u74l02e07",
+      "type": "multipleChoice",
+      "prompt": "You want the code to keep using a sub-plan's answer later. Which line belongs in the sub-plan?",
+      "options": [
+        "return answer",
+        "print(answer)",
+        "neither works",
+        "both do exactly the same"
+      ],
+      "answer": 0,
+      "explanation": "return answer gives the value to the code. print(answer) would only show it and leave the code empty-handed."
+    },
+    {
+      "id": "u74l02e08",
+      "type": "multipleChoice",
+      "prompt": "Look:\n\ndef add(a, b):\n    return a + b\n\nYou run add(3, 4) on its own line. What appears on the screen?",
+      "options": [
+        "nothing - return does not print",
+        "7",
+        "a + b",
+        "3 4"
+      ],
+      "answer": 0,
+      "explanation": "The value 7 is handed back, but no one printed it, so the screen stays blank. Returning is not the same as showing."
+    },
+    {
+      "id": "u74l02e09",
+      "type": "trueFalse",
+      "prompt": "REVIEW: print was the very first tool you learned, and it still just shows things on the screen.",
+      "answer": true,
+      "explanation": "Yes - print has done the same job since Unit 1: display a value. Nothing about sub-plans changes that."
+    },
+    {
+      "id": "u74l02e10",
+      "type": "multipleChoice",
+      "prompt": "In one sentence, the difference is...",
+      "options": [
+        "print talks to the screen; return talks to the code",
+        "print is slower than return",
+        "return only works with words",
+        "they are two names for the same thing"
+      ],
+      "answer": 0,
+      "explanation": "Screen vs code. That is the whole distinction, and remembering it prevents the most common sub-plan bug."
+    }
+  ]
+}

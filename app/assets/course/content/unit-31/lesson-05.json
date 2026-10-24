@@ -1,0 +1,147 @@
+{
+  "unitId": "u31",
+  "lessonId": "u31l05",
+  "title": "Solve it: can they ride? (height check)",
+  "idea": "GUIDED. UEPCC with an edge-case guard: exactly at the limit must be handled right.",
+  "problem": "A ride needs height 120 cm or more. Ask for a height, print 'You can ride' or 'Too short'.",
+  "exercises": [
+    {
+      "id": "u31l05e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: ride needs 120 cm or more. Print 'You can ride' or 'Too short'.\n\nWhat is the OUTPUT?",
+      "options": [
+        "'You can ride' or 'Too short'",
+        "The height in inches",
+        "The limit 120",
+        "A grade"
+      ],
+      "answer": 0,
+      "explanation": "The output is one of two messages based on a single number compared to a limit."
+    },
+    {
+      "id": "u31l05e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "What single input drives the decision?",
+      "options": [
+        "The typed height, as a number",
+        "The word 'ride'",
+        "The color of the ride",
+        "Two heights"
+      ],
+      "answer": 0,
+      "explanation": "Only the typed height matters, and it must be a number for the >= comparison, so int() it."
+    },
+    {
+      "id": "u31l05e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Work it by hand: height 130. Which message?",
+      "options": [
+        "You can ride",
+        "Too short",
+        "130",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "130 is well over 120, so 'You can ride'. A clearly-passing case first."
+    },
+    {
+      "id": "u31l05e04",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "The tricky one by hand: height is EXACTLY 120. Which message?",
+      "options": [
+        "You can ride",
+        "Too short",
+        "Both",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "120 'or more' includes 120 itself, so 'You can ride'. The edge case is the heart of this lesson."
+    },
+    {
+      "id": "u31l05e05",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Plan: which comparison correctly means '120 or more' and INCLUDES 120?",
+      "options": [
+        "height >= 120",
+        "height > 120",
+        "height == 120",
+        "height <= 120"
+      ],
+      "answer": 0,
+      "explanation": ">= includes the boundary. Using > would wrongly reject someone exactly 120."
+    },
+    {
+      "id": "u31l05e06",
+      "type": "trueFalse",
+      "uepcc": "P",
+      "prompt": "Using height > 120 would wrongly reject someone who is exactly 120 cm.",
+      "answer": true,
+      "explanation": "True — > excludes 120 itself. The edge case 120 is exactly where > and >= disagree."
+    },
+    {
+      "id": "u31l05e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Arrange the code to match the plan.",
+      "blocks": [
+        "height = int(input(\"Height in cm: \"))",
+        "if height >= 120:",
+        "    print(\"You can ride\")",
+        "else:",
+        "    print(\"Too short\")"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "explanation": "Read and convert the height, test >= 120, print the right message."
+    },
+    {
+      "id": "u31l05e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Complete the comparison so 120 counts as allowed:\n\nif height ____ 120:\n    print(\"You can ride\")\nelse:\n    print(\"Too short\")",
+      "answer": ">=",
+      "acceptable": [
+        ">="
+      ],
+      "explanation": ">= includes the boundary 120, exactly matching 'or more'."
+    },
+    {
+      "id": "u31l05e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check the edge case: height exactly 120. What prints?",
+      "options": [
+        "You can ride",
+        "Too short",
+        "120",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "120 >= 120 is True, so 'You can ride' — matching your hand answer for the edge case."
+    },
+    {
+      "id": "u31l05e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Re-check with a fresh input: height 119. What prints?",
+      "options": [
+        "Too short",
+        "You can ride",
+        "119",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "119 >= 120 is False, so 'Too short'. One cm under the limit is correctly rejected."
+    }
+  ]
+}

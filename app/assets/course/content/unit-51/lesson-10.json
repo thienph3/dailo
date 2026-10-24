@@ -1,0 +1,129 @@
+{
+  "unitId": "u51",
+  "lessonId": "u51l10",
+  "title": "Collections: what we know so far",
+  "idea": "Review-leaning finale for the MEET unit. Recap: when to use a list, how to write one, order, printing. Interleaves print and variables.",
+  "exercises": [
+    {
+      "id": "u51l10e01",
+      "type": "multipleChoice",
+      "prompt": "Recap: a list is best when a problem is about...",
+      "options": [
+        "Many values of the same kind, together",
+        "Exactly one value",
+        "No values",
+        "A yes/no decision"
+      ],
+      "answer": 0,
+      "explanation": "Lists shine for groups: many scores, many prices, many names. One value still just uses a plain variable."
+    },
+    {
+      "id": "u51l10e02",
+      "type": "multipleChoice",
+      "prompt": "Recap: which is a correctly written list?",
+      "options": [
+        "[2, 4, 6]",
+        "2 4 6",
+        "(2 4 6)",
+        "[2 4 6]"
+      ],
+      "answer": 0,
+      "explanation": "Square brackets and commas: [2, 4, 6]. That's the shape of every list."
+    },
+    {
+      "id": "u51l10e03",
+      "type": "trueFalse",
+      "prompt": "Recap: a list keeps its items in the order you wrote them.",
+      "answer": true,
+      "explanation": "Order is dependable — the list never rearranges itself. That reliability sets up the next unit, indexing."
+    },
+    {
+      "id": "u51l10e04",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\ndata = [8, 3, 5]\nprint(data)",
+      "options": [
+        "[8, 3, 5]",
+        "[3, 5, 8]",
+        "16",
+        "3"
+      ],
+      "answer": 0,
+      "explanation": "The list prints in its written order, with brackets: [8, 3, 5]. No sorting, no summing."
+    },
+    {
+      "id": "u51l10e05",
+      "type": "multiSelect",
+      "prompt": "Recap: which problems want a list (pick all)?",
+      "options": [
+        "The marks of all 20 students",
+        "Each hour's temperature today",
+        "Your single lucky number",
+        "The one winning ticket"
+      ],
+      "answer": [0, 1],
+      "explanation": "'All 20 students' and 'each hour' are groups — lists. The single lucky number and one winning ticket are single values."
+    },
+    {
+      "id": "u51l10e06",
+      "type": "multipleChoice",
+      "prompt": "Review a variable from Lap 1. Predict:\n\nlevel = 3\nlevel = level + 1\nprint(level)",
+      "options": [
+        "4",
+        "3",
+        "7",
+        "level"
+      ],
+      "answer": 0,
+      "explanation": "level starts at 3, then becomes 3 + 1 = 4. Reassignment still works just as before — lists didn't change that."
+    },
+    {
+      "id": "u51l10e07",
+      "type": "matchPairs",
+      "prompt": "Match each piece of code to what it makes.",
+      "pairs": [
+        { "left": "age = 10", "right": "a single number" },
+        { "left": "ages = [10, 11]", "right": "a list of numbers" },
+        { "left": "names = [\"Ava\"]", "right": "a list with one word" }
+      ],
+      "explanation": "No brackets means a single value; brackets mean a list, whether it holds one item or many."
+    },
+    {
+      "id": "u51l10e08",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nprint(\"Totals:\")\nprint([30, 40, 50])",
+      "options": [
+        "Totals:\n[30, 40, 50]",
+        "Totals: 120",
+        "[30, 40, 50]\nTotals:",
+        "120"
+      ],
+      "answer": 0,
+      "explanation": "First print shows the label, second shows the whole list. Two prints, two lines. Printing a list never sums it."
+    },
+    {
+      "id": "u51l10e09",
+      "type": "orderBlocks",
+      "prompt": "Arrange the thinking steps for a 'many values' problem, start to finish.",
+      "blocks": [
+        "Notice the problem is about a group of values",
+        "Write the values into a list, in order",
+        "Store the list in a well-named variable"
+      ],
+      "answer": [0, 1, 2],
+      "explanation": "Recognize the group, write the list faithfully, give it a clear name. That's the whole MEET skill in three steps."
+    },
+    {
+      "id": "u51l10e10",
+      "type": "multipleChoice",
+      "prompt": "You can recognize, write, and print a list. What's the very next power you'll gain?",
+      "options": [
+        "Grabbing one item by its position (first, third, last)",
+        "Making lists sort themselves",
+        "Storing a value with no name",
+        "Printing without print"
+      ],
+      "answer": 0,
+      "explanation": "Next up: indexing — reaching into the list to pull out a single item by its spot. You're ready for it!"
+    }
+  ]
+}

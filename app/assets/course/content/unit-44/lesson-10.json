@@ -1,0 +1,147 @@
+{
+  "unitId": "u44",
+  "lessonId": "u44l10",
+  "title": "Wrap-up: repeating with while",
+  "idea": "Review: condition-controlled repetition, the control value, and while vs for.",
+  "exercises": [
+    {
+      "type": "matchPairs",
+      "prompt": "Match each idea to its meaning (review of this unit).",
+      "pairs": [
+        {
+          "left": "while",
+          "right": "Repeat as long as a condition is true"
+        },
+        {
+          "left": "Control value",
+          "right": "The value the condition checks"
+        },
+        {
+          "left": "Update",
+          "right": "Changes the control value each pass"
+        },
+        {
+          "left": "for",
+          "right": "Repeat a known number of times"
+        }
+      ],
+      "explanation": "while repeats on a condition; for repeats a known count. The control value and update make a while stop.",
+      "id": "u44l10e01"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "What shows?\n\ni = 1\nwhile i <= 4:\n    print(i)\n    i = i + 1",
+      "options": [
+        "1\n2\n3\n4",
+        "1\n2\n3\n4\n5",
+        "forever",
+        "1"
+      ],
+      "answer": 0,
+      "explanation": "While i <= 4, it prints and grows i: 1,2,3,4. At i = 5 the condition is false and it stops.",
+      "id": "u44l10e02"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Which problem is a while job, not a for job?",
+      "options": [
+        "Keep asking until the password is correct",
+        "Print 1 to 20",
+        "Repeat a line 3 times",
+        "Add the numbers 1 to 5"
+      ],
+      "answer": 0,
+      "explanation": "An unknown number of tries ended by a condition is a while job. The others have known counts.",
+      "id": "u44l10e03"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "A while loop keeps running while its condition is true and stops when it becomes false.",
+      "answer": true,
+      "explanation": "True. That single rule is the whole idea of a while loop.",
+      "id": "u44l10e04"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "What is total?\n\ntotal = 0\ni = 1\nwhile i <= 5:\n    total = total + i\n    i = i + 1\nprint(total)",
+      "options": [
+        "15",
+        "10",
+        "5",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "It adds 1+2+3+4+5 = 15. The accumulate pattern works the same inside a while loop.",
+      "id": "u44l10e05"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Which while loop counts down and prints 3, 2, 1?",
+      "options": [
+        "n = 3\nwhile n >= 1:\n    print(n)\n    n = n - 1",
+        "n = 3\nwhile n >= 1:\n    print(n)\n    n = n + 1",
+        "n = 3\nwhile n <= 1:\n    print(n)\n    n = n - 1",
+        "n = 1\nwhile n >= 3:\n    print(n)"
+      ],
+      "answer": 0,
+      "explanation": "Start at 3, loop while n >= 1, print, subtract 1. That prints 3, 2, 1 and stops at 0.",
+      "id": "u44l10e06"
+    },
+    {
+      "type": "orderBlocks",
+      "prompt": "Arrange a while loop that prints 0, 1, 2.",
+      "blocks": [
+        "i = 0",
+        "while i < 3:",
+        "    print(i)",
+        "    i = i + 1"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "Setup i = 0, condition i < 3, print, update. It prints 0, 1, 2 then stops at i = 3.",
+      "id": "u44l10e07"
+    },
+    {
+      "type": "fillBlank",
+      "prompt": "Review an earlier tool: fill the comparison for 'i is at most 5':\n\nwhile i ____ 5:\n    i = i + 1",
+      "answer": "<=",
+      "acceptable": [
+        "<=",
+        "< =",
+        "&lt;="
+      ],
+      "explanation": "'At most 5' means 5 or less, which is <=. i <= 5 stays true through 5 and stops at 6.",
+      "id": "u44l10e08"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "What shows?\n\ni = 1\nwhile i <= 9:\n    print(i)\n    i = i + 3",
+      "options": [
+        "1\n4\n7",
+        "1\n4\n7\n10",
+        "1\n2\n3",
+        "forever"
+      ],
+      "answer": 0,
+      "explanation": "i climbs by 3: 1, 4, 7 (all <= 9), then 10 fails. Three prints.",
+      "id": "u44l10e09"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "The big idea of this unit in one line:",
+      "options": [
+        "while repeats as long as a condition is true -- great when you don't know the count",
+        "while always runs ten times",
+        "while and for are identical",
+        "while never stops"
+      ],
+      "answer": 0,
+      "explanation": "When a condition -- not a count -- decides the repeats, reach for while. Next: making sure it always stops!",
+      "id": "u44l10e10"
+    }
+  ]
+}

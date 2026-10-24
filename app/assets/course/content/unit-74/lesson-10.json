@@ -1,0 +1,126 @@
+{
+  "unitId": "u74",
+  "lessonId": "u74l10",
+  "title": "return vs print, settled",
+  "idea": "return vs print review: consolidate the choice, the None clue, and the clean pattern. Review-heavy wrap-up of the unit.",
+  "exercises": [
+    {
+      "id": "u74l10e01",
+      "type": "multipleChoice",
+      "prompt": "The deciding question between return and print:",
+      "options": [
+        "Does the PROGRAM need the value (return) or does a PERSON need to see it (print)?",
+        "Which is shorter to type?",
+        "Which looks nicer?",
+        "Which was learned first?"
+      ],
+      "answer": 0,
+      "explanation": "Program needs it -> return. Person needs to see it -> print. That's the whole unit in one question."
+    },
+    {
+      "id": "u74l10e02",
+      "type": "multipleChoice",
+      "prompt": "Predict both lines:\n\ndef f(n):\n    print(n)\n\nx = f(7)\nprint(x)",
+      "options": [
+        "7\nNone",
+        "7\n7",
+        "None\n7",
+        "7"
+      ],
+      "answer": 0,
+      "explanation": "f prints 7, but returns None, so x is None and print(x) shows None. Classic print-instead-of-return result."
+    },
+    {
+      "id": "u74l10e03",
+      "type": "trueFalse",
+      "prompt": "An unexpected None in the output often means a return was missing.",
+      "answer": true,
+      "explanation": "Yes — None is the telltale sign that a value was printed (or discarded) instead of returned."
+    },
+    {
+      "id": "u74l10e04",
+      "type": "multipleChoice",
+      "prompt": "Which sub-plan is more REUSABLE?",
+      "options": [
+        "def total(a, b):\n    return a + b",
+        "def total(a, b):\n    print(a + b)"
+      ],
+      "answer": 0,
+      "explanation": "Returning hands back a value you can store, print, or add to. Printing only shows it once."
+    },
+    {
+      "id": "u74l10e05",
+      "type": "multipleChoice",
+      "prompt": "The clean pattern when a human should also see the value:",
+      "options": [
+        "Sub-plan returns it; main plan prints the returned value",
+        "Sub-plan prints and returns None",
+        "Main plan returns; sub-plan prints",
+        "Never print"
+      ],
+      "answer": 0,
+      "explanation": "Compute-and-return in the sub-plan, display in the main plan. Keeps the two jobs separate and reusable."
+    },
+    {
+      "id": "u74l10e06",
+      "type": "multipleChoice",
+      "prompt": "REVIEW (return ends the sub-plan):\n\ndef sign(n):\n    if n < 0:\n        return -1\n    return 1\n\nprint(sign(-8))",
+      "options": [
+        "-1",
+        "1",
+        "-8",
+        "None"
+      ],
+      "answer": 0,
+      "explanation": "-8 < 0 is True, so return -1 runs and ends the sub-plan. The final return 1 is skipped."
+    },
+    {
+      "id": "u74l10e07",
+      "type": "fillBlank",
+      "prompt": "Make this value reusable by handing it back:\n\ndef double(n):\n    ____ n * 2",
+      "answer": "return",
+      "acceptable": ["return"],
+      "explanation": "return n * 2 hands the value back so the caller can use it. Without it, the call would be None."
+    },
+    {
+      "id": "u74l10e08",
+      "type": "matchPairs",
+      "prompt": "Match each job to the right tool.",
+      "pairs": [
+        {
+          "left": "compute a total to reuse",
+          "right": "return"
+        },
+        {
+          "left": "show a message to the user",
+          "right": "print"
+        },
+        {
+          "left": "hand back True/False for an if",
+          "right": "return"
+        }
+      ],
+      "explanation": "Reuse a value -> return. Show to a human -> print. Decide for an if -> return the boolean."
+    },
+    {
+      "id": "u74l10e09",
+      "type": "trueFalse",
+      "prompt": "A single sub-plan can both print something to the user and return a value to the program.",
+      "answer": true,
+      "explanation": "Yes — print and return are independent. But keeping compute (return) and display (print) separate is usually cleaner."
+    },
+    {
+      "id": "u74l10e10",
+      "type": "multipleChoice",
+      "prompt": "You can now return values AND choose return vs print. What's next (hint)?",
+      "options": [
+        "Feeding one sub-plan's returned answer straight into another — composing them",
+        "deleting print forever",
+        "forgetting parameters",
+        "this is the last idea"
+      ],
+      "answer": 0,
+      "explanation": "Next you'll COMPOSE sub-plans: one returns a value that becomes the input to another. Returning makes that possible."
+    }
+  ]
+}

@@ -1,0 +1,132 @@
+{
+  "unitId": "u55",
+  "lessonId": "u55l10",
+  "title": "Unit finale: for each value",
+  "idea": "Consolidate for-item-in-list and interleave earlier laps (if, f-strings, append, counter). Review-heavy.",
+  "exercises": [
+    {
+      "id": "u55l10e01",
+      "type": "multipleChoice",
+      "prompt": "Which is the correct for-each header for a list named books?",
+      "options": [
+        "for book in books:",
+        "for books in book:",
+        "for book in books",
+        "books in for book:"
+      ],
+      "answer": 0,
+      "explanation": "Loop variable, 'in', list, colon. (The no-colon option is also broken.)"
+    },
+    {
+      "id": "u55l10e02",
+      "type": "multipleChoice",
+      "prompt": "nums = [2, 4, 6, 8]\nfor n in nums:\n    print(n)\n\nHow many lines print?",
+      "options": [
+        "Four",
+        "Two",
+        "One",
+        "Eight"
+      ],
+      "answer": 0,
+      "explanation": "One line per item, four items, four lines."
+    },
+    {
+      "id": "u55l10e03",
+      "type": "orderBlocks",
+      "prompt": "Arrange: for each price, print it with a '$' label using an f-string.",
+      "blocks": [
+        "    print(f\"${price}\")",
+        "for price in prices:",
+        "prices = [5, 9]"
+      ],
+      "answer": [
+        2,
+        1,
+        0
+      ],
+      "explanation": "List, loop header, indented f-string body. Prints $5 then $9."
+    },
+    {
+      "id": "u55l10e04",
+      "type": "multipleChoice",
+      "prompt": "nums = [1, 2, 3, 4]\nfor n in nums:\n    if n % 2 == 0:\n        print(n)\n\nWhat prints?",
+      "options": [
+        "2, 4",
+        "1, 3",
+        "1, 2, 3, 4",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "% 2 == 0 means even, so only 2 and 4 print."
+    },
+    {
+      "id": "u55l10e05",
+      "type": "fillBlank",
+      "prompt": "Collect each number halved (whole-number) into 'half'. Fill the blank:\n\nhalf = []\nfor n in nums:\n    half.append(n ____ 2)",
+      "answer": "//",
+      "acceptable": [
+        "//"
+      ],
+      "explanation": "// gives whole-number division, so halving stays a whole number — e.g. 7 // 2 is 3."
+    },
+    {
+      "id": "u55l10e06",
+      "type": "trueFalse",
+      "prompt": "If the list is empty, a for-each loop's body runs zero times.",
+      "answer": true,
+      "explanation": "No values, nothing to visit — the body is skipped entirely."
+    },
+    {
+      "id": "u55l10e07",
+      "type": "multipleChoice",
+      "prompt": "words = [\"hi\", \"bye\"]\nfor w in words:\n    print(len(w))\n\nWhat prints?",
+      "options": [
+        "2, 3",
+        "hi, bye",
+        "2",
+        "5"
+      ],
+      "answer": 0,
+      "explanation": "len('hi') is 2, len('bye') is 3 — printed on two lines. Reusing len on each item."
+    },
+    {
+      "id": "u55l10e08",
+      "type": "multipleChoice",
+      "prompt": "A counter inside a for-each loop:\n\ncount = 0\nfor x in [7, 7, 7]:\n    count = count + 1\n\nWhat is count?",
+      "options": [
+        "3",
+        "7",
+        "21",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "+1 each pass over three items gives 3. The counter counts passes, not values."
+    },
+    {
+      "id": "u55l10e09",
+      "type": "multipleChoice",
+      "prompt": "Which task is NOT a 'do something to every value' job?",
+      "options": [
+        "Read only the first item of a list",
+        "Print each item",
+        "Double every item",
+        "Label every item with an f-string"
+      ],
+      "answer": 0,
+      "explanation": "Reading just the first item is a single indexing step, not a per-item loop."
+    },
+    {
+      "id": "u55l10e10",
+      "type": "multipleChoice",
+      "prompt": "You finished Unit 55! What can you now do that you couldn't before?",
+      "options": [
+        "Visit every value in a list and act on each one",
+        "Only make lists",
+        "Only count items",
+        "Only sort lists"
+      ],
+      "answer": 0,
+      "explanation": "You can now walk a whole list with 'for item in list' and do something with each value. Next: using that to build up a total."
+    }
+  ]
+}

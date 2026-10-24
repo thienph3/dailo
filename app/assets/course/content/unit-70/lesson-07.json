@@ -1,0 +1,131 @@
+{
+  "unitId": "u70",
+  "lessonId": "u70l07",
+  "title": "When NOT to make a sub-plan",
+  "idea": "MEET: naming a job is great for reuse, but not every line needs its own name. No code.",
+  "exercises": [
+    {
+      "id": "u70l07e01",
+      "type": "multipleChoice",
+      "prompt": "Which job is clearly worth naming as a sub-plan?",
+      "options": [
+        "A border printed at the top and bottom of every page",
+        "A single print used exactly once",
+        "Adding 1 + 1 one time",
+        "Showing one word, never again"
+      ],
+      "answer": 0,
+      "explanation": "A job used in many places earns a name. One-off single actions usually don't need one."
+    },
+    {
+      "id": "u70l07e02",
+      "type": "trueFalse",
+      "prompt": "Every single line of a plan should be turned into its own named sub-plan.",
+      "answer": false,
+      "explanation": "No. Over-naming tiny one-off lines adds clutter. Name jobs that repeat or that group meaningful work."
+    },
+    {
+      "id": "u70l07e03",
+      "type": "multiSelect",
+      "prompt": "Which jobs are GOOD candidates to name? (Pick all.)",
+      "options": [
+        "a greeting shown for every player",
+        "a divider drawn between sections",
+        "a one-time single print",
+        "totalling the basket, reused per customer"
+      ],
+      "answer": [
+        0,
+        1,
+        3
+      ],
+      "explanation": "Repeated or reused jobs earn names. A one-time single print does not need its own name."
+    },
+    {
+      "id": "u70l07e04",
+      "type": "multipleChoice",
+      "prompt": "What's the downside of naming a trivial one-off line?",
+      "options": [
+        "Extra clutter for no reuse benefit",
+        "It runs faster",
+        "It is always wrong",
+        "It deletes the line"
+      ],
+      "answer": 0,
+      "explanation": "Naming shines with reuse. A one-off gains nothing and just adds an extra name to read."
+    },
+    {
+      "id": "u70l07e05",
+      "type": "matchPairs",
+      "prompt": "Match each job to 'name it' or 'leave inline'.",
+      "pairs": [
+        {
+          "left": "border used on every page",
+          "right": "name it"
+        },
+        {
+          "left": "one-off single print",
+          "right": "leave inline"
+        },
+        {
+          "left": "greeting reused per player",
+          "right": "name it"
+        }
+      ],
+      "explanation": "Name reusable or meaningful jobs; leave trivial one-offs inline. Judgment, like deciding whether to split."
+    },
+    {
+      "id": "u70l07e06",
+      "type": "trueFalse",
+      "prompt": "A job that groups several meaningful steps can be worth naming even if used once, for clarity.",
+      "answer": true,
+      "explanation": "True. Naming can also make a plan readable by labelling a chunk of work - clarity, not just reuse."
+    },
+    {
+      "id": "u70l07e07",
+      "type": "multipleChoice",
+      "prompt": "The two main reasons to name a job are...",
+      "options": [
+        "reuse, and clarity",
+        "to make it slower, and longer",
+        "to hide it, and confuse readers",
+        "there are no reasons"
+      ],
+      "answer": 0,
+      "explanation": "You name a job to reuse it or to label a meaningful chunk clearly. Both are good reasons."
+    },
+    {
+      "id": "u70l07e08",
+      "type": "multipleChoice",
+      "prompt": "REVIEW: deciding WHETHER to name a job is like which earlier decision?",
+      "options": [
+        "deciding whether a task is worth splitting",
+        "choosing a bigger number",
+        "avoiding print()",
+        "never planning"
+      ],
+      "answer": 0,
+      "explanation": "Same judgment as 'should I split this?' from Unit 69. You weigh reuse and clarity against clutter."
+    },
+    {
+      "id": "u70l07e09",
+      "type": "trueFalse",
+      "prompt": "Good naming is about judgment, not a rule to name absolutely everything.",
+      "answer": true,
+      "explanation": "Yes. Name what helps (reuse, clarity); skip what doesn't. Thoughtful naming keeps plans clean."
+    },
+    {
+      "id": "u70l07e10",
+      "type": "multipleChoice",
+      "prompt": "The takeaway:",
+      "options": [
+        "name jobs that repeat or clarify; leave trivial one-offs inline",
+        "name every line",
+        "never name anything",
+        "names are random"
+      ],
+      "answer": 0,
+      "explanation": "Name for reuse and clarity. Not every line needs a name - judgment keeps the plan tidy."
+    }
+  ]
+}

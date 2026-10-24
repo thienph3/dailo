@@ -1,0 +1,142 @@
+{
+  "unitId": "u72",
+  "lessonId": "u72l09",
+  "title": "Review: def, call, and parameters together",
+  "idea": "TOOL + review: combine define/call (u71) with parameters, and recall earlier tools. ~30% review.",
+  "exercises": [
+    {
+      "id": "u72l09e01",
+      "type": "multipleChoice",
+      "prompt": "REVIEW: what does defining (not calling) a sub-plan do?",
+      "options": [
+        "Sets up its steps but runs nothing yet",
+        "Runs its steps immediately",
+        "Deletes the steps",
+        "Prints its name"
+      ],
+      "answer": 0,
+      "explanation": "Defining sets up the steps; calling runs them. Parameters don't change this — they just add slots to fill at call time."
+    },
+    {
+      "id": "u72l09e02",
+      "type": "multipleChoice",
+      "prompt": "def greet(name):\n    print(\"Hi \" + name)\n\nWhich line actually prints something?",
+      "options": [
+        "A call like greet(\"Sam\"), not shown yet",
+        "The def line",
+        "The print line, during defining",
+        "Nothing can print"
+      ],
+      "answer": 0,
+      "explanation": "The print only runs when greet is called with a value. Defining greet, even with a parameter, prints nothing."
+    },
+    {
+      "id": "u72l09e03",
+      "type": "trueFalse",
+      "prompt": "A parameter is a slot named in the def; an argument is the value passed in the call.",
+      "answer": true,
+      "explanation": "Yes — the key pair. The argument fills the parameter slot each time you call."
+    },
+    {
+      "id": "u72l09e04",
+      "type": "multipleChoice",
+      "prompt": "REVIEW: what does this loop inside a sub-plan print?\n\ndef go(n):\n    for i in range(n):\n        print(\"x\")\n\ngo(2)",
+      "options": [
+        "x on two lines",
+        "x once",
+        "0, 1",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "n is 2, so range(2) loops twice, printing x each time. The parameter controls the loop count."
+    },
+    {
+      "id": "u72l09e05",
+      "type": "matchPairs",
+      "prompt": "Match each piece to its role.",
+      "pairs": [
+        {
+          "left": "def area(w, h):",
+          "right": "Defines a sub-plan with two parameters"
+        },
+        {
+          "left": "area(4, 5)",
+          "right": "Calls it, passing two arguments"
+        },
+        {
+          "left": "print(w * h)",
+          "right": "The body using the parameters"
+        }
+      ],
+      "explanation": "Header names the slots, the call fills them, the body uses them. That's the whole shape of a parameterized sub-plan."
+    },
+    {
+      "id": "u72l09e06",
+      "type": "multipleChoice",
+      "prompt": "def add(a, b):\n    print(a + b)\n\nadd(10, 5)\n\nWhat prints?",
+      "options": [
+        "15",
+        "5",
+        "50",
+        "105"
+      ],
+      "answer": 0,
+      "explanation": "a is 10, b is 5, so 10 + 5 is 15. Two parameters filled in order by the two arguments."
+    },
+    {
+      "id": "u72l09e07",
+      "type": "multipleChoice",
+      "prompt": "REVIEW: what does str(12) give, as you'd use it inside a sub-plan?",
+      "options": [
+        "The text \"12\"",
+        "The number 12",
+        "An error",
+        "The number 21"
+      ],
+      "answer": 0,
+      "explanation": "str turns the number 12 into the text \"12\" so it can join a message. You use it when printing numbers next to words."
+    },
+    {
+      "id": "u72l09e08",
+      "type": "trueFalse",
+      "prompt": "One parameterized sub-plan can replace many nearly-identical fixed sub-plans.",
+      "answer": true,
+      "explanation": "Yes. Instead of greetSam, greetMia, greetLee, you write greet(name) once and pass the name. Parameters crush repetition."
+    },
+    {
+      "id": "u72l09e09",
+      "type": "orderBlocks",
+      "prompt": "Assemble a program: define show_bigger(a, b) that prints the larger, then call it with 3 and 8.",
+      "blocks": [
+        "def show_bigger(a, b):",
+        "    if a > b:",
+        "        print(a)",
+        "    else:",
+        "        print(b)",
+        "show_bigger(3, 8)"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "explanation": "The if/else compares the two parameters and prints the larger. show_bigger(3, 8) prints 8 — a decision driven by parameters."
+    },
+    {
+      "id": "u72l09e10",
+      "type": "multipleChoice",
+      "prompt": "What you can now do:",
+      "options": [
+        "Define sub-plans that receive one or more values and print results using them",
+        "Only define sub-plans with no values",
+        "Only call sub-plans once",
+        "Nothing new since last unit"
+      ],
+      "answer": 0,
+      "explanation": "Define, call, and pass values — one or several. Your sub-plans now adapt to whatever the main plan hands them."
+    }
+  ]
+}

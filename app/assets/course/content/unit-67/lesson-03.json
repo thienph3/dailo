@@ -1,0 +1,149 @@
+{
+  "unitId": "u67",
+  "lessonId": "u67l03",
+  "title": "Fix it: the count that's stuck at 1",
+  "idea": "GUIDED BUG-FIX (reset inside loop). A counter is reset to 0 inside the loop, so it never grows. Find and fix via indentation.",
+  "problem": "This code should count how many numbers in [5, 8, 2, 9] are greater than 4 (answer: 3). Instead it prints 1. Fix it.",
+  "exercises": [
+    {
+      "id": "u67l03e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "BROKEN CODE:\n\nnums = [5, 8, 2, 9]\nfor n in nums:\n    count = 0\n    if n > 4:\n        count = count + 1\nprint(count)\n\nUnderstand. What is the intended OUTPUT?",
+      "options": [
+        "How many numbers are greater than 4",
+        "The total of the numbers",
+        "The biggest number",
+        "The list itself"
+      ],
+      "answer": 0,
+      "explanation": "The goal is a COUNT of numbers over 4. Naming it as a count tells us a single running counter should grow across passes."
+    },
+    {
+      "id": "u67l03e02",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example. By hand, which of [5, 8, 2, 9] are greater than 4, and how many is that?",
+      "options": [
+        "5, 8, 9 — three of them",
+        "5, 8 — two",
+        "just 9 — one",
+        "none"
+      ],
+      "answer": 0,
+      "explanation": "5, 8 and 9 beat 4 (2 does not), so the correct count is 3. The code's answer of 1 is clearly too low."
+    },
+    {
+      "id": "u67l03e03",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Expected 3, got 1. The result equals what the LAST matching pass would set alone. Which bug family resets progress each pass?",
+      "options": [
+        "resetting the counter inside the loop",
+        "off-by-one",
+        "wrong comparison",
+        "empty list"
+      ],
+      "answer": 0,
+      "explanation": "Getting only the last pass's contribution is the reset-inside signature. 'count = 0' sits inside the loop, wiping the tally every pass."
+    },
+    {
+      "id": "u67l03e04",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "Why does 'count = 0' being INSIDE the loop break the count?",
+      "options": [
+        "It runs every pass, erasing the running total each time",
+        "It runs once, which is fine",
+        "It makes the loop faster",
+        "It changes the list"
+      ],
+      "answer": 0,
+      "explanation": "An indented line runs every pass. So count is reset to 0 right before each check, never accumulating beyond 1."
+    },
+    {
+      "id": "u67l03e05",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Plan the fix. Where should 'count = 0' go?",
+      "options": [
+        "above the loop, so it runs once",
+        "inside the loop, as now",
+        "after the loop",
+        "inside the if"
+      ],
+      "answer": 0,
+      "explanation": "Set up the counter ONCE above the loop. Then the loop can add to it across all passes. That's the reset-inside fix."
+    },
+    {
+      "id": "u67l03e06",
+      "type": "trueFalse",
+      "uepcc": "P",
+      "prompt": "The 'if n > 4' test and the 'count = count + 1' line are correct and should stay inside the loop.",
+      "answer": true,
+      "explanation": "Yes — the test and the increment belong inside the loop (they run every pass). Only the setup line is misplaced."
+    },
+    {
+      "id": "u67l03e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Arrange the FIXED code (set up once, then test and count each pass, then print).",
+      "blocks": [
+        "count = 0",
+        "nums = [5, 8, 2, 9]",
+        "for n in nums:",
+        "    if n > 4:",
+        "        count = count + 1",
+        "print(count)"
+      ],
+      "answer": [
+        1,
+        0,
+        2,
+        3,
+        4,
+        5
+      ],
+      "explanation": "Define nums, set count = 0 ONCE above the loop, loop with the test and increment inside, print after. count now reaches 3."
+    },
+    {
+      "id": "u67l03e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "In the fixed version, the counter starts at what value (one line, above the loop)?\n\ncount = ____",
+      "answer": "0",
+      "acceptable": [
+        "0"
+      ],
+      "explanation": "Counting starts at 0, placed once above the loop so it can grow to 3 across the passes."
+    },
+    {
+      "id": "u67l03e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check. The fixed code prints 3. Your hand count was 3. So...",
+      "options": [
+        "It passes — the count matches the example",
+        "It still prints 1",
+        "You can't tell",
+        "The example was wrong"
+      ],
+      "answer": 0,
+      "explanation": "Output 3 matches the by-hand count of 3. Moving 'count = 0' above the loop fixed it."
+    },
+    {
+      "id": "u67l03e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Re-check: nums = [1, 2, 3] (none over 4), count = 0 above the loop. What prints?",
+      "options": [
+        "0",
+        "3",
+        "1",
+        "2"
+      ],
+      "answer": 0,
+      "explanation": "No item beats 4, so count stays 0 — correct. The fix handles the 'no matches' case cleanly too."
+    }
+  ]
+}

@@ -1,0 +1,140 @@
+{
+  "unitId": "u90",
+  "lessonId": "u90l01",
+  "title": "Why input might be bad",
+  "idea": "TOOL (validation loops): real input is not always what you asked for - too big, too small, or the wrong kind. A program should check before it trusts.",
+  "exercises": [
+    {
+      "type": "multipleChoice",
+      "prompt": "Your program asks the user for an age. Can you be SURE they type a sensible number like 25?",
+      "options": [
+        "No - people mistype, leave it blank, or enter something silly like -5 or 999",
+        "Yes, users are always careful",
+        "Yes, the computer fixes it",
+        "Only if you ask twice"
+      ],
+      "answer": 0,
+      "explanation": "You can never assume input is good. People fat-finger, misread, or test you with nonsense. A careful program checks the input first.",
+      "id": "u90l01e01"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "'Bad input' means input that is outside what the program can sensibly use (too big, too small, or not allowed).",
+      "answer": true,
+      "explanation": "Right. An age of -5 or a menu choice of 9 when only 1-3 exist is bad input - the program must notice and not just plough on.",
+      "id": "u90l01e02"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "What should a program do when it gets bad input?",
+      "options": [
+        "Refuse it and ask again, rather than carry on with a wrong value",
+        "Crash on purpose",
+        "Guess what the user meant",
+        "Use the bad value anyway"
+      ],
+      "answer": 0,
+      "explanation": "The safe move is to reject and re-ask until the input is good. Carrying on with a bad value quietly produces wrong results.",
+      "id": "u90l01e03"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Which of these is BAD input for 'enter a score from 0 to 100'?",
+      "options": [
+        "150",
+        "60",
+        "0",
+        "100"
+      ],
+      "answer": 0,
+      "explanation": "150 is outside the allowed 0-100 range. 0, 60, and 100 are all fine. Knowing the allowed range is the first step of validation.",
+      "id": "u90l01e04"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Checking input is a waste of time because users usually type correctly.",
+      "answer": false,
+      "explanation": "The one time they don't is exactly when an unchecked program breaks or gives a wrong answer. Checking is cheap insurance.",
+      "id": "u90l01e05"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "A program asks 'How many tickets?' and the user types 0. Is that good or bad input?",
+      "options": [
+        "It depends on the rule - if you must buy at least 1, then 0 is bad",
+        "Always good",
+        "Always bad",
+        "Numbers are never bad"
+      ],
+      "answer": 0,
+      "explanation": "Validity depends on the rule. 0 tickets might be nonsense for a purchase but fine for a count. Decide the rule, then check against it.",
+      "id": "u90l01e06"
+    },
+    {
+      "type": "matchPairs",
+      "prompt": "Match each input to whether it is valid for 'a month number 1 to 12'.",
+      "pairs": [
+        {
+          "left": "1",
+          "right": "Valid"
+        },
+        {
+          "left": "12",
+          "right": "Valid"
+        },
+        {
+          "left": "0",
+          "right": "Invalid"
+        },
+        {
+          "left": "13",
+          "right": "Invalid"
+        }
+      ],
+      "explanation": "1 and 12 sit inside 1-12; 0 and 13 fall outside. Validation is just checking against the allowed range.",
+      "id": "u90l01e07"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Why not just TRUST the input and keep going?",
+      "options": [
+        "A bad value flows through the whole program and corrupts the result silently",
+        "Trusting is faster for the user",
+        "The computer warns you automatically",
+        "There is no downside"
+      ],
+      "answer": 0,
+      "explanation": "Garbage in, garbage out. One bad value early can ruin everything after it, often without any error - just a wrong answer.",
+      "id": "u90l01e08"
+    },
+    {
+      "type": "orderBlocks",
+      "prompt": "Order the mindset for handling input.",
+      "blocks": [
+        "Decide what counts as valid",
+        "Check the input against that rule",
+        "Only use it once it passes"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Define 'valid', test against it, then trust it. That is the whole idea of input validation.",
+      "id": "u90l01e09"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "This unit's new tool is...",
+      "options": [
+        "A loop that keeps re-asking until the input is valid",
+        "A faster print",
+        "A new kind of list",
+        "A way to skip input"
+      ],
+      "answer": 0,
+      "explanation": "A validation loop: ask, check, and if it's bad, ask again - until the value is good. Next lessons build it step by step.",
+      "id": "u90l01e10"
+    }
+  ]
+}

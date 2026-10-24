@@ -1,0 +1,115 @@
+{
+  "unitId": "u02",
+  "lessonId": "u02l07",
+  "title": "Input first, then output",
+  "idea": "Order matters: you must have the input before you can make the output. Plans run in order.",
+  "exercises": [
+    {
+      "id": "u02l07e01",
+      "type": "trueFalse",
+      "prompt": "You need the input before you can make the output.",
+      "answer": true,
+      "explanation": "You can't toast bread you don't have. Input comes first, output comes after."
+    },
+    {
+      "id": "u02l07e02",
+      "type": "orderBlocks",
+      "prompt": "Put these in the order a task uses them.",
+      "blocks": [
+        "Have the input",
+        "Do the work",
+        "Get the output"
+      ],
+      "answer": [0, 1, 2],
+      "explanation": "Input, then the work, then the output. That's the shape of every task."
+    },
+    {
+      "id": "u02l07e03",
+      "type": "multipleChoice",
+      "prompt": "Task: toasting bread. Which comes first?",
+      "options": [
+        "Have a slice of bread (input)",
+        "Have a piece of toast (output)",
+        "Eat the toast",
+        "Buy a toaster"
+      ],
+      "answer": 0,
+      "explanation": "You start with the input — a slice of bread — before any toast can come out."
+    },
+    {
+      "id": "u02l07e04",
+      "type": "orderBlocks",
+      "prompt": "Order these steps for making tea.",
+      "blocks": [
+        "Get a tea bag and hot water (input)",
+        "Let it steep (the work)",
+        "Have a cup of tea (output)"
+      ],
+      "answer": [0, 1, 2],
+      "explanation": "Input first, then the work, then the output. Same shape as every task."
+    },
+    {
+      "id": "u02l07e05",
+      "type": "trueFalse",
+      "prompt": "Instructions in a program also run in order, top to bottom.",
+      "answer": true,
+      "explanation": "You learned this in Unit 1: a computer follows steps one by one, in order."
+    },
+    {
+      "id": "u02l07e06",
+      "type": "multipleChoice",
+      "prompt": "Why can't the output come before the input?",
+      "options": [
+        "There would be nothing to make the output from",
+        "Outputs are always slower",
+        "The computer prefers inputs",
+        "It can — order never matters"
+      ],
+      "answer": 0,
+      "explanation": "Without the input, there's nothing for the task to work on. No input, no output."
+    },
+    {
+      "id": "u02l07e07",
+      "type": "orderBlocks",
+      "prompt": "Order these for 'add two prices and show the total'.",
+      "blocks": [
+        "Know the two prices (input)",
+        "Add them (the work)",
+        "Show the total (output)"
+      ],
+      "answer": [0, 1, 2],
+      "explanation": "Inputs first (the prices), then the work (adding), then the output (the total)."
+    },
+    {
+      "id": "u02l07e08",
+      "type": "trueFalse",
+      "prompt": "If you try to show a total before you have the prices, the plan is broken.",
+      "answer": true,
+      "explanation": "You'd be showing a total you haven't worked out yet. The input has to come first."
+    },
+    {
+      "id": "u02l07e09",
+      "type": "matchPairs",
+      "prompt": "Match each stage to what happens in it.",
+      "pairs": [
+        { "left": "Beginning", "right": "You have the input" },
+        { "left": "Middle", "right": "You do the work" },
+        { "left": "End", "right": "You have the output" }
+      ],
+      "explanation": "Every task has this shape: input at the start, output at the end, work in between."
+    },
+    {
+      "id": "u02l07e10",
+      "type": "multipleChoice",
+      "prompt": "A tiny program is print(\"Done\"). Which is true about its order?",
+      "options": [
+        "The text Done (input) is given, then it is shown (output)",
+        "The output appears before any input",
+        "There is no input or output",
+        "The output comes from nowhere"
+      ],
+      "answer": 0,
+      "explanation": "Even the smallest program follows the shape: text in, text shown out."
+    }
+  ]
+}

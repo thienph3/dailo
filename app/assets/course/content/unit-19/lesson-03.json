@@ -1,0 +1,133 @@
+{
+  "unitId": "u19",
+  "lessonId": "u19l03",
+  "title": "A boolean is not a word",
+  "idea": "True is the boolean, but \"True\" in quotes is just text. They look alike but behave differently. Telling them apart is important.",
+  "exercises": [
+    {
+      "id": "u19l03e01",
+      "type": "multipleChoice",
+      "prompt": "Which one is a boolean (a yes/no value)?",
+      "options": [
+        "True",
+        "\"True\"",
+        "'yes'",
+        "the number 1"
+      ],
+      "answer": 0,
+      "explanation": "True with no quotes is the boolean. \"True\" in quotes is just text that reads 'True'."
+    },
+    {
+      "id": "u19l03e02",
+      "type": "multipleChoice",
+      "prompt": "Which one is a string (text)?",
+      "options": [
+        "\"False\"",
+        "False",
+        "True",
+        "print"
+      ],
+      "answer": 0,
+      "explanation": "\"False\" in quotes is text. Without quotes, False is the boolean value."
+    },
+    {
+      "id": "u19l03e03",
+      "type": "trueFalse",
+      "prompt": "True (no quotes) and \"True\" (with quotes) are the same thing.",
+      "answer": false,
+      "explanation": "They are different. True is a boolean; \"True\" is a string of letters. They just look similar when printed."
+    },
+    {
+      "id": "u19l03e04",
+      "type": "multipleChoice",
+      "prompt": "What does this print?\n\nprint(\"False\")",
+      "options": [
+        "False",
+        "false",
+        "the boolean False",
+        "an error"
+      ],
+      "answer": 0,
+      "explanation": "It prints the text False. Even though it reads the same, it's a string here, not the boolean."
+    },
+    {
+      "id": "u19l03e05",
+      "type": "multipleChoice",
+      "prompt": "Which prints the actual boolean, not text?",
+      "options": [
+        "print(True)",
+        "print(\"True\")",
+        "print('True')",
+        "print(\"yes\")"
+      ],
+      "answer": 0,
+      "explanation": "print(True) prints the boolean. The others all print text inside quotes."
+    },
+    {
+      "id": "u19l03e06",
+      "type": "matchPairs",
+      "prompt": "Match each piece of code to what kind of value it is.",
+      "pairs": [
+        {
+          "left": "True",
+          "right": "a boolean"
+        },
+        {
+          "left": "\"True\"",
+          "right": "a string (text)"
+        },
+        {
+          "left": "7",
+          "right": "a number"
+        }
+      ],
+      "explanation": "No quotes and capitalized = boolean. Quotes = text. Digits = number. The type decides how Python treats it."
+    },
+    {
+      "id": "u19l03e07",
+      "type": "trueFalse",
+      "prompt": "Putting quotes around True turns it into text, not a yes/no value.",
+      "answer": true,
+      "explanation": "Yes. Quotes always mean 'this is text'. \"True\" is just the letters T-r-u-e."
+    },
+    {
+      "id": "u19l03e08",
+      "type": "multipleChoice",
+      "prompt": "You want a real yes/no value meaning 'no'. Which do you write?",
+      "options": [
+        "False",
+        "\"False\"",
+        "'no'",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "The boolean for 'no' is False with no quotes. \"False\" would just be text."
+    },
+    {
+      "id": "u19l03e09",
+      "type": "multipleChoice",
+      "prompt": "Both lines run:\n\nprint(True)\nprint(\"True\")\n\nWhat appears on screen?",
+      "options": [
+        "True then True",
+        "True only once",
+        "\"True\" then \"True\"",
+        "an error"
+      ],
+      "answer": 0,
+      "explanation": "Both print the text 'True' on screen - but the first is a boolean and the second is a string. On screen they look identical."
+    },
+    {
+      "id": "u19l03e10",
+      "type": "multipleChoice",
+      "prompt": "Why does it matter whether something is the boolean True or the text \"True\"?",
+      "options": [
+        "Because the computer treats yes/no values and text differently",
+        "Because text is faster",
+        "Because booleans cannot be printed",
+        "It does not matter at all"
+      ],
+      "answer": 0,
+      "explanation": "Soon we'll make decisions from booleans. A yes/no value and a piece of text are not interchangeable to the computer."
+    }
+  ]
+}

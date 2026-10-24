@@ -1,0 +1,152 @@
+{
+  "unitId": "u63",
+  "lessonId": "u63l09",
+  "title": "Build a filter from scratch",
+  "idea": "TOOL: assemble a filter token by token and line by line, for a real framing. More hands-on building, still predicting output.",
+  "exercises": [
+    {
+      "id": "u63l09e01",
+      "type": "multipleChoice",
+      "prompt": "You want to keep only the donations of 100 or more from donations = [50, 120, 30, 200]. What should the first line be?",
+      "options": [
+        "big = []",
+        "big = donations",
+        "print(donations)",
+        "big = 0"
+      ],
+      "answer": 0,
+      "explanation": "Start with an empty list to collect the matches. big = donations would just copy everything, not filter."
+    },
+    {
+      "id": "u63l09e02",
+      "type": "tapTokens",
+      "prompt": "Build the loop header that walks each donation.\n\nTarget line: for d in donations:",
+      "tokens": [
+        "for",
+        "d",
+        "in",
+        "donations",
+        ":"
+      ],
+      "answer": [
+        "for",
+        "d",
+        "in",
+        "donations",
+        ":"
+      ],
+      "explanation": "for d in donations: gives you one donation at a time, called d, to test inside the loop."
+    },
+    {
+      "id": "u63l09e03",
+      "type": "tapTokens",
+      "prompt": "Build the test that passes donations of 100 or more.\n\nTarget line: if d >= 100 :",
+      "tokens": [
+        "if",
+        "d",
+        ">=",
+        "100",
+        ":"
+      ],
+      "answer": [
+        "if",
+        "d",
+        ">=",
+        "100",
+        ":"
+      ],
+      "explanation": "'100 or more' is >= 100. This if decides which donations get appended."
+    },
+    {
+      "id": "u63l09e04",
+      "type": "fillBlank",
+      "prompt": "Complete the body that collects a passing donation.\n\nfor d in donations:\n    if d >= 100:\n        big.____(d)",
+      "answer": "append",
+      "acceptable": [
+        "append"
+      ],
+      "explanation": "append adds the passing donation to the end of big. It sits inside the if, so only matches are kept."
+    },
+    {
+      "id": "u63l09e05",
+      "type": "multipleChoice",
+      "prompt": "With donations = [50, 120, 30, 200], what will print(big) show after the filter?",
+      "options": [
+        "[120, 200]",
+        "[50, 30]",
+        "[50, 120, 30, 200]",
+        "[]"
+      ],
+      "answer": 0,
+      "explanation": "120 and 200 are 100 or more, so they are kept in order: [120, 200]."
+    },
+    {
+      "id": "u63l09e06",
+      "type": "orderBlocks",
+      "prompt": "Put the whole filter together.",
+      "blocks": [
+        "donations = [50, 120, 30, 200]",
+        "big = []",
+        "for d in donations:",
+        "    if d >= 100:",
+        "        big.append(d)",
+        "print(big)"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "explanation": "Data, empty list, loop, test, append inside the if, print. You just built a full filter from its parts."
+    },
+    {
+      "id": "u63l09e07",
+      "type": "multipleChoice",
+      "prompt": "You now want to keep only the SMALL donations (under 100). What is the only line you change?",
+      "options": [
+        "The if test, to d < 100",
+        "The empty list line",
+        "The for line",
+        "The print line"
+      ],
+      "answer": 0,
+      "explanation": "Only the test decides what is kept. Change it to d < 100 and the same shape now collects the small donations."
+    },
+    {
+      "id": "u63l09e08",
+      "type": "multipleChoice",
+      "prompt": "After changing the test to d < 100, what will print(big) show for [50, 120, 30, 200]?",
+      "options": [
+        "[50, 30]",
+        "[120, 200]",
+        "[50, 120, 30, 200]",
+        "[]"
+      ],
+      "answer": 0,
+      "explanation": "Now the passers are the donations below 100: 50 and 30, in order, so [50, 30]."
+    },
+    {
+      "id": "u63l09e09",
+      "type": "trueFalse",
+      "prompt": "Building a filter is always the same four moves: empty list, loop, test, append the passers.",
+      "answer": true,
+      "explanation": "Once you know those four moves, you can write a filter for anything. Only the test changes from problem to problem."
+    },
+    {
+      "id": "u63l09e10",
+      "type": "multipleChoice",
+      "prompt": "You want to show HOW MANY big donations there were. What do you add after the filter?",
+      "options": [
+        "print(len(big))",
+        "print(sum(donations))",
+        "big = []",
+        "nothing works"
+      ],
+      "answer": 0,
+      "explanation": "len(big) counts the items the filter kept. Chaining a known tool onto your filtered list answers the follow-up question."
+    }
+  ]
+}

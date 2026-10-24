@@ -1,0 +1,135 @@
+{
+  "unitId": "u29",
+  "lessonId": "u29l10",
+  "title": "Mixed practice: deciding by words",
+  "idea": "REVIEW / interleave. Mixed word-decision prediction and building, ~30% recalling earlier laps (and/or, nested if, elif, print, f-strings). Proves transfer.",
+  "exercises": [
+    {
+      "id": "u29l10e01",
+      "type": "multipleChoice",
+      "prompt": "What does this print?\n\nmood = \"happy\"\nif mood == \"happy\":\n    print(\"Smile\")\nelif mood == \"sad\":\n    print(\"Hug\")\nelse:\n    print(\"Hello\")",
+      "options": [
+        "Smile",
+        "Hug",
+        "Hello",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "mood matches the first branch exactly, so \"Smile\" prints and the chain stops."
+    },
+    {
+      "id": "u29l10e02",
+      "type": "multipleChoice",
+      "prompt": "Same code, mood = \"angry\". What prints?",
+      "options": [
+        "Hello",
+        "Smile",
+        "Hug",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "\"angry\" matches no named mood, so the catch-all else prints \"Hello\"."
+    },
+    {
+      "id": "u29l10e03",
+      "type": "multipleChoice",
+      "prompt": "Accept \"on\" or \"ON\". Which condition?",
+      "options": [
+        "switch == \"on\" or switch == \"ON\"",
+        "switch == \"on\" and switch == \"ON\"",
+        "switch == on",
+        "switch = \"on\""
+      ],
+      "answer": 0,
+      "explanation": "'Either variant' is 'or'. 'and' would be impossible, and the other two have quote/operator bugs. (Reviewing or.)"
+    },
+    {
+      "id": "u29l10e04",
+      "type": "trueFalse",
+      "prompt": "Recall: \"Yes\" == \"yes\" is False because capital letters count.",
+      "answer": true,
+      "explanation": "Yes - comparison is case-sensitive, a key idea from this unit."
+    },
+    {
+      "id": "u29l10e05",
+      "type": "orderBlocks",
+      "prompt": "Build a nested word decision: if logged_in, then if plan == \"pro\" print \"Pro features\" else print \"Basic features\"; if not logged in print \"Log in\".",
+      "blocks": [
+        "if logged_in:",
+        "    if plan == \"pro\":",
+        "        print(\"Pro features\")",
+        "    else:",
+        "        print(\"Basic features\")",
+        "else:",
+        "    print(\"Log in\")"
+      ],
+      "answer": [0, 1, 2, 3, 4, 5, 6],
+      "explanation": "Outer gate on logged_in; inner word test on plan; outer else for logged-out. Nesting plus word tests, combined."
+    },
+    {
+      "id": "u29l10e06",
+      "type": "multipleChoice",
+      "prompt": "For that code with logged_in = True, plan = \"free\", what prints?",
+      "options": [
+        "Basic features",
+        "Pro features",
+        "Log in",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "Logged in, but \"free\" is not \"pro\", so the inner else prints \"Basic features\"."
+    },
+    {
+      "id": "u29l10e07",
+      "type": "multipleChoice",
+      "prompt": "Recall: how do you insert a word variable into a message, like showing the plan name?",
+      "options": [
+        "An f-string: print(f\"Plan: {plan}\")",
+        "print(\"Plan: plan\")",
+        "print(plan + plan)",
+        "You cannot"
+      ],
+      "answer": 0,
+      "explanation": "An f-string fills {plan} with its value. (Reviewing f-strings from the strings unit.)"
+    },
+    {
+      "id": "u29l10e08",
+      "type": "multipleChoice",
+      "prompt": "A check 'if cmd == quit' crashes with 'quit is not defined'. The fix?",
+      "options": [
+        "Add quotes: cmd == \"quit\"",
+        "Remove the if",
+        "Use = instead of ==",
+        "Rename cmd"
+      ],
+      "answer": 0,
+      "explanation": "The literal word needs quotes or Python treats it as a variable name. A classic word-comparison bug."
+    },
+    {
+      "id": "u29l10e09",
+      "type": "multipleChoice",
+      "prompt": "To react to any word except \"stop\", use...",
+      "options": [
+        "if word != \"stop\":",
+        "if word == \"stop\":",
+        "if word and \"stop\":",
+        "if word = \"stop\":"
+      ],
+      "answer": 0,
+      "explanation": "'Anything except stop' is != \"stop\". Match the operator to the intent."
+    },
+    {
+      "id": "u29l10e10",
+      "type": "multipleChoice",
+      "prompt": "You have finished Unit 29. What can you now do?",
+      "options": [
+        "Compare words with == and !=, chain them, combine them with and/or, and handle unexpected words",
+        "Only print fixed text",
+        "Only compare numbers",
+        "Nothing new"
+      ],
+      "answer": 0,
+      "explanation": "You can decide based on words. Next unit lets the program ASK for a word or number with input() and react to it."
+    }
+  ]
+}

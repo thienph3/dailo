@@ -1,0 +1,102 @@
+{
+  "unitId": "u50",
+  "lessonId": "u50l02",
+  "title": "Loop back: counters and totals",
+  "idea": "REVIEW. Revisit counters and accumulators, mixed with math operators from Lap 1. No new concepts.",
+  "exercises": [
+    {
+      "id": "u50l02e01",
+      "type": "multipleChoice",
+      "prompt": "Trace:\n\ncount = 0\nfor i in range(5):\n    count = count + 1\n\nFinal count?",
+      "options": ["5", "4", "6", "0"],
+      "answer": 0,
+      "explanation": "Five passes, +1 each. The counter ends at 5 - it counts the passes."
+    },
+    {
+      "id": "u50l02e02",
+      "type": "multipleChoice",
+      "prompt": "Trace:\n\ntotal = 0\nfor i in range(1, 5):\n    total = total + i\n\nFinal total?",
+      "options": ["10", "6", "4", "15"],
+      "answer": 0,
+      "explanation": "1 + 2 + 3 + 4 = 10. The accumulator sums the loop variable."
+    },
+    {
+      "id": "u50l02e03",
+      "type": "multipleChoice",
+      "prompt": "What's the difference between a counter and an accumulator?",
+      "options": [
+        "A counter always adds 1; an accumulator adds a value that can vary",
+        "They are identical",
+        "A counter only works with while",
+        "An accumulator can't start at 0"
+      ],
+      "answer": 0,
+      "explanation": "Counter answers 'how many' (+1); accumulator answers 'what's the total' (+ some value)."
+    },
+    {
+      "id": "u50l02e04",
+      "type": "trueFalse",
+      "prompt": "A counter or accumulator must be set to its start value BEFORE the loop.",
+      "answer": true,
+      "explanation": "Set it once before the loop. Inside, it would reset each pass and never build up. A key habit."
+    },
+    {
+      "id": "u50l02e05",
+      "type": "fillBlank",
+      "prompt": "Review Lap 1 math. Fill the operator to add i to the running total:\n\ntotal = total ____ i",
+      "answer": "+",
+      "acceptable": ["+"],
+      "explanation": "Accumulating a sum uses +. The result is stored back into total."
+    },
+    {
+      "id": "u50l02e06",
+      "type": "multipleChoice",
+      "prompt": "Trace:\n\ncount = 0\nfor i in range(4):\n    count = count + 2\n\nFinal count?",
+      "options": ["8", "4", "2", "6"],
+      "answer": 0,
+      "explanation": "Four passes, +2 each: 2, 4, 6, 8. The step you add doesn't have to be 1."
+    },
+    {
+      "id": "u50l02e07",
+      "type": "multipleChoice",
+      "prompt": "Trace this bug:\n\nfor i in range(3):\n    total = 0\n    total = total + 5\nprint(total)\n\nWhat prints?",
+      "options": [
+        "5 - total resets to 0 every pass",
+        "15",
+        "0",
+        "It errors"
+      ],
+      "answer": 0,
+      "explanation": "total = 0 is inside the loop, so it resets each pass. It ends at 5. Start values belong before the loop."
+    },
+    {
+      "id": "u50l02e08",
+      "type": "multipleChoice",
+      "prompt": "Review Lap 1: what does 10 % 3 give?",
+      "options": ["1 (the remainder)", "3", "0", "3.33"],
+      "answer": 0,
+      "explanation": "% is the remainder: 10 divided by 3 is 3 with 1 left over. Handy for 'divisible by' tests inside loops."
+    },
+    {
+      "id": "u50l02e09",
+      "type": "multipleChoice",
+      "prompt": "Trace:\n\ntotal = 0\nfor i in range(1, 4):\n    total = total + i * 2\n\nFinal total?",
+      "options": ["12 (2 + 4 + 6)", "6", "18", "9"],
+      "answer": 0,
+      "explanation": "i * 2 is 2, 4, 6; total sums them to 12. The accumulator can add a computed value."
+    },
+    {
+      "id": "u50l02e10",
+      "type": "multipleChoice",
+      "prompt": "'How many days were rainy?' most likely needs...",
+      "options": [
+        "A counter (+1 for each rainy day)",
+        "An accumulator of temperatures",
+        "A break",
+        "No loop"
+      ],
+      "answer": 0,
+      "explanation": "'How many' means count the matches - a counter. Picking the right state tool is half the solution."
+    }
+  ]
+}

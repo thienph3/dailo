@@ -1,0 +1,123 @@
+{
+  "unitId": "u51",
+  "lessonId": "u51l03",
+  "title": "Lists keep their order",
+  "idea": "A list remembers the order you wrote the values in. That order is dependable and meaningful. Thinking about order, no indexing yet.",
+  "exercises": [
+    {
+      "id": "u51l03e01",
+      "type": "multipleChoice",
+      "prompt": "You write laps = [52, 49, 55]. In what order does the list keep these numbers?",
+      "options": [
+        "52, then 49, then 55 — the order you wrote",
+        "Smallest to largest",
+        "Largest to smallest",
+        "A random order each time"
+      ],
+      "answer": 0,
+      "explanation": "A list keeps values in exactly the order you wrote them. It does not sort or shuffle them on its own."
+    },
+    {
+      "id": "u51l03e02",
+      "type": "trueFalse",
+      "prompt": "The list [3, 1, 2] and the list [1, 2, 3] are the same list.",
+      "answer": false,
+      "explanation": "Same values, different order — so they are different lists. Order is part of what a list is."
+    },
+    {
+      "id": "u51l03e03",
+      "type": "multipleChoice",
+      "prompt": "Why does order matter for a list of race finishers like [\"Ana\", \"Bo\", \"Cy\"]?",
+      "options": [
+        "The order tells you who came first, second, third",
+        "Order never matters",
+        "It makes the list shorter",
+        "The computer requires alphabetical order"
+      ],
+      "answer": 0,
+      "explanation": "Here the order carries meaning: first-place, second, third. A list preserves that so the information isn't lost."
+    },
+    {
+      "id": "u51l03e04",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\norder = [9, 4, 7]\nprint(order)",
+      "options": [
+        "[9, 4, 7]",
+        "[4, 7, 9]",
+        "[7, 4, 9]",
+        "20"
+      ],
+      "answer": 0,
+      "explanation": "The list prints in the same order you wrote it: [9, 4, 7]. It is not sorted."
+    },
+    {
+      "id": "u51l03e05",
+      "type": "matchPairs",
+      "prompt": "Match each list to a true statement about its order.",
+      "pairs": [
+        { "left": "[1, 2, 3]", "right": "goes up" },
+        { "left": "[3, 2, 1]", "right": "goes down" },
+        { "left": "[2, 2, 2]", "right": "all the same" }
+      ],
+      "explanation": "The order you write is what you get. The list faithfully keeps it."
+    },
+    {
+      "id": "u51l03e06",
+      "type": "trueFalse",
+      "prompt": "If you want the values in a different order, you must write them in that order (the list won't rearrange itself).",
+      "answer": true,
+      "explanation": "A list is loyal to the order you give it. Reordering is something you'd have to do on purpose, later."
+    },
+    {
+      "id": "u51l03e07",
+      "type": "multipleChoice",
+      "prompt": "A week's temperatures are stored as [20, 22, 19, 25, 23, 21, 24], one per day starting Monday. What does the order let you say?",
+      "options": [
+        "Which temperature belongs to which day",
+        "Nothing useful",
+        "Only the biggest value",
+        "That all days are equal"
+      ],
+      "answer": 0,
+      "explanation": "Because order is kept, the first value is Monday's, the second Tuesday's, and so on. Order links each value to its meaning."
+    },
+    {
+      "id": "u51l03e08",
+      "type": "multipleChoice",
+      "prompt": "Which of these changes the LIST, not just the values?",
+      "options": [
+        "Writing the same numbers in a different order",
+        "Reading the list out loud",
+        "Printing the list twice",
+        "Thinking about the list"
+      ],
+      "answer": 0,
+      "explanation": "Different order means a different list, even with the same numbers. [5, 1] is not the same list as [1, 5]."
+    },
+    {
+      "id": "u51l03e09",
+      "type": "orderBlocks",
+      "prompt": "You want a list of the first three counting numbers in order. Arrange the items as they'd appear in the list.",
+      "blocks": [
+        "1",
+        "2",
+        "3"
+      ],
+      "answer": [0, 1, 2],
+      "explanation": "Written in order, the list is [1, 2, 3]. The list will keep exactly this arrangement."
+    },
+    {
+      "id": "u51l03e10",
+      "type": "multipleChoice",
+      "prompt": "Because order is dependable, what will we soon be able to do (next unit)?",
+      "options": [
+        "Point at 'the first' or 'the third' item by its spot",
+        "Make the list sort itself",
+        "Store a value with no name",
+        "Stop using order entirely"
+      ],
+      "answer": 0,
+      "explanation": "Reliable order is what makes 'get the first/third/last' possible — that's exactly the next unit, indexing."
+    }
+  ]
+}

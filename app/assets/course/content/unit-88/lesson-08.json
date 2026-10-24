@@ -1,0 +1,128 @@
+{
+  "unitId": "u88",
+  "lessonId": "u88l08",
+  "title": "A common mistake: wrong indentation",
+  "idea": "TOOL: spot nesting bugs caused by indentation — a line meant for the inner loop placed in the outer, or vice versa. Thinking-heavy.",
+  "exercises": [
+    {
+      "id": "u88l08e01",
+      "type": "multipleChoice",
+      "prompt": "In nested loops, what decides whether a line runs on every INNER turn or only every OUTER turn?",
+      "options": [
+        "How far the line is indented",
+        "The line's length",
+        "The variable names",
+        "The order you typed it"
+      ],
+      "answer": 0,
+      "explanation": "Indentation is everything in nesting. Deeper indent = inside the inner loop; less indent = inside the outer loop only."
+    },
+    {
+      "id": "u88l08e02",
+      "type": "multipleChoice",
+      "prompt": "Compare. Version A prints inside the inner loop; Version B prints inside the outer loop (less indented). For range(2) and range(3), how many lines does each print?",
+      "options": [
+        "A prints 6, B prints 2",
+        "Both print 6",
+        "Both print 2",
+        "A prints 2, B prints 6"
+      ],
+      "answer": 0,
+      "explanation": "A (print inside inner) runs 2*3 = 6 times. B (print inside outer only) runs once per outer turn = 2 times. Indentation changed the count."
+    },
+    {
+      "id": "u88l08e03",
+      "type": "multipleChoice",
+      "prompt": "This code was MEANT to print every pair, but prints only 3 lines:\n\nfor a in range(3):\n    for b in range(3):\n        pass\n    print(a)\n\nWhy only 3?",
+      "options": [
+        "The print is indented to the OUTER loop, so it runs once per a (3 times)",
+        "The inner loop never runs",
+        "range(3) is empty",
+        "print is broken"
+      ],
+      "answer": 0,
+      "explanation": "The print lines up with the inner loop, not inside it — so it belongs to the outer loop and runs 3 times. Indentation misplaced the print."
+    },
+    {
+      "id": "u88l08e04",
+      "type": "trueFalse",
+      "prompt": "Moving a line one indent level in or out of the inner loop can completely change how many times it runs.",
+      "answer": true,
+      "explanation": "Yes — indentation decides membership. One level in means 'every inner turn'; one level out means 'every outer turn'. A tiny change, big effect."
+    },
+    {
+      "id": "u88l08e05",
+      "type": "multipleChoice",
+      "prompt": "You want to count ALL pairs, so 'matches = matches + 1' must be...",
+      "options": [
+        "Indented inside the inner loop (and the if)",
+        "At the far left, outside both loops",
+        "Only under the outer loop",
+        "After the loops end"
+      ],
+      "answer": 0,
+      "explanation": "To tally every matching pair, the +1 must sit inside the inner loop under the if. Placing it shallower would miss most pairs."
+    },
+    {
+      "id": "u88l08e06",
+      "type": "multipleChoice",
+      "prompt": "This counter stays 0. Why?\n\nmatches = 0\nfor a in nums:\n    for b in nums:\n        if a == b:\n            pass\nprint(matches)",
+      "options": [
+        "There is no 'matches = matches + 1' line at all",
+        "matches should start at 1",
+        "The loops don't run",
+        "print is wrong"
+      ],
+      "answer": 0,
+      "explanation": "The pass does nothing — the counting line is missing. Even perfect nesting counts nothing if you forget to add 1 on a match."
+    },
+    {
+      "id": "u88l08e07",
+      "type": "multipleChoice",
+      "prompt": "Where should 'matches = 0' go, and why not inside the outer loop?",
+      "options": [
+        "Before both loops — inside the outer loop it would reset every outer turn",
+        "Inside the inner loop",
+        "After both loops",
+        "It doesn't matter"
+      ],
+      "answer": 0,
+      "explanation": "Start the counter before the loops. Put it inside the outer loop and it resets on each outer turn, losing earlier counts."
+    },
+    {
+      "id": "u88l08e08",
+      "type": "trueFalse",
+      "prompt": "A print placed AFTER both loops (unindented) runs just once, showing a final result.",
+      "answer": true,
+      "explanation": "Yes — a line after the loops runs once, after all the looping finishes. That's exactly where a final total should be printed."
+    },
+    {
+      "id": "u88l08e09",
+      "type": "orderBlocks",
+      "prompt": "Order these lines with CORRECT nesting to count equal pairs and print the total once.",
+      "blocks": [
+        "matches = 0",
+        "for a in nums:",
+        "    for b in nums:",
+        "        if a == b:",
+        "            matches = matches + 1",
+        "print(matches)"
+      ],
+      "answer": [0, 1, 2, 3, 4, 5],
+      "explanation": "Counter before the loops, loops nested, the +1 deep inside the if, and the print once at the end. Each indent level is deliberate."
+    },
+    {
+      "id": "u88l08e10",
+      "type": "multipleChoice",
+      "prompt": "What habit prevents nesting-indentation bugs?",
+      "options": [
+        "Ask, for each line: should this run per inner turn, per outer turn, or once?",
+        "Always indent everything the same",
+        "Never use two loops",
+        "Ignore indentation"
+      ],
+      "answer": 0,
+      "explanation": "For every line, decide its home: inner (deepest), outer (middle), or once (outside). Matching indent to intent kills nesting bugs."
+    }
+  ]
+}

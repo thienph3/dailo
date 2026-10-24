@@ -1,0 +1,152 @@
+{
+  "unitId": "u43",
+  "lessonId": "u43l06",
+  "title": "Solve it together: count the perfect scores",
+  "idea": "GUIDED. Count how many values equal a target, using == in an if inside a loop.",
+  "problem": "Quiz scores out of 10 are 10, 7, 10, 9, 10, 6. How many are a perfect 10?",
+  "exercises": [
+    {
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: Scores 10, 7, 10, 9, 10, 6. How many are a perfect 10?\n\nUnderstand -- what is the OUTPUT?",
+      "options": [
+        "A count of how many scores equal 10",
+        "The total of the scores",
+        "The average",
+        "The lowest score"
+      ],
+      "answer": 0,
+      "explanation": "The output is a COUNT of scores that are exactly 10.",
+      "id": "u43l06e01"
+    },
+    {
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "What is the rule that decides whether a score counts?",
+      "options": [
+        "The score equals 10",
+        "The score is 10 or more",
+        "The score is even",
+        "Every score counts"
+      ],
+      "answer": 0,
+      "explanation": "The rule is 'score == 10' -- exactly 10, not just high. Use == to test equality.",
+      "id": "u43l06e02"
+    },
+    {
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "By hand: in 10, 7, 10, 9, 10, 6, how many equal 10?",
+      "options": [
+        "3",
+        "2",
+        "4",
+        "6"
+      ],
+      "answer": 0,
+      "explanation": "There are three 10s. This hand count (3) is our check value.",
+      "id": "u43l06e03"
+    },
+    {
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Plan the steps.",
+      "blocks": [
+        "Start a counter at 0",
+        "For each score, check if it equals 10",
+        "If it does, add 1 to the counter",
+        "Show the counter"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "Counter, loop, test with ==, add on a match, show. The if uses equality here, not >=.",
+      "id": "u43l06e04"
+    },
+    {
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Which comparison tests 'exactly equal to 10'?",
+      "options": [
+        "score == 10",
+        "score = 10",
+        "score >= 10",
+        "score != 10"
+      ],
+      "answer": 0,
+      "explanation": "== tests equality. A single = would try to ASSIGN, which is a different thing -- a classic mix-up.",
+      "id": "u43l06e05"
+    },
+    {
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Fill the comparison so only perfect 10s are counted:\n\nperfect = 0\nfor n in range(1, 7):\n    if score ____ 10:\n        perfect = perfect + 1\nprint(perfect)",
+      "answer": "==",
+      "acceptable": [
+        "=="
+      ],
+      "explanation": "== checks equality. Only scores that are exactly 10 pass and add to the counter.",
+      "id": "u43l06e06"
+    },
+    {
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Arrange the full solution (one score per pass in `score`).",
+      "blocks": [
+        "perfect = 0",
+        "for n in range(1, 7):",
+        "    if score == 10:",
+        "        perfect = perfect + 1",
+        "print(perfect)"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "explanation": "Counter at 0, loop each score, add 1 when it equals 10, print the count.",
+      "id": "u43l06e07"
+    },
+    {
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "It prints 3, matching your hand answer. So...",
+      "options": [
+        "The solution is correct",
+        "The solution is wrong",
+        "It didn't run",
+        "The rule is unused"
+      ],
+      "answer": 0,
+      "explanation": "Output (3) matches the hand count (3). Counting exact matches works.",
+      "id": "u43l06e08"
+    },
+    {
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Re-check: scores 10, 10, 8. How many perfect 10s?",
+      "options": [
+        "2",
+        "3",
+        "1",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "Two scores equal 10 (8 does not). The code counts them correctly on new data.",
+      "id": "u43l06e09"
+    },
+    {
+      "type": "trueFalse",
+      "uepcc": "Check",
+      "prompt": "Writing if score = 10 instead of == would be a bug.",
+      "answer": true,
+      "explanation": "True -- a single = is assignment, not a comparison. Equality tests need ==. This is an easy slip to make.",
+      "id": "u43l06e10"
+    }
+  ]
+}

@@ -1,0 +1,132 @@
+{
+  "unitId": "u73",
+  "lessonId": "u73l08",
+  "title": "Spot the mistake: printing when you meant to return",
+  "idea": "TOOL: common bug — the sub-plan PRINTS its answer, so the call hands back None and the caller can't use it. Learn to spot and fix it.",
+  "exercises": [
+    {
+      "id": "u73l08e01",
+      "type": "multipleChoice",
+      "prompt": "A learner wants to USE the result:\n\ndef double(n):\n    print(n * 2)\n\nanswer = double(5)\nprint(answer + 1)\n\nWhat goes wrong?",
+      "options": [
+        "answer is None, so answer + 1 fails — double should return, not print",
+        "nothing is wrong",
+        "double returns 10",
+        "answer is 11"
+      ],
+      "answer": 0,
+      "explanation": "double PRINTS 10 but returns None. So answer is None, and None + 1 can't work. The fix: 'return n * 2'."
+    },
+    {
+      "id": "u73l08e02",
+      "type": "multipleChoice",
+      "prompt": "Which single change fixes it?",
+      "options": [
+        "Change 'print(n * 2)' to 'return n * 2'",
+        "Change 'answer + 1' to 'answer - 1'",
+        "Remove the def line",
+        "Call double twice"
+      ],
+      "answer": 0,
+      "explanation": "The sub-plan must hand back the value, so replace print with return. Then answer is 10 and answer + 1 is 11."
+    },
+    {
+      "id": "u73l08e03",
+      "type": "trueFalse",
+      "prompt": "If a sub-plan prints its answer but never returns it, the caller cannot reuse that answer.",
+      "answer": true,
+      "explanation": "Right. A printed value is on the screen, but the call itself is None — nothing is handed back to work with."
+    },
+    {
+      "id": "u73l08e04",
+      "type": "multipleChoice",
+      "prompt": "Spot the bug:\n\ndef add(a, b):\n    sum_value = a + b\n\nprint(add(2, 3))\n\nWhat prints?",
+      "options": [
+        "None — the sub-plan computes a sum but never returns it",
+        "5",
+        "23",
+        "sum_value"
+      ],
+      "answer": 0,
+      "explanation": "It computes sum_value but has no return, so the call is None. Add 'return sum_value' to hand it back."
+    },
+    {
+      "id": "u73l08e05",
+      "type": "fillBlank",
+      "prompt": "Add the missing line so the sum is handed back:\n\ndef add(a, b):\n    sum_value = a + b\n    ____ sum_value",
+      "answer": "return",
+      "acceptable": ["return"],
+      "explanation": "'return sum_value' hands back the computed value. Now add(2, 3) is 5, usable by the caller."
+    },
+    {
+      "id": "u73l08e06",
+      "type": "multipleChoice",
+      "prompt": "Which call can be used in a bigger sum like 'x = f(3) + f(4)'?",
+      "options": [
+        "def f(n):\n    return n * n",
+        "def f(n):\n    print(n * n)",
+        "def f(n):\n    n * n",
+        "def f(n):\n    return"
+      ],
+      "answer": 0,
+      "explanation": "Only the version that returns a value can be combined. The others hand back None, and None + None would error."
+    },
+    {
+      "id": "u73l08e07",
+      "type": "multipleChoice",
+      "prompt": "A sub-plan whose JOB is only to display something (not compute an answer) should...",
+      "options": [
+        "use print inside — that's fine for a display job",
+        "always use return",
+        "never exist",
+        "return None on purpose with a value"
+      ],
+      "answer": 0,
+      "explanation": "If the job is to show text, print is correct. The bug is using print when you actually need the VALUE back."
+    },
+    {
+      "id": "u73l08e08",
+      "type": "multipleChoice",
+      "prompt": "REVIEW: which of these shows text on the screen?",
+      "options": [
+        "print(x)",
+        "return x",
+        "x = x + 1",
+        "def f():"
+      ],
+      "answer": 0,
+      "explanation": "print shows text. return hands a value back silently. They are different jobs — mixing them up is the bug."
+    },
+    {
+      "id": "u73l08e09",
+      "type": "orderBlocks",
+      "prompt": "Arrange a CORRECT version: define triple to return n * 3, store triple(4), print the stored value.",
+      "blocks": [
+        "def triple(n):",
+        "    return n * 3",
+        "result = triple(4)",
+        "print(result)"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "Return (not print) inside, then the caller stores and prints the handed-back 12. No None in sight."
+    },
+    {
+      "id": "u73l08e10",
+      "type": "multipleChoice",
+      "prompt": "The lesson's warning:",
+      "options": [
+        "If you need the answer later, RETURN it — don't just print it",
+        "always print, never return",
+        "return and print are interchangeable",
+        "None is always correct"
+      ],
+      "answer": 0,
+      "explanation": "Printing shows a value once; returning hands it back to be used. Know which job you need."
+    }
+  ]
+}

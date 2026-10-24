@@ -1,0 +1,134 @@
+{
+  "unitId": "u17",
+  "lessonId": "u17l02",
+  "title": "Report an average score",
+  "idea": "GUIDED PROBLEM. Add values, divide, then present the average inside a clear message. Walked through UEPCC.",
+  "problem": "A student scored 8 and 6 on two quizzes. Show a message like: Your average score is 7.0.",
+  "exercises": [
+    {
+      "id": "u17l02e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: two quiz scores, 8 and 6. Show a message like 'Your average score is 7.0.'\n\nUnderstand first. What is the OUTPUT?",
+      "options": [
+        "A message showing the average of the two scores",
+        "The higher of the two scores",
+        "The total of the two scores only",
+        "The number of quizzes"
+      ],
+      "answer": 0,
+      "explanation": "The output is a message containing the average. Name the output before anything else."
+    },
+    {
+      "id": "u17l02e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "What are the INPUTS?",
+      "options": [
+        "The two scores (8 and 6) and how many scores there are (2)",
+        "Only the number 7",
+        "The word 'average'",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "Inputs are the two scores and the count of scores. The count matters — it's what you divide by."
+    },
+    {
+      "id": "u17l02e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example by hand. Add 8 and 6, then split between 2 quizzes. What is the average?",
+      "options": ["7.0", "14", "2", "48"],
+      "answer": 0,
+      "explanation": "(8 + 6) / 2 = 14 / 2 = 7.0. Division in Python gives a decimal, so 7.0. This is your check value."
+    },
+    {
+      "id": "u17l02e04",
+      "type": "trueFalse",
+      "uepcc": "E",
+      "prompt": "Working the example by hand (getting 7.0) before coding is useful because it becomes the value you check against.",
+      "answer": true,
+      "explanation": "Exactly. The hand result is your anchor — if the code prints something else, you know there's a bug."
+    },
+    {
+      "id": "u17l02e05",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Plan. Order the plain-English steps.",
+      "blocks": [
+        "Divide the total by how many scores there are",
+        "Add the two scores into a total",
+        "Remember the two scores and the count",
+        "Show a message with the average"
+      ],
+      "answer": [2, 1, 0, 3],
+      "explanation": "Remember values, add to a total, divide by the count, then present the result. Words before code."
+    },
+    {
+      "id": "u17l02e06",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "The plan adds 8 and 6, THEN divides by 2. Which tool makes 'add first, then divide' happen in one line?",
+      "options": [
+        "Parentheses around the addition",
+        "An f-string",
+        "The str() function",
+        "A blank print()"
+      ],
+      "answer": 0,
+      "explanation": "Without parentheses, division happens before addition. (score1 + score2) / count groups the add first."
+    },
+    {
+      "id": "u17l02e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code. Arrange the lines to match your plan.",
+      "blocks": [
+        "average = (score1 + score2) / quiz_count",
+        "score1 = 8",
+        "score2 = 6",
+        "quiz_count = 2",
+        "print(f\"Your average score is {average}.\")"
+      ],
+      "answer": [1, 2, 3, 0, 4],
+      "explanation": "Store both scores and the count, compute the average with parentheses, then print the message."
+    },
+    {
+      "id": "u17l02e08",
+      "type": "multipleChoice",
+      "uepcc": "C",
+      "prompt": "Which line correctly computes the average?",
+      "options": [
+        "average = (score1 + score2) / quiz_count",
+        "average = score1 + score2 / quiz_count",
+        "average = score1 + score2 + quiz_count",
+        "average = quiz_count / (score1 + score2)"
+      ],
+      "answer": 0,
+      "explanation": "Parentheses force the addition first: (8 + 6) / 2 = 7.0. Without them, only score2 would be divided."
+    },
+    {
+      "id": "u17l02e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check. The code prints 'Your average score is 7.0.' Your hand example said 7.0. Verdict?",
+      "options": [
+        "Passes — output matches the example",
+        "Fails — output is wrong",
+        "Unknown",
+        "Rewrite the example"
+      ],
+      "answer": 0,
+      "explanation": "Output matches the hand example, so the solution is correct."
+    },
+    {
+      "id": "u17l02e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "New inputs: score1 = 10, score2 = 4, quiz_count = 2. What average prints?",
+      "options": ["7.0", "14.0", "6.0", "5.0"],
+      "answer": 0,
+      "explanation": "(10 + 4) / 2 = 7.0. It generalizes to new numbers — a sign of a solid solution."
+    }
+  ]
+}

@@ -1,0 +1,122 @@
+{
+  "unitId": "u11",
+  "lessonId": "u11l07",
+  "title": "Spot the wrong plan",
+  "idea": "GUIDED PRACTICE. Debug the APPROACH, not typos. Learner finds why a solution gives the wrong answer — usually wrong operation or wrong order.",
+  "exercises": [
+    {
+      "id": "u11l07e01",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Problem: change from paying 10 for a 7 item (should be 3). Code:\n\nchange = price - paid\n\nwith price=7, paid=10. What does it show, and is it right?",
+      "options": [
+        "Shows -3 — wrong, the subtraction is backwards",
+        "Shows 3 — correct",
+        "Shows 17 — wrong",
+        "Shows 0 — wrong"
+      ],
+      "answer": 0,
+      "explanation": "7 - 10 = -3. The order is flipped. It should be paid - price. Order matters for - and /."
+    },
+    {
+      "id": "u11l07e02",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Fix the order so change is 3:\n\nprice = 7\npaid = 10\nchange = ____ - price\nprint(change)",
+      "answer": "paid",
+      "acceptable": ["paid"],
+      "explanation": "paid - price = 10 - 7 = 3. Correct order."
+    },
+    {
+      "id": "u11l07e03",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Problem: each of 4 friends' share of a 20 bill (should be 5). Code:\n\nshare = people / bill\n\nwith people=4, bill=20. Right or wrong?",
+      "options": [
+        "Wrong — it's flipped; 4/20 = 0.2, not 5",
+        "Right — shows 5",
+        "Wrong — shows 80",
+        "Right — shows 0.2"
+      ],
+      "answer": 0,
+      "explanation": "Division order matters: it should be bill / people (20/4 = 5), not people / bill."
+    },
+    {
+      "id": "u11l07e04",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "For + and *, does the order of the two numbers change the answer?",
+      "options": [
+        "No — 3+5 = 5+3, and 3*5 = 5*3",
+        "Yes — always",
+        "Only for +",
+        "Only for *"
+      ],
+      "answer": 0,
+      "explanation": "Add and multiply don't care about order. But - and / DO. Knowing this prevents a whole class of bugs."
+    },
+    {
+      "id": "u11l07e05",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Problem: total of 3 pens at 2 each (should be 6). Code:\n\ntotal = pen_count + pen_price\n\ncount=3, price=2. What's wrong?",
+      "options": [
+        "Wrong operation — it adds (gives 5) instead of multiplying",
+        "Nothing wrong",
+        "Wrong order",
+        "Missing a bracket"
+      ],
+      "answer": 0,
+      "explanation": "'Many of the same' needs multiply, not add. 3 + 2 = 5, but 3 * 2 = 6. Wrong operation is a planning mistake, not a typo."
+    },
+    {
+      "id": "u11l07e06",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Fix the operation:\n\npen_count = 3\npen_price = 2\ntotal = pen_count ____ pen_price",
+      "answer": "*",
+      "acceptable": ["*"],
+      "explanation": "Multiply: 3 * 2 = 6."
+    },
+    {
+      "id": "u11l07e07",
+      "type": "trueFalse",
+      "uepcc": "Check",
+      "prompt": "A program can run without errors and still give the WRONG answer.",
+      "answer": true,
+      "explanation": "Yes — a wrong operation or wrong order runs fine but gives a wrong result. That's why Checking against a hand example matters."
+    },
+    {
+      "id": "u11l07e08",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "You get an answer you didn't expect. Best first move?",
+      "options": [
+        "Compare it to the example you worked by hand to see where it differs",
+        "Delete everything and start over",
+        "Assume the computer is broken",
+        "Change your hand example to match"
+      ],
+      "answer": 0,
+      "explanation": "The hand example is your anchor. Comparing to it points you at the bug."
+    },
+    {
+      "id": "u11l07e09",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "'How much MORE does A cost than B' (A=15, B=9). Which code is right?",
+      "options": ["diff = A - B", "diff = B - A", "diff = A + B", "diff = A * B"],
+      "answer": 0,
+      "explanation": "'How much more A is than B' = A - B = 6. Order chosen on purpose."
+    },
+    {
+      "id": "u11l07e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "diff = A - B with A=15, B=9 shows 6. Hand example said 6. Verdict?",
+      "options": ["Passes", "Fails", "Unknown", "Rewrite example"],
+      "answer": 0,
+      "explanation": "Matches — correct. You can now spot wrong-operation and wrong-order bugs."
+    }
+  ]
+}

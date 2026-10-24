@@ -1,0 +1,128 @@
+{
+  "unitId": "u76",
+  "lessonId": "u76l01",
+  "title": "One sub-plan's answer feeds another",
+  "idea": "Composing functions: the value RETURNED by one sub-plan becomes the ARGUMENT to another. Build bigger answers from smaller ones.",
+  "exercises": [
+    {
+      "id": "u76l01e01",
+      "type": "multipleChoice",
+      "prompt": "Read:\n\ndef double(n):\n    return n * 2\n\ndef add_one(n):\n    return n + 1\n\nprint(add_one(double(5)))\n\nWhich call runs FIRST?",
+      "options": [
+        "double(5) — the inner call runs first",
+        "add_one runs first",
+        "print runs first",
+        "They run at the same time"
+      ],
+      "answer": 0,
+      "explanation": "The inner call runs first: double(5) becomes 10. Then add_one(10) runs. Inside-out, like any nested expression."
+    },
+    {
+      "id": "u76l01e02",
+      "type": "multipleChoice",
+      "prompt": "Same code — what prints?\n\ndef double(n):\n    return n * 2\n\ndef add_one(n):\n    return n + 1\n\nprint(add_one(double(5)))",
+      "options": [
+        "11",
+        "10",
+        "6",
+        "12"
+      ],
+      "answer": 0,
+      "explanation": "double(5) is 10; add_one(10) is 11. The returned 10 became the input to add_one."
+    },
+    {
+      "id": "u76l01e03",
+      "type": "trueFalse",
+      "prompt": "Because a call becomes a value, you can put one call INSIDE another call's parentheses.",
+      "answer": true,
+      "explanation": "Yes. double(5) is a value (10), so it can sit where add_one expects an argument. That's composing."
+    },
+    {
+      "id": "u76l01e04",
+      "type": "multipleChoice",
+      "prompt": "Why does composing only work with RETURNING sub-plans (not printing ones)?",
+      "options": [
+        "The inner call must hand back a value to feed the outer call",
+        "printing is faster",
+        "it works with printing too",
+        "no reason"
+      ],
+      "answer": 0,
+      "explanation": "The outer call needs a value as its argument. Only return hands one back; a printing sub-plan would feed None."
+    },
+    {
+      "id": "u76l01e05",
+      "type": "multipleChoice",
+      "prompt": "Order of events for add_one(double(5)):",
+      "options": [
+        "double(5)->10, then add_one(10)->11, then print 11",
+        "print, then add_one, then double",
+        "add_one(5)->6, then double(6)->12",
+        "nothing happens"
+      ],
+      "answer": 0,
+      "explanation": "Inner first (10), outer next (11), then print shows 11. Always resolve the innermost call first."
+    },
+    {
+      "id": "u76l01e06",
+      "type": "fillBlank",
+      "prompt": "Compose: feed double(3) into add_one.\n\ndef double(n):\n    return n * 2\n\ndef add_one(n):\n    return n + 1\n\nprint(add_one(____(3)))",
+      "answer": "double",
+      "acceptable": ["double"],
+      "explanation": "double(3) is 6; add_one(6) is 7. The inner call's returned value feeds the outer one."
+    },
+    {
+      "id": "u76l01e07",
+      "type": "multipleChoice",
+      "prompt": "REVIEW: in add_one(double(5)), double's returned value acts as...",
+      "options": [
+        "the argument (input) to add_one",
+        "the name of add_one",
+        "a printed message",
+        "a loop"
+      ],
+      "answer": 0,
+      "explanation": "The returned value is passed as add_one's argument. Returning + passing arguments is what makes composing possible."
+    },
+    {
+      "id": "u76l01e08",
+      "type": "trueFalse",
+      "prompt": "Composing lets you build a bigger answer by chaining small, reusable sub-plans.",
+      "answer": true,
+      "explanation": "Exactly. Each sub-plan does one small job; feeding one into the next builds up to the full answer."
+    },
+    {
+      "id": "u76l01e09",
+      "type": "orderBlocks",
+      "prompt": "Arrange a program that composes: define double, define add_one, then print add_one(double(4)).",
+      "blocks": [
+        "def double(n):",
+        "    return n * 2",
+        "def add_one(n):",
+        "    return n + 1",
+        "print(add_one(double(4)))"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "explanation": "Define both sub-plans first, then compose them in one line: double(4)->8, add_one(8)->9."
+    },
+    {
+      "id": "u76l01e10",
+      "type": "multipleChoice",
+      "prompt": "The big idea of this unit:",
+      "options": [
+        "A sub-plan's returned value can become the input to another — composing",
+        "sub-plans can't be combined",
+        "composing needs print",
+        "only one sub-plan is allowed"
+      ],
+      "answer": 0,
+      "explanation": "Compose sub-plans: the inner one hands back a value that feeds the outer one. Small pieces, bigger answers."
+    }
+  ]
+}

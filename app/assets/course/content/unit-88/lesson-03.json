@@ -1,0 +1,121 @@
+{
+  "unitId": "u88",
+  "lessonId": "u88l03",
+  "title": "Nesting over two lists",
+  "idea": "TOOL: use 'for item in list' nested inside another, to pair every item of one list with every item of another. Visible output, thinking-heavy.",
+  "exercises": [
+    {
+      "id": "u88l03e01",
+      "type": "multipleChoice",
+      "prompt": "You met 'for item in list'. To pair every size with every topping, you'd...",
+      "options": [
+        "Loop over sizes on the outside, toppings on the inside",
+        "Use one loop only",
+        "Use an if only",
+        "Print the lists side by side"
+      ],
+      "answer": 0,
+      "explanation": "Outer loop over sizes, inner loop over toppings. For each size, you visit every topping — every pairing appears."
+    },
+    {
+      "id": "u88l03e02",
+      "type": "multipleChoice",
+      "prompt": "Predict how many pairs print:\n\nsizes = [1, 2]\ntoppings = [10, 20, 30]\nfor s in sizes:\n    for t in toppings:\n        print(s, t)",
+      "options": [
+        "6 (2 sizes times 3 toppings)",
+        "5",
+        "3",
+        "2"
+      ],
+      "answer": 0,
+      "explanation": "2 sizes, each paired with 3 toppings: 2 times 3 = 6 pairs. Nested list loops multiply just like range loops."
+    },
+    {
+      "id": "u88l03e03",
+      "type": "orderBlocks",
+      "prompt": "Order the output of:\n\nsizes = [1, 2]\ntoppings = [10, 20]\nfor s in sizes:\n    for t in toppings:\n        print(s, t)",
+      "blocks": [
+        "1 10",
+        "1 20",
+        "2 10",
+        "2 20"
+      ],
+      "answer": [0, 1, 2, 3],
+      "explanation": "s=1 pairs with 10 then 20, then s=2 pairs with 10 then 20. The inner list is swept fully for each outer item."
+    },
+    {
+      "id": "u88l03e04",
+      "type": "trueFalse",
+      "prompt": "Nesting two lists of lengths 4 and 5 produces 4 times 5 = 20 pairings.",
+      "answer": true,
+      "explanation": "Yes — every item of the first pairs with every item of the second: 4 times 5 = 20. Lengths multiply to give the pair count."
+    },
+    {
+      "id": "u88l03e05",
+      "type": "multipleChoice",
+      "prompt": "Which real task fits 'nest two lists'?",
+      "options": [
+        "Price every (size, topping) combination on a menu",
+        "Find the single biggest price",
+        "Count one list's items",
+        "Print one greeting"
+      ],
+      "answer": 0,
+      "explanation": "Every size with every topping is a two-list nesting. Combination menus, seating charts, and matchups all fit this shape."
+    },
+    {
+      "id": "u88l03e06",
+      "type": "fillBlank",
+      "prompt": "Complete the inner loop to pair every day with every slot:\n\ndays = [1, 2, 3]\nslots = [10, 11]\nfor d in days:\n    for s in ____:\n        print(d, s)",
+      "answer": "slots",
+      "acceptable": ["slots"],
+      "explanation": "The inner loop walks the slots list, so for each day d you visit every slot s. 3 days times 2 slots = 6 lines."
+    },
+    {
+      "id": "u88l03e07",
+      "type": "multipleChoice",
+      "prompt": "Predict the output values of:\n\na = [1, 2]\nb = [3, 4]\nfor x in a:\n    for y in b:\n        print(x * y)",
+      "options": [
+        "3, 4, 6, 8",
+        "1, 2, 3, 4",
+        "4, 8",
+        "3, 8"
+      ],
+      "answer": 0,
+      "explanation": "x=1: 1*3=3, 1*4=4. x=2: 2*3=6, 2*4=8. The printed value is x*y for every pair: 3, 4, 6, 8."
+    },
+    {
+      "id": "u88l03e08",
+      "type": "multipleChoice",
+      "prompt": "If you SWAP which list is outer and which is inner, what changes?",
+      "options": [
+        "The ORDER the pairs print, but all the same pairs still appear",
+        "The number of pairs",
+        "Nothing can be swapped",
+        "Half the pairs disappear"
+      ],
+      "answer": 0,
+      "explanation": "Swapping outer and inner reorders the output but produces the same set of pairs. Order changes; the pairings themselves don't."
+    },
+    {
+      "id": "u88l03e09",
+      "type": "trueFalse",
+      "prompt": "The inner list is walked from its start again for each item of the outer list.",
+      "answer": true,
+      "explanation": "Yes — the inner loop restarts at the first inner item every time the outer advances. That restart is what makes all pairs appear."
+    },
+    {
+      "id": "u88l03e10",
+      "type": "multipleChoice",
+      "prompt": "What can you now do with two lists?",
+      "options": [
+        "Visit every pairing of an item from each list",
+        "Only look at the first item of each",
+        "Add the lists into one number automatically",
+        "Nothing new"
+      ],
+      "answer": 0,
+      "explanation": "Nesting two list loops visits every cross-pairing. That's the 'each thing against each other thing' power of nested loops."
+    }
+  ]
+}

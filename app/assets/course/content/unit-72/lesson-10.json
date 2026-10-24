@@ -1,0 +1,136 @@
+{
+  "unitId": "u72",
+  "lessonId": "u72l10",
+  "title": "Parameters in, result shown",
+  "idea": "TOOL wrap-up: consolidate parameters (one and several), note the print-only limit, and hint that handing a value back comes next. Review-heavy final lesson.",
+  "exercises": [
+    {
+      "id": "u72l10e01",
+      "type": "multipleChoice",
+      "prompt": "def welcome(name, place):\n    print(\"Welcome \" + name + \" to \" + place)\n\nwelcome(\"Ada\", \"Dailo\")\n\nWhat prints?",
+      "options": [
+        "Welcome Ada to Dailo",
+        "Welcome name to place",
+        "Welcome Dailo to Ada",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "name is \"Ada\", place is \"Dailo\", filled in order. The sub-plan prints Welcome Ada to Dailo."
+    },
+    {
+      "id": "u72l10e02",
+      "type": "trueFalse",
+      "prompt": "A sub-plan can take several parameters, and the arguments fill them left to right.",
+      "answer": true,
+      "explanation": "Yes. First argument to first slot, second to second, and so on. Order is how each value finds its slot."
+    },
+    {
+      "id": "u72l10e03",
+      "type": "multipleChoice",
+      "prompt": "Right now, how does a sub-plan show the answer it computed from its parameters?",
+      "options": [
+        "It prints the answer",
+        "It hands the answer back to the caller",
+        "It saves the answer in the main plan automatically",
+        "It can't show anything"
+      ],
+      "answer": 0,
+      "explanation": "For now, a sub-plan PRINTS its result. Handing a value back to the caller is a different tool that comes in a later unit."
+    },
+    {
+      "id": "u72l10e04",
+      "type": "multipleChoice",
+      "prompt": "You want the main plan to TAKE the doubled number and use it later in a calculation. Can a print-only sub-plan give it back?",
+      "options": [
+        "No — printing shows it on screen but doesn't hand it back for reuse",
+        "Yes, print hands values back",
+        "Yes, if you print twice",
+        "No sub-plan can compute anything"
+      ],
+      "answer": 0,
+      "explanation": "Print only displays. To reuse a computed value elsewhere, the sub-plan would need to hand it back — a tool you'll meet in a later unit."
+    },
+    {
+      "id": "u72l10e05",
+      "type": "trueFalse",
+      "prompt": "Printing a result and handing a result back to the caller are two different things.",
+      "answer": true,
+      "explanation": "Yes. Print shows it on screen; handing it back gives it to other code to use. You've mastered print; handing values back comes next."
+    },
+    {
+      "id": "u72l10e06",
+      "type": "matchPairs",
+      "prompt": "REVIEW: match each term to its meaning.",
+      "pairs": [
+        {
+          "left": "def",
+          "right": "Define a sub-plan"
+        },
+        {
+          "left": "parameter",
+          "right": "A slot for a value handed in"
+        },
+        {
+          "left": "argument",
+          "right": "The value passed in the call"
+        }
+      ],
+      "explanation": "def defines, the parameter is the slot, the argument fills it. These three words cover everything you learned this unit."
+    },
+    {
+      "id": "u72l10e07",
+      "type": "multipleChoice",
+      "prompt": "def show_total(nums):\n    total = 0\n    for n in nums:\n        total = total + n\n    print(total)\n\nshow_total([1, 2, 3, 4])\n\nWhat prints?",
+      "options": [
+        "10",
+        "4",
+        "0",
+        "24"
+      ],
+      "answer": 0,
+      "explanation": "The passed-in list sums to 1+2+3+4 = 10. The list came in as a parameter; the sum pattern ran inside; the result was printed."
+    },
+    {
+      "id": "u72l10e08",
+      "type": "orderBlocks",
+      "prompt": "Assemble a program that prints a person's score message, then call it with \"Mia\" and 95.",
+      "blocks": [
+        "def show_score(name, score):",
+        "    print(name + \" scored \" + str(score))",
+        "show_score(\"Mia\", 95)"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Two parameters: name and score. str(score) joins the number into the text. Output: Mia scored 95."
+    },
+    {
+      "id": "u72l10e09",
+      "type": "multipleChoice",
+      "prompt": "What will the NEXT unit add on top of parameters?",
+      "options": [
+        "A way for a sub-plan to hand its answer back for the main plan to use",
+        "A way to remove parameters",
+        "A reason to stop using def",
+        "Loops that run forever"
+      ],
+      "answer": 0,
+      "explanation": "You can pass values IN with parameters. Next, you'll learn to let a sub-plan send a value BACK — completing the function picture."
+    },
+    {
+      "id": "u72l10e10",
+      "type": "multipleChoice",
+      "prompt": "Where you stand after unit 72:",
+      "options": [
+        "You can write sub-plans that take one or several values and print results using them",
+        "You can only write sub-plans with no inputs",
+        "You've forgotten how to call sub-plans",
+        "You must copy-paste for every value"
+      ],
+      "answer": 0,
+      "explanation": "Parameters let one sub-plan serve many inputs, printing each result. With handing values back coming next, you'll soon have the full toolkit."
+    }
+  ]
+}

@@ -1,0 +1,141 @@
+{
+  "unitId": "u12",
+  "lessonId": "u12l05",
+  "title": "Naming the groups and leftover",
+  "idea": "Store the result of // and % in named variables, then print them.",
+  "exercises": [
+    {
+      "id": "u12l05e01",
+      "type": "multipleChoice",
+      "prompt": "A variable gives a result a name so we can reuse it. What does groups become here?\n\ngroups = 17 // 5\nprint(groups)",
+      "options": [
+        "3",
+        "17",
+        "5",
+        "2"
+      ],
+      "answer": 0,
+      "explanation": "17 // 5 is 3, so groups holds 3. print(groups) shows 3. Naming the result makes the code read like the problem."
+    },
+    {
+      "id": "u12l05e02",
+      "type": "multipleChoice",
+      "prompt": "What will this show?\n\nleftover = 17 % 5\nprint(leftover)",
+      "options": [
+        "2",
+        "3",
+        "5",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "17 % 5 is 2, so leftover holds 2. A good name like leftover tells the reader exactly what the number means."
+    },
+    {
+      "id": "u12l05e03",
+      "type": "multipleChoice",
+      "prompt": "What will these lines show?\n\ncookies = 20\nper_bag = 6\nprint(cookies // per_bag)",
+      "options": [
+        "3",
+        "4",
+        "2",
+        "6"
+      ],
+      "answer": 0,
+      "explanation": "cookies is 20 and per_bag is 6. 20 // 6 is 3 full bags. You can use // with variables, not just plain numbers."
+    },
+    {
+      "id": "u12l05e04",
+      "type": "multipleChoice",
+      "prompt": "Using the same cookies = 20 and per_bag = 6, what will this show?\n\nprint(cookies % per_bag)",
+      "options": [
+        "2",
+        "3",
+        "6",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "20 % 6 is 2. Three bags use 18 cookies, and 2 are left loose. The variables made the line easy to read."
+    },
+    {
+      "id": "u12l05e05",
+      "type": "trueFalse",
+      "prompt": "You can use // and % with variables, the same way you did with plain numbers.",
+      "answer": true,
+      "explanation": "Exactly. cookies // per_bag works just like 20 // 6. The variables just carry the numbers for you."
+    },
+    {
+      "id": "u12l05e06",
+      "type": "orderBlocks",
+      "prompt": "Put these lines in a sensible order: name the total, name the group size, then show full groups.",
+      "blocks": [
+        "stickers = 25",
+        "per_sheet = 4",
+        "print(stickers // per_sheet)"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Name the values first, then use them. 25 // 4 is 6 full sheets. A variable must be set before it's used."
+    },
+    {
+      "id": "u12l05e07",
+      "type": "fillBlank",
+      "prompt": "Fill the blank so leftover holds the loose stickers.\n\nstickers = 25\nper_sheet = 4\nleftover = stickers _ per_sheet\nprint(leftover)",
+      "answer": "%",
+      "acceptable": [
+        "%"
+      ],
+      "explanation": "25 % 4 is 1, so leftover holds 1. The % sign gives the loose stickers after the full sheets."
+    },
+    {
+      "id": "u12l05e08",
+      "type": "multipleChoice",
+      "prompt": "Why is leftover a better name than x here?\n\nleftover = 23 % 5",
+      "options": [
+        "It tells the reader the number is what's left over",
+        "It makes the code run faster",
+        "x is not allowed",
+        "There is no difference"
+      ],
+      "answer": 0,
+      "explanation": "A descriptive name like leftover makes the code explain itself. x would hide what the number means."
+    },
+    {
+      "id": "u12l05e09",
+      "type": "multipleChoice",
+      "prompt": "What will these lines show, each on its own line?\n\ndays = 23\nper_week = 7\nprint(days // per_week)\nprint(days % per_week)",
+      "options": [
+        "3 then 2",
+        "2 then 3",
+        "7 then 23",
+        "3 then 0"
+      ],
+      "answer": 0,
+      "explanation": "23 // 7 is 3 whole weeks, then 23 % 7 is 2 leftover days. Two prints give two lines of output."
+    },
+    {
+      "id": "u12l05e10",
+      "type": "tapTokens",
+      "prompt": "Build a line that shows how many full teams of team_size fit in players.",
+      "tokens": [
+        "print",
+        "(",
+        "players",
+        "//",
+        "team_size",
+        ")"
+      ],
+      "answer": [
+        "print",
+        "(",
+        "players",
+        "//",
+        "team_size",
+        ")"
+      ],
+      "explanation": "print(players // team_size) shows the full teams. // with variables reads just like the plan."
+    }
+  ]
+}

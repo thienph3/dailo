@@ -1,0 +1,129 @@
+{
+  "unitId": "u89",
+  "lessonId": "u89l07",
+  "title": "Spot the multi-state bug",
+  "idea": "TOOL (debugging): the common mistakes when juggling several running values - resetting inside the loop, updating the wrong one, bad starting values.",
+  "exercises": [
+    {
+      "type": "multipleChoice",
+      "prompt": "This should total AND count [2, 4]. What's the bug?\n\ntotal = 0\nfor n in [2, 4]:\n    count = 0\n    total = total + n\n    count = count + 1\nprint(total, count)",
+      "options": [
+        "count is reset to 0 inside the loop, so it always ends at 1",
+        "total is wrong",
+        "The list is wrong",
+        "print is wrong"
+      ],
+      "answer": 0,
+      "explanation": "count = 0 belongs BEFORE the loop. Inside, it resets every turn, so count ends at 1 instead of 2. Start running values outside the loop.",
+      "id": "u89l07e01"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "This should count passes and fails. What's wrong?\n\npasses = 0\nfails = 0\nfor s in [80, 30]:\n    if s >= 50:\n        passes = passes + 1\n    else:\n        passes = passes + 1\nprint(passes, fails)",
+      "options": [
+        "The else updates 'passes' - it should update 'fails'",
+        "passes starts wrong",
+        "The condition is wrong",
+        "Nothing is wrong"
+      ],
+      "answer": 0,
+      "explanation": "Both branches bump passes, so fails stays 0 and passes becomes 2. The else should say fails = fails + 1. Updating the wrong variable is a classic multi-state slip.",
+      "id": "u89l07e02"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Starting a 'smallest so far' tracker at 0 is safe for a list of positive numbers.",
+      "answer": false,
+      "explanation": "False. 0 is smaller than every positive number, so the tracker never updates. Start a min tracker high (or at the first item).",
+      "id": "u89l07e03"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Predict what this BUGGY code prints, then say the fix:\n\ntotal = 0\ncount = 0\nfor n in [5, 5]:\n    total = total + n\nprint(total, count)",
+      "options": [
+        "10 0 - count was never updated inside the loop",
+        "10 2",
+        "0 2",
+        "5 1"
+      ],
+      "answer": 0,
+      "explanation": "There's no count = count + 1 in the loop, so count stays 0. The fix is to update count each turn. Forgetting one running value is easy when juggling several.",
+      "id": "u89l07e04"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Which is the safest starting value for a 'biggest so far' tracker over scores that are 0 or more?",
+      "options": [
+        "0 - nothing real is below it, so the first score will replace or tie it",
+        "1000",
+        "-1 only",
+        "It doesn't matter"
+      ],
+      "answer": 0,
+      "explanation": "For a max over non-negative numbers, 0 is a safe floor. (For a min, start HIGH.) Starting values must sit outside the data's range on the right side.",
+      "id": "u89l07e05"
+    },
+    {
+      "type": "orderBlocks",
+      "prompt": "Order the steps to debug a multi-state loop.",
+      "blocks": [
+        "Check each running value starts BEFORE the loop",
+        "Check each turn updates the RIGHT variable",
+        "Walk one small example by hand and compare"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Starting values, then correct updates, then a hand-check. Most multi-state bugs hide in one of these three.",
+      "id": "u89l07e06"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "This should find high and low of [7, 2]. What's the bug?\n\nhigh = 0\nlow = 0\nfor n in [7, 2]:\n    if n > high:\n        high = n\n    if n < low:\n        low = n\nprint(high, low)",
+      "options": [
+        "low starts at 0; no item is below 0, so low stays 0 (should start high)",
+        "high is wrong",
+        "The loop runs too few times",
+        "Nothing is wrong"
+      ],
+      "answer": 0,
+      "explanation": "low = 0 is the bug: 7 and 2 are both above 0, so low never changes. Start low at a large number like 1000.",
+      "id": "u89l07e07"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Walking a tiny example (like a 2-item list) by hand is a reliable way to catch multi-state bugs.",
+      "answer": true,
+      "explanation": "True. Tracing two or three items by hand exposes a reset, a wrong update, or a bad start almost immediately.",
+      "id": "u89l07e08"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "A loop tracks total and count but count ends one too HIGH. Likely cause?",
+      "options": [
+        "count started at 1 instead of 0, or was updated twice per turn",
+        "total is wrong",
+        "The list is empty",
+        "print is broken"
+      ],
+      "answer": 0,
+      "explanation": "An off-by-one count usually means a wrong start (1 not 0) or a double update. Check the starting value and the number of updates per turn.",
+      "id": "u89l07e09"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "The three multi-state bug hotspots:",
+      "options": [
+        "Wrong starting values, updating the wrong variable, resetting inside the loop",
+        "Too many prints",
+        "Short variable names",
+        "Using a for loop"
+      ],
+      "answer": 0,
+      "explanation": "Start, target, and reset: check those three and most multi-state bugs vanish.",
+      "id": "u89l07e10"
+    }
+  ]
+}

@@ -1,0 +1,140 @@
+{
+  "unitId": "u86",
+  "lessonId": "u86l01",
+  "title": "What a sub-problem is",
+  "idea": "MEET: a sub-problem is one small piece of a big problem that you already know how to solve on its own — splitting means naming those pieces.",
+  "exercises": [
+    {
+      "type": "multipleChoice",
+      "prompt": "What is a 'sub-problem'?",
+      "options": [
+        "A small piece of a big problem you can solve on its own",
+        "A bigger version of the problem",
+        "A kind of loop",
+        "A mistake in the plan"
+      ],
+      "answer": 0,
+      "explanation": "A sub-problem is a bite-sized piece — small enough that you already know a pattern for it.",
+      "id": "u86l01e01"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Splitting a big problem means naming the smaller pieces it's made of.",
+      "answer": true,
+      "explanation": "Yes — decomposition is just listing the smaller, familiar jobs inside the big one.",
+      "id": "u86l01e02"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "PROBLEM: 'Show the total of the prices and how many are over 10.' One sub-problem is...",
+      "options": [
+        "Add up the prices (a running total)",
+        "Delete the list",
+        "Rename the problem",
+        "Print nothing"
+      ],
+      "answer": 0,
+      "explanation": "'Add up the prices' is one small, familiar job — an accumulator. It's a sub-problem of the bigger task.",
+      "id": "u86l01e03"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Why break a big problem into sub-problems?",
+      "options": [
+        "Each small piece is something you already know how to solve",
+        "To make it look harder",
+        "Because the computer insists",
+        "There is no reason"
+      ],
+      "answer": 0,
+      "explanation": "A big problem is scary; a list of small familiar jobs is not. Splitting turns one into the other.",
+      "id": "u86l01e04"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Every sub-problem has to be something brand new you've never seen.",
+      "answer": false,
+      "explanation": "The opposite — a good sub-problem is something FAMILIAR: a total, a count, a biggest, a filter.",
+      "id": "u86l01e05"
+    },
+    {
+      "type": "multiSelect",
+      "prompt": "Select the pieces that could be sub-problems of 'average the passing scores'.",
+      "options": [
+        "Filter out the passing scores",
+        "Total the passing scores",
+        "Count the passing scores",
+        "Rename the computer"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Filtering, totalling, and counting are all small familiar jobs. Together they build the average of the passers.",
+      "id": "u86l01e06"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "A big problem splits into THREE sub-problems. How many do you solve at a time?",
+      "options": [
+        "One at a time — each on its own",
+        "All three in one line",
+        "None of them",
+        "Only the hardest"
+      ],
+      "answer": 0,
+      "explanation": "Solve them one at a time. That's why we split — so each piece is simple and separate.",
+      "id": "u86l01e07"
+    },
+    {
+      "type": "matchPairs",
+      "prompt": "Match each big problem to one of its sub-problems.",
+      "pairs": [
+        {
+          "left": "Total and average the scores",
+          "right": "Add up the scores"
+        },
+        {
+          "left": "Count passes and fails",
+          "right": "Count how many pass"
+        },
+        {
+          "left": "Biggest and smallest price",
+          "right": "Track the biggest"
+        }
+      ],
+      "explanation": "Each big problem contains smaller familiar jobs. Naming one is the start of the split.",
+      "id": "u86l01e08"
+    },
+    {
+      "type": "orderBlocks",
+      "prompt": "Order the idea: from big problem to sub-problems.",
+      "blocks": [
+        "Read the big problem",
+        "Notice the small familiar jobs inside it",
+        "Write each small job as a sub-problem"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "See the big problem, spot the familiar jobs, list them. That list is your decomposition.",
+      "id": "u86l01e09"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "The big idea:",
+      "options": [
+        "A sub-problem is a small, familiar piece; splitting lists those pieces",
+        "A sub-problem is harder than the whole",
+        "Splitting makes problems bigger",
+        "Sub-problems can't be solved"
+      ],
+      "answer": 0,
+      "explanation": "Decomposition = naming the small familiar jobs inside a big problem. That's the whole unit.",
+      "id": "u86l01e10"
+    }
+  ]
+}

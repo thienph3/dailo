@@ -1,0 +1,120 @@
+{
+  "unitId": "u51",
+  "lessonId": "u51l02",
+  "title": "Writing a list down",
+  "idea": "Show how a list looks in code: square brackets, values separated by commas. Visible when printed. Still mostly recognizing, not building from scratch.",
+  "exercises": [
+    {
+      "id": "u51l02e01",
+      "type": "multipleChoice",
+      "prompt": "A list is written with square brackets, values separated by commas. Which of these is a valid list of three numbers?",
+      "options": [
+        "[3, 5, 7]",
+        "(3, 5, 7)",
+        "3, 5, 7",
+        "{3 5 7}"
+      ],
+      "answer": 0,
+      "explanation": "Square brackets [ ] wrap the list, and commas separate the items. [3, 5, 7] is a list of three numbers."
+    },
+    {
+      "id": "u51l02e02",
+      "type": "multipleChoice",
+      "prompt": "You can store a list in a variable, just like a number. Predict the output:\n\nscores = [3, 5, 7]\nprint(scores)",
+      "options": [
+        "[3, 5, 7]",
+        "3 5 7",
+        "15",
+        "scores"
+      ],
+      "answer": 0,
+      "explanation": "Printing a list shows the whole thing, brackets and all: [3, 5, 7]. A list is one value that happens to hold many."
+    },
+    {
+      "id": "u51l02e03",
+      "type": "trueFalse",
+      "prompt": "A list is written with square brackets [ ], not round brackets ( ).",
+      "answer": true,
+      "explanation": "Round brackets are for things like print(). Square brackets are the signal 'this is a list.'"
+    },
+    {
+      "id": "u51l02e04",
+      "type": "fillBlank",
+      "prompt": "Finish this list of three prices by adding the separators between the numbers:\n\nprices = [4____ 9____ 2]",
+      "answer": ",",
+      "acceptable": [","],
+      "explanation": "Commas separate the items in a list: [4, 9, 2]. Each comma marks the boundary between two values."
+    },
+    {
+      "id": "u51l02e05",
+      "type": "multipleChoice",
+      "prompt": "How many items are in the list [10, 20, 30, 40]?",
+      "options": [
+        "4",
+        "3",
+        "40",
+        "100"
+      ],
+      "answer": 0,
+      "explanation": "Count the values: 10, 20, 30, 40 — that's four items. The commas help you count the separate values."
+    },
+    {
+      "id": "u51l02e06",
+      "type": "multipleChoice",
+      "prompt": "A list can even hold just one item, or none at all. Which is an EMPTY list?",
+      "options": [
+        "[]",
+        "[0]",
+        "0",
+        "( )"
+      ],
+      "answer": 0,
+      "explanation": "[] is an empty list — brackets with nothing inside. [0] is a list with one item, the number 0."
+    },
+    {
+      "id": "u51l02e07",
+      "type": "matchPairs",
+      "prompt": "Match each list to how many items it holds.",
+      "pairs": [
+        { "left": "[]", "right": "0 items" },
+        { "left": "[9]", "right": "1 item" },
+        { "left": "[9, 9, 9]", "right": "3 items" }
+      ],
+      "explanation": "Count the values between the brackets. Repeated values still count as separate items."
+    },
+    {
+      "id": "u51l02e08",
+      "type": "tapTokens",
+      "prompt": "Arrange the tokens to make a list of the two numbers 6 and 8, stored in a variable named pair.",
+      "tokens": ["pair", "=", "[", "6", ",", "8", "]"],
+      "answer": ["pair", "=", "[", "6", ",", "8", "]"],
+      "explanation": "pair = [6, 8] stores a two-item list. The brackets wrap it and the comma separates the items."
+    },
+    {
+      "id": "u51l02e09",
+      "type": "multipleChoice",
+      "prompt": "A friend writes nums = 3, 5, 7 without brackets. What's missing to make it a list?",
+      "options": [
+        "The square brackets around the values",
+        "More commas",
+        "A print statement",
+        "Nothing — it's already a list"
+      ],
+      "answer": 0,
+      "explanation": "The square brackets are what make it a list: nums = [3, 5, 7]. Without them, it isn't written as a list."
+    },
+    {
+      "id": "u51l02e10",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\ntemps = [18, 21, 25]\nprint(temps)",
+      "options": [
+        "[18, 21, 25]",
+        "18",
+        "25",
+        "64"
+      ],
+      "answer": 0,
+      "explanation": "Printing the list shows all of it at once, with brackets: [18, 21, 25]. It does not add them up — it's a group, not a sum."
+    }
+  ]
+}

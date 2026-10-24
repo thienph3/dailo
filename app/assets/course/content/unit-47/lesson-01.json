@@ -1,0 +1,140 @@
+{
+  "unitId": "u47",
+  "lessonId": "u47l01",
+  "title": "Two shapes of repeating",
+  "idea": "MEET. Two ways to repeat: a KNOWN number of times (for/range) vs UNTIL something changes (while). No code — just telling them apart.",
+  "exercises": [
+    {
+      "id": "u47l01e01",
+      "type": "multipleChoice",
+      "prompt": "A loop can repeat a KNOWN number of times, or keep going UNTIL something changes. These are the two shapes. Which words hint at a KNOWN count?",
+      "options": [
+        "'exactly 5 times'",
+        "'until the user says stop'",
+        "'while there is money left'",
+        "'keep asking until it is right'"
+      ],
+      "answer": 0,
+      "explanation": "'Exactly 5 times' names a fixed count. When you know the number up front, that is the count-controlled shape (for with range)."
+    },
+    {
+      "id": "u47l01e02",
+      "type": "multipleChoice",
+      "prompt": "Which phrase hints at repeating UNTIL something changes (not a fixed count)?",
+      "options": [
+        "'keep going until the total passes 100'",
+        "'do it 3 times'",
+        "'for each of the 7 days'",
+        "'print 10 stars'"
+      ],
+      "answer": 0,
+      "explanation": "'Until the total passes 100' has no fixed count — you stop when a condition flips. That is condition-controlled (while)."
+    },
+    {
+      "id": "u47l01e03",
+      "type": "matchPairs",
+      "prompt": "Match each problem to its repeat shape.",
+      "pairs": [
+        {
+          "left": "Print 'Hi' 5 times",
+          "right": "known count (for)"
+        },
+        {
+          "left": "Ask until they type the right code",
+          "right": "until it changes (while)"
+        },
+        {
+          "left": "Add up the numbers 1 to 10",
+          "right": "known count (for)"
+        },
+        {
+          "left": "Keep doubling until over 1000",
+          "right": "until it changes (while)"
+        }
+      ],
+      "explanation": "If you can count the repeats before starting, use a for loop. If you stop when a condition flips, use a while loop."
+    },
+    {
+      "id": "u47l01e04",
+      "type": "trueFalse",
+      "prompt": "If you know the exact number of repeats before the loop starts, a for loop with range is a natural fit.",
+      "answer": true,
+      "explanation": "Yes — a known, fixed count is exactly what range(n) is for. You tell it how many times up front."
+    },
+    {
+      "id": "u47l01e05",
+      "type": "trueFalse",
+      "prompt": "If you do NOT know how many repeats you need, but you know WHEN to stop, a while loop fits better.",
+      "answer": true,
+      "explanation": "True. while keeps going as long as its condition stays true, so it handles 'repeat until ...' problems."
+    },
+    {
+      "id": "u47l01e06",
+      "type": "multipleChoice",
+      "prompt": "'Ring the bell 4 times.' Which shape?",
+      "options": [
+        "Known count — a for loop",
+        "Until it changes — a while loop",
+        "No loop at all",
+        "Both are equally wrong"
+      ],
+      "answer": 0,
+      "explanation": "4 is a fixed count you know before starting, so a for loop over range(4) fits best."
+    },
+    {
+      "id": "u47l01e07",
+      "type": "multipleChoice",
+      "prompt": "'Keep scooping ice cream until the tub is empty.' Which shape?",
+      "options": [
+        "Until it changes — a while loop",
+        "Known count — a for loop",
+        "No loop at all",
+        "A single print"
+      ],
+      "answer": 0,
+      "explanation": "You do not know how many scoops in advance; you stop when the tub is empty. That is a condition — a while loop."
+    },
+    {
+      "id": "u47l01e08",
+      "type": "orderBlocks",
+      "prompt": "Put the decision in order: how to pick the loop shape for a problem.",
+      "blocks": [
+        "Read the problem for how the repeating stops",
+        "If the number of repeats is known, pick a for loop",
+        "If it stops when a condition changes, pick a while loop"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "First see HOW the repeating ends. A known count means for; a changing condition means while."
+    },
+    {
+      "id": "u47l01e09",
+      "type": "multipleChoice",
+      "prompt": "'Count down from 10 to 1.' Which shape, and why?",
+      "options": [
+        "for — you know it runs 10 times",
+        "while — the count is a secret",
+        "No loop needed",
+        "It cannot be looped"
+      ],
+      "answer": 0,
+      "explanation": "Counting 10 down to 1 is exactly 10 repeats — a known count — so a for loop over a range fits."
+    },
+    {
+      "id": "u47l01e10",
+      "type": "multipleChoice",
+      "prompt": "Why choose the loop shape BEFORE writing code?",
+      "options": [
+        "It decides the whole structure — for vs while changes how you write it",
+        "It makes the problem shorter",
+        "It lets you skip the problem",
+        "It changes the answer"
+      ],
+      "answer": 0,
+      "explanation": "Picking the shape first shapes your plan. A for loop and a while loop look different, so you choose before coding."
+    }
+  ]
+}

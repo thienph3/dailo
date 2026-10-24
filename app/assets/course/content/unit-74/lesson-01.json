@@ -1,0 +1,129 @@
+{
+  "unitId": "u74",
+  "lessonId": "u74l01",
+  "title": "Show it vs hand it back",
+  "idea": "TOOL: print SHOWS a value on screen; return HANDS a value back to the caller. They are not the same.",
+  "exercises": [
+    {
+      "id": "u74l01e01",
+      "type": "multipleChoice",
+      "prompt": "Two different jobs: putting a value on the SCREEN, and giving a value BACK to the caller. Which does each?",
+      "options": [
+        "print shows on screen; return hands back to the caller",
+        "Both show on screen",
+        "Both hand back",
+        "return shows; print hands back"
+      ],
+      "answer": 0,
+      "explanation": "print = show on screen. return = hand a value back so the caller can use it. Different jobs, different words."
+    },
+    {
+      "id": "u74l01e02",
+      "type": "multipleChoice",
+      "prompt": "def show(n):\n    print(n)\n\ndef give(n):\n    return n\n\nWhich one lets you write 'x = ...(5)' and get 5 in x?",
+      "options": [
+        "give - it returns",
+        "show - it prints",
+        "Both",
+        "Neither"
+      ],
+      "answer": 0,
+      "explanation": "Only return hands a value back to store. give(5) returns 5 into x; show(5) prints and leaves x as None."
+    },
+    {
+      "id": "u74l01e03",
+      "type": "trueFalse",
+      "prompt": "print puts text on the screen but does not give a value back to the caller.",
+      "answer": true,
+      "explanation": "Right. print's job is display. If you want a value to reuse, that is return's job."
+    },
+    {
+      "id": "u74l01e04",
+      "type": "multipleChoice",
+      "prompt": "def give(n):\n    return n\n\nx = give(5)\n\nDoes anything appear on screen?",
+      "options": [
+        "No - return does not print",
+        "Yes, it prints 5",
+        "Yes, it prints give",
+        "It prints None"
+      ],
+      "answer": 0,
+      "explanation": "return hands 5 back into x but shows nothing. You would need print(x) to see it on screen."
+    },
+    {
+      "id": "u74l01e05",
+      "type": "multipleChoice",
+      "prompt": "def show(n):\n    print(n)\n\nshow(5)\n\nDoes anything appear on screen?",
+      "options": [
+        "Yes - 5 appears",
+        "No",
+        "It appears only if stored",
+        "It shows None"
+      ],
+      "answer": 0,
+      "explanation": "show prints n, so 5 appears. print's job is exactly to put the value on the screen."
+    },
+    {
+      "id": "u74l01e06",
+      "type": "matchPairs",
+      "prompt": "Match each word to its job.",
+      "pairs": [
+        {
+          "left": "print",
+          "right": "show a value on screen"
+        },
+        {
+          "left": "return",
+          "right": "hand a value back to the caller"
+        }
+      ],
+      "explanation": "print displays; return hands back. Keeping these straight avoids the most common function mix-up."
+    },
+    {
+      "id": "u74l01e07",
+      "type": "multipleChoice",
+      "prompt": "You want to store a sub-plan's answer and do more math with it. Which do you need?",
+      "options": [
+        "return",
+        "print",
+        "Either works the same",
+        "Neither"
+      ],
+      "answer": 0,
+      "explanation": "Only a returned value can be stored and reused. A printed value is shown and then gone."
+    },
+    {
+      "id": "u74l01e08",
+      "type": "multipleChoice",
+      "prompt": "You just want to SEE the answer on screen and nothing more. Which is enough?",
+      "options": [
+        "print",
+        "return",
+        "Both are required",
+        "Neither"
+      ],
+      "answer": 0,
+      "explanation": "If you only need to display it, print does the job. return matters when the caller must reuse the value."
+    },
+    {
+      "id": "u74l01e09",
+      "type": "multipleChoice",
+      "prompt": "REVIEW: you have used print since the very first unit. What is genuinely NEW about return?",
+      "options": [
+        "It gives a value back instead of just showing it",
+        "It is a louder print",
+        "It ends loops",
+        "It makes lists"
+      ],
+      "answer": 0,
+      "explanation": "print is old news - it shows. return is the new idea: handing a value back so your program can keep using it."
+    },
+    {
+      "id": "u74l01e10",
+      "type": "trueFalse",
+      "prompt": "A sub-plan can both print AND return - but they do different things.",
+      "answer": true,
+      "explanation": "Yes. It could print a message for the user and also return a value for the caller. Two separate jobs."
+    }
+  ]
+}

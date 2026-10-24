@@ -1,0 +1,127 @@
+{
+  "unitId": "u09",
+  "lessonId": "u09l06",
+  "title": "First set, then change",
+  "idea": "There is a difference between creating a box the first time and giving it a new number later. Both use =. (Numbers only — text as data comes later.)",
+  "exercises": [
+    {
+      "id": "u09l06e01",
+      "type": "multipleChoice",
+      "prompt": "In this code, which line CREATES the box, and which one CHANGES it?\n\nspeed = 30\nspeed = 60",
+      "options": [
+        "Line 1 creates it; line 2 changes it",
+        "Line 1 changes it; line 2 creates it",
+        "Both create new boxes",
+        "Both change the same box's history"
+      ],
+      "answer": 0,
+      "explanation": "The first time you use a name, you create the box. After that, = gives it a new value."
+    },
+    {
+      "id": "u09l06e02",
+      "type": "trueFalse",
+      "prompt": "The same symbol = is used both to create a variable and to change it.",
+      "answer": true,
+      "explanation": "Yes. = means 'put this number in the box'. The first time it makes the box; later it replaces the value."
+    },
+    {
+      "id": "u09l06e03",
+      "type": "multipleChoice",
+      "prompt": "What will this show?\n\nprice = 5\nprice = 8\nprint(price)",
+      "options": [
+        "8",
+        "5",
+        "5 8",
+        "58"
+      ],
+      "answer": 0,
+      "explanation": "Line 1 creates price as 5. Line 2 changes it to 8. The box now holds 8."
+    },
+    {
+      "id": "u09l06e04",
+      "type": "matchPairs",
+      "prompt": "Match each idea to what it does.",
+      "pairs": [
+        {
+          "left": "First time you use a name",
+          "right": "Creates the box"
+        },
+        {
+          "left": "Using the name again with =",
+          "right": "Changes the number"
+        },
+        {
+          "left": "print(name)",
+          "right": "Shows the current number"
+        }
+      ],
+      "explanation": "Create, change, show — three different jobs. The first two both use =."
+    },
+    {
+      "id": "u09l06e05",
+      "type": "multipleChoice",
+      "prompt": "Which comment best describes line 2?\n\ncount = 10\ncount = 25",
+      "options": [
+        "Reassigning count — giving it a new value",
+        "Creating a brand-new box named count",
+        "Printing count",
+        "Deleting count"
+      ],
+      "answer": 0,
+      "explanation": "count already exists from line 1. Line 2 reassigns it to a new value, 25."
+    },
+    {
+      "id": "u09l06e06",
+      "type": "orderBlocks",
+      "prompt": "Arrange: create a box with 1, change it to 4, then show it.",
+      "blocks": [
+        "stage = 1",
+        "stage = 4",
+        "print(stage)"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Create first, change second, print last. The box ends holding 4."
+    },
+    {
+      "id": "u09l06e07",
+      "type": "trueFalse",
+      "prompt": "You must create a variable before you can change it.",
+      "answer": true,
+      "explanation": "Right. There has to be a box first. You can't change a number that was never stored."
+    },
+    {
+      "id": "u09l06e08",
+      "type": "fillBlank",
+      "prompt": "Create a box called floor holding 1.\n\n____ = 1\nprint(floor)",
+      "answer": "floor",
+      "acceptable": [
+        "floor"
+      ],
+      "explanation": "The name on the left of = is the box's label. Here it's floor."
+    },
+    {
+      "id": "u09l06e09",
+      "type": "multipleChoice",
+      "prompt": "What will this show (two lines)?\n\nlevel = 1\nprint(level)\nlevel = 2\nprint(level)",
+      "options": [
+        "1 then 2",
+        "2 then 1",
+        "1 then 1",
+        "2 then 2"
+      ],
+      "answer": 0,
+      "explanation": "Line 1 creates 1, printed first. Then we reassign to 2, printed second."
+    },
+    {
+      "id": "u09l06e10",
+      "type": "trueFalse",
+      "prompt": "Creating and changing a variable look almost the same in code — name = number.",
+      "answer": true,
+      "explanation": "True! The code looks identical. The difference is whether the box already existed. You've got it."
+    }
+  ]
+}

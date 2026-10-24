@@ -1,0 +1,141 @@
+{
+  "unitId": "u61",
+  "lessonId": "u61l08",
+  "title": "Solve it together: how many on sale",
+  "idea": "GUIDED via UEPCC. Apply COUNT with a 'less than' rule; the comparison choice is the key decision.",
+  "problem": "Prices are [12, 8, 20, 5, 15]. An item is 'on sale' if its price is under 10. How many are on sale?",
+  "exercises": [
+    {
+      "id": "u61l08e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: prices [12, 8, 20, 5, 15], on sale = under 10. How many on sale?\n\nWhat is the OUTPUT?",
+      "options": [
+        "A count of items priced under 10",
+        "The cheapest item",
+        "The total price",
+        "Each price printed"
+      ],
+      "answer": 0,
+      "explanation": "'How many are on sale' is a count of items fitting the rule."
+    },
+    {
+      "id": "u61l08e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "What is the RULE for 'on sale'?",
+      "options": [
+        "price < 10",
+        "price <= 10",
+        "price > 10",
+        "price == 10"
+      ],
+      "answer": 0,
+      "explanation": "'Under 10' means strictly less than 10, so price < 10. 10 itself is NOT on sale."
+    },
+    {
+      "id": "u61l08e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example by hand. Which prices in [12, 8, 20, 5, 15] are under 10, and how many?",
+      "options": [
+        "8 and 5 — that's 2",
+        "8, 5, 12 — that's 3",
+        "None",
+        "All five"
+      ],
+      "answer": 0,
+      "explanation": "Only 8 and 5 are under 10. That's 2 — your check value."
+    },
+    {
+      "id": "u61l08e04",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Plan. Which pattern, and what guards the +1?",
+      "options": [
+        "Count, with the +1 inside 'if price < 10'",
+        "Sum, adding every price",
+        "Max, keeping the biggest",
+        "Min, keeping the smallest"
+      ],
+      "answer": 0,
+      "explanation": "Count with a condition: add 1 only when price < 10."
+    },
+    {
+      "id": "u61l08e05",
+      "type": "trueFalse",
+      "uepcc": "P",
+      "prompt": "Choosing < versus <= changes whether a price of exactly 10 is counted.",
+      "answer": true,
+      "explanation": "'Under 10' is <, which excludes 10. If the rule were '10 or less', you'd use <=. The wording decides."
+    },
+    {
+      "id": "u61l08e06",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code it. Arrange the lines.",
+      "answer": [
+        1,
+        3,
+        2,
+        0,
+        4
+      ],
+      "blocks": [
+        "        count = count + 1",
+        "count = 0",
+        "    if price < 10:",
+        "for price in prices:",
+        "print(count)"
+      ],
+      "explanation": "Start count at 0, loop, test price < 10, add 1 on a match, print."
+    },
+    {
+      "id": "u61l08e07",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Finish the rule for 'under 10':\n\nfor price in prices:\n    if price ____ 10:\n        count = count + 1",
+      "answer": "<",
+      "acceptable": [
+        "<"
+      ],
+      "explanation": "'Under 10' is strictly less than, so the sign is <."
+    },
+    {
+      "id": "u61l08e08",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check. The code prints 2. Your hand example said 2. So...",
+      "options": [
+        "It passes",
+        "It fails",
+        "You can't tell",
+        "Change the example"
+      ],
+      "answer": 0,
+      "explanation": "The code's count matches the hand count, so the solution is correct."
+    },
+    {
+      "id": "u61l08e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "New input: prices = [10, 9, 3]. With rule price < 10, what prints?",
+      "options": [
+        "2",
+        "3",
+        "1",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "9 and 3 are under 10; 10 is NOT (because < excludes it). So 2."
+    },
+    {
+      "id": "u61l08e10",
+      "type": "trueFalse",
+      "uepcc": "Check",
+      "prompt": "A good re-check uses a value right on the boundary (like 10) to prove the comparison is exactly right.",
+      "answer": true,
+      "explanation": "Boundary values expose off-by-one comparison bugs. Testing 10 against '< 10' confirms it is excluded."
+    }
+  ]
+}

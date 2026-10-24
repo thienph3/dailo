@@ -1,0 +1,148 @@
+{
+  "unitId": "u56",
+  "lessonId": "u56l04",
+  "title": "Solve it together: a new list of final prices",
+  "idea": "GUIDED UEPCC. For each price, compute a 5-off price and collect the results into a NEW list with append.",
+  "problem": "A shop gives 5 off every item. Build a new list of the discounted prices.",
+  "exercises": [
+    {
+      "id": "u56l04e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: Build a NEW list where every price has had 5 subtracted.\n\nWhat is the OUTPUT?",
+      "options": [
+        "A new list of discounted prices",
+        "A single number",
+        "The original list",
+        "The first price"
+      ],
+      "answer": 0,
+      "explanation": "Output is a new list — one result per input price. Transform-and-collect."
+    },
+    {
+      "id": "u56l04e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "What do you do to each price?",
+      "options": [
+        "Subtract 5 and keep the result",
+        "Multiply by 5",
+        "Compare to 5",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "Per item: price - 5, then collect it."
+    },
+    {
+      "id": "u56l04e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example by hand. prices = [10, 20]. What should the new list be?",
+      "options": [
+        "[5, 15]",
+        "[10, 20]",
+        "[15, 25]",
+        "[30]"
+      ],
+      "answer": 0,
+      "explanation": "10-5=5, 20-5=15, so the new list is [5, 15]. Your check target."
+    },
+    {
+      "id": "u56l04e04",
+      "type": "trueFalse",
+      "uepcc": "E",
+      "prompt": "The original 'prices' list should stay [10, 20] — we build a SEPARATE list.",
+      "answer": true,
+      "explanation": "We append to a new list, so the input stays unchanged."
+    },
+    {
+      "id": "u56l04e05",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Plan it. Order the steps.",
+      "blocks": [
+        "Start a new empty list",
+        "For each price, subtract 5",
+        "Append that result to the new list"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Empty list first, then for each price compute and append. Repeat."
+    },
+    {
+      "id": "u56l04e06",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Why start with an empty list before the loop?",
+      "options": [
+        "So there's somewhere to collect each result",
+        "Lists must start empty",
+        "To count faster",
+        "It isn't needed"
+      ],
+      "answer": 0,
+      "explanation": "You need a place to put results as you compute them — start empty, then append."
+    },
+    {
+      "id": "u56l04e07",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Code it. Fill the method:\n\nfinal = []\nfor price in prices:\n    final.____(price - 5)",
+      "answer": "append",
+      "acceptable": [
+        "append"
+      ],
+      "explanation": "append adds each discounted price to the new list."
+    },
+    {
+      "id": "u56l04e08",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Arrange the full solution.",
+      "blocks": [
+        "    final.append(price - 5)",
+        "final = []",
+        "for price in prices:",
+        "prices = [10, 20]"
+      ],
+      "answer": [
+        3,
+        1,
+        2,
+        0
+      ],
+      "explanation": "Input list, empty result list, loop, append each result. final ends [5, 15]."
+    },
+    {
+      "id": "u56l04e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check. After running, final is [5, 15]. Hand example said [5, 15]. Verdict?",
+      "options": [
+        "Passes",
+        "Fails",
+        "Unknown",
+        "Change inputs"
+      ],
+      "answer": 0,
+      "explanation": "Matches the example — correct."
+    },
+    {
+      "id": "u56l04e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Re-check with prices = [8, 5, 100]. What is 'final'?",
+      "options": [
+        "[3, 0, 95]",
+        "[8, 5, 100]",
+        "[13, 10, 105]",
+        "[103]"
+      ],
+      "answer": 0,
+      "explanation": "8-5=3, 5-5=0, 100-5=95. Works for new inputs."
+    }
+  ]
+}

@@ -1,0 +1,160 @@
+{
+  "unitId": "u83",
+  "lessonId": "u83l10",
+  "title": "Finish it together: complete the broken split (review)",
+  "idea": "GUIDED (UEPCC) + review. A multi-stage solution (filter big orders, then total them) is half-built and half-buggy. Finish the missing stage and fix the one bug, using the whole Lap-5 toolkit.",
+  "problem": "Orders are [20, 60, 45, 80]. Sum ONLY the big orders (>= 50). The filter is written but the totalling loop is missing, and the filter uses '> 50' (should be '>= 50'). Finish and fix it.",
+  "exercises": [
+    {
+      "id": "u83l10e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: sum ONLY orders >= 50 from [20, 60, 45, 80]. What's the OUTPUT?",
+      "options": [
+        "The total of the big orders",
+        "The count of big orders",
+        "The average",
+        "The biggest order"
+      ],
+      "answer": 0,
+      "explanation": "Output = the SUM of the big orders — a running total over the filtered list."
+    },
+    {
+      "id": "u83l10e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "Understand — what TWO problems must we handle?",
+      "options": [
+        "The missing totalling loop AND the '> 50' boundary bug",
+        "Only the missing loop",
+        "Only the boundary bug",
+        "Nothing is wrong"
+      ],
+      "answer": 0,
+      "explanation": "This split is both unfinished (no totalling loop) and buggy (> 50 drops an exact 50). We fix both."
+    },
+    {
+      "id": "u83l10e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example — by hand with the CORRECT rule (>= 50). Big orders from [20, 60, 45, 80] are 60 and 80. Their total?",
+      "options": [
+        "140",
+        "200",
+        "60",
+        "80"
+      ],
+      "answer": 0,
+      "explanation": "60 + 80 = 140. Hand answer = 140. (20 and 45 are below 50.) That's our check value."
+    },
+    {
+      "id": "u83l10e04",
+      "type": "trueFalse",
+      "uepcc": "E",
+      "prompt": "REVIEW: a running total should start at 0 and add each big order as we walk the filtered list.",
+      "answer": true,
+      "explanation": "Yes — the accumulate pattern from Lap 4b: start at 0, add each item. No sum() builtin."
+    },
+    {
+      "id": "u83l10e05",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Plan — order the finished solution.",
+      "blocks": [
+        "Fix the filter rule to >= 50",
+        "Build a list of the big orders with append",
+        "Start a total at 0 and add each big order",
+        "Show the total"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "Fix the boundary, filter into a list, accumulate the total, show. The missing stage is the totalling loop."
+    },
+    {
+      "id": "u83l10e06",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "REVIEW — which pattern does the MISSING stage use?",
+      "options": [
+        "Running total (accumulate) over the filtered list",
+        "Track the biggest",
+        "Search / membership",
+        "Just a print"
+      ],
+      "answer": 0,
+      "explanation": "The missing stage sums the filtered list — the accumulate pattern. Each stage is a familiar tool."
+    },
+    {
+      "id": "u83l10e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code the finished, fixed solution.",
+      "blocks": [
+        "orders = [20, 60, 45, 80]",
+        "big = []",
+        "for order in orders:",
+        "    if order >= 50:",
+        "        big.append(order)",
+        "total = 0",
+        "for b in big:",
+        "    total = total + b",
+        "print(total)"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "explanation": "Filter with the fixed >= 50 into 'big', then accumulate 'total' over 'big', then print. Missing stage added, boundary bug fixed, no builtins."
+    },
+    {
+      "id": "u83l10e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Finish the missing accumulate step:\n\nfor b in big:\n    total = total ____ b",
+      "answer": "+",
+      "acceptable": [
+        "+"
+      ],
+      "explanation": "We add each big order to the running total, so the operator is +. total climbs by each big order."
+    },
+    {
+      "id": "u83l10e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check — the finished code prints 140; your hand example was 140. Verdict?",
+      "options": [
+        "Passes — finished and fixed",
+        "Fails",
+        "Unknown",
+        "Rewrite example"
+      ],
+      "answer": 0,
+      "explanation": "Output (140) matches the hand example (140). The missing stage is complete and the boundary bug is gone."
+    },
+    {
+      "id": "u83l10e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Re-check the boundary: orders [50, 49, 100]. With >= 50, the big-orders total is...",
+      "options": [
+        "150 — 50 and 100",
+        "100 — only 100",
+        "199",
+        "49"
+      ],
+      "answer": 0,
+      "explanation": "50 and 100 are big (>= includes 50); 49 isn't. 50 + 100 = 150. You finished AND fixed a split problem — the whole toolkit at work!"
+    }
+  ]
+}

@@ -1,0 +1,140 @@
+{
+  "unitId": "u87",
+  "lessonId": "u87l05",
+  "title": "'Just the ones that...' means filter, then act",
+  "idea": "MEET: a sub-problem wanting only the items matching a rule signals a filter — usually followed by another pattern on the kept items.",
+  "exercises": [
+    {
+      "type": "multipleChoice",
+      "prompt": "Sub-problem: 'keep only the passing scores.' Which pattern?",
+      "options": [
+        "Filter",
+        "Running total",
+        "Track the biggest",
+        "Search"
+      ],
+      "answer": 0,
+      "explanation": "Keeping only items that match a rule is a filter. It narrows the list before further work.",
+      "id": "u87l05e01"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "A filter is often followed by another pattern (like total or count) on the kept items.",
+      "answer": true,
+      "explanation": "Yes — 'average the passing scores' is filter THEN total/count/divide. Filter rarely works alone.",
+      "id": "u87l05e02"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "'Average of the orders over 100' needs filter THEN...",
+      "options": [
+        "total and count the filtered orders, then divide",
+        "nothing else",
+        "a search",
+        "sorting only"
+      ],
+      "answer": 0,
+      "explanation": "Filter to the big orders, total and count them, then divide. A filter followed by the average pattern.",
+      "id": "u87l05e03"
+    },
+    {
+      "type": "multiSelect",
+      "prompt": "Select sub-problems that start with a filter.",
+      "options": [
+        "sum of only the positive numbers",
+        "how many of the big orders there are",
+        "total of every number",
+        "the average of the passing scores"
+      ],
+      "answer": [
+        0,
+        1,
+        3
+      ],
+      "explanation": "Three act on a SUBSET (positives, big orders, passers) — filter first. 'Total of every number' uses no filter.",
+      "id": "u87l05e04"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "'Only', 'just the', and 'that match' in a sub-problem hint at...",
+      "options": [
+        "a filter",
+        "a running total of everything",
+        "a plain search",
+        "no pattern"
+      ],
+      "answer": 0,
+      "explanation": "These words mean 'a subset', which is the filter pattern's job.",
+      "id": "u87l05e05"
+    },
+    {
+      "type": "matchPairs",
+      "prompt": "Match each sub-problem to its first pattern.",
+      "pairs": [
+        {
+          "left": "sum of the positives",
+          "right": "filter (then total)"
+        },
+        {
+          "left": "count of the passers",
+          "right": "filter (then count)"
+        },
+        {
+          "left": "total of all items",
+          "right": "running total (no filter)"
+        }
+      ],
+      "explanation": "A subset ('positives', 'passers') needs a filter first. 'All items' needs none.",
+      "id": "u87l05e06"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "'Total of ALL the prices' needs a filter.",
+      "answer": false,
+      "explanation": "No — 'all' means every item, so no filtering. Filters are for subsets, not the whole list.",
+      "id": "u87l05e07"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Why does filtering usually come FIRST in its chain?",
+      "options": [
+        "Later steps act only on the kept items",
+        "Filters are alphabetically first",
+        "It runs faster",
+        "It doesn't matter"
+      ],
+      "answer": 0,
+      "explanation": "The total, count, or average that follows must work on the subset — so you isolate it first.",
+      "id": "u87l05e08"
+    },
+    {
+      "type": "orderBlocks",
+      "prompt": "Order the 'filter then act' shape for 'average the passing scores'.",
+      "blocks": [
+        "Filter: keep only the passing scores",
+        "Total and count the passing scores",
+        "Divide to get the average"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Filter, then total/count, then divide. The filter feeds everything after it.",
+      "id": "u87l05e09"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "The big idea:",
+      "options": [
+        "'Only the ones that...' means filter first, then another pattern on the kept items",
+        "Filter is always the last step",
+        "Filter replaces every other pattern",
+        "Subsets need no filter"
+      ],
+      "answer": 0,
+      "explanation": "A subset signals a filter, usually chained with a total, count, or average on what's kept.",
+      "id": "u87l05e10"
+    }
+  ]
+}

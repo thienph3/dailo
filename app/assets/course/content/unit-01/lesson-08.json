@@ -1,0 +1,129 @@
+{
+  "unitId": "u01",
+  "lessonId": "u01l08",
+  "title": "Reading code: predict the output",
+  "idea": "Before running code, a good programmer predicts what it will show. Practice reading, not just writing.",
+  "exercises": [
+    {
+      "id": "u01l08e01",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nprint(\"cat\")",
+      "options": [
+        "cat",
+        "\"cat\"",
+        "print(cat)",
+        "Cat"
+      ],
+      "answer": 0,
+      "explanation": "Exactly the text in the quotes: cat. Capital letters matter — it's lowercase here."
+    },
+    {
+      "id": "u01l08e02",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nprint(\"5 apples\")",
+      "options": [
+        "5 apples",
+        "5",
+        "apples",
+        "5+apples"
+      ],
+      "answer": 0,
+      "explanation": "It's one piece of text, shown exactly: 5 apples."
+    },
+    {
+      "id": "u01l08e03",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nprint(\"Hi\")\nprint(\"Hi\")",
+      "options": [
+        "Hi on one line, Hi on the next",
+        "HiHi",
+        "Hi",
+        "Hi Hi"
+      ],
+      "answer": 0,
+      "explanation": "Two prints, two lines. Both show Hi."
+    },
+    {
+      "id": "u01l08e04",
+      "type": "trueFalse",
+      "prompt": "print(\"Dog\") and print(\"dog\") show exactly the same thing.",
+      "answer": false,
+      "explanation": "Capital D vs lowercase d — the computer shows them exactly, so Dog and dog differ."
+    },
+    {
+      "id": "u01l08e05",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nprint(\"  spaced  \")",
+      "options": [
+        "  spaced   (with the extra spaces)",
+        "spaced",
+        "  spaced",
+        "spaced  "
+      ],
+      "answer": 0,
+      "explanation": "Spaces inside the quotes are text too, so they're shown exactly."
+    },
+    {
+      "id": "u01l08e06",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nprint(\"end.\")",
+      "options": [
+        "end.",
+        "end",
+        ".",
+        "\"end.\""
+      ],
+      "answer": 0,
+      "explanation": "The full text including the dot: end."
+    },
+    {
+      "id": "u01l08e07",
+      "type": "multipleChoice",
+      "prompt": "Which code produces this output?\n\nwow",
+      "options": [
+        "print(\"wow\")",
+        "print(wow)",
+        "print(\"WOW\")",
+        "print(\"wow\""
+      ],
+      "answer": 0,
+      "explanation": "Correct, complete, lowercase, matching quotes and brackets."
+    },
+    {
+      "id": "u01l08e08",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nprint(\"3\")\nprint(\"4\")",
+      "options": [
+        "3 then 4 on two lines",
+        "7",
+        "34",
+        "3 4"
+      ],
+      "answer": 0,
+      "explanation": "They're text in quotes on separate prints: 3, then 4 below. No math happens."
+    },
+    {
+      "id": "u01l08e09",
+      "type": "fillBlank",
+      "prompt": "What single word does this show?\n\nprint(\"banana\")",
+      "answer": "banana",
+      "acceptable": [
+        "banana"
+      ],
+      "explanation": "Exactly the text in the quotes: banana."
+    },
+    {
+      "id": "u01l08e10",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nprint(\"Line 1\")\nprint()\nprint(\"Line 2\")",
+      "options": [
+        "Line 1, a blank line, then Line 2",
+        "Line 1 Line 2",
+        "Line 1Line 2",
+        "Just Line 2"
+      ],
+      "answer": 0,
+      "explanation": "The empty print() in the middle makes a blank line between the two messages."
+    }
+  ]
+}

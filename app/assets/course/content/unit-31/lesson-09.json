@@ -1,0 +1,158 @@
+{
+  "unitId": "u31",
+  "lessonId": "u31l09",
+  "title": "Solve it: login check with name and PIN",
+  "idea": "GUIDED. UEPCC using combined 'and' conditions on two typed values.",
+  "problem": "Ask for a name and a PIN. Access is granted only when the name is 'admin' AND the PIN is 1234.",
+  "exercises": [
+    {
+      "id": "u31l09e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: grant access only if name is 'admin' AND PIN is 1234. Print 'Access granted' or 'Denied'.\n\nWhat is the OUTPUT?",
+      "options": [
+        "'Access granted' or 'Denied'",
+        "The PIN",
+        "The name",
+        "A number"
+      ],
+      "answer": 0,
+      "explanation": "The output is one of two messages. Both conditions must hold, which hints at 'and'."
+    },
+    {
+      "id": "u31l09e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "The PIN is compared to the number 1234. What must you do to the PIN input?",
+      "options": [
+        "Convert it with int()",
+        "Leave it as text and hope",
+        "Add 1234 to it",
+        "Compare it to \"admin\""
+      ],
+      "answer": 0,
+      "explanation": "input() gives text; convert the PIN with int() so 1234 compares as a number."
+    },
+    {
+      "id": "u31l09e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Work it by hand: name admin, PIN 1234. What prints?",
+      "options": [
+        "Access granted",
+        "Denied",
+        "admin",
+        "1234"
+      ],
+      "answer": 0,
+      "explanation": "Both parts are correct, so 'Access granted'. The all-correct check value."
+    },
+    {
+      "id": "u31l09e04",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Another by hand: name admin, PIN 9999. What prints?",
+      "options": [
+        "Denied",
+        "Access granted",
+        "9999",
+        "admin"
+      ],
+      "answer": 0,
+      "explanation": "The name is right but the PIN is wrong; with 'and' one wrong part means 'Denied'."
+    },
+    {
+      "id": "u31l09e05",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Plan: both the name and the PIN must be correct. Which tool fits?",
+      "options": [
+        "and",
+        "or",
+        "not",
+        "elif"
+      ],
+      "answer": 0,
+      "explanation": "'and' requires both sides true. If either is wrong, access is denied."
+    },
+    {
+      "id": "u31l09e06",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Plan the steps in order.",
+      "blocks": [
+        "Read the name and the PIN",
+        "Check name is 'admin' AND PIN is 1234",
+        "Print 'Access granted' or 'Denied'"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Read both values, test that both are correct together, then print the right message."
+    },
+    {
+      "id": "u31l09e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Arrange the code to match the plan.",
+      "blocks": [
+        "name = input(\"Name: \")",
+        "pin = int(input(\"PIN: \"))",
+        "if name == \"admin\" and pin == 1234:",
+        "    print(\"Access granted\")",
+        "else:",
+        "    print(\"Denied\")"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "explanation": "Read name and PIN (PIN via int), test both with 'and', print the result."
+    },
+    {
+      "id": "u31l09e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Complete the PIN comparison:\n\nif name == \"admin\" and pin ____ 1234:\n    print(\"Access granted\")\nelse:\n    print(\"Denied\")",
+      "answer": "==",
+      "acceptable": [
+        "=="
+      ],
+      "explanation": "Use == to test the PIN equals 1234. One = would assign and break the condition."
+    },
+    {
+      "id": "u31l09e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check with the first example: name admin, PIN 1234. What prints?",
+      "options": [
+        "Access granted",
+        "Denied",
+        "admin",
+        "1234"
+      ],
+      "answer": 0,
+      "explanation": "Both sides are True, so 'and' is True: 'Access granted' — matching your hand answer."
+    },
+    {
+      "id": "u31l09e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Re-check: name guest, PIN 1234. What prints?",
+      "options": [
+        "Denied",
+        "Access granted",
+        "guest",
+        "1234"
+      ],
+      "answer": 0,
+      "explanation": "The name fails even though the PIN is right; with 'and' that is 'Denied'. One wrong part is enough."
+    }
+  ]
+}

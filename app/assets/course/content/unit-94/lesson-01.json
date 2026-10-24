@@ -1,0 +1,132 @@
+{
+  "unitId": "u94",
+  "lessonId": "u94l01",
+  "title": "What 'proving it works' really means",
+  "idea": "MEET. A solution isn't done when it runs — it's done when you've CHECKED it against examples you worked out yourself. Thinking, not typing.",
+  "exercises": [
+    {
+      "id": "u94l01e01",
+      "type": "multipleChoice",
+      "prompt": "You wrote a program and it runs with no error. Is it definitely correct?",
+      "explanation": "Running is not the same as correct. A wrong plan runs fine and still gives a wrong answer. You must check the output.",
+      "options": [
+        "No — running without errors doesn't prove the answer is right",
+        "Yes — no error means it's correct",
+        "Yes — the computer wouldn't run a wrong program",
+        "Only if it's short"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u94l01e02",
+      "type": "multipleChoice",
+      "prompt": "What is the best EVIDENCE that a solution is correct?",
+      "explanation": "A hand-worked example gives you the right answer in advance; matching it is real evidence the code is right.",
+      "options": [
+        "Its output matches an example you worked out by hand",
+        "It looks tidy",
+        "It was quick to write",
+        "It has many lines"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u94l01e03",
+      "type": "trueFalse",
+      "prompt": "'Proving it works' means trying ONE example and stopping there.",
+      "explanation": "One example is a start, but you also test edge cases (empty, boundary, repeats). One happy example can hide bugs.",
+      "answer": false
+    },
+    {
+      "id": "u94l01e04",
+      "type": "matchPairs",
+      "prompt": "Match each word to its meaning in checking.",
+      "explanation": "Checking has its own vocabulary: an example is a known input-output pair; an edge case is a tricky boundary; a verdict is pass or fail.",
+      "pairs": [
+        {
+          "left": "Example",
+          "right": "A known input and its correct output"
+        },
+        {
+          "left": "Edge case",
+          "right": "A tricky input like empty or a boundary"
+        },
+        {
+          "left": "Verdict",
+          "right": "Pass or fail after comparing"
+        }
+      ]
+    },
+    {
+      "id": "u94l01e05",
+      "type": "multipleChoice",
+      "prompt": "Why work the example out BY HAND before running the code?",
+      "explanation": "If you compute the answer after seeing the code's output, you'll just trust the code. Hand-first gives an independent check.",
+      "options": [
+        "So you have an independent answer to compare against",
+        "Because hands are faster than computers",
+        "So you can skip running the code",
+        "Because the computer can't do math"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u94l01e06",
+      "type": "trueFalse",
+      "prompt": "If the output does NOT match your hand example, the first suspect is your plan/code, not your hand example.",
+      "explanation": "Usually the code is wrong — but check your hand math too. The point is the mismatch tells you to investigate.",
+      "answer": true
+    },
+    {
+      "id": "u94l01e07",
+      "type": "orderBlocks",
+      "prompt": "Order the steps of proving a solution works.",
+      "explanation": "Pick inputs, work the right answer by hand, run the code, compare. Comparison is the whole point of checking.",
+      "blocks": [
+        "Choose an input to test",
+        "Work out its correct output by hand",
+        "Run the code on that input",
+        "Compare the output to your hand answer"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "id": "u94l01e08",
+      "type": "multipleChoice",
+      "prompt": "A classmate says 'it printed a number, so it works.' What's missing from their reasoning?",
+      "explanation": "Printing a number only shows it ran. They never compared it to a known-correct answer, so they proved nothing.",
+      "options": [
+        "They never compared the number to a known-correct answer",
+        "Nothing — that's enough",
+        "They should print two numbers",
+        "They should make it longer"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u94l01e09",
+      "type": "multipleChoice",
+      "prompt": "Which is a THINKING skill this unit builds?",
+      "explanation": "This unit is about reasoning: choosing good test inputs and judging pass/fail. That is verification thinking, not typing.",
+      "options": [
+        "Choosing good test inputs and judging pass or fail",
+        "Typing faster",
+        "Memorising syntax",
+        "Writing longer programs"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u94l01e10",
+      "type": "trueFalse",
+      "prompt": "Checking is the LAST step of UEPCC, and it is often the hardest.",
+      "explanation": "Yes — Check is last and hardest because it needs honesty: you must try to break your own solution, not just admire it.",
+      "answer": true
+    }
+  ]
+}

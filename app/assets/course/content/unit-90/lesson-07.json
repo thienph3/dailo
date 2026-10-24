@@ -1,0 +1,129 @@
+{
+  "unitId": "u90",
+  "lessonId": "u90l07",
+  "title": "Spot the validation bug",
+  "idea": "TOOL (debugging): the classic validation mistakes - wrong condition direction, missing re-read, or no first read.",
+  "exercises": [
+    {
+      "type": "multipleChoice",
+      "prompt": "This should re-ask until n is at least 1. What's the bug?\n\nn = int(input())\nwhile n >= 1:\n    n = int(input())\nprint(n)",
+      "options": [
+        "The condition is backwards - it loops while VALID, so it re-asks good input",
+        "It has no input",
+        "print is wrong",
+        "Nothing is wrong"
+      ],
+      "answer": 0,
+      "explanation": "'while n >= 1' loops while the value is GOOD, the opposite of what we want. The loop should run while INVALID: while n < 1.",
+      "id": "u90l07e01"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "This loops forever on bad input. Why?\n\nn = int(input())\nwhile n < 1:\n    print(\"try again\")\nprint(n)",
+      "options": [
+        "There's no new input() inside the loop, so n never changes",
+        "The message is wrong",
+        "n starts wrong",
+        "print loops"
+      ],
+      "answer": 0,
+      "explanation": "Without re-reading n inside the loop, n stays bad forever and the condition never becomes false. Always read a fresh value on retry.",
+      "id": "u90l07e02"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "A validation while loop must change the checked value inside the loop, or it can never end.",
+      "answer": true,
+      "explanation": "True. The only way the condition turns false is a new, valid input. No re-read means an infinite loop.",
+      "id": "u90l07e03"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "This errors before the loop even starts. Why?\n\nwhile n < 1:\n    n = int(input())\nprint(n)",
+      "options": [
+        "n is used in the condition before it was ever read - no first input",
+        "The message is missing",
+        "< should be >",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "The while checks n immediately, but n doesn't exist yet. You need an input() before the loop to give it a first value.",
+      "id": "u90l07e04"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "For a 1-to-5 rating, a learner writes 'while rating < 1 and rating > 5'. What's wrong?",
+      "options": [
+        "No number is both < 1 and > 5, so the loop never catches bad input",
+        "It's too strict",
+        "It's correct",
+        "and is faster"
+      ],
+      "answer": 0,
+      "explanation": "A value can't be below 1 AND above 5 simultaneously, so the condition is always false - bad input slips through. Use or.",
+      "id": "u90l07e05"
+    },
+    {
+      "type": "orderBlocks",
+      "prompt": "Order the checklist for debugging a validation loop.",
+      "blocks": [
+        "Is there a first input() before the while?",
+        "Does the condition loop while INVALID (not valid)?",
+        "Is there a fresh input() inside the loop?"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "First read, correct (invalid) condition, inside re-read. Miss any one and the loop misbehaves.",
+      "id": "u90l07e06"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Predict what this BUGGY loop does on input 0 then 5 (rule: at least 1):\n\nn = int(input())\nwhile n > 1:\n    n = int(input())\nprint(n)",
+      "options": [
+        "Prints 0 - the condition is backwards, so a bad 0 is accepted immediately",
+        "Prints 5",
+        "Loops forever",
+        "Errors"
+      ],
+      "answer": 0,
+      "explanation": "'n > 1' is false for 0, so the loop never runs and the bad 0 is printed. The condition should loop while n < 1.",
+      "id": "u90l07e07"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Tracing one bad and one good input by hand quickly reveals a backwards validation condition.",
+      "answer": true,
+      "explanation": "True. If a GOOD value causes a re-ask, or a BAD value is accepted, the condition is inverted. Hand-tracing catches it fast.",
+      "id": "u90l07e08"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "The safest way to word a validation condition is:",
+      "options": [
+        "Describe the INVALID case, so the loop runs exactly while input is bad",
+        "Describe the valid case",
+        "Leave it blank",
+        "Use random comparisons"
+      ],
+      "answer": 0,
+      "explanation": "'While it's still invalid, keep asking' maps directly to the goal. Wording it as the valid case inverts the logic.",
+      "id": "u90l07e09"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "The three validation hotspots:",
+      "options": [
+        "Missing first read, backwards condition, missing inside re-read",
+        "Short names, extra prints, comments",
+        "Lists, strings, functions",
+        "Nothing can go wrong"
+      ],
+      "answer": 0,
+      "explanation": "First read, invalid-condition, inside re-read: check those three and your validation loop will behave.",
+      "id": "u90l07e10"
+    }
+  ]
+}

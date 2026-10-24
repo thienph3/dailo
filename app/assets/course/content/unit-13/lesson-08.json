@@ -1,0 +1,134 @@
+{
+  "unitId": "u13",
+  "lessonId": "u13l08",
+  "title": "Same-level operators go left to right",
+  "idea": "When operators are in the same group (like - and - , or * and /), the computer works left to right.",
+  "exercises": [
+    {
+      "id": "u13l08e01",
+      "type": "multipleChoice",
+      "prompt": "When two operators are in the SAME group (both + and - , say), which way does the computer work?",
+      "options": [
+        "Left to right",
+        "Right to left",
+        "Biggest number first",
+        "Randomly"
+      ],
+      "answer": 0,
+      "explanation": "Same-level operators go left to right, like reading. This matters most for minus and divide."
+    },
+    {
+      "id": "u13l08e02",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nprint(10 - 3 - 2)",
+      "options": [
+        "5",
+        "9",
+        "11",
+        "15"
+      ],
+      "answer": 0,
+      "explanation": "Left to right: 10 - 3 is 7, then 7 - 2 is 5. Not 10 - (3 - 2) which would be 9."
+    },
+    {
+      "id": "u13l08e03",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nprint(20 / 2 / 5)",
+      "options": [
+        "2.0",
+        "50.0",
+        "10.0",
+        "0.2"
+      ],
+      "answer": 0,
+      "explanation": "Left to right: 20 / 2 is 10.0, then 10.0 / 5 is 2.0. Order of divides matters!"
+    },
+    {
+      "id": "u13l08e04",
+      "type": "multipleChoice",
+      "prompt": "Does 10 - 3 - 2 equal 10 - (3 - 2)?",
+      "options": [
+        "No — left to right gives 5, but the parentheses give 9",
+        "Yes — both are 5",
+        "Yes — both are 9",
+        "No — both error"
+      ],
+      "answer": 0,
+      "explanation": "10 - 3 - 2 is 5 (left to right). 10 - (3 - 2) is 10 - 1 is 9. Parentheses change the grouping."
+    },
+    {
+      "id": "u13l08e05",
+      "type": "trueFalse",
+      "prompt": "For + and * mixed, order is NOT just left to right — the * still goes first.",
+      "answer": true,
+      "explanation": "Left-to-right only applies WITHIN the same group. Across groups, * and / still go before + and - ."
+    },
+    {
+      "id": "u13l08e06",
+      "type": "fillBlank",
+      "prompt": "Fill in the result:\n\nprint(12 - 4 - 3)\n\nOutput: ____",
+      "answer": "5",
+      "acceptable": [
+        "5"
+      ],
+      "explanation": "Left to right: 12 - 4 is 8, then 8 - 3 is 5."
+    },
+    {
+      "id": "u13l08e07",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nprint(2 * 6 / 3)",
+      "options": [
+        "4.0",
+        "1.0",
+        "36.0",
+        "12.0"
+      ],
+      "answer": 0,
+      "explanation": "Same group, left to right: 2 * 6 is 12, then 12 / 3 is 4.0."
+    },
+    {
+      "id": "u13l08e08",
+      "type": "multipleChoice",
+      "prompt": "Which step is done SECOND?\n\nprint(100 - 10 - 20)",
+      "options": [
+        "90 - 20",
+        "10 - 20",
+        "100 - 20",
+        "100 - 10"
+      ],
+      "answer": 0,
+      "explanation": "First 100 - 10 is 90, then the second step is 90 - 20 is 70. Left to right."
+    },
+    {
+      "id": "u13l08e09",
+      "type": "multiSelect",
+      "prompt": "Which of these equal 1.0? (pick all)",
+      "options": [
+        "print(8 / 4 / 2)",
+        "print(20 / 10 / 2)",
+        "print(6 / 2 / 3)",
+        "print(9 / 3 / 3)"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "All four, worked left to right, come to 1.0: 8/4/2, 20/10/2, 6/2/3, 9/3/3 all equal 1.0. Left-to-right makes them predictable."
+    },
+    {
+      "id": "u13l08e10",
+      "type": "multipleChoice",
+      "prompt": "Review: reassignment with left-to-right. What prints?\n\nn = 20\nn = n - 5 - 5\nprint(n)",
+      "options": [
+        "10",
+        "20",
+        "0",
+        "15"
+      ],
+      "answer": 0,
+      "explanation": "n - 5 - 5 left to right: 20 - 5 is 15, then 15 - 5 is 10. n becomes 10."
+    }
+  ]
+}

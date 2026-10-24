@@ -1,0 +1,129 @@
+{
+  "unitId": "u05",
+  "lessonId": "u05l10",
+  "title": "Put it together: example, run, check",
+  "idea": "Review: make an example, picture the real output of print lines, then check them against each other.",
+  "exercises": [
+    {
+      "id": "u05l10e01",
+      "type": "orderBlocks",
+      "prompt": "Put the mini-rhythm in order.",
+      "blocks": [
+        "Write the expected output (your example)",
+        "Run the program to get the real output",
+        "Check: compare and judge pass or fail"
+      ],
+      "answer": [0, 1, 2],
+      "explanation": "Example first, run second, check last. You've met all three ideas now — this is the rhythm."
+    },
+    {
+      "id": "u05l10e02",
+      "type": "multipleChoice",
+      "prompt": "Review: what does print(\"Win\") show?",
+      "options": [
+        "Win",
+        "\"Win\"",
+        "print Win",
+        "A blank line"
+      ],
+      "answer": 0,
+      "explanation": "print shows what's inside the quotes, without the quotes: Win. (Recall from Unit 1.)"
+    },
+    {
+      "id": "u05l10e03",
+      "type": "multipleChoice",
+      "prompt": "Code:\n\nprint(\"Score\")\nprint(\"100\")\n\nWhat is the expected output?",
+      "options": [
+        "Score\n100",
+        "100\nScore",
+        "Score 100",
+        "Score100"
+      ],
+      "answer": 0,
+      "explanation": "Two prints, two lines, in order: Score, then 100. Predicting this is step one of the Check."
+    },
+    {
+      "id": "u05l10e04",
+      "type": "multipleChoice",
+      "prompt": "Expected:\nScore\n100\n\nReal output:\nScore\n100\n\nVerdict?",
+      "options": [
+        "Pass",
+        "Fail",
+        "Error",
+        "Unknown"
+      ],
+      "answer": 0,
+      "explanation": "Both lines match in order. Pass. That's the example meeting the real output cleanly."
+    },
+    {
+      "id": "u05l10e05",
+      "type": "multipleChoice",
+      "prompt": "Expected:\nHello\nFriend\n\nReal output:\nHello\nfriend\n\nVerdict?",
+      "options": [
+        "Fail — 'Friend' vs 'friend' differ by a capital letter",
+        "Pass",
+        "Error",
+        "Pass, capitals are free"
+      ],
+      "answer": 0,
+      "explanation": "A capital-letter difference is still a mismatch. Line 2 fails, so the whole check fails."
+    },
+    {
+      "id": "u05l10e06",
+      "type": "trueFalse",
+      "prompt": "Review: print() with empty brackets shows a blank line.",
+      "answer": true,
+      "explanation": "Yes — a blank line. And remember, a blank line counts in the Check. (From Unit 1 and this unit.)"
+    },
+    {
+      "id": "u05l10e07",
+      "type": "orderBlocks",
+      "prompt": "Expected output: Name, blank line, Age. Arrange the prints to match.",
+      "blocks": [
+        "print(\"Name\")",
+        "print()",
+        "print(\"Age\")"
+      ],
+      "answer": [0, 1, 2],
+      "explanation": "Name, then print() for the blank line, then Age. This matches the expected example exactly."
+    },
+    {
+      "id": "u05l10e08",
+      "type": "multipleChoice",
+      "prompt": "Expected:\nA\nB\nC\n\nReal output:\nA\nC\nB\n\nWhat kind of problem is this?",
+      "options": [
+        "Wrong order — B and C are swapped",
+        "A missing line",
+        "An extra line",
+        "It passes"
+      ],
+      "answer": 0,
+      "explanation": "All three lines are present, but B and C are swapped. Wrong order is a fail."
+    },
+    {
+      "id": "u05l10e09",
+      "type": "matchPairs",
+      "prompt": "Match each idea from this unit to what it means.",
+      "pairs": [
+        { "left": "Example (E)", "right": "The expected output you write before running" },
+        { "left": "Check", "right": "Compare real output to the example, judge pass/fail" },
+        { "left": "Mismatch", "right": "A spot where they differ" },
+        { "left": "Pass", "right": "Every line matches in order" }
+      ],
+      "explanation": "Example, Check, mismatch, pass — the whole unit in four ideas. You're ready to loop them together."
+    },
+    {
+      "id": "u05l10e10",
+      "type": "multipleChoice",
+      "prompt": "You wrote an example, ran the code, and it passed. Then a second example failed. What now?",
+      "options": [
+        "Treat it as a fail and look at the failing case",
+        "Call it a pass because the first one worked",
+        "Delete both examples",
+        "Ignore the second case"
+      ],
+      "answer": 0,
+      "explanation": "Any failing case makes it a fail. The failing example shows you exactly where to look next. That's the Check doing its job."
+    }
+  ]
+}

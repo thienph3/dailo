@@ -1,0 +1,156 @@
+{
+  "unitId": "u99",
+  "lessonId": "u99l08",
+  "title": "Capstone: use a helper function inside a loop",
+  "idea": "GUIDED CAPSTONE. Call a small helper for each list item inside a loop — decomposition: one function does one job, the loop repeats it.",
+  "problem": "Using is_even(n), count the evens in [2, 5, 8] by calling the helper each pass (count is 2).",
+  "exercises": [
+    {
+      "id": "u99l08e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: count evens in [2,5,8] using a helper is_even(n). OUTPUT is...",
+      "options": [
+        "A count, built by asking the helper each item",
+        "The helper's code",
+        "The list",
+        "A boolean"
+      ],
+      "answer": 0,
+      "explanation": "Output is a count. The twist: a helper decides even/odd, and the loop just asks it per item."
+    },
+    {
+      "id": "u99l08e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "What's the benefit of calling a helper instead of writing % 2 == 0 inline?",
+      "options": [
+        "One clear job per function; the loop reads like plain English",
+        "It's slower",
+        "It uses more memory",
+        "No benefit"
+      ],
+      "answer": 0,
+      "explanation": "Decomposition: is_even owns the even-test; the loop owns the counting. Each piece is simple and reusable."
+    },
+    {
+      "id": "u99l08e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example by hand: for each item, is_even says... 2 -> ?, 5 -> ?, 8 -> ?",
+      "options": [
+        "True, False, True",
+        "False, True, False",
+        "True, True, True",
+        "False, False, False"
+      ],
+      "answer": 0,
+      "explanation": "2 even (True), 5 odd (False), 8 even (True). We count the Trues."
+    },
+    {
+      "id": "u99l08e04",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "So how many Trues, and thus the count?",
+      "options": [
+        "2",
+        "1",
+        "3",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "Two Trues (for 2 and 8), so count 2 — our check value."
+    },
+    {
+      "id": "u99l08e05",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Plan it. Order the steps.",
+      "blocks": [
+        "If is_even(item) is True, add 1 to count",
+        "Start count at 0",
+        "For each item in the list",
+        "Return (or show) the count"
+      ],
+      "answer": [
+        1,
+        2,
+        0,
+        3
+      ],
+      "explanation": "Counter at 0, loop, ask the helper, bump on True. The helper slots into the condition."
+    },
+    {
+      "id": "u99l08e06",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Inside the loop, which condition uses the helper correctly?",
+      "options": [
+        "if is_even(item):",
+        "if is_even:",
+        "if item:",
+        "if even(2):"
+      ],
+      "answer": 0,
+      "explanation": "Call the helper WITH the current item: is_even(item). Its True/False drives the if."
+    },
+    {
+      "id": "u99l08e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code the counting loop (is_even already defined). Arrange the lines.",
+      "blocks": [
+        "        count = count + 1",
+        "count = 0",
+        "    if is_even(item):",
+        "for item in numbers:"
+      ],
+      "answer": [
+        1,
+        3,
+        2,
+        0
+      ],
+      "explanation": "count=0, loop items, call the helper in the if, increment on True. The helper hides the % detail."
+    },
+    {
+      "id": "u99l08e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Complete the helper call in the condition:\n\ncount = 0\nfor item in numbers:\n    if ____(item):\n        count = count + 1",
+      "answer": "is_even",
+      "acceptable": [
+        "is_even"
+      ],
+      "explanation": "Call is_even(item); when it returns True, count grows. For [2,5,8] count ends at 2."
+    },
+    {
+      "id": "u99l08e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Run it on [2,5,8]: count is 2. Hand said 2. Verdict?",
+      "options": [
+        "Passes",
+        "Fails",
+        "Unknown",
+        "Rewrite example"
+      ],
+      "answer": 0,
+      "explanation": "Matches. The helper handled each test; the loop did the counting. Clean decomposition!"
+    },
+    {
+      "id": "u99l08e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Run it on [1, 3, 5] (all odd). What is count?",
+      "options": [
+        "0 — the helper returns False every time",
+        "3",
+        "1",
+        "2"
+      ],
+      "answer": 0,
+      "explanation": "is_even returns False for each, so count never grows: 0. The helper-in-a-loop pattern generalizes."
+    }
+  ]
+}

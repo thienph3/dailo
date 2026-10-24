@@ -1,0 +1,122 @@
+{
+  "unitId": "u11",
+  "lessonId": "u11l01",
+  "title": "Solve it together: total cost of two items",
+  "idea": "GUIDED PROBLEM. One small problem walked through UEPCC (Understand -> Examples -> Plan -> Code -> Check). The learner is led through HOW to solve, not handed the answer.",
+  "problem": "A shop sells a pen for 3 and a notebook for 5. Show the total cost of buying one of each.",
+  "exercises": [
+    {
+      "id": "u11l01e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: A pen costs 3, a notebook costs 5. Show the total cost of one of each.\n\nFirst — Understand. What is this problem asking for (the OUTPUT)?",
+      "options": [
+        "The total cost of a pen plus a notebook",
+        "The price of just the pen",
+        "How many items there are",
+        "The cheaper of the two"
+      ],
+      "answer": 0,
+      "explanation": "Always start by naming what you must produce. Here the output is the TOTAL cost."
+    },
+    {
+      "id": "u11l01e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "Still understanding. What are the INPUTS (the values you start with)?",
+      "options": [
+        "The pen's price (3) and the notebook's price (5)",
+        "Only the number 8",
+        "The word 'total'",
+        "Nothing — there are no inputs"
+      ],
+      "answer": 0,
+      "explanation": "The inputs are the two prices, 3 and 5. Knowing inputs and output frames the whole problem."
+    },
+    {
+      "id": "u11l01e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Next — Example. Work it by hand first: if the pen is 3 and the notebook is 5, what should the answer be?",
+      "options": ["8", "15", "2", "35"],
+      "answer": 0,
+      "explanation": "3 + 5 = 8. Doing one example by hand FIRST tells you what the code must produce — so you can check it later."
+    },
+    {
+      "id": "u11l01e04",
+      "type": "trueFalse",
+      "uepcc": "E",
+      "prompt": "Working an example by hand before coding is a waste of time.",
+      "answer": false,
+      "explanation": "It's the opposite — the hand-worked example (8) becomes the test you check your code against. Never skip it."
+    },
+    {
+      "id": "u11l01e05",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Now — Plan. Put these plain-English steps in the right order.",
+      "blocks": [
+        "Add the two prices to get the total",
+        "Remember the two prices",
+        "Show the total"
+      ],
+      "answer": [1, 0, 2],
+      "explanation": "Plan: (1) remember the prices, (2) add them, (3) show the result. Plan in words before writing code."
+    },
+    {
+      "id": "u11l01e06",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Your plan says 'remember the two prices.' Which tool from last lessons does that?",
+      "options": ["Variables", "print()", "Quotes", "A blank line"],
+      "answer": 0,
+      "explanation": "Variables remember values for a later step. You'll store 3 and 5 in variables."
+    },
+    {
+      "id": "u11l01e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Now — Code. Arrange these lines to match your plan (remember, add, show).",
+      "blocks": [
+        "total = pen + notebook",
+        "pen = 3",
+        "notebook = 5",
+        "print(total)"
+      ],
+      "answer": [1, 2, 0, 3],
+      "explanation": "Store pen, store notebook, add them into total, then print total. The code mirrors the plan exactly."
+    },
+    {
+      "id": "u11l01e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Complete the adding step:\n\npen = 3\nnotebook = 5\ntotal = pen ____ notebook\nprint(total)",
+      "answer": "+",
+      "acceptable": ["+"],
+      "explanation": "You need to add, so the operator is +. Now total holds 8."
+    },
+    {
+      "id": "u11l01e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Finally — Check. You run the code and it shows 8. Your hand example said 8. So...",
+      "options": [
+        "It passes — the output matches the example",
+        "It fails — the output is wrong",
+        "You can't tell",
+        "You must change the example to match"
+      ],
+      "answer": 0,
+      "explanation": "Output (8) matches the example you worked by hand (8), so the solution is correct. That's what Check means."
+    },
+    {
+      "id": "u11l01e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Same problem, new numbers: pen = 4, notebook = 6. Your code is total = pen + notebook. What will it show now?",
+      "options": ["10", "8", "46", "2"],
+      "answer": 0,
+      "explanation": "4 + 6 = 10. A good solution works for new inputs, not just the first example. You just solved it with UEPCC!"
+    }
+  ]
+}

@@ -1,0 +1,140 @@
+{
+  "unitId": "u16",
+  "lessonId": "u16l08",
+  "title": "Spot the 'added text instead of numbers' bug",
+  "idea": "Learn to see when + joined text by mistake, and know which conversion repairs it.",
+  "exercises": [
+    {
+      "id": "u16l08e01",
+      "type": "multipleChoice",
+      "prompt": "A program should show 7 but shows 34 instead:\n\nprint(\"3\" + \"4\")\n\nWhat went wrong?",
+      "options": [
+        "The values are text, so + joined them instead of adding",
+        "The numbers are too small",
+        "print() is broken",
+        "Nothing is wrong"
+      ],
+      "answer": 0,
+      "explanation": "Quotes made them text, so + joined \"3\" and \"4\" into 34. This is the bug by sight: a joined result where a sum was wanted."
+    },
+    {
+      "id": "u16l08e02",
+      "type": "multipleChoice",
+      "prompt": "How do you fix it so it shows 7?",
+      "options": [
+        "print(int(\"3\") + int(\"4\"))",
+        "print(str(\"3\") + str(\"4\"))",
+        "print(\"3\" + \"4\" + \"7\")",
+        "Add more quotes"
+      ],
+      "answer": 0,
+      "explanation": "Convert both with int(), then + adds: 3 + 4 = 7. int() is the repair for a wrongly-joined sum."
+    },
+    {
+      "id": "u16l08e03",
+      "type": "multipleChoice",
+      "prompt": "This line fails with an error:\n\nprint(\"You have \" + 5 + \" points\")\n\nWhat's the problem?",
+      "options": [
+        "The number 5 can't join text — it needs str(5)",
+        "There are too many words",
+        "points is misspelled",
+        "You can't use the word have"
+      ],
+      "answer": 0,
+      "explanation": "Joining text with a bare number fails. Wrapping it as str(5) fixes it: You have 5 points."
+    },
+    {
+      "id": "u16l08e04",
+      "type": "multipleChoice",
+      "prompt": "Which conversion fixes 'print(\"You have \" + 5 + \" points\")'?",
+      "options": [
+        "str() around the 5",
+        "int() around the 5",
+        "float() around the 5",
+        "No fix is possible"
+      ],
+      "answer": 0,
+      "explanation": "You're joining into text, so the number must BECOME text: str(5). (int/float go the other way.)"
+    },
+    {
+      "id": "u16l08e05",
+      "type": "trueFalse",
+      "prompt": "Seeing 34 where you expected 7 is a sign that + joined text instead of adding numbers.",
+      "answer": true,
+      "explanation": "Yes — digits stuck together (34) instead of summed (7) is the classic fingerprint of the bug."
+    },
+    {
+      "id": "u16l08e06",
+      "type": "multipleChoice",
+      "prompt": "a = \"10\"\nb = \"20\"\nprint(a + b)\n\nThe programmer wanted 30. What shows, and what's the fix?",
+      "options": [
+        "Shows 1020; fix with int(a) + int(b)",
+        "Shows 30; no fix needed",
+        "Shows 10 20; fix with str()",
+        "Shows an error; fix with print()"
+      ],
+      "answer": 0,
+      "explanation": "Text joins to 1020. Convert both with int() to add to 30. Spot it, then convert."
+    },
+    {
+      "id": "u16l08e07",
+      "type": "multiSelect",
+      "prompt": "Select EVERY line that has the bug (it joins text when a NUMBER result was clearly wanted).",
+      "options": [
+        "print(\"5\" + \"5\")",
+        "print(\"12\" + \"8\")",
+        "print(5 + 5)",
+        "print(int(\"5\") + int(\"5\"))"
+      ],
+      "answer": [
+        0,
+        1
+      ],
+      "explanation": "The first two join text (55, 128). The last two correctly add to 10. Spotting the quotes finds the bug."
+    },
+    {
+      "id": "u16l08e08",
+      "type": "orderBlocks",
+      "prompt": "A fixed program: convert two text scores, add them, and show the total. Arrange it.",
+      "blocks": [
+        "score1 = \"40\"",
+        "score2 = \"35\"",
+        "total = int(score1) + int(score2)",
+        "print(total)"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "Store the text scores, convert-and-add with int(), print the total (75). The int() calls are the repair."
+    },
+    {
+      "id": "u16l08e09",
+      "type": "multipleChoice",
+      "prompt": "A program shows 'Age: age' instead of 'Age: 12'. The line was:\n\nprint(\"Age: age\")\n\nWhat's the real mistake here?",
+      "options": [
+        "The variable name got trapped inside the quotes, so it's shown as text",
+        "age needs int()",
+        "age needs float()",
+        "The number 12 is too big"
+      ],
+      "answer": 0,
+      "explanation": "Everything in quotes is literal text. To use the value, keep age OUTSIDE quotes: \"Age: \" + str(age)."
+    },
+    {
+      "id": "u16l08e10",
+      "type": "multipleChoice",
+      "prompt": "Which question quickly tells you which conversion a bug needs?",
+      "options": [
+        "'Do I want to add numbers, or join text?' — int/float for math, str for joining",
+        "'Is the number big or small?'",
+        "'How many quotes are there?'",
+        "'Is it a Monday?'"
+      ],
+      "answer": 0,
+      "explanation": "Name the goal first. Math on text -> int()/float(). Number into a sentence -> str(). The goal picks the tool."
+    }
+  ]
+}

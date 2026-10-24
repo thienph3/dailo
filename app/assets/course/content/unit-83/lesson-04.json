@@ -1,0 +1,150 @@
+{
+  "unitId": "u83",
+  "lessonId": "u83l04",
+  "title": "Finish it together: the total that dropped the drinks",
+  "idea": "GUIDED (UEPCC), bug-focused. meals_cost and drinks_cost are both computed correctly, but total = meals_cost drops the drinks. Finish by wiring the second sub-result in.",
+  "problem": "A bill is 2 meals at 12 plus 3 drinks at 3. meals_cost (24) and drinks_cost (9) are correct, but 'total = meals_cost' prints 24 instead of 33. Finish it.",
+  "exercises": [
+    {
+      "id": "u83l04e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: meals_cost=24 and drinks_cost=9 are correct, but the bill prints 24 instead of 33. What's the RIGHT total?",
+      "options": [
+        "33 — both costs added",
+        "24 — meals only",
+        "9 — drinks only",
+        "15"
+      ],
+      "answer": 0,
+      "explanation": "The bill is both costs: 24 + 9 = 33. Printing 24 means the drinks were dropped."
+    },
+    {
+      "id": "u83l04e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "Understand — 'total = meals_cost' is short by how much, and why?",
+      "options": [
+        "Short by 9 — drinks_cost was never added",
+        "Short by 24",
+        "Not short at all",
+        "Short by 33"
+      ],
+      "answer": 0,
+      "explanation": "It's short by exactly drinks_cost (9). Off by one sub-result's value points right at the dropped piece."
+    },
+    {
+      "id": "u83l04e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example — by hand. 2*12=24 meals, 3*3=9 drinks. Total?",
+      "options": [
+        "33",
+        "24",
+        "9",
+        "30"
+      ],
+      "answer": 0,
+      "explanation": "24 + 9 = 33. Hand answer = 33. The code's 24 is missing the 9."
+    },
+    {
+      "id": "u83l04e04",
+      "type": "trueFalse",
+      "uepcc": "E",
+      "prompt": "Both sub-results (24 and 9) were computed correctly — the bug is only in combining them.",
+      "answer": true,
+      "explanation": "Yes — the pieces are right; the wiring dropped one. That's a classic 'dropped sub-result' bug."
+    },
+    {
+      "id": "u83l04e05",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Plan the finish. What must the total line do?",
+      "options": [
+        "Add BOTH sub-results: meals_cost + drinks_cost",
+        "Use meals_cost only",
+        "Use drinks_cost only",
+        "Multiply them"
+      ],
+      "answer": 0,
+      "explanation": "The total must combine both: meals_cost + drinks_cost. Wire the dropped drinks back in."
+    },
+    {
+      "id": "u83l04e06",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Order the finish-it routine.",
+      "blocks": [
+        "Notice the total is short by exactly drinks_cost",
+        "See that 'total = meals_cost' drops the drinks",
+        "Change it to meals_cost + drinks_cost",
+        "Re-check: now it's 33"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "Spot the gap, locate the dropped piece, wire it in, re-check. A missing-sub-result finish."
+    },
+    {
+      "id": "u83l04e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code the finished total (costs already computed).",
+      "blocks": [
+        "meals_cost = 24",
+        "drinks_cost = 9",
+        "total = meals_cost + drinks_cost",
+        "print(total)"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "With both sub-results present, total adds them: 24 + 9 = 33. The dropped piece is back."
+    },
+    {
+      "id": "u83l04e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Finish the total so nothing is dropped:\n\ntotal = meals_cost + ____",
+      "answer": "drinks_cost",
+      "acceptable": [
+        "drinks_cost"
+      ],
+      "explanation": "Add the dropped sub-result, drinks_cost, so the total is 24 + 9 = 33."
+    },
+    {
+      "id": "u83l04e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check — the finished code prints 33; your hand example was 33. Verdict?",
+      "options": [
+        "Passes",
+        "Fails",
+        "Unknown",
+        "Rewrite example"
+      ],
+      "answer": 0,
+      "explanation": "Output (33) matches the hand example (33). Wiring the dropped sub-result in finished the solution."
+    },
+    {
+      "id": "u83l04e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Re-check: meals_cost 40, drinks_cost 10. Total?",
+      "options": [
+        "50",
+        "40",
+        "10",
+        "30"
+      ],
+      "answer": 0,
+      "explanation": "40 + 10 = 50. The finished total adds both costs for any numbers. You finished a dropped-result bug!"
+    }
+  ]
+}

@@ -1,0 +1,120 @@
+{
+  "unitId": "u07",
+  "lessonId": "u07l09",
+  "title": "Example, then plan, then check",
+  "idea": "Tie it together: work the example by hand, write the plan, then check the output matches. Review of the rhythm.",
+  "exercises": [
+    {
+      "id": "u07l09e01",
+      "type": "orderBlocks",
+      "prompt": "Put the three rhythm steps in the order you use them.",
+      "blocks": [
+        "Example: work out the expected output by hand",
+        "Plan: write the steps in plain words",
+        "Check: compare real output to the example"
+      ],
+      "answer": [0, 1, 2],
+      "explanation": "First the example, then the plan, then the check. That's the rhythm from the earlier units."
+    },
+    {
+      "id": "u07l09e02",
+      "type": "multipleChoice",
+      "prompt": "Task: show Hi then Bye. What is the hand-worked EXAMPLE of the output?",
+      "options": [
+        "Hi on one line, Bye on the next",
+        "HiBye squished together",
+        "Only Bye",
+        "An error"
+      ],
+      "answer": 0,
+      "explanation": "Working it by hand: two print lines give Hi, then Bye, on two lines. That's your expected output."
+    },
+    {
+      "id": "u07l09e03",
+      "type": "trueFalse",
+      "prompt": "You write the example BEFORE the code so you have something to check against.",
+      "answer": true,
+      "explanation": "Yes. The hand-worked example is the answer key. You compare the real output to it later."
+    },
+    {
+      "id": "u07l09e04",
+      "type": "orderBlocks",
+      "prompt": "Task: show Welcome then Enjoy. Write the PLAN in order.",
+      "blocks": [
+        "Step 1: show Welcome",
+        "Step 2: show Enjoy"
+      ],
+      "answer": [0, 1],
+      "explanation": "Two plain-words steps in order. The plan comes after the example and guides the code."
+    },
+    {
+      "id": "u07l09e05",
+      "type": "multipleChoice",
+      "prompt": "Your example says output should be Yes then No. The real output is Yes then No. What's the check result?",
+      "options": [
+        "Pass — the output matches the example",
+        "Fail — they don't match",
+        "Can't tell",
+        "The example is wrong"
+      ],
+      "answer": 0,
+      "explanation": "Real output matches the hand-worked example, so the check passes. That's how you know it worked."
+    },
+    {
+      "id": "u07l09e06",
+      "type": "multipleChoice",
+      "prompt": "Example: Red then Blue. Real output: Blue then Red. Check result?",
+      "options": [
+        "Fail — the lines are in the wrong order",
+        "Pass",
+        "Can't tell",
+        "The computer is broken"
+      ],
+      "answer": 0,
+      "explanation": "Same words, wrong order, so it fails the check. The example caught the bug — exactly its job."
+    },
+    {
+      "id": "u07l09e07",
+      "type": "matchPairs",
+      "prompt": "Match each rhythm step to its one-line job.",
+      "pairs": [
+        { "left": "Example", "right": "Decide the expected output by hand" },
+        { "left": "Plan", "right": "List the steps in order" },
+        { "left": "Check", "right": "Does real output match the example?" }
+      ],
+      "explanation": "Example, Plan, Check — your reliable rhythm for every small task."
+    },
+    {
+      "id": "u07l09e08",
+      "type": "trueFalse",
+      "prompt": "If the check fails, the most likely fix is in your plan or code, not the computer.",
+      "answer": true,
+      "explanation": "Yes — remember unit 1: the computer does exactly what you told it. Fix the instructions."
+    },
+    {
+      "id": "u07l09e09",
+      "type": "orderBlocks",
+      "prompt": "Task: show Good morning, your name, Have a nice day. Build the plan in order.",
+      "blocks": [
+        "Step 1: show Good morning",
+        "Step 2: show your name",
+        "Step 3: show Have a nice day"
+      ],
+      "answer": [0, 1, 2],
+      "explanation": "Three steps in the order the task listed them. Example first, then this plan, then a check — you've got the whole loop."
+    },
+    {
+      "id": "u07l09e10",
+      "type": "multipleChoice",
+      "prompt": "Why is the hand-worked example so useful at the check step?",
+      "options": [
+        "It gives you the exact result to compare against",
+        "It makes the task longer",
+        "It replaces the plan",
+        "It is only decoration"
+      ],
+      "answer": 0,
+      "explanation": "Without an example, 'check' has nothing to compare to. The example is your answer key. You tied the whole rhythm together!"
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "unitId": "u48",
+  "lessonId": "u48l05",
+  "title": "Tracing a while loop",
+  "idea": "Trace a condition-controlled loop: check the condition, run the body, update the value, check again. Predict how many passes it makes and its final values.",
+  "exercises": [
+    {
+      "id": "u48l05e01",
+      "type": "multipleChoice",
+      "prompt": "Trace:\n\nn = 0\nwhile n < 3:\n    n = n + 1\n\nFinal n?",
+      "options": ["3", "2", "4", "0"],
+      "answer": 0,
+      "explanation": "n goes 0 -> 1 -> 2 -> 3. When n reaches 3, the condition n < 3 is false, so the loop stops. Final 3."
+    },
+    {
+      "id": "u48l05e02",
+      "type": "multipleChoice",
+      "prompt": "Same loop. How many times does the body run?",
+      "options": ["3 times", "2 times", "4 times", "0 times"],
+      "answer": 0,
+      "explanation": "The body runs while n is 0, 1, 2 - three passes - then stops when n becomes 3. Count the passes where the condition is true."
+    },
+    {
+      "id": "u48l05e03",
+      "type": "orderBlocks",
+      "prompt": "Order how ONE pass of a while loop works.",
+      "blocks": [
+        "Check the condition",
+        "If true, run the body",
+        "Go back and check the condition again"
+      ],
+      "answer": [0, 1, 2],
+      "explanation": "Check, run, check again. A while loop tests its condition before every pass - that's the rhythm to trace."
+    },
+    {
+      "id": "u48l05e04",
+      "type": "multipleChoice",
+      "prompt": "Trace:\n\nx = 10\nwhile x > 6:\n    x = x - 1\n\nFinal x?",
+      "options": ["6", "5", "7", "10"],
+      "answer": 0,
+      "explanation": "x drops 10, 9, 8, 7, 6. At 6 the condition x > 6 is false, so it stops. Final 6."
+    },
+    {
+      "id": "u48l05e05",
+      "type": "multipleChoice",
+      "prompt": "Trace:\n\ntotal = 0\nn = 1\nwhile total < 10:\n    total = total + n\n    n = n + 1\n\nHow many passes run?",
+      "options": [
+        "4 (total goes 1, 3, 6, 10)",
+        "3",
+        "5",
+        "10"
+      ],
+      "answer": 0,
+      "explanation": "total: 1, 3, 6, 10. After it reaches 10, total < 10 is false. Four passes. Trace both total and n each pass."
+    },
+    {
+      "id": "u48l05e06",
+      "type": "trueFalse",
+      "prompt": "A while loop checks its condition BEFORE the first pass, so it can run zero times.",
+      "answer": true,
+      "explanation": "If the condition is already false at the start, the body never runs. Always trace the very first check - it may skip entirely."
+    },
+    {
+      "id": "u48l05e07",
+      "type": "multipleChoice",
+      "prompt": "Trace:\n\nn = 5\nwhile n < 5:\n    n = n + 1\n\nHow many passes?",
+      "options": ["0 - the condition is false from the start", "1", "5", "forever"],
+      "answer": 0,
+      "explanation": "n starts at 5, and 5 < 5 is false, so the body never runs. Zero passes. The first check decided it."
+    },
+    {
+      "id": "u48l05e08",
+      "type": "multipleChoice",
+      "prompt": "Trace this danger:\n\nn = 0\nwhile n < 3:\n    print(n)\n\nWhat happens?",
+      "options": [
+        "It prints 0 forever - n never changes, so the condition stays true",
+        "It prints 0, 1, 2",
+        "It prints nothing",
+        "It prints 0 once"
+      ],
+      "answer": 0,
+      "explanation": "Nothing updates n, so n < 3 is always true - an infinite loop. Tracing reveals the missing 'n = n + 1'."
+    },
+    {
+      "id": "u48l05e09",
+      "type": "fillBlank",
+      "prompt": "Trace:\n\nn = 0\nwhile n < 4:\n    n = n + 1\n\nHow many passes? (a number)",
+      "answer": "4",
+      "acceptable": ["4"],
+      "explanation": "n is 0, 1, 2, 3 when the body runs - four passes - then becomes 4 and stops."
+    },
+    {
+      "id": "u48l05e10",
+      "type": "multipleChoice",
+      "prompt": "The extra care a while loop needs when tracing, compared to a for loop, is:",
+      "options": [
+        "You must watch that something changes toward making the condition false",
+        "You must count the colors",
+        "You must run it twice",
+        "There is no difference"
+      ],
+      "answer": 0,
+      "explanation": "A for loop advances for you; a while loop relies on the body to make progress. Tracing checks that it actually does - or it loops forever."
+    }
+  ]
+}

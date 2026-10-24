@@ -1,0 +1,136 @@
+{
+  "unitId": "u40",
+  "lessonId": "u40l10",
+  "title": "Put it together: the counter",
+  "idea": "REVIEW-LEANING. Recap the counter (start at 0, += 1, count matches) mixing earlier tools.",
+  "exercises": [
+    {
+      "id": "u40l10e01",
+      "type": "multipleChoice",
+      "prompt": "Recall: what value does a counter start at?",
+      "options": [
+        "0",
+        "1",
+        "the range stop",
+        "it varies"
+      ],
+      "answer": 0,
+      "explanation": "Zero — nothing has been counted before the loop begins."
+    },
+    {
+      "id": "u40l10e02",
+      "type": "multipleChoice",
+      "prompt": "Recall: where must count = 0 go?",
+      "options": [
+        "Before the loop",
+        "Inside the loop",
+        "After the loop",
+        "It is optional"
+      ],
+      "answer": 0,
+      "explanation": "Before the loop, so the counter survives and builds across passes."
+    },
+    {
+      "id": "u40l10e03",
+      "type": "multipleChoice",
+      "prompt": "What prints?\n\ncount = 0\nfor i in range(5):\n    count += 1\nprint(count)",
+      "options": [
+        "5",
+        "4",
+        "0",
+        "15"
+      ],
+      "answer": 0,
+      "explanation": "Five passes, +1 each from 0: ends at 5."
+    },
+    {
+      "id": "u40l10e04",
+      "type": "fillBlank",
+      "prompt": "Review (range): fill the stop so the loop runs for numbers 1 to 6:\n\nfor i in range(1, ____):",
+      "answer": "7",
+      "acceptable": [
+        "7"
+      ],
+      "explanation": "Stop one past 6 is 7, so range(1, 7) gives 1..6."
+    },
+    {
+      "id": "u40l10e05",
+      "type": "multipleChoice",
+      "prompt": "What prints?\n\ncount = 0\nfor i in range(1, 7):\n    if i > 4:\n        count += 1\nprint(count)",
+      "options": [
+        "2",
+        "4",
+        "6",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "i is 1..6; only 5 and 6 are over 4, so the counter ends at 2."
+    },
+    {
+      "id": "u40l10e06",
+      "type": "trueFalse",
+      "prompt": "Review (f-strings): print(f\"n is {count}\") shows the value of count inside the text.",
+      "answer": true,
+      "explanation": "True. The braces pull in the counter's value — a tool from the strings lap, reused here."
+    },
+    {
+      "id": "u40l10e07",
+      "type": "orderBlocks",
+      "prompt": "Arrange a loop that counts how many numbers 1..5 are odd (i % 2 == 1).",
+      "blocks": [
+        "        count += 1",
+        "count = 0",
+        "    if i % 2 == 1:",
+        "print(count)",
+        "for i in range(1, 6):"
+      ],
+      "answer": [
+        1,
+        4,
+        2,
+        0,
+        3
+      ],
+      "explanation": "Start counter, loop, if odd add 1, then print the count."
+    },
+    {
+      "id": "u40l10e08",
+      "type": "multipleChoice",
+      "prompt": "For that odd-counting loop over 1..5, what prints?",
+      "options": [
+        "3",
+        "2",
+        "5",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "1, 3, 5 are odd — three matches."
+    },
+    {
+      "id": "u40l10e09",
+      "type": "multipleChoice",
+      "prompt": "A counter stays at 0 after a loop. What is the first thing to check?",
+      "options": [
+        "Whether the += 1 line ever ran",
+        "The print spelling",
+        "The screen brightness",
+        "The range step color"
+      ],
+      "answer": 0,
+      "explanation": "If the counter never moved, the += 1 never ran — check the condition and that start is outside the loop."
+    },
+    {
+      "id": "u40l10e10",
+      "type": "multipleChoice",
+      "prompt": "Big picture: what question does a counter answer?",
+      "options": [
+        "How many times something happened",
+        "What the total of the numbers is",
+        "Which number is biggest",
+        "Nothing useful"
+      ],
+      "answer": 0,
+      "explanation": "It answers 'how many' — how many passes, or how many passes matched a rule."
+    }
+  ]
+}

@@ -1,0 +1,154 @@
+{
+  "unitId": "u99",
+  "lessonId": "u99l09",
+  "title": "Capstone: a safe divide function with a guard",
+  "idea": "GUIDED CAPSTONE. Validate input inside a function before using it — guard against divide-by-zero and return a safe result.",
+  "problem": "Write safe_divide(a, b) that returns a / b, but returns 0 if b is 0 (so safe_divide(10, 2) is 5, safe_divide(10, 0) is 0).",
+  "exercises": [
+    {
+      "id": "u99l09e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: safe_divide(a, b) returns a/b, but 0 when b is 0. OUTPUT is...",
+      "options": [
+        "The quotient, or 0 if dividing is unsafe",
+        "Always a/b",
+        "Always 0",
+        "An error"
+      ],
+      "answer": 0,
+      "explanation": "Output is a/b normally, but a safe 0 when b is 0. The function protects itself."
+    },
+    {
+      "id": "u99l09e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "What bad input must we VALIDATE against before dividing?",
+      "options": [
+        "b being 0 (division by zero)",
+        "a being 0",
+        "negative a",
+        "large numbers"
+      ],
+      "answer": 0,
+      "explanation": "Dividing by 0 crashes. The guard checks b first and returns 0 instead of dividing."
+    },
+    {
+      "id": "u99l09e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example by hand: safe_divide(10, 2) should return...",
+      "options": [
+        "5",
+        "20",
+        "0",
+        "12"
+      ],
+      "answer": 0,
+      "explanation": "10 / 2 = 5 — a normal, safe division. Our first check value."
+    },
+    {
+      "id": "u99l09e04",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "And safe_divide(10, 0) should return...",
+      "options": [
+        "0 — the guard catches it",
+        "5",
+        "10",
+        "a crash"
+      ],
+      "answer": 0,
+      "explanation": "b is 0, so the guard returns 0 without dividing. No crash. Second check value: 0."
+    },
+    {
+      "id": "u99l09e05",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Plan the function. Order the steps.",
+      "blocks": [
+        "Otherwise return a / b",
+        "Define safe_divide(a, b)",
+        "If b is 0, return 0 (guard first)"
+      ],
+      "answer": [
+        1,
+        2,
+        0
+      ],
+      "explanation": "Guard BEFORE the division, so the unsafe case never reaches the divide. Validation comes first."
+    },
+    {
+      "id": "u99l09e06",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Why must the guard run BEFORE the division line?",
+      "options": [
+        "So we never execute a / 0",
+        "It reads nicer",
+        "To save time",
+        "It doesn't matter"
+      ],
+      "answer": 0,
+      "explanation": "If we divided first, the crash already happened. The guard must intercept b==0 before the divide."
+    },
+    {
+      "id": "u99l09e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code the function. Arrange the lines.",
+      "blocks": [
+        "        return 0",
+        "    return a / b",
+        "    if b == 0:",
+        "def safe_divide(a, b):"
+      ],
+      "answer": [
+        3,
+        2,
+        0,
+        1
+      ],
+      "explanation": "def, guard (if b==0 return 0), then the safe division. The early return skips the divide when unsafe."
+    },
+    {
+      "id": "u99l09e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Complete the guard test:\n\ndef safe_divide(a, b):\n    if b ____ 0:\n        return 0\n    return a / b",
+      "answer": "==",
+      "acceptable": [
+        "=="
+      ],
+      "explanation": "Check if b equals 0 with ==. If so, return 0 early; otherwise divide safely."
+    },
+    {
+      "id": "u99l09e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Call safe_divide(10, 2): returns 5. Hand said 5. And safe_divide(10, 0) returns 0. Verdict?",
+      "options": [
+        "Passes — both match, no crash",
+        "Fails",
+        "Unknown",
+        "Rewrite example"
+      ],
+      "answer": 0,
+      "explanation": "Both match. The guard protected the division. Input validation inside a function — a real-world habit."
+    },
+    {
+      "id": "u99l09e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "What does safe_divide(0, 5) return?",
+      "options": [
+        "0 — because 0/5 is 0, division is fine here",
+        "It crashes",
+        "5",
+        "0 from the guard"
+      ],
+      "answer": 0,
+      "explanation": "b is 5 (not 0), so we DO divide: 0 / 5 = 0. The result is 0, but from a real division, not the guard. Subtle but correct!"
+    }
+  ]
+}

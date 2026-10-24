@@ -1,0 +1,136 @@
+{
+  "unitId": "u70",
+  "lessonId": "u70l01",
+  "title": "Giving a sub-plan a name",
+  "idea": "MEET: a named sub-plan is a little job you can refer to by name. Still just the idea - no code.",
+  "exercises": [
+    {
+      "id": "u70l01e01",
+      "type": "multipleChoice",
+      "prompt": "You spotted a repeated job: 'print a star border'. Instead of re-typing it, you give it a NAME. What is that named job called (the big idea)?",
+      "options": [
+        "A sub-plan - a named little job you can refer to",
+        "A variable",
+        "A loop",
+        "A number"
+      ],
+      "answer": 0,
+      "explanation": "A named sub-plan is a small job with a name. Programmers call this idea a 'function'. You refer to it by name."
+    },
+    {
+      "id": "u70l01e02",
+      "type": "trueFalse",
+      "prompt": "Giving a job a name lets you refer to the whole job just by saying its name.",
+      "answer": true,
+      "explanation": "Yes. Once 'print the border' has a name, you can say that name instead of listing every step again."
+    },
+    {
+      "id": "u70l01e03",
+      "type": "multipleChoice",
+      "prompt": "The programming word for a named sub-plan is...",
+      "options": [
+        "a function",
+        "a sentence",
+        "a keyboard",
+        "a folder"
+      ],
+      "answer": 0,
+      "explanation": "A function is just a named sub-plan - a job you name once and use by name. That's the whole idea for now."
+    },
+    {
+      "id": "u70l01e04",
+      "type": "multipleChoice",
+      "prompt": "Why give a job a name at all?",
+      "options": [
+        "So you can reuse the job without rewriting its steps",
+        "To make the screen brighter",
+        "To slow the computer down",
+        "Names are decoration only"
+      ],
+      "answer": 0,
+      "explanation": "A name lets you reuse the job. Say the name, and the whole job happens - no re-typing the steps."
+    },
+    {
+      "id": "u70l01e05",
+      "type": "multiSelect",
+      "prompt": "Which are GOOD names for a sub-plan (they say what the job does)? (Pick all.)",
+      "options": [
+        "print_banner",
+        "show_menu",
+        "x",
+        "thing"
+      ],
+      "answer": [
+        0,
+        1
+      ],
+      "explanation": "'print_banner' and 'show_menu' describe their jobs. 'x' and 'thing' say nothing - poor names."
+    },
+    {
+      "id": "u70l01e06",
+      "type": "matchPairs",
+      "prompt": "Match each repeated job to a clear sub-plan name.",
+      "pairs": [
+        {
+          "left": "print a line of stars",
+          "right": "print_border"
+        },
+        {
+          "left": "show the welcome text",
+          "right": "show_welcome"
+        },
+        {
+          "left": "print a divider",
+          "right": "print_divider"
+        }
+      ],
+      "explanation": "A sub-plan's name should echo its job. Clear names make the main plan read like plain English."
+    },
+    {
+      "id": "u70l01e07",
+      "type": "trueFalse",
+      "prompt": "A named sub-plan is the same core idea as decomposition from the last unit, now with a NAME attached.",
+      "answer": true,
+      "explanation": "Exactly. You split into jobs (decomposition); now you name a reusable job. The name is the new piece."
+    },
+    {
+      "id": "u70l01e08",
+      "type": "multipleChoice",
+      "prompt": "REVIEW: naming a sub-plan clearly is like naming a variable clearly. A good variable name is...",
+      "options": [
+        "ticket_price, not p",
+        "p, not ticket_price",
+        "always a single letter",
+        "always a number"
+      ],
+      "answer": 0,
+      "explanation": "Same habit: descriptive names. 'ticket_price' tells you its meaning; 'p' hides it. Names should explain."
+    },
+    {
+      "id": "u70l01e09",
+      "type": "multipleChoice",
+      "prompt": "Once a job has a name, the main plan can...",
+      "options": [
+        "mention the name wherever the job is needed",
+        "forget the job exists",
+        "only use it once ever",
+        "never use it"
+      ],
+      "answer": 0,
+      "explanation": "The main plan just names the job at each spot it's needed. One name, used as many times as you like."
+    },
+    {
+      "id": "u70l01e10",
+      "type": "multipleChoice",
+      "prompt": "The big idea of this unit:",
+      "options": [
+        "a repeated or important job can be NAMED and reused by name",
+        "names are pointless",
+        "every job must be rewritten each time",
+        "jobs cannot have names"
+      ],
+      "answer": 0,
+      "explanation": "Name a reusable job once, then use its name. This idea - the function - is what you'll write as code next unit."
+    }
+  ]
+}

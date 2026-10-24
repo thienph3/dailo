@@ -1,0 +1,132 @@
+{
+  "unitId": "u62",
+  "lessonId": "u62l01",
+  "title": "What an average really is",
+  "idea": "Opener: an average is the total shared out evenly — sum divided by count. Thinking first, no divide-by-zero yet.",
+  "exercises": [
+    {
+      "id": "u62l01e01",
+      "type": "multipleChoice",
+      "prompt": "Three friends scored 6, 8, and 10 on a quiz. If they shared their points out evenly, how many would each have? (That shared-out number is the average.)",
+      "options": [
+        "8",
+        "24",
+        "3",
+        "10"
+      ],
+      "answer": 0,
+      "explanation": "Total 24 shared among 3 people is 8 each. An average is the total split evenly across the items."
+    },
+    {
+      "id": "u62l01e02",
+      "type": "multipleChoice",
+      "prompt": "What two numbers do you need to work out an average?",
+      "options": [
+        "The total (sum) and how many items (count)",
+        "The biggest and the smallest",
+        "Only the total",
+        "Only the count"
+      ],
+      "answer": 0,
+      "explanation": "Average = sum / count. You already know how to get both: sum (Unit 57) and count/len (Unit 58)."
+    },
+    {
+      "id": "u62l01e03",
+      "type": "trueFalse",
+      "prompt": "An average combines two tools you already know: a sum and a count.",
+      "answer": true,
+      "explanation": "Nothing brand new to compute the pieces — you add them up, count them, then divide. The division is the one new step."
+    },
+    {
+      "id": "u62l01e04",
+      "type": "multipleChoice",
+      "prompt": "The average of [4, 6] is...",
+      "options": [
+        "5",
+        "10",
+        "2",
+        "24"
+      ],
+      "answer": 0,
+      "explanation": "Sum 10, count 2, so 10 / 2 = 5. The average sits between the values."
+    },
+    {
+      "id": "u62l01e05",
+      "type": "orderBlocks",
+      "prompt": "Put the plain-English steps for an average in order.",
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "blocks": [
+        "Add up all the values (sum)",
+        "Count how many values there are (count)",
+        "Divide the sum by the count"
+      ],
+      "explanation": "Sum, then count, then divide. That order is the whole recipe for an average."
+    },
+    {
+      "id": "u62l01e06",
+      "type": "multipleChoice",
+      "prompt": "The average of [10, 20, 30] is...",
+      "options": [
+        "20",
+        "60",
+        "3",
+        "30"
+      ],
+      "answer": 0,
+      "explanation": "Sum 60, count 3, 60 / 3 = 20. The average is the evenly-shared value."
+    },
+    {
+      "id": "u62l01e07",
+      "type": "multiSelect",
+      "prompt": "Which real questions ask for an average? (pick all)",
+      "options": [
+        "What is the average score?",
+        "What were the typical daily sales (on average)?",
+        "What was the highest score?",
+        "How many days had sales?"
+      ],
+      "answer": [
+        0,
+        1
+      ],
+      "explanation": "Average score and typical daily sales both split a total across items. Highest is max; 'how many' is count."
+    },
+    {
+      "id": "u62l01e08",
+      "type": "trueFalse",
+      "prompt": "The average can be a value that is not actually in the list (like 5 being the average of 4 and 6).",
+      "answer": true,
+      "explanation": "An average is a shared-out number; it often falls between the values and need not be one of them."
+    },
+    {
+      "id": "u62l01e09",
+      "type": "multipleChoice",
+      "prompt": "Why is an average more useful than just the total sometimes?",
+      "options": [
+        "It accounts for how many items there are, so you can compare fairly",
+        "It is always bigger",
+        "It ignores the values",
+        "It is the same as the total"
+      ],
+      "answer": 0,
+      "explanation": "Total alone can mislead if counts differ. The average puts things on a per-item footing for fair comparison."
+    },
+    {
+      "id": "u62l01e10",
+      "type": "multipleChoice",
+      "prompt": "This unit's tool is...",
+      "options": [
+        "Compute an average as sum / count — and guard the empty case",
+        "Find the biggest value",
+        "Count matching items",
+        "Sort a list"
+      ],
+      "answer": 0,
+      "explanation": "You'll combine sum and count, divide, and learn to guard when the list is empty (count is 0)."
+    }
+  ]
+}

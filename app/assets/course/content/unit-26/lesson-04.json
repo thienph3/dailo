@@ -1,0 +1,147 @@
+{
+  "unitId": "u26",
+  "lessonId": "u26l04",
+  "title": "Reading 'both' as and",
+  "idea": "Translate 'both ... and ...' problem wording into an 'and' condition. Thinking-heavy word-to-code mapping.",
+  "exercises": [
+    {
+      "id": "u26l04e01",
+      "type": "multipleChoice",
+      "prompt": "'You win if you score 50+ AND finish in time.' Which operator joins the conditions?",
+      "options": [
+        "and",
+        "or",
+        "not",
+        "none"
+      ],
+      "answer": 0,
+      "explanation": "'Both must hold' maps straight to 'and'."
+    },
+    {
+      "id": "u26l04e02",
+      "type": "multipleChoice",
+      "prompt": "Example by hand: score = 60, finished = True (in time). Do you win under 'score >= 50 and finished'?",
+      "options": [
+        "Yes - both are True",
+        "No",
+        "Only sometimes",
+        "Cannot tell"
+      ],
+      "answer": 0,
+      "explanation": "60 >= 50 is True and finished is True, so the 'and' is True - you win."
+    },
+    {
+      "id": "u26l04e03",
+      "type": "multipleChoice",
+      "prompt": "Now score = 60 but finished = False. Do you win?",
+      "options": [
+        "No - one side is False, so 'and' is False",
+        "Yes",
+        "Only if score is higher",
+        "Cannot tell"
+      ],
+      "answer": 0,
+      "explanation": "'and' needs both. A False on either side means no win."
+    },
+    {
+      "id": "u26l04e04",
+      "type": "orderBlocks",
+      "prompt": "Plan: steps to decide a 'both' rule.",
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "blocks": [
+        "Remember the score and whether you finished in time",
+        "Check score >= 50 AND finished",
+        "Print 'Win' if both hold, else 'Lose'"
+      ],
+      "explanation": "Remember the inputs, combine the two conditions with 'and', then choose the message."
+    },
+    {
+      "id": "u26l04e05",
+      "type": "multipleChoice",
+      "prompt": "Which code matches 'score 50+ AND finished'?",
+      "options": [
+        "if score >= 50 and finished:",
+        "if score >= 50 or finished:",
+        "if not score >= 50:",
+        "if score >= 50:"
+      ],
+      "answer": 0,
+      "explanation": "'and finished' adds the second required condition. Both must be True to enter the if."
+    },
+    {
+      "id": "u26l04e06",
+      "type": "orderBlocks",
+      "prompt": "Code the 'both' rule.",
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "blocks": [
+        "score = 60",
+        "finished = True",
+        "if score >= 50 and finished:",
+        "    print(\"Win\")",
+        "else:",
+        "    print(\"Lose\")"
+      ],
+      "explanation": "Name both inputs, join the conditions with 'and', and print the result on each path."
+    },
+    {
+      "id": "u26l04e07",
+      "type": "fillBlank",
+      "prompt": "Complete the 'both' condition:\n\nif score >= 50 ____ finished:\n    print(\"Win\")\nelse:\n    print(\"Lose\")",
+      "answer": "and",
+      "acceptable": [
+        "and"
+      ],
+      "explanation": "'and' requires both the score test and finished to be True."
+    },
+    {
+      "id": "u26l04e08",
+      "type": "multipleChoice",
+      "prompt": "Check. score = 60, finished = True prints 'Win'. Hand answer was 'Win'. Verdict?",
+      "options": [
+        "Pass - matches",
+        "Fail",
+        "Cannot tell",
+        "Change the example"
+      ],
+      "answer": 0,
+      "explanation": "Both conditions held, so 'Win' prints - exactly the hand answer."
+    },
+    {
+      "id": "u26l04e09",
+      "type": "multipleChoice",
+      "prompt": "Re-check: score = 40, finished = True. What prints?",
+      "options": [
+        "Lose",
+        "Win",
+        "40",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "40 >= 50 is False, so the 'and' is False and the else runs: 'Lose'."
+    },
+    {
+      "id": "u26l04e10",
+      "type": "multipleChoice",
+      "prompt": "Word-to-code tip: the word 'both' in a problem usually means...",
+      "options": [
+        "join the conditions with 'and'",
+        "use 'or'",
+        "use 'not'",
+        "use elif"
+      ],
+      "answer": 0,
+      "explanation": "'both ... and ...' is the clearest signal to reach for the 'and' operator."
+    }
+  ]
+}

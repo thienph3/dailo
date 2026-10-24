@@ -1,0 +1,135 @@
+{
+  "unitId": "u17",
+  "lessonId": "u17l10",
+  "title": "Pull it together: a tidy shop report",
+  "idea": "GUIDED PROBLEM + REVIEW. One full report using earlier tools (variables, arithmetic, parentheses, f-strings, conversion) walked through UEPCC. Leans on review of the whole lap.",
+  "problem": "A shop sells 4 notebooks at 3 each. The price arrives as text \"3\". Show a message like: 4 notebooks cost 12.",
+  "exercises": [
+    {
+      "id": "u17l10e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: 4 notebooks, price arrives as the text \"3\". Show '4 notebooks cost 12.'\n\nUnderstand. What is the OUTPUT?",
+      "options": [
+        "A message showing the count and the total cost",
+        "Only the price text",
+        "Only the count",
+        "The word 'notebooks'"
+      ],
+      "answer": 0,
+      "explanation": "The output is a readable message with both the count and the total. Name it first."
+    },
+    {
+      "id": "u17l10e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "The price is the text \"3\". Before you can multiply, what must happen to it?",
+      "options": [
+        "Convert it to a number with int()",
+        "Nothing — text multiplies fine",
+        "Add quotes around the count too",
+        "Delete it"
+      ],
+      "answer": 0,
+      "explanation": "You can't do number math reliably on text. int(\"3\") turns it into the number 3 first."
+    },
+    {
+      "id": "u17l10e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example by hand. 4 notebooks at 3 each cost how much?",
+      "options": ["12", "7", "43", "1"],
+      "answer": 0,
+      "explanation": "4 * 3 = 12. Your check value."
+    },
+    {
+      "id": "u17l10e04",
+      "type": "multiSelect",
+      "uepcc": "P",
+      "prompt": "Plan. Which tools (from earlier lessons) will this report use? Select all that apply.",
+      "options": [
+        "int() to convert the text price",
+        "multiply to get the total",
+        "an f-string to present the message",
+        "if-statements to make a decision"
+      ],
+      "answer": [0, 1, 2],
+      "explanation": "You convert, multiply, and present with an f-string. No decisions (if) are needed — this is pure compute-and-report."
+    },
+    {
+      "id": "u17l10e05",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Order the plain-English steps.",
+      "blocks": [
+        "Convert the text price into a number",
+        "Multiply count by the number price to get the total",
+        "Remember the count and the text price",
+        "Show a message with the count and total"
+      ],
+      "answer": [2, 0, 1, 3],
+      "explanation": "Remember the values, convert the text, multiply, then present. Convert BEFORE the math."
+    },
+    {
+      "id": "u17l10e06",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code. Arrange the lines to match the plan.",
+      "blocks": [
+        "notebook_count = 4",
+        "price_text = \"3\"",
+        "notebook_price = int(price_text)",
+        "total = notebook_count * notebook_price",
+        "print(f\"{notebook_count} notebooks cost {total}.\")"
+      ],
+      "answer": [0, 1, 2, 3, 4],
+      "explanation": "Store the count and text price, convert the price, multiply, then print the message. Every value mapped."
+    },
+    {
+      "id": "u17l10e07",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Fill the blank to convert the text price to a number:\n\nprice_text = \"3\"\nnotebook_price = ____(price_text)",
+      "answer": "int",
+      "acceptable": ["int"],
+      "explanation": "int(price_text) turns \"3\" into 3 so it can be multiplied."
+    },
+    {
+      "id": "u17l10e08",
+      "type": "multipleChoice",
+      "uepcc": "C",
+      "prompt": "Which line correctly computes the total?",
+      "options": [
+        "total = notebook_count * notebook_price",
+        "total = notebook_count + notebook_price",
+        "total = notebook_count * price_text",
+        "total = notebook_count + price_text"
+      ],
+      "answer": 0,
+      "explanation": "Multiply the count by the CONVERTED price: 4 * 3 = 12. Using price_text (still text) would break."
+    },
+    {
+      "id": "u17l10e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check. The code prints '4 notebooks cost 12.' Hand example said 12. Verdict?",
+      "options": ["Passes", "Fails", "Unknown", "Rewrite the example"],
+      "answer": 0,
+      "explanation": "Output matches the hand example, so the full report is correct."
+    },
+    {
+      "id": "u17l10e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "New inputs: notebook_count = 5, price_text = \"2\". What message prints?",
+      "options": [
+        "5 notebooks cost 10.",
+        "5 notebooks cost 7.",
+        "5 notebooks cost 52.",
+        "2 notebooks cost 5."
+      ],
+      "answer": 0,
+      "explanation": "int(\"2\") = 2, then 5 * 2 = 10. Convert, compute, present — and it still works. You can build readable reports!"
+    }
+  ]
+}

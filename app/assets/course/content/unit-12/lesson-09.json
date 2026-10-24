@@ -1,0 +1,143 @@
+{
+  "unitId": "u12",
+  "lessonId": "u12l09",
+  "title": "How many each, and how many left",
+  "idea": "Use // for 'how many each' and % for 'how many left over' in everyday sharing problems.",
+  "exercises": [
+    {
+      "id": "u12l09e01",
+      "type": "multipleChoice",
+      "prompt": "32 pencils are shared equally among 5 friends. How many does each get?",
+      "options": [
+        "6 each",
+        "7 each",
+        "5 each",
+        "32 each"
+      ],
+      "answer": 0,
+      "explanation": "32 // 5 is 6 — each friend gets 6 pencils. Five friends with 6 each uses 30 pencils."
+    },
+    {
+      "id": "u12l09e02",
+      "type": "multipleChoice",
+      "prompt": "From the same 32 pencils and 5 friends, how many pencils are left over?",
+      "options": [
+        "2 left over",
+        "6 left over",
+        "0 left over",
+        "5 left over"
+      ],
+      "answer": 0,
+      "explanation": "32 % 5 is 2. After giving 6 each (30 pencils), 2 are left over."
+    },
+    {
+      "id": "u12l09e03",
+      "type": "multipleChoice",
+      "prompt": "Which line finds 'how many each' for pencils shared among friends?",
+      "options": [
+        "print(pencils // friends)",
+        "print(pencils % friends)",
+        "print(pencils * friends)",
+        "print(pencils + friends)"
+      ],
+      "answer": 0,
+      "explanation": "'How many each' is the full share, so //. pencils // friends gives each person's amount."
+    },
+    {
+      "id": "u12l09e04",
+      "type": "multipleChoice",
+      "prompt": "Which line finds 'how many left over' after the equal share?",
+      "options": [
+        "print(pencils % friends)",
+        "print(pencils // friends)",
+        "print(pencils - friends)",
+        "print(friends % pencils)"
+      ],
+      "answer": 0,
+      "explanation": "The leftover uses %. pencils % friends gives what's left after everyone gets an equal whole share."
+    },
+    {
+      "id": "u12l09e05",
+      "type": "orderBlocks",
+      "prompt": "Put these lines in order to share eggs among cartons and show each amount and the leftover.",
+      "blocks": [
+        "eggs = 38",
+        "cartons = 6",
+        "print(eggs // cartons)",
+        "print(eggs % cartons)"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "Name the values, then show 'each' with //, then 'leftover' with %. 38 // 6 is 6, and 38 % 6 is 2."
+    },
+    {
+      "id": "u12l09e06",
+      "type": "fillBlank",
+      "prompt": "Fill the blank so this shows how many whole rows of 8 chairs fit 50 chairs.\n\nchairs = 50\nper_row = 8\nprint(chairs __ per_row)",
+      "answer": "//",
+      "acceptable": [
+        "//"
+      ],
+      "explanation": "50 // 8 is 6 whole rows. The 2 leftover chairs would come from %."
+    },
+    {
+      "id": "u12l09e07",
+      "type": "trueFalse",
+      "prompt": "If 24 cupcakes share among 6 people with 24 % 6 equal to 0, then everyone gets an equal share with none left.",
+      "answer": true,
+      "explanation": "A leftover of 0 means it divided evenly. 24 // 6 is 4 each, and nothing left — a perfect share."
+    },
+    {
+      "id": "u12l09e08",
+      "type": "multipleChoice",
+      "prompt": "45 minutes of chores split into 10-minute blocks. How many whole blocks, and how many minutes left?",
+      "options": [
+        "4 blocks, 5 minutes left",
+        "5 blocks, 0 minutes left",
+        "4 blocks, 0 minutes left",
+        "3 blocks, 15 minutes left"
+      ],
+      "answer": 0,
+      "explanation": "45 // 10 is 4 whole blocks (40 minutes), and 45 % 10 is 5 minutes left over."
+    },
+    {
+      "id": "u12l09e09",
+      "type": "tapTokens",
+      "prompt": "Build a line that shows the leftover slices when slices is shared among guests.",
+      "tokens": [
+        "print",
+        "(",
+        "slices",
+        "%",
+        "guests",
+        ")"
+      ],
+      "answer": [
+        "print",
+        "(",
+        "slices",
+        "%",
+        "guests",
+        ")"
+      ],
+      "explanation": "print(slices % guests) shows the leftover slices. % is the leftover sign."
+    },
+    {
+      "id": "u12l09e10",
+      "type": "multipleChoice",
+      "prompt": "You share 29 stickers among 4 kids, giving each the same whole amount. Using // and %, what's the full answer?",
+      "options": [
+        "7 each, 1 left over",
+        "6 each, 5 left over",
+        "8 each, 0 left over",
+        "7 each, 0 left over"
+      ],
+      "answer": 0,
+      "explanation": "29 // 4 is 7 each (28 stickers), and 29 % 4 is 1 left over. Together // and % solve the whole sharing problem!"
+    }
+  ]
+}

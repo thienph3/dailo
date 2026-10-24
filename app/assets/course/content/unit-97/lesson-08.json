@@ -1,0 +1,150 @@
+{
+  "unitId": "u97",
+  "lessonId": "u97l08",
+  "title": "Capstone: print a countdown with range and step",
+  "idea": "GUIDED CAPSTONE. Read a number pattern and choose the right range(start, stop, step) — the step and the exclusive stop are the whole puzzle.",
+  "problem": "Print a countdown 10, 8, 6, 4, 2 (down by 2, stopping at 2).",
+  "exercises": [
+    {
+      "id": "u97l08e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: print 10, 8, 6, 4, 2. OUTPUT is...",
+      "options": [
+        "A sequence of numbers, each on its own line",
+        "One total",
+        "A count of numbers",
+        "A yes/no"
+      ],
+      "answer": 0,
+      "explanation": "Output is the sequence itself (printed), not a single value. Pattern problems produce many outputs."
+    },
+    {
+      "id": "u97l08e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "Study the pattern. What is the GAP between each number?",
+      "options": [
+        "It goes down by 2 each time",
+        "Up by 2",
+        "Down by 1",
+        "Random"
+      ],
+      "answer": 0,
+      "explanation": "10 to 8 to 6... each step is -2. The gap is the 'step' you'll feed to range. Reading the pattern IS the understanding."
+    },
+    {
+      "id": "u97l08e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example by hand: start 10, step -2. What is the LAST number we want to see?",
+      "options": [
+        "2",
+        "0",
+        "-2",
+        "4"
+      ],
+      "answer": 0,
+      "explanation": "The sequence ends at 2. range's stop is exclusive, so to INCLUDE 2 we must stop just past it."
+    },
+    {
+      "id": "u97l08e04",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Since range stops BEFORE its stop value, to include 2 going down by 2, the stop should be...",
+      "options": [
+        "0 (so 2 is the last one printed)",
+        "2 (which would skip 2)",
+        "1",
+        "10"
+      ],
+      "answer": 0,
+      "explanation": "range(10, 0, -2) yields 10,8,6,4,2 and stops before 0. Choosing the stop is the trickiest part of a countdown."
+    },
+    {
+      "id": "u97l08e05",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Plan it. Order the steps.",
+      "blocks": [
+        "Print each number as the loop visits it",
+        "Count down from 10 toward 2",
+        "Step by -2 each time"
+      ],
+      "answer": [
+        1,
+        2,
+        0
+      ],
+      "explanation": "Count down, step -2, print each. The plan names start, direction, and step before code."
+    },
+    {
+      "id": "u97l08e06",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Which range call matches 'start 10, step down 2, include 2'?",
+      "options": [
+        "range(10, 0, -2)",
+        "range(10, 2, -2)",
+        "range(10, 0, 2)",
+        "range(2, 10, 2)"
+      ],
+      "answer": 0,
+      "explanation": "Start 10, stop 0 (exclusive, so 2 is last), step -2. A negative step is what makes range go downward."
+    },
+    {
+      "id": "u97l08e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code it. Arrange the two lines.",
+      "blocks": [
+        "    print(number)",
+        "for number in range(10, 0, -2):"
+      ],
+      "answer": [
+        1,
+        0
+      ],
+      "explanation": "The for header first, the indented print under it. Each pass prints the current number."
+    },
+    {
+      "id": "u97l08e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Fill the step so the loop counts DOWN by 2:\n\nfor number in range(10, 0, ____):\n    print(number)",
+      "answer": "-2",
+      "acceptable": [
+        "-2"
+      ],
+      "explanation": "A step of -2 moves downward two at a time. A positive step would never leave 10 (and range would be empty)."
+    },
+    {
+      "id": "u97l08e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Run it. Does it print 10, 8, 6, 4, 2 as the hand example expected?",
+      "options": [
+        "Yes — matches exactly",
+        "No — it prints upward",
+        "No — it includes 0",
+        "No — it skips 2"
+      ],
+      "answer": 0,
+      "explanation": "Matches. The negative step and the exclusive stop at 0 together produce exactly 10..2. Pattern solved by reasoning about range."
+    },
+    {
+      "id": "u97l08e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Generalize: range(20, 10, -5). What sequence prints?",
+      "options": [
+        "20, 15",
+        "20, 15, 10",
+        "20, 10",
+        "15, 10, 5"
+      ],
+      "answer": 0,
+      "explanation": "20, 15 — stops before 10, so 10 is NOT printed. Same reasoning about the exclusive stop. You read patterns like a programmer now."
+    }
+  ]
+}

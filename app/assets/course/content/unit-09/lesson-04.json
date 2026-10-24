@@ -1,0 +1,133 @@
+{
+  "unitId": "u09",
+  "lessonId": "u09l04",
+  "title": "Changing one box at a time",
+  "idea": "When you have two variables, reassigning one does not touch the other. Each box is its own thing. (Numbers only — text as data comes later.)",
+  "exercises": [
+    {
+      "id": "u09l04e01",
+      "type": "multipleChoice",
+      "prompt": "What will this show (two lines)?\n\ncats = 2\ndogs = 4\ncats = 5\nprint(cats)\nprint(dogs)",
+      "options": [
+        "5 then 4",
+        "5 then 5",
+        "2 then 4",
+        "4 then 5"
+      ],
+      "answer": 0,
+      "explanation": "We only changed cats. dogs was never touched, so it stays 4."
+    },
+    {
+      "id": "u09l04e02",
+      "type": "trueFalse",
+      "prompt": "Changing the variable 'cats' also changes the variable 'dogs'.",
+      "answer": false,
+      "explanation": "No. Each variable is its own box. Changing one leaves the other exactly as it was."
+    },
+    {
+      "id": "u09l04e03",
+      "type": "multipleChoice",
+      "prompt": "What will this show (two lines)?\n\nfirst = 1\nsecond = 2\nsecond = 9\nprint(first)\nprint(second)",
+      "options": [
+        "1 then 9",
+        "1 then 2",
+        "9 then 9",
+        "9 then 1"
+      ],
+      "answer": 0,
+      "explanation": "Only second was reassigned to 9. first still holds 1."
+    },
+    {
+      "id": "u09l04e04",
+      "type": "multipleChoice",
+      "prompt": "What will this show (two lines)?\n\nleft = 3\nright = 3\nleft = 8\nprint(left)\nprint(right)",
+      "options": [
+        "8 then 3",
+        "8 then 8",
+        "3 then 8",
+        "3 then 3"
+      ],
+      "answer": 0,
+      "explanation": "They started the same, but changing left to 8 does not affect right. right stays 3."
+    },
+    {
+      "id": "u09l04e05",
+      "type": "fillBlank",
+      "prompt": "Change only the home score to 12, leaving the other box alone.\n\nhome = 7\naway = 3\nhome = ____\nprint(home)\nprint(away)",
+      "answer": "12",
+      "acceptable": [
+        "12"
+      ],
+      "explanation": "home = 12 changes just that box. away still holds 3."
+    },
+    {
+      "id": "u09l04e06",
+      "type": "multiSelect",
+      "prompt": "After these lines, which statements are TRUE?\n\napples = 4\nbananas = 6\napples = 9",
+      "options": [
+        "apples now holds 9",
+        "bananas still holds 6",
+        "bananas now holds 9",
+        "apples still holds 4"
+      ],
+      "answer": [
+        0,
+        1
+      ],
+      "explanation": "apples was changed to 9. bananas was never touched, so it keeps 6."
+    },
+    {
+      "id": "u09l04e07",
+      "type": "orderBlocks",
+      "prompt": "Arrange so it shows 10 then 20 (set both, change only the first, then print both).",
+      "blocks": [
+        "player1 = 3",
+        "player2 = 20",
+        "player1 = 10",
+        "print(player1)",
+        "print(player2)"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "explanation": "player1 ends as 10 after its change; player2 stays 20 because we never changed it."
+    },
+    {
+      "id": "u09l04e08",
+      "type": "trueFalse",
+      "prompt": "Two different variables can hold two different numbers at the same time.",
+      "answer": true,
+      "explanation": "Yes! Each box is separate. One can be 1 while another is 9."
+    },
+    {
+      "id": "u09l04e09",
+      "type": "multipleChoice",
+      "prompt": "What will this show (two lines)?\n\nx = 1\ny = 2\nx = 3\ny = 4\nprint(x)\nprint(y)",
+      "options": [
+        "3 then 4",
+        "1 then 2",
+        "4 then 3",
+        "3 then 2"
+      ],
+      "answer": 0,
+      "explanation": "Both boxes were reassigned. x ends as 3, y ends as 4. Each kept its own last value."
+    },
+    {
+      "id": "u09l04e10",
+      "type": "multipleChoice",
+      "prompt": "A friend changed 'score' and expected 'lives' to change too. Why didn't lives change?",
+      "options": [
+        "lives is a separate box — only score was reassigned",
+        "lives is broken",
+        "The computer forgot lives",
+        "You can only change one variable ever"
+      ],
+      "answer": 0,
+      "explanation": "Each variable is independent. Reassigning score touches score only. lives keeps its value."
+    }
+  ]
+}

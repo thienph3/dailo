@@ -1,0 +1,137 @@
+{
+  "unitId": "u24",
+  "lessonId": "u24l05",
+  "title": "Can this value even be negative?",
+  "idea": "Another edge case: values that should never be negative (ages, counts, prices). Spot when a guard should reject them.",
+  "exercises": [
+    {
+      "id": "u24l05e01",
+      "type": "multipleChoice",
+      "prompt": "Which value should never be negative in a sensible problem?",
+      "options": [
+        "A count of people",
+        "A temperature",
+        "A bank balance change",
+        "A score difference"
+      ],
+      "answer": 0,
+      "explanation": "A count of people cannot be negative. Spotting impossible values is an edge-case skill."
+    },
+    {
+      "id": "u24l05e02",
+      "type": "trueFalse",
+      "prompt": "Some values (like an age or a count) should never be negative, so a negative one is an edge case.",
+      "answer": true,
+      "explanation": "Yes. A negative age or count signals a mistake - a guard can catch it before it causes a wrong answer."
+    },
+    {
+      "id": "u24l05e03",
+      "type": "multipleChoice",
+      "prompt": "What prints?\n\nage = -3\nif age < 0:\n    print(\"That is not a valid age\")\nelse:\n    print(\"Age accepted\")",
+      "options": [
+        "That is not a valid age",
+        "Age accepted",
+        "-3",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "-3 < 0 is True, so the guard rejects the impossible age."
+    },
+    {
+      "id": "u24l05e04",
+      "type": "multipleChoice",
+      "prompt": "What prints?\n\nage = 25\nif age < 0:\n    print(\"That is not a valid age\")\nelse:\n    print(\"Age accepted\")",
+      "options": [
+        "Age accepted",
+        "That is not a valid age",
+        "25",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "25 < 0 is False, so the normal branch runs: Age accepted."
+    },
+    {
+      "id": "u24l05e05",
+      "type": "multipleChoice",
+      "prompt": "Which condition guards against a negative count?",
+      "options": [
+        "if count < 0:",
+        "if count > 0:",
+        "if count == 0:",
+        "if count > 100:"
+      ],
+      "answer": 0,
+      "explanation": "count < 0 is True exactly for negative values - the impossible case to reject."
+    },
+    {
+      "id": "u24l05e06",
+      "type": "matchPairs",
+      "prompt": "Match each quantity to whether a negative value is sensible.",
+      "pairs": [
+        {
+          "left": "number of apples",
+          "right": "never negative"
+        },
+        {
+          "left": "temperature in winter",
+          "right": "can be negative"
+        },
+        {
+          "left": "people in a room",
+          "right": "never negative"
+        }
+      ],
+      "explanation": "Counts of things are never negative; a temperature genuinely can be. Knowing which is which guides your guards."
+    },
+    {
+      "id": "u24l05e07",
+      "type": "trueFalse",
+      "prompt": "A temperature can be negative, so a negative temperature is NOT an edge case to reject.",
+      "answer": true,
+      "explanation": "Correct - negatives are normal for temperature. Edge cases depend on what the value means."
+    },
+    {
+      "id": "u24l05e08",
+      "type": "multipleChoice",
+      "prompt": "'A shop quantity should be 0 or more.' A quantity of -2 is...",
+      "options": [
+        "an impossible value a guard should catch",
+        "perfectly normal",
+        "the same as 2",
+        "a large number"
+      ],
+      "answer": 0,
+      "explanation": "-2 items makes no sense, so a guard (if quantity < 0) should reject it."
+    },
+    {
+      "id": "u24l05e09",
+      "type": "multiSelect",
+      "prompt": "Select ALL values where a NEGATIVE result signals a likely mistake.",
+      "options": [
+        "number of tickets sold",
+        "a person's height",
+        "items in a box",
+        "a bank account's daily change"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Ticket counts, heights, and item counts should not be negative. A daily balance change genuinely can be."
+    },
+    {
+      "id": "u24l05e10",
+      "type": "multipleChoice",
+      "prompt": "Edge cases, in one sentence:",
+      "options": [
+        "They are the empty, zero, or impossible values the normal plan forgets",
+        "They are the most common values",
+        "They are always errors",
+        "They only involve big numbers"
+      ],
+      "answer": 0,
+      "explanation": "Empty, zero, and impossible values are the edges. Asking about them for every problem is the whole habit this unit builds."
+    }
+  ]
+}

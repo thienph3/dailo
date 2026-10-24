@@ -1,0 +1,140 @@
+{
+  "unitId": "u47",
+  "lessonId": "u47l08",
+  "title": "Acting only on some passes",
+  "idea": "MEET. Spotting when a loop should act only on SOME passes (if inside the loop) vs every pass. Thinking only.",
+  "exercises": [
+    {
+      "id": "u47l08e01",
+      "type": "multipleChoice",
+      "prompt": "'Print each number 1 to 10, but only the even ones.' You act on...",
+      "options": [
+        "only some passes — when the number is even",
+        "every pass",
+        "no passes",
+        "only the first pass"
+      ],
+      "answer": 0,
+      "explanation": "You print only on passes where the number is even, so an if inside the loop guards the action."
+    },
+    {
+      "id": "u47l08e02",
+      "type": "multipleChoice",
+      "prompt": "Which tool lets a loop act only on SOME passes?",
+      "options": [
+        "an if inside the loop body",
+        "a bigger range",
+        "a second print",
+        "removing the loop"
+      ],
+      "answer": 0,
+      "explanation": "An if inside the loop checks a condition each pass and only acts when it is true."
+    },
+    {
+      "id": "u47l08e03",
+      "type": "trueFalse",
+      "prompt": "'Add up only the prices over 10' acts on some passes, not all.",
+      "answer": true,
+      "explanation": "True. You add only when the price is over 10, so an if inside the loop guards the accumulator."
+    },
+    {
+      "id": "u47l08e04",
+      "type": "matchPairs",
+      "prompt": "Match each problem to 'every pass' or 'some passes'.",
+      "pairs": [
+        {
+          "left": "Print every number 1 to 5",
+          "right": "every pass"
+        },
+        {
+          "left": "Count only the numbers over 3",
+          "right": "some passes"
+        },
+        {
+          "left": "Greet each of 4 guests",
+          "right": "every pass"
+        },
+        {
+          "left": "Add only the even numbers",
+          "right": "some passes"
+        }
+      ],
+      "explanation": "If a rule decides whether to act, it is 'some passes' (if inside the loop). No rule means every pass."
+    },
+    {
+      "id": "u47l08e05",
+      "type": "multipleChoice",
+      "prompt": "'For each number 1 to 20, say Fizz if it divides by 3.' You act...",
+      "options": [
+        "only when it divides by 3",
+        "every single pass",
+        "never",
+        "only on pass 1"
+      ],
+      "answer": 0,
+      "explanation": "You check divisibility each pass and act only when it holds — an if inside the loop."
+    },
+    {
+      "id": "u47l08e06",
+      "type": "trueFalse",
+      "prompt": "Skipping an action on some passes still means the loop runs every pass.",
+      "answer": true,
+      "explanation": "True. The loop visits every value; the if only decides whether to ACT. The pass still happens."
+    },
+    {
+      "id": "u47l08e07",
+      "type": "orderBlocks",
+      "prompt": "Order the plan for 'count the numbers 1 to 8 that are over 5'.",
+      "blocks": [
+        "Loop over each number 1 to 8",
+        "Inside, if the number is over 5, add 1 to the counter",
+        "After the loop, the counter is the answer"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Visit every number, but only count the ones over 5 using an if inside the loop."
+    },
+    {
+      "id": "u47l08e08",
+      "type": "multipleChoice",
+      "prompt": "Which phrase signals 'act only on some passes'?",
+      "options": [
+        "'only the ones that ...'",
+        "'for each and every'",
+        "'all of them'",
+        "'every single'"
+      ],
+      "answer": 0,
+      "explanation": "'only the ones that ...' means a condition decides — an if inside the loop. The others mean every pass."
+    },
+    {
+      "id": "u47l08e09",
+      "type": "multipleChoice",
+      "prompt": "'Print all 6 names, and star the ones starting with A.' How many actions happen?",
+      "options": [
+        "Print happens every pass; the star only on some passes",
+        "Nothing happens",
+        "Only the star, never the print",
+        "Both only once"
+      ],
+      "answer": 0,
+      "explanation": "Printing is every pass; adding a star is guarded by an if (only names starting with A)."
+    },
+    {
+      "id": "u47l08e10",
+      "type": "multipleChoice",
+      "prompt": "Why plan 'every pass vs some passes' before coding?",
+      "options": [
+        "It tells you whether you need an if inside the loop",
+        "It changes the range size",
+        "It removes the counter",
+        "It renames the loop"
+      ],
+      "answer": 0,
+      "explanation": "If only some passes act, you need an if inside the body. Spotting that shapes the plan."
+    }
+  ]
+}

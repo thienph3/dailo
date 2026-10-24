@@ -1,0 +1,158 @@
+{
+  "unitId": "u82",
+  "lessonId": "u82l04",
+  "title": "Solve it together: find the biggest with a helper",
+  "idea": "GUIDED (UEPCC). Decompose 'highest value' into a biggest(nums) helper using the track pattern (best starts at first item), with a one-item sanity check. No max() builtin.",
+  "problem": "Temperatures are [12, 19, 7, 15]. Show the highest, using a biggest(nums) helper.",
+  "exercises": [
+    {
+      "id": "u82l04e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: temperatures [12, 19, 7, 15]. Show the highest, using biggest(nums).\n\nOUTPUT?",
+      "options": [
+        "One number: the highest temperature",
+        "The lowest",
+        "The average",
+        "The count"
+      ],
+      "answer": 0,
+      "explanation": "Output = the single highest value. We'll track it as we walk the list."
+    },
+    {
+      "id": "u82l04e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "INPUTS?",
+      "options": [
+        "The list of temperatures",
+        "Only the number 19",
+        "The word highest",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "Input is the list. The helper walks it and keeps the best seen so far."
+    },
+    {
+      "id": "u82l04e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example — by hand. Walking [12, 19, 7, 15], the biggest is...",
+      "options": [
+        "19",
+        "15",
+        "12",
+        "7"
+      ],
+      "answer": 0,
+      "explanation": "19 beats 12, 7, and 15. Hand answer = 19, our check value."
+    },
+    {
+      "id": "u82l04e04",
+      "type": "trueFalse",
+      "uepcc": "E",
+      "prompt": "To find the biggest WITHOUT max(), we start 'best' at the first item and update it when we see something larger.",
+      "answer": true,
+      "explanation": "Yes — that's the track pattern. best = nums[0], then raise best whenever a bigger value appears."
+    },
+    {
+      "id": "u82l04e05",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Plan — which pattern finds the highest value?",
+      "options": [
+        "Track the biggest (keep a 'best so far' and update it)",
+        "Running total",
+        "Count with a condition",
+        "Filter"
+      ],
+      "answer": 0,
+      "explanation": "Track-the-biggest: carry a best-so-far and replace it when a larger value shows up."
+    },
+    {
+      "id": "u82l04e06",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Order the helper's plan.",
+      "blocks": [
+        "Set best to the first item",
+        "Look at each item in turn",
+        "If an item is bigger than best, make it the new best",
+        "Return best"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "Start best at the first item, walk the rest, raise best on anything larger, return it."
+    },
+    {
+      "id": "u82l04e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code the helper and use it.",
+      "blocks": [
+        "def biggest(nums):",
+        "    best = nums[0]",
+        "    for n in nums:",
+        "        if n > best:",
+        "            best = n",
+        "    return best",
+        "temps = [12, 19, 7, 15]",
+        "print(biggest(temps))"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "explanation": "best starts at nums[0], the loop raises it when n is larger, then return. We compute the max ourselves — no builtin."
+    },
+    {
+      "id": "u82l04e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Complete the comparison that updates best:\n\nif n ____ best:\n    best = n",
+      "answer": ">",
+      "acceptable": [
+        ">"
+      ],
+      "explanation": "We replace best only when the new item is greater, so the operator is >."
+    },
+    {
+      "id": "u82l04e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check — the code prints 19; hand example was 19. Verdict?",
+      "options": [
+        "Passes",
+        "Fails",
+        "Unknown",
+        "Rewrite example"
+      ],
+      "answer": 0,
+      "explanation": "Output (19) matches the hand-worked 19. The track helper is correct."
+    },
+    {
+      "id": "u82l04e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Re-check with one item: biggest([5]). What should it return?",
+      "options": [
+        "5 — the only item is the biggest",
+        "0",
+        "It crashes",
+        "1"
+      ],
+      "answer": 0,
+      "explanation": "With one item, best = nums[0] = 5 and the loop finds nothing larger. A single-item list is handled correctly."
+    }
+  ]
+}

@@ -1,0 +1,124 @@
+{
+  "unitId": "u05",
+  "lessonId": "u05l03",
+  "title": "Comparing line by line",
+  "idea": "To check, compare the real output and the expected output one line at a time, top to bottom.",
+  "exercises": [
+    {
+      "id": "u05l03e01",
+      "type": "multipleChoice",
+      "prompt": "What is the safest way to compare two outputs?",
+      "options": [
+        "Line by line, top to bottom",
+        "By their total length only",
+        "By guessing",
+        "By the last line only"
+      ],
+      "answer": 0,
+      "explanation": "Compare one line at a time, in order. A quick glance can miss a small difference."
+    },
+    {
+      "id": "u05l03e02",
+      "type": "multipleChoice",
+      "prompt": "Expected:\nHi\nBye\n\nReal output:\nHi\nBye\n\nDoes it pass?",
+      "options": [
+        "Yes — every line matches",
+        "No",
+        "Only line 1 matches",
+        "You can't tell"
+      ],
+      "answer": 0,
+      "explanation": "Line 1: Hi = Hi. Line 2: Bye = Bye. All lines match, so it passes."
+    },
+    {
+      "id": "u05l03e03",
+      "type": "multipleChoice",
+      "prompt": "Expected:\nHi\nBye\n\nReal output:\nHi\nBye now\n\nWhich line is different?",
+      "options": [
+        "Line 2 (Bye vs Bye now)",
+        "Line 1",
+        "Neither",
+        "Both"
+      ],
+      "answer": 0,
+      "explanation": "Line 1 matches (Hi). Line 2 differs: expected 'Bye' but got 'Bye now'. Comparing line by line finds it."
+    },
+    {
+      "id": "u05l03e04",
+      "type": "trueFalse",
+      "prompt": "If even one line differs, the output does not fully match.",
+      "answer": true,
+      "explanation": "Every line must match for a pass. One different line is enough to fail the Check."
+    },
+    {
+      "id": "u05l03e05",
+      "type": "multipleChoice",
+      "prompt": "Expected:\nRed\nGreen\nBlue\n\nReal output:\nRed\nGreen\nBlue\n\nHow many lines did you compare?",
+      "options": [
+        "3",
+        "1",
+        "2",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "Three expected lines, three real lines. You compare all three: Red, Green, Blue. All match."
+    },
+    {
+      "id": "u05l03e06",
+      "type": "multiSelect",
+      "prompt": "Expected:\nOne\nTwo\nThree\n\nReal output:\nOne\n2\nThree\n\nWhich lines match? (pick all that match)",
+      "options": [
+        "Line 1 (One)",
+        "Line 2 (Two vs 2)",
+        "Line 3 (Three)"
+      ],
+      "answer": [0, 2],
+      "explanation": "Line 1 and line 3 match. Line 2 does not: expected 'Two' but got '2'. So overall it fails."
+    },
+    {
+      "id": "u05l03e07",
+      "type": "orderBlocks",
+      "prompt": "Put the line-by-line checking steps in order.",
+      "blocks": [
+        "Start at the top line of both outputs",
+        "Compare that line in both",
+        "Move down to the next line and repeat"
+      ],
+      "answer": [0, 1, 2],
+      "explanation": "Start at the top, compare, move down. Repeat until you've checked every line."
+    },
+    {
+      "id": "u05l03e08",
+      "type": "trueFalse",
+      "prompt": "Two outputs can have the same words but still differ if the words are on different lines.",
+      "answer": true,
+      "explanation": "Line position matters. 'Hi' then 'Bye' is not the same as 'Bye' then 'Hi', even though the words are the same."
+    },
+    {
+      "id": "u05l03e09",
+      "type": "multipleChoice",
+      "prompt": "Expected:\nStart\nEnd\n\nReal output:\nStart\nEnd\n\nWhat's your verdict?",
+      "options": [
+        "Pass",
+        "Fail",
+        "Half pass",
+        "Unknown"
+      ],
+      "answer": 0,
+      "explanation": "Both lines match in the right order. Pass."
+    },
+    {
+      "id": "u05l03e10",
+      "type": "multipleChoice",
+      "prompt": "Why compare one line at a time instead of just glancing?",
+      "options": [
+        "A glance can miss a small difference on one line",
+        "Glancing is against the rules",
+        "It makes the program faster",
+        "There is no reason"
+      ],
+      "answer": 0,
+      "explanation": "Small differences hide easily. Checking each line, in order, is how you catch them for sure."
+    }
+  ]
+}

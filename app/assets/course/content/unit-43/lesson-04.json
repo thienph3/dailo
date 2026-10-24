@@ -1,0 +1,152 @@
+{
+  "unitId": "u43",
+  "lessonId": "u43l04",
+  "title": "Solve it together: count the even floors",
+  "idea": "GUIDED. Use a remainder rule (% ) with a counter inside a for-loop.",
+  "problem": "A building has floors numbered 1 to 8. How many floor numbers are even?",
+  "exercises": [
+    {
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: Floors 1 to 8. How many floor numbers are even?\n\nUnderstand -- what is the OUTPUT?",
+      "options": [
+        "A count of how many floors are even",
+        "The total of the floor numbers",
+        "The top floor",
+        "The first even floor"
+      ],
+      "answer": 0,
+      "explanation": "The output is a COUNT of even floors. Name the goal before planning.",
+      "id": "u43l04e01"
+    },
+    {
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "By hand: which floors from 1 to 8 are even, and how many?",
+      "options": [
+        "2, 4, 6, 8 -> 4",
+        "1, 3, 5, 7 -> 4",
+        "2, 4, 6 -> 3",
+        "all 8"
+      ],
+      "answer": 0,
+      "explanation": "Even floors are 2, 4, 6, 8 -- four of them. Our check value is 4.",
+      "id": "u43l04e02"
+    },
+    {
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "How do you test if a number is even?",
+      "options": [
+        "number % 2 == 0",
+        "number / 2",
+        "number == 2",
+        "number + 2"
+      ],
+      "answer": 0,
+      "explanation": "A number is even when the remainder after dividing by 2 is 0: number % 2 == 0.",
+      "id": "u43l04e03"
+    },
+    {
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Plan the steps.",
+      "blocks": [
+        "Start an even counter at 0",
+        "For each floor 1 to 8, check if it is even",
+        "If even, add 1 to the counter",
+        "Show the counter"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "Counter, loop, test with %, add on evens, show. The if uses the remainder rule.",
+      "id": "u43l04e04"
+    },
+    {
+      "type": "multipleChoice",
+      "uepcc": "C",
+      "prompt": "Which range covers floors 1 through 8?",
+      "options": [
+        "range(1, 9)",
+        "range(1, 8)",
+        "range(8)",
+        "range(0, 8)"
+      ],
+      "answer": 0,
+      "explanation": "range(1, 9) gives 1,2,...,8. The stop value 9 is not included, so it ends at 8.",
+      "id": "u43l04e05"
+    },
+    {
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Fill the remainder operator so the if is true only for even floors:\n\neven = 0\nfor floor in range(1, 9):\n    if floor ____ 2 == 0:\n        even = even + 1\nprint(even)",
+      "answer": "%",
+      "acceptable": [
+        "%"
+      ],
+      "explanation": "% gives the remainder. floor % 2 == 0 is true exactly when floor is even.",
+      "id": "u43l04e06"
+    },
+    {
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Arrange the full solution.",
+      "blocks": [
+        "even = 0",
+        "for floor in range(1, 9):",
+        "    if floor % 2 == 0:",
+        "        even = even + 1",
+        "print(even)"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "explanation": "Counter at 0, loop floors 1..8, add 1 on evens, print the count.",
+      "id": "u43l04e07"
+    },
+    {
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "It prints 4, matching your hand answer. So the code is...",
+      "options": [
+        "Correct",
+        "Wrong",
+        "Untested",
+        "Too slow"
+      ],
+      "answer": 0,
+      "explanation": "Output (4) matches the hand count (4). The even-counting logic works.",
+      "id": "u43l04e08"
+    },
+    {
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Re-check with floors 1 to 5. How many are even?",
+      "options": [
+        "2",
+        "3",
+        "1",
+        "5"
+      ],
+      "answer": 0,
+      "explanation": "Even floors in 1..5 are 2 and 4 -- two of them. Changing the range changes the count correctly.",
+      "id": "u43l04e09"
+    },
+    {
+      "type": "trueFalse",
+      "uepcc": "Check",
+      "prompt": "To count ODD floors instead, you could test floor % 2 == 1.",
+      "answer": true,
+      "explanation": "True -- an odd number leaves remainder 1 when divided by 2, so floor % 2 == 1 flips the rule to odds.",
+      "id": "u43l04e10"
+    }
+  ]
+}

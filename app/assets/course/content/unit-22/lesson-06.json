@@ -1,0 +1,104 @@
+{
+  "unitId": "u22",
+  "lessonId": "u22l06",
+  "title": "Same choice, two ways to write it",
+  "idea": "You can often swap which outcome is the if and which is the else by flipping the comparison. Both can be correct.",
+  "exercises": [
+    {
+      "id": "u22l06e01",
+      "type": "multipleChoice",
+      "prompt": "These two both print the right thing for the Pass/Fail rule. What does the second one check first?\n\nVERSION A:\nif score >= 60:\n    print(\"Pass\")\nelse:\n    print(\"Fail\")\n\nVERSION B:\nif score < 60:\n    print(\"Fail\")\nelse:\n    print(\"Pass\")",
+      "options": [
+        "Whether the score is below 60",
+        "Whether the score is above 100",
+        "The exact score",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "Version B flips the question to score < 60 and swaps the two outcomes. Both versions give the same results."
+    },
+    {
+      "id": "u22l06e02",
+      "type": "multipleChoice",
+      "prompt": "For score = 70, what does VERSION B show?\n\nif score < 60:\n    print(\"Fail\")\nelse:\n    print(\"Pass\")",
+      "options": ["Pass", "Fail", "Both", "Nothing"],
+      "answer": 0,
+      "explanation": "70 < 60 is False, so the else branch runs: Pass. Same answer as Version A would give."
+    },
+    {
+      "id": "u22l06e03",
+      "type": "multipleChoice",
+      "prompt": "For score = 40, what does VERSION B show?\n\nif score < 60:\n    print(\"Fail\")\nelse:\n    print(\"Pass\")",
+      "options": ["Fail", "Pass", "Both", "Nothing"],
+      "answer": 0,
+      "explanation": "40 < 60 is True, so the if branch runs: Fail. Flipping the condition also flips which branch holds each outcome."
+    },
+    {
+      "id": "u22l06e04",
+      "type": "trueFalse",
+      "prompt": "If you flip the comparison, you must also swap the two branches to keep the same meaning.",
+      "answer": true,
+      "explanation": "Yes. Change >= 60 to < 60 AND swap Pass/Fail. Flip one without the other and the meaning reverses."
+    },
+    {
+      "id": "u22l06e05",
+      "type": "matchPairs",
+      "prompt": "Match each condition to the branch that should hold 'Pass' to keep the Pass/Fail rule correct.",
+      "pairs": [
+        { "left": "if score >= 60:", "right": "Pass goes in the if branch" },
+        { "left": "if score < 60:", "right": "Pass goes in the else branch" }
+      ],
+      "explanation": "With >= 60, true means pass, so Pass is under if. With < 60, true means fail, so Pass moves to else."
+    },
+    {
+      "id": "u22l06e06",
+      "type": "multipleChoice",
+      "prompt": "Which comparison is the opposite of >= ?",
+      "options": ["<", ">", "==", "!="],
+      "answer": 0,
+      "explanation": "'At least' (>=) flips to 'below' (<). They split all numbers between them with no overlap and no gap."
+    },
+    {
+      "id": "u22l06e07",
+      "type": "multipleChoice",
+      "prompt": "Which comparison is the opposite of == ?",
+      "options": ["!=", "<", ">", ">="],
+      "answer": 0,
+      "explanation": "'Equal' (==) flips to 'different' (!=). If you swap branches, you can rewrite one as the other."
+    },
+    {
+      "id": "u22l06e08",
+      "type": "fillBlank",
+      "prompt": "Rewrite this to check the opposite first (temp below 30), keeping the meaning. Fill the comparison:\n\nif temp ____ 30:\n    print(\"Not hot\")\nelse:\n    print(\"Hot\")",
+      "answer": "<",
+      "acceptable": ["<"],
+      "explanation": "The opposite of >= 30 is < 30. With the condition flipped, 'Not hot' now sits in the if branch."
+    },
+    {
+      "id": "u22l06e09",
+      "type": "multipleChoice",
+      "prompt": "Why is it fine that one problem has two correct if/else versions?",
+      "options": [
+        "As long as each case prints the right outcome, the wording of the condition is your choice",
+        "Only >= is ever allowed",
+        "You must always check the true case first",
+        "Two versions always behave differently"
+      ],
+      "answer": 0,
+      "explanation": "Correctness is about the outcomes, not the exact phrasing. Pick whichever version reads most clearly to you."
+    },
+    {
+      "id": "u22l06e10",
+      "type": "multipleChoice",
+      "prompt": "What is the safe rule when flipping a condition?",
+      "options": [
+        "Flip the comparison AND swap the two branches together",
+        "Flip only the comparison",
+        "Flip only the branches",
+        "Never flip anything"
+      ],
+      "answer": 0,
+      "explanation": "Change both together and the behaviour stays the same. Changing just one quietly reverses the logic."
+    }
+  ]
+}

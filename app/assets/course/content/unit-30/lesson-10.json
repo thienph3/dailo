@@ -1,0 +1,129 @@
+{
+  "unitId": "u30",
+  "lessonId": "u30l10",
+  "title": "Mixed practice: ask and react",
+  "idea": "REVIEW / interleave. Mixed input-driven decisions, ~30% recalling earlier laps (word comparison, nested if, elif, and/or, int(), f-strings, print). Proves the full decision toolkit transfers.",
+  "exercises": [
+    {
+      "id": "u30l10e01",
+      "type": "multipleChoice",
+      "prompt": "The user types stop:\n\ncmd = input(\"Command: \")\nif cmd == \"go\":\n    print(\"Moving\")\nelif cmd == \"stop\":\n    print(\"Halting\")\nelse:\n    print(\"Unknown\")\n\nWhat prints?",
+      "options": [
+        "Halting",
+        "Moving",
+        "Unknown",
+        "stop"
+      ],
+      "answer": 0,
+      "explanation": "\"stop\" matches the elif, so \"Halting\" prints. A menu reacting to a typed command."
+    },
+    {
+      "id": "u30l10e02",
+      "type": "multipleChoice",
+      "prompt": "Same code, the user types jump. What prints?",
+      "options": [
+        "Unknown",
+        "Moving",
+        "Halting",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "\"jump\" matches no command, so the catch-all else prints \"Unknown\"."
+    },
+    {
+      "id": "u30l10e03",
+      "type": "multipleChoice",
+      "prompt": "Recall: input() always gives back...",
+      "options": [
+        "text, even when the user types digits",
+        "a number",
+        "True/False",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "A core idea of this unit: input() returns a string. int() converts it when you need a number."
+    },
+    {
+      "id": "u30l10e04",
+      "type": "fillBlank",
+      "prompt": "Ask a number and convert it in one line:\n\nn = ____(input(\"A number: \"))",
+      "answer": "int",
+      "acceptable": ["int"],
+      "explanation": "int(input(...)) reads text then converts to a number. (int() review, now with input.)"
+    },
+    {
+      "id": "u30l10e05",
+      "type": "orderBlocks",
+      "prompt": "Build: ask the age, convert it, then if 18+ ask for a name and greet with an f-string; else print \"Too young\".",
+      "blocks": [
+        "age = int(input(\"Age: \"))",
+        "if age >= 18:",
+        "    name = input(\"Name: \")",
+        "    print(f\"Welcome, {name}!\")",
+        "else:",
+        "    print(\"Too young\")"
+      ],
+      "answer": [0, 1, 2, 3, 4, 5],
+      "explanation": "Convert the number, gate the name question behind the age check (nesting), and reply with an f-string."
+    },
+    {
+      "id": "u30l10e06",
+      "type": "multipleChoice",
+      "prompt": "For that code, the user types 16. What prints, and is the name asked?",
+      "options": [
+        "Too young - and the name is never asked",
+        "Welcome, 16!",
+        "Too young - after asking the name",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "16 fails 18+, so the whole inner block (including the name input) is skipped. Only \"Too young\" prints."
+    },
+    {
+      "id": "u30l10e07",
+      "type": "multipleChoice",
+      "prompt": "Recall: to accept \"yes\" or \"Yes\", the condition is...",
+      "options": [
+        "reply == \"yes\" or reply == \"Yes\"",
+        "reply == \"yes\" and reply == \"Yes\"",
+        "reply == yes",
+        "reply = \"yes\""
+      ],
+      "answer": 0,
+      "explanation": "'or' accepts either capitalization. 'and' is impossible for one value; the others have quote/operator bugs."
+    },
+    {
+      "id": "u30l10e08",
+      "type": "trueFalse",
+      "prompt": "Recall: \"Yes\" == \"yes\" is False because comparison is case-sensitive.",
+      "answer": true,
+      "explanation": "Yes - a key gotcha when reacting to typed words. Plan for the capitalizations users might use."
+    },
+    {
+      "id": "u30l10e09",
+      "type": "multipleChoice",
+      "prompt": "A program asks a number with int(input()) but forgets an else for a band chain's lowest case. The risk?",
+      "options": [
+        "Some values print nothing - add an else as a catch-all",
+        "It always crashes",
+        "Numbers reverse",
+        "No risk"
+      ],
+      "answer": 0,
+      "explanation": "Without a final else, values that match no band produce no output. A catch-all keeps every answer handled."
+    },
+    {
+      "id": "u30l10e10",
+      "type": "multipleChoice",
+      "prompt": "You have finished Unit 30 and the whole decision toolkit up to input(). What can you now do?",
+      "options": [
+        "Ask the user with input(), convert when needed, and react with if/elif/else, nesting, and and/or",
+        "Only print fixed text",
+        "Only compare numbers",
+        "Nothing new"
+      ],
+      "answer": 0,
+      "explanation": "You can write real interactive programs that ask, then react to the answer - the goal of this beat. Next comes practice putting it all together."
+    }
+  ]
+}

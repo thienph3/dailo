@@ -1,0 +1,137 @@
+{
+  "unitId": "u24",
+  "lessonId": "u24l01",
+  "title": "The unusual case hiding in a problem",
+  "idea": "Many problems have a normal case and a rare 'edge' case - empty, zero, or nothing. Noticing it early is a real skill. Thinking, no code.",
+  "exercises": [
+    {
+      "id": "u24l01e01",
+      "type": "multipleChoice",
+      "prompt": "A problem says 'split the bill evenly among the diners.' What is the unusual case to worry about?",
+      "options": [
+        "What if there are zero diners?",
+        "What if the bill is a number?",
+        "What if there are two diners?",
+        "There is no unusual case"
+      ],
+      "answer": 0,
+      "explanation": "Zero diners means dividing by zero - impossible. That rare case is an 'edge case' you must spot early."
+    },
+    {
+      "id": "u24l01e02",
+      "type": "trueFalse",
+      "prompt": "Most problems have a normal case that works, plus a rare 'edge' case that can break it.",
+      "answer": true,
+      "explanation": "Yes. The normal case is easy; the edge case (empty, zero, missing) is where programs go wrong."
+    },
+    {
+      "id": "u24l01e03",
+      "type": "multipleChoice",
+      "prompt": "'Show the average score of the team.' Which edge case lurks here?",
+      "options": [
+        "What if the team has no players?",
+        "What if a score is high?",
+        "What if there are 5 players?",
+        "None"
+      ],
+      "answer": 0,
+      "explanation": "No players means no scores to average - dividing by zero. The empty case is the danger."
+    },
+    {
+      "id": "u24l01e04",
+      "type": "multipleChoice",
+      "prompt": "Why spot edge cases BEFORE writing code?",
+      "options": [
+        "So the plan already handles them instead of crashing later",
+        "Because code is slow",
+        "So the program is longer",
+        "There is no reason"
+      ],
+      "answer": 0,
+      "explanation": "Planning for the edge case up front is far easier than discovering a crash later. Good problem-solvers look for it early."
+    },
+    {
+      "id": "u24l01e05",
+      "type": "matchPairs",
+      "prompt": "Match each everyday problem to its lurking edge case.",
+      "pairs": [
+        {
+          "left": "Divide treats among kids",
+          "right": "zero kids"
+        },
+        {
+          "left": "Average of some grades",
+          "right": "no grades"
+        },
+        {
+          "left": "Discount off a price",
+          "right": "price is zero"
+        }
+      ],
+      "explanation": "Each has a 'nothing / zero' case that the normal rule does not cover. Spotting it is step one."
+    },
+    {
+      "id": "u24l01e06",
+      "type": "multipleChoice",
+      "prompt": "'The first item in the cart.' What is the edge case?",
+      "options": [
+        "The cart is empty - there is no first item",
+        "The cart has one item",
+        "The item is cheap",
+        "None"
+      ],
+      "answer": 0,
+      "explanation": "An empty cart has no 'first item' to show. Empty is a classic edge case."
+    },
+    {
+      "id": "u24l01e07",
+      "type": "trueFalse",
+      "prompt": "An edge case is a value that is common and happens most of the time.",
+      "answer": false,
+      "explanation": "The opposite - an edge case is the rare, boundary, or empty situation that the normal path forgets about."
+    },
+    {
+      "id": "u24l01e08",
+      "type": "multiSelect",
+      "prompt": "Select ALL values that are common 'edge cases' to watch for.",
+      "options": [
+        "zero",
+        "an empty group (nothing)",
+        "a missing value",
+        "a typical middle value"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Zero, empty, and missing are the usual edge cases. A typical middle value is the normal case, not an edge."
+    },
+    {
+      "id": "u24l01e09",
+      "type": "multipleChoice",
+      "prompt": "'Price per person when sharing a taxi.' The edge case is...",
+      "options": [
+        "zero people sharing",
+        "three people sharing",
+        "a long trip",
+        "a short trip"
+      ],
+      "answer": 0,
+      "explanation": "Zero people means dividing the fare by zero - undefined. That is the edge to guard against."
+    },
+    {
+      "id": "u24l01e10",
+      "type": "multipleChoice",
+      "prompt": "The habit this unit builds is...",
+      "options": [
+        "Ask 'what if there's nothing, or it's zero?' for every problem",
+        "Write code as fast as possible",
+        "Ignore rare cases",
+        "Only handle big numbers"
+      ],
+      "answer": 0,
+      "explanation": "Always ask about the empty/zero/missing case. Building that habit now prevents many future bugs."
+    }
+  ]
+}

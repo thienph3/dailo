@@ -1,0 +1,136 @@
+{
+  "unitId": "u47",
+  "lessonId": "u47l06",
+  "title": "Finding the one step that repeats",
+  "idea": "MEET. Every loop has ONE repeated step (its body). Spotting that single step is the key to planning any loop. Thinking only.",
+  "exercises": [
+    {
+      "id": "u47l06e01",
+      "type": "multipleChoice",
+      "prompt": "'Print a star 5 times.' What is the one step that repeats?",
+      "options": [
+        "Print a star",
+        "Count to 5",
+        "Stop",
+        "Start the computer"
+      ],
+      "answer": 0,
+      "explanation": "The single repeated action is 'print a star'. The '5 times' tells you how often, not what repeats."
+    },
+    {
+      "id": "u47l06e02",
+      "type": "multipleChoice",
+      "prompt": "'Add each of the numbers 1 to 4 to a running total.' What repeats?",
+      "options": [
+        "Add the current number to the total",
+        "Print the total once",
+        "Choose a number",
+        "Nothing repeats"
+      ],
+      "answer": 0,
+      "explanation": "The repeated step is 'add the current number to the total'. It happens once per number."
+    },
+    {
+      "id": "u47l06e03",
+      "type": "trueFalse",
+      "prompt": "A loop body is the one step (or small group of steps) that runs again on every pass.",
+      "answer": true,
+      "explanation": "True. The body is what repeats. Naming that single step is the heart of planning a loop."
+    },
+    {
+      "id": "u47l06e04",
+      "type": "multipleChoice",
+      "prompt": "'Ask the user for a word until they type stop.' What is the repeated step?",
+      "options": [
+        "Ask the user for a word",
+        "Type stop",
+        "Print the whole list",
+        "Turn off the loop"
+      ],
+      "answer": 0,
+      "explanation": "Each pass asks for a word. The 'until they type stop' is the stopping condition, not the repeated step."
+    },
+    {
+      "id": "u47l06e05",
+      "type": "matchPairs",
+      "prompt": "Match each problem to its one repeated step.",
+      "pairs": [
+        {
+          "left": "Greet each of 3 guests",
+          "right": "greet one guest"
+        },
+        {
+          "left": "Count down 5 to 1",
+          "right": "print one number"
+        },
+        {
+          "left": "Add 1 to 10 into a total",
+          "right": "add one number to the total"
+        }
+      ],
+      "explanation": "Every loop reduces to a single repeated step. Spotting it is how you plan the body."
+    },
+    {
+      "id": "u47l06e06",
+      "type": "multipleChoice",
+      "prompt": "Why is naming the ONE repeated step useful?",
+      "options": [
+        "You plan that step once, then let the loop run it many times",
+        "It makes the loop slower",
+        "It changes how many times it runs",
+        "It removes the need for a loop"
+      ],
+      "answer": 0,
+      "explanation": "You write the body once. Getting that single step right means every repeat is right."
+    },
+    {
+      "id": "u47l06e07",
+      "type": "orderBlocks",
+      "prompt": "Order the plan for 'print each number 1 to 3'.",
+      "blocks": [
+        "Find the repeated step: print one number",
+        "Decide the count: 3 numbers, so range covers 1 to 3",
+        "Let the for loop run the step for each number"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Name the repeated step, decide the count, then let the loop do it for each value."
+    },
+    {
+      "id": "u47l06e08",
+      "type": "multipleChoice",
+      "prompt": "'Keep halving a number until it is below 1.' What repeats each pass?",
+      "options": [
+        "Halve the number",
+        "Print 'done'",
+        "Pick a new number",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "Each pass halves the number. The 'until below 1' is the condition that stops a while loop."
+    },
+    {
+      "id": "u47l06e09",
+      "type": "trueFalse",
+      "prompt": "Some loops repeat a small group of steps, not just one line.",
+      "answer": true,
+      "explanation": "True. The body can be several lines, as long as they are the group that repeats together each pass."
+    },
+    {
+      "id": "u47l06e10",
+      "type": "multipleChoice",
+      "prompt": "What two things fully describe a count-controlled loop?",
+      "options": [
+        "The repeated step, and how many times it runs",
+        "The color and the size",
+        "The user's name and age",
+        "The file name and date"
+      ],
+      "answer": 0,
+      "explanation": "A count loop is 'do THIS, that many TIMES'. Name the step and the count and you have the whole plan."
+    }
+  ]
+}

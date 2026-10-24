@@ -1,0 +1,150 @@
+{
+  "unitId": "u79",
+  "lessonId": "u79l06",
+  "title": "Solve it together: double, then is it big?",
+  "idea": "GUIDED (UEPCC). Compose a transforming helper with a testing helper: double a number, then ask if the result is big.",
+  "problem": "double(n) returns n*2 and is_big(n) returns n > 10. Show is_big(double(6)).",
+  "exercises": [
+    {
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: double(n) returns n*2; is_big(n) returns n > 10. Show is_big(double(6)).\n\nWhat is the OUTPUT?",
+      "options": [
+        "True or False — whether 6 doubled is greater than 10",
+        "The doubled number only",
+        "The number 6",
+        "A list"
+      ],
+      "answer": 0,
+      "explanation": "Output is a True/False. We double first, then test if that result is big. Name the output first.",
+      "id": "u79l06e01"
+    },
+    {
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "Which runs first — the transform or the test?",
+      "options": [
+        "The transform (double) runs first, then its result is tested",
+        "The test runs first",
+        "They run together",
+        "Neither runs"
+      ],
+      "answer": 0,
+      "explanation": "Inner call first: double(6) becomes 12, then is_big(12) tests it. Inside-out.",
+      "id": "u79l06e02"
+    },
+    {
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example by hand. Double 6 is 12; is 12 greater than 10?",
+      "options": [
+        "True",
+        "False",
+        "12",
+        "10"
+      ],
+      "answer": 0,
+      "explanation": "12 > 10 is True. Hand-work it so Check has a known answer.",
+      "id": "u79l06e03"
+    },
+    {
+      "type": "trueFalse",
+      "uepcc": "E",
+      "prompt": "A helper can return a True/False that another part of the code then uses.",
+      "answer": true,
+      "explanation": "Yes. is_big returns a boolean. Composing a transform with a test is a common, useful pattern.",
+      "id": "u79l06e04"
+    },
+    {
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Plan the order.",
+      "blocks": [
+        "Double the number",
+        "Test whether that result is big",
+        "Show True or False"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Transform first, then test, then show. The inner result feeds the outer test.",
+      "id": "u79l06e05"
+    },
+    {
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "In is_big(double(6)), what value does is_big actually receive?",
+      "options": [
+        "12 — the value double returned",
+        "6",
+        "True",
+        "the word double"
+      ],
+      "answer": 0,
+      "explanation": "double(6) returns 12, so is_big receives 12. The returned value becomes the argument.",
+      "id": "u79l06e06"
+    },
+    {
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code it: define double, define is_big, then compose in a print.",
+      "blocks": [
+        "def double(n):",
+        "    return n * 2",
+        "def is_big(n):",
+        "    return n > 10",
+        "print(is_big(double(6)))"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "explanation": "Define both helpers, then feed double(6) into is_big. double(6)=12, is_big(12)=True.",
+      "id": "u79l06e07"
+    },
+    {
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Compose so double runs first, then the test:\n\nprint(is_big(____(6)))",
+      "answer": "double",
+      "acceptable": [
+        "double"
+      ],
+      "explanation": "double(6) is the inner call (12); is_big(12) is True.",
+      "id": "u79l06e08"
+    },
+    {
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check — the code prints True; your example said True. So...",
+      "options": [
+        "It passes",
+        "It fails",
+        "Unknown",
+        "Change the example"
+      ],
+      "answer": 0,
+      "explanation": "Output (True) matches the hand-worked True. The composition is correct.",
+      "id": "u79l06e09"
+    },
+    {
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Re-check: is_big(double(3)). Double 3 is 6; is 6 > 10?",
+      "options": [
+        "False",
+        "True",
+        "6",
+        "10"
+      ],
+      "answer": 0,
+      "explanation": "double(3)=6, and 6 > 10 is False. Works for new inputs — the solution generalizes.",
+      "id": "u79l06e10"
+    }
+  ]
+}

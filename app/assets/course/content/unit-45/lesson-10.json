@@ -1,0 +1,145 @@
+{
+  "unitId": "u45",
+  "lessonId": "u45l10",
+  "title": "Wrap-up: loops that stop",
+  "idea": "Review: progress, boundaries, zero-time loops, and choosing for vs while.",
+  "exercises": [
+    {
+      "type": "matchPairs",
+      "prompt": "Match each idea to its meaning (a review of this unit).",
+      "pairs": [
+        {
+          "left": "Infinite loop",
+          "right": "The condition never becomes false"
+        },
+        {
+          "left": "Progress",
+          "right": "Each pass moves toward the stop"
+        },
+        {
+          "left": "Off-by-one",
+          "right": "Runs one time too many or too few"
+        },
+        {
+          "left": "Zero-time loop",
+          "right": "Condition false at the start, body skipped"
+        }
+      ],
+      "explanation": "These four ideas cover making a loop stop correctly: ending, moving, counting, and the empty case.",
+      "id": "u45l10e01"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "What shows?\n\ni = 1\nwhile i <= 3:\n    print(i)\n    i = i + 1",
+      "options": [
+        "1\n2\n3",
+        "1\n2\n3\n4",
+        "forever",
+        "1"
+      ],
+      "answer": 0,
+      "explanation": "i is 1,2,3; at i = 4 the condition is false. The update i = i + 1 makes it stop -- a safe loop.",
+      "id": "u45l10e02"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Which loop runs FOREVER?",
+      "options": [
+        "i = 1\nwhile i > 0:\n    i = i + 1",
+        "i = 3\nwhile i > 0:\n    i = i - 1",
+        "i = 0\nwhile i < 2:\n    i = i + 1",
+        "i = 5\nwhile i < 3:\n    print(i)"
+      ],
+      "answer": 0,
+      "explanation": "The first grows i while checking i > 0 -- always true. The last runs zero times; the middle two stop.",
+      "id": "u45l10e03"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "A while loop checks its condition before each pass, so it can run zero times.",
+      "answer": true,
+      "explanation": "True. If the condition starts false, the body is skipped entirely -- a safe and sometimes useful outcome.",
+      "id": "u45l10e04"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "You need to repeat exactly 8 times. Best loop?",
+      "options": [
+        "for i in range(8)",
+        "while with a guessed condition",
+        "neither",
+        "a single print"
+      ],
+      "answer": 0,
+      "explanation": "A known count is a for-loop: range(8) runs exactly eight times with no update to forget.",
+      "id": "u45l10e05"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "You keep asking until the input is valid. Best loop?",
+      "options": [
+        "while",
+        "for with range",
+        "neither",
+        "an if"
+      ],
+      "answer": 0,
+      "explanation": "An unknown number of tries, decided by a condition, is a while loop.",
+      "id": "u45l10e06"
+    },
+    {
+      "type": "orderBlocks",
+      "prompt": "Arrange a safe countdown that prints 3, 2, 1 and stops.",
+      "blocks": [
+        "n = 3",
+        "while n > 0:",
+        "    print(n)",
+        "    n = n - 1"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "Setup n = 3, condition n > 0, print, update n = n - 1. Shrinking n reaches 0 and stops the loop.",
+      "id": "u45l10e07"
+    },
+    {
+      "type": "fillBlank",
+      "prompt": "Review an earlier tool: fill the operator to test 'i is even' inside a loop:\n\nif i ____ 2 == 0:\n    print(i)",
+      "answer": "%",
+      "acceptable": [
+        "%"
+      ],
+      "explanation": "% gives the remainder. i % 2 == 0 is true when i divides evenly by 2 -- an even number.",
+      "id": "u45l10e08"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "How many numbers does this print?\n\ni = 2\nwhile i < 10:\n    print(i)\n    i = i + 2",
+      "options": [
+        "4",
+        "5",
+        "3",
+        "forever"
+      ],
+      "answer": 0,
+      "explanation": "i is 2,4,6,8 then 10 fails 10 < 10. Four numbers. Adding 2 each pass still makes progress to the stop.",
+      "id": "u45l10e09"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "The big idea of this unit in one line:",
+      "options": [
+        "Every while loop needs progress toward its condition becoming false",
+        "Loops never stop",
+        "Only for-loops are safe",
+        "Conditions don't matter"
+      ],
+      "answer": 0,
+      "explanation": "Make sure each pass moves toward the stop, watch the boundary, and your loops will always end. Next: stopping or skipping mid-loop!",
+      "id": "u45l10e10"
+    }
+  ]
+}

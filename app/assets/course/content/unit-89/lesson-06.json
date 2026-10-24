@@ -1,0 +1,136 @@
+{
+  "unitId": "u89",
+  "lessonId": "u89l06",
+  "title": "Several state values in a while loop",
+  "idea": "TOOL: multiple state isn't only for 'for' loops - a while loop can carry several running values too.",
+  "exercises": [
+    {
+      "type": "multipleChoice",
+      "prompt": "A while loop repeats until a condition fails. Can it carry more than one running value?",
+      "options": [
+        "Yes - update each running value inside the loop, like any loop",
+        "No, while loops allow only one",
+        "Only for loops can",
+        "Never"
+      ],
+      "answer": 0,
+      "explanation": "Any loop can carry several running values. A while loop updates them each turn just like a for loop.",
+      "id": "u89l06e01"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nn = 1\ntotal = 0\ncount = 0\nwhile n <= 3:\n    total = total + n\n    count = count + 1\n    n = n + 1\nprint(total, count)",
+      "options": [
+        "6 3",
+        "6 4",
+        "3 3",
+        "10 3"
+      ],
+      "answer": 0,
+      "explanation": "n goes 1,2,3. total = 1+2+3 = 6; count bumps three times = 3. Three running values: n, total, count.",
+      "id": "u89l06e02"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "In that loop, 'n' is also a running variable - it both controls the loop AND changes each turn.",
+      "answer": true,
+      "explanation": "True. n is state too: it decides when to stop and moves each turn. Forgetting to update n would loop forever.",
+      "id": "u89l06e03"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "What happens if you forget 'n = n + 1' in that while loop?",
+      "options": [
+        "n stays 1 forever, the condition never fails - an infinite loop",
+        "It runs once",
+        "It skips the loop",
+        "total becomes huge but stops"
+      ],
+      "answer": 0,
+      "explanation": "Without advancing n, the condition n <= 3 is always true. The loop never ends. Every while loop needs progress toward its stop.",
+      "id": "u89l06e04"
+    },
+    {
+      "type": "fillBlank",
+      "prompt": "Complete the step that moves the loop forward:\n\nn = 1\ntotal = 0\nwhile n <= 4:\n    total = total + n\n    n = n ____ 1\nprint(total)",
+      "answer": "+",
+      "acceptable": [
+        "+"
+      ],
+      "explanation": "n = n + 1 advances toward the stop. total = 1+2+3+4 = 10.",
+      "id": "u89l06e05"
+    },
+    {
+      "type": "orderBlocks",
+      "prompt": "Arrange a while loop that totals and counts 1..3.",
+      "blocks": [
+        "n = 1",
+        "total = 0",
+        "count = 0",
+        "while n <= 3:",
+        "    total = total + n",
+        "    count = count + 1",
+        "    n = n + 1",
+        "print(total, count)"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "explanation": "Start n, total, count; each turn update all three; print. Output: 6 3.",
+      "id": "u89l06e06"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nn = 2\nsteps = 0\nwhile n <= 16:\n    n = n * 2\n    steps = steps + 1\nprint(n, steps)",
+      "options": [
+        "32 4",
+        "16 4",
+        "32 3",
+        "16 3"
+      ],
+      "answer": 0,
+      "explanation": "n: 4, 8, 16, 32 (4 doublings), steps counts each = 4. The loop stops once n passes 16, leaving n = 32.",
+      "id": "u89l06e07"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Keeping a 'steps' counter next to a while loop is a handy way to know how many turns it took.",
+      "answer": true,
+      "explanation": "True. A side counter records the number of turns - useful for reporting or spotting runaway loops.",
+      "id": "u89l06e08"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Across for and while loops, what stays the same about multiple state?",
+      "options": [
+        "Start each running value before the loop; update each one every turn",
+        "Only for loops allow it",
+        "You must print each turn",
+        "The values can't change"
+      ],
+      "answer": 0,
+      "explanation": "The shape is identical: initialise before, update inside. The loop kind doesn't change the multiple-state recipe.",
+      "id": "u89l06e09"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "The point of this lesson:",
+      "options": [
+        "Multiple state works in while loops too - the control variable is itself state",
+        "while loops can't track anything",
+        "Only one value per while loop",
+        "for and while are completely different for state"
+      ],
+      "answer": 0,
+      "explanation": "Any loop carries as many running values as the problem needs - including the one steering the loop.",
+      "id": "u89l06e10"
+    }
+  ]
+}

@@ -1,0 +1,162 @@
+{
+  "unitId": "u91",
+  "lessonId": "u91l02",
+  "title": "Solve it: how many passed and failed",
+  "idea": "GUIDED PROBLEM. Grouped counting with if/else and two counters (multiple state), walked through UEPCC.",
+  "problem": "Scores [70, 40, 90, 55]. A score of 50 or more passes. Show how many passed and how many failed.",
+  "exercises": [
+    {
+      "id": "u91l02e01",
+      "uepcc": "U",
+      "type": "multipleChoice",
+      "prompt": "PROBLEM: scores [70, 40, 90, 55], pass is >= 50. Show passes AND fails.\n\nWhat are the two OUTPUTS?",
+      "options": [
+        "The number of passes and the number of fails",
+        "The total of the scores",
+        "The average",
+        "The biggest score"
+      ],
+      "answer": 0,
+      "explanation": "Two counts: passes and fails. Naming both outputs tells you to keep two counters."
+    },
+    {
+      "id": "u91l02e02",
+      "uepcc": "U",
+      "type": "multipleChoice",
+      "prompt": "What decides whether a single score is a pass?",
+      "options": [
+        "Whether it is 50 or more",
+        "Whether it is even",
+        "Whether it is the biggest",
+        "Its position in the list"
+      ],
+      "answer": 0,
+      "explanation": "The rule is score >= 50. Each score is tested against it - a condition inside the loop."
+    },
+    {
+      "id": "u91l02e03",
+      "uepcc": "E",
+      "type": "multipleChoice",
+      "prompt": "By hand: of [70, 40, 90, 55] with pass >= 50, how many PASS?",
+      "options": [
+        "3 (70, 90, 55)",
+        "2",
+        "4",
+        "1"
+      ],
+      "answer": 0,
+      "explanation": "70, 90, and 55 are all >= 50, so 3 pass. 40 is the only fail. Hand answers: 3 passes, 1 fail."
+    },
+    {
+      "id": "u91l02e04",
+      "uepcc": "E",
+      "type": "multipleChoice",
+      "prompt": "So how many FAIL, and does passes + fails match the 4 scores?",
+      "options": [
+        "1 fail; 3 + 1 = 4, matches",
+        "2 fails",
+        "0 fails",
+        "3 fails"
+      ],
+      "answer": 0,
+      "explanation": "Only 40 fails. 3 + 1 = 4 equals the item count - a sanity check you can reuse on the code."
+    },
+    {
+      "id": "u91l02e05",
+      "uepcc": "P",
+      "type": "orderBlocks",
+      "prompt": "Plan the steps.",
+      "blocks": [
+        "Walk the scores",
+        "For each: if it passes add to passes, else add to fails",
+        "Show both counts"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "One pass, an if/else to route each score, then report. Two counters updated by a condition."
+    },
+    {
+      "id": "u91l02e06",
+      "uepcc": "P",
+      "type": "multipleChoice",
+      "prompt": "Why use if/else rather than two separate ifs for pass and fail?",
+      "options": [
+        "if/else guarantees each score counts in exactly one group",
+        "Two ifs are faster",
+        "else is required by Python",
+        "It looks nicer only"
+      ],
+      "answer": 0,
+      "explanation": "A score is either a pass or a fail, never both. if/else enforces that cleanly - the plan chooses the right structure."
+    },
+    {
+      "id": "u91l02e07",
+      "uepcc": "C",
+      "type": "orderBlocks",
+      "prompt": "Code the plan.",
+      "blocks": [
+        "passes = 0",
+        "fails = 0",
+        "for score in [70, 40, 90, 55]:",
+        "    if score >= 50:",
+        "        passes = passes + 1",
+        "    else:",
+        "        fails = fails + 1",
+        "print(passes, fails)"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "explanation": "Start both counters, branch each score to one of them, print both. Grouped counting with multiple state."
+    },
+    {
+      "id": "u91l02e08",
+      "uepcc": "C",
+      "type": "fillBlank",
+      "prompt": "Complete the pass test:\n\nfor score in [70, 40]:\n    if score ____ 50:\n        passes = passes + 1\n    else:\n        fails = fails + 1",
+      "answer": ">=",
+      "acceptable": [
+        ">="
+      ],
+      "explanation": "Pass means 50 OR MORE, so the test is score >= 50. 50 itself must pass, hence >= not >."
+    },
+    {
+      "id": "u91l02e09",
+      "uepcc": "Check",
+      "type": "multipleChoice",
+      "prompt": "Check: code prints 3 and 1. Hand answers were 3 passes, 1 fail. Verdict?",
+      "options": [
+        "Passes - matches, and 3+1=4 items",
+        "Fails",
+        "Unknown",
+        "Rewrite example"
+      ],
+      "answer": 0,
+      "explanation": "Outputs match the hand example and the counters sum to the item count. Correct."
+    },
+    {
+      "id": "u91l02e10",
+      "uepcc": "Check",
+      "type": "multipleChoice",
+      "prompt": "New data [10, 20] (both fail). What does the code print?",
+      "options": [
+        "0 and 2",
+        "2 and 0",
+        "1 and 1",
+        "0 and 0"
+      ],
+      "answer": 0,
+      "explanation": "Neither reaches 50, so passes 0, fails 2. The else branch handles every score - it generalises."
+    }
+  ]
+}

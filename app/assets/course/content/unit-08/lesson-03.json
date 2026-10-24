@@ -1,0 +1,129 @@
+{
+  "unitId": "u08",
+  "lessonId": "u08l03",
+  "title": "Showing what a variable holds",
+  "idea": "To SEE a variable's value, put the name (no quotes) inside print. print(score) shows the value, not the word 'score'.",
+  "exercises": [
+    {
+      "id": "u08l03e01",
+      "type": "multipleChoice",
+      "prompt": "What does this show?\n\nscore = 10\nprint(score)",
+      "options": [
+        "10",
+        "score",
+        "score = 10",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "print(score) shows the VALUE inside the box, which is 10. No quotes means 'use the box'."
+    },
+    {
+      "id": "u08l03e02",
+      "type": "multipleChoice",
+      "prompt": "What is the difference between print(score) and print(\"score\")?",
+      "options": [
+        "print(score) shows the value; print(\"score\") shows the word score",
+        "They do exactly the same thing",
+        "print(score) shows the word; print(\"score\") shows the value",
+        "Neither shows anything"
+      ],
+      "answer": 0,
+      "explanation": "No quotes = the box's value. Quotes = the plain text. A tiny change, a big difference!"
+    },
+    {
+      "id": "u08l03e03",
+      "type": "multipleChoice",
+      "prompt": "What does this show?\n\nage = 7\nprint(\"age\")",
+      "options": [
+        "age",
+        "7",
+        "age = 7",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "With quotes it's just text, so it shows the word age — NOT the value 7."
+    },
+    {
+      "id": "u08l03e04",
+      "type": "trueFalse",
+      "prompt": "To show the value stored in a variable, you write its name inside print with no quotes.",
+      "answer": true,
+      "explanation": "Right. print(count) shows what count holds. No quotes means 'open the box'."
+    },
+    {
+      "id": "u08l03e05",
+      "type": "tapTokens",
+      "prompt": "The variable points already holds a value. Build a line to show that value.",
+      "tokens": [
+        "print",
+        "(",
+        "points",
+        ")"
+      ],
+      "answer": [
+        "print",
+        "(",
+        "points",
+        ")"
+      ],
+      "explanation": "print(points) — no quotes around points, so it shows the stored value."
+    },
+    {
+      "id": "u08l03e06",
+      "type": "multipleChoice",
+      "prompt": "What does this show?\n\nstars = 4\nprint(stars)",
+      "options": [
+        "4",
+        "stars",
+        "4 stars",
+        "Error"
+      ],
+      "answer": 0,
+      "explanation": "print(stars) opens the box and shows its value: 4."
+    },
+    {
+      "id": "u08l03e07",
+      "type": "fillBlank",
+      "prompt": "The variable count holds a number. Fill the blank to SHOW its value.\n\ncount = 5\nprint(____)",
+      "answer": "count",
+      "acceptable": [
+        "count"
+      ],
+      "explanation": "Write the name with no quotes. print(count) shows 5."
+    },
+    {
+      "id": "u08l03e08",
+      "type": "trueFalse",
+      "prompt": "print(\"count\") and print(count) always show the same thing.",
+      "answer": false,
+      "explanation": "No. print(\"count\") shows the word count. print(count) shows the value inside the box."
+    },
+    {
+      "id": "u08l03e09",
+      "type": "multipleChoice",
+      "prompt": "You stored your score, then showed it:\n\nscore = 50\nprint(score)\n\nWhat appears?",
+      "options": [
+        "50",
+        "score",
+        "50 score",
+        "\"50\""
+      ],
+      "answer": 0,
+      "explanation": "The box holds 50, so print(score) shows 50. You just reused a saved value!"
+    },
+    {
+      "id": "u08l03e10",
+      "type": "orderBlocks",
+      "prompt": "Put these two lines in the right order to store a value and then show it.",
+      "blocks": [
+        "lucky = 7",
+        "print(lucky)"
+      ],
+      "answer": [
+        0,
+        1
+      ],
+      "explanation": "Store first, then show. You can't print the box before you've filled it."
+    }
+  ]
+}

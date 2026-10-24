@@ -1,0 +1,129 @@
+{
+  "unitId": "u08",
+  "lessonId": "u08l02",
+  "title": "Making a variable with =",
+  "idea": "We write a variable with name = value. The = means 'put this value into this named box'.",
+  "exercises": [
+    {
+      "id": "u08l02e01",
+      "type": "multipleChoice",
+      "prompt": "What does this line do?\n\nscore = 10",
+      "options": [
+        "Puts the value 10 into a box named score",
+        "Shows 10 on the screen",
+        "Asks if score is 10",
+        "Deletes score"
+      ],
+      "answer": 0,
+      "explanation": "The = puts the value 10 into the box named score. Nothing is shown yet — it just remembers."
+    },
+    {
+      "id": "u08l02e02",
+      "type": "multipleChoice",
+      "prompt": "In 'age = 7', which part is the name and which is the value?",
+      "options": [
+        "Name: age, Value: 7",
+        "Name: 7, Value: age",
+        "Name: =, Value: age",
+        "Both are names"
+      ],
+      "answer": 0,
+      "explanation": "The name is on the left (age), the value is on the right (7). The = connects them."
+    },
+    {
+      "id": "u08l02e03",
+      "type": "trueFalse",
+      "prompt": "The name of the variable goes on the LEFT of the = sign.",
+      "answer": true,
+      "explanation": "Always: name on the left, value on the right. name = value."
+    },
+    {
+      "id": "u08l02e04",
+      "type": "multipleChoice",
+      "prompt": "Does this line show anything on the screen?\n\nlucky = 7",
+      "options": [
+        "No — it just stores 7 in lucky, nothing is shown",
+        "Yes — it shows 7",
+        "Yes — it shows lucky",
+        "Yes — it shows lucky = 7"
+      ],
+      "answer": 0,
+      "explanation": "Storing a value is quiet. To SEE it, you need print — that's the next lesson."
+    },
+    {
+      "id": "u08l02e05",
+      "type": "tapTokens",
+      "prompt": "Build a line that stores the value 5 in a box named count.",
+      "tokens": [
+        "count",
+        "=",
+        "5"
+      ],
+      "answer": [
+        "count",
+        "=",
+        "5"
+      ],
+      "explanation": "Name first, then =, then the value: count = 5."
+    },
+    {
+      "id": "u08l02e06",
+      "type": "fillBlank",
+      "prompt": "Fill in the sign that stores a value in a variable.\n\nscore ____ 10",
+      "answer": "=",
+      "acceptable": [
+        "="
+      ],
+      "explanation": "The = sign puts the value into the box. score = 10."
+    },
+    {
+      "id": "u08l02e07",
+      "type": "multipleChoice",
+      "prompt": "Which line correctly stores 3 in a variable called apples?",
+      "options": [
+        "apples = 3",
+        "3 = apples",
+        "apples 3",
+        "= apples 3"
+      ],
+      "answer": 0,
+      "explanation": "Name on the left, value on the right: apples = 3."
+    },
+    {
+      "id": "u08l02e08",
+      "type": "trueFalse",
+      "prompt": "Writing '10 = score' is the correct way to store 10 in score.",
+      "answer": false,
+      "explanation": "No — the name must be on the left. It should be score = 10, not the other way around."
+    },
+    {
+      "id": "u08l02e09",
+      "type": "tapTokens",
+      "prompt": "Build a line that stores the value 100 in a box named points.",
+      "tokens": [
+        "points",
+        "=",
+        "100"
+      ],
+      "answer": [
+        "points",
+        "=",
+        "100"
+      ],
+      "explanation": "points = 100. The box named points now remembers 100."
+    },
+    {
+      "id": "u08l02e10",
+      "type": "multipleChoice",
+      "prompt": "After the line 'stars = 4' runs, what does the box named stars remember?",
+      "options": [
+        "4",
+        "stars",
+        "nothing",
+        "the = sign"
+      ],
+      "answer": 0,
+      "explanation": "It remembers 4. You can use that value later — you'll print it next."
+    }
+  ]
+}

@@ -1,0 +1,128 @@
+{
+  "unitId": "u17",
+  "lessonId": "u17l09",
+  "title": "Spot the broken report",
+  "idea": "GUIDED PRACTICE. Debug the APPROACH, not typos. Find why a message comes out wrong — a missing conversion, a wrong operation, or a dropped value. Walked through UEPCC.",
+  "problem": "Several small reports are almost right. Find what makes each one wrong and fix the plan.",
+  "exercises": [
+    {
+      "id": "u17l09e01",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Goal: total two text prices \"7\" and \"5\" (should be 12). Code:\n\ntotal = \"7\" + \"5\"\nprint(f\"The total is {total}.\")\n\nWhat prints, and is it right?",
+      "options": [
+        "The total is 75. — wrong, the texts were glued, not added",
+        "The total is 12. — correct",
+        "The total is 2. — wrong",
+        "Nothing prints"
+      ],
+      "answer": 0,
+      "explanation": "+ on strings joins them: \"7\" + \"5\" = \"75\". The values were never converted to numbers."
+    },
+    {
+      "id": "u17l09e02",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Fix it by converting first. Fill the blank:\n\nfirst = ____(\"7\")\nsecond = int(\"5\")\ntotal = first + second",
+      "answer": "int",
+      "acceptable": ["int"],
+      "explanation": "int(\"7\") + int(\"5\") = 7 + 5 = 12. Convert text to numbers BEFORE adding."
+    },
+    {
+      "id": "u17l09e03",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Goal: change from paying 20 for a 14 item (should be 6). Code:\n\nchange = item_price - paid\n\nwith item_price=14, paid=20. Right or wrong?",
+      "options": [
+        "Wrong — it's backwards; 14 - 20 = -6, not 6",
+        "Right — shows 6",
+        "Wrong — shows 34",
+        "Right — shows -6"
+      ],
+      "answer": 0,
+      "explanation": "Change is paid - item_price (20 - 14 = 6). The subtraction order is flipped here."
+    },
+    {
+      "id": "u17l09e04",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Goal: cost of 4 pens at 3 each (should be 12). Code:\n\ntotal = pen_count + pen_price\n\nWhat's the planning mistake?",
+      "options": [
+        "Wrong operation — it adds (gives 7) instead of multiplying",
+        "Nothing is wrong",
+        "The order is flipped",
+        "A quote is missing"
+      ],
+      "answer": 0,
+      "explanation": "'Many of the same' needs multiply, not add. 4 + 3 = 7, but 4 * 3 = 12. Wrong operation is a plan bug."
+    },
+    {
+      "id": "u17l09e05",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Goal: order total for 2 teas at 4 and 3 cakes at 5 (should be 23). Code:\n\ntotal = tea_count * tea_price + 5\n\nWhat's wrong?",
+      "options": [
+        "The 5 is hardcoded — it drops the cake count, so only one cake is counted",
+        "Nothing — 5 is the cake price",
+        "Multiplication is not allowed",
+        "The order is flipped"
+      ],
+      "answer": 0,
+      "explanation": "Hardcoding 5 ignores cake_count (3). It should be + cake_count * cake_price. Map every value to a variable."
+    },
+    {
+      "id": "u17l09e06",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Fix the cake part so all three cakes count:\n\ntotal = tea_count * tea_price + cake_count ____ cake_price",
+      "answer": "*",
+      "acceptable": ["*"],
+      "explanation": "cake_count * cake_price = 3 * 5 = 15. With 2*4 = 8 for teas, total = 23."
+    },
+    {
+      "id": "u17l09e07",
+      "type": "trueFalse",
+      "uepcc": "Check",
+      "prompt": "A report can print with no error and still show the WRONG number.",
+      "answer": true,
+      "explanation": "Yes — a missing conversion, wrong operation, or dropped value runs fine but gives a wrong result. That's why you Check."
+    },
+    {
+      "id": "u17l09e08",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Your report shows a number you didn't expect. Best first move?",
+      "options": [
+        "Compare it to the example you worked by hand to see where it differs",
+        "Delete everything and restart",
+        "Assume the computer is broken",
+        "Change your hand example to match the output"
+      ],
+      "answer": 0,
+      "explanation": "The hand example is your anchor. Comparing to it points straight at the bug."
+    },
+    {
+      "id": "u17l09e09",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Goal: how much MORE a 15 ticket costs than a 9 ticket. Which line is right?",
+      "options": [
+        "diff = expensive_price - cheap_price",
+        "diff = cheap_price - expensive_price",
+        "diff = expensive_price + cheap_price",
+        "diff = expensive_price * cheap_price"
+      ],
+      "answer": 0,
+      "explanation": "'How much more' = bigger minus smaller = 15 - 9 = 6. Order chosen on purpose."
+    },
+    {
+      "id": "u17l09e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "After fixing the text-total bug with int(), the code prints 'The total is 12.' Hand example said 12. Verdict?",
+      "options": ["Passes", "Fails", "Unknown", "Rewrite the example"],
+      "answer": 0,
+      "explanation": "Matches the hand example — correct. You can now spot missing-conversion, wrong-operation, and dropped-value bugs."
+    }
+  ]
+}

@@ -1,0 +1,130 @@
+{
+  "unitId": "u45",
+  "lessonId": "u45l01",
+  "title": "A loop that never stops",
+  "idea": "An infinite loop happens when the while condition can never become false.",
+  "exercises": [
+    {
+      "type": "multipleChoice",
+      "prompt": "A while loop keeps going as long as its condition is true. What happens if the condition NEVER becomes false?",
+      "options": [
+        "The loop runs forever -- an infinite loop",
+        "The loop runs once",
+        "The loop is skipped",
+        "Python fixes it automatically"
+      ],
+      "answer": 0,
+      "explanation": "If nothing ever makes the condition false, the loop has no way to stop. That's an infinite loop -- a stuck program.",
+      "id": "u45l01e01"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Why does this loop never stop?\n\ni = 1\nwhile i <= 5:\n    print(i)",
+      "options": [
+        "i never changes, so i <= 5 stays true forever",
+        "i grows too fast",
+        "range is missing",
+        "print is broken"
+      ],
+      "answer": 0,
+      "explanation": "There's no line changing i, so i stays 1. The condition 1 <= 5 is always true and the loop never ends.",
+      "id": "u45l01e02"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "A while loop stops on its own even if the condition stays true.",
+      "answer": false,
+      "explanation": "False. A while loop only stops when its condition becomes false. If it never does, the loop runs forever.",
+      "id": "u45l01e03"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "What single line, added inside the loop, would let it stop?\n\ni = 1\nwhile i <= 5:\n    print(i)",
+      "options": [
+        "i = i + 1",
+        "print(i)",
+        "i = 1",
+        "i <= 5"
+      ],
+      "answer": 0,
+      "explanation": "i = i + 1 moves i toward 6. Eventually i <= 5 is false and the loop ends. That change is called 'progress.'",
+      "id": "u45l01e04"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "What shows?\n\ni = 1\nwhile i <= 3:\n    print(i)\n    i = i + 1",
+      "options": [
+        "1\n2\n3",
+        "1\n2\n3\n4",
+        "forever",
+        "1"
+      ],
+      "answer": 0,
+      "explanation": "i starts at 1, prints and grows each pass: 1, 2, 3. At i = 4 the condition 4 <= 3 is false, so it stops.",
+      "id": "u45l01e05"
+    },
+    {
+      "type": "orderBlocks",
+      "prompt": "Arrange a while loop that prints 1, 2, 3 and then stops.",
+      "blocks": [
+        "    i = i + 1",
+        "i = 1",
+        "    print(i)",
+        "while i <= 3:"
+      ],
+      "answer": [
+        1,
+        3,
+        2,
+        0
+      ],
+      "explanation": "Set i = 1, then while i <= 3, print i, and grow i. The growth is what lets it stop.",
+      "id": "u45l01e06"
+    },
+    {
+      "type": "fillBlank",
+      "prompt": "Fill the line that makes the loop stop eventually:\n\ni = 1\nwhile i <= 4:\n    print(i)\n    ____",
+      "answer": "i = i + 1",
+      "acceptable": [
+        "i = i + 1",
+        "i=i+1",
+        "i += 1"
+      ],
+      "explanation": "Growing i each pass moves it toward 5, where i <= 4 turns false and the loop ends.",
+      "id": "u45l01e07"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Every while loop needs something inside that moves it toward making the condition false.",
+      "answer": true,
+      "explanation": "True. That movement is called progress. Without it, the condition stays true and the loop never stops.",
+      "id": "u45l01e08"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "What do we call a loop that can never stop?",
+      "options": [
+        "An infinite loop",
+        "A for loop",
+        "A counter",
+        "A guard"
+      ],
+      "answer": 0,
+      "explanation": "An infinite loop runs forever. The usual cause: the loop never changes anything the condition depends on.",
+      "id": "u45l01e09"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "What is the most common reason a while loop runs forever?",
+      "options": [
+        "Nothing inside the loop changes the value the condition checks",
+        "The condition is false",
+        "range is too big",
+        "You printed too much"
+      ],
+      "answer": 0,
+      "explanation": "If the condition checks i but nothing updates i, the condition's answer never changes. That's the classic bug.",
+      "id": "u45l01e10"
+    }
+  ]
+}

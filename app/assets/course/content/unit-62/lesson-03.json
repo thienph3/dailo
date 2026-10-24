@@ -1,0 +1,129 @@
+{
+  "unitId": "u62",
+  "lessonId": "u62l03",
+  "title": "The empty list problem",
+  "idea": "TOOL: an empty list has count 0, and dividing by 0 is impossible — spot the danger. Thinking-heavy.",
+  "exercises": [
+    {
+      "id": "u62l03e01",
+      "type": "multipleChoice",
+      "prompt": "What is the count (len) of an empty list []?",
+      "options": [
+        "0",
+        "1",
+        "It has no length",
+        "-1"
+      ],
+      "answer": 0,
+      "explanation": "An empty list has 0 items, so len([]) is 0. That 0 is about to cause trouble for the average."
+    },
+    {
+      "id": "u62l03e02",
+      "type": "multipleChoice",
+      "prompt": "To average an empty list you would compute total / count = 0 / 0. What is the problem?",
+      "options": [
+        "You cannot divide by zero — there is no sensible answer",
+        "0 / 0 is 0",
+        "0 / 0 is 1",
+        "There is no problem"
+      ],
+      "answer": 0,
+      "explanation": "Dividing by zero has no meaning. In Python it crashes the program with an error. The empty list is the danger case."
+    },
+    {
+      "id": "u62l03e03",
+      "type": "trueFalse",
+      "prompt": "Trying to divide by zero in Python stops the program with an error.",
+      "answer": true,
+      "explanation": "A divide-by-zero raises a ZeroDivisionError and halts the program. We must prevent it before it happens."
+    },
+    {
+      "id": "u62l03e04",
+      "type": "multipleChoice",
+      "prompt": "When does the average calculation hit the divide-by-zero danger?",
+      "options": [
+        "Only when the list is empty (count is 0)",
+        "Whenever the total is 0",
+        "Whenever a value is negative",
+        "On every list"
+      ],
+      "answer": 0,
+      "explanation": "The count is the divisor. It is only 0 when the list has no items. A total of 0 (like [-2, 2]) is fine — the count is still 2."
+    },
+    {
+      "id": "u62l03e05",
+      "type": "multipleChoice",
+      "prompt": "Is a total of 0 the same danger as a count of 0?",
+      "options": [
+        "No — dividing 0 by a real count is fine (gives 0.0); dividing by a count of 0 is the crash",
+        "Yes, both crash",
+        "Yes, both are fine",
+        "No — total of 0 is the crash"
+      ],
+      "answer": 0,
+      "explanation": "0 / 4 is 0.0, perfectly fine. The crash is DIVIDING BY 0, which only happens with an empty list."
+    },
+    {
+      "id": "u62l03e06",
+      "type": "multipleChoice",
+      "prompt": "This is the SAME kind of problem as an idea from Lap 2. Which habit does it remind you of?",
+      "options": [
+        "Guarding an edge case with an if before doing the risky step",
+        "Adding values up",
+        "Finding the biggest",
+        "Printing a label"
+      ],
+      "answer": 0,
+      "explanation": "Back in Lap 2 you learned edge-case guards: check for the troublesome case first. The empty list is exactly that — guard it before dividing."
+    },
+    {
+      "id": "u62l03e07",
+      "type": "multiSelect",
+      "prompt": "Which lists would make total / count crash? (pick all)",
+      "options": [
+        "[]",
+        "[0, 0, 0]",
+        "a list with no items at all",
+        "[5, 10]"
+      ],
+      "answer": [
+        0,
+        2
+      ],
+      "explanation": "Only truly empty lists (count 0) crash. [0, 0, 0] has count 3 (average 0.0), and [5, 10] is fine."
+    },
+    {
+      "id": "u62l03e08",
+      "type": "trueFalse",
+      "prompt": "An empty list is a realistic case — for example, a day with no sales, or a quiz nobody took.",
+      "answer": true,
+      "explanation": "Empty really happens: no sales yet, no scores entered. A good average must handle it without crashing."
+    },
+    {
+      "id": "u62l03e09",
+      "type": "multipleChoice",
+      "prompt": "What is a sensible thing to DO for the average of an empty list, instead of crashing?",
+      "options": [
+        "Report that there is no average (e.g. print a message), since there is nothing to average",
+        "Pretend the average is the biggest value",
+        "Divide by 1 anyway",
+        "Ignore the problem"
+      ],
+      "answer": 0,
+      "explanation": "With no items there is no average. Saying so (a message, or a safe value) is honest and avoids the crash."
+    },
+    {
+      "id": "u62l03e10",
+      "type": "multipleChoice",
+      "prompt": "So the plan for a safe average is...",
+      "options": [
+        "First check if the count is 0; only divide when it is not",
+        "Always divide and hope",
+        "Never compute averages",
+        "Sort the list first"
+      ],
+      "answer": 0,
+      "explanation": "Guard first: if count is 0, handle it; otherwise divide. Next lesson writes that guard."
+    }
+  ]
+}

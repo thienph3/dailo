@@ -1,0 +1,154 @@
+{
+  "unitId": "u79",
+  "lessonId": "u79l05",
+  "title": "Solve it together: average using a total helper",
+  "idea": "GUIDED (UEPCC). Compose: a helper returns the total of a list; divide by how many to get the average.",
+  "problem": "total_of(nums) returns the running total of a list. Use it to show the average of [4, 6, 8].",
+  "exercises": [
+    {
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: total_of(nums) returns a list's total. Show the average of [4, 6, 8].\n\nWhat is the OUTPUT?",
+      "options": [
+        "One number: the average (total divided by how many)",
+        "The total only",
+        "The count only",
+        "The biggest"
+      ],
+      "answer": 0,
+      "explanation": "Output is the average. We'll get the total from a helper, then divide by the count.",
+      "id": "u79l05e01"
+    },
+    {
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "What two values does 'average' need?",
+      "options": [
+        "The total and how many numbers there are",
+        "Only the total",
+        "Only the first number",
+        "The biggest and smallest"
+      ],
+      "answer": 0,
+      "explanation": "Average = total / count. The helper gives the total; len(nums) gives the count.",
+      "id": "u79l05e02"
+    },
+    {
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example by hand. Total of [4, 6, 8] is 18; there are 3 numbers; the average is...",
+      "options": [
+        "6",
+        "18",
+        "3",
+        "9"
+      ],
+      "answer": 0,
+      "explanation": "18 / 3 = 6. Hand-work the pieces so Check has a known answer.",
+      "id": "u79l05e03"
+    },
+    {
+      "type": "trueFalse",
+      "uepcc": "E",
+      "prompt": "We get the total from our own helper (a loop), not from the builtin sum().",
+      "answer": true,
+      "explanation": "Yes. total_of builds the running total by hand. This course never uses sum().",
+      "id": "u79l05e04"
+    },
+    {
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Plan the steps.",
+      "blocks": [
+        "Get the total from total_of(nums)",
+        "Get how many numbers with len(nums)",
+        "Divide total by count to get the average"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Total, then count, then divide. The helper does the summing; we compose it with len and division.",
+      "id": "u79l05e05"
+    },
+    {
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Which tool gives 'how many numbers'?",
+      "options": [
+        "len(nums)",
+        "total_of(nums)",
+        "nums[0]",
+        "append"
+      ],
+      "answer": 0,
+      "explanation": "len(nums) is the size of the list. We met len earlier; it's allowed (for size, not summing).",
+      "id": "u79l05e06"
+    },
+    {
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code it: define total_of, then compute the average by composing it with len.",
+      "blocks": [
+        "def total_of(nums):",
+        "    total = 0",
+        "    for x in nums:",
+        "        total = total + x",
+        "    return total",
+        "nums = [4, 6, 8]",
+        "print(total_of(nums) / len(nums))"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "explanation": "total_of returns 18; len(nums) is 3; 18 / 3 = 6. We composed a helper with len and division.",
+      "id": "u79l05e07"
+    },
+    {
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Divide the helper's total by the count:\n\nnums = [4, 6, 8]\nprint(total_of(nums) / ____(nums))",
+      "answer": "len",
+      "acceptable": [
+        "len"
+      ],
+      "explanation": "len(nums) is 3. total_of(nums) is 18, and 18 / 3 = 6.",
+      "id": "u79l05e08"
+    },
+    {
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check — the code prints 6.0; your example said 6. Is that a match?",
+      "options": [
+        "Yes — 6.0 is the same value as 6 (division gives a decimal)",
+        "No — totally wrong",
+        "Unknown",
+        "Change the example"
+      ],
+      "answer": 0,
+      "explanation": "Division produces 6.0, the same value as 6. The average is correct.",
+      "id": "u79l05e09"
+    },
+    {
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Re-check with [2, 4]. Total 6, count 2, average...",
+      "options": [
+        "3.0",
+        "6.0",
+        "2.0",
+        "8.0"
+      ],
+      "answer": 0,
+      "explanation": "6 / 2 = 3.0. Works for new inputs. (Remember: guard an EMPTY list before dividing by its count.)",
+      "id": "u79l05e10"
+    }
+  ]
+}

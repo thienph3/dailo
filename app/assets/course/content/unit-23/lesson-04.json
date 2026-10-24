@@ -1,0 +1,151 @@
+{
+  "unitId": "u23",
+  "lessonId": "u23l04",
+  "title": "Solve it: the bigger of two",
+  "idea": "GUIDED. Show the larger of two numbers using a single if/else comparison.",
+  "problem": "Given two numbers a and b, show whichever one is larger.",
+  "exercises": [
+    {
+      "id": "u23l04e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: show the larger of a and b. What is the OUTPUT?",
+      "options": [
+        "The larger number",
+        "Both numbers",
+        "The sum",
+        "Yes or No"
+      ],
+      "answer": 0,
+      "explanation": "Output is one value: whichever number is bigger."
+    },
+    {
+      "id": "u23l04e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "What are the INPUTS?",
+      "options": [
+        "The two numbers a and b",
+        "Only a",
+        "The word larger",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "Two inputs: a and b. The problem compares them."
+    },
+    {
+      "id": "u23l04e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "By hand: a = 8, b = 3. What should print?",
+      "options": [
+        "8",
+        "3",
+        "11",
+        "5"
+      ],
+      "answer": 0,
+      "explanation": "8 is larger than 3, so 8. That is the check value."
+    },
+    {
+      "id": "u23l04e04",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "By hand: a = 4, b = 9. What should print?",
+      "options": [
+        "9",
+        "4",
+        "13",
+        "5"
+      ],
+      "answer": 0,
+      "explanation": "9 is larger, so 9. The two examples put the bigger number on each side."
+    },
+    {
+      "id": "u23l04e05",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Which comparison tests 'a is larger'?",
+      "options": [
+        "a > b",
+        "a < b",
+        "a == b",
+        "a + b"
+      ],
+      "answer": 0,
+      "explanation": "a > b is True when a is the bigger one. If it is False, b is larger (or equal)."
+    },
+    {
+      "id": "u23l04e06",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Plan the steps.",
+      "blocks": [
+        "Compare a with b",
+        "If a is larger, show a",
+        "Otherwise show b"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Compare, then show a on True and b on the else."
+    },
+    {
+      "id": "u23l04e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Arrange the code.",
+      "blocks": [
+        "if a > b:",
+        "    print(a)",
+        "else:",
+        "    print(b)"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "Print a when a > b, otherwise print b."
+    },
+    {
+      "id": "u23l04e08",
+      "type": "trueFalse",
+      "uepcc": "C",
+      "prompt": "With the code above, if a equals b it prints b (the else branch).",
+      "answer": true,
+      "explanation": "a > b is False when they are equal, so the else runs and prints b. Equal values make either answer correct."
+    },
+    {
+      "id": "u23l04e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Run with a = 8, b = 3. What prints?",
+      "options": [
+        "8",
+        "3",
+        "11",
+        "5"
+      ],
+      "answer": 0,
+      "explanation": "8 > 3 is True, so it prints a, which is 8 - matches the hand example."
+    },
+    {
+      "id": "u23l04e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Re-check with a = 4, b = 9. What prints?",
+      "options": [
+        "9",
+        "4",
+        "13",
+        "5"
+      ],
+      "answer": 0,
+      "explanation": "4 > 9 is False, so the else prints b, which is 9. Correct for both orderings."
+    }
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "unitId": "u63",
+  "lessonId": "u63l06",
+  "title": "Filtering, then using the result",
+  "idea": "TOOL: a filtered list is a normal list — you can len it, sum it, or find its max. Chain a filter with a tool you already know.",
+  "exercises": [
+    {
+      "id": "u63l06e01",
+      "type": "multipleChoice",
+      "prompt": "What will this show?\n\nscores = [4, 9, 2, 7, 8]\npassing = []\nfor s in scores:\n    if s >= 5:\n        passing.append(s)\nprint(len(passing))",
+      "options": [
+        "3",
+        "2",
+        "5",
+        "[9, 7, 8]"
+      ],
+      "answer": 0,
+      "explanation": "The filter keeps 9, 7 and 8, then len gives how many — 3. A filtered list behaves like any other list."
+    },
+    {
+      "id": "u63l06e02",
+      "type": "multipleChoice",
+      "prompt": "What will this show?\n\nnums = [4, 9, 2, 7, 8]\nbig = []\nfor n in nums:\n    if n > 5:\n        big.append(n)\nprint(sum(big))",
+      "options": [
+        "24",
+        "30",
+        "3",
+        "[9, 7, 8]"
+      ],
+      "answer": 0,
+      "explanation": "big is [9, 7, 8]. sum adds them: 9 + 7 + 8 = 24. First filter, then sum the survivors."
+    },
+    {
+      "id": "u63l06e03",
+      "type": "trueFalse",
+      "prompt": "Once you have built a filtered list, you can use it with any list tool — len, sum, max, min.",
+      "answer": true,
+      "explanation": "A filtered list is just a list. Everything you learned about lists still works on it."
+    },
+    {
+      "id": "u63l06e04",
+      "type": "multipleChoice",
+      "prompt": "What will this show?\n\nnums = [4, 9, 2, 7, 8]\nbig = []\nfor n in nums:\n    if n > 5:\n        big.append(n)\nprint(max(big))",
+      "options": [
+        "9",
+        "8",
+        "7",
+        "24"
+      ],
+      "answer": 0,
+      "explanation": "big is [9, 7, 8], and the largest of those is 9. You can find the best among only the passing items."
+    },
+    {
+      "id": "u63l06e05",
+      "type": "orderBlocks",
+      "prompt": "Arrange a program that keeps scores of 5 or more, then shows how many there are.",
+      "blocks": [
+        "scores = [4, 9, 2, 7, 8]",
+        "passing = []",
+        "for s in scores:",
+        "    if s >= 5:",
+        "        passing.append(s)",
+        "print(len(passing))"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "explanation": "Filter first into passing, then measure it with len. The filter and the len are two separate, ordered steps."
+    },
+    {
+      "id": "u63l06e06",
+      "type": "multipleChoice",
+      "prompt": "Why filter into a list first, instead of computing the sum of passers directly?",
+      "options": [
+        "Because the list lets you reuse the result — count it, sum it, or show it, all from one filter",
+        "Because sum does not work on numbers",
+        "Because lists are faster to type",
+        "There is never a reason to filter first"
+      ],
+      "answer": 0,
+      "explanation": "Keeping the filtered list means you can answer several questions from it. If you truly need only the sum, a running total works too."
+    },
+    {
+      "id": "u63l06e07",
+      "type": "multipleChoice",
+      "prompt": "What will this show?\n\nprices = [3, 8, 1, 6, 10]\ncheap = []\nfor p in prices:\n    if p <= 5:\n        cheap.append(p)\nprint(sum(cheap))",
+      "options": [
+        "4",
+        "9",
+        "24",
+        "[3, 1]"
+      ],
+      "answer": 0,
+      "explanation": "cheap is [3, 1], and 3 + 1 = 4. The filter narrows the list, then sum totals only what is left."
+    },
+    {
+      "id": "u63l06e08",
+      "type": "trueFalse",
+      "prompt": "If the filtered list is empty, calling max on it has no value to return.",
+      "answer": true,
+      "explanation": "max needs at least one item. An empty filtered list has nothing to compare, so guarding for empty (as you learned with averages) matters here too."
+    },
+    {
+      "id": "u63l06e09",
+      "type": "multipleChoice",
+      "prompt": "What will this show?\n\nnums = [2, 4, 6, 8]\nbig = []\nfor n in nums:\n    if n > 100:\n        big.append(n)\nprint(len(big))",
+      "options": [
+        "0",
+        "4",
+        "an error",
+        "100"
+      ],
+      "answer": 0,
+      "explanation": "Nothing passes, so big stays empty and len(big) is 0. len is safe on an empty list — it just returns 0."
+    },
+    {
+      "id": "u63l06e10",
+      "type": "multipleChoice",
+      "prompt": "You filtered a class's scores into passing = [9, 7, 8], then found their total with a loop (total = 24) and counted them (count = 3). Which gives the average of just the passers? (Recall the empty guard from Unit 62.)",
+      "options": [
+        "total / count",
+        "total",
+        "count",
+        "total * count"
+      ],
+      "answer": 0,
+      "explanation": "Average is the running total divided by the count: total / count = 24 / 3 = 8. You build total and count with loops (Units 57-58), then divide — guarding against count being 0 first."
+    }
+  ]
+}

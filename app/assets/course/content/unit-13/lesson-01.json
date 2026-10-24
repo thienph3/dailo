@@ -1,0 +1,133 @@
+{
+  "unitId": "u13",
+  "lessonId": "u13l01",
+  "title": "Order can change the answer",
+  "idea": "When you mix + and *, the order the computer does them in changes the result. There is a rule for it.",
+  "exercises": [
+    {
+      "id": "u13l01e01",
+      "type": "multipleChoice",
+      "prompt": "You already know + - * /. Today's idea: when they are mixed, the ORDER they happen in can change the answer. True or false, in one word?",
+      "options": [
+        "True — order can change the result",
+        "False — order never matters",
+        "Only for division",
+        "Only for very big numbers"
+      ],
+      "answer": 0,
+      "explanation": "Mixing operators means order matters. 2 + 3 * 4 is not the same as doing the + first. There's a rule to make it predictable."
+    },
+    {
+      "id": "u13l01e02",
+      "type": "multipleChoice",
+      "prompt": "If we did 2 + 3 * 4 by doing the + FIRST, we'd get (2 + 3) then times 4. What is that?",
+      "options": [
+        "20",
+        "14",
+        "9",
+        "24"
+      ],
+      "answer": 0,
+      "explanation": "2 + 3 is 5, times 4 is 20. But this is NOT how the computer does it — it's just one possible order."
+    },
+    {
+      "id": "u13l01e03",
+      "type": "multipleChoice",
+      "prompt": "If we did 2 + 3 * 4 by doing the * FIRST, we'd get 3 * 4 then add 2. What is that?",
+      "options": [
+        "14",
+        "20",
+        "9",
+        "24"
+      ],
+      "answer": 0,
+      "explanation": "3 * 4 is 12, plus 2 is 14. Two different orders, two different answers. That's why we need a rule."
+    },
+    {
+      "id": "u13l01e04",
+      "type": "trueFalse",
+      "prompt": "2 + 3 * 4 can give a different answer depending on which step you do first.",
+      "answer": true,
+      "explanation": "Doing + first gives 20; doing * first gives 14. The order truly matters."
+    },
+    {
+      "id": "u13l01e05",
+      "type": "multipleChoice",
+      "prompt": "Why do we need a fixed rule for the order of + and *?",
+      "options": [
+        "So everyone gets the same answer every time",
+        "To make math slower",
+        "Because computers dislike plus signs",
+        "So the answer is always bigger"
+      ],
+      "answer": 0,
+      "explanation": "A fixed rule means the same expression always gives the same result. No guessing."
+    },
+    {
+      "id": "u13l01e06",
+      "type": "trueFalse",
+      "prompt": "For a plain 2 + 3 (no other operators), the order is obvious and the answer is just 5.",
+      "answer": true,
+      "explanation": "With only one operation there's nothing to order. The puzzle only appears when operators are mixed."
+    },
+    {
+      "id": "u13l01e07",
+      "type": "multipleChoice",
+      "prompt": "Which expression has a 'which goes first?' question?",
+      "options": [
+        "10 - 2 * 3",
+        "10 - 2",
+        "10 + 3",
+        "8 / 2"
+      ],
+      "answer": 0,
+      "explanation": "10 - 2 * 3 mixes - and *, so order matters. The others have only one operation."
+    },
+    {
+      "id": "u13l01e08",
+      "type": "matchPairs",
+      "prompt": "Match each expression to whether its order matters.",
+      "pairs": [
+        {
+          "left": "5 + 2 * 3",
+          "right": "Order matters (mixed operators)"
+        },
+        {
+          "left": "5 + 2",
+          "right": "Order does not matter (only one operation)"
+        },
+        {
+          "left": "6 / 2 + 1",
+          "right": "Order matters (mixed operators)"
+        }
+      ],
+      "explanation": "Mixing operators raises the order question. A single operation has no question to answer."
+    },
+    {
+      "id": "u13l01e09",
+      "type": "multipleChoice",
+      "prompt": "Review: what does print(5) show?",
+      "options": [
+        "5",
+        "\"5\"",
+        "print(5)",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "print shows the value. A number prints as itself. You'll use print to check your math soon."
+    },
+    {
+      "id": "u13l01e10",
+      "type": "multipleChoice",
+      "prompt": "Coming up next: the rule for which operation goes first. What do you think goes first, + or *?",
+      "options": [
+        "* (times and divide go before plus and minus)",
+        "+ (plus always wins)",
+        "Whichever is written first",
+        "It's random"
+      ],
+      "answer": 0,
+      "explanation": "You guessed it: * and / go first. That's the precedence rule — the whole point of this unit."
+    }
+  ]
+}

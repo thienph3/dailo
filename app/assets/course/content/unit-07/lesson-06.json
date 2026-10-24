@@ -1,0 +1,125 @@
+{
+  "unitId": "u07",
+  "lessonId": "u07l06",
+  "title": "Spotting a missing step",
+  "idea": "A plan is wrong if it leaves out a step the task asked for. Find the gap.",
+  "exercises": [
+    {
+      "id": "u07l06e01",
+      "type": "multipleChoice",
+      "prompt": "Task: show Hello, a name, and Goodbye. The plan only shows Hello and Goodbye. What's wrong?",
+      "options": [
+        "The name step is missing",
+        "There are too many steps",
+        "The order is backwards",
+        "Nothing is wrong"
+      ],
+      "answer": 0,
+      "explanation": "The task asked for three things but the plan has only two. The name step is missing."
+    },
+    {
+      "id": "u07l06e02",
+      "type": "trueFalse",
+      "prompt": "A plan that skips something the task asked for is incomplete.",
+      "answer": true,
+      "explanation": "Yes. If the task asks for it, the plan must include it. A missing step means a wrong result."
+    },
+    {
+      "id": "u07l06e03",
+      "type": "multipleChoice",
+      "prompt": "Task: show a title, author, and year. Plan: show title, show year. What step is missing?",
+      "options": [
+        "Show the author",
+        "Show the title again",
+        "Show the year again",
+        "Nothing is missing"
+      ],
+      "answer": 0,
+      "explanation": "Title and year are there, but the author was left out. Compare the plan to the task to find gaps."
+    },
+    {
+      "id": "u07l06e04",
+      "type": "multiSelect",
+      "prompt": "Task: greet with Hi, say your name, say Bye. Plan has only 'show Hi'. Which steps are missing?",
+      "options": [
+        "Show your name",
+        "Show Bye",
+        "Show Hi",
+        "Show the weather"
+      ],
+      "answer": [0, 1],
+      "explanation": "The plan has Hi but is missing the name and Bye. Two steps need adding."
+    },
+    {
+      "id": "u07l06e05",
+      "type": "multipleChoice",
+      "prompt": "Best way to check for a missing step?",
+      "options": [
+        "Compare the plan to the task, point by point",
+        "Hope it's fine",
+        "Add random extra steps",
+        "Delete the plan"
+      ],
+      "answer": 0,
+      "explanation": "Line up the plan next to the task and check each thing the task asked for is in the plan."
+    },
+    {
+      "id": "u07l06e06",
+      "type": "orderBlocks",
+      "prompt": "Task: show Welcome, show your name, show Enjoy. Build the COMPLETE plan in order.",
+      "blocks": [
+        "Show Welcome",
+        "Show your name",
+        "Show Enjoy"
+      ],
+      "answer": [0, 1, 2],
+      "explanation": "All three steps present and in order. Now nothing the task asked for is missing."
+    },
+    {
+      "id": "u07l06e07",
+      "type": "trueFalse",
+      "prompt": "Task: show a name and an age. A plan with only 'show the name' is complete.",
+      "answer": false,
+      "explanation": "No — the age step is missing. The task asked for two things; the plan must have both."
+    },
+    {
+      "id": "u07l06e08",
+      "type": "multipleChoice",
+      "prompt": "Code: print(\"Hi\") then print(\"Bye\"). Task asked for Hi, a name, then Bye. What's missing?",
+      "options": [
+        "A print line for the name, between the two",
+        "A second print of Hi",
+        "Nothing",
+        "A print of the whole task"
+      ],
+      "answer": 0,
+      "explanation": "The name line is missing from the middle. Each asked-for item needs its own print line."
+    },
+    {
+      "id": "u07l06e09",
+      "type": "multiSelect",
+      "prompt": "Task: show Good morning, your name, Have a nice day. Which lines must the code include?",
+      "options": [
+        "print(\"Good morning\")",
+        "print(\"...your name...\")",
+        "print(\"Have a nice day\")",
+        "print(\"Goodbye forever\")"
+      ],
+      "answer": [0, 1, 2],
+      "explanation": "Three asked-for items, three print lines. The goodbye-forever line was never asked for."
+    },
+    {
+      "id": "u07l06e10",
+      "type": "multipleChoice",
+      "prompt": "You compared your plan to the task and found nothing missing. What does that mean?",
+      "options": [
+        "Your plan covers everything the task asked for",
+        "Your plan is too long",
+        "You should delete a step",
+        "The task is wrong"
+      ],
+      "answer": 0,
+      "explanation": "A plan with no gaps covers the whole task. Great checking — that's a careful programmer's habit!"
+    }
+  ]
+}

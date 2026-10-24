@@ -1,0 +1,127 @@
+name: dailo
+description: "Dailo — learn to program, one bite-sized lesson at a time."
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.11.5
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: 1.0.8
+  shared_preferences: 2.5.3
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: 6.0.0
+  integration_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/catalog.json
+    - assets/course/course.json
+    - assets/course/config.json
+    - assets/course/content/unit-01/
+    - assets/course/content/unit-02/
+    - assets/course/content/unit-03/
+    - assets/course/content/unit-04/
+    - assets/course/content/unit-05/
+    - assets/course/content/unit-06/
+    - assets/course/content/unit-07/
+    - assets/course/content/unit-08/
+    - assets/course/content/unit-09/
+    - assets/course/content/unit-10/
+    - assets/course/content/unit-100/
+    - assets/course/content/unit-11/
+    - assets/course/content/unit-12/
+    - assets/course/content/unit-13/
+    - assets/course/content/unit-14/
+    - assets/course/content/unit-15/
+    - assets/course/content/unit-16/
+    - assets/course/content/unit-17/
+    - assets/course/content/unit-18/
+    - assets/course/content/unit-19/
+    - assets/course/content/unit-20/
+    - assets/course/content/unit-21/
+    - assets/course/content/unit-22/
+    - assets/course/content/unit-23/
+    - assets/course/content/unit-24/
+    - assets/course/content/unit-25/
+    - assets/course/content/unit-26/
+    - assets/course/content/unit-27/
+    - assets/course/content/unit-28/
+    - assets/course/content/unit-29/
+    - assets/course/content/unit-30/
+    - assets/course/content/unit-31/
+    - assets/course/content/unit-32/
+    - assets/course/content/unit-33/
+    - assets/course/content/unit-34/
+    - assets/course/content/unit-35/
+    - assets/course/content/unit-36/
+    - assets/course/content/unit-37/
+    - assets/course/content/unit-38/
+    - assets/course/content/unit-39/
+    - assets/course/content/unit-40/
+    - assets/course/content/unit-41/
+    - assets/course/content/unit-42/
+    - assets/course/content/unit-43/
+    - assets/course/content/unit-44/
+    - assets/course/content/unit-45/
+    - assets/course/content/unit-46/
+    - assets/course/content/unit-47/
+    - assets/course/content/unit-48/
+    - assets/course/content/unit-49/
+    - assets/course/content/unit-50/
+    - assets/course/content/unit-51/
+    - assets/course/content/unit-52/
+    - assets/course/content/unit-53/
+    - assets/course/content/unit-54/
+    - assets/course/content/unit-55/
+    - assets/course/content/unit-56/
+    - assets/course/content/unit-57/
+    - assets/course/content/unit-58/
+    - assets/course/content/unit-59/
+    - assets/course/content/unit-60/
+    - assets/course/content/unit-61/
+    - assets/course/content/unit-62/
+    - assets/course/content/unit-63/
+    - assets/course/content/unit-64/
+    - assets/course/content/unit-65/
+    - assets/course/content/unit-66/
+    - assets/course/content/unit-67/
+    - assets/course/content/unit-68/
+    - assets/course/content/unit-69/
+    - assets/course/content/unit-70/
+    - assets/course/content/unit-71/
+    - assets/course/content/unit-72/
+    - assets/course/content/unit-73/
+    - assets/course/content/unit-74/
+    - assets/course/content/unit-75/
+    - assets/course/content/unit-76/
+    - assets/course/content/unit-77/
+    - assets/course/content/unit-78/
+    - assets/course/content/unit-79/
+    - assets/course/content/unit-80/
+    - assets/course/content/unit-81/
+    - assets/course/content/unit-82/
+    - assets/course/content/unit-83/
+    - assets/course/content/unit-84/
+    - assets/course/content/unit-85/
+    - assets/course/content/unit-86/
+    - assets/course/content/unit-87/
+    - assets/course/content/unit-88/
+    - assets/course/content/unit-89/
+    - assets/course/content/unit-90/
+    - assets/course/content/unit-91/
+    - assets/course/content/unit-92/
+    - assets/course/content/unit-93/
+    - assets/course/content/unit-94/
+    - assets/course/content/unit-95/
+    - assets/course/content/unit-96/
+    - assets/course/content/unit-97/
+    - assets/course/content/unit-98/
+    - assets/course/content/unit-99/

@@ -1,0 +1,125 @@
+{
+  "unitId": "u05",
+  "lessonId": "u05l08",
+  "title": "Blank lines count too",
+  "idea": "A blank line is a real line. In the Check, a missing or extra blank line is a mismatch.",
+  "exercises": [
+    {
+      "id": "u05l08e01",
+      "type": "multipleChoice",
+      "prompt": "Does a blank line count as a line in the output?",
+      "options": [
+        "Yes — a blank line is still a line",
+        "No, blank lines are invisible",
+        "Only sometimes",
+        "Only the first one"
+      ],
+      "answer": 0,
+      "explanation": "A blank line takes up a line. The Check counts it just like any other."
+    },
+    {
+      "id": "u05l08e02",
+      "type": "multipleChoice",
+      "prompt": "This code:\n\nprint(\"A\")\nprint()\nprint(\"B\")\n\nWhat is the expected output?",
+      "options": [
+        "A, then a blank line, then B (3 lines)",
+        "A, then B (2 lines)",
+        "AB",
+        "A B"
+      ],
+      "answer": 0,
+      "explanation": "print() makes a blank line. So the output is A, blank, B — three lines."
+    },
+    {
+      "id": "u05l08e03",
+      "type": "multipleChoice",
+      "prompt": "Expected:\nA\n(blank line)\nB\n\nReal output:\nA\nB\n\nVerdict?",
+      "options": [
+        "Fail — the blank line is missing",
+        "Pass",
+        "Error",
+        "Pass, blanks don't matter"
+      ],
+      "answer": 0,
+      "explanation": "The expected output had a blank line between A and B. The real output skipped it — missing line, fail."
+    },
+    {
+      "id": "u05l08e04",
+      "type": "trueFalse",
+      "prompt": "An unexpected blank line in the real output is a mismatch.",
+      "answer": true,
+      "explanation": "If you didn't expect a blank line and one appears, that's an extra line — a mismatch, so a fail."
+    },
+    {
+      "id": "u05l08e05",
+      "type": "orderBlocks",
+      "prompt": "Expected output: Hi, then a blank line, then Bye. Arrange the prints.",
+      "blocks": [
+        "print(\"Hi\")",
+        "print()",
+        "print(\"Bye\")"
+      ],
+      "answer": [0, 1, 2],
+      "explanation": "Hi, then print() for the blank line, then Bye. That produces the expected three lines."
+    },
+    {
+      "id": "u05l08e06",
+      "type": "multipleChoice",
+      "prompt": "Expected:\nTop\n(blank line)\nBottom\n\nReal output:\nTop\n(blank line)\nBottom\n\nVerdict?",
+      "options": [
+        "Pass — the blank line is in the right place",
+        "Fail",
+        "Error",
+        "Half pass"
+      ],
+      "answer": 0,
+      "explanation": "Top, blank, Bottom — every line, including the blank one, matches. Pass."
+    },
+    {
+      "id": "u05l08e07",
+      "type": "multipleChoice",
+      "prompt": "A program prints two blank lines but you only expected one. Does it pass?",
+      "options": [
+        "No — one blank line too many is an extra line",
+        "Yes, blanks are free",
+        "Error",
+        "Only if words match"
+      ],
+      "answer": 0,
+      "explanation": "Two blanks where one was expected means an extra line. That fails the Check."
+    },
+    {
+      "id": "u05l08e08",
+      "type": "trueFalse",
+      "prompt": "print() and print(\"\") both produce a blank line in the output.",
+      "answer": true,
+      "explanation": "Both show a blank line — one with empty brackets, one with empty text. Either way, the Check sees a blank line."
+    },
+    {
+      "id": "u05l08e09",
+      "type": "multipleChoice",
+      "prompt": "Expected:\nName\n(blank line)\nAge\n\nReal output:\nName\nAge\n\nWhat should you do to match?",
+      "options": [
+        "Add a print() between the two lines",
+        "Remove a line",
+        "Nothing, it passes",
+        "Swap the lines"
+      ],
+      "answer": 0,
+      "explanation": "The blank line is missing. Adding print() between Name and Age restores it and makes the output match."
+    },
+    {
+      "id": "u05l08e10",
+      "type": "multipleChoice",
+      "prompt": "Why treat blank lines carefully in the Check?",
+      "options": [
+        "Because they're easy to miss but still count as lines",
+        "Because they change the words",
+        "Because they stop the program",
+        "They never matter"
+      ],
+      "answer": 0,
+      "explanation": "Blank lines are quiet — easy to overlook — but the computer counts them. Watching for them keeps your Check honest."
+    }
+  ]
+}

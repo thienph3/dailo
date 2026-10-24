@@ -1,0 +1,133 @@
+{
+  "unitId": "u13",
+  "lessonId": "u13l05",
+  "title": "A common mistake: forgetting the parentheses",
+  "idea": "If you forget parentheses, times/divide sneak in first and you get a wrong answer. Spot and fix it.",
+  "exercises": [
+    {
+      "id": "u13l05e01",
+      "type": "multipleChoice",
+      "prompt": "You want the average of 4 and 6: add them, then divide by 2. You write:\n\nprint(4 + 6 / 2)\n\nWhat's wrong?",
+      "options": [
+        "The / happens first, so it divides only the 6",
+        "Nothing, it's correct",
+        "4 and 6 are too small",
+        "print needs quotes"
+      ],
+      "answer": 0,
+      "explanation": "Divide goes first: 6 / 2 is 3, then 4 + 3 is 7.0 — not the average. You needed parentheses around 4 + 6."
+    },
+    {
+      "id": "u13l05e02",
+      "type": "multipleChoice",
+      "prompt": "Fix it: average of 4 and 6 (add first, then divide by 2). Which is correct?",
+      "options": [
+        "print((4 + 6) / 2)",
+        "print(4 + 6 / 2)",
+        "print(4 + 6 * 2)",
+        "print(4 / 2 + 6)"
+      ],
+      "answer": 0,
+      "explanation": "(4 + 6) / 2 forces the add first: 10 / 2 is 5.0. That's the real average."
+    },
+    {
+      "id": "u13l05e03",
+      "type": "multipleChoice",
+      "prompt": "What does the BROKEN version print, and what does the FIXED version print?\n\nprint(4 + 6 / 2)\nprint((4 + 6) / 2)",
+      "options": [
+        "7.0 then 5.0",
+        "5.0 then 7.0",
+        "5.0 then 5.0",
+        "10.0 then 10.0"
+      ],
+      "answer": 0,
+      "explanation": "Broken: 6/2=3, 4+3=7.0. Fixed: 4+6=10, 10/2=5.0. The parentheses make the difference."
+    },
+    {
+      "id": "u13l05e04",
+      "type": "trueFalse",
+      "prompt": "To add two numbers THEN divide, you must wrap the addition in parentheses.",
+      "answer": true,
+      "explanation": "Yes — otherwise divide sneaks in first. (a + b) / c is the safe pattern."
+    },
+    {
+      "id": "u13l05e05",
+      "type": "multipleChoice",
+      "prompt": "You want (3 plus 5) times 2. You wrote print(3 + 5 * 2). What answer do you get, and is it right?",
+      "options": [
+        "13 — wrong, you wanted 16",
+        "16 — correct",
+        "13 — correct",
+        "11 — wrong"
+      ],
+      "answer": 0,
+      "explanation": "Times first: 5*2=10, 3+10=13. You wanted (3+5)*2 = 16. Missing parentheses gave the wrong answer."
+    },
+    {
+      "id": "u13l05e06",
+      "type": "fillBlank",
+      "prompt": "Fix this so it does the subtraction first, then divides by 4. Add the parentheses:\n\nprint(____ / 4)\n\n(the subtraction is 20 - 8)",
+      "answer": "(20 - 8)",
+      "acceptable": [
+        "(20 - 8)",
+        "(20-8)"
+      ],
+      "explanation": "print((20 - 8) / 4) — inside first: 12, then 12 / 4 is 3.0."
+    },
+    {
+      "id": "u13l05e07",
+      "type": "multiSelect",
+      "prompt": "Which of these need parentheses to work as described? (pick all)",
+      "options": [
+        "Add 2 and 8, then divide by 5",
+        "Multiply 3 by 4 (nothing else)",
+        "Add 1 and 1, then multiply by 10",
+        "Just show 7"
+      ],
+      "answer": [
+        0,
+        2
+      ],
+      "explanation": "'Add then divide' and 'add then multiply' both need the add forced first. A single operation or a bare number needs nothing."
+    },
+    {
+      "id": "u13l05e08",
+      "type": "multipleChoice",
+      "prompt": "Spot the version that correctly computes (6 plus 2) divided by 2.",
+      "options": [
+        "print((6 + 2) / 2)",
+        "print(6 + 2 / 2)",
+        "print(6 / 2 + 2)",
+        "print(6 + 2 * 2)"
+      ],
+      "answer": 0,
+      "explanation": "Only (6 + 2) / 2 adds first: 8 / 2 is 4.0. The others let divide or times jump ahead."
+    },
+    {
+      "id": "u13l05e09",
+      "type": "multipleChoice",
+      "prompt": "Does adding parentheses that match the normal order change the answer?\n\nprint(2 + 3 * 4)\nprint(2 + (3 * 4))",
+      "options": [
+        "No — both are 14, since * already goes first",
+        "Yes — the second is bigger",
+        "Yes — the second is smaller",
+        "The second one errors"
+      ],
+      "answer": 0,
+      "explanation": "The ( ) around 3 * 4 just make the existing order visible. Both print 14. Parentheses only matter when they CHANGE the order."
+    },
+    {
+      "id": "u13l05e10",
+      "type": "multipleChoice",
+      "prompt": "Review: print on multiple lines. What shows?\n\nprint(4 + 6 / 2)\nprint((4 + 6) / 2)",
+      "options": [
+        "7.0 on one line, 5.0 on the next",
+        "Both on the same line",
+        "5.0 then 7.0",
+        "Just 5.0"
+      ],
+      "answer": 0,
+      "explanation": "Two prints make two lines: the broken 7.0, then the fixed 5.0. A clear before-and-after."
+    }
+  ]
+}

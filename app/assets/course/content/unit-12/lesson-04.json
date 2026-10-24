@@ -1,0 +1,134 @@
+{
+  "unitId": "u12",
+  "lessonId": "u12l04",
+  "title": "Is it even? Ask % 2",
+  "idea": "A number is even when its leftover after sharing into 2s is 0. So number % 2 tells you even or odd.",
+  "exercises": [
+    {
+      "id": "u12l04e01",
+      "type": "multipleChoice",
+      "prompt": "A number is 'even' when it shares into 2s with nothing left. What is the leftover for an even number?\n\n",
+      "options": [
+        "0",
+        "1",
+        "2",
+        "It changes"
+      ],
+      "answer": 0,
+      "explanation": "Even means it splits into 2s perfectly, so the leftover is 0. Odd numbers always leave 1."
+    },
+    {
+      "id": "u12l04e02",
+      "type": "multipleChoice",
+      "prompt": "What will this show?\n\nprint(8 % 2)",
+      "options": [
+        "0",
+        "1",
+        "4",
+        "2"
+      ],
+      "answer": 0,
+      "explanation": "8 is even, so it shares into 2s with nothing left. 8 % 2 is 0."
+    },
+    {
+      "id": "u12l04e03",
+      "type": "multipleChoice",
+      "prompt": "What will this show?\n\nprint(7 % 2)",
+      "options": [
+        "1",
+        "0",
+        "3",
+        "2"
+      ],
+      "answer": 0,
+      "explanation": "7 is odd. Three 2s make 6, and 1 is left. 7 % 2 is 1 — the sign of an odd number."
+    },
+    {
+      "id": "u12l04e04",
+      "type": "trueFalse",
+      "prompt": "If number % 2 is 0, the number is even.",
+      "answer": true,
+      "explanation": "Yes! A 0 leftover after 2s means it split perfectly — that's exactly what even means."
+    },
+    {
+      "id": "u12l04e05",
+      "type": "trueFalse",
+      "prompt": "If number % 2 is 1, the number is odd.",
+      "answer": true,
+      "explanation": "An odd number always leaves 1 after sharing into 2s. So a leftover of 1 means odd."
+    },
+    {
+      "id": "u12l04e06",
+      "type": "multipleChoice",
+      "prompt": "Which of these shows 0 (meaning even)?",
+      "options": [
+        "print(12 % 2)",
+        "print(5 % 2)",
+        "print(9 % 2)",
+        "print(3 % 2)"
+      ],
+      "answer": 0,
+      "explanation": "12 is even, so 12 % 2 is 0. The others are all odd and would show 1."
+    },
+    {
+      "id": "u12l04e07",
+      "type": "matchPairs",
+      "prompt": "Match each number's % 2 to its leftover.",
+      "pairs": [
+        {
+          "left": "10 % 2",
+          "right": "0"
+        },
+        {
+          "left": "11 % 2",
+          "right": "1"
+        },
+        {
+          "left": "20 % 2",
+          "right": "0"
+        },
+        {
+          "left": "15 % 2",
+          "right": "1"
+        }
+      ],
+      "explanation": "Even numbers (10, 20) leave 0. Odd numbers (11, 15) leave 1. That's the even/odd test."
+    },
+    {
+      "id": "u12l04e08",
+      "type": "multipleChoice",
+      "prompt": "A number leaves 0 when you do number % 2. Is it even or odd?",
+      "options": [
+        "Even",
+        "Odd",
+        "Neither",
+        "Can't tell"
+      ],
+      "answer": 0,
+      "explanation": "Leftover 0 after 2s means it split evenly — it's even."
+    },
+    {
+      "id": "u12l04e09",
+      "type": "fillBlank",
+      "prompt": "Fill the blank to test whether 46 is even (show its leftover after 2s).\n\nprint(46 _ 2)",
+      "answer": "%",
+      "acceptable": [
+        "%"
+      ],
+      "explanation": "46 % 2 is 0, so 46 is even. The % sign is your even/odd checker."
+    },
+    {
+      "id": "u12l04e10",
+      "type": "multipleChoice",
+      "prompt": "You want to split a group into two equal teams with nobody left out. Which line tells you if that's possible?",
+      "options": [
+        "print(players % 2)",
+        "print(players // 2)",
+        "print(players * 2)",
+        "print(players + 2)"
+      ],
+      "answer": 0,
+      "explanation": "players % 2 shows the leftover. If it's 0, the group splits into two equal teams with nobody left out."
+    }
+  ]
+}

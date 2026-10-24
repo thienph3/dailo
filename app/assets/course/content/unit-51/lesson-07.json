@@ -1,0 +1,123 @@
+{
+  "unitId": "u51",
+  "lessonId": "u51l07",
+  "title": "Showing the whole list",
+  "idea": "Printing a list shows everything at once. Predict list output; notice print(list) differs from printing a single value. Review of print.",
+  "exercises": [
+    {
+      "id": "u51l07e01",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\ndays = [1, 2, 3]\nprint(days)",
+      "options": [
+        "[1, 2, 3]",
+        "1 2 3",
+        "6",
+        "3"
+      ],
+      "answer": 0,
+      "explanation": "print(days) shows the whole list exactly as it is: [1, 2, 3]. It doesn't add or reshape anything."
+    },
+    {
+      "id": "u51l07e02",
+      "type": "multipleChoice",
+      "prompt": "Review of print from Unit 1. Predict:\n\nprint(\"Scores:\")\nscores = [7, 8]\nprint(scores)",
+      "options": [
+        "Scores:\n[7, 8]",
+        "[7, 8]\nScores:",
+        "Scores: [7, 8]",
+        "15"
+      ],
+      "answer": 0,
+      "explanation": "Two prints make two lines: the label 'Scores:' first, then the list [7, 8]. print runs top to bottom, as always."
+    },
+    {
+      "id": "u51l07e03",
+      "type": "trueFalse",
+      "prompt": "print(scores) where scores = [7, 8] shows the brackets, not just the numbers.",
+      "answer": true,
+      "explanation": "Printing a list includes its brackets and commas: [7, 8]. That's how you can tell it's a list in the output."
+    },
+    {
+      "id": "u51l07e04",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nprint([10, 20, 30])",
+      "options": [
+        "[10, 20, 30]",
+        "60",
+        "10 20 30",
+        "3"
+      ],
+      "answer": 0,
+      "explanation": "You can even print a list directly without storing it. It shows [10, 20, 30]. A list is a value like any other."
+    },
+    {
+      "id": "u51l07e05",
+      "type": "multipleChoice",
+      "prompt": "What's the difference between print(5) and print([5])?",
+      "options": [
+        "The first shows 5; the second shows a one-item list [5]",
+        "They are identical",
+        "The second causes an error",
+        "The first shows a list"
+      ],
+      "answer": 0,
+      "explanation": "5 is a plain number; [5] is a list that happens to hold one number. The brackets make it a list."
+    },
+    {
+      "id": "u51l07e06",
+      "type": "matchPairs",
+      "prompt": "Match each print to what appears on screen.",
+      "pairs": [
+        { "left": "print([1, 2])", "right": "[1, 2]" },
+        { "left": "print(3)", "right": "3" },
+        { "left": "print([3])", "right": "[3]" }
+      ],
+      "explanation": "Lists print with brackets; plain numbers print bare. The brackets are the giveaway."
+    },
+    {
+      "id": "u51l07e07",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\npets = [\"cat\", \"dog\", \"fish\"]\nprint(pets)",
+      "options": [
+        "['cat', 'dog', 'fish']",
+        "cat dog fish",
+        "catdogfish",
+        "3"
+      ],
+      "answer": 0,
+      "explanation": "A printed list of words keeps the quotes and brackets: ['cat', 'dog', 'fish']."
+    },
+    {
+      "id": "u51l07e08",
+      "type": "trueFalse",
+      "prompt": "Printing a list is a good quick way to see everything it holds while you're building a program.",
+      "answer": true,
+      "explanation": "Yes — print(the_list) is a handy check to make sure the list holds what you expect."
+    },
+    {
+      "id": "u51l07e09",
+      "type": "orderBlocks",
+      "prompt": "Arrange the code to print a label, then the list of three sizes.",
+      "blocks": [
+        "print(\"Sizes:\")",
+        "sizes = [36, 38, 40]",
+        "print(sizes)"
+      ],
+      "answer": [1, 0, 2],
+      "explanation": "You must make the list before printing it. A clean order: make sizes, print the label, print sizes. (Making the list first means it's ready when you print it.)"
+    },
+    {
+      "id": "u51l07e10",
+      "type": "multipleChoice",
+      "prompt": "You printed [18, 21, 25] but wanted to show just the FIRST value, 18. Can you do that yet?",
+      "options": [
+        "Not yet — picking one item is the next unit",
+        "Yes, print(18) is the list's first item",
+        "Yes, lists always print one item",
+        "No, lists can never be split"
+      ],
+      "answer": 0,
+      "explanation": "Right now you can only show the whole list. Reaching in for a single item (like the first) is exactly what indexing, the next unit, adds."
+    }
+  ]
+}

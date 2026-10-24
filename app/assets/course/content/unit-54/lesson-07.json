@@ -1,0 +1,120 @@
+{
+  "unitId": "u54",
+  "lessonId": "u54l07",
+  "title": "The count grows as you add",
+  "idea": "Connect append with len() from Unit 53: each append raises len by one. Reinforces that growing the list changes its size.",
+  "exercises": [
+    {
+      "id": "u54l07e01",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nn = [1, 2]\nprint(len(n))\nn.append(3)\nprint(len(n))",
+      "options": [
+        "2 then 3",
+        "3 then 2",
+        "2 then 2",
+        "3 then 3"
+      ],
+      "answer": 0,
+      "explanation": "Before appending, len is 2. After one append, len is 3. Adding an item raises the count by one."
+    },
+    {
+      "id": "u54l07e02",
+      "type": "trueFalse",
+      "prompt": "Each call to append raises the list's len by exactly 1.",
+      "answer": true,
+      "explanation": "append adds one item, so the count goes up by one each time. Three appends raise len by three."
+    },
+    {
+      "id": "u54l07e03",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nn = []\nn.append(5)\nn.append(5)\nn.append(5)\nprint(len(n))",
+      "options": [
+        "3",
+        "5",
+        "15",
+        "1"
+      ],
+      "answer": 0,
+      "explanation": "Three appends starting from empty give three items, so len is 3. The value (5) doesn't affect the count."
+    },
+    {
+      "id": "u54l07e04",
+      "type": "trueFalse",
+      "prompt": "Changing an item with list[i] = value does NOT change len.",
+      "answer": true,
+      "explanation": "Assignment swaps a value in an existing spot; the count stays the same. Only append (adding) changes len here."
+    },
+    {
+      "id": "u54l07e05",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nn = [7, 8]\nn[0] = 70\nprint(len(n))",
+      "options": [
+        "2",
+        "1",
+        "3",
+        "70"
+      ],
+      "answer": 0,
+      "explanation": "We changed an item but added nothing, so len stays 2. Assignment never changes the count."
+    },
+    {
+      "id": "u54l07e06",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nn = []\nfor i in range(4):\n    n.append(i)\nprint(len(n))",
+      "options": [
+        "4",
+        "0",
+        "3",
+        "6"
+      ],
+      "answer": 0,
+      "explanation": "The loop appends four times (i = 0, 1, 2, 3), so len becomes 4. Appending in a loop builds len step by step."
+    },
+    {
+      "id": "u54l07e07",
+      "type": "fillBlank",
+      "prompt": "After the loop, this prints the final count. Fill in the tool:\n\nn = []\nfor i in range(5):\n    n.append(i)\nprint(____(n))",
+      "answer": "len",
+      "acceptable": ["len"],
+      "explanation": "len(n) counts the items. Five appends give len 5."
+    },
+    {
+      "id": "u54l07e08",
+      "type": "orderBlocks",
+      "prompt": "Arrange code that adds one item, then reports how many items there are now.",
+      "blocks": [
+        "bag = [9, 9]",
+        "bag.append(9)",
+        "print(len(bag))"
+      ],
+      "answer": [0, 1, 2],
+      "explanation": "Start with 2 items, append one more (now 3), then print len: 3."
+    },
+    {
+      "id": "u54l07e09",
+      "type": "multipleChoice",
+      "prompt": "A list had len 3. You do two appends and one item assignment. What is len now?",
+      "options": [
+        "5",
+        "6",
+        "3",
+        "4"
+      ],
+      "answer": 0,
+      "explanation": "Two appends add 2 items (3 -> 5); the assignment changes a value but not the count. So len is 5."
+    },
+    {
+      "id": "u54l07e10",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nn = [1]\nn.append(2)\nprint(n[len(n) - 1])",
+      "options": [
+        "2",
+        "1",
+        "0",
+        "[1, 2]"
+      ],
+      "answer": 0,
+      "explanation": "After append, n is [1, 2] and len is 2. n[len(n) - 1] = n[1] = 2, the item you just added (now the last)."
+    }
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "unitId": "u64",
+  "lessonId": "u64l05",
+  "title": "Where is it? Finding the position",
+  "idea": "TOOL: extend search to record WHERE a match is, using the index from range(len()). Predict output.",
+  "exercises": [
+    {
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nnums = [4, 8, 2]\ntarget = 8\nwhere = -1\nfor i in range(len(nums)):\n    if nums[i] == target:\n        where = i\nprint(where)",
+      "options": [
+        "1",
+        "0",
+        "2",
+        "8"
+      ],
+      "answer": 0,
+      "explanation": "8 sits at index 1 (counting from 0). where records that position: 1.",
+      "id": "u64l05e01"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Why start where = -1 before the search?",
+      "options": [
+        "-1 is a 'not found yet' marker, since real positions are 0 or more",
+        "-1 is the first index",
+        "it empties the list",
+        "positions start at -1"
+      ],
+      "answer": 0,
+      "explanation": "Positions are 0, 1, 2, .... Starting at -1 means 'no position yet'; a real match overwrites it.",
+      "id": "u64l05e02"
+    },
+    {
+      "type": "fillBlank",
+      "prompt": "Record the position of a match:\n\nfor i in range(len(nums)):\n    if nums[i] == target:\n        where = ____",
+      "answer": "i",
+      "acceptable": [
+        "i"
+      ],
+      "explanation": "i is the current index. When nums[i] matches, that index i is where the value lives.",
+      "id": "u64l05e03"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nnums = [5, 6, 7]\ntarget = 7\nwhere = -1\nfor i in range(len(nums)):\n    if nums[i] == target:\n        where = i\nprint(where)",
+      "options": [
+        "2",
+        "1",
+        "7",
+        "-1"
+      ],
+      "answer": 0,
+      "explanation": "7 is the third item, at index 2. where becomes 2.",
+      "id": "u64l05e04"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nnums = [5, 6, 7]\ntarget = 9\nwhere = -1\nfor i in range(len(nums)):\n    if nums[i] == target:\n        where = i\nprint(where)",
+      "options": [
+        "-1",
+        "0",
+        "3",
+        "9"
+      ],
+      "answer": 0,
+      "explanation": "9 is absent, so where is never set and keeps its 'not found' marker, -1.",
+      "id": "u64l05e05"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "A position search uses range(len(nums)) and nums[i] so it can see the INDEX, not just the value.",
+      "answer": true,
+      "explanation": "To report WHERE, you need the index i. range(len(nums)) gives each index and nums[i] is the item there.",
+      "id": "u64l05e06"
+    },
+    {
+      "type": "orderBlocks",
+      "prompt": "Arrange a position search (first match wins, with break).",
+      "blocks": [
+        "where = -1",
+        "for i in range(len(nums)):",
+        "    if nums[i] == target:",
+        "        where = i",
+        "        break",
+        "print(where)"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "explanation": "Start where at -1, scan each index, and on the first match record i and break so the FIRST position wins.",
+      "id": "u64l05e07"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "With break on the first match, if the target appears at index 1 AND index 3, where ends up as...",
+      "options": [
+        "1 (the first match)",
+        "3 (the last match)",
+        "-1",
+        "4"
+      ],
+      "answer": 0,
+      "explanation": "break stops at the first match, so where holds the earliest position, 1.",
+      "id": "u64l05e08"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "A final where of -1 means...",
+      "options": [
+        "the target was not found",
+        "the target is at the start",
+        "the list is empty",
+        "an error happened"
+      ],
+      "answer": 0,
+      "explanation": "-1 was the 'not found' marker. Still -1 at the end means no item matched the target.",
+      "id": "u64l05e09"
+    },
+    {
+      "type": "fillBlank",
+      "prompt": "Start the position marker at the 'not found' value:\n\nwhere = ____\nfor i in range(len(nums)):\n    if nums[i] == target:\n        where = i",
+      "answer": "-1",
+      "acceptable": [
+        "-1"
+      ],
+      "explanation": "-1 is the conventional 'not found' marker because no real index is negative.",
+      "id": "u64l05e10"
+    }
+  ]
+}

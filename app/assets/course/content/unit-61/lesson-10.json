@@ -1,0 +1,158 @@
+{
+  "unitId": "u61",
+  "lessonId": "u61l10",
+  "title": "Pick, plan, solve: a mixed bag",
+  "idea": "GUIDED via UEPCC, review-heavy. One list, several questions — choose and apply sum/count/max/min for each.",
+  "problem": "Weekly sales are [20, 50, 20, 80, 30]. Answer: total sales, busiest day, quietest day, and how many days beat 25.",
+  "exercises": [
+    {
+      "id": "u61l10e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: sales [20, 50, 20, 80, 30]. You must answer four questions. First, how many DIFFERENT patterns will you likely use?",
+      "options": [
+        "Up to four — sum, max, min, and count",
+        "Just one",
+        "Just two",
+        "None — no patterns needed"
+      ],
+      "answer": 0,
+      "explanation": "Total->sum, busiest->max, quietest->min, how-many-beat-25->count. Four questions, four patterns."
+    },
+    {
+      "id": "u61l10e02",
+      "type": "matchPairs",
+      "uepcc": "P",
+      "prompt": "Match each question to its pattern.",
+      "pairs": [
+        {
+          "left": "Total sales",
+          "right": "Sum"
+        },
+        {
+          "left": "Busiest day",
+          "right": "Max"
+        },
+        {
+          "left": "Quietest day",
+          "right": "Min"
+        },
+        {
+          "left": "Days beating 25",
+          "right": "Count"
+        }
+      ],
+      "explanation": "Reading the wording maps each question to sum, max, min, or count."
+    },
+    {
+      "id": "u61l10e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example by hand: total of [20, 50, 20, 80, 30]?",
+      "options": [
+        "200",
+        "80",
+        "5",
+        "20"
+      ],
+      "answer": 0,
+      "explanation": "20+50+20+80+30 = 200 — the sum answer."
+    },
+    {
+      "id": "u61l10e04",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "By hand: busiest (max) and quietest (min) of [20, 50, 20, 80, 30]?",
+      "options": [
+        "max 80, min 20",
+        "max 50, min 30",
+        "max 80, min 30",
+        "max 200, min 20"
+      ],
+      "answer": 0,
+      "explanation": "80 is the biggest, 20 is the smallest. Each tool gives its own answer."
+    },
+    {
+      "id": "u61l10e05",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "By hand: how many days beat 25 (value > 25)?",
+      "options": [
+        "3 — the 50, 80, and 30",
+        "2",
+        "5",
+        "1"
+      ],
+      "answer": 0,
+      "explanation": "50, 80, 30 are over 25; the two 20s are not. Count = 3."
+    },
+    {
+      "id": "u61l10e06",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "For the COUNT question, what guards the +1?",
+      "options": [
+        "if day > 25",
+        "if day < 25",
+        "if day == 25",
+        "no guard — add 1 always"
+      ],
+      "answer": 0,
+      "explanation": "'Beat 25' means strictly greater, so the guard is day > 25."
+    },
+    {
+      "id": "u61l10e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code the COUNT of days beating 25.",
+      "answer": [
+        1,
+        3,
+        2,
+        0,
+        4
+      ],
+      "blocks": [
+        "        count = count + 1",
+        "count = 0",
+        "    if day > 25:",
+        "for day in sales:",
+        "print(count)"
+      ],
+      "explanation": "Start count at 0, loop, test day > 25, add 1 on a match, print."
+    },
+    {
+      "id": "u61l10e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Code the TOTAL. Finish the update:\n\ntotal = 0\nfor day in sales:\n    total = total ____ day",
+      "answer": "+",
+      "acceptable": [
+        "+"
+      ],
+      "explanation": "Sum adds each day's sales into the total with +."
+    },
+    {
+      "id": "u61l10e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check. Your four answers are total 200, max 80, min 20, count 3. The code agrees. So...",
+      "options": [
+        "All four solutions pass",
+        "They fail",
+        "You can't tell",
+        "Change the examples"
+      ],
+      "answer": 0,
+      "explanation": "Every output matches its hand-worked value, so all four pattern choices were correct."
+    },
+    {
+      "id": "u61l10e10",
+      "type": "trueFalse",
+      "uepcc": "Check",
+      "prompt": "You just practised the whole skill: read the question, PICK the right pattern (sum/count/max/min), apply it, and CHECK against a hand example.",
+      "answer": true,
+      "explanation": "That pick-plan-solve-check loop is exactly what this practice unit builds. Great work!"
+    }
+  ]
+}

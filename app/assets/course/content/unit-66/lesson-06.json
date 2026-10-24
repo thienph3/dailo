@@ -1,0 +1,133 @@
+{
+  "unitId": "u66",
+  "lessonId": "u66l06",
+  "title": "Wrong comparison in the test",
+  "idea": "A loop's if can be subtly wrong: > vs >=, or a flipped operator, changes which items count. Spot the edge-case bug.",
+  "exercises": [
+    {
+      "id": "u66l06e01",
+      "type": "multipleChoice",
+      "prompt": "Count scores that PASS, where pass means 50 or more, in [50, 49, 80].\n\nBUGGY:\ncount = 0\nfor s in [50, 49, 80]:\n    if s > 50:\n        count = count + 1\n\nWhat prints, and what's the bug?",
+      "options": [
+        "1 — '> 50' wrongly drops the 50; it should be '>= 50'",
+        "2",
+        "3",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "'50 or more' includes 50, so the test must be >=. With > 50 only 80 counts (1). The fix is >= 50, giving 2."
+    },
+    {
+      "id": "u66l06e02",
+      "type": "trueFalse",
+      "prompt": "'50 or more' should be written as >= 50, not > 50.",
+      "answer": true,
+      "explanation": "'Or more' includes the number itself, so use >=. Mixing up > and >= is a classic edge-case bug that drops the boundary value."
+    },
+    {
+      "id": "u66l06e03",
+      "type": "multipleChoice",
+      "prompt": "You want items UNDER 10. Which test is correct?",
+      "options": [
+        "n < 10",
+        "n <= 10",
+        "n > 10",
+        "n == 10"
+      ],
+      "answer": 0,
+      "explanation": "'Under 10' means strictly less, so n < 10. Using <= 10 would wrongly include 10 itself."
+    },
+    {
+      "id": "u66l06e04",
+      "type": "multipleChoice",
+      "prompt": "BUGGY: keep items that are EXACTLY 7.\n\nfor n in nums:\n    if n = 7:\n        keep.append(n)\n\nWhat's wrong?",
+      "options": [
+        "'=' assigns; comparing needs '==' — this is a mistake",
+        "nothing, it works",
+        "it should be >=",
+        "append is wrong"
+      ],
+      "answer": 0,
+      "explanation": "A single = means 'store into'. To TEST equality you need ==. 'if n == 7' is the fix. This mix-up is extremely common."
+    },
+    {
+      "id": "u66l06e05",
+      "type": "matchPairs",
+      "prompt": "Match each phrase to the correct comparison.",
+      "pairs": [
+        {
+          "left": "at least 18",
+          "right": ">= 18"
+        },
+        {
+          "left": "more than 18",
+          "right": "> 18"
+        },
+        {
+          "left": "at most 18",
+          "right": "<= 18"
+        }
+      ],
+      "explanation": "'At least' and 'at most' include the number (>=, <=); 'more than' and 'less than' exclude it (>, <). Choosing wrong is an edge-case bug."
+    },
+    {
+      "id": "u66l06e06",
+      "type": "multipleChoice",
+      "prompt": "Count values AT LEAST 100 in [99, 100, 101]. The correct test is...",
+      "options": [
+        "n >= 100 (counts 100 and 101, so 2)",
+        "n > 100 (counts only 101)",
+        "n == 100",
+        "n < 100"
+      ],
+      "answer": 0,
+      "explanation": "'At least 100' includes 100, so >= 100 gives 2. '> 100' would drop the 100, the usual boundary mistake."
+    },
+    {
+      "id": "u66l06e07",
+      "type": "trueFalse",
+      "prompt": "Testing the BOUNDARY value by hand (like exactly 50) is a good way to catch > vs >= bugs.",
+      "answer": true,
+      "explanation": "Yes. The boundary is where > and >= disagree. Hand-check the edge value and you'll immediately see which operator you need."
+    },
+    {
+      "id": "u66l06e08",
+      "type": "multipleChoice",
+      "prompt": "BUGGY: keep the FAILING scores (under 50), but it keeps the wrong ones.\n\nfor s in scores:\n    if s >= 50:\n        failing.append(s)\n\nThe fix is...",
+      "options": [
+        "change the test to s < 50",
+        "change append to print",
+        "remove the loop",
+        "start failing at 1"
+      ],
+      "answer": 0,
+      "explanation": "Failing means under 50, so the test should be s < 50. The code kept passers instead; the condition was flipped."
+    },
+    {
+      "id": "u66l06e09",
+      "type": "multipleChoice",
+      "prompt": "A filter returns too FEW items, always missing the exact boundary value. Suspect...",
+      "options": [
+        "> used where >= was meant (or < where <=)",
+        "the list is empty",
+        "the wrong list name",
+        "a missing print"
+      ],
+      "answer": 0,
+      "explanation": "Missing exactly the boundary is the fingerprint of a > / >= (or < / <=) mix-up. Hand-check the edge to confirm."
+    },
+    {
+      "id": "u66l06e10",
+      "type": "multipleChoice",
+      "prompt": "The lesson's takeaway:",
+      "options": [
+        "read the words carefully: 'or more' = >=, 'more than' = >, and test the edge",
+        "always use >",
+        "= and == are the same",
+        "comparisons never cause bugs"
+      ],
+      "answer": 0,
+      "explanation": "Translate the words exactly into the right operator, and hand-check the boundary. That kills edge-case comparison bugs."
+    }
+  ]
+}

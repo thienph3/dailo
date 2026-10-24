@@ -1,0 +1,129 @@
+{
+  "unitId": "u28",
+  "lessonId": "u28l03",
+  "title": "Nested if vs 'and': when is each right?",
+  "idea": "A nested if and an 'and' can give the same yes/no result, but a nested if lets you react differently in the middle. Predict output to see the difference.",
+  "exercises": [
+    {
+      "id": "u28l03e01",
+      "type": "multipleChoice",
+      "prompt": "These two both print 'Enter' only when BOTH are True:\n\nA) if age >= 18 and has_ticket:\n       print(\"Enter\")\n\nB) if age >= 18:\n       if has_ticket:\n           print(\"Enter\")\n\nWhen only the 'Enter' case matters, which is simpler?",
+      "options": [
+        "A, using 'and' - one condition, less indentation",
+        "B, the nested one",
+        "They are never the same",
+        "Neither works"
+      ],
+      "answer": 0,
+      "explanation": "If you only care about the all-True case, 'and' is cleaner. Nesting earns its keep when you want a DIFFERENT message in the middle."
+    },
+    {
+      "id": "u28l03e02",
+      "type": "multipleChoice",
+      "prompt": "Here nesting does more. What prints?\n\nage = 20\nhas_ticket = False\nif age >= 18:\n    if has_ticket:\n        print(\"Enter\")\n    else:\n        print(\"Buy a ticket\")\nelse:\n    print(\"Too young\")",
+      "options": [
+        "Buy a ticket",
+        "Enter",
+        "Too young",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "age >= 18 is True, so we go inside. has_ticket is False, so 'Buy a ticket'. A plain 'and' could not give this middle message."
+    },
+    {
+      "id": "u28l03e03",
+      "type": "multipleChoice",
+      "prompt": "Same nested code, age = 15. What prints?",
+      "options": [
+        "Too young",
+        "Buy a ticket",
+        "Enter",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "The outer if is False, so the inner ticket question is skipped and the outer else runs: 'Too young'."
+    },
+    {
+      "id": "u28l03e04",
+      "type": "multipleChoice",
+      "prompt": "Why can a nested if give THREE outcomes here while a single 'and' gives only two?",
+      "options": [
+        "The nested version has an inner else AND an outer else",
+        "'and' is broken",
+        "Nesting runs twice",
+        "They always give the same number of outcomes"
+      ],
+      "answer": 0,
+      "explanation": "Each if can have its own else. Nesting stacks two choices, so you can respond to the outer-False, inner-False, and all-True cases separately."
+    },
+    {
+      "id": "u28l03e05",
+      "type": "trueFalse",
+      "prompt": "If you only need a single yes/no result from two conditions, 'and' is usually the simpler choice.",
+      "answer": true,
+      "explanation": "Yes. Reach for a nested if when the in-between case needs its own response; otherwise 'and' keeps the code flat and clear."
+    },
+    {
+      "id": "u28l03e06",
+      "type": "multipleChoice",
+      "prompt": "A rule: 'Members get in free. Non-members pay, but seniors among them pay half.' Which structure fits?",
+      "options": [
+        "Outer if on member; inside the non-member branch, a nested if on senior",
+        "A single 'and'",
+        "No if at all",
+        "A loop"
+      ],
+      "answer": 0,
+      "explanation": "The senior question only matters for non-members, so it belongs nested inside that branch - a choice inside a choice."
+    },
+    {
+      "id": "u28l03e07",
+      "type": "fillBlank",
+      "prompt": "Rewrite the 'Enter only when both True' rule as a single condition:\n\nif age >= 18 ____ has_ticket:\n    print(\"Enter\")",
+      "answer": "and",
+      "acceptable": [
+        "and"
+      ],
+      "explanation": "'and' combines both into one test. Use this when you don't need a separate message for the in-between case."
+    },
+    {
+      "id": "u28l03e08",
+      "type": "multipleChoice",
+      "prompt": "What prints?\n\nmember = True\nage = 70\nif member:\n    print(\"Free entry\")\nelse:\n    if age >= 65:\n        print(\"Half price\")\n    else:\n        print(\"Full price\")",
+      "options": [
+        "Free entry",
+        "Half price",
+        "Full price",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "member is True, so the outer if runs: 'Free entry'. The nested senior check lives in the else and is skipped entirely."
+    },
+    {
+      "id": "u28l03e09",
+      "type": "multipleChoice",
+      "prompt": "Same code, member = False, age = 70. What prints?",
+      "options": [
+        "Half price",
+        "Free entry",
+        "Full price",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "member is False, so we enter the else. There the nested if checks age >= 65: 70 qualifies, so 'Half price'."
+    },
+    {
+      "id": "u28l03e10",
+      "type": "multipleChoice",
+      "prompt": "The lesson in one line: choose a nested if when...",
+      "options": [
+        "the second question only makes sense after the first answer, and each needs its own response",
+        "you want the shortest possible code every time",
+        "you never need an else",
+        "two things must both be true and nothing else matters"
+      ],
+      "answer": 0,
+      "explanation": "Nesting shines when the inner question depends on the outer answer and the in-between case deserves its own branch."
+    }
+  ]
+}

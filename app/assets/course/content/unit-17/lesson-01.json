@@ -1,0 +1,138 @@
+{
+  "unitId": "u17",
+  "lessonId": "u17l01",
+  "title": "Build a readable receipt line",
+  "idea": "GUIDED PROBLEM. Compute a total, then present it as a clear sentence with an f-string. Walked through UEPCC.",
+  "problem": "A shop sells apples at 4 each. A customer buys 3 apples. Show a clear message like: You bought 3 apples for 12.",
+  "exercises": [
+    {
+      "id": "u17l01e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: apples cost 4 each, a customer buys 3. Show a message like 'You bought 3 apples for 12.'\n\nFirst — Understand. What is the OUTPUT this problem wants?",
+      "options": [
+        "A sentence showing how many apples and the total cost",
+        "Only the number of apples",
+        "Only the price of one apple",
+        "The word 'apples' by itself"
+      ],
+      "answer": 0,
+      "explanation": "The output is a readable message that includes BOTH the count and the total. Naming the output first keeps you on track."
+    },
+    {
+      "id": "u17l01e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "Still understanding. What are the INPUTS (the values you start with)?",
+      "options": [
+        "The price of one apple (4) and how many apples (3)",
+        "Only the number 12",
+        "The word 'bought'",
+        "Nothing — there are no inputs"
+      ],
+      "answer": 0,
+      "explanation": "The inputs are the apple price (4) and the count (3). Every number in the problem becomes a named value."
+    },
+    {
+      "id": "u17l01e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Next — Example. Work it by hand first. 3 apples at 4 each costs how much in total?",
+      "options": ["12", "7", "34", "1"],
+      "answer": 0,
+      "explanation": "3 * 4 = 12. Doing the example by hand gives you the number to check your code against later."
+    },
+    {
+      "id": "u17l01e04",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "So by hand, the full message should read:",
+      "options": [
+        "You bought 3 apples for 12.",
+        "You bought 4 apples for 3.",
+        "You bought 12 apples for 3.",
+        "You bought apples."
+      ],
+      "answer": 0,
+      "explanation": "Count is 3, total is 12. Writing the exact expected sentence makes the Check step easy."
+    },
+    {
+      "id": "u17l01e05",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Now — Plan. Put these plain-English steps in order.",
+      "blocks": [
+        "Multiply count by price to get the total",
+        "Remember the price and the count",
+        "Show a message with the count and the total"
+      ],
+      "answer": [1, 0, 2],
+      "explanation": "Plan: remember the values, compute the total, then present it clearly. Plan in words before code."
+    },
+    {
+      "id": "u17l01e06",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Your plan says 'show a message with the count and the total.' Which tool drops values straight into a sentence?",
+      "options": [
+        "An f-string",
+        "The minus operator",
+        "A blank line",
+        "The int() function"
+      ],
+      "answer": 0,
+      "explanation": "An f-string lets you place values inside text with {curly braces}. Perfect for a readable report."
+    },
+    {
+      "id": "u17l01e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Now — Code. Arrange these lines to match your plan.",
+      "blocks": [
+        "total = apple_count * apple_price",
+        "apple_price = 4",
+        "apple_count = 3",
+        "print(f\"You bought {apple_count} apples for {total}.\")"
+      ],
+      "answer": [1, 2, 0, 3],
+      "explanation": "Store price, store count, compute total, then print the f-string. The code mirrors the plan exactly."
+    },
+    {
+      "id": "u17l01e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Complete the f-string so it shows the total:\n\napple_price = 4\napple_count = 3\ntotal = apple_count * apple_price\nprint(f\"You bought {apple_count} apples for {____}.\")",
+      "answer": "total",
+      "acceptable": ["total"],
+      "explanation": "You want the computed total inside the message, so put {total} in the braces."
+    },
+    {
+      "id": "u17l01e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Finally — Check. You run it and it prints 'You bought 3 apples for 12.' Your hand example said the same. So...",
+      "options": [
+        "It passes — the message matches the example",
+        "It fails — the total is wrong",
+        "You can't tell",
+        "You must change the example"
+      ],
+      "answer": 0,
+      "explanation": "The printed message matches your hand-worked sentence, so the solution is correct."
+    },
+    {
+      "id": "u17l01e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Same code, new inputs: apple_count = 5, apple_price = 2. What message prints now?",
+      "options": [
+        "You bought 5 apples for 10.",
+        "You bought 2 apples for 5.",
+        "You bought 5 apples for 7.",
+        "You bought 10 apples for 5."
+      ],
+      "answer": 0,
+      "explanation": "5 * 2 = 10, so it reads 'You bought 5 apples for 10.' A good solution works for new numbers too. You built a readable report!"
+    }
+  ]
+}

@@ -1,0 +1,136 @@
+{
+  "unitId": "u34",
+  "lessonId": "u34l01",
+  "title": "Decide: is a number even or odd?",
+  "idea": "REVIEW MIX. Unseen decision using % (from Lap 1) with if/else (Lap 2). Interleaves arithmetic and branching.",
+  "exercises": [
+    {
+      "id": "u34l01e01",
+      "type": "multipleChoice",
+      "prompt": "UNSEEN PROBLEM: print 'Even' or 'Odd' for a number. What operation tells you the remainder after dividing by 2?",
+      "options": [
+        "% (modulo)",
+        "// (floor divide)",
+        "* (multiply)",
+        "+ (add)"
+      ],
+      "answer": 0,
+      "explanation": "% (modulo) gives the remainder. n % 2 is 0 for even numbers and 1 for odd - a perfect test."
+    },
+    {
+      "id": "u34l01e02",
+      "type": "multipleChoice",
+      "prompt": "What is 7 % 2?",
+      "options": [
+        "1",
+        "0",
+        "3",
+        "2"
+      ],
+      "answer": 0,
+      "explanation": "7 divided by 2 is 3 with remainder 1, so 7 % 2 is 1. A remainder of 1 means odd."
+    },
+    {
+      "id": "u34l01e03",
+      "type": "multipleChoice",
+      "prompt": "What is 8 % 2?",
+      "options": [
+        "0",
+        "1",
+        "4",
+        "2"
+      ],
+      "answer": 0,
+      "explanation": "8 divides evenly by 2, remainder 0, so 8 % 2 is 0 - meaning even."
+    },
+    {
+      "id": "u34l01e04",
+      "type": "multipleChoice",
+      "prompt": "Which condition is True exactly when n is even?",
+      "options": [
+        "n % 2 == 0",
+        "n % 2 == 1",
+        "n == 2",
+        "n // 2 == 0"
+      ],
+      "answer": 0,
+      "explanation": "Even means no remainder when divided by 2, i.e. n % 2 == 0. That's the even test."
+    },
+    {
+      "id": "u34l01e05",
+      "type": "orderBlocks",
+      "prompt": "Arrange a program that prints 'Even' or 'Odd' for n.",
+      "blocks": [
+        "n = 7",
+        "if n % 2 == 0:",
+        "    print(\"Even\")",
+        "else:",
+        "    print(\"Odd\")"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "explanation": "Store n, test n % 2 == 0, print 'Even' in the if and 'Odd' in the else. Arithmetic feeds the decision."
+    },
+    {
+      "id": "u34l01e06",
+      "type": "multipleChoice",
+      "prompt": "With n = 7, what does that program print?",
+      "options": [
+        "Odd",
+        "Even",
+        "1",
+        "7"
+      ],
+      "answer": 0,
+      "explanation": "7 % 2 is 1, not 0, so the condition is False and the else runs: 'Odd'."
+    },
+    {
+      "id": "u34l01e07",
+      "type": "multipleChoice",
+      "prompt": "Edge case: with n = 0, what prints?",
+      "options": [
+        "Even",
+        "Odd",
+        "0",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "0 % 2 is 0, so the condition is True: 'Even'. Zero is an even number - a good edge to check."
+    },
+    {
+      "id": "u34l01e08",
+      "type": "trueFalse",
+      "prompt": "Review: print(3 + 4) shows 7, while print(\"3 + 4\") shows the text 3 + 4.",
+      "answer": true,
+      "explanation": "True. Without quotes Python does the math (7); with quotes it's just text. A Lap 0 idea still true here."
+    },
+    {
+      "id": "u34l01e09",
+      "type": "fillBlank",
+      "prompt": "Fill the operator that gives the remainder:\n\nif n ____ 2 == 0:\n    print(\"Even\")",
+      "answer": "%",
+      "acceptable": [
+        "%"
+      ],
+      "explanation": "% is modulo - the remainder operator. n % 2 == 0 is the classic even test."
+    },
+    {
+      "id": "u34l01e10",
+      "type": "multipleChoice",
+      "prompt": "What did this lesson combine?",
+      "options": [
+        "Arithmetic (%) from an earlier lap with a decision",
+        "Only brand-new tools",
+        "Loops",
+        "Functions"
+      ],
+      "answer": 0,
+      "explanation": "It mixed Lap 1 arithmetic (%) with Lap 2 decisions (if/else) on a brand-new problem - exactly what LOOP review is for."
+    }
+  ]
+}

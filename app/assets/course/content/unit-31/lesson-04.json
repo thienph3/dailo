@@ -1,0 +1,160 @@
+{
+  "unitId": "u31",
+  "lessonId": "u31l04",
+  "title": "Solve it: grade from a typed score",
+  "idea": "GUIDED. UEPCC on an if/elif/else chain driven by a typed number.",
+  "problem": "Ask for a score 0-100. Print 'A' for 90+, 'B' for 80-89, else 'C'.",
+  "exercises": [
+    {
+      "id": "u31l04e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: read a score, print 'A' (90+), 'B' (80-89), else 'C'.\n\nWhat is the OUTPUT?",
+      "options": [
+        "One letter: 'A', 'B', or 'C'",
+        "The score plus 10",
+        "The number of grades",
+        "The score"
+      ],
+      "answer": 0,
+      "explanation": "The output is one letter grade. There are three possible results, so we will need a chain."
+    },
+    {
+      "id": "u31l04e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "The score is used in math comparisons like >= 90. What must we do to the input?",
+      "options": [
+        "Convert it with int()",
+        "Keep it as text",
+        "Add it to 100",
+        "Round it to A"
+      ],
+      "answer": 0,
+      "explanation": "Comparisons like >= need a number, so convert the text with int() first."
+    },
+    {
+      "id": "u31l04e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Work it by hand: the user types 95. What grade?",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "95"
+      ],
+      "answer": 0,
+      "explanation": "95 is 90 or more, so 'A'. This is one of your check values."
+    },
+    {
+      "id": "u31l04e04",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Another by hand: the user types 83. What grade?",
+      "options": [
+        "B",
+        "A",
+        "C",
+        "83"
+      ],
+      "answer": 0,
+      "explanation": "83 is not 90+, but it is 80 or more, so 'B'. The middle band matters."
+    },
+    {
+      "id": "u31l04e05",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Plan the checks in the right order (highest band first).",
+      "blocks": [
+        "If score is 90 or more -> A",
+        "Otherwise if score is 80 or more -> B",
+        "Otherwise -> C"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Check the highest band first. elif only runs if earlier tests failed, so order top-down."
+    },
+    {
+      "id": "u31l04e06",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Why check 90+ BEFORE 80+ in the chain?",
+      "options": [
+        "Because 95 passes both tests; the first matching branch wins",
+        "Because 80 is not a real number",
+        "Because elif cannot come first",
+        "Order never matters in elif"
+      ],
+      "answer": 0,
+      "explanation": "A 95 is also 80+, so if 80 came first it would wrongly print B. Highest band must be tested first."
+    },
+    {
+      "id": "u31l04e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Arrange the code to match the plan.",
+      "blocks": [
+        "score = int(input(\"Score: \"))",
+        "if score >= 90:",
+        "    print(\"A\")",
+        "elif score >= 80:",
+        "    print(\"B\")",
+        "else:",
+        "    print(\"C\")"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "explanation": "Read and convert, test 90+, then elif 80+, then else for everything lower."
+    },
+    {
+      "id": "u31l04e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Complete the middle band keyword:\n\nif score >= 90:\n    print(\"A\")\n____ score >= 80:\n    print(\"B\")\nelse:\n    print(\"C\")",
+      "answer": "elif",
+      "acceptable": [
+        "elif"
+      ],
+      "explanation": "elif adds another test that only runs when the first failed. It keeps the bands separate."
+    },
+    {
+      "id": "u31l04e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check with the first example: the user types 95. What prints?",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "95"
+      ],
+      "answer": 0,
+      "explanation": "95 >= 90 is True, so the first branch wins and 'A' prints — matching your hand answer."
+    },
+    {
+      "id": "u31l04e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Re-check with a fresh input: the user types 72. What prints?",
+      "options": [
+        "C",
+        "B",
+        "A",
+        "72"
+      ],
+      "answer": 0,
+      "explanation": "72 fails 90+ and 80+, so the else runs: 'C'. It generalizes to the lowest band."
+    }
+  ]
+}

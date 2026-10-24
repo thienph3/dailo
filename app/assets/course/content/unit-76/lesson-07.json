@@ -1,0 +1,121 @@
+{
+  "unitId": "u76",
+  "lessonId": "u76l07",
+  "title": "Composing a boolean into an if",
+  "idea": "Composing functions: a returned True/False can feed an if, or combine with and/or. Compose a decision from smaller checks.",
+  "exercises": [
+    {
+      "id": "u76l07e01",
+      "type": "multipleChoice",
+      "prompt": "Read:\n\ndef is_even(n):\n    return n % 2 == 0\n\nif is_even(8):\n    print(\"even\")\n\nWhat prints?",
+      "options": [
+        "even",
+        "False",
+        "8",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "is_even(8) returns True, which becomes the if's condition, so it prints even. The returned boolean fed the if."
+    },
+    {
+      "id": "u76l07e02",
+      "type": "trueFalse",
+      "prompt": "A returned True/False can be used directly as an if's condition.",
+      "answer": true,
+      "explanation": "Yes. The if just needs a True/False; a sub-plan that returns one slots right in."
+    },
+    {
+      "id": "u76l07e03",
+      "type": "multipleChoice",
+      "prompt": "You can combine two checks with and:\n\ndef is_even(n):\n    return n % 2 == 0\n\ndef is_positive(n):\n    return n > 0\n\nif is_even(6) and is_positive(6):\n    print(\"both\")\n\nWhat prints?",
+      "options": [
+        "both",
+        "False",
+        "6",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "is_even(6) is True and is_positive(6) is True, so True and True is True -> prints both. Two returned booleans composed with and."
+    },
+    {
+      "id": "u76l07e04",
+      "type": "multipleChoice",
+      "prompt": "Predict:\n\nif is_even(6) and is_positive(-6):\n    print(\"both\")\nelse:\n    print(\"not both\")",
+      "options": [
+        "not both",
+        "both",
+        "False",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "is_even(6) is True but is_positive(-6) is False. True and False is False, so it prints not both."
+    },
+    {
+      "id": "u76l07e05",
+      "type": "fillBlank",
+      "prompt": "Combine the two checks so BOTH must hold:\n\nif is_even(n) ____ is_positive(n):\n    print(\"ok\")",
+      "answer": "and",
+      "acceptable": ["and"],
+      "explanation": "'and' is True only when both sides are True. Composing two returned booleans with and makes a combined rule."
+    },
+    {
+      "id": "u76l07e06",
+      "type": "multipleChoice",
+      "prompt": "REVIEW: why return the booleans instead of printing 'yes'/'no' inside each check?",
+      "options": [
+        "Returned booleans can be combined with and/or and fed to an if",
+        "printing is faster",
+        "text can be combined with and",
+        "no reason"
+      ],
+      "answer": 0,
+      "explanation": "You can't 'and' two printed words. Returned True/False values combine and drive decisions — that's composable."
+    },
+    {
+      "id": "u76l07e07",
+      "type": "multipleChoice",
+      "prompt": "Build a bigger check from a small one:\n\ndef is_even(n):\n    return n % 2 == 0\n\ndef is_odd(n):\n    return not is_even(n)\n\nprint(is_odd(7))",
+      "options": [
+        "True",
+        "False",
+        "7",
+        "None"
+      ],
+      "answer": 0,
+      "explanation": "is_even(7) is False; not False is True. is_odd reuses is_even and flips it — composition with not."
+    },
+    {
+      "id": "u76l07e08",
+      "type": "trueFalse",
+      "prompt": "A sub-plan can build a new check by calling another check and flipping it with not.",
+      "answer": true,
+      "explanation": "Yes. is_odd = not is_even. Reusing and transforming a returned boolean is composing at the decision level."
+    },
+    {
+      "id": "u76l07e09",
+      "type": "multipleChoice",
+      "prompt": "Predict:\n\ndef is_even(n):\n    return n % 2 == 0\n\ndef is_odd(n):\n    return not is_even(n)\n\nprint(is_odd(10))",
+      "options": [
+        "False",
+        "True",
+        "10",
+        "None"
+      ],
+      "answer": 0,
+      "explanation": "is_even(10) is True; not True is False. 10 is not odd, so is_odd(10) is False."
+    },
+    {
+      "id": "u76l07e10",
+      "type": "multipleChoice",
+      "prompt": "The idea of this lesson:",
+      "options": [
+        "Returned booleans compose — feed them to an if, or combine with and/or/not",
+        "booleans can't be composed",
+        "only numbers compose",
+        "you must print yes/no"
+      ],
+      "answer": 0,
+      "explanation": "A returned True/False is a value too, so it composes: into an if, with and/or, or flipped with not."
+    }
+  ]
+}

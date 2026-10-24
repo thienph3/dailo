@@ -1,0 +1,118 @@
+{
+  "unitId": "u02",
+  "lessonId": "u02l03",
+  "title": "Start by naming the output",
+  "idea": "The output is the goal. Naming what you must produce first keeps the task on track.",
+  "exercises": [
+    {
+      "id": "u02l03e01",
+      "type": "multipleChoice",
+      "prompt": "The output is also called the...",
+      "options": [
+        "Goal of the task",
+        "Start of the task",
+        "Mistake in the task",
+        "Length of the task"
+      ],
+      "answer": 0,
+      "explanation": "The output is what you're aiming for — the goal. Name it first and you know where you're going."
+    },
+    {
+      "id": "u02l03e02",
+      "type": "multipleChoice",
+      "prompt": "Task: 'Find the total of two prices.' What is the output (the goal)?",
+      "options": [
+        "The total",
+        "The two prices",
+        "A calculator",
+        "The shop"
+      ],
+      "answer": 0,
+      "explanation": "The goal is the total. The two prices are inputs; the total is what comes out."
+    },
+    {
+      "id": "u02l03e03",
+      "type": "multipleChoice",
+      "prompt": "Task: 'Show a greeting on the screen.' What is the output?",
+      "options": [
+        "The greeting appearing on the screen",
+        "The keyboard",
+        "The screen's brightness",
+        "A password"
+      ],
+      "answer": 0,
+      "explanation": "The output is the greeting shown on screen. In code, print() makes that happen."
+    },
+    {
+      "id": "u02l03e04",
+      "type": "trueFalse",
+      "prompt": "Knowing the output first helps you check later whether the task worked.",
+      "answer": true,
+      "explanation": "If you know what the output should be, you can compare your result to it. That's checking."
+    },
+    {
+      "id": "u02l03e05",
+      "type": "matchPairs",
+      "prompt": "Match each task to the OUTPUT it aims for.",
+      "pairs": [
+        { "left": "Count the people in a room", "right": "A number of people" },
+        { "left": "Greet a user by name", "right": "A greeting message" },
+        { "left": "Measure a table", "right": "A length" }
+      ],
+      "explanation": "Each task has a clear goal — that goal is the output."
+    },
+    {
+      "id": "u02l03e06",
+      "type": "multipleChoice",
+      "prompt": "Task: 'Print the word Welcome.' What comes out?",
+      "options": [
+        "Welcome",
+        "print",
+        "A number",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "The output is the word Welcome shown on screen. Remember: print shows what's inside the quotes."
+    },
+    {
+      "id": "u02l03e07",
+      "type": "trueFalse",
+      "prompt": "If you cannot name the output, you are not ready to solve the task yet.",
+      "answer": true,
+      "explanation": "You can't aim for a goal you haven't named. Always name the output first."
+    },
+    {
+      "id": "u02l03e08",
+      "type": "multipleChoice",
+      "prompt": "Task: 'Tell me if it is raining.' What is the output?",
+      "options": [
+        "An answer: raining or not raining",
+        "The clouds",
+        "An umbrella",
+        "The time of day"
+      ],
+      "answer": 0,
+      "explanation": "The output is the answer to the question — whether it is raining."
+    },
+    {
+      "id": "u02l03e09",
+      "type": "multipleChoice",
+      "prompt": "Which question helps you name the output?",
+      "options": [
+        "What should I have when the task is done?",
+        "How long will this take?",
+        "Who asked me to do this?",
+        "What is the task called?"
+      ],
+      "answer": 0,
+      "explanation": "Asking 'what should I end up with?' points straight at the output."
+    },
+    {
+      "id": "u02l03e10",
+      "type": "trueFalse",
+      "prompt": "The output of a 'show a message' task is the message appearing on the screen.",
+      "answer": true,
+      "explanation": "Yes — and you already know the tool that produces screen output: print()."
+    }
+  ]
+}

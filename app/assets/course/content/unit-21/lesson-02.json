@@ -1,0 +1,132 @@
+{
+  "unitId": "u21",
+  "lessonId": "u21l02",
+  "title": "Indentation marks the guarded step",
+  "idea": "The spaces in front of a line (indentation) tell Python which steps belong to the if. This is how Python groups the guarded work.",
+  "exercises": [
+    {
+      "id": "u21l02e01",
+      "type": "multipleChoice",
+      "prompt": "How does Python know which step belongs to the if?",
+      "options": [
+        "It is indented (spaces in front) under the if line",
+        "It is on the same line",
+        "It is in capital letters",
+        "It comes first in the file"
+      ],
+      "answer": 0,
+      "explanation": "The indented line under the if is the guarded step. Indentation is how Python groups it."
+    },
+    {
+      "id": "u21l02e02",
+      "type": "multipleChoice",
+      "prompt": "What does this print?\n\nif True:\n    print(\"A\")\nprint(\"B\")",
+      "options": [
+        "A then B",
+        "A only",
+        "B only",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "print(\"A\") is guarded and runs (condition True). print(\"B\") is NOT indented, so it always runs. Both print."
+    },
+    {
+      "id": "u21l02e03",
+      "type": "multipleChoice",
+      "prompt": "What does this print?\n\nif False:\n    print(\"A\")\nprint(\"B\")",
+      "options": [
+        "B only",
+        "A then B",
+        "A only",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "print(\"A\") is guarded by a False condition, so it is skipped. print(\"B\") is not indented, so it still runs."
+    },
+    {
+      "id": "u21l02e04",
+      "type": "trueFalse",
+      "prompt": "A line that is NOT indented under the if runs no matter what.",
+      "answer": true,
+      "explanation": "Yes - only indented lines are guarded. Unindented lines run regardless of the condition."
+    },
+    {
+      "id": "u21l02e05",
+      "type": "multipleChoice",
+      "prompt": "What does this print?\n\nif True:\n    print(\"one\")\n    print(\"two\")",
+      "options": [
+        "one then two",
+        "one only",
+        "two only",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "Both indented lines are guarded by the same True condition, so both run."
+    },
+    {
+      "id": "u21l02e06",
+      "type": "multipleChoice",
+      "prompt": "What does this print?\n\nif False:\n    print(\"one\")\n    print(\"two\")",
+      "options": [
+        "nothing",
+        "one then two",
+        "one only",
+        "two only"
+      ],
+      "answer": 0,
+      "explanation": "Both lines are indented under a False condition, so both are skipped. Nothing prints."
+    },
+    {
+      "id": "u21l02e07",
+      "type": "multipleChoice",
+      "prompt": "Which print is GUARDED by the if?\n\nif True:\n    print(\"inside\")\nprint(\"outside\")",
+      "options": [
+        "print(\"inside\")",
+        "print(\"outside\")",
+        "both",
+        "neither"
+      ],
+      "answer": 0,
+      "explanation": "Only the indented print(\"inside\") is guarded. The unindented print(\"outside\") always runs."
+    },
+    {
+      "id": "u21l02e08",
+      "type": "orderBlocks",
+      "prompt": "Arrange so a greeting is guarded by the if, and a goodbye always runs after.",
+      "blocks": [
+        "print(\"Bye\")",
+        "if True:",
+        "    print(\"Hi\")"
+      ],
+      "answer": [
+        1,
+        2,
+        0
+      ],
+      "explanation": "if line first, then the indented guarded step, then the unindented line that always runs."
+    },
+    {
+      "id": "u21l02e09",
+      "type": "fillBlank",
+      "prompt": "The indented line below runs only when the condition is ____.\n\nif happy:\n    print(\"smile\")",
+      "answer": "True",
+      "acceptable": [
+        "True"
+      ],
+      "explanation": "The guarded print runs only when happy is True. A False condition skips it."
+    },
+    {
+      "id": "u21l02e10",
+      "type": "multipleChoice",
+      "prompt": "Why does indentation matter so much in Python?",
+      "options": [
+        "It decides which steps are inside the if and which are outside",
+        "It makes code prettier only",
+        "It changes the numbers",
+        "It is ignored"
+      ],
+      "answer": 0,
+      "explanation": "Indentation is not just style in Python - it literally groups the guarded steps. Getting it wrong changes what runs."
+    }
+  ]
+}

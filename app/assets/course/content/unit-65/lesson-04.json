@@ -1,0 +1,154 @@
+{
+  "unitId": "u65",
+  "lessonId": "u65l04",
+  "title": "Solve it: search with a found-flag",
+  "idea": "GUIDED PROBLEM (search). The same 'is it present?' question solved the loop way: a found flag starts False and flips to True when a match is seen. Shows search as a walk-and-decide, matching the filter loop shape.",
+  "problem": "A guest list holds these seat numbers: [3, 8, 14, 21]. You are looking for seat 14. Report whether seat 14 is on the list.",
+  "exercises": [
+    {
+      "id": "u65l04e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: seats are [3, 8, 14, 21]; wanted seat is 14. Report whether 14 is on the list.\n\nOUTPUT?",
+      "options": [
+        "A yes/no (True/False) answer: whether 14 is present",
+        "A list of all the seats",
+        "The number of seats",
+        "The largest seat number"
+      ],
+      "answer": 0,
+      "explanation": "This is a search, so the output is a single True/False about presence \u2014 not a new list."
+    },
+    {
+      "id": "u65l04e02",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example. By hand, scan [3, 8, 14, 21] for 14. Result?",
+      "options": [
+        "Found \u2014 14 is the third seat",
+        "Not found",
+        "Found only if it is first",
+        "Can't tell"
+      ],
+      "answer": 0,
+      "explanation": "You reach 14 partway through, so the answer is Found (True). That is your check value."
+    },
+    {
+      "id": "u65l04e03",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Plan (the loop way). You start a 'found' flag. What should its value be BEFORE the loop, when you've checked nothing yet?",
+      "options": [
+        "False \u2014 assume not found until you see it",
+        "True \u2014 assume found until you don't see it",
+        "14 \u2014 the wanted value",
+        "The list length"
+      ],
+      "answer": 0,
+      "explanation": "Before checking anything, you have no evidence of a match, so found starts False. The loop can only flip it to True."
+    },
+    {
+      "id": "u65l04e04",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Put the found-flag search plan in order.",
+      "blocks": [
+        "For each seat, if it equals the wanted seat, set found to True",
+        "Start found as False",
+        "Show found"
+      ],
+      "answer": [
+        1,
+        0,
+        2
+      ],
+      "explanation": "Start False, walk the seats and flip found to True on a match, then show it. This is the walk-and-decide version of a search."
+    },
+    {
+      "id": "u65l04e05",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Inside the loop, which test decides a match?",
+      "options": [
+        "if seat == wanted",
+        "if seat != wanted",
+        "if seat > wanted",
+        "if seat <= wanted"
+      ],
+      "answer": 0,
+      "explanation": "A match means the seat equals the wanted value, so the test is ==. (Remember: == compares, = assigns.)"
+    },
+    {
+      "id": "u65l04e06",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code it. Arrange the lines (inputs, flag, loop + test + flip, show).",
+      "blocks": [
+        "seats = [3, 8, 14, 21]",
+        "wanted = 14",
+        "found = False",
+        "for seat in seats:",
+        "    if seat == wanted:",
+        "        found = True",
+        "print(found)"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "explanation": "Store the seats and wanted, start found False, flip it True when a seat matches, then print. The flag remembers the result across the whole walk."
+    },
+    {
+      "id": "u65l04e07",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Complete the match test:\n\nfor seat in seats:\n    if seat ____ wanted:\n        found = True",
+      "answer": "==",
+      "acceptable": [
+        "=="
+      ],
+      "explanation": "Use == to compare the seat with the wanted value. A single = would try to assign, which is a different thing."
+    },
+    {
+      "id": "u65l04e08",
+      "type": "trueFalse",
+      "uepcc": "C",
+      "prompt": "'found = wanted in seats' would give the same True/False answer as the loop-and-flag version.",
+      "answer": true,
+      "explanation": "Both report presence. 'in' is the short way; the found-flag loop is the long way that shows what 'in' does under the hood."
+    },
+    {
+      "id": "u65l04e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check. The code prints True; your hand example said Found (True). Verdict?",
+      "options": [
+        "Passes",
+        "Fails",
+        "Unknown",
+        "Rewrite the example"
+      ],
+      "answer": 0,
+      "explanation": "The printed True matches your by-hand Found, so the search is correct."
+    },
+    {
+      "id": "u65l04e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Same code, new inputs: seats = [3, 8, 21], wanted = 14. What prints?",
+      "options": [
+        "False",
+        "True",
+        "14",
+        "An error"
+      ],
+      "answer": 0,
+      "explanation": "No seat equals 14, so found stays at its starting value False. The flag correctly reports 'not present'."
+    }
+  ]
+}

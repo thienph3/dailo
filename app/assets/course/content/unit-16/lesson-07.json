@@ -1,0 +1,135 @@
+{
+  "unitId": "u16",
+  "lessonId": "u16l07",
+  "title": "Convert to build a message",
+  "idea": "To join a number into a text sentence with +, turn it into text with str() first.",
+  "exercises": [
+    {
+      "id": "u16l07e01",
+      "type": "multipleChoice",
+      "prompt": "total = 42\nprint(\"Your total is \" + str(total))\n\nWhat shows?",
+      "options": [
+        "Your total is 42",
+        "Your total is total",
+        "Your total is + 42",
+        "Error"
+      ],
+      "answer": 0,
+      "explanation": "str(total) turns the number 42 into text \"42\", which joins onto the sentence. Result: Your total is 42."
+    },
+    {
+      "id": "u16l07e02",
+      "type": "multipleChoice",
+      "prompt": "Why does this line fail?\n\nprint(\"You scored \" + 95)",
+      "options": [
+        "You can't join text and a bare number — wrap 95 in str()",
+        "95 is too big",
+        "The sentence is too long",
+        "It doesn't fail, it shows 95"
+      ],
+      "answer": 0,
+      "explanation": "+ joins text with text. The number 95 must become str(95) first. Then it reads You scored 95."
+    },
+    {
+      "id": "u16l07e03",
+      "type": "fillBlank",
+      "prompt": "Fix it so it shows 'You scored 95':\n\nprint(\"You scored \" + ____(95))",
+      "answer": "str",
+      "acceptable": [
+        "str"
+      ],
+      "explanation": "str(95) makes the number joinable. The message becomes You scored 95."
+    },
+    {
+      "id": "u16l07e04",
+      "type": "orderBlocks",
+      "prompt": "Arrange a program that stores the number 3 and shows 'You have 3 coins'.",
+      "blocks": [
+        "coins = 3",
+        "message = \"You have \" + str(coins) + \" coins\"",
+        "print(message)"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Store the number, build the sentence with str(coins) between the two text pieces, then print."
+    },
+    {
+      "id": "u16l07e05",
+      "type": "trueFalse",
+      "prompt": "A number can be joined directly into a text sentence with + without any conversion.",
+      "answer": false,
+      "explanation": "No — text joins with text. You must convert the number to text with str() first."
+    },
+    {
+      "id": "u16l07e06",
+      "type": "multipleChoice",
+      "prompt": "age = 10\nnext_age = age + 1\nprint(\"Next year you will be \" + str(next_age))\n\nWhat shows?",
+      "options": [
+        "Next year you will be 11",
+        "Next year you will be 10",
+        "Next year you will be next_age",
+        "Error"
+      ],
+      "answer": 0,
+      "explanation": "age + 1 is 11 (math on numbers first), then str(11) joins into the sentence. Convert only when you join."
+    },
+    {
+      "id": "u16l07e07",
+      "type": "multipleChoice",
+      "prompt": "You computed total = 8 (a number). Which line shows 'Total: 8'?",
+      "options": [
+        "print(\"Total: \" + str(total))",
+        "print(\"Total: \" + total)",
+        "print(\"Total: \" + int(total))",
+        "print(\"Total: total\")"
+      ],
+      "answer": 0,
+      "explanation": "str(total) makes 8 into text to join. int(total) would keep it a number (still won't join), and the quoted version shows the word total."
+    },
+    {
+      "id": "u16l07e08",
+      "type": "matchPairs",
+      "prompt": "Match the goal to the tool you'd reach for.",
+      "pairs": [
+        {
+          "left": "Add two text numbers",
+          "right": "int() on each, then +"
+        },
+        {
+          "left": "Put a number into a sentence",
+          "right": "str() on the number, then +"
+        }
+      ],
+      "explanation": "Adding needs numbers (int); joining into text needs text (str). Pick by the job."
+    },
+    {
+      "id": "u16l07e09",
+      "type": "multipleChoice",
+      "prompt": "price = 5\nqty = 3\ncost = price * qty\nprint(\"Cost: \" + str(cost))\n\nWhat shows?",
+      "options": [
+        "Cost: 15",
+        "Cost: 53",
+        "Cost: cost",
+        "Error"
+      ],
+      "answer": 0,
+      "explanation": "price * qty is 15 (numbers multiply), then str(15) joins into the message: Cost: 15. Do the math, then convert to show it."
+    },
+    {
+      "id": "u16l07e10",
+      "type": "multipleChoice",
+      "prompt": "What will this show?\n\nprint(\"Round \" + str(1) + \" of \" + str(3))",
+      "options": [
+        "Round 1 of 3",
+        "Round 1of3",
+        "Round + 1 + of + 3",
+        "Error"
+      ],
+      "answer": 0,
+      "explanation": "Each number becomes text with str(), joined with the spaces you wrote: Round 1 of 3."
+    }
+  ]
+}

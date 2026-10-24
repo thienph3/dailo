@@ -1,0 +1,137 @@
+{
+  "unitId": "u80",
+  "lessonId": "u80l04",
+  "title": "The one-item case",
+  "idea": "MEET (thinking). A list with exactly one item is an edge case: loops still work, but 'compare to the next one' ideas can go wrong.",
+  "exercises": [
+    {
+      "id": "u80l04e01",
+      "type": "multipleChoice",
+      "prompt": "You total a list with a loop. With ONE item, the total is...",
+      "options": [
+        "Just that one item — the loop runs once",
+        "An error",
+        "Always 0",
+        "Twice the item"
+      ],
+      "answer": 0,
+      "explanation": "One item means the loop runs once, adding that item. Summing a single-item list is safe and correct."
+    },
+    {
+      "id": "u80l04e02",
+      "type": "multipleChoice",
+      "prompt": "You find the highest value starting 'best = scores[0]'. With ONE score, the answer is...",
+      "options": [
+        "That one score — it is trivially the highest",
+        "An error",
+        "0",
+        "undefined"
+      ],
+      "answer": 0,
+      "explanation": "With one score, best starts as that score and nothing beats it. The single item IS the highest — correct."
+    },
+    {
+      "id": "u80l04e03",
+      "type": "trueFalse",
+      "prompt": "A single-item list is still safe for 'start best at the first item' — there's a first item to read.",
+      "answer": true,
+      "explanation": "Yes. One item means there is a scores[0], so starting best there works. The empty case is the one that breaks it."
+    },
+    {
+      "id": "u80l04e04",
+      "type": "multipleChoice",
+      "prompt": "Averaging a list with ONE item (say [8]) gives...",
+      "options": [
+        "8.0 — total 8 divided by count 1",
+        "An error",
+        "0",
+        "16"
+      ],
+      "answer": 0,
+      "explanation": "Total 8, count 1, average 8.0. One item is safe for averaging because count is 1, not 0."
+    },
+    {
+      "id": "u80l04e05",
+      "type": "multipleChoice",
+      "prompt": "When might a single-item list actually cause trouble?",
+      "options": [
+        "If your plan compares each item to the NEXT one — there's no next item",
+        "Never — one item is always safe",
+        "If the item is even",
+        "If the item is positive"
+      ],
+      "answer": 0,
+      "explanation": "Plans that look at pairs ('compare each to the next') have no pair when there's only one item. That's the risky single-item case."
+    },
+    {
+      "id": "u80l04e06",
+      "type": "multiSelect",
+      "prompt": "Which plans are SAFE on a one-item list? (Select all that apply.)",
+      "options": [
+        "Total the items",
+        "Average the items",
+        "Find the highest item",
+        "Compare each item to the one after it"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Total, average, and max all work with one item. Only 'compare each to the next' struggles — there's no next item."
+    },
+    {
+      "id": "u80l04e07",
+      "type": "matchPairs",
+      "prompt": "Match each list size to the max-finding result for [7] versus bigger lists.",
+      "pairs": [
+        {
+          "left": "Empty list",
+          "right": "Breaks — no first item"
+        },
+        {
+          "left": "One item [7]",
+          "right": "Highest is 7"
+        },
+        {
+          "left": "Several items",
+          "right": "Highest is whichever is biggest"
+        }
+      ],
+      "explanation": "Empty breaks max-finding; one item is trivially the max; several items need the real comparison."
+    },
+    {
+      "id": "u80l04e08",
+      "type": "trueFalse",
+      "prompt": "Checking the one-item case is a good way to make sure your loop logic isn't secretly assuming 'many items.'",
+      "answer": true,
+      "explanation": "Yes. If a plan only works with several items, the single-item test exposes the hidden assumption."
+    },
+    {
+      "id": "u80l04e09",
+      "type": "multipleChoice",
+      "prompt": "REVIEW: the three list sizes worth checking as edge cases are...",
+      "options": [
+        "empty, one item, and many items",
+        "only many items",
+        "only even-length lists",
+        "only sorted lists"
+      ],
+      "answer": 0,
+      "explanation": "Empty, one, and many are the three sizes to think through. Each can behave differently in a plan."
+    },
+    {
+      "id": "u80l04e10",
+      "type": "multipleChoice",
+      "prompt": "The lesson in one line:",
+      "options": [
+        "Check the one-item case — it's safe for totals and max, but breaks 'compare to the next'",
+        "One item always crashes",
+        "One item is the same as empty",
+        "Single items never matter"
+      ],
+      "answer": 0,
+      "explanation": "A single-item list is usually fine, but it exposes plans that assume a 'next' item. Always think it through."
+    }
+  ]
+}

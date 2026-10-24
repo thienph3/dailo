@@ -1,0 +1,142 @@
+{
+  "unitId": "u55",
+  "lessonId": "u55l06",
+  "title": "Trace it: what prints, in what order",
+  "idea": "Predict the exact output of for-each loops, pass by pass. Thinking-heavy.",
+  "exercises": [
+    {
+      "id": "u55l06e01",
+      "type": "multipleChoice",
+      "prompt": "nums = [1, 2, 3]\nfor n in nums:\n    print(n)\nprint(\"end\")\n\nWhat is the LAST line printed?",
+      "options": [
+        "end",
+        "3",
+        "1",
+        "nums"
+      ],
+      "answer": 0,
+      "explanation": "The loop prints 1, 2, 3, and 'end' is outside the loop (not indented), so it runs once at the very end."
+    },
+    {
+      "id": "u55l06e02",
+      "type": "multipleChoice",
+      "prompt": "nums = [1, 2, 3]\nfor n in nums:\n    print(n)\n    print(n)\n\nHow many lines total?",
+      "options": [
+        "Six — two prints x three items",
+        "Three",
+        "Two",
+        "Nine"
+      ],
+      "answer": 0,
+      "explanation": "Body runs once per item and has two prints, so 3 x 2 = 6 lines: 1,1,2,2,3,3."
+    },
+    {
+      "id": "u55l06e03",
+      "type": "orderBlocks",
+      "prompt": "vals = [5, 6]\nfor v in vals:\n    print(v)\n    print(v + 1)\n\nPut the printed output in order.",
+      "blocks": [
+        "5",
+        "6",
+        "6",
+        "7"
+      ],
+      "answer": [
+        0,
+        2,
+        1,
+        3
+      ],
+      "explanation": "Pass 1 (v=5): prints 5 then 6. Pass 2 (v=6): prints 6 then 7. So the order is 5, 6, 6, 7."
+    },
+    {
+      "id": "u55l06e04",
+      "type": "multipleChoice",
+      "prompt": "items = []\nfor x in items:\n    print(x)\nprint(\"done\")\n\nWhat is printed?",
+      "options": [
+        "Only 'done'",
+        "Nothing",
+        "'done' three times",
+        "An error"
+      ],
+      "answer": 0,
+      "explanation": "The list is empty so the loop body never runs. The 'done' line is outside the loop and prints once."
+    },
+    {
+      "id": "u55l06e05",
+      "type": "multipleChoice",
+      "prompt": "nums = [10, 20, 30]\nfor n in nums:\n    print(n // 10)\n\nWhat prints?",
+      "options": [
+        "1, 2, 3",
+        "10, 20, 30",
+        "100, 200, 300",
+        "60"
+      ],
+      "answer": 0,
+      "explanation": "// is whole-number division. 10//10=1, 20//10=2, 30//10=3."
+    },
+    {
+      "id": "u55l06e06",
+      "type": "trueFalse",
+      "prompt": "In 'for n in nums:', the loop visits the items in the order they appear in the list.",
+      "answer": true,
+      "explanation": "Lists keep order, so the walk is front to back — the same order you wrote the values."
+    },
+    {
+      "id": "u55l06e07",
+      "type": "multipleChoice",
+      "prompt": "data = [2, 0, 5]\nfor d in data:\n    if d == 0:\n        print(\"zero\")\n    else:\n        print(d)\n\nWhat prints, in order?",
+      "options": [
+        "2, zero, 5",
+        "zero, zero, zero",
+        "2, 0, 5",
+        "0 only"
+      ],
+      "answer": 0,
+      "explanation": "Each pass prints one line: 2 isn't zero -> 2; 0 is zero -> 'zero'; 5 -> 5."
+    },
+    {
+      "id": "u55l06e08",
+      "type": "multipleChoice",
+      "prompt": "nums = [4, 9, 2]\nfor n in nums:\n    if n > 3:\n        print(n)\n\nHow many lines print?",
+      "options": [
+        "Two — 4 and 9",
+        "Three",
+        "One",
+        "Zero"
+      ],
+      "answer": 0,
+      "explanation": "Only values over 3 print: 4 and 9. The 2 is skipped."
+    },
+    {
+      "id": "u55l06e09",
+      "type": "orderBlocks",
+      "prompt": "letters = [\"a\", \"b\"]\nfor x in letters:\n    print(\"start\")\n    print(x)\n\nPut the output in order.",
+      "blocks": [
+        "start",
+        "a",
+        "start",
+        "b"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "Pass 1: 'start' then 'a'. Pass 2: 'start' then 'b'. The body repeats top-to-bottom each pass."
+    },
+    {
+      "id": "u55l06e10",
+      "type": "multipleChoice",
+      "prompt": "A loop over [1, 2, 3, 4] with just print(n) — how many lines?",
+      "options": [
+        "Four, one per item",
+        "One",
+        "Three",
+        "Depends on the values"
+      ],
+      "answer": 0,
+      "explanation": "One action per item, four items: four lines. Counting passes is the key skill when tracing a loop."
+    }
+  ]
+}

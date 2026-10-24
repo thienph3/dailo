@@ -1,0 +1,133 @@
+{
+  "unitId": "u35",
+  "lessonId": "u35l02",
+  "title": "How many times?",
+  "idea": "Repetition problems have a count: how many times the action runs. Reading that count out of a problem is the skill here.",
+  "exercises": [
+    {
+      "id": "u35l02e01",
+      "type": "multipleChoice",
+      "prompt": "'Ring the bell 7 times.' How many times does the action run?",
+      "options": [
+        "7",
+        "1",
+        "0",
+        "Many, we can't tell"
+      ],
+      "answer": 0,
+      "explanation": "The problem states the count plainly: 7 times. A clear count makes the repetition easy to plan."
+    },
+    {
+      "id": "u35l02e02",
+      "type": "multipleChoice",
+      "prompt": "'Say hi to every student in a class of 20.' How many times does 'say hi' run?",
+      "options": [
+        "20",
+        "1",
+        "2",
+        "Forever"
+      ],
+      "answer": 0,
+      "explanation": "One 'hi' per student, 20 students, so the action runs 20 times. 'For each' often hides a count."
+    },
+    {
+      "id": "u35l02e03",
+      "type": "trueFalse",
+      "prompt": "'Do it for each item in a group of 5' means the action repeats 5 times.",
+      "answer": true,
+      "explanation": "'For each of 5' is the same as '5 times'. Learning to translate 'for each' into a count is useful."
+    },
+    {
+      "id": "u35l02e04",
+      "type": "multipleChoice",
+      "prompt": "Which problem does NOT have a clear repeat count yet?",
+      "options": [
+        "Keep bouncing the ball until it stops",
+        "Bounce the ball 4 times",
+        "Clap 10 times",
+        "Wave to each of 3 people"
+      ],
+      "answer": 0,
+      "explanation": "'Until it stops' has no fixed number — you can't say how many in advance. The others each give a clear count."
+    },
+    {
+      "id": "u35l02e05",
+      "type": "multipleChoice",
+      "prompt": "'Print the numbers 1 to 5.' How many numbers get printed?",
+      "options": [
+        "5",
+        "1",
+        "4",
+        "6"
+      ],
+      "answer": 0,
+      "explanation": "1, 2, 3, 4, 5 — that is five numbers, so the print action runs 5 times."
+    },
+    {
+      "id": "u35l02e06",
+      "type": "matchPairs",
+      "prompt": "Match each problem to its repeat count.",
+      "pairs": [
+        {
+          "left": "Stamp each of 8 letters",
+          "right": "8"
+        },
+        {
+          "left": "Do 3 push-ups",
+          "right": "3"
+        },
+        {
+          "left": "Greet all 12 guests",
+          "right": "12"
+        }
+      ],
+      "explanation": "Each problem names its count, sometimes as a number and sometimes as 'each of N'."
+    },
+    {
+      "id": "u35l02e07",
+      "type": "trueFalse",
+      "prompt": "Knowing the count up front helps you plan a repetition.",
+      "answer": true,
+      "explanation": "If you know it runs 5 times, you plan the single step and trust it to run 5 times. The count frames the plan."
+    },
+    {
+      "id": "u35l02e08",
+      "type": "multipleChoice",
+      "prompt": "A recipe says 'crack 6 eggs, one at a time.' What is the repeated action and its count?",
+      "options": [
+        "Crack an egg, 6 times",
+        "Count eggs, once",
+        "Crack an egg, 1 time",
+        "Stir, 6 times"
+      ],
+      "answer": 0,
+      "explanation": "The repeated action is cracking one egg; it happens 6 times. 'One at a time' is a hint that a step repeats."
+    },
+    {
+      "id": "u35l02e09",
+      "type": "multipleChoice",
+      "prompt": "'Show the word Hi three times.' If you wrote it by hand, how many lines would you write?",
+      "options": [
+        "3 lines",
+        "1 line",
+        "2 lines",
+        "0 lines"
+      ],
+      "answer": 0,
+      "explanation": "Hi, Hi, Hi — three lines. Soon a loop will write those three for you instead of copying by hand."
+    },
+    {
+      "id": "u35l02e10",
+      "type": "multipleChoice",
+      "prompt": "Which phrase is the strongest clue that a problem repeats a known number of times?",
+      "options": [
+        "'... N times' or 'for each of N'",
+        "'... maybe'",
+        "'... if it is sunny'",
+        "'... the biggest one'"
+      ],
+      "answer": 0,
+      "explanation": "'N times' and 'for each of N' both name a fixed count. Those phrases shout 'repetition with a known count'."
+    }
+  ]
+}

@@ -1,0 +1,130 @@
+{
+  "unitId": "u01",
+  "lessonId": "u01l05",
+  "title": "A common mistake: forgetting the quotes",
+  "idea": "Text needs quotes. Without them, the computer thinks you mean something else and gets confused.",
+  "exercises": [
+    {
+      "id": "u01l05e01",
+      "type": "multipleChoice",
+      "prompt": "What is missing here?\n\nprint(Hello)",
+      "options": [
+        "The quotes around Hello",
+        "A second print",
+        "A number",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "Text must be in quotes. print(Hello) is missing them — the computer won't know Hello is text."
+    },
+    {
+      "id": "u01l05e02",
+      "type": "trueFalse",
+      "prompt": "To show a word, you can leave off the quotes.",
+      "answer": false,
+      "explanation": "Words are text, and text needs quotes. Without them you'll get an error."
+    },
+    {
+      "id": "u01l05e03",
+      "type": "multipleChoice",
+      "prompt": "Which one correctly shows the word Sun?",
+      "options": [
+        "print(\"Sun\")",
+        "print(Sun)",
+        "print Sun",
+        "print(Sun\")"
+      ],
+      "answer": 0,
+      "explanation": "Only the first wraps the text in matching quotes inside the brackets."
+    },
+    {
+      "id": "u01l05e04",
+      "type": "fillBlank",
+      "prompt": "Fix this instruction so it correctly shows the word Moon:\n\nprint(____)",
+      "answer": "\"Moon\"",
+      "acceptable": [
+        "\"Moon\"",
+        "'Moon'"
+      ],
+      "explanation": "Add quotes around the text: print(\"Moon\")."
+    },
+    {
+      "id": "u01l05e05",
+      "type": "multipleChoice",
+      "prompt": "Why does print(apple) cause a problem, but print(\"apple\") works?",
+      "options": [
+        "Without quotes, the computer doesn't know apple is text",
+        "apple is too long",
+        "print only works with quotes on Tuesdays",
+        "apple is a forbidden word"
+      ],
+      "answer": 0,
+      "explanation": "Quotes are how you say 'this is text'. Without them, the computer looks for something called apple and fails."
+    },
+    {
+      "id": "u01l05e06",
+      "type": "tapTokens",
+      "prompt": "Build a CORRECT instruction to show: river",
+      "tokens": [
+        "print",
+        "(",
+        "\"river\"",
+        ")"
+      ],
+      "answer": [
+        "print",
+        "(",
+        "\"river\"",
+        ")"
+      ],
+      "explanation": "Text in matching quotes, inside the brackets."
+    },
+    {
+      "id": "u01l05e07",
+      "type": "multiSelect",
+      "prompt": "Which of these are missing their quotes? (pick all)",
+      "options": [
+        "print(Dog)",
+        "print(\"Dog\")",
+        "print(Cat)",
+        "print('Cat')"
+      ],
+      "answer": [
+        0,
+        2
+      ],
+      "explanation": "print(Dog) and print(Cat) have no quotes around the text — both would fail."
+    },
+    {
+      "id": "u01l05e08",
+      "type": "trueFalse",
+      "prompt": "To show the word hi, it must be inside quotes.",
+      "answer": true,
+      "explanation": "Words are text, and text goes in quotes: print(\"hi\")."
+    },
+    {
+      "id": "u01l05e09",
+      "type": "multipleChoice",
+      "prompt": "Spot the correct one.",
+      "options": [
+        "print(\"ready\")",
+        "print(ready)",
+        "print ready",
+        "print(ready\")"
+      ],
+      "answer": 0,
+      "explanation": "Matching quotes, inside brackets. The others each break a rule you now know."
+    },
+    {
+      "id": "u01l05e10",
+      "type": "fillBlank",
+      "prompt": "Write a full, correct instruction to show the word: start",
+      "answer": "print(\"start\")",
+      "acceptable": [
+        "print(\"start\")",
+        "print('start')"
+      ],
+      "explanation": "print(\"start\") — brackets and matching quotes, both present."
+    }
+  ]
+}

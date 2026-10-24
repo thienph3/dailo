@@ -1,0 +1,150 @@
+{
+  "unitId": "u91",
+  "lessonId": "u91l05",
+  "title": "Solve it: spend on the expensive items only",
+  "idea": "GUIDED PROBLEM. A conditional total (filter + running sum), choosing where the condition goes.",
+  "problem": "Prices [120, 40, 200, 90]. Show the total spent on items costing MORE THAN 100.",
+  "exercises": [
+    {
+      "id": "u91l05e01",
+      "uepcc": "U",
+      "type": "multipleChoice",
+      "prompt": "PROBLEM: prices [120, 40, 200, 90]. Total only the items OVER 100.\n\nWhat is the OUTPUT?",
+      "options": [
+        "The sum of just the prices above 100",
+        "The sum of all prices",
+        "The count of prices",
+        "The biggest price"
+      ],
+      "answer": 0,
+      "explanation": "Output = a conditional total - add only the qualifying prices, not all of them."
+    },
+    {
+      "id": "u91l05e02",
+      "uepcc": "U",
+      "type": "multipleChoice",
+      "prompt": "Which prices QUALIFY (over 100)?",
+      "options": [
+        "120 and 200",
+        "40 and 90",
+        "All of them",
+        "None"
+      ],
+      "answer": 0,
+      "explanation": "Only 120 and 200 are above 100. Knowing which qualify frames the example."
+    },
+    {
+      "id": "u91l05e03",
+      "uepcc": "E",
+      "type": "multipleChoice",
+      "prompt": "By hand: add just the qualifying prices. 120 + 200 = ?",
+      "options": [
+        "320",
+        "450",
+        "200",
+        "160"
+      ],
+      "answer": 0,
+      "explanation": "120 + 200 = 320. The 40 and 90 are skipped. Hand answer: 320."
+    },
+    {
+      "id": "u91l05e04",
+      "uepcc": "E",
+      "type": "trueFalse",
+      "prompt": "Working the example by hand told you to IGNORE 40 and 90 - useful before coding.",
+      "answer": true,
+      "explanation": "Yes. The hand example makes the 'only over 100' rule concrete, so the code's condition is clear."
+    },
+    {
+      "id": "u91l05e05",
+      "uepcc": "P",
+      "type": "orderBlocks",
+      "prompt": "Plan the steps.",
+      "blocks": [
+        "Start a running total at 0",
+        "Walk the prices; if a price is over 100, add it",
+        "Show the total"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "A running sum guarded by a condition: add only when the price qualifies. Filter-and-sum."
+    },
+    {
+      "id": "u91l05e06",
+      "uepcc": "P",
+      "type": "multipleChoice",
+      "prompt": "Where does the 'if price > 100' belong?",
+      "options": [
+        "Inside the loop, wrapping the add step",
+        "Before the loop",
+        "After the loop",
+        "It isn't needed"
+      ],
+      "answer": 0,
+      "explanation": "The condition guards the add each turn, so it lives inside the loop around 'total = total + price'."
+    },
+    {
+      "id": "u91l05e07",
+      "uepcc": "C",
+      "type": "orderBlocks",
+      "prompt": "Code the plan.",
+      "blocks": [
+        "total = 0",
+        "for price in [120, 40, 200, 90]:",
+        "    if price > 100:",
+        "        total = total + price",
+        "print(total)"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "explanation": "Start the total, walk, add only qualifying prices, print. The if controls which items join the sum."
+    },
+    {
+      "id": "u91l05e08",
+      "uepcc": "C",
+      "type": "fillBlank",
+      "prompt": "Complete the qualify test:\n\nfor price in [120, 40]:\n    if price ____ 100:\n        total = total + price",
+      "answer": ">",
+      "acceptable": [
+        ">"
+      ],
+      "explanation": "'More than 100' is a strict greater-than: price > 100. 100 itself would NOT qualify."
+    },
+    {
+      "id": "u91l05e09",
+      "uepcc": "Check",
+      "type": "multipleChoice",
+      "prompt": "Check: code prints 320. Hand answer was 320. Verdict?",
+      "options": [
+        "Passes",
+        "Fails",
+        "Unknown",
+        "Rewrite example"
+      ],
+      "answer": 0,
+      "explanation": "The conditional total matches the hand example - only 120 and 200 were added."
+    },
+    {
+      "id": "u91l05e10",
+      "uepcc": "Check",
+      "type": "multipleChoice",
+      "prompt": "New data [50, 60] (none over 100). What prints?",
+      "options": [
+        "0 - no price qualifies, so nothing is added",
+        "110",
+        "50",
+        "60"
+      ],
+      "answer": 0,
+      "explanation": "Neither price is over 100, so the add never runs and total stays 0. The guard correctly skips all."
+    }
+  ]
+}

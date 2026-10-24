@@ -1,0 +1,96 @@
+{
+  "unitId": "u10",
+  "lessonId": "u10l07",
+  "title": "Building an answer step by step",
+  "idea": "One line can do only one small step. Use reassignment across several lines to combine three or more numbers safely.",
+  "exercises": [
+    {
+      "id": "u10l07e01",
+      "type": "multipleChoice",
+      "prompt": "What will total be at the end?\n\ntotal = 2 + 3\ntotal = total + 4\nprint(total)",
+      "options": ["9", "5", "4", "234"],
+      "answer": 0,
+      "explanation": "First total is 5. Then total = total + 4 makes it 5 + 4 = 9. We built it up in steps."
+    },
+    {
+      "id": "u10l07e02",
+      "type": "trueFalse",
+      "prompt": "total = total + 4 takes the old value of total and adds 4 to make the new value.",
+      "answer": true,
+      "explanation": "The right side runs first using the old value, then the result becomes the new value. That's reassignment."
+    },
+    {
+      "id": "u10l07e03",
+      "type": "multipleChoice",
+      "prompt": "What will the screen show?\n\nscore = 10\nscore = score + 5\nscore = score + 5\nprint(score)",
+      "options": ["20", "10", "15", "25"],
+      "answer": 0,
+      "explanation": "10, then 15, then 20. Each line adds 5 to the value already there."
+    },
+    {
+      "id": "u10l07e04",
+      "type": "orderBlocks",
+      "prompt": "You need to add 3 numbers: 5, 6 and 7. Put the steps in order.",
+      "blocks": [
+        "total = 5 + 6",
+        "total = total + 7",
+        "print(total)"
+      ],
+      "answer": [0, 1, 2],
+      "explanation": "Add two first (11), then add the third (18), then show it. Each line does one small step."
+    },
+    {
+      "id": "u10l07e05",
+      "type": "multipleChoice",
+      "prompt": "What will the screen show?\n\namount = 100\namount = amount - 30\namount = amount - 20\nprint(amount)",
+      "options": ["50", "150", "100", "0"],
+      "answer": 0,
+      "explanation": "100, then 70, then 50. Each line takes a bit more away."
+    },
+    {
+      "id": "u10l07e06",
+      "type": "fillBlank",
+      "prompt": "Fill the blank so total ends up holding 12:\n\ntotal = 3 + 3\ntotal = total ____ 6\nprint(total)",
+      "answer": "+",
+      "acceptable": ["+"],
+      "explanation": "total starts at 6, then 6 + 6 is 12."
+    },
+    {
+      "id": "u10l07e07",
+      "type": "tapTokens",
+      "prompt": "The variable total already holds a value. Build the line that adds extra to it and stores the new value back in total.",
+      "tokens": ["total", "=", "total", "+", "extra"],
+      "answer": ["total", "=", "total", "+", "extra"],
+      "explanation": "total = total + extra updates total to include extra."
+    },
+    {
+      "id": "u10l07e08",
+      "type": "multipleChoice",
+      "prompt": "Why build the answer in steps instead of one long line?",
+      "options": [
+        "Each line stays simple and easy to check",
+        "The computer can't do math",
+        "Long lines are forbidden",
+        "It makes the answer bigger"
+      ],
+      "answer": 0,
+      "explanation": "Small steps are easy to read and fix. You can check the value after each line."
+    },
+    {
+      "id": "u10l07e09",
+      "type": "multipleChoice",
+      "prompt": "What will the screen show?\n\ntotal = 4\ntotal = total * 2\ntotal = total + 1\nprint(total)",
+      "options": ["9", "8", "10", "7"],
+      "answer": 0,
+      "explanation": "4, then 4 * 2 = 8, then 8 + 1 = 9. One step per line."
+    },
+    {
+      "id": "u10l07e10",
+      "type": "fillBlank",
+      "prompt": "Write the line that doubles the value already in count and stores it back in count.",
+      "answer": "count = count * 2",
+      "acceptable": ["count = count * 2", "count=count*2"],
+      "explanation": "count = count * 2 multiplies the old value by 2 and saves it back."
+    }
+  ]
+}

@@ -1,0 +1,149 @@
+{
+  "unitId": "u25",
+  "lessonId": "u25l07",
+  "title": "Solve it: a tiered shipping fee",
+  "idea": "Classify by weight into fee tiers using elif. Map every stated number to a name (value-mapping). Problem-solving with elif.",
+  "exercises": [
+    {
+      "id": "u25l07e01",
+      "type": "multipleChoice",
+      "prompt": "PROBLEM: Shipping is 10 for weight under 5, 20 for 5 to under 20, and 30 for 20+. What is the OUTPUT?",
+      "options": [
+        "One fee: 10, 20, or 30",
+        "The weight",
+        "The word 'shipping'",
+        "A yes/no"
+      ],
+      "answer": 0,
+      "explanation": "The output is a single fee chosen from three tiers - a classic elif chain."
+    },
+    {
+      "id": "u25l07e02",
+      "type": "multipleChoice",
+      "prompt": "What is the INPUT that decides the tier?",
+      "options": [
+        "The weight",
+        "The fee",
+        "The number of tiers",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "The weight is sorted into a tier; the fees are the outputs for each band."
+    },
+    {
+      "id": "u25l07e03",
+      "type": "multipleChoice",
+      "prompt": "Example by hand: weight 8. Which fee?",
+      "options": [
+        "20",
+        "10",
+        "30",
+        "8"
+      ],
+      "answer": 0,
+      "explanation": "8 is in the 5-to-under-20 band, so the fee is 20. Hand-work gives the check value."
+    },
+    {
+      "id": "u25l07e04",
+      "type": "orderBlocks",
+      "prompt": "Plan the tiers. Order from the lightest band to the heaviest.",
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "blocks": [
+        "If weight is under 5, fee is 10",
+        "Else if weight is under 20, fee is 20",
+        "Otherwise fee is 30"
+      ],
+      "explanation": "Here the natural order is lightest-first using <, because each later band assumes the lighter ones failed."
+    },
+    {
+      "id": "u25l07e05",
+      "type": "multipleChoice",
+      "prompt": "Which comparison matches 'weight under 5'?",
+      "options": [
+        "weight < 5",
+        "weight <= 5",
+        "weight > 5",
+        "weight == 5"
+      ],
+      "answer": 0,
+      "explanation": "'Under 5' means strictly less than 5, so < 5."
+    },
+    {
+      "id": "u25l07e06",
+      "type": "orderBlocks",
+      "prompt": "Code it. Name the weight and show each fee.",
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "blocks": [
+        "weight = 8",
+        "if weight < 5:",
+        "    print(10)",
+        "elif weight < 20:",
+        "    print(20)",
+        "else:",
+        "    print(30)"
+      ],
+      "explanation": "Store the weight, then a <-based chain: under 5 then under 20 then the 20+ catch-all."
+    },
+    {
+      "id": "u25l07e07",
+      "type": "fillBlank",
+      "prompt": "Complete the second tier test ('under 20'):\n\nif weight < 5:\n    print(10)\nelif weight ____ 20:\n    print(20)\nelse:\n    print(30)",
+      "answer": "<",
+      "acceptable": [
+        "<"
+      ],
+      "explanation": "< 20 catches weights below 20. Because 'under 5' was checked first, this branch only sees weights from 5 up."
+    },
+    {
+      "id": "u25l07e08",
+      "type": "multipleChoice",
+      "prompt": "Check. With weight = 8 the code prints 20. Hand answer: 20. Verdict?",
+      "options": [
+        "Pass - matches",
+        "Fail",
+        "Cannot tell",
+        "Change the example"
+      ],
+      "answer": 0,
+      "explanation": "The printed fee matches the hand-worked value, so the tiering is correct for 8."
+    },
+    {
+      "id": "u25l07e09",
+      "type": "multipleChoice",
+      "prompt": "Re-check with weight = 25. What prints?",
+      "options": [
+        "30",
+        "20",
+        "10",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "25 fails < 5 and < 20, so the else runs: 30. The heaviest tier catches the rest."
+    },
+    {
+      "id": "u25l07e10",
+      "type": "multipleChoice",
+      "prompt": "Why does lightest-first with < work here, while bands earlier used strictest-first with >=?",
+      "options": [
+        "Both are fine - you order so each branch only sees what the earlier ones did not",
+        "< is always wrong",
+        ">= is always required",
+        "order never matters"
+      ],
+      "answer": 0,
+      "explanation": "Either direction works as long as the ordering lets each branch bound its band. Pick the one that reads clearly."
+    }
+  ]
+}

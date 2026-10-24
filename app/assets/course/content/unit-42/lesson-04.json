@@ -1,0 +1,136 @@
+{
+  "unitId": "u42",
+  "lessonId": "u42l04",
+  "title": "Counting only the matches",
+  "idea": "Combine an if with a counter inside a loop to count how many passes match.",
+  "exercises": [
+    {
+      "id": "u42l04e01",
+      "type": "multipleChoice",
+      "prompt": "What shows?\n\ncount = 0\nfor i in range(1, 11):\n    if i > 6:\n        count += 1\nprint(count)",
+      "options": [
+        "4",
+        "6",
+        "10",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "7, 8, 9, 10 are over 6, so the counter is raised four times and prints 4."
+    },
+    {
+      "id": "u42l04e02",
+      "type": "multipleChoice",
+      "prompt": "The counter += 1 is indented under the if. When does it run?",
+      "options": [
+        "Only when i > 6 is true",
+        "Every pass",
+        "Never",
+        "Once after the loop"
+      ],
+      "answer": 0,
+      "explanation": "Only on matching passes — when i > 6 is true. Non-matching passes leave the counter alone."
+    },
+    {
+      "id": "u42l04e03",
+      "type": "trueFalse",
+      "prompt": "This is the counter tool from before, now guarded by an if so it counts only matches.",
+      "answer": true,
+      "explanation": "True. The counter is the same; the if decides which passes get counted."
+    },
+    {
+      "id": "u42l04e04",
+      "type": "multipleChoice",
+      "prompt": "How many numbers from 1 to 12 are divisible by 3?\n\ncount = 0\nfor i in range(1, 13):\n    if i % 3 == 0:\n        count += 1\nprint(count)",
+      "options": [
+        "4",
+        "3",
+        "12",
+        "6"
+      ],
+      "answer": 0,
+      "explanation": "3, 6, 9, 12 are divisible by 3 — four of them."
+    },
+    {
+      "id": "u42l04e05",
+      "type": "fillBlank",
+      "prompt": "Fill the comparison to count numbers 1..10 that are at least 8:\n\ncount = 0\nfor i in range(1, 11):\n    if i ____ 8:\n        count += 1\nprint(count)",
+      "answer": ">=",
+      "acceptable": [
+        ">="
+      ],
+      "explanation": "At least 8 is >=. That matches 8, 9, 10 — three numbers."
+    },
+    {
+      "id": "u42l04e06",
+      "type": "multipleChoice",
+      "prompt": "How many numbers from 1 to 10 are at least 8?",
+      "options": [
+        "3",
+        "2",
+        "8",
+        "10"
+      ],
+      "answer": 0,
+      "explanation": "8, 9, 10 — three of them."
+    },
+    {
+      "id": "u42l04e07",
+      "type": "orderBlocks",
+      "prompt": "Arrange a loop that counts numbers 1..10 that are even.",
+      "blocks": [
+        "        count += 1",
+        "count = 0",
+        "    if i % 2 == 0:",
+        "print(count)",
+        "for i in range(1, 11):"
+      ],
+      "answer": [
+        1,
+        4,
+        2,
+        0,
+        3
+      ],
+      "explanation": "Start count at 0, for header, if even, then the counter bump, then print after the loop."
+    },
+    {
+      "id": "u42l04e08",
+      "type": "multipleChoice",
+      "prompt": "For that even-counting loop over 1..10, what prints?",
+      "options": [
+        "5",
+        "4",
+        "10",
+        "2"
+      ],
+      "answer": 0,
+      "explanation": "2, 4, 6, 8, 10 are even — five matches."
+    },
+    {
+      "id": "u42l04e09",
+      "type": "multipleChoice",
+      "prompt": "Where must count = 0 go so the count is right?",
+      "options": [
+        "Before the loop",
+        "Inside the if",
+        "Inside the loop",
+        "After the loop"
+      ],
+      "answer": 0,
+      "explanation": "Before the loop. Inside the loop or the if, it would reset and never build up."
+    },
+    {
+      "id": "u42l04e10",
+      "type": "multipleChoice",
+      "prompt": "Together, the if and counter answer which question?",
+      "options": [
+        "How many match the rule",
+        "What is the total value",
+        "Which is biggest",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "'How many passes match the rule?' — the if picks matches, the counter tallies them."
+    }
+  ]
+}

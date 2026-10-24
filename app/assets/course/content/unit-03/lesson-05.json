@@ -1,0 +1,113 @@
+{
+  "unitId": "u03",
+  "lessonId": "u03l05",
+  "title": "Solve it: a two-team scoreboard",
+  "idea": "GUIDED PROBLEM. Report four facts (two labels and two scores) as four lines. Numbers printed as text, reinforcing print of numbers from Unit 1.",
+  "problem": "Show a scoreboard on four lines: Lions, 3, Tigers, 5.",
+  "exercises": [
+    {
+      "id": "u03l05e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: Show a scoreboard — Lions, 3, Tigers, 5 — one item per line.\n\nWhat is the OUTPUT?",
+      "options": [
+        "Four lines: Lions, 3, Tigers, 5",
+        "The total of the scores",
+        "The winning team only",
+        "One line with all four"
+      ],
+      "answer": 0,
+      "explanation": "Four facts, four lines. We are reporting them, not adding them."
+    },
+    {
+      "id": "u03l05e02",
+      "type": "trueFalse",
+      "uepcc": "U",
+      "prompt": "This task asks us to add 3 and 5 together.",
+      "answer": false,
+      "explanation": "No — we only report the facts. Adding would be a different problem (and a tool we do not have yet)."
+    },
+    {
+      "id": "u03l05e03",
+      "type": "orderBlocks",
+      "uepcc": "E",
+      "prompt": "Example. Work the output by hand in the listed order (team, score, team, score).",
+      "blocks": ["Lions", "3", "Tigers", "5"],
+      "answer": [0, 1, 2, 3],
+      "explanation": "Lions, 3, Tigers, 5 — each on its own line, in that order. This is the check value."
+    },
+    {
+      "id": "u03l05e04",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Plan: how do we show the number 3 on a line?",
+      "options": [
+        "print(3) — a bare number is fine to print",
+        "We cannot print numbers",
+        "Only words can be printed",
+        "Add it to another number first"
+      ],
+      "answer": 0,
+      "explanation": "From Unit 1: print can show a bare number like print(3). It appears as 3."
+    },
+    {
+      "id": "u03l05e05",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Plan: how many print lines total?",
+      "options": ["Four", "Two", "Three", "Five"],
+      "answer": 0,
+      "explanation": "One per fact: two team names and two scores = four prints."
+    },
+    {
+      "id": "u03l05e06",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code. Arrange the four lines in scoreboard order.",
+      "blocks": ["print(\"Tigers\")", "print(\"Lions\")", "print(5)", "print(3)"],
+      "answer": [1, 3, 0, 2],
+      "explanation": "Lions, 3, Tigers, 5 — words in quotes, numbers bare, in the planned order."
+    },
+    {
+      "id": "u03l05e07",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Complete the line that shows the Lions' score of 3 (a bare number, no quotes):\n\nprint(____)",
+      "answer": "3",
+      "acceptable": ["3"],
+      "explanation": "print(3) shows the number 3. No quotes needed for a bare number."
+    },
+    {
+      "id": "u03l05e08",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check. Output is:\n\nLions\n3\nTigers\n5\n\nMatches the example?",
+      "options": ["Yes — four lines, right order", "No — a line is missing", "No — numbers got added", "Can't tell"],
+      "answer": 0,
+      "explanation": "All four lines appear in the right order. Check passes."
+    },
+    {
+      "id": "u03l05e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "New game: Bears, 7, Wolves, 2. Using the same four-print plan, the second line shows?",
+      "options": ["7", "Bears", "2", "Wolves"],
+      "answer": 0,
+      "explanation": "Same shape, new facts. Line two is the first team's score — here 7. The plan generalizes."
+    },
+    {
+      "id": "u03l05e10",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "Review: what is the difference between print(\"3\") and print(3) on screen?",
+      "options": [
+        "Nothing — both show 3",
+        "print(3) causes an error",
+        "print(\"3\") shows quotes",
+        "They show different numbers"
+      ],
+      "answer": 0,
+      "explanation": "Both display 3. Text 3 in quotes and the bare number 3 look the same when printed."
+    }
+  ]
+}

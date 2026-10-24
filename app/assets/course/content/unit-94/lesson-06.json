@@ -1,0 +1,131 @@
+{
+  "unitId": "u94",
+  "lessonId": "u94l06",
+  "title": "Does the output match?",
+  "idea": "MEET. Given an expected answer and an actual output, decide pass or fail — and read what a mismatch is telling you.",
+  "exercises": [
+    {
+      "id": "u94l06e01",
+      "type": "multipleChoice",
+      "prompt": "Expected 10, the code printed 10. Verdict?",
+      "explanation": "Actual equals expected, so this case passes. Matching the hand answer is what 'pass' means.",
+      "options": [
+        "Pass",
+        "Fail",
+        "Unknown",
+        "Rewrite the expected value"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u94l06e02",
+      "type": "multipleChoice",
+      "prompt": "Expected 8, the code printed -8. What does the sign flip most likely mean?",
+      "explanation": "A negative where you expected positive usually means a subtraction is backwards (b - a instead of a - b).",
+      "options": [
+        "A subtraction is the wrong way round",
+        "The computer is broken",
+        "8 and -8 are the same",
+        "Nothing is wrong"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u94l06e03",
+      "type": "multipleChoice",
+      "prompt": "Expected 6 (3 pens at 2 each), got 5. What does that suggest?",
+      "explanation": "3 + 2 = 5 but 3 * 2 = 6. Getting 5 means the code ADDED instead of multiplying — a wrong-operation bug.",
+      "options": [
+        "It added instead of multiplying",
+        "It's correct",
+        "It divided",
+        "It printed the wrong variable name"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u94l06e04",
+      "type": "multipleChoice",
+      "prompt": "Expected count 3, got 2, and your boundary value was exactly on the cutoff. Likely cause?",
+      "explanation": "Being short by one at the boundary is the classic > vs >= bug: the cutoff value was wrongly excluded.",
+      "options": [
+        "> was used where >= was needed, excluding the boundary",
+        "The list was too short",
+        "It should divide",
+        "Nothing — 2 is fine"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u94l06e05",
+      "type": "trueFalse",
+      "prompt": "When output doesn't match, changing your EXPECTED value to match the output is a good fix.",
+      "explanation": "No — that just hides the bug. The expected value came from careful hand-work; trust it and fix the code.",
+      "answer": false
+    },
+    {
+      "id": "u94l06e06",
+      "type": "orderBlocks",
+      "prompt": "Order what to do when output does NOT match the expected value.",
+      "explanation": "Re-check your hand math, then trace the code to find where it diverges, then fix the specific step. Methodical, not random.",
+      "blocks": [
+        "Re-check the hand-worked expected value",
+        "Trace the code to find where it diverges",
+        "Fix the specific wrong step",
+        "Re-run and compare again"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "id": "u94l06e07",
+      "type": "multipleChoice",
+      "prompt": "Expected 20.0, got 20. Pass or fail?",
+      "explanation": "20.0 and 20 are the same value; division just shows a decimal point. This passes — don't fail it over formatting.",
+      "options": [
+        "Pass — same value, just shown as a decimal",
+        "Fail — they look different",
+        "Unknown",
+        "Rewrite the expected"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u94l06e08",
+      "type": "multipleChoice",
+      "prompt": "A mismatch of exactly 1 in a count is a strong hint of...",
+      "explanation": "Off-by-one errors — usually a boundary (>, >=) or a loop range issue. The size of the gap guides the diagnosis.",
+      "options": [
+        "An off-by-one bug, often at a boundary",
+        "A broken computer",
+        "A print problem",
+        "A spelling error"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u94l06e09",
+      "type": "trueFalse",
+      "prompt": "A mismatch tells you WHERE to look, not just THAT something is wrong.",
+      "explanation": "Yes — the kind of mismatch (sign, off-by-one, way too big) points at the likely bug. Read it like a clue.",
+      "answer": true
+    },
+    {
+      "id": "u94l06e10",
+      "type": "multipleChoice",
+      "prompt": "The skill this lesson builds is...",
+      "explanation": "Comparing actual to expected and reading the mismatch as a diagnostic clue — that's disciplined checking.",
+      "options": [
+        "Judging pass/fail and reading a mismatch as a clue to the bug",
+        "Typing faster",
+        "Writing longer code",
+        "Avoiding examples"
+      ],
+      "answer": 0
+    }
+  ]
+}

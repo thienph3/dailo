@@ -1,0 +1,128 @@
+{
+  "unitId": "u15",
+  "lessonId": "u15l05",
+  "title": "Meet the f-string",
+  "idea": "An f-string lets you drop a variable's value right inside text using {curly braces}.",
+  "exercises": [
+    {
+      "id": "u15l05e01",
+      "type": "multipleChoice",
+      "prompt": "An f-string starts with a little f before the quote. What does it let you do?",
+      "options": [
+        "Put a variable's value inside text using {braces}",
+        "Make text bigger",
+        "Turn text into numbers",
+        "Delete spaces"
+      ],
+      "answer": 0,
+      "explanation": "Write f\"...\" and anything in {braces} is swapped for that variable's value. Cleaner than lots of + signs."
+    },
+    {
+      "id": "u15l05e02",
+      "type": "multipleChoice",
+      "prompt": "What will this show?\n\nname = \"Mia\"\nprint(f\"Hello, {name}\")",
+      "options": [
+        "Hello, Mia",
+        "Hello, {name}",
+        "Hello, name",
+        "Hello, \"Mia\""
+      ],
+      "answer": 0,
+      "explanation": "The {name} is replaced by its value, Mia. The f at the front turns on the braces."
+    },
+    {
+      "id": "u15l05e03",
+      "type": "multipleChoice",
+      "prompt": "What is different about these two?\n\nprint(\"Hello, {name}\")\nprint(f\"Hello, {name}\")",
+      "options": [
+        "Without the f, the braces are shown as plain text; with the f, the value fills in",
+        "They are the same",
+        "The first one errors",
+        "The second one shows braces"
+      ],
+      "answer": 0,
+      "explanation": "No f means the braces are just characters: Hello, {name}. The f makes them do their job."
+    },
+    {
+      "id": "u15l05e04",
+      "type": "trueFalse",
+      "prompt": "Inside an f-string, the spaces and punctuation outside the braces are shown exactly as written.",
+      "answer": true,
+      "explanation": "Only the {braces} get swapped. Everything else — spaces, commas, letters — appears exactly."
+    },
+    {
+      "id": "u15l05e05",
+      "type": "multipleChoice",
+      "prompt": "What will this show?\n\ncity = \"Hanoi\"\nprint(f\"I live in {city}\")",
+      "options": [
+        "I live in Hanoi",
+        "I live in {city}",
+        "I live in city",
+        "Hanoi"
+      ],
+      "answer": 0,
+      "explanation": "{city} becomes Hanoi. The spaces are already in the text, so you get: I live in Hanoi."
+    },
+    {
+      "id": "u15l05e06",
+      "type": "fillBlank",
+      "prompt": "Add the one letter that turns this into an f-string so {name} fills in.\n\nprint(____\"Hi {name}\")",
+      "answer": "f",
+      "acceptable": [
+        "f"
+      ],
+      "explanation": "The f right before the opening quote switches on the braces: f\"Hi {name}\"."
+    },
+    {
+      "id": "u15l05e07",
+      "type": "multipleChoice",
+      "prompt": "What will this show?\n\nname = \"Mia\"\nprint(f\"{name}, welcome!\")",
+      "options": [
+        "Mia, welcome!",
+        "{name}, welcome!",
+        "name, welcome!",
+        "Mia welcome"
+      ],
+      "answer": 0,
+      "explanation": "The brace can come first too. {name} becomes Mia, then the rest follows: Mia, welcome!"
+    },
+    {
+      "id": "u15l05e08",
+      "type": "tapTokens",
+      "prompt": "Build a line that prints: Hi Mia (using an f-string, name holds \"Mia\").",
+      "tokens": [
+        "print",
+        "(",
+        "f\"Hi {name}\"",
+        ")"
+      ],
+      "answer": [
+        "print",
+        "(",
+        "f\"Hi {name}\"",
+        ")"
+      ],
+      "explanation": "f\"Hi {name}\" puts the value of name right after 'Hi '. No + signs needed."
+    },
+    {
+      "id": "u15l05e09",
+      "type": "multipleChoice",
+      "prompt": "Compare these two correct lines. What do they both show?\n\nprint(\"Hello, \" + name)\nprint(f\"Hello, {name}\")",
+      "options": [
+        "Both show Hello, Mia",
+        "The first shows more",
+        "The second errors",
+        "They show different things"
+      ],
+      "answer": 0,
+      "explanation": "Same result, Hello, Mia. The f-string is just a tidier way to write the same join."
+    },
+    {
+      "id": "u15l05e10",
+      "type": "trueFalse",
+      "prompt": "With an f-string you don't have to remember to add spaces between + signs.",
+      "answer": true,
+      "explanation": "You write the sentence normally and drop {values} where you want them. Fewer things to forget."
+    }
+  ]
+}

@@ -1,0 +1,140 @@
+{
+  "unitId": "u85",
+  "lessonId": "u85l08",
+  "title": "Restating a problem with a list input",
+  "idea": "MEET: when the input is a LIST, the restatement should say what one item is, how many there are (len), and what per-item rule applies.",
+  "exercises": [
+    {
+      "type": "multipleChoice",
+      "prompt": "PROBLEM: 'Given a list of prices, count how many are above 20.' What is ONE item in the input?",
+      "options": [
+        "A single price",
+        "The whole list",
+        "The number 20",
+        "The count"
+      ],
+      "answer": 0,
+      "explanation": "The input is a list; one item is a single price. Knowing what one item is tells you what the per-item rule tests.",
+      "id": "u85l08e01"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "In that problem, the per-item RULE is...",
+      "options": [
+        "is this price above 20?",
+        "is this the whole list?",
+        "add 20 to everything",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "For each price you ask 'is it above 20?'. The per-item rule is the test you apply to every item.",
+      "id": "u85l08e02"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "With a list input, it helps to name what a single item is before planning.",
+      "answer": true,
+      "explanation": "Yes — once you know one item is 'a price', the loop body writes itself: do the rule to each price.",
+      "id": "u85l08e03"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Which tool tells you HOW MANY items a list has?",
+      "options": [
+        "len()",
+        "print()",
+        "max",
+        "a comment"
+      ],
+      "answer": 0,
+      "explanation": "len() gives the size of a list — introduced back in Unit 53. It answers 'how many items?'.",
+      "id": "u85l08e04"
+    },
+    {
+      "type": "multiSelect",
+      "prompt": "Select the true statements about a list input for 'average the scores'.",
+      "options": [
+        "One item is a single score",
+        "The number of items is len(scores)",
+        "The per-item step adds the score to a running total",
+        "One item is the whole list"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "One item is a score; len gives the count; each item feeds the running total. The last option confuses item with list.",
+      "id": "u85l08e05"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Why does naming 'one item' matter for a list problem?",
+      "options": [
+        "The loop body is a rule applied to one item at a time",
+        "Lists can't be looped",
+        "It changes len()",
+        "It renames the list"
+      ],
+      "answer": 0,
+      "explanation": "A for-loop visits one item at a time, so your plan is really 'what do I do to ONE item?' repeated.",
+      "id": "u85l08e06"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "A list of 5 prices and a list of 50 prices need completely different plans.",
+      "answer": false,
+      "explanation": "No — the plan is the same per-item rule in a loop. Only the length differs. That's the power of looping.",
+      "id": "u85l08e07"
+    },
+    {
+      "type": "matchPairs",
+      "prompt": "Match each list problem to its per-item rule.",
+      "pairs": [
+        {
+          "left": "Count prices above 20",
+          "right": "is this price > 20?"
+        },
+        {
+          "left": "Total the scores",
+          "right": "add this score to the total"
+        },
+        {
+          "left": "Find the biggest",
+          "right": "is this item bigger than the best so far?"
+        }
+      ],
+      "explanation": "Each list problem is a per-item rule repeated in a loop. Naming the rule is half the plan.",
+      "id": "u85l08e08"
+    },
+    {
+      "type": "orderBlocks",
+      "prompt": "Order the restatement habit for a list input.",
+      "blocks": [
+        "Name what ONE item is",
+        "Note how many items (len)",
+        "State the per-item rule you'll apply"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "One item, how many, the per-item rule. With those three named, the loop almost writes itself.",
+      "id": "u85l08e09"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "The big idea:",
+      "options": [
+        "For a list input, name one item, its count, and the per-item rule",
+        "Lists must be planned item by item with different plans each time",
+        "len() finds the biggest item",
+        "A list input has no items"
+      ],
+      "answer": 0,
+      "explanation": "List problems reduce to a per-item rule in a loop. Restating that way makes big lists feel small.",
+      "id": "u85l08e10"
+    }
+  ]
+}

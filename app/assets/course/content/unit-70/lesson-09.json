@@ -1,0 +1,140 @@
+{
+  "unitId": "u70",
+  "lessonId": "u70l09",
+  "title": "Design: name the helpers for a task",
+  "idea": "MEET: given a task, propose a sensible set of named helpers. No code.",
+  "exercises": [
+    {
+      "id": "u70l09e01",
+      "type": "multipleChoice",
+      "prompt": "TASK: 'Frame a title with a star border on top and bottom.' A sensible helper to name is...",
+      "options": [
+        "print_border",
+        "paint_wall",
+        "add_numbers",
+        "search_list"
+      ],
+      "answer": 0,
+      "explanation": "'print_border' is the repeated job to name. The others have nothing to do with this task."
+    },
+    {
+      "id": "u70l09e02",
+      "type": "multiSelect",
+      "prompt": "For 'run a quiz: ask questions, score them, show the result', which helpers make sense? (Pick all.)",
+      "options": [
+        "ask_questions",
+        "score_answers",
+        "show_result",
+        "water_the_plants"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Three helpers map to the three jobs. Watering plants is unrelated to a quiz."
+    },
+    {
+      "id": "u70l09e03",
+      "type": "orderBlocks",
+      "prompt": "Order how the main plan would use those quiz helpers.",
+      "blocks": [
+        "use show_result",
+        "use ask_questions",
+        "use score_answers"
+      ],
+      "answer": [
+        1,
+        2,
+        0
+      ],
+      "explanation": "Ask, score, show - the helpers run in the order the task describes."
+    },
+    {
+      "id": "u70l09e04",
+      "type": "multipleChoice",
+      "prompt": "TASK: 'Greet each of three players the same way.' Which helper, used how often?",
+      "options": [
+        "greet, used three times",
+        "greet, used once",
+        "three different greet helpers",
+        "no helper needed"
+      ],
+      "answer": 0,
+      "explanation": "Name one greet helper; use it three times. Define once, use many - one job, repeated."
+    },
+    {
+      "id": "u70l09e05",
+      "type": "matchPairs",
+      "prompt": "Match each task to a helper you'd name for it.",
+      "pairs": [
+        {
+          "left": "checkout a basket",
+          "right": "total_basket"
+        },
+        {
+          "left": "show a divider",
+          "right": "print_divider"
+        },
+        {
+          "left": "welcome a user",
+          "right": "greet"
+        }
+      ],
+      "explanation": "Reading a task, you name the helper for each job. Clear names echo the work they do."
+    },
+    {
+      "id": "u70l09e06",
+      "type": "trueFalse",
+      "prompt": "Two people might name helpers slightly differently and both be reasonable.",
+      "answer": true,
+      "explanation": "Yes. As long as names are clear and the helpers cover the task, different sensible designs can both work."
+    },
+    {
+      "id": "u70l09e07",
+      "type": "multipleChoice",
+      "prompt": "REVIEW: a helper 'score_answers' counts the correct ones. Its job uses which tool?",
+      "options": [
+        "a count with a condition",
+        "a plain sum",
+        "a search",
+        "input() only"
+      ],
+      "answer": 0,
+      "explanation": "Counting correct answers is a count with a test. Each helper's job maps to a tool you already know."
+    },
+    {
+      "id": "u70l09e08",
+      "type": "multipleChoice",
+      "prompt": "What makes your set of helpers 'good'?",
+      "options": [
+        "Clear names, and together they cover the whole task",
+        "As many helpers as possible",
+        "Vague names",
+        "Only one helper ever"
+      ],
+      "answer": 0,
+      "explanation": "A good design: clear, honest names, and the helpers together do the entire task - nothing missing."
+    },
+    {
+      "id": "u70l09e09",
+      "type": "trueFalse",
+      "prompt": "Deciding the helpers is a PLANNING step you do before writing any code.",
+      "answer": true,
+      "explanation": "Yes. You name the helpers while planning. Then, in the next unit, you turn each one into real code."
+    },
+    {
+      "id": "u70l09e10",
+      "type": "multipleChoice",
+      "prompt": "You can now take a task and...",
+      "options": [
+        "name a sensible set of helpers the main plan will use",
+        "only print one line",
+        "skip all planning",
+        "guess the answer"
+      ],
+      "answer": 0,
+      "explanation": "That's this unit's goal: design named helpers for a task. Next, you write and call them for real."
+    }
+  ]
+}

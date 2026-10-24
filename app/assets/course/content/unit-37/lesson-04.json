@@ -1,0 +1,155 @@
+{
+  "unitId": "u37",
+  "lessonId": "u37l04",
+  "title": "Build a for/range loop",
+  "idea": "Arrange and complete real for/range loops: header with range(n), colon, and an indented body.",
+  "exercises": [
+    {
+      "id": "u37l04e01",
+      "type": "orderBlocks",
+      "prompt": "Arrange a loop that prints Hi 3 times.",
+      "blocks": [
+        "for i in range(3):",
+        "    print(\"Hi\")"
+      ],
+      "answer": [
+        0,
+        1
+      ],
+      "explanation": "Header with range(3) first, then the indented body. That prints Hi three times."
+    },
+    {
+      "id": "u37l04e02",
+      "type": "tapTokens",
+      "prompt": "Build the loop header that repeats 5 times.",
+      "tokens": [
+        "for",
+        "i",
+        "in",
+        "range",
+        "(",
+        "5",
+        ")",
+        ":"
+      ],
+      "answer": [
+        "for",
+        "i",
+        "in",
+        "range",
+        "(",
+        "5",
+        ")",
+        ":"
+      ],
+      "explanation": "The header is: for i in range(5): — ending with a colon, ready for an indented body."
+    },
+    {
+      "id": "u37l04e03",
+      "type": "fillBlank",
+      "prompt": "Complete the body to show Go each pass:\n\nfor i in range(4):\n    print(____)",
+      "answer": "\"Go\"",
+      "acceptable": [
+        "\"Go\"",
+        "'Go'"
+      ],
+      "explanation": "The text Go goes in quotes inside print. The loop runs it four times."
+    },
+    {
+      "id": "u37l04e04",
+      "type": "multipleChoice",
+      "prompt": "Which is written correctly?",
+      "options": [
+        "for i in range(3):\n    print(\"Hi\")",
+        "for i in range(3)\n    print(\"Hi\")",
+        "for i in range(3):\nprint(\"Hi\")",
+        "for in range(3):\n    print(\"Hi\")"
+      ],
+      "answer": 0,
+      "explanation": "Needs the colon AND the indented body AND a name after for. The others each drop one piece."
+    },
+    {
+      "id": "u37l04e05",
+      "type": "orderBlocks",
+      "prompt": "Arrange: print a header once, then Hi 2 times.",
+      "blocks": [
+        "print(\"List:\")",
+        "for i in range(2):",
+        "    print(\"Hi\")"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Header once (un-indented, before), then the loop header, then the indented repeated body."
+    },
+    {
+      "id": "u37l04e06",
+      "type": "fillBlank",
+      "prompt": "Fill the keyword that starts a counting loop:\n\n____ i in range(3):\n    print(\"Hi\")",
+      "answer": "for",
+      "acceptable": [
+        "for"
+      ],
+      "explanation": "The keyword is for. 'for i in range(3):' sets up three passes."
+    },
+    {
+      "id": "u37l04e07",
+      "type": "multipleChoice",
+      "prompt": "What is missing?\n\nfor i in range(3)\n    print(\"Hi\")",
+      "options": [
+        "The colon after range(3)",
+        "The word Hi",
+        "A bigger number",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "The header must end with a colon: for i in range(3): — then the indented body."
+    },
+    {
+      "id": "u37l04e08",
+      "type": "tapTokens",
+      "prompt": "Build a full one-line body that prints Done.",
+      "tokens": [
+        "print",
+        "(",
+        "\"Done\"",
+        ")"
+      ],
+      "answer": [
+        "print",
+        "(",
+        "\"Done\"",
+        ")"
+      ],
+      "explanation": "print, (, the text in quotes, ). This becomes the indented body of your loop."
+    },
+    {
+      "id": "u37l04e09",
+      "type": "multipleChoice",
+      "prompt": "What shows for the loop you just built?\n\nfor i in range(3):\n    print(\"Hi\")",
+      "options": [
+        "Hi\nHi\nHi",
+        "Hi",
+        "3",
+        "i"
+      ],
+      "answer": 0,
+      "explanation": "range(3) repeats the body three times — three Hi lines. You built a working for/range loop."
+    },
+    {
+      "id": "u37l04e10",
+      "type": "multipleChoice",
+      "prompt": "After building a loop, the last habit is to...",
+      "options": [
+        "Check the output matches the goal",
+        "Delete it",
+        "Add random numbers",
+        "Set range to a word"
+      ],
+      "answer": 0,
+      "explanation": "Always Check. Build it, trace it, confirm it does what the problem asked."
+    }
+  ]
+}

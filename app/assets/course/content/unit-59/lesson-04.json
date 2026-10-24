@@ -1,0 +1,129 @@
+{
+  "unitId": "u59",
+  "lessonId": "u59l04",
+  "title": "Spot the broken max",
+  "idea": "TOOL: recognise common mistakes in the best-so-far pattern (wrong start, wrong comparison, backwards assignment).",
+  "exercises": [
+    {
+      "id": "u59l04e01",
+      "type": "multipleChoice",
+      "prompt": "This is meant to find the biggest, but it is broken:\n\nnums = [-3, -1, -7]\nbest = 0\nfor n in nums:\n    if n > best:\n        best = n\nprint(best)\n\nWhat prints, and why is it wrong?",
+      "options": [
+        "0 — no negative beats 0, so best never updates to a real value",
+        "-1 correctly",
+        "-7",
+        "An error"
+      ],
+      "answer": 0,
+      "explanation": "Starting at 0 is the bug: no negative is bigger than 0, so best stays 0 — which isn't even in the list. Start at nums[0] instead."
+    },
+    {
+      "id": "u59l04e02",
+      "type": "multipleChoice",
+      "prompt": "What is the fix for the code above?",
+      "options": [
+        "Change best = 0 to best = nums[0]",
+        "Change > to <",
+        "Remove the loop",
+        "Change print to input"
+      ],
+      "answer": 0,
+      "explanation": "Starting best at the first real value lets negatives be compared properly. Then it finds -1 correctly."
+    },
+    {
+      "id": "u59l04e03",
+      "type": "multipleChoice",
+      "prompt": "Spot the bug:\n\nbest = nums[0]\nfor n in nums:\n    if n < best:\n        best = n\n\nThis was supposed to find the BIGGEST.",
+      "options": [
+        "The comparison is < — that finds the smallest, not the biggest",
+        "best should start at 0",
+        "The loop variable is wrong",
+        "There is no bug"
+      ],
+      "answer": 0,
+      "explanation": "< keeps the smallest. To find the biggest you need >. (That < version is exactly how you'll find the minimum next unit — hold that thought.)"
+    },
+    {
+      "id": "u59l04e04",
+      "type": "multipleChoice",
+      "prompt": "Spot the bug:\n\nbest = nums[0]\nfor n in nums:\n    if n > best:\n        n = best\n\nWhat is wrong?",
+      "options": [
+        "The assignment is backwards — it should be best = n",
+        "It should use < ",
+        "best should start at 0",
+        "Nothing is wrong"
+      ],
+      "answer": 0,
+      "explanation": "'n = best' overwrites the bigger value and loses it. The winner must be saved INTO best: 'best = n'."
+    },
+    {
+      "id": "u59l04e05",
+      "type": "trueFalse",
+      "prompt": "Forgetting to indent the 'best = n' line under the if would change what the code does.",
+      "answer": true,
+      "explanation": "If 'best = n' is not indented under the if, it runs every pass and best becomes the LAST value, not the biggest. Indentation controls what belongs to the if."
+    },
+    {
+      "id": "u59l04e06",
+      "type": "multipleChoice",
+      "prompt": "If 'best = n' runs on every pass (not guarded by the if), what does best end up holding for [4, 9, 2]?",
+      "options": [
+        "2 — the last value",
+        "9 — the biggest",
+        "4 — the first value",
+        "15 — the total"
+      ],
+      "answer": 0,
+      "explanation": "Without the if guard, best is overwritten every time and keeps only the last value, 2. The if is what makes it the biggest."
+    },
+    {
+      "id": "u59l04e07",
+      "type": "multipleChoice",
+      "prompt": "A learner starts best at the list's LENGTH: best = len(nums). Why is that a bad start for a max?",
+      "options": [
+        "Length has nothing to do with the values — it can be bigger or smaller than them by accident",
+        "Length is always 0",
+        "len() is not allowed",
+        "It finds the smallest"
+      ],
+      "answer": 0,
+      "explanation": "The starting best must be a real value from the list. len() is a count of items, unrelated to how big the values are."
+    },
+    {
+      "id": "u59l04e08",
+      "type": "multiSelect",
+      "prompt": "Which of these are correct ways to find the biggest? (pick all)",
+      "options": [
+        "start best at nums[0], replace when n > best",
+        "start best at nums[0], replace when n >= best",
+        "start best at 0, replace when n > best",
+        "start best at len(nums), replace when n > best"
+      ],
+      "answer": [
+        0,
+        1
+      ],
+      "explanation": "Both nums[0] starts work (> and >= land on the same max). Starting at 0 or at len() can give a value that isn't even in the list."
+    },
+    {
+      "id": "u59l04e09",
+      "type": "multipleChoice",
+      "prompt": "You test your max code only on [1, 2, 3] (already sorted up) and it works. Why is that a weak test?",
+      "options": [
+        "A rising list hides bugs — the biggest is conveniently last; test unsorted and negative lists too",
+        "Sorted lists are not allowed",
+        "It is actually a perfect test",
+        "You should never test"
+      ],
+      "answer": 0,
+      "explanation": "A rising list makes almost any buggy approach look right. Test with the biggest in the middle, with ties, and with negatives to really check it."
+    },
+    {
+      "id": "u59l04e10",
+      "type": "trueFalse",
+      "prompt": "A good habit is to test max code on a list whose biggest value is NOT the first or last item.",
+      "answer": true,
+      "explanation": "Putting the biggest in the middle catches starts and comparisons that only work by luck on sorted lists."
+    }
+  ]
+}

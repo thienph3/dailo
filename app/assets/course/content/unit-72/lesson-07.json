@@ -1,0 +1,128 @@
+{
+  "unitId": "u72",
+  "lessonId": "u72l07",
+  "title": "Parameters feeding a pattern",
+  "idea": "TOOL: pass values that drive a loop or condition inside the sub-plan (count, threshold, list). The sub-plan prints the result. No return.",
+  "exercises": [
+    {
+      "id": "u72l07e01",
+      "type": "multipleChoice",
+      "prompt": "def repeat(word, times):\n    for i in range(times):\n        print(word)\n\nrepeat(\"Go\", 3)\n\nWhat prints?",
+      "options": [
+        "Go three times",
+        "Go once",
+        "word three times",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "word is \"Go\", times is 3. The loop runs 3 times, printing Go each time. A parameter can control how many loops run."
+    },
+    {
+      "id": "u72l07e02",
+      "type": "multipleChoice",
+      "prompt": "def count_above(nums, limit):\n    big = 0\n    for n in nums:\n        if n > limit:\n            big = big + 1\n    print(big)\n\ncount_above([3, 7, 9], 5)\n\nWhat prints?",
+      "options": [
+        "2",
+        "3",
+        "1",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "limit is 5. 7 and 9 are above 5, so big becomes 2. Both the list AND the threshold come in as parameters."
+    },
+    {
+      "id": "u72l07e03",
+      "type": "trueFalse",
+      "prompt": "A parameter can be a whole list, not just a single number or word.",
+      "answer": true,
+      "explanation": "Yes. You can hand a list to a sub-plan as an argument, and the body can loop over it. Parameters hold any value."
+    },
+    {
+      "id": "u72l07e04",
+      "type": "multipleChoice",
+      "prompt": "def total(nums):\n    sum_so_far = 0\n    for n in nums:\n        sum_so_far = sum_so_far + n\n    print(sum_so_far)\n\ntotal([2, 4, 6])\n\nWhat prints?",
+      "options": [
+        "12",
+        "6",
+        "3",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "The accumulator adds 2+4+6 = 12 from the passed-in list. The list is a parameter; the sum pattern runs inside."
+    },
+    {
+      "id": "u72l07e05",
+      "type": "multipleChoice",
+      "prompt": "Using the same total(nums), what does total([10, 10]) print?",
+      "options": [
+        "20",
+        "12",
+        "2",
+        "10"
+      ],
+      "answer": 0,
+      "explanation": "A different list is handed in, so the same sub-plan sums 10+10 = 20. One tool, many lists."
+    },
+    {
+      "id": "u72l07e06",
+      "type": "orderBlocks",
+      "prompt": "Arrange a sub-plan that prints each item of a passed-in list, then call it with [1, 2].",
+      "blocks": [
+        "def show_all(items):",
+        "    for item in items:",
+        "        print(item)",
+        "show_all([1, 2])"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "items is the parameter list; the loop prints each one. show_all([1, 2]) prints 1 then 2."
+    },
+    {
+      "id": "u72l07e07",
+      "type": "fillBlank",
+      "prompt": "Complete the condition so count_pass counts scores at or above the passed-in mark:\n\ndef count_pass(scores, mark):\n    passed = 0\n    for s in scores:\n        if s ____ mark:\n            passed = passed + 1\n    print(passed)\n\ncount_pass([50, 70, 90], 60)",
+      "answer": ">=",
+      "acceptable": [
+        ">="
+      ],
+      "explanation": "'At or above' means >=. With mark 60, the scores 70 and 90 pass, so it prints 2. The mark is a parameter you can change."
+    },
+    {
+      "id": "u72l07e08",
+      "type": "multipleChoice",
+      "prompt": "Why is passing the threshold (like the pass mark) as a PARAMETER better than fixing it inside?",
+      "options": [
+        "The same sub-plan can use any mark you choose at call time",
+        "It makes the mark impossible to change",
+        "It stops the loop from running",
+        "It hides the output"
+      ],
+      "answer": 0,
+      "explanation": "A parameter mark lets one count_pass handle a 60 cutoff today and an 80 cutoff tomorrow — no rewriting the sub-plan."
+    },
+    {
+      "id": "u72l07e09",
+      "type": "trueFalse",
+      "prompt": "Parameters let you reuse a familiar pattern (sum, count, filter) on whatever data and limits you pass in.",
+      "answer": true,
+      "explanation": "Yes. The pattern lives in the sub-plan; the data and limits arrive as parameters. That's reuse at its best."
+    },
+    {
+      "id": "u72l07e10",
+      "type": "multipleChoice",
+      "prompt": "The idea this lesson shows:",
+      "options": [
+        "Parameters can feed a loop or condition, so one sub-plan handles many inputs",
+        "Loops can't use parameters",
+        "A list can't be a parameter",
+        "Thresholds must always be fixed"
+      ],
+      "answer": 0,
+      "explanation": "Hand in lists, counts, and limits as parameters; the pattern inside runs on them. One sub-plan, endless reuse."
+    }
+  ]
+}

@@ -1,0 +1,168 @@
+{
+  "unitId": "u93",
+  "lessonId": "u93l10",
+  "title": "You drive: a full integrated problem",
+  "idea": "REVIEW / interleave. Learner drives the whole UEPCC over an integrated problem, recalling patterns from across Laps 0-6. Proves transfer.",
+  "problem": "A cafe's orders are [12, 7, 30, 5, 18]. A loyalty member earns a free coffee if their order is over 25. Show how many free coffees were earned AND the total of all orders.",
+  "exercises": [
+    {
+      "id": "u93l10e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: orders [12, 7, 30, 5, 18]; a free coffee if an order is OVER 25. Show how many free coffees AND the total of all orders.\n\nUnderstand — how many OUTPUTS does this problem want?",
+      "explanation": "Two outputs: a count (free coffees) and a total (all orders). Spotting both outputs shapes the plan.",
+      "options": [
+        "Two: a count of free coffees and the total of all orders",
+        "One: just the total",
+        "One: just the count",
+        "Three outputs"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u93l10e02",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example — by hand, which orders are OVER 25: 12, 7, 30, 5, 18? How many free coffees?",
+      "explanation": "Only 30 is over 25, so 1 free coffee. 'Over' is strict (>), so 25 itself would not count.",
+      "options": [
+        "1",
+        "2",
+        "0",
+        "3"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u93l10e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "By hand, the total of all orders 12+7+30+5+18 = ?",
+      "explanation": "12+7=19, +30=49, +5=54, +18=72. The total is 72 — your second check value.",
+      "options": [
+        "72",
+        "70",
+        "30",
+        "54"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u93l10e04",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Can both outputs be built in ONE loop over the orders?",
+      "explanation": "Yes — each turn, always add to the total, and add 1 to the free count only when the order is over 25. Two state variables, one loop.",
+      "options": [
+        "Yes — add to total every time, and count only when order > 25",
+        "No, you need two separate loops",
+        "No, counts and totals can't mix",
+        "Only with a nested loop"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u93l10e05",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Plan — order the steps for the one-loop solution.",
+      "explanation": "Start both state variables at 0, loop once, always add to total, conditionally add to the free count, then show both.",
+      "blocks": [
+        "Start total = 0 and free = 0",
+        "For each order",
+        "Add the order to total",
+        "If the order is over 25, add 1 to free",
+        "Show free and total"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "id": "u93l10e06",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code — arrange the full solution (two state variables, one loop).",
+      "explanation": "Two accumulators, one loop: total always grows, free grows only past 25. Then print both. Full integration.",
+      "blocks": [
+        "orders = [12, 7, 30, 5, 18]",
+        "total = 0",
+        "free = 0",
+        "for order in orders:",
+        "    total = total + order",
+        "    if order > 25:",
+        "        free = free + 1",
+        "print(free)",
+        "print(total)"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "id": "u93l10e07",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Complete the free-coffee rule ('over 25', strict):\n\nfor order in orders:\n    total = total + order\n    if order ____ 25:\n        free = free + 1",
+      "explanation": "'Over 25' is strictly greater, so use >. If it were 'at least 25' you'd use >=.",
+      "answer": ">",
+      "acceptable": [
+        ">"
+      ]
+    },
+    {
+      "id": "u93l10e08",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check — it prints 1 then 72. Hand examples were 1 free coffee and total 72. Verdict?",
+      "explanation": "Both outputs match the hand examples, so the two-in-one-loop solution is correct.",
+      "options": [
+        "Passes — both outputs match",
+        "Fails",
+        "Only the total is right",
+        "Only the count is right"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u93l10e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Recall from earlier laps: to SHOW both results, why two separate print() lines?",
+      "explanation": "Each print() shows one value on its own line. Two prints give two clear results — a Lap 0 idea reused here.",
+      "options": [
+        "Each print shows one value on its own line, so two prints show both clearly",
+        "print can only run once",
+        "You must combine them into one number",
+        "print needs a loop"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u93l10e10",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "You've finished Unit 93. What can you now do?",
+      "explanation": "You can take a larger problem with several parts and multiple outputs, walk it through UEPCC, pick the patterns, code them together, and check every result.",
+      "options": [
+        "Solve larger integrated problems end-to-end with UEPCC, weaving patterns and checking every output",
+        "Only add two numbers",
+        "Only print fixed text",
+        "Nothing new"
+      ],
+      "answer": 0
+    }
+  ]
+}

@@ -1,0 +1,145 @@
+{
+  "unitId": "u86",
+  "lessonId": "u86l06",
+  "title": "Splitting an 'average of a subset' problem",
+  "idea": "MEET: decompose a problem whose sub-problems FEED each other — filter, then total-and-count the filtered items, then divide — an ordered chain.",
+  "exercises": [
+    {
+      "type": "multipleChoice",
+      "prompt": "PROBLEM: 'Find the average of just the passing scores (pass is 60+).' The OUTPUT is...",
+      "options": [
+        "the average of the passing scores",
+        "the list of scores",
+        "the number 60",
+        "the count of fails"
+      ],
+      "answer": 0,
+      "explanation": "One output: the average of the subset that passed. But getting there needs several ordered steps.",
+      "id": "u86l06e01"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "By hand: scores are 50, 70, 90, 40, 80. Which PASS (60+)?",
+      "options": [
+        "70, 90, 80",
+        "50, 40",
+        "all of them",
+        "none"
+      ],
+      "answer": 0,
+      "explanation": "70, 90, 80 are 60 or more. The passing subset has 3 scores.",
+      "id": "u86l06e02"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Same example — the average of the passing scores is...",
+      "options": [
+        "80 (because 70+90+80 = 240, and 240 / 3 = 80)",
+        "48",
+        "60",
+        "240"
+      ],
+      "answer": 0,
+      "explanation": "Total the passers: 240. Count them: 3. 240 / 3 = 80. That's our check value.",
+      "id": "u86l06e03"
+    },
+    {
+      "type": "orderBlocks",
+      "prompt": "Order the sub-problems for this chained problem.",
+      "blocks": [
+        "Filter: keep only the passing scores",
+        "Total the passing scores and count them",
+        "Divide the passing total by the passing count"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Filter first (you need the subset), then total/count that subset, then divide. Each step feeds the next.",
+      "id": "u86l06e04"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Why must 'filter the passing scores' come FIRST?",
+      "options": [
+        "The later steps work ONLY on the passing subset",
+        "Filtering is always first in every problem",
+        "It's alphabetical",
+        "The computer requires it"
+      ],
+      "answer": 0,
+      "explanation": "Total, count, and divide all operate on the passers — so you must isolate them before anything else.",
+      "id": "u86l06e05"
+    },
+    {
+      "type": "multiSelect",
+      "prompt": "Select the dependencies in this plan.",
+      "options": [
+        "total/count depends on the filter",
+        "divide depends on the total and count",
+        "filter depends on the divide",
+        "divide depends on the filter directly only"
+      ],
+      "answer": [
+        0,
+        1
+      ],
+      "explanation": "Filter feeds total/count; total/count feed divide. The filter does NOT depend on the divide.",
+      "id": "u86l06e06"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "This problem has one output but still needs several ordered sub-problems.",
+      "answer": true,
+      "explanation": "Yes — one output doesn't mean one step. Reaching the average of a subset is a chain of three jobs.",
+      "id": "u86l06e07"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "EDGE CASE: what if NO scores pass? What goes wrong in the last step?",
+      "options": [
+        "Dividing by a count of 0 — we must guard against it",
+        "Nothing — 0 is fine to divide by",
+        "The total becomes huge",
+        "The filter breaks"
+      ],
+      "answer": 0,
+      "explanation": "An empty subset means dividing by zero. The average-with-empty-guard (Unit 79) handles this. Edge cases matter.",
+      "id": "u86l06e08"
+    },
+    {
+      "type": "matchPairs",
+      "prompt": "Match each sub-problem to its pattern.",
+      "pairs": [
+        {
+          "left": "keep only passing scores",
+          "right": "filter"
+        },
+        {
+          "left": "add them up / count them",
+          "right": "running total + count"
+        },
+        {
+          "left": "total / count",
+          "right": "divide for the average"
+        }
+      ],
+      "explanation": "Filter, accumulate, divide — three familiar patterns chained in order make the subset average.",
+      "id": "u86l06e09"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "The big idea:",
+      "options": [
+        "Chained sub-problems (filter -> total/count -> divide) run in a forced order, with an empty guard",
+        "One output means one step",
+        "Order is free here",
+        "No guard is ever needed"
+      ],
+      "answer": 0,
+      "explanation": "When sub-problems feed each other, the order is forced — and don't forget the edge case guard.",
+      "id": "u86l06e10"
+    }
+  ]
+}
