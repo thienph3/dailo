@@ -1,0 +1,138 @@
+{
+  "unitId": "u80",
+  "lessonId": "u80l06",
+  "title": "Ties and duplicates",
+  "idea": "MEET (thinking). Repeated values and ties are edge cases: 'the highest' when two are equal, or counting when items repeat.",
+  "exercises": [
+    {
+      "id": "u80l06e01",
+      "type": "multipleChoice",
+      "prompt": "You find the highest of [9, 4, 9, 2]. Two items are 9. What is the highest?",
+      "options": [
+        "9 — a tie at the top still has a clear highest value",
+        "An error because of the tie",
+        "18 (added together)",
+        "There is no highest"
+      ],
+      "answer": 0,
+      "explanation": "The highest value is 9, even though it appears twice. A tie doesn't break 'the biggest value' — it's still 9."
+    },
+    {
+      "id": "u80l06e02",
+      "type": "multipleChoice",
+      "prompt": "With track-the-max using 'if item > best', what happens when item EQUALS best?",
+      "options": [
+        "best stays the same — equal is not greater, so no change (still correct)",
+        "best is erased",
+        "it errors",
+        "best doubles"
+      ],
+      "answer": 0,
+      "explanation": "Equal is not greater, so > leaves best unchanged. The final max is still correct — ties are handled fine by >."
+    },
+    {
+      "id": "u80l06e03",
+      "type": "trueFalse",
+      "prompt": "Counting how many scores are 90 in [90, 85, 90, 90] should give 3 — duplicates each count.",
+      "answer": true,
+      "explanation": "Yes. Each 90 is a separate item, so all three count. Duplicates are normal data, counted individually."
+    },
+    {
+      "id": "u80l06e04",
+      "type": "multipleChoice",
+      "prompt": "Why are duplicates worth thinking about when you plan a count?",
+      "options": [
+        "You must decide whether repeats each count, or count only distinct values",
+        "Duplicates always crash",
+        "Duplicates are invalid input",
+        "They never change the answer"
+      ],
+      "answer": 0,
+      "explanation": "'How many 90s' counts repeats; 'how many different scores' would not. Duplicates force you to clarify what you're counting."
+    },
+    {
+      "id": "u80l06e05",
+      "type": "multiSelect",
+      "prompt": "For 'find the highest', which inputs are worth checking? (Select all that apply.)",
+      "options": [
+        "A list where the biggest value repeats",
+        "A list where the biggest is at the very end",
+        "A list where the biggest is first",
+        "A list of all identical values"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "All four are good checks: a repeated max, the max at the end, the max first, and all-equal. Each stresses the tracking logic differently."
+    },
+    {
+      "id": "u80l06e06",
+      "type": "multipleChoice",
+      "prompt": "Finding the highest of ALL-equal values [5, 5, 5] gives...",
+      "options": [
+        "5 — every item ties, and the highest is still 5",
+        "15",
+        "an error",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "All equal means the max is that value, 5. The tracking never updates, but best already holds 5 — correct."
+    },
+    {
+      "id": "u80l06e07",
+      "type": "matchPairs",
+      "prompt": "Match each list to the highest value.",
+      "pairs": [
+        {
+          "left": "[9, 4, 9, 2]",
+          "right": "9"
+        },
+        {
+          "left": "[5, 5, 5]",
+          "right": "5"
+        },
+        {
+          "left": "[1, 2, 3]",
+          "right": "3"
+        }
+      ],
+      "explanation": "Ties and duplicates don't change 'the biggest value.' The highest is just the largest number present."
+    },
+    {
+      "id": "u80l06e08",
+      "type": "trueFalse",
+      "prompt": "A tie at the top means your max-finder has a bug.",
+      "answer": false,
+      "explanation": "No. A tie is normal — the highest value is still clear. Using > (not >=) handles ties correctly, keeping the first-seen max."
+    },
+    {
+      "id": "u80l06e09",
+      "type": "multipleChoice",
+      "prompt": "REVIEW: in lesson from last unit, re-checking max with [5, 2, 9, 9, 1] specifically tested...",
+      "options": [
+        "A tie for the highest value (two 9s)",
+        "The empty case",
+        "The zero case",
+        "A boundary cutoff"
+      ],
+      "answer": 0,
+      "explanation": "Two 9s is a tie at the top. Checking it confirms the tracker handles duplicates and still reports 9."
+    },
+    {
+      "id": "u80l06e10",
+      "type": "multipleChoice",
+      "prompt": "The lesson in one line:",
+      "options": [
+        "Ties and duplicates are normal data — decide clearly what they should do",
+        "Ties always break code",
+        "Duplicates are invalid",
+        "Repeats never count"
+      ],
+      "answer": 0,
+      "explanation": "A tie still has a clear max; duplicates each count unless you say otherwise. Think these through when you plan."
+    }
+  ]
+}

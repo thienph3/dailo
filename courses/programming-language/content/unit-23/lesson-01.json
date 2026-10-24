@@ -1,0 +1,154 @@
+{
+  "unitId": "u23",
+  "lessonId": "u23l01",
+  "title": "Solve it: pass or fail",
+  "idea": "GUIDED. One small problem through UEPCC: decide 'Pass' or 'Fail' from a score using if/else.",
+  "problem": "A test is passed with a score of 50 or more. Given a score, show 'Pass' or 'Fail'.",
+  "exercises": [
+    {
+      "id": "u23l01e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: 50 or more is a pass. Show 'Pass' or 'Fail' for a score.\n\nWhat is the OUTPUT?",
+      "options": [
+        "One word: 'Pass' or 'Fail'",
+        "The score itself",
+        "How many passed",
+        "The average"
+      ],
+      "answer": 0,
+      "explanation": "The output is a single label, Pass or Fail. Naming the output first frames the whole problem."
+    },
+    {
+      "id": "u23l01e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "What is the INPUT you start with?",
+      "options": [
+        "The score",
+        "The word Pass",
+        "Nothing",
+        "The number 50 only"
+      ],
+      "answer": 0,
+      "explanation": "The input is the score. The 50 is the rule you compare against, not the input."
+    },
+    {
+      "id": "u23l01e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Work it by hand: a score of 72 gives which label?",
+      "options": [
+        "Pass",
+        "Fail",
+        "72",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "72 is 50 or more, so Pass. This hand answer is the value you will check the code against."
+    },
+    {
+      "id": "u23l01e04",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "By hand again: a score of 40 gives which label?",
+      "options": [
+        "Fail",
+        "Pass",
+        "40",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "40 is below 50, so Fail. Working an example on each side tells you both branches are right."
+    },
+    {
+      "id": "u23l01e05",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Which comparison tests 'passed'?",
+      "options": [
+        "score >= 50",
+        "score = 50",
+        "score < 50 means pass",
+        "score + 50"
+      ],
+      "answer": 0,
+      "explanation": ">= 50 is True for 50 and above. Remember: >= compares, a single = would assign."
+    },
+    {
+      "id": "u23l01e06",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Plan the steps in order.",
+      "blocks": [
+        "Compare the score with 50",
+        "If it passed, show Pass",
+        "Otherwise show Fail"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Compare first, then branch: Pass on True, Fail on the else. A two-outcome choice is if/else."
+    },
+    {
+      "id": "u23l01e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Arrange the code to match the plan.",
+      "blocks": [
+        "if score >= 50:",
+        "    print(\"Pass\")",
+        "else:",
+        "    print(\"Fail\")"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "if with its indented body, then else with its body. One branch always runs."
+    },
+    {
+      "id": "u23l01e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Complete the comparison:\n\nif score __ 50:\n    print(\"Pass\")\nelse:\n    print(\"Fail\")",
+      "answer": ">=",
+      "acceptable": [
+        ">="
+      ],
+      "explanation": "Use >= so 50 itself passes. > alone would wrongly fail a score of exactly 50."
+    },
+    {
+      "id": "u23l01e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Run it with score = 72. What prints?",
+      "options": [
+        "Pass",
+        "Fail",
+        "72",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "72 >= 50 is True, so Pass - matching your hand example. Correct."
+    },
+    {
+      "id": "u23l01e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Re-check with a fresh value: score = 50. What prints?",
+      "options": [
+        "Pass",
+        "Fail",
+        "50",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "50 >= 50 is True, so Pass. Testing the exact edge (50) proves the >= was the right choice."
+    }
+  ]
+}

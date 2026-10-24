@@ -1,0 +1,131 @@
+{
+  "unitId": "u58",
+  "lessonId": "u58l03",
+  "title": "Trace the count",
+  "idea": "Predict the counter's value pass by pass; see it rise only on matches. Thinking-heavy.",
+  "exercises": [
+    {
+      "id": "u58l03e01",
+      "type": "orderBlocks",
+      "prompt": "nums = [5, 2, 9, 1]\ncount = 0\nfor n in nums:\n    if n > 3:\n        count = count + 1\n\nPut the count after each item in order (start 0).",
+      "blocks": [
+        "5 > 3: count 1",
+        "2 not > 3: count 1",
+        "9 > 3: count 2",
+        "1 not > 3: count 2"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "5 and 9 match; 2 and 1 don't. Count ends at 2."
+    },
+    {
+      "id": "u58l03e02",
+      "type": "multipleChoice",
+      "prompt": "For nums = [5, 2, 9, 1], how many are greater than 3?",
+      "options": [
+        "2",
+        "3",
+        "4",
+        "1"
+      ],
+      "answer": 0,
+      "explanation": "5 and 9 — a count of 2."
+    },
+    {
+      "id": "u58l03e03",
+      "type": "multipleChoice",
+      "prompt": "nums = [10, 20, 30]\ncount = 0\nfor n in nums:\n    if n >= 10:\n        count = count + 1\nprint(count)\n\nWhat prints?",
+      "options": [
+        "3 — all match",
+        "0",
+        "10",
+        "2"
+      ],
+      "answer": 0,
+      "explanation": "Every value is >= 10, so each adds 1: count is 3."
+    },
+    {
+      "id": "u58l03e04",
+      "type": "multipleChoice",
+      "prompt": "What if the +1 is OUTSIDE the if (just inside the loop)?\n\ncount = 0\nfor n in nums:\n    count = count + 1",
+      "options": [
+        "It counts EVERY item, ignoring any rule",
+        "It counts matches only",
+        "It totals the values",
+        "It prints each item"
+      ],
+      "answer": 0,
+      "explanation": "Without the if guard, every pass adds 1 — that counts all items, not just matches."
+    },
+    {
+      "id": "u58l03e05",
+      "type": "trueFalse",
+      "prompt": "The count only changes on passes where the if condition is true.",
+      "answer": true,
+      "explanation": "The +1 is inside the if, so non-matching passes leave the count alone."
+    },
+    {
+      "id": "u58l03e06",
+      "type": "multipleChoice",
+      "prompt": "nums = [2, 4, 6, 8]\ncount = 0\nfor n in nums:\n    if n % 2 == 0:\n        count = count + 1\nprint(count)\n\nWhat prints (how many even)?",
+      "options": [
+        "4",
+        "2",
+        "0",
+        "8"
+      ],
+      "answer": 0,
+      "explanation": "All four are even, so count is 4."
+    },
+    {
+      "id": "u58l03e07",
+      "type": "multipleChoice",
+      "prompt": "A learner starts count = 1 by mistake, then counts matches in [5, 5]. Both match >3. What count do they get?",
+      "options": [
+        "3 — one too many",
+        "2",
+        "1",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "Starting at 1 adds a phantom match: 1 + 2 = 3. Counts must start at 0."
+    },
+    {
+      "id": "u58l03e08",
+      "type": "multipleChoice",
+      "prompt": "nums = []\ncount = 0\nfor n in nums:\n    if n > 0:\n        count = count + 1\nprint(count)\n\nWhat prints?",
+      "options": [
+        "0",
+        "an error",
+        "nothing",
+        "1"
+      ],
+      "answer": 0,
+      "explanation": "Empty list: the loop never runs, so count stays 0."
+    },
+    {
+      "id": "u58l03e09",
+      "type": "trueFalse",
+      "prompt": "After the loop, 'count' holds how many values matched the rule.",
+      "answer": true,
+      "explanation": "That's the answer to 'how many fit the rule?'."
+    },
+    {
+      "id": "u58l03e10",
+      "type": "multipleChoice",
+      "prompt": "To count matches correctly you need, in order...",
+      "options": [
+        "start at 0, loop, +1 only inside the if",
+        "+1 always, then an if",
+        "start at the first value",
+        "add the value, not 1"
+      ],
+      "answer": 0,
+      "explanation": "Zero start, walk the list, and add 1 only when the rule holds."
+    }
+  ]
+}

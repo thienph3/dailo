@@ -1,0 +1,140 @@
+{
+  "unitId": "u70",
+  "lessonId": "u70l02",
+  "title": "Define once, use many times",
+  "idea": "MEET: the key idea - you set up a named job ONCE, then use it as often as you like. No code.",
+  "exercises": [
+    {
+      "id": "u70l02e01",
+      "type": "multipleChoice",
+      "prompt": "You name a job 'print_border'. How many times can you then USE that name in your plan?",
+      "options": [
+        "As many times as you need",
+        "Exactly once, ever",
+        "Only zero times",
+        "Only on the first line"
+      ],
+      "answer": 0,
+      "explanation": "Name it once, use it as often as you like. That reuse is the main reason to name a job."
+    },
+    {
+      "id": "u70l02e02",
+      "type": "trueFalse",
+      "prompt": "Setting up the named job and using the named job are TWO different things.",
+      "answer": true,
+      "explanation": "Yes. First you describe the job (set it up / define it). Then, separately, you use it. Keep them apart."
+    },
+    {
+      "id": "u70l02e03",
+      "type": "multipleChoice",
+      "prompt": "A plan says: set up 'print_border', then use print_border, print the title, use print_border again. How many times is the border job USED?",
+      "options": [
+        "Twice",
+        "Once",
+        "Three times",
+        "Zero"
+      ],
+      "answer": 0,
+      "explanation": "It's used twice - top and bottom. It was only SET UP once. Define once, use many: here, twice."
+    },
+    {
+      "id": "u70l02e04",
+      "type": "orderBlocks",
+      "prompt": "Order a plan that frames a title with a border, using a named job 'print_border'.",
+      "blocks": [
+        "Use print_border (bottom)",
+        "Use print_border (top)",
+        "Print the title"
+      ],
+      "answer": [
+        1,
+        2,
+        0
+      ],
+      "explanation": "Border on top, title in the middle, border on the bottom. The one named job is used twice."
+    },
+    {
+      "id": "u70l02e05",
+      "type": "multipleChoice",
+      "prompt": "Why is 'define once, use many times' better than copying the steps each time?",
+      "options": [
+        "One place to read and fix, used everywhere",
+        "It uses more lines",
+        "It hides the job",
+        "Copies are always safer"
+      ],
+      "answer": 0,
+      "explanation": "With one definition, a change happens in one place and every use gets it. Copies would each need fixing."
+    },
+    {
+      "id": "u70l02e06",
+      "type": "multiSelect",
+      "prompt": "Which situations suit 'define once, use many times'? (Pick all.)",
+      "options": [
+        "A border printed at top and bottom",
+        "A greeting shown for several players",
+        "A one-off single print never repeated",
+        "A divider drawn between each section"
+      ],
+      "answer": [
+        0,
+        1,
+        3
+      ],
+      "explanation": "Repeated jobs benefit most. A truly one-off job doesn't need naming - it's used only once."
+    },
+    {
+      "id": "u70l02e07",
+      "type": "matchPairs",
+      "prompt": "Match the idea to its meaning.",
+      "pairs": [
+        {
+          "left": "define a sub-plan",
+          "right": "describe the job and give it a name"
+        },
+        {
+          "left": "use a sub-plan",
+          "right": "make the job happen by its name"
+        },
+        {
+          "left": "reuse a sub-plan",
+          "right": "use the same named job again"
+        }
+      ],
+      "explanation": "Defining sets the job up; using runs it; reusing runs it again. These are the ideas you'll soon code."
+    },
+    {
+      "id": "u70l02e08",
+      "type": "trueFalse",
+      "prompt": "If you only ever need a job once, naming it is still usually worth the effort.",
+      "answer": false,
+      "explanation": "Not usually. Naming shines when a job repeats or is important enough to label. A true one-off can stay inline."
+    },
+    {
+      "id": "u70l02e09",
+      "type": "multipleChoice",
+      "prompt": "REVIEW: what other tool in the course lets you repeat the same steps many times?",
+      "options": [
+        "a loop - repeats steps over a sequence",
+        "a single variable",
+        "print() alone",
+        "a comparison"
+      ],
+      "answer": 0,
+      "explanation": "Loops also repeat work. A named sub-plan is for a job you call by name at chosen moments - different, both useful."
+    },
+    {
+      "id": "u70l02e10",
+      "type": "multipleChoice",
+      "prompt": "The phrase to remember:",
+      "options": [
+        "define once, use many times",
+        "define many, use once",
+        "never define",
+        "always copy"
+      ],
+      "answer": 0,
+      "explanation": "Define the job once, use its name as often as needed. That's the power a named sub-plan gives you."
+    }
+  ]
+}

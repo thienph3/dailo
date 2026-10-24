@@ -1,0 +1,121 @@
+{
+  "unitId": "u07",
+  "lessonId": "u07l04",
+  "title": "Writing a plain-English plan",
+  "idea": "A plan is the steps written in plain words, in order, before any code. This is the P step.",
+  "exercises": [
+    {
+      "id": "u07l04e01",
+      "type": "multipleChoice",
+      "prompt": "What is a 'plan' in programming?",
+      "options": [
+        "The steps written in plain words, in order, before coding",
+        "The finished program",
+        "A kind of error",
+        "The computer's screen"
+      ],
+      "answer": 0,
+      "explanation": "A plan is your steps in plain words. It's a map you write before you code."
+    },
+    {
+      "id": "u07l04e02",
+      "type": "trueFalse",
+      "prompt": "A good plan uses plain words, not code.",
+      "answer": true,
+      "explanation": "Yes. A plan is for YOU to think clearly. Plain words like 'show the greeting' are perfect."
+    },
+    {
+      "id": "u07l04e03",
+      "type": "multipleChoice",
+      "prompt": "Which is a good plain-English plan step?",
+      "options": [
+        "Show the word Hello",
+        "xyz123",
+        "aaaaaa",
+        "???"
+      ],
+      "answer": 0,
+      "explanation": "'Show the word Hello' is clear and in plain words. A plan step should read like a simple sentence."
+    },
+    {
+      "id": "u07l04e04",
+      "type": "orderBlocks",
+      "prompt": "Task: show a name, then a job title. Order the plain-English plan.",
+      "blocks": [
+        "Step 1: show the name",
+        "Step 2: show the job title"
+      ],
+      "answer": [0, 1],
+      "explanation": "Name first, then the job title. A numbered plan in order is easy to follow."
+    },
+    {
+      "id": "u07l04e05",
+      "type": "multiSelect",
+      "prompt": "Which of these belong in a plain-English plan for 'show a greeting and a goodbye'?",
+      "options": [
+        "Show the greeting",
+        "Show the goodbye",
+        "Delete the computer",
+        "Show a random number"
+      ],
+      "answer": [0, 1],
+      "explanation": "Only the greeting and the goodbye match the task. A plan sticks to what was asked."
+    },
+    {
+      "id": "u07l04e06",
+      "type": "matchPairs",
+      "prompt": "Match each rhythm step to what you do.",
+      "pairs": [
+        { "left": "Example", "right": "Work out the expected output by hand" },
+        { "left": "Plan", "right": "Write the steps in plain words, in order" },
+        { "left": "Check", "right": "Compare the real output to the example" }
+      ],
+      "explanation": "Example, Plan, then Check. The plan is the middle piece that guides your code."
+    },
+    {
+      "id": "u07l04e07",
+      "type": "trueFalse",
+      "prompt": "You should write the plan AFTER the program is finished.",
+      "answer": false,
+      "explanation": "No — the plan comes first. It guides what code you write. Plan, then code, then check."
+    },
+    {
+      "id": "u07l04e08",
+      "type": "orderBlocks",
+      "prompt": "Task: welcome a visitor with Hello, then their name, then Please come in. Order the plan.",
+      "blocks": [
+        "Step 1: show Hello",
+        "Step 2: show the visitor's name",
+        "Step 3: show Please come in"
+      ],
+      "answer": [0, 1, 2],
+      "explanation": "Three plain-English steps in the order the task gave them. That's a complete little plan."
+    },
+    {
+      "id": "u07l04e09",
+      "type": "multipleChoice",
+      "prompt": "Why write a plan in plain words instead of jumping straight to code?",
+      "options": [
+        "It helps you think clearly before you type",
+        "Because code is not allowed in this course",
+        "To make the task take longer",
+        "Plans are just for decoration"
+      ],
+      "answer": 0,
+      "explanation": "Planning in plain words lets you catch mistakes in your thinking before you ever type code."
+    },
+    {
+      "id": "u07l04e10",
+      "type": "multipleChoice",
+      "prompt": "A plan should have how many steps for a small lap-1 task?",
+      "options": [
+        "About 2 or 3, each a plain-words line",
+        "At least 50",
+        "Exactly 1, always",
+        "None — plans are optional"
+      ],
+      "answer": 0,
+      "explanation": "Two or three clear steps is just right for now. Short, ordered, plain words — that's a great plan!"
+    }
+  ]
+}

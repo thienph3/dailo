@@ -1,0 +1,128 @@
+{
+  "unitId": "u45",
+  "lessonId": "u45l05",
+  "title": "Trace a while loop by hand",
+  "idea": "Write out the control value each pass to predict exactly what a loop does.",
+  "exercises": [
+    {
+      "type": "multipleChoice",
+      "prompt": "The best way to be sure what a while loop does is to...",
+      "options": [
+        "Trace the control value pass by pass",
+        "Guess from the shape",
+        "Run it a hundred times",
+        "Change the condition"
+      ],
+      "answer": 0,
+      "explanation": "Writing i's value each pass -- and when the condition turns false -- tells you exactly what happens.",
+      "id": "u45l05e01"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Trace it. What is the LAST number printed?\n\ni = 2\nwhile i <= 8:\n    print(i)\n    i = i + 3",
+      "options": [
+        "8",
+        "11",
+        "9",
+        "2"
+      ],
+      "answer": 0,
+      "explanation": "i is 2, 5, 8 (all pass), then 11. At i = 11 the condition 11 <= 8 is false, so the last printed is 8.",
+      "id": "u45l05e02"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "How many passes does this loop make?\n\nn = 10\nwhile n > 4:\n    n = n - 2",
+      "options": [
+        "3",
+        "4",
+        "5",
+        "forever"
+      ],
+      "answer": 0,
+      "explanation": "n goes 10 -> 8 -> 6 -> 4. Three subtractions bring it to 4, where n > 4 is false. So three passes.",
+      "id": "u45l05e03"
+    },
+    {
+      "type": "orderBlocks",
+      "prompt": "Order the values i takes in this loop, then the stop.\n\ni = 1\nwhile i < 4:\n    print(i)\n    i = i + 1",
+      "blocks": [
+        "i = 1 (print 1)",
+        "i = 2 (print 2)",
+        "i = 3 (print 3)",
+        "i = 4 (4 < 4 is false -- stop)"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "Trace: 1 prints, 2 prints, 3 prints, then i = 4 fails the condition and the loop stops.",
+      "id": "u45l05e04"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "When you trace, you should also check the pass where the condition first becomes false -- that's where it stops.",
+      "answer": true,
+      "explanation": "True. The stopping pass is where the condition fails. Finding that value tells you the last thing the loop did.",
+      "id": "u45l05e05"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "What is the final value of total?\n\ntotal = 0\ni = 1\nwhile i <= 4:\n    total = total + i\n    i = i + 1\nprint(total)",
+      "options": [
+        "10",
+        "6",
+        "4",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "total adds 1+2+3+4 = 10. Trace: after i=1 total 1, i=2 total 3, i=3 total 6, i=4 total 10, then stop.",
+      "id": "u45l05e06"
+    },
+    {
+      "type": "fillBlank",
+      "prompt": "Trace to fill the blank. After this loop, i equals ____:\n\ni = 0\nwhile i < 3:\n    i = i + 1",
+      "answer": "3",
+      "acceptable": [
+        "3"
+      ],
+      "explanation": "i goes 0->1->2->3. At i = 3 the condition 3 < 3 is false, so the loop stops with i equal to 3.",
+      "id": "u45l05e07"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "What shows?\n\nn = 1\nwhile n < 20:\n    print(n)\n    n = n * 2",
+      "options": [
+        "1\n2\n4\n8\n16",
+        "1\n2\n4\n8\n16\n32",
+        "1\n2\n3\n4",
+        "forever"
+      ],
+      "answer": 0,
+      "explanation": "n doubles: 1,2,4,8,16, then 32. At 32 the condition 32 < 20 is false, so it stops. Doubling still makes progress.",
+      "id": "u45l05e08"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Multiplying the control value each pass can still reach the stop, as long as it grows past the limit.",
+      "answer": true,
+      "explanation": "True. 1,2,4,8,16,32 grows fast but still crosses 20, so the loop ends. Progress just means heading past the boundary.",
+      "id": "u45l05e09"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Why trace small numbers instead of the real large ones?",
+      "options": [
+        "Small cases show the same logic but are quick to check by hand",
+        "Large numbers change the logic",
+        "Tracing only works on evens",
+        "You can't trace big loops at all"
+      ],
+      "answer": 0,
+      "explanation": "The logic is identical; small numbers just make the by-hand trace fast. If it's right for small, the shape is right.",
+      "id": "u45l05e10"
+    }
+  ]
+}

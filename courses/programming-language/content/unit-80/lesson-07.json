@@ -1,0 +1,136 @@
+{
+  "unitId": "u80",
+  "lessonId": "u80l07",
+  "title": "When nothing matches",
+  "idea": "MEET (thinking). The 'all-fail' case: what should a filter or search do when NO item passes the test?",
+  "exercises": [
+    {
+      "id": "u80l07e01",
+      "type": "multipleChoice",
+      "prompt": "You count scores that pass (>= 50) in [10, 20, 30] — none pass. The count is...",
+      "options": [
+        "0 — the counter never goes up",
+        "An error",
+        "3",
+        "undefined"
+      ],
+      "answer": 0,
+      "explanation": "No item passes, so the counter stays at its starting 0. 'None match' gives a count of 0 — safe and correct."
+    },
+    {
+      "id": "u80l07e02",
+      "type": "multipleChoice",
+      "prompt": "You build a list of passing scores, but none pass. The result list is...",
+      "options": [
+        "An empty list []",
+        "An error",
+        "A list of zeros",
+        "The original list"
+      ],
+      "answer": 0,
+      "explanation": "Nothing gets appended, so the collected list stays empty. 'None match' yields an empty result list."
+    },
+    {
+      "id": "u80l07e03",
+      "type": "trueFalse",
+      "prompt": "An empty RESULT (count 0 or empty list) from an all-fail input is usually a correct, expected outcome.",
+      "answer": true,
+      "explanation": "Yes. If nothing matches, zero matches is the right answer. The all-fail case is normal, not a bug."
+    },
+    {
+      "id": "u80l07e04",
+      "type": "multipleChoice",
+      "prompt": "You then want the AVERAGE of only the passing scores, but none passed. What's the danger?",
+      "options": [
+        "Averaging 0 matches divides by 0 — a crash unless guarded",
+        "The average is the first score",
+        "It is always 100",
+        "No danger"
+      ],
+      "answer": 0,
+      "explanation": "A filtered-then-averaged plan can hit count 0 when nothing passes. That empty-filter case needs the same divide guard."
+    },
+    {
+      "id": "u80l07e05",
+      "type": "multipleChoice",
+      "prompt": "You search a list for a value that isn't there. A good plan should...",
+      "options": [
+        "report 'not found' clearly, not pretend it found something",
+        "crash",
+        "return the first item",
+        "return 0 and hope"
+      ],
+      "answer": 0,
+      "explanation": "The not-found case is real. A clean search reports 'not found' rather than silently returning a wrong value."
+    },
+    {
+      "id": "u80l07e06",
+      "type": "matchPairs",
+      "prompt": "Match each all-fail situation to its sensible result.",
+      "pairs": [
+        {
+          "left": "Count passers, none pass",
+          "right": "0"
+        },
+        {
+          "left": "Collect passers, none pass",
+          "right": "An empty list"
+        },
+        {
+          "left": "Average passers, none pass",
+          "right": "Guard first — don't divide by 0"
+        }
+      ],
+      "explanation": "Counting and collecting handle 'none' safely (0, empty). Averaging 'none' must be guarded against the zero divisor."
+    },
+    {
+      "id": "u80l07e07",
+      "type": "multiSelect",
+      "prompt": "Which all-fail results are SAFE without a guard? (Select all that apply.)",
+      "options": [
+        "A count of 0",
+        "An empty collected list",
+        "An average over 0 matches",
+        "Dividing a total by 0 matches"
+      ],
+      "answer": [
+        0,
+        1
+      ],
+      "explanation": "Count 0 and an empty list are safe. Averaging or dividing by 0 matches is not — those need a guard."
+    },
+    {
+      "id": "u80l07e08",
+      "type": "trueFalse",
+      "prompt": "The all-fail case and the empty-list case can lead to the SAME danger: a count of zero to divide by.",
+      "answer": true,
+      "explanation": "Yes. Both an empty input and an all-fail filter end with 0 matches. If you then divide, both need the same guard."
+    },
+    {
+      "id": "u80l07e09",
+      "type": "multipleChoice",
+      "prompt": "REVIEW: filtering keeps only items that pass a test. So 'all fail' means the kept list is...",
+      "options": [
+        "empty",
+        "full",
+        "halved",
+        "reversed"
+      ],
+      "answer": 0,
+      "explanation": "If every item fails the test, none are kept — the filtered list is empty. That's the all-fail outcome of a filter."
+    },
+    {
+      "id": "u80l07e10",
+      "type": "multipleChoice",
+      "prompt": "The lesson in one line:",
+      "options": [
+        "Plan for 'nothing matches' — count 0 and empty lists are fine, but averaging them needs a guard",
+        "Something always matches",
+        "All-fail inputs are invalid",
+        "Searches can't fail"
+      ],
+      "answer": 0,
+      "explanation": "The all-fail case is real. Counting and collecting handle it safely; averaging or dividing over zero matches needs a guard."
+    }
+  ]
+}

@@ -1,0 +1,127 @@
+{
+  "unitId": "u96",
+  "lessonId": "u96l09",
+  "title": "Loop back: a bigger problem with a helper and a nested loop",
+  "idea": "LOOP (review): no new concept. Walk a multi-part problem that weaves a helper function, a nested loop over pairs, and a counter - the fullest weave, from blocks you know.",
+  "exercises": [
+    {
+      "id": "u96l09e01",
+      "type": "multipleChoice",
+      "prompt": "UNSEEN PROBLEM: 'Given heights [60, 62, 70, 61], count how many PAIRS differ by MORE than 5, using a reusable gap rule.' What is the output?",
+      "options": [
+        "A count of pairs whose gap is over 5",
+        "The tallest height",
+        "The average height",
+        "A new list of gaps"
+      ],
+      "answer": 0,
+      "explanation": "One number: pairs with a gap over 5. 'Pairs' signals nested loops; 'reusable rule' signals a helper function."
+    },
+    {
+      "id": "u96l09e02",
+      "type": "multipleChoice",
+      "prompt": "Example by hand on [60, 62, 70, 61]. Gaps: 60&62=2, 60&70=10, 60&61=1, 62&70=8, 62&61=1, 70&61=9. How many are over 5?",
+      "options": ["3", "2", "6", "1"],
+      "answer": 0,
+      "explanation": "Gaps over 5 are 10, 8, and 9 - three pairs. That hand count is our check value."
+    },
+    {
+      "id": "u96l09e03",
+      "type": "multipleChoice",
+      "prompt": "Why put the gap calculation in a HELPER function?",
+      "options": [
+        "It names the sub-plan ('how far apart?') once, keeping the nested loop readable and the rule reusable",
+        "Functions make nested loops run faster",
+        "A nested loop cannot contain math otherwise",
+        "It is required by Python"
+      ],
+      "answer": 0,
+      "explanation": "A helper hides the 'make the gap positive' detail behind a clear name, so the loop reads like the plan. Clarity is the point."
+    },
+    {
+      "id": "u96l09e04",
+      "type": "orderBlocks",
+      "prompt": "Plan the solution.",
+      "blocks": [
+        "Write a helper gap(a, b) that returns how far apart two heights are",
+        "Start a counter at 0",
+        "For each pair (i, and a later j), if gap is over 5, add 1",
+        "Show the counter"
+      ],
+      "answer": [0, 1, 2, 3],
+      "explanation": "Define the gap rule, init the count, loop every unique pair and test the rule, then report. Helper + nested loop + counter."
+    },
+    {
+      "id": "u96l09e05",
+      "type": "orderBlocks",
+      "prompt": "Build the helper (make the gap positive without any builtin).",
+      "blocks": [
+        "def gap(a, b):",
+        "d = a - b",
+        "if d < 0:",
+        "d = 0 - d",
+        "return d"
+      ],
+      "answer": [0, 1, 2, 3, 4],
+      "explanation": "Subtract, and if the result is negative flip its sign with 0 - d, then return the distance. No abs builtin needed - we build it."
+    },
+    {
+      "id": "u96l09e06",
+      "type": "orderBlocks",
+      "prompt": "Build the nested loop that counts far-apart pairs.",
+      "blocks": [
+        "heights = [60, 62, 70, 61]",
+        "far = 0",
+        "for i in range(len(heights)):",
+        "for j in range(i + 1, len(heights)):",
+        "if gap(heights[i], heights[j]) > 5:",
+        "far = far + 1",
+        "print(far)"
+      ],
+      "answer": [0, 1, 2, 3, 4, 5, 6],
+      "explanation": "Outer i, inner j starting at i+1 (unique pairs), call the helper, and count when the gap exceeds 5. The helper keeps the loop body short."
+    },
+    {
+      "id": "u96l09e07",
+      "type": "fillBlank",
+      "prompt": "Complete the pair test for 'more than 5':\n\nif gap(heights[i], heights[j]) ____ 5:\n    far = far + 1",
+      "answer": ">",
+      "acceptable": [">"],
+      "explanation": "'More than 5' is strictly greater, >. A gap of exactly 5 would NOT count - deciding that boundary matters."
+    },
+    {
+      "id": "u96l09e08",
+      "type": "multipleChoice",
+      "prompt": "Check. The code prints 3, matching your hand count. What does this confirm?",
+      "options": [
+        "The helper, the unique-pairs loop, and the counter all work together",
+        "The helper is unused",
+        "Pairs were double-counted",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "Matching 3 confirms the whole weave: j starting at i+1 gives unique pairs, the helper computes each gap, and the counter tallies the matches."
+    },
+    {
+      "id": "u96l09e09",
+      "type": "multipleChoice",
+      "prompt": "Re-check with [10, 11]. The single pair has a gap of 1. What prints?",
+      "options": ["0", "1", "2", "-1"],
+      "answer": 0,
+      "explanation": "One pair, gap 1, which is not over 5, so far stays 0. The solution generalizes to a two-item list."
+    },
+    {
+      "id": "u96l09e10",
+      "type": "multipleChoice",
+      "prompt": "How many separate laps' ideas did this one problem weave together?",
+      "options": [
+        "Several: a function (Lap 5), a nested loop (Lap 6), a counter and decision (Laps 2-3), and building abs by hand (Lap 0 math)",
+        "Just one",
+        "None - it used a new tool",
+        "Only printing"
+      ],
+      "answer": 0,
+      "explanation": "A single realistic problem braids ideas from across the whole course. That recombination, with no new syntax, is exactly what Lap 6 closes on."
+    }
+  ]
+}

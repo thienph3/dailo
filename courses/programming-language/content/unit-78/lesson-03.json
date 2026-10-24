@@ -1,0 +1,136 @@
+{
+  "unitId": "u78",
+  "lessonId": "u78l03",
+  "title": "Helper in a loop with an accumulator",
+  "idea": "TOOL. A helper inside a loop feeding an accumulator (running total). No sum().",
+  "exercises": [
+    {
+      "type": "multipleChoice",
+      "prompt": "Goal: total of each item's double for [1, 2, 3]. First set up...",
+      "options": [
+        "a total starting at 0",
+        "nothing",
+        "a list of doubles only",
+        "max"
+      ],
+      "answer": 0,
+      "explanation": "Accumulate: start total at 0, add each helper result.",
+      "id": "u78l03e01"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Predict:\n\ndef double(n):\n    return n * 2\n\ntotal = 0\nfor n in [1, 2, 3]:\n    total = total + double(n)\nprint(total)",
+      "options": [
+        "12",
+        "6",
+        "3",
+        "error"
+      ],
+      "answer": 0,
+      "explanation": "2+4+6 = 12.",
+      "id": "u78l03e02"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "We add the helper's RETURNED value to the running total each loop.",
+      "answer": true,
+      "explanation": "Yes — call the helper, add its answer to total.",
+      "id": "u78l03e03"
+    },
+    {
+      "type": "orderBlocks",
+      "prompt": "Arrange: total each item's square.",
+      "blocks": [
+        "def square(n):",
+        "    return n * n",
+        "total = 0",
+        "for n in [2, 3]:",
+        "    total = total + square(n)",
+        "print(total)"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "explanation": "4 + 9 = 13.",
+      "id": "u78l03e04"
+    },
+    {
+      "type": "fillBlank",
+      "prompt": "Add each helper result to the total:\n\nfor n in nums:\n    total = total + ____(n)\n\n(helper is double)",
+      "answer": "double",
+      "acceptable": [
+        "double"
+      ],
+      "explanation": "Accumulate double(n) each loop.",
+      "id": "u78l03e05"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Predict:\n\ndef plus1(n):\n    return n + 1\n\ntotal = 0\nfor n in [10, 20]:\n    total = total + plus1(n)\nprint(total)",
+      "options": [
+        "32",
+        "30",
+        "2",
+        "error"
+      ],
+      "answer": 0,
+      "explanation": "11 + 21 = 32.",
+      "id": "u78l03e06"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Why not use sum() here?",
+      "options": [
+        "This course computes totals by hand with a loop; sum() is not taught",
+        "sum is broken",
+        "sum is slower",
+        "it would work the same"
+      ],
+      "answer": 0,
+      "explanation": "The accumulate pattern is the point — add each helper result yourself.",
+      "id": "u78l03e07"
+    },
+    {
+      "type": "multiSelect",
+      "prompt": "What does this pattern combine? (choose all)",
+      "options": [
+        "A helper (one item's job)",
+        "A loop (repeat)",
+        "An accumulator (running total)",
+        "sorted()"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Helper + loop + accumulator, all in scope. No builtins.",
+      "id": "u78l03e08"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "total must be created BEFORE the loop, not inside it.",
+      "answer": true,
+      "explanation": "Start at 0 before looping, or it would reset each pass.",
+      "id": "u78l03e09"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Lesson point:",
+      "options": [
+        "Call a helper per item and accumulate its results into a total",
+        "Totals need sum()",
+        "Helpers can't be totalled",
+        "Accumulators go after print"
+      ],
+      "answer": 0,
+      "explanation": "Helper-in-loop feeding an accumulator — a core pattern.",
+      "id": "u78l03e10"
+    }
+  ]
+}

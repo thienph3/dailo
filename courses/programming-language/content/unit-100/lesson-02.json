@@ -1,0 +1,152 @@
+{
+  "unitId": "u100",
+  "lessonId": "u100l02",
+  "title": "Grand finale: convert Celsius to Fahrenheit",
+  "idea": "GUIDED FINALE. Translate a real formula into code with correct operator precedence — every value named, nothing hardcoded loosely.",
+  "problem": "Convert 20 degrees Celsius to Fahrenheit using F = C * 9 / 5 + 32 (answer 68).",
+  "exercises": [
+    {
+      "id": "u100l02e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: convert 20C to Fahrenheit. OUTPUT is...",
+      "options": [
+        "One number: the Fahrenheit temperature",
+        "The Celsius value again",
+        "A count",
+        "True/False"
+      ],
+      "answer": 0,
+      "explanation": "Output is the converted temperature. One formula, applied once."
+    },
+    {
+      "id": "u100l02e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "The formula is F = C * 9 / 5 + 32. The INPUT we're given is...",
+      "options": [
+        "The Celsius value (20)",
+        "32",
+        "9",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "Input is C = 20. The 9, 5, 32 are parts of the formula. Name them or use them as written — just don't drop any."
+    },
+    {
+      "id": "u100l02e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example by hand, step by step: 20 * 9 = 180, then 180 / 5 = 36, then 36 + 32 = ?",
+      "options": [
+        "68",
+        "52",
+        "100",
+        "41"
+      ],
+      "answer": 0,
+      "explanation": "68. Working the formula by hand confirms both the answer AND the order of operations."
+    },
+    {
+      "id": "u100l02e04",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Why does 20 * 9 / 5 happen BEFORE + 32?",
+      "options": [
+        "* and / run before + (precedence)",
+        "Left to right only",
+        "+ is always first",
+        "Order is random"
+      ],
+      "answer": 0,
+      "explanation": "Multiplication and division bind tighter than addition. The formula relies on that precedence — no extra parentheses needed."
+    },
+    {
+      "id": "u100l02e05",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Plan it. Order the steps.",
+      "blocks": [
+        "Apply F = C * 9 / 5 + 32",
+        "Name the Celsius input",
+        "Show the Fahrenheit result"
+      ],
+      "answer": [
+        1,
+        0,
+        2
+      ],
+      "explanation": "Name the input, apply the formula, show the result. The precedence does the sequencing for us."
+    },
+    {
+      "id": "u100l02e06",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Which line correctly encodes F = C * 9 / 5 + 32 for C = 20?",
+      "options": [
+        "fahrenheit = celsius * 9 / 5 + 32",
+        "fahrenheit = celsius + 9 * 5 / 32",
+        "fahrenheit = (celsius + 32) * 9",
+        "fahrenheit = celsius * (9 / 5 + 32)"
+      ],
+      "answer": 0,
+      "explanation": "Match the formula exactly: * and / first, then + 32. The other options change the math with wrong grouping."
+    },
+    {
+      "id": "u100l02e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code it. Arrange the lines.",
+      "blocks": [
+        "fahrenheit = celsius * 9 / 5 + 32",
+        "celsius = 20",
+        "print(fahrenheit)"
+      ],
+      "answer": [
+        1,
+        0,
+        2
+      ],
+      "explanation": "Name celsius, apply the formula, print. The input value is named, not buried in the expression."
+    },
+    {
+      "id": "u100l02e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Complete the conversion:\n\ncelsius = 20\nfahrenheit = celsius * 9 / 5 ____ 32\nprint(fahrenheit)",
+      "answer": "+",
+      "acceptable": [
+        "+"
+      ],
+      "explanation": "Add 32 last. Because * and / already ran, this gives 36 + 32 = 68."
+    },
+    {
+      "id": "u100l02e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Run it: prints 68 (or 68.0). Hand said 68. Verdict?",
+      "options": [
+        "Passes",
+        "Fails",
+        "Unknown",
+        "Rewrite example"
+      ],
+      "answer": 0,
+      "explanation": "Matches. You translated a real formula faithfully, trusting operator precedence."
+    },
+    {
+      "id": "u100l02e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Re-run with celsius = 0. What Fahrenheit prints?",
+      "options": [
+        "32",
+        "0",
+        "68",
+        "100"
+      ],
+      "answer": 0,
+      "explanation": "0 * 9 / 5 = 0, then + 32 = 32. Freezing point, correct! The formula works for any input."
+    }
+  ]
+}

@@ -1,0 +1,136 @@
+{
+  "unitId": "u35",
+  "lessonId": "u35l08",
+  "title": "Does the thing change each time?",
+  "idea": "Sometimes a repetition does the exact same thing; sometimes it does almost the same thing with a small change each pass. Noticing 'what changes' prepares you for counting loops.",
+  "exercises": [
+    {
+      "id": "u35l08e01",
+      "type": "multipleChoice",
+      "prompt": "'Print Hi 3 times.' Does anything change from pass to pass?",
+      "options": [
+        "No — every pass prints the same Hi",
+        "Yes — the word changes",
+        "Yes — the count changes",
+        "Yes — the screen color changes"
+      ],
+      "answer": 0,
+      "explanation": "Same Hi each pass — nothing changes. This is the simplest repetition."
+    },
+    {
+      "id": "u35l08e02",
+      "type": "multipleChoice",
+      "prompt": "'Print the numbers 1, 2, 3.' Does anything change from pass to pass?",
+      "options": [
+        "Yes — the number printed goes up each pass",
+        "No — it prints 1 every time",
+        "No — nothing prints",
+        "Yes — the word changes"
+      ],
+      "answer": 0,
+      "explanation": "Each pass prints a different number: 1, then 2, then 3. Something changes — the current number."
+    },
+    {
+      "id": "u35l08e03",
+      "type": "trueFalse",
+      "prompt": "A repetition where the printed value changes each pass is still a repetition.",
+      "answer": true,
+      "explanation": "Yes — it still repeats one action; the action just uses a changing value. Later units give that value a name."
+    },
+    {
+      "id": "u35l08e04",
+      "type": "matchPairs",
+      "prompt": "Match each repetition to whether something changes each pass.",
+      "pairs": [
+        {
+          "left": "Print Go 4 times",
+          "right": "Same every pass"
+        },
+        {
+          "left": "Print 1, then 2, then 3",
+          "right": "Changes each pass"
+        },
+        {
+          "left": "Beep 5 times",
+          "right": "Same every pass"
+        }
+      ],
+      "explanation": "Repeating the identical action is 'same'; using a value that grows is 'changes'. Both are repetitions."
+    },
+    {
+      "id": "u35l08e05",
+      "type": "multipleChoice",
+      "prompt": "'Count down 3, 2, 1.' What changes each pass?",
+      "options": [
+        "The number shown goes down each pass",
+        "Nothing changes",
+        "The action stops being print",
+        "The word count changes"
+      ],
+      "answer": 0,
+      "explanation": "Same print action, but the number falls: 3, 2, 1. The changing value is the number."
+    },
+    {
+      "id": "u35l08e06",
+      "type": "multipleChoice",
+      "prompt": "Why does it matter whether something changes each pass?",
+      "options": [
+        "A changing value needs a way to track 'which pass am I on'",
+        "It changes the spelling of print",
+        "It makes the loop run backwards",
+        "It never matters"
+      ],
+      "answer": 0,
+      "explanation": "When the value changes each pass, you need the current count. Unit 38 introduces exactly that — the loop variable."
+    },
+    {
+      "id": "u35l08e07",
+      "type": "trueFalse",
+      "prompt": "'Print star 6 times' needs to know the current pass number to work.",
+      "answer": false,
+      "explanation": "It prints the same star each time, so it does NOT need the current count. Only 'changing' repetitions need that."
+    },
+    {
+      "id": "u35l08e08",
+      "type": "multipleChoice",
+      "prompt": "'Print 10, 20, 30, 40.' Describe the change each pass.",
+      "options": [
+        "The number goes up by 10 each pass",
+        "The number stays at 10",
+        "The number goes up by 1",
+        "Nothing changes"
+      ],
+      "answer": 0,
+      "explanation": "10, 20, 30, 40 — up by 10 each time. Noticing the step size (10) foreshadows range with a step."
+    },
+    {
+      "id": "u35l08e09",
+      "type": "orderBlocks",
+      "prompt": "Order these 'what changes' repetitions from no change to a bigger step.",
+      "blocks": [
+        "Print Hi 3 times (no change)",
+        "Print 1, 2, 3 (up by 1)",
+        "Print 5, 10, 15 (up by 5)"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "No change, then up by 1, then up by 5. Repetitions range from identical to steadily stepping — which is what's coming next."
+    },
+    {
+      "id": "u35l08e10",
+      "type": "multipleChoice",
+      "prompt": "You can now tell a 'same each pass' repeat from a 'changing each pass' one. Why is that handy?",
+      "options": [
+        "It tells you whether you'll need the current count later",
+        "It tells you the screen size",
+        "It removes the need to repeat",
+        "It changes the problem into a decision"
+      ],
+      "answer": 0,
+      "explanation": "Knowing if the value changes tells you whether you'll reach for the loop's current count. Great reading skill to carry forward."
+    }
+  ]
+}

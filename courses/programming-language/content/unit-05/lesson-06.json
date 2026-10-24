@@ -1,0 +1,120 @@
+{
+  "unitId": "u05",
+  "lessonId": "u05l06",
+  "title": "When the order is wrong",
+  "idea": "Same lines, wrong order, is still a fail. The Check cares about order, not just the words.",
+  "exercises": [
+    {
+      "id": "u05l06e01",
+      "type": "multipleChoice",
+      "prompt": "Expected:\nFirst\nSecond\n\nReal output:\nSecond\nFirst\n\nVerdict?",
+      "options": [
+        "Fail — the lines are in the wrong order",
+        "Pass, the words are all there",
+        "Error",
+        "Half pass"
+      ],
+      "answer": 0,
+      "explanation": "Both words appear, but in the wrong order. Line 1 should be 'First', not 'Second'. Order matters — fail."
+    },
+    {
+      "id": "u05l06e02",
+      "type": "trueFalse",
+      "prompt": "If the right lines appear but in the wrong order, it still passes.",
+      "answer": false,
+      "explanation": "No. Wrong order is a fail. Line 1 must match line 1, line 2 must match line 2, and so on."
+    },
+    {
+      "id": "u05l06e03",
+      "type": "multipleChoice",
+      "prompt": "Expected:\nReady\nSet\nGo\n\nReal output:\nReady\nGo\nSet\n\nWhich lines are out of order?",
+      "options": [
+        "Lines 2 and 3 are swapped",
+        "Line 1",
+        "None, it passes",
+        "All three"
+      ],
+      "answer": 0,
+      "explanation": "Line 1 is fine (Ready). But line 2 should be 'Set' and line 3 'Go' — they're swapped. Fail."
+    },
+    {
+      "id": "u05l06e04",
+      "type": "orderBlocks",
+      "prompt": "Expected output is: Up, then Down. Arrange the prints to match.",
+      "blocks": [
+        "print(\"Up\")",
+        "print(\"Down\")"
+      ],
+      "answer": [0, 1],
+      "explanation": "Up first, Down second — that matches the expected order. Order is part of correctness."
+    },
+    {
+      "id": "u05l06e05",
+      "type": "multipleChoice",
+      "prompt": "This code was supposed to print 'Hello' then 'Bye':\n\nprint(\"Bye\")\nprint(\"Hello\")\n\nDoes it match the expected output?",
+      "options": [
+        "No — the two lines are in the wrong order",
+        "Yes",
+        "Error",
+        "Only if run twice"
+      ],
+      "answer": 0,
+      "explanation": "The code prints Bye first, then Hello — the reverse of expected. Swapping the two lines would fix it."
+    },
+    {
+      "id": "u05l06e06",
+      "type": "orderBlocks",
+      "prompt": "The real output was wrong order. Expected: Name, City, Country. Reorder the prints to match.",
+      "blocks": [
+        "print(\"Name\")",
+        "print(\"City\")",
+        "print(\"Country\")"
+      ],
+      "answer": [0, 1, 2],
+      "explanation": "Name, City, Country — top to bottom. Fixing order often just means moving print lines."
+    },
+    {
+      "id": "u05l06e07",
+      "type": "trueFalse",
+      "prompt": "Checking order is part of checking the output.",
+      "answer": true,
+      "explanation": "Yes. A correct output has the right lines AND the right order. Both are part of the Check."
+    },
+    {
+      "id": "u05l06e08",
+      "type": "multipleChoice",
+      "prompt": "Expected:\nA\nB\nC\n\nReal output:\nA\nB\nC\n\nIs the order correct?",
+      "options": [
+        "Yes — A, B, C in order",
+        "No",
+        "Only A is correct",
+        "Error"
+      ],
+      "answer": 0,
+      "explanation": "Each line is in its expected place: A, B, C. Order is correct, so it passes."
+    },
+    {
+      "id": "u05l06e09",
+      "type": "matchPairs",
+      "prompt": "Match each real output to its verdict. (Expected is always: X, then Y.)",
+      "pairs": [
+        { "left": "X then Y", "right": "Pass" },
+        { "left": "Y then X", "right": "Fail (wrong order)" }
+      ],
+      "explanation": "Same two lines, but order decides pass or fail. X must come before Y to match."
+    },
+    {
+      "id": "u05l06e10",
+      "type": "multipleChoice",
+      "prompt": "Why does order matter in the Check?",
+      "options": [
+        "Because the program prints lines top to bottom, and the expected output has a fixed order too",
+        "It doesn't, only words matter",
+        "Because blank lines are special",
+        "Because the computer is picky for no reason"
+      ],
+      "answer": 0,
+      "explanation": "Output comes out in order, and your expected output is in a set order. A match needs both to line up."
+    }
+  ]
+}

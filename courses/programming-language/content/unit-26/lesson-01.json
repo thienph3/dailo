@@ -1,0 +1,136 @@
+{
+  "unitId": "u26",
+  "lessonId": "u26l01",
+  "title": "Meet 'and': both must be true",
+  "idea": "'and' joins two conditions into one that is True only when BOTH are True. Meet it with visible output.",
+  "exercises": [
+    {
+      "id": "u26l01e01",
+      "type": "multipleChoice",
+      "prompt": "'A and B' is True when...",
+      "options": [
+        "both A and B are True",
+        "either one is True",
+        "both are False",
+        "A is True, no matter B"
+      ],
+      "answer": 0,
+      "explanation": "'and' needs BOTH sides to be True. If either side is False, the whole thing is False."
+    },
+    {
+      "id": "u26l01e02",
+      "type": "multipleChoice",
+      "prompt": "What is the value of this?\n\nTrue and True",
+      "options": [
+        "True",
+        "False",
+        "neither",
+        "an error"
+      ],
+      "answer": 0,
+      "explanation": "Both sides are True, so 'and' gives True."
+    },
+    {
+      "id": "u26l01e03",
+      "type": "multipleChoice",
+      "prompt": "What is the value of this?\n\nTrue and False",
+      "options": [
+        "False",
+        "True",
+        "neither",
+        "an error"
+      ],
+      "answer": 0,
+      "explanation": "One side is False, so 'and' gives False. Both must be True for 'and' to be True."
+    },
+    {
+      "id": "u26l01e04",
+      "type": "multipleChoice",
+      "prompt": "What does this print?\n\nage = 20\nmoney = 50\nif age >= 18 and money >= 40:\n    print(\"Allowed\")\nelse:\n    print(\"Denied\")",
+      "options": [
+        "Allowed",
+        "Denied",
+        "both",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "20 >= 18 is True AND 50 >= 40 is True, so both sides hold and 'Allowed' prints."
+    },
+    {
+      "id": "u26l01e05",
+      "type": "multipleChoice",
+      "prompt": "Same code, but money = 30. What prints?",
+      "options": [
+        "Denied",
+        "Allowed",
+        "both",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "Now 30 >= 40 is False. With 'and', one False side makes the whole condition False, so 'Denied' prints."
+    },
+    {
+      "id": "u26l01e06",
+      "type": "trueFalse",
+      "prompt": "With 'and', if even one condition is False, the whole condition is False.",
+      "answer": true,
+      "explanation": "Yes - 'and' is strict: every part must be True, or the result is False."
+    },
+    {
+      "id": "u26l01e07",
+      "type": "matchPairs",
+      "prompt": "Match each 'and' expression to its value.",
+      "pairs": [
+        {
+          "left": "True and True",
+          "right": "True"
+        },
+        {
+          "left": "True and False",
+          "right": "False"
+        },
+        {
+          "left": "False and False",
+          "right": "False"
+        }
+      ],
+      "explanation": "Only 'True and True' is True. Any False side drags the whole 'and' to False."
+    },
+    {
+      "id": "u26l01e08",
+      "type": "fillBlank",
+      "prompt": "Join two conditions so BOTH must hold:\n\nif age >= 18 ____ has_ticket:\n    print(\"Enter\")",
+      "answer": "and",
+      "acceptable": [
+        "and"
+      ],
+      "explanation": "'and' requires both the age check and has_ticket to be True before 'Enter' prints."
+    },
+    {
+      "id": "u26l01e09",
+      "type": "multipleChoice",
+      "prompt": "Which everyday rule is an 'and'?",
+      "options": [
+        "You may enter if you are 18+ AND have a ticket",
+        "You may enter if you are 18+ OR have a ticket",
+        "You may always enter",
+        "You may never enter"
+      ],
+      "answer": 0,
+      "explanation": "'Both at once' is the signature of 'and'. Both the age and the ticket are required."
+    },
+    {
+      "id": "u26l01e10",
+      "type": "multipleChoice",
+      "prompt": "The big idea of 'and' is...",
+      "options": [
+        "combine conditions so ALL must be True",
+        "pick either condition",
+        "flip a condition",
+        "ignore conditions"
+      ],
+      "answer": 0,
+      "explanation": "'and' solves 'both ...' problems: every joined condition must be True."
+    }
+  ]
+}

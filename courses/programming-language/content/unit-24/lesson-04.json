@@ -1,0 +1,137 @@
+{
+  "unitId": "u24",
+  "lessonId": "u24l04",
+  "title": "Nothing, or something?",
+  "idea": "Spotting the 'empty' case: when a count or amount is zero, the normal message makes no sense. Think through what to say instead.",
+  "exercises": [
+    {
+      "id": "u24l04e01",
+      "type": "multipleChoice",
+      "prompt": "'You have N new messages.' What if N is 0?",
+      "options": [
+        "Better to say 'No new messages'",
+        "Still fine to say '0 new messages'",
+        "It crashes",
+        "Say '1 message'"
+      ],
+      "answer": 0,
+      "explanation": "Zero is an edge case: a special, clearer message ('No new messages') reads better than '0 new messages'."
+    },
+    {
+      "id": "u24l04e02",
+      "type": "trueFalse",
+      "prompt": "When a count is zero, the normal wording sometimes needs a different message.",
+      "answer": true,
+      "explanation": "Yes. 'No items' or 'Empty' often reads better and avoids awkward phrasing like '0 items found'."
+    },
+    {
+      "id": "u24l04e03",
+      "type": "multipleChoice",
+      "prompt": "What prints?\n\nitems = 0\nif items == 0:\n    print(\"Your cart is empty\")\nelse:\n    print(\"You have items\")",
+      "options": [
+        "Your cart is empty",
+        "You have items",
+        "0",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "items is 0, so the guard fires with the empty message. The zero case is handled clearly."
+    },
+    {
+      "id": "u24l04e04",
+      "type": "multipleChoice",
+      "prompt": "What prints?\n\nitems = 2\nif items == 0:\n    print(\"Your cart is empty\")\nelse:\n    print(\"You have items\")",
+      "options": [
+        "You have items",
+        "Your cart is empty",
+        "2",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "items is 2, so items == 0 is False; the normal branch runs: You have items."
+    },
+    {
+      "id": "u24l04e05",
+      "type": "matchPairs",
+      "prompt": "Match each empty case to a clearer message.",
+      "pairs": [
+        {
+          "left": "0 messages",
+          "right": "No new messages"
+        },
+        {
+          "left": "0 items in cart",
+          "right": "Your cart is empty"
+        },
+        {
+          "left": "0 players",
+          "right": "No players yet"
+        }
+      ],
+      "explanation": "Each zero case deserves a message that reads naturally instead of forcing a '0' into normal wording."
+    },
+    {
+      "id": "u24l04e06",
+      "type": "multipleChoice",
+      "prompt": "'Show the first score.' If there are no scores, the right move is to...",
+      "options": [
+        "say there are no scores yet",
+        "show a random number",
+        "show 0",
+        "crash"
+      ],
+      "answer": 0,
+      "explanation": "With nothing to show, a clear 'no scores yet' message beats inventing a value. Handle the empty case on purpose."
+    },
+    {
+      "id": "u24l04e07",
+      "type": "trueFalse",
+      "prompt": "Zero items and 'some items' are two different cases a good plan treats separately.",
+      "answer": true,
+      "explanation": "Right. The empty case and the normal case often need different handling - that is the edge-case habit."
+    },
+    {
+      "id": "u24l04e08",
+      "type": "multipleChoice",
+      "prompt": "Which condition checks the 'empty' case for a variable named total?",
+      "options": [
+        "if total == 0:",
+        "if total > 0:",
+        "if total < 0:",
+        "if total == 1:"
+      ],
+      "answer": 0,
+      "explanation": "total == 0 is True exactly when the total is empty/zero. That is the guard for the empty case."
+    },
+    {
+      "id": "u24l04e09",
+      "type": "multiSelect",
+      "prompt": "Select ALL situations that are an 'empty / nothing' edge case.",
+      "options": [
+        "a cart with 0 items",
+        "a team with 0 players",
+        "a list of 0 scores",
+        "a cart with 3 items"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Zero items, zero players, and zero scores are all empty cases. Three items is the normal case."
+    },
+    {
+      "id": "u24l04e10",
+      "type": "multipleChoice",
+      "prompt": "The takeaway about the empty case:",
+      "options": [
+        "Decide on purpose what to show when there is nothing",
+        "Ignore it - it rarely happens",
+        "Always show 0",
+        "Let it crash"
+      ],
+      "answer": 0,
+      "explanation": "Decide deliberately what 'nothing' should look like. A thoughtful empty message is the mark of a careful solver."
+    }
+  ]
+}

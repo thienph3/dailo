@@ -1,0 +1,139 @@
+{
+  "unitId": "u68",
+  "lessonId": "u68l01",
+  "title": "Which list tool fits?",
+  "idea": "LOOP recall: match each list problem to the right tool (sum, count, max/min, filter, search, average). No new concept.",
+  "exercises": [
+    {
+      "id": "u68l01e01",
+      "type": "multipleChoice",
+      "prompt": "'What is the total of all the scores?' Which tool?",
+      "options": [
+        "sum (accumulate over the list)",
+        "search",
+        "max",
+        "filter"
+      ],
+      "answer": 0,
+      "explanation": "A total means adding every item, so it's a sum. Recognizing the pattern from the words is the whole skill."
+    },
+    {
+      "id": "u68l01e02",
+      "type": "multipleChoice",
+      "prompt": "'How many scores are above 90?' Which tool?",
+      "options": [
+        "count with a condition",
+        "sum",
+        "min",
+        "average"
+      ],
+      "answer": 0,
+      "explanation": "'How many ... above' is a count with a test. You tally items that pass the condition."
+    },
+    {
+      "id": "u68l01e03",
+      "type": "multipleChoice",
+      "prompt": "'What is the highest score?' Which tool?",
+      "options": [
+        "max (track the biggest so far)",
+        "sum",
+        "count",
+        "filter"
+      ],
+      "answer": 0,
+      "explanation": "'Highest' means the biggest, so track-the-best (max). Start best at the first item."
+    },
+    {
+      "id": "u68l01e04",
+      "type": "multipleChoice",
+      "prompt": "'Give me a list of only the passing scores.' Which tool?",
+      "options": [
+        "filter (build a new list of matches)",
+        "search",
+        "max",
+        "average"
+      ],
+      "answer": 0,
+      "explanation": "'A list of only ...' is a filter: loop, test, append the matches into a fresh list."
+    },
+    {
+      "id": "u68l01e05",
+      "type": "multipleChoice",
+      "prompt": "'Is 100 anywhere in the scores?' Which tool?",
+      "options": [
+        "search (a yes/no on one value)",
+        "sum",
+        "count",
+        "filter"
+      ],
+      "answer": 0,
+      "explanation": "'Is it in there?' is a search — a yes/no answer, not a new list or a total."
+    },
+    {
+      "id": "u68l01e06",
+      "type": "matchPairs",
+      "prompt": "Match each question to its list tool.",
+      "pairs": [
+        {
+          "left": "average score",
+          "right": "sum divided by count"
+        },
+        {
+          "left": "smallest value",
+          "right": "min"
+        },
+        {
+          "left": "how many pass",
+          "right": "count with a condition"
+        }
+      ],
+      "explanation": "Average = sum/count, smallest = min, 'how many' = count. Reading the words picks the tool."
+    },
+    {
+      "id": "u68l01e07",
+      "type": "multipleChoice",
+      "prompt": "REVIEW: what does len([4, 9, 1]) give?",
+      "options": [
+        "3",
+        "14",
+        "4",
+        "1"
+      ],
+      "answer": 0,
+      "explanation": "len counts items: 3. You use len for averages and for driving index loops."
+    },
+    {
+      "id": "u68l01e08",
+      "type": "trueFalse",
+      "prompt": "Choosing the right tool BEFORE coding is part of planning a solution.",
+      "answer": true,
+      "explanation": "Yes — naming the tool (sum? filter? search?) is the plan step. It turns the words into a known recipe."
+    },
+    {
+      "id": "u68l01e09",
+      "type": "multipleChoice",
+      "prompt": "'What is the average, but handle the empty list safely?' Which tool and extra care?",
+      "options": [
+        "average = sum/count, with an empty-list guard",
+        "just sum",
+        "max only",
+        "search"
+      ],
+      "answer": 0,
+      "explanation": "Average needs sum and count, plus a guard so an empty list doesn't divide by zero. The guard is part of the tool."
+    },
+    {
+      "id": "u68l01e10",
+      "type": "multipleChoice",
+      "prompt": "The habit this lesson drills:",
+      "options": [
+        "read a problem and name the matching list tool",
+        "memorize code",
+        "avoid lists",
+        "always use sum"
+      ],
+      "answer": 0,
+      "explanation": "Matching words to tools is how you start any list problem. The rest is filling in the familiar recipe."
+    }
+  ]
+}

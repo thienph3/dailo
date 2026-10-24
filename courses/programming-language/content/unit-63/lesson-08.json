@@ -1,0 +1,137 @@
+{
+  "unitId": "u63",
+  "lessonId": "u63l08",
+  "title": "Filter or keep-the-best? Choosing the pattern",
+  "idea": "TOOL: tell a filter apart from accumulate/track-the-best. Review of earlier patterns — which list tool fits which question.",
+  "exercises": [
+    {
+      "id": "u63l08e01",
+      "type": "multipleChoice",
+      "prompt": "Question: 'Which students scored above 50?' Which pattern fits?",
+      "options": [
+        "Filter — keep the ones that pass into a list",
+        "Sum — add them all up",
+        "Max — find the single biggest",
+        "Average — sum over count"
+      ],
+      "answer": 0,
+      "explanation": "'Which ones' asks for a collection of matches, so you filter. The word 'which' is a strong hint for a filter."
+    },
+    {
+      "id": "u63l08e02",
+      "type": "multipleChoice",
+      "prompt": "Question: 'What is the highest score?' Which pattern fits?",
+      "options": [
+        "Track the best (max)",
+        "Filter",
+        "Count with a condition",
+        "Average"
+      ],
+      "answer": 0,
+      "explanation": "'Highest' asks for one best value, so you track the maximum. That is the track-the-best pattern, not a filter."
+    },
+    {
+      "id": "u63l08e03",
+      "type": "multipleChoice",
+      "prompt": "Question: 'How many scores are above 50?' Which pattern fits?",
+      "options": [
+        "Count with a condition",
+        "Filter into a list",
+        "Sum of all scores",
+        "Track the best"
+      ],
+      "answer": 0,
+      "explanation": "'How many' asks for a number, so a counter fits best. (You could filter then len, but counting is the direct tool.)"
+    },
+    {
+      "id": "u63l08e04",
+      "type": "multipleChoice",
+      "prompt": "Question: 'What do all the scores add up to?' Which pattern fits?",
+      "options": [
+        "Sum — a running total",
+        "Filter",
+        "Max",
+        "Count"
+      ],
+      "answer": 0,
+      "explanation": "'Add up to' is a total, so you accumulate a sum across the list. No test and no kept list needed."
+    },
+    {
+      "id": "u63l08e05",
+      "type": "trueFalse",
+      "prompt": "A filter produces a LIST, while sum, count, and max each produce a single NUMBER.",
+      "answer": true,
+      "explanation": "That is the quickest way to tell them apart: filter hands you back a (possibly shorter) list; the others hand you one number."
+    },
+    {
+      "id": "u63l08e06",
+      "type": "matchPairs",
+      "prompt": "Match each question to the pattern that answers it.",
+      "pairs": [
+        {
+          "left": "Which items pass the test?",
+          "right": "Filter into a list"
+        },
+        {
+          "left": "How many pass the test?",
+          "right": "Count with a condition"
+        },
+        {
+          "left": "What is the biggest?",
+          "right": "Track the best (max)"
+        },
+        {
+          "left": "What is the total?",
+          "right": "Sum"
+        }
+      ],
+      "explanation": "The question word points to the pattern: 'which' -> filter, 'how many' -> count, 'biggest' -> max, 'total' -> sum."
+    },
+    {
+      "id": "u63l08e07",
+      "type": "multipleChoice",
+      "prompt": "Question: 'List everyone who is at least 18.' Which pattern?",
+      "options": [
+        "Filter",
+        "Sum",
+        "Average",
+        "Max"
+      ],
+      "answer": 0,
+      "explanation": "'List everyone who...' asks for the matching items themselves, so you filter them into a list."
+    },
+    {
+      "id": "u63l08e08",
+      "type": "multipleChoice",
+      "prompt": "Both a filter and a counter use a loop and an if-test. What is the ONE difference?",
+      "options": [
+        "The filter appends into a list; the counter adds 1 to a number",
+        "The filter has no test",
+        "The counter has no loop",
+        "They are exactly the same"
+      ],
+      "answer": 0,
+      "explanation": "Same loop, same test. The body differs: append to collect, or +1 to tally. Pick based on whether you want the items or just the count."
+    },
+    {
+      "id": "u63l08e09",
+      "type": "trueFalse",
+      "prompt": "If a question asks 'which' or 'list the', a filter is usually the right pattern.",
+      "answer": true,
+      "explanation": "Those words ask for the matching items, which is exactly what a filter collects. Reading the question word first saves time."
+    },
+    {
+      "id": "u63l08e10",
+      "type": "multipleChoice",
+      "prompt": "Question: 'Of the scores above 50, what is the average?' How many patterns does this need?",
+      "options": [
+        "Two — filter first, then average the result",
+        "One — just an average",
+        "One — just a filter",
+        "None — it cannot be done"
+      ],
+      "answer": 0,
+      "explanation": "First filter to the scores above 50, then take the average of that smaller list. Bigger questions often chain two patterns."
+    }
+  ]
+}

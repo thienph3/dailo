@@ -1,0 +1,148 @@
+{
+  "unitId": "u99",
+  "lessonId": "u99l10",
+  "title": "Capstone: refactor repeated code into one function",
+  "idea": "GUIDED CAPSTONE. Spot copy-pasted calculations and fold them into a single reusable function — the refactoring payoff.",
+  "problem": "Three lines each compute a rectangle's area as width*height. Refactor into one function area(width, height) and reuse it.",
+  "exercises": [
+    {
+      "id": "u99l10e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: three places all compute width * height. The GOAL of refactoring is...",
+      "options": [
+        "Replace the repetition with one reusable function",
+        "Make the code longer",
+        "Delete the feature",
+        "Rename variables only"
+      ],
+      "answer": 0,
+      "explanation": "Refactoring keeps behavior the same but removes duplication. One function, called three times, replaces three copies."
+    },
+    {
+      "id": "u99l10e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "Why is copy-pasting width * height three times a problem?",
+      "options": [
+        "A fix or change must be made in three places — easy to miss one",
+        "It runs slower",
+        "It uses color",
+        "It's illegal"
+      ],
+      "answer": 0,
+      "explanation": "Duplicated logic means duplicated bugs. One function means one place to fix. That's the motivation."
+    },
+    {
+      "id": "u99l10e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example by hand: a 4 by 3 rectangle has area...",
+      "options": [
+        "12",
+        "7",
+        "1",
+        "43"
+      ],
+      "answer": 0,
+      "explanation": "4 * 3 = 12. The refactored function must still give this — behavior shouldn't change."
+    },
+    {
+      "id": "u99l10e04",
+      "type": "trueFalse",
+      "uepcc": "E",
+      "prompt": "After refactoring, area(4, 3) must still return 12 — refactoring changes structure, not results.",
+      "answer": true,
+      "explanation": "Exactly. A refactor that changes the answer is a bug, not a refactor. 12 stays our check value."
+    },
+    {
+      "id": "u99l10e05",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Plan the refactor. Order the steps.",
+      "blocks": [
+        "Replace each repeated line with a call to area(...)",
+        "Write one function area(width, height) returning width * height",
+        "Confirm results are unchanged"
+      ],
+      "answer": [
+        1,
+        0,
+        2
+      ],
+      "explanation": "Create the function, swap the duplicates for calls, verify the outputs match. Behavior preserved."
+    },
+    {
+      "id": "u99l10e06",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "How many parameters does area need to cover any rectangle?",
+      "options": [
+        "Two — width and height",
+        "One",
+        "None",
+        "Three"
+      ],
+      "answer": 0,
+      "explanation": "Width and height, so two parameters. Both givens become named parameters — the value-mapping habit."
+    },
+    {
+      "id": "u99l10e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code the function and one reuse. Arrange the lines.",
+      "blocks": [
+        "room = area(4, 3)",
+        "def area(width, height):",
+        "    return width * height",
+        "print(room)"
+      ],
+      "answer": [
+        1,
+        2,
+        0,
+        3
+      ],
+      "explanation": "Define area, then call it (area(4,3)), store, and print. One definition, reused everywhere the duplication was."
+    },
+    {
+      "id": "u99l10e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Complete the function body:\n\ndef area(width, height):\n    return width ____ height",
+      "answer": "*",
+      "acceptable": [
+        "*"
+      ],
+      "explanation": "Multiply width by height. Now every old copy becomes a call like area(4, 3) returning 12."
+    },
+    {
+      "id": "u99l10e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Call area(4, 3): returns 12. Hand said 12. Results unchanged after refactor. Verdict?",
+      "options": [
+        "Passes — same answer, no more duplication",
+        "Fails",
+        "Unknown",
+        "Rewrite example"
+      ],
+      "answer": 0,
+      "explanation": "Matches. The behavior is identical but the repetition is gone. That's a clean refactor!"
+    },
+    {
+      "id": "u99l10e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Reuse it for a 5 by 5 room: area(5, 5) returns...",
+      "options": [
+        "25",
+        "10",
+        "55",
+        "5"
+      ],
+      "answer": 0,
+      "explanation": "5 * 5 = 25. One function now serves every rectangle. You've refactored like a real developer!"
+    }
+  ]
+}

@@ -1,0 +1,128 @@
+{
+  "unitId": "u52",
+  "lessonId": "u52l09",
+  "title": "Spot the indexing mistake",
+  "idea": "The classic indexing bugs: off-by-one (using 1 for the first), going past the end, and round brackets instead of square. Catch them by eye.",
+  "exercises": [
+    {
+      "id": "u52l09e01",
+      "type": "multipleChoice",
+      "prompt": "A friend wants the FIRST value and writes nums[1]. What is the bug?",
+      "options": [
+        "The first value is nums[0], not nums[1]",
+        "They should use nums(1)",
+        "Lists cannot be indexed",
+        "There is no bug"
+      ],
+      "answer": 0,
+      "explanation": "The classic off-by-one slip. The first value is at index 0, so nums[1] actually grabs the SECOND value. Use nums[0]."
+    },
+    {
+      "id": "u52l09e02",
+      "type": "multipleChoice",
+      "prompt": "What is wrong with this line?\n\nnums = [3, 7, 2]\nprint(nums(0))",
+      "options": [
+        "Indexing uses square brackets, not round ones: nums[0]",
+        "0 is not a valid index",
+        "The list is empty",
+        "Nothing is wrong"
+      ],
+      "answer": 0,
+      "explanation": "Indexing needs square brackets: nums[0]. Round brackets nums(0) are not how you pick a value by position."
+    },
+    {
+      "id": "u52l09e03",
+      "type": "multipleChoice",
+      "prompt": "nums = [5, 6, 7] has three values. Why does  print(nums[3])  fail?",
+      "options": [
+        "Index 3 is past the end — valid indexes are 0, 1, 2",
+        "3 is too small",
+        "The list needs quotes",
+        "print cannot show a list value"
+      ],
+      "answer": 0,
+      "explanation": "Three values fill 0, 1, 2. Index 3 points past the end, so it is out of range. The last valid index is one less than the count."
+    },
+    {
+      "id": "u52l09e04",
+      "type": "trueFalse",
+      "prompt": "Writing nums[2] to get the second value of a list is an off-by-one mistake.",
+      "answer": true,
+      "explanation": "Yes. The second value is at index 1, not 2. nums[2] would give the THIRD value. Off-by-one errors are easy to make and easy to fix once you remember 0 is first."
+    },
+    {
+      "id": "u52l09e05",
+      "type": "matchPairs",
+      "prompt": "Match each buggy attempt (for the FIRST value of a 3-value list) to its problem.",
+      "pairs": [
+        {
+          "left": "nums[1]",
+          "right": "Off-by-one: that is the second value"
+        },
+        {
+          "left": "nums(0)",
+          "right": "Wrong brackets"
+        },
+        {
+          "left": "nums[3]",
+          "right": "Out of range"
+        }
+      ],
+      "explanation": "Three common slips when you meant nums[0]: counting from 1, using round brackets, or reaching past the end."
+    },
+    {
+      "id": "u52l09e06",
+      "type": "multipleChoice",
+      "prompt": "Which line CORRECTLY gets the last value of nums = [4, 8, 6] without counting?",
+      "options": [
+        "nums[-1]",
+        "nums[3]",
+        "nums[last]",
+        "nums(-1)"
+      ],
+      "answer": 0,
+      "explanation": "nums[-1] is the end shortcut for the last value, 6. nums[3] is out of range, and nums(-1) uses the wrong brackets."
+    },
+    {
+      "id": "u52l09e07",
+      "type": "multipleChoice",
+      "prompt": "A friend's loop errors on the last pass:\n\nnums = [1, 2, 3]\nfor i in range(4):\n    print(nums[i])\n\nWhat is the bug?",
+      "options": [
+        "range(4) goes 0,1,2,3 but index 3 is past the end of a 3-value list",
+        "range should start at 1",
+        "print cannot show nums[i]",
+        "Lists cannot be used in loops"
+      ],
+      "answer": 0,
+      "explanation": "The list has indexes 0, 1, 2. range(4) makes i reach 3, which is out of range. For a 3-value list, you want range(3)."
+    },
+    {
+      "id": "u52l09e08",
+      "type": "trueFalse",
+      "prompt": "To visit all indexes of a 3-value list in a loop, range(3) is correct and range(4) goes too far.",
+      "answer": true,
+      "explanation": "Right. range(3) gives 0, 1, 2 — exactly the valid indexes. range(4) adds a 3, which points past the end and errors."
+    },
+    {
+      "id": "u52l09e09",
+      "type": "fillBlank",
+      "prompt": "Fix the off-by-one: the first value should be printed. Fill the correct index:\n\nnums = [11, 22, 33]\nprint(nums[____])",
+      "answer": "0",
+      "acceptable": ["0"],
+      "explanation": "The first value sits at index 0, giving 11. Starting from 0 avoids the off-by-one trap."
+    },
+    {
+      "id": "u52l09e10",
+      "type": "multipleChoice",
+      "prompt": "Which line is completely CORRECT?",
+      "options": [
+        "print([5, 10, 15][0])",
+        "print([5, 10, 15](0))",
+        "print([5, 10, 15][3])",
+        "print([5, 10, 15].0)"
+      ],
+      "answer": 0,
+      "explanation": "You can even index a list literal directly: [5, 10, 15][0] is 5. The others use wrong brackets, an out-of-range index, or invalid syntax."
+    }
+  ]
+}

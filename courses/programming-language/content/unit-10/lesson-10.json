@@ -1,0 +1,96 @@
+{
+  "unitId": "u10",
+  "lessonId": "u10l10",
+  "title": "Putting the math toolbox together",
+  "idea": "Review: all four signs, variables, storing results, and the text-vs-number difference from earlier units.",
+  "exercises": [
+    {
+      "id": "u10l10e01",
+      "type": "matchPairs",
+      "prompt": "Match each instruction to what the screen shows.",
+      "pairs": [
+        {"left": "print(6 + 2)", "right": "8"},
+        {"left": "print(6 - 2)", "right": "4"},
+        {"left": "print(6 * 2)", "right": "12"},
+        {"left": "print(6 / 2)", "right": "3.0"}
+      ],
+      "explanation": "Add, subtract, multiply, divide — your four signs, each giving a different result."
+    },
+    {
+      "id": "u10l10e02",
+      "type": "multipleChoice",
+      "prompt": "Review from earlier: what will this show?\n\nprint(\"4 + 4\")",
+      "options": ["4 + 4", "8", "44", "Error"],
+      "answer": 0,
+      "explanation": "Quotes make it text, shown exactly. Without quotes, print(4 + 4) would do the math and show 8."
+    },
+    {
+      "id": "u10l10e03",
+      "type": "multipleChoice",
+      "prompt": "What will this show?\n\nprint(4 + 4)",
+      "options": ["8", "4 + 4", "44", "Error"],
+      "answer": 0,
+      "explanation": "No quotes, so real numbers. 4 + 4 is 8."
+    },
+    {
+      "id": "u10l10e04",
+      "type": "multipleChoice",
+      "prompt": "What will this show?\n\nx = 8\ny = 2\nprint(x / y)",
+      "options": ["4.0", "4", "82", "x / y"],
+      "answer": 0,
+      "explanation": "8 / 2 is 4. Division shows a dot: 4.0."
+    },
+    {
+      "id": "u10l10e05",
+      "type": "orderBlocks",
+      "prompt": "Put these in order to compute and show a price times a count.",
+      "blocks": [
+        "price = 5",
+        "count = 3",
+        "total = price * count",
+        "print(total)"
+      ],
+      "answer": [0, 1, 2, 3],
+      "explanation": "Name the numbers, combine them, store the result, show it: 15."
+    },
+    {
+      "id": "u10l10e06",
+      "type": "multipleChoice",
+      "prompt": "What will the screen show?\n\ntotal = 10\ntotal = total - 4\nprint(total)",
+      "options": ["6", "10", "14", "4"],
+      "answer": 0,
+      "explanation": "total starts at 10, then 10 - 4 is 6. Reassignment updates the value."
+    },
+    {
+      "id": "u10l10e07",
+      "type": "multiSelect",
+      "prompt": "Which of these will DO the math (not show text)? Pick all.",
+      "options": ["print(2 + 2)", "print(\"2 + 2\")", "print(5 * 3)", "print(\"5 * 3\")"],
+      "answer": [0, 2],
+      "explanation": "Only the ones without quotes do the math. Quoted ones are shown exactly as text."
+    },
+    {
+      "id": "u10l10e08",
+      "type": "multipleChoice",
+      "prompt": "A box has 12 chocolates shared by 3 friends. Which finds how many each?",
+      "options": ["print(12 / 3)", "print(12 * 3)", "print(12 - 3)", "print(12 + 3)"],
+      "answer": 0,
+      "explanation": "Shared equally means divide: 12 / 3 is 4.0 each."
+    },
+    {
+      "id": "u10l10e09",
+      "type": "trueFalse",
+      "prompt": "A variable must be given a value before you can combine it with + - * /.",
+      "answer": true,
+      "explanation": "The computer needs the value first. Using a variable before setting it causes an error."
+    },
+    {
+      "id": "u10l10e10",
+      "type": "fillBlank",
+      "prompt": "The variables wins and losses exist. Write a full instruction that shows their total using +.",
+      "answer": "print(wins + losses)",
+      "acceptable": ["print(wins + losses)", "print(wins+losses)"],
+      "explanation": "print(wins + losses) adds the two values and shows the total. You've mastered your math toolbox!"
+    }
+  ]
+}

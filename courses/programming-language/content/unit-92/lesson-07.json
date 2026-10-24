@@ -1,0 +1,129 @@
+{
+  "unitId": "u92",
+  "lessonId": "u92l07",
+  "title": "Spot the integration bug",
+  "idea": "TOOL (debugging): where woven solutions go wrong - forgetting return, calling vs defining, updating in the wrong place.",
+  "exercises": [
+    {
+      "type": "multipleChoice",
+      "prompt": "This should total doubled values but prints None-ish trouble. What's the bug?\n\ndef double(n):\n    n * 2\n\ntotal = 0\nfor x in [1, 2]:\n    total = total + double(x)\nprint(total)",
+      "options": [
+        "double computes n * 2 but never RETURNS it, so it hands back nothing",
+        "The loop is wrong",
+        "total starts wrong",
+        "print is wrong"
+      ],
+      "answer": 0,
+      "explanation": "Without 'return n * 2', the function throws its result away. Adding a missing return is the number-one integration bug.",
+      "id": "u92l07e01"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "This should call the helper each turn but nothing accumulates. What's wrong?\n\ndef add_one(n):\n    return n + 1\n\ntotal = 0\nfor x in [5, 5]:\n    add_one(x)\nprint(total)",
+      "options": [
+        "The helper is called but its result is never added to total",
+        "add_one is wrong",
+        "The list is wrong",
+        "Nothing is wrong"
+      ],
+      "answer": 0,
+      "explanation": "add_one(x) runs but its return value is ignored. You must write total = total + add_one(x). Calling without using the result is a classic slip.",
+      "id": "u92l07e02"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "A function that computes a value but has no 'return' gives back nothing useful to the caller.",
+      "answer": true,
+      "explanation": "True. Computing isn't returning. If the caller needs the value, the function must return it.",
+      "id": "u92l07e03"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "This should count big items but the count is always 0. Why?\n\ndef is_big(n):\n    return n > 100\n\ncount = 0\nfor p in [150, 200]:\n    if is_big(p):\n        count = count + 1\n    count = 0\nprint(count)",
+      "options": [
+        "count = 0 runs every turn, resetting it after each increment",
+        "is_big is wrong",
+        "The list is empty",
+        "print is broken"
+      ],
+      "answer": 0,
+      "explanation": "The stray 'count = 0' inside the loop resets the counter every turn, so it ends at 0. Resetting a running value inside the loop is a familiar multi-state bug.",
+      "id": "u92l07e04"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Predict what this BUGGY code prints:\n\ndef label(n):\n    if n >= 50:\n        return 1\n\npasses = 0\nfor s in [80, 30]:\n    passes = passes + label(s)\nprint(passes)",
+      "options": [
+        "It errors - label returns nothing for 30, which can't be added",
+        "2",
+        "1",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "label has no else, so for 30 it returns nothing, and adding nothing to passes fails. A decision helper needs a return on EVERY path.",
+      "id": "u92l07e05"
+    },
+    {
+      "type": "orderBlocks",
+      "prompt": "Order the checklist for debugging a woven solution.",
+      "blocks": [
+        "Does every helper RETURN on all paths?",
+        "Is each helper's result actually USED (added, compared)?",
+        "Are running values started outside and not reset inside?"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Return, use-the-result, and don't-reset: the three places integrated code tends to break.",
+      "id": "u92l07e06"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "A loop calls a helper and the program errors with 'name not defined'. Likely cause?",
+      "options": [
+        "The helper is called before (or without) being defined",
+        "The list is too long",
+        "return is missing",
+        "The loop runs twice"
+      ],
+      "answer": 0,
+      "explanation": "A function must be defined before it's called. 'Not defined' means the def is missing or comes later. Define helpers first.",
+      "id": "u92l07e07"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "A decision helper should return a value on EVERY branch, not just the 'yes' one.",
+      "answer": true,
+      "explanation": "True. Missing the else path makes the helper return nothing sometimes, which breaks whatever uses it. Cover every case.",
+      "id": "u92l07e08"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Tracing one item through the helper AND the loop by hand helps because...",
+      "options": [
+        "It shows exactly where the value is lost - no return, unused result, or a reset",
+        "It makes code faster",
+        "It removes the loop",
+        "It hides bugs"
+      ],
+      "answer": 0,
+      "explanation": "Following a single value end to end reveals the break point: a missing return, an ignored result, or an accidental reset.",
+      "id": "u92l07e09"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "The three integration hotspots:",
+      "options": [
+        "Missing return, ignoring the returned result, resetting a running value inside the loop",
+        "Long names, extra blanks, comments",
+        "Lists, strings, files",
+        "Nothing ever breaks"
+      ],
+      "answer": 0,
+      "explanation": "Return it, use it, don't reset it. Check those three and most woven-solution bugs disappear.",
+      "id": "u92l07e10"
+    }
+  ]
+}

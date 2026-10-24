@@ -1,0 +1,131 @@
+{
+  "unitId": "u15",
+  "lessonId": "u15l07",
+  "title": "Doing the math inside the braces",
+  "idea": "Braces can hold a calculation, not just a name — the f-string shows the result.",
+  "exercises": [
+    {
+      "id": "u15l07e01",
+      "type": "multipleChoice",
+      "prompt": "What will this show?\n\nprint(f\"Total: {2 + 3}\")",
+      "options": [
+        "Total: 5",
+        "Total: 2 + 3",
+        "Total: {2 + 3}",
+        "5"
+      ],
+      "answer": 0,
+      "explanation": "Inside braces the math is done first: 2 + 3 is 5. So you see: Total: 5."
+    },
+    {
+      "id": "u15l07e02",
+      "type": "trueFalse",
+      "prompt": "Braces inside an f-string can hold a calculation, and the result is shown.",
+      "answer": true,
+      "explanation": "Anything in the braces is worked out, then its value appears. {4 * 2} shows 8."
+    },
+    {
+      "id": "u15l07e03",
+      "type": "multipleChoice",
+      "prompt": "What will this show?\n\napples = 4\nbananas = 3\nprint(f\"We have {apples + bananas} fruits\")",
+      "options": [
+        "We have 7 fruits",
+        "We have 4 + 3 fruits",
+        "We have apples + bananas fruits",
+        "We have 43 fruits"
+      ],
+      "answer": 0,
+      "explanation": "The braces add the two variables first: 4 + 3 is 7. So: We have 7 fruits."
+    },
+    {
+      "id": "u15l07e04",
+      "type": "multipleChoice",
+      "prompt": "What will this show?\n\nprint(f\"{5 * 2} legs\")",
+      "options": [
+        "10 legs",
+        "5 * 2 legs",
+        "{10} legs",
+        "52 legs"
+      ],
+      "answer": 0,
+      "explanation": "5 * 2 is 10, worked out inside the braces: 10 legs."
+    },
+    {
+      "id": "u15l07e05",
+      "type": "multipleChoice",
+      "prompt": "What will this show?\n\nprice = 20\ncount = 3\nprint(f\"Bill: {price * count}\")",
+      "options": [
+        "Bill: 60",
+        "Bill: 20 * 3",
+        "Bill: price * count",
+        "Bill: 203"
+      ],
+      "answer": 0,
+      "explanation": "price * count is 20 * 3 = 60, computed in the braces: Bill: 60. A real little report!"
+    },
+    {
+      "id": "u15l07e06",
+      "type": "fillBlank",
+      "prompt": "Fill the braces so this prints: Sum: 12\n\na = 7\nb = 5\nprint(f\"Sum: {____}\")",
+      "answer": "a + b",
+      "acceptable": [
+        "a + b",
+        "a+b",
+        "b + a",
+        "b+a"
+      ],
+      "explanation": "a + b is 7 + 5 = 12, worked out inside the braces: Sum: 12."
+    },
+    {
+      "id": "u15l07e07",
+      "type": "multipleChoice",
+      "prompt": "Precedence still works inside braces. What will this show?\n\nprint(f\"{2 + 3 * 4}\")",
+      "options": [
+        "14",
+        "20",
+        "24",
+        "9"
+      ],
+      "answer": 0,
+      "explanation": "Times before plus: 3 * 4 is 12, then 2 + 12 is 14. Same rules as always, now inside braces."
+    },
+    {
+      "id": "u15l07e08",
+      "type": "tapTokens",
+      "prompt": "Build a line that prints: Total: 9 by adding 4 and 5 inside the braces.",
+      "tokens": [
+        "print",
+        "(",
+        "f\"Total: {4 + 5}\"",
+        ")"
+      ],
+      "answer": [
+        "print",
+        "(",
+        "f\"Total: {4 + 5}\"",
+        ")"
+      ],
+      "explanation": "4 + 5 is 9, done inside the braces: Total: 9."
+    },
+    {
+      "id": "u15l07e09",
+      "type": "multipleChoice",
+      "prompt": "Parentheses work inside braces too. What will this show?\n\nprint(f\"{(2 + 3) * 4}\")",
+      "options": [
+        "20",
+        "14",
+        "24",
+        "9"
+      ],
+      "answer": 0,
+      "explanation": "Parentheses first: 2 + 3 is 5, then 5 * 4 is 20. Grouping still changes the order."
+    },
+    {
+      "id": "u15l07e10",
+      "type": "trueFalse",
+      "prompt": "An f-string can both compute a value and present it in a sentence, all in one line.",
+      "answer": true,
+      "explanation": "Compute in the braces, wrap it in words — that's exactly the 'report a value in a sentence' skill this unit is about."
+    }
+  ]
+}

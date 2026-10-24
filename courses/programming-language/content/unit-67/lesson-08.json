@@ -1,0 +1,158 @@
+{
+  "unitId": "u67",
+  "lessonId": "u67l08",
+  "title": "Finish it: the filter that collects nothing",
+  "idea": "GUIDED FINISH (incomplete filter). The loop tests items but forgets to append matches, so the result stays empty. Complete it.",
+  "problem": "This code should build a list of the even numbers in [3, 4, 6, 7] (answer: [4, 6]). The loop tests each number but the result stays []. Finish it.",
+  "exercises": [
+    {
+      "id": "u67l08e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "UNFINISHED CODE:\n\nnums = [3, 4, 6, 7]\nevens = []\nfor n in nums:\n    if n % 2 == 0:\n        pass\nprint(evens)\n\nUnderstand. What should the OUTPUT be?",
+      "options": [
+        "A list of the even numbers",
+        "The count of even numbers",
+        "The total of the evens",
+        "True or False"
+      ],
+      "answer": 0,
+      "explanation": "It's a filter building a new list of evens. The 'pass' placeholder means the collecting step is missing."
+    },
+    {
+      "id": "u67l08e02",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example. By hand, which numbers in [3, 4, 6, 7] are even?",
+      "options": [
+        "4 and 6",
+        "3 and 7",
+        "all four",
+        "none"
+      ],
+      "answer": 0,
+      "explanation": "Even means divisible by 2 with no remainder: 4 and 6. So the correct result list is [4, 6]."
+    },
+    {
+      "id": "u67l08e03",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Right now the code prints []. The test 'n % 2 == 0' runs, but the result stays empty. What step is missing?",
+      "options": [
+        "appending the matching number to evens",
+        "the loop",
+        "the print",
+        "the empty list"
+      ],
+      "answer": 0,
+      "explanation": "The filter finds matches but never COLLECTS them. Without an append inside the if, evens stays empty forever."
+    },
+    {
+      "id": "u67l08e04",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "REVIEW: what does n % 2 == 0 test?",
+      "options": [
+        "whether n is even (divides by 2 with no remainder)",
+        "whether n is positive",
+        "whether n equals 2",
+        "whether n is in the list"
+      ],
+      "answer": 0,
+      "explanation": "% gives the remainder. n % 2 == 0 means dividing by 2 leaves nothing over, so n is even."
+    },
+    {
+      "id": "u67l08e05",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Plan the complete filter. Order the steps.",
+      "blocks": [
+        "Start evens as an empty list",
+        "For each number, if it is even, add it to evens",
+        "Print evens"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Start empty, append each match inside the loop, then show the result. The missing middle piece is the append."
+    },
+    {
+      "id": "u67l08e06",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Which tool adds a matching item to the result list?",
+      "options": [
+        "evens.append(n)",
+        "print(n)",
+        "evens = n",
+        "len(n)"
+      ],
+      "answer": 0,
+      "explanation": "append(n) grows the list by one item. It's the collecting step that turns a test into a filter."
+    },
+    {
+      "id": "u67l08e07",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Replace the 'pass' with the collecting step:\n\nfor n in nums:\n    if n % 2 == 0:\n        evens.____(n)",
+      "answer": "append",
+      "acceptable": [
+        "append"
+      ],
+      "explanation": "evens.append(n) adds each even number to the result list. Now evens grows to [4, 6]."
+    },
+    {
+      "id": "u67l08e08",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Arrange the FINISHED filter.",
+      "blocks": [
+        "nums = [3, 4, 6, 7]",
+        "evens = []",
+        "for n in nums:",
+        "    if n % 2 == 0:",
+        "        evens.append(n)",
+        "print(evens)"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "explanation": "Store nums, start evens empty, loop with the even-test and append, then print. The append is what was missing."
+    },
+    {
+      "id": "u67l08e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check. The finished code prints [4, 6]. Your hand answer was [4, 6]. So...",
+      "options": [
+        "It passes — the evens are collected now",
+        "It still prints []",
+        "You can't tell",
+        "The example was wrong"
+      ],
+      "answer": 0,
+      "explanation": "Output [4, 6] matches the hand result. Adding the append completed the filter."
+    },
+    {
+      "id": "u67l08e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Re-check with new inputs: nums = [10, 11, 12]. What does the finished filter print?",
+      "options": [
+        "[10, 12]",
+        "[11]",
+        "[10, 11, 12]",
+        "[]"
+      ],
+      "answer": 0,
+      "explanation": "10 and 12 are even, 11 is odd, so [10, 12]. The completed filter works for fresh inputs too."
+    }
+  ]
+}

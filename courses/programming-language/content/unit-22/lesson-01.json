@@ -1,0 +1,123 @@
+{
+  "unitId": "u22",
+  "lessonId": "u22l01",
+  "title": "This, otherwise that",
+  "idea": "'else' gives the if a second path: do one thing when the condition is True, and something else when it is False. Meet else with visible output.",
+  "exercises": [
+    {
+      "id": "u22l01e01",
+      "type": "multipleChoice",
+      "prompt": "What does 'else' add to an if?",
+      "options": [
+        "A step to run when the condition is False",
+        "A second condition",
+        "A loop",
+        "A new variable"
+      ],
+      "answer": 0,
+      "explanation": "else is the 'otherwise' path - it runs when the if's condition is False."
+    },
+    {
+      "id": "u22l01e02",
+      "type": "multipleChoice",
+      "prompt": "What does this print?\n\nif True:\n    print(\"yes\")\nelse:\n    print(\"no\")",
+      "options": [
+        "yes",
+        "no",
+        "yes then no",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "The condition is True, so the if branch runs ('yes'). The else branch is skipped."
+    },
+    {
+      "id": "u22l01e03",
+      "type": "multipleChoice",
+      "prompt": "What does this print?\n\nif False:\n    print(\"yes\")\nelse:\n    print(\"no\")",
+      "options": [
+        "no",
+        "yes",
+        "yes then no",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "The condition is False, so the if branch is skipped and the else branch runs ('no')."
+    },
+    {
+      "id": "u22l01e04",
+      "type": "trueFalse",
+      "prompt": "Exactly one of the two branches (if or else) runs - never both, never neither.",
+      "answer": true,
+      "explanation": "Yes - if/else is a two-way choice. One path always runs, and only one."
+    },
+    {
+      "id": "u22l01e05",
+      "type": "multipleChoice",
+      "prompt": "What must come before an else?",
+      "options": [
+        "an if",
+        "another else",
+        "a print",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "else only makes sense attached to an if. It handles the if's False case."
+    },
+    {
+      "id": "u22l01e06",
+      "type": "multipleChoice",
+      "prompt": "What does this print?\n\nage = 20\nif age >= 18:\n    print(\"Adult\")\nelse:\n    print(\"Minor\")",
+      "options": [
+        "Adult",
+        "Minor",
+        "both",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "20 >= 18 is True, so the if branch runs: Adult. The else is skipped."
+    },
+    {
+      "id": "u22l01e07",
+      "type": "multipleChoice",
+      "prompt": "What does this print?\n\nage = 12\nif age >= 18:\n    print(\"Adult\")\nelse:\n    print(\"Minor\")",
+      "options": [
+        "Minor",
+        "Adult",
+        "both",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "12 >= 18 is False, so the else branch runs: Minor."
+    },
+    {
+      "id": "u22l01e08",
+      "type": "fillBlank",
+      "prompt": "Complete the keyword for the 'otherwise' path:\n\nif ready:\n    print(\"Go\")\n____:\n    print(\"Wait\")",
+      "answer": "else",
+      "acceptable": [
+        "else"
+      ],
+      "explanation": "The keyword is else. It runs when ready is False."
+    },
+    {
+      "id": "u22l01e09",
+      "type": "trueFalse",
+      "prompt": "With an if alone (no else), a False condition means nothing happens for that step.",
+      "answer": true,
+      "explanation": "Right - without else, False just skips. else adds the second path so something always runs."
+    },
+    {
+      "id": "u22l01e10",
+      "type": "multipleChoice",
+      "prompt": "Last unit's if did a step only when True. What does else let you finally do?",
+      "options": [
+        "Handle the False case too - a full two-way choice",
+        "Delete the if",
+        "Only print numbers",
+        "Nothing new"
+      ],
+      "answer": 0,
+      "explanation": "if alone handled only True. else completes it: one outcome for True, another for False."
+    }
+  ]
+}

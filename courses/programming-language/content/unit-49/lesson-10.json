@@ -1,0 +1,129 @@
+{
+  "unitId": "u49",
+  "lessonId": "u49l10",
+  "title": "Solve it: you pick the loop",
+  "idea": "GUIDED PROBLEM, review-heavy. The learner must CHOOSE the right loop for the problem before coding, pulling together everything from the unit. Pattern choice is the star of the Plan step.",
+  "problem": "A game gives you 3 lives. Each round you lose 1 life. Print the message for each round until you run out of lives, and show how many rounds you played.",
+  "exercises": [
+    {
+      "id": "u49l10e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: Start with 3 lives, lose 1 each round, until lives run out. Show how many rounds.\n\nUnderstand. What is the OUTPUT?",
+      "options": [
+        "The number of rounds played",
+        "The number of lives at the start",
+        "The number 1",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "The output is a count of rounds. Since you lose a life each round and start with 3, that count is tied to the starting lives."
+    },
+    {
+      "id": "u49l10e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "Understand. What are the INPUTS?",
+      "options": [
+        "The starting lives (3) and the loss per round (1)",
+        "Only the rounds",
+        "The word game",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "Starting lives (3) and how many you lose each round (1). Both are named values the code will use."
+    },
+    {
+      "id": "u49l10e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example by hand. Lives: 3 -> 2 -> 1 -> 0. How many rounds were played?",
+      "options": ["3 rounds", "2 rounds", "4 rounds", "0 rounds"],
+      "answer": 0,
+      "explanation": "Each drop is one round: 3->2, 2->1, 1->0. Three rounds before lives hit 0. Check value: 3."
+    },
+    {
+      "id": "u49l10e04",
+      "type": "trueFalse",
+      "uepcc": "E",
+      "prompt": "Because you start with 3 lives and lose 1 per round, the count of rounds happens to be known: 3.",
+      "answer": true,
+      "explanation": "Yes - with a fixed start and a steady loss of 1, the rounds equal the starting lives. That known count means for would also work here."
+    },
+    {
+      "id": "u49l10e05",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Plan - CHOOSE the loop. The problem is phrased as 'until lives run out.' Which choice is reasonable AND simple?",
+      "options": [
+        "for over range(3) - the count is known (3 lives, lose 1 each)",
+        "while forever with no way to stop",
+        "no loop at all",
+        "for over range(100)"
+      ],
+      "answer": 0,
+      "explanation": "Despite the 'until' wording, the count is actually known (3). A for over range(3) is clean. A while lives > 0 would also work - both are valid when losing exactly 1 each round."
+    },
+    {
+      "id": "u49l10e06",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Plan - what do we track and print inside the loop?",
+      "options": [
+        "A round counter we print each pass",
+        "An accumulator of prices",
+        "Nothing",
+        "A break on the first pass"
+      ],
+      "answer": 0,
+      "explanation": "We count rounds (a counter) and print a message each pass. At the end the counter holds the total rounds."
+    },
+    {
+      "id": "u49l10e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code it (using the known count). Arrange the lines.",
+      "blocks": [
+        "rounds = 0",
+        "for i in range(3):",
+        "    rounds = rounds + 1",
+        "    print(rounds)",
+        "print(rounds)"
+      ],
+      "answer": [0, 1, 2, 3, 4],
+      "explanation": "Start rounds at 0, loop 3 times, count and print each round, then print the final total. range(3) matches the 3 lives."
+    },
+    {
+      "id": "u49l10e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "You chose for because the count is known. Fill the range so it runs once per life (3 lives):\n\nrounds = 0\nfor i in range(____):\n    rounds = rounds + 1",
+      "answer": "3",
+      "acceptable": ["3"],
+      "explanation": "range(3) runs 3 passes - one per life. The known count (3) maps straight to the range."
+    },
+    {
+      "id": "u49l10e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "The code's final print shows 3; your hand example was 3 rounds. Verdict?",
+      "options": ["Passes", "Fails", "Unknown", "Rewrite the example"],
+      "answer": 0,
+      "explanation": "3 matches 3. Whichever loop you picked, the rounds came out right. Passing Check."
+    },
+    {
+      "id": "u49l10e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "New game: start with 5 lives, still lose 1 each round. How many rounds, and would you change range?",
+      "options": [
+        "5 rounds - change to range(5)",
+        "3 rounds - keep range(3)",
+        "0 rounds",
+        "100 rounds"
+      ],
+      "answer": 0,
+      "explanation": "5 lives, lose 1 each - 5 rounds, so range(5). You read the problem, chose the loop, and adjusted it for new inputs. That's the whole skill!"
+    }
+  ]
+}

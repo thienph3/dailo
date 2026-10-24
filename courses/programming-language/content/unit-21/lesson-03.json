@@ -1,0 +1,132 @@
+{
+  "unitId": "u21",
+  "lessonId": "u21l03",
+  "title": "if with a comparison",
+  "idea": "The condition after if is usually a comparison. Python checks the comparison, and runs the step only when it is True.",
+  "exercises": [
+    {
+      "id": "u21l03e01",
+      "type": "multipleChoice",
+      "prompt": "What does this print?\n\nage = 20\nif age > 18:\n    print(\"Adult\")",
+      "options": [
+        "Adult",
+        "nothing",
+        "True",
+        "20"
+      ],
+      "answer": 0,
+      "explanation": "age > 18 is 20 > 18, which is True, so the guarded print runs: Adult."
+    },
+    {
+      "id": "u21l03e02",
+      "type": "multipleChoice",
+      "prompt": "What does this print?\n\nage = 12\nif age > 18:\n    print(\"Adult\")",
+      "options": [
+        "nothing",
+        "Adult",
+        "True",
+        "12"
+      ],
+      "answer": 0,
+      "explanation": "12 > 18 is False, so the guarded step is skipped. Nothing prints."
+    },
+    {
+      "id": "u21l03e03",
+      "type": "multipleChoice",
+      "prompt": "What does this print?\n\nscore = 50\nif score >= 50:\n    print(\"Pass\")",
+      "options": [
+        "Pass",
+        "nothing",
+        "50",
+        "False"
+      ],
+      "answer": 0,
+      "explanation": "50 >= 50 is True (>= includes equal), so the guarded print runs: Pass."
+    },
+    {
+      "id": "u21l03e04",
+      "type": "trueFalse",
+      "prompt": "The computer works out the comparison first, then decides whether to run the guarded step.",
+      "answer": true,
+      "explanation": "Yes - the comparison gives a boolean, and if uses that boolean to decide."
+    },
+    {
+      "id": "u21l03e05",
+      "type": "fillBlank",
+      "prompt": "Warn only when the tank is low (less than 10). Fill the comparison:\n\nliters = 5\nif liters ____ 10:\n    print(\"Low fuel\")",
+      "answer": "<",
+      "acceptable": [
+        "<"
+      ],
+      "explanation": "'Less than 10' is < 10. liters is 5, so 5 < 10 is True and the warning prints."
+    },
+    {
+      "id": "u21l03e06",
+      "type": "multipleChoice",
+      "prompt": "What does this print?\n\ntotal = 60\nif total > 50:\n    print(\"Free shipping\")",
+      "options": [
+        "Free shipping",
+        "nothing",
+        "60",
+        "True"
+      ],
+      "answer": 0,
+      "explanation": "60 > 50 is True, so the guarded message prints."
+    },
+    {
+      "id": "u21l03e07",
+      "type": "orderBlocks",
+      "prompt": "Arrange: store a score, then print 'Great' only when it is 100.",
+      "blocks": [
+        "    print(\"Great\")",
+        "if score == 100:",
+        "score = 100"
+      ],
+      "answer": [
+        2,
+        1,
+        0
+      ],
+      "explanation": "Store score, then the if with ==, then the indented guarded step. 100 == 100 is True, so Great prints."
+    },
+    {
+      "id": "u21l03e08",
+      "type": "multipleChoice",
+      "prompt": "What does this print?\n\ncode = 1111\nif code != 1234:\n    print(\"Wrong code\")",
+      "options": [
+        "Wrong code",
+        "nothing",
+        "1111",
+        "True"
+      ],
+      "answer": 0,
+      "explanation": "1111 != 1234 is True (they differ), so the guarded message prints."
+    },
+    {
+      "id": "u21l03e09",
+      "type": "multipleChoice",
+      "prompt": "What does this print?\n\nheight = 100\nif height >= 120:\n    print(\"Can ride\")",
+      "options": [
+        "nothing",
+        "Can ride",
+        "100",
+        "True"
+      ],
+      "answer": 0,
+      "explanation": "100 >= 120 is False, so the guarded step is skipped. Nothing prints."
+    },
+    {
+      "id": "u21l03e10",
+      "type": "multipleChoice",
+      "prompt": "Why is a comparison such a natural condition for if?",
+      "options": [
+        "It produces the exact True/False the if needs",
+        "Because if cannot use booleans",
+        "Because comparisons are numbers",
+        "It is not natural"
+      ],
+      "answer": 0,
+      "explanation": "A comparison answers a yes/no question with a boolean, which is precisely what if reads to decide."
+    }
+  ]
+}

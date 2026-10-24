@@ -1,0 +1,158 @@
+{
+  "unitId": "u82",
+  "lessonId": "u82l01",
+  "title": "Solve it together: price each item, then total them",
+  "idea": "GUIDED (UEPCC). Split a 'total cost' problem into a per-item helper (price * count) and a sum-over-list step. Decomposition: one small helper, used for each line of the order.",
+  "problem": "An order has quantities [2, 3] and matching unit prices [12, 3] (2 at 12, 3 at 3). Show the grand total using a line_cost(qty, price) helper.",
+  "exercises": [
+    {
+      "id": "u82l01e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: quantities [2, 3], unit prices [12, 3]. Show the grand total using a line_cost(qty, price) helper.\n\nUnderstand first — what is the OUTPUT?",
+      "options": [
+        "The grand total cost of the whole order",
+        "The number of lines",
+        "The cheapest line",
+        "The list of prices"
+      ],
+      "answer": 0,
+      "explanation": "Output = one number, the grand total. Naming it frames the whole solve."
+    },
+    {
+      "id": "u82l01e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "Still understanding. What are the INPUTS?",
+      "options": [
+        "Two lists: quantities [2, 3] and unit prices [12, 3]",
+        "Only the number 33",
+        "The word total",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "Inputs are the quantities and the matching prices. Each pair becomes one line's cost."
+    },
+    {
+      "id": "u82l01e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example — by hand. Line 1 is 2 at 12 (=24), line 2 is 3 at 3 (=9). Grand total?",
+      "options": [
+        "33",
+        "24",
+        "9",
+        "15"
+      ],
+      "answer": 0,
+      "explanation": "24 + 9 = 33. This hand answer (33) is what we'll check the code against."
+    },
+    {
+      "id": "u82l01e04",
+      "type": "trueFalse",
+      "uepcc": "E",
+      "prompt": "The helper line_cost(qty, price) should return qty * price.",
+      "answer": true,
+      "explanation": "Yes — one line's cost is its quantity times its unit price. line_cost(2, 12) = 24."
+    },
+    {
+      "id": "u82l01e05",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Plan — decompose. What is the SMALL repeated job we can make a helper for?",
+      "options": [
+        "Computing one line's cost: qty * price",
+        "Adding every number in sight",
+        "Printing the order",
+        "Sorting the prices"
+      ],
+      "answer": 0,
+      "explanation": "The repeated job is one line's cost. A helper does it once; we reuse it for each line."
+    },
+    {
+      "id": "u82l01e06",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Put the plain-English plan in order.",
+      "blocks": [
+        "Make a helper that returns qty * price for one line",
+        "Start a running total at 0",
+        "For each line, add its line_cost to the total",
+        "Show the total"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "Build the helper, start a total, add each line's cost, show it. Helper + accumulate."
+    },
+    {
+      "id": "u82l01e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code it. Arrange the lines.",
+      "blocks": [
+        "def line_cost(qty, price):",
+        "    return qty * price",
+        "quantities = [2, 3]",
+        "prices = [12, 3]",
+        "total = 0",
+        "for i in range(len(quantities)):",
+        "    total = total + line_cost(quantities[i], prices[i])",
+        "print(total)"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "explanation": "Define the helper, store both lists, accumulate line_cost for each index, print. Every value from the problem is a named list entry."
+    },
+    {
+      "id": "u82l01e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Complete the helper's body:\n\ndef line_cost(qty, price):\n    return qty ____ price",
+      "answer": "*",
+      "acceptable": [
+        "*"
+      ],
+      "explanation": "One line's cost is quantity times price, so the operator is *. line_cost(2, 12) = 24."
+    },
+    {
+      "id": "u82l01e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check — the code prints 33; your hand example was 33. Verdict?",
+      "options": [
+        "It passes — output matches the example",
+        "It fails",
+        "Can't tell",
+        "Rewrite the example"
+      ],
+      "answer": 0,
+      "explanation": "Output (33) matches the hand-worked 33, so the decomposition is correct."
+    },
+    {
+      "id": "u82l01e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Re-check with new numbers: quantities [4, 2], prices [10, 5]. Same plan. Grand total?",
+      "options": [
+        "50",
+        "33",
+        "40",
+        "10"
+      ],
+      "answer": 0,
+      "explanation": "4*10=40, 2*5=10, 40+10=50. The same helper + accumulate plan handles fresh inputs. You decomposed it!"
+    }
+  ]
+}

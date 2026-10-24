@@ -1,0 +1,125 @@
+{
+  "unitId": "u30",
+  "lessonId": "u30l05",
+  "title": "Common mistakes with input()",
+  "idea": "Classic input bugs: forgetting int() before number math, using the answer before asking, and expecting exact case. Spot and fix them.",
+  "exercises": [
+    {
+      "id": "u30l05e01",
+      "type": "multipleChoice",
+      "prompt": "What is wrong?\n\nage = input(\"Age: \")\nif age >= 18:\n    print(\"Adult\")",
+      "options": [
+        "age is text from input(); it must be int(age) before comparing to 18",
+        "18 is too small",
+        "print is wrong",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "Comparing text to a number is a type mismatch. Convert with int() first: age = int(input(\"Age: \"))."
+    },
+    {
+      "id": "u30l05e02",
+      "type": "fillBlank",
+      "prompt": "Fix it by converting the input to a number:\n\nage = ____(input(\"Age: \"))\nif age >= 18:\n    print(\"Adult\")",
+      "answer": "int",
+      "acceptable": ["int"],
+      "explanation": "int() converts the typed text into a number so the >= comparison works."
+    },
+    {
+      "id": "u30l05e03",
+      "type": "multipleChoice",
+      "prompt": "What is wrong with the order here?\n\nprint(\"Hello \" + name)\nname = input(\"Name: \")",
+      "options": [
+        "name is used before input() gives it a value - you must ask first",
+        "+ is wrong",
+        "input is misspelled",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "You cannot use an answer before you have asked for it. Ask with input() first, then use name."
+    },
+    {
+      "id": "u30l05e04",
+      "type": "orderBlocks",
+      "prompt": "Put the two lines in the correct order.",
+      "blocks": [
+        "name = input(\"Name: \")",
+        "print(\"Hello \" + name)"
+      ],
+      "answer": [0, 1],
+      "explanation": "Ask first, then use the answer. Order matters: the variable must exist before you read it."
+    },
+    {
+      "id": "u30l05e05",
+      "type": "multipleChoice",
+      "prompt": "A program checks if answer == \"yes\" but the user typed \"Yes\" and was rejected. The bug is...",
+      "options": [
+        "case sensitivity - \"Yes\" is not \"yes\"",
+        "a math error",
+        "a missing int()",
+        "no bug"
+      ],
+      "answer": 0,
+      "explanation": "Exact match includes case. Plan for capitalizations, e.g. accept \"yes\" or \"Yes\" with 'or'. (Review from last unit.)"
+    },
+    {
+      "id": "u30l05e06",
+      "type": "multipleChoice",
+      "prompt": "The user types 10 and the code does total = input(\"n: \") + 5. What happens?",
+      "options": [
+        "An error or wrong result, because \"10\" is text and can't add the number 5 cleanly",
+        "total is 15",
+        "total is 105",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "Mixing a string and a number in + is a type error. Convert the input with int() before adding."
+    },
+    {
+      "id": "u30l05e07",
+      "type": "trueFalse",
+      "prompt": "You should only call int() on an input when you actually need a number.",
+      "answer": true,
+      "explanation": "Yes - converting a word like \"yes\" with int() would fail. Convert only numeric answers."
+    },
+    {
+      "id": "u30l05e08",
+      "type": "multipleChoice",
+      "prompt": "A quiz wants to accept \"y\" OR \"yes\". Someone wrote 'if answer == \"y\" and answer == \"yes\"'. Why does it never pass?",
+      "options": [
+        "One answer can't be both \"y\" and \"yes\" at once - it should be 'or'",
+        "and is faster",
+        "The quotes are wrong",
+        "It does pass"
+      ],
+      "answer": 0,
+      "explanation": "'and' demands both at the same time - impossible for one value. 'or' accepts either. (Reviewing or.)"
+    },
+    {
+      "id": "u30l05e09",
+      "type": "multipleChoice",
+      "prompt": "Best habit to avoid input bugs?",
+      "options": [
+        "Ask first, convert with int() only for numbers, and plan for different capitalizations",
+        "Never use input",
+        "Always convert everything",
+        "Skip the prompt"
+      ],
+      "answer": 0,
+      "explanation": "Order, type, and case are the three traps. Handle each and your interactive code behaves."
+    },
+    {
+      "id": "u30l05e10",
+      "type": "multipleChoice",
+      "prompt": "The three input gotchas to remember:",
+      "options": [
+        "input gives text (convert for numbers), ask before using, and watch case",
+        "input gives numbers",
+        "order never matters",
+        "case never matters"
+      ],
+      "answer": 0,
+      "explanation": "Text-not-number, ask-before-use, and case sensitivity. Keep these in mind and interactive programs stay reliable."
+    }
+  ]
+}

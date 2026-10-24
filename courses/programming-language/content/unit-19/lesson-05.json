@@ -1,0 +1,126 @@
+{
+  "unitId": "u19",
+  "lessonId": "u19l05",
+  "title": "Changing a yes/no fact",
+  "idea": "Facts can change. A boolean variable can be reassigned from True to False, just like a number can be updated. This reviews reassignment with a new kind of value.",
+  "exercises": [
+    {
+      "id": "u19l05e01",
+      "type": "multipleChoice",
+      "prompt": "What does this print?\n\nopen_now = True\nopen_now = False\nprint(open_now)",
+      "options": [
+        "False",
+        "True",
+        "both",
+        "an error"
+      ],
+      "answer": 0,
+      "explanation": "The second line replaces the value. open_now now holds False, so that's what prints."
+    },
+    {
+      "id": "u19l05e02",
+      "type": "trueFalse",
+      "prompt": "A variable keeps only its most recent value.",
+      "answer": true,
+      "explanation": "Yes. Each new assignment replaces the old value. The last one wins - this is true for numbers and booleans alike."
+    },
+    {
+      "id": "u19l05e03",
+      "type": "multipleChoice",
+      "prompt": "What does this print?\n\ndone = False\ndone = True\nprint(done)",
+      "options": [
+        "True",
+        "False",
+        "done",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "done starts as False, then becomes True. The newest value, True, is what prints."
+    },
+    {
+      "id": "u19l05e04",
+      "type": "orderBlocks",
+      "prompt": "A seat starts empty (taken = False), then someone sits (taken = True). Arrange to show the final fact.",
+      "blocks": [
+        "taken = True",
+        "print(taken)",
+        "taken = False"
+      ],
+      "answer": [
+        2,
+        0,
+        1
+      ],
+      "explanation": "Start empty (False), then taken (True), then print. The order of the facts tells the story."
+    },
+    {
+      "id": "u19l05e05",
+      "type": "multipleChoice",
+      "prompt": "A battery saver is off, then turned on. Which code matches? (final fact should be True)",
+      "options": [
+        "saver = False then saver = True",
+        "saver = True then saver = True",
+        "saver = False then saver = False",
+        "saver = True then saver = False"
+      ],
+      "answer": 0,
+      "explanation": "Off means False, then on means True. The last assignment, True, is the final state."
+    },
+    {
+      "id": "u19l05e06",
+      "type": "fillBlank",
+      "prompt": "A phone was muted, now unmuted. Fill the final value:\n\nmuted = True\nmuted = ____\nprint(muted)   # shows: False",
+      "answer": "False",
+      "acceptable": [
+        "False"
+      ],
+      "explanation": "Unmuting flips the fact to False. Reassignment lets a yes/no fact change over time."
+    },
+    {
+      "id": "u19l05e07",
+      "type": "trueFalse",
+      "prompt": "Reassigning a boolean works the same way as reassigning a number.",
+      "answer": true,
+      "explanation": "Yes - name = new_value replaces whatever was there, whether it's a number or a boolean."
+    },
+    {
+      "id": "u19l05e08",
+      "type": "multipleChoice",
+      "prompt": "A quick number review - what prints?\n\nscore = 5\nscore = 8\nprint(score)",
+      "options": [
+        "8",
+        "5",
+        "13",
+        "score"
+      ],
+      "answer": 0,
+      "explanation": "The newest value (8) wins. The same rule you just learned for booleans."
+    },
+    {
+      "id": "u19l05e09",
+      "type": "multipleChoice",
+      "prompt": "After three updates, what prints?\n\nvisible = True\nvisible = False\nvisible = True\nprint(visible)",
+      "options": [
+        "True",
+        "False",
+        "three times",
+        "an error"
+      ],
+      "answer": 0,
+      "explanation": "Only the last assignment matters. visible ends as True."
+    },
+    {
+      "id": "u19l05e10",
+      "type": "multipleChoice",
+      "prompt": "Why is it handy that a yes/no fact can change?",
+      "options": [
+        "Because real facts change - a door opens, a task finishes",
+        "Because booleans must change every line",
+        "Because True is better than False",
+        "It is never handy"
+      ],
+      "answer": 0,
+      "explanation": "Programs track changing facts: a seat fills, a task completes. Reassignment lets a boolean follow the real world."
+    }
+  ]
+}

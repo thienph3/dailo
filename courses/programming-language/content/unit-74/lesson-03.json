@@ -1,0 +1,133 @@
+{
+  "unitId": "u74",
+  "lessonId": "u74l03",
+  "title": "When to use print, when to use return",
+  "idea": "TOOL: choose print to communicate with a person; choose return to pass a value to more code.",
+  "exercises": [
+    {
+      "id": "u74l03e01",
+      "type": "multipleChoice",
+      "prompt": "Your sub-plan's answer will be added to another number later. print or return?",
+      "options": [
+        "return - the value must be reused",
+        "print - just show it",
+        "Either",
+        "Neither"
+      ],
+      "answer": 0,
+      "explanation": "If more code needs the value, return it. Only a returned value can be combined with other numbers."
+    },
+    {
+      "id": "u74l03e02",
+      "type": "multipleChoice",
+      "prompt": "Your sub-plan just needs to display a greeting for the user. print or return?",
+      "options": [
+        "print - it only needs to be seen",
+        "return - hand it back",
+        "Both are required",
+        "Neither"
+      ],
+      "answer": 0,
+      "explanation": "If the goal is only to show something to a person, print is enough. No value needs to travel onward."
+    },
+    {
+      "id": "u74l03e03",
+      "type": "multipleChoice",
+      "prompt": "A sub-plan computes a total that the main program will store and use again. Best choice?",
+      "options": [
+        "return the total",
+        "print the total and forget it",
+        "Do nothing",
+        "Loop forever"
+      ],
+      "answer": 0,
+      "explanation": "The main program must reuse the total, so return it. Returning keeps the value usable."
+    },
+    {
+      "id": "u74l03e04",
+      "type": "trueFalse",
+      "prompt": "A good rule of thumb: return the answer, and let the CALLER decide whether to print it.",
+      "answer": true,
+      "explanation": "Yes. If the sub-plan returns, the caller can print it, store it, or combine it - the caller stays in control."
+    },
+    {
+      "id": "u74l03e05",
+      "type": "multipleChoice",
+      "prompt": "Why is 'return the value, print in the caller' often better than printing inside the sub-plan?",
+      "options": [
+        "It keeps the sub-plan reusable in more situations",
+        "It is always slower",
+        "It hides the answer",
+        "Printing is banned"
+      ],
+      "answer": 0,
+      "explanation": "A returning sub-plan works whether you want to print, store, or combine. Printing inside locks it to one use."
+    },
+    {
+      "id": "u74l03e06",
+      "type": "matchPairs",
+      "prompt": "Match each goal to the right tool.",
+      "pairs": [
+        {
+          "left": "Show a message to the user",
+          "right": "print"
+        },
+        {
+          "left": "Pass a value into more math",
+          "right": "return"
+        },
+        {
+          "left": "Store the answer for later",
+          "right": "return"
+        }
+      ],
+      "explanation": "print for people, return for more code. Matching the tool to the goal keeps your sub-plans clean."
+    },
+    {
+      "id": "u74l03e07",
+      "type": "multipleChoice",
+      "prompt": "def area(w, h):\n    return w * h\n\nThe caller writes: print(area(5, 3)). Who prints, who returns?",
+      "options": [
+        "area returns; the caller prints",
+        "area prints; the caller returns",
+        "Both print",
+        "Both return"
+      ],
+      "answer": 0,
+      "explanation": "area returns 15; the caller chooses to print it. The sub-plan computes, the caller decides what to do."
+    },
+    {
+      "id": "u74l03e08",
+      "type": "multipleChoice",
+      "prompt": "Which sub-plan is more REUSABLE?",
+      "options": [
+        "One that returns its result",
+        "One that only prints its result",
+        "They are equally reusable",
+        "Neither"
+      ],
+      "answer": 0,
+      "explanation": "A returning sub-plan can be printed, stored, or combined. A print-only one can only ever show its result."
+    },
+    {
+      "id": "u74l03e09",
+      "type": "multipleChoice",
+      "prompt": "REVIEW: returning lets the caller use a value in which earlier tools?",
+      "options": [
+        "math, comparisons, storing in variables - all of them",
+        "only loops",
+        "only lists",
+        "none"
+      ],
+      "answer": 0,
+      "explanation": "A returned value is a normal value: it works with arithmetic, comparisons, and assignment. That is the power."
+    },
+    {
+      "id": "u74l03e10",
+      "type": "trueFalse",
+      "prompt": "If you are unsure, returning is usually the safer choice because the caller can still print it.",
+      "answer": true,
+      "explanation": "Yes. Returning keeps options open. If you only print, the value is gone and cannot be reused."
+    }
+  ]
+}

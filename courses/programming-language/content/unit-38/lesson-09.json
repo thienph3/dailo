@@ -1,0 +1,142 @@
+{
+  "unitId": "u38",
+  "lessonId": "u38l09",
+  "title": "From plan to a stepping loop",
+  "idea": "Take a problem that needs the current count each pass (print 1..N, a countdown, counting by fives) and plan then code it with range(start, stop, step).",
+  "exercises": [
+    {
+      "id": "u38l09e01",
+      "type": "multipleChoice",
+      "prompt": "PROBLEM: print the numbers 1 to 5. What's the OUTPUT?",
+      "options": [
+        "Five lines: 1, 2, 3, 4, 5",
+        "The number 5",
+        "One line: 1",
+        "Five lines all showing 5"
+      ],
+      "answer": 0,
+      "explanation": "Name the output: the numbers 1 through 5, one per line. Each pass shows a different number."
+    },
+    {
+      "id": "u38l09e02",
+      "type": "multipleChoice",
+      "prompt": "Plan: what does each pass need?",
+      "options": [
+        "The current number i, printed",
+        "The same fixed number each time",
+        "No value at all",
+        "A decision"
+      ],
+      "answer": 0,
+      "explanation": "Because the value changes each pass, you need the loop variable i. That's the signal to use it."
+    },
+    {
+      "id": "u38l09e03",
+      "type": "multipleChoice",
+      "prompt": "Which loop prints 1 to 5?",
+      "options": [
+        "for i in range(1, 6):\n    print(i)",
+        "for i in range(5):\n    print(i)",
+        "for i in range(1, 5):\n    print(i)",
+        "for i in range(1, 6):\n    print(\"i\")"
+      ],
+      "answer": 0,
+      "explanation": "range(1, 6) gives 1-5, and print(i) shows the current number each pass."
+    },
+    {
+      "id": "u38l09e04",
+      "type": "multipleChoice",
+      "prompt": "You run it: 1, 2, 3, 4, 5 show. Your plan said 1 to 5. So...",
+      "options": [
+        "It passes — output matches the plan",
+        "It fails",
+        "You can't tell",
+        "Change the plan"
+      ],
+      "answer": 0,
+      "explanation": "Output matches the plan — a passing Check. UEPCC closes cleanly."
+    },
+    {
+      "id": "u38l09e05",
+      "type": "multipleChoice",
+      "prompt": "PROBLEM: count down 5 to 1. Which loop?",
+      "options": [
+        "for i in range(5, 0, -1):\n    print(i)",
+        "for i in range(5):\n    print(i)",
+        "for i in range(1, 6):\n    print(i)",
+        "for i in range(5, 1, -1):\n    print(i)"
+      ],
+      "answer": 0,
+      "explanation": "A countdown needs a negative step: range(5, 0, -1) gives 5, 4, 3, 2, 1."
+    },
+    {
+      "id": "u38l09e06",
+      "type": "multipleChoice",
+      "prompt": "PROBLEM: print 5, 10, 15, 20. Which loop?",
+      "options": [
+        "for i in range(5, 21, 5):\n    print(i)",
+        "for i in range(5, 20, 5):\n    print(i)",
+        "for i in range(5, 25, 5):\n    print(i)",
+        "for i in range(0, 20, 5):\n    print(i)"
+      ],
+      "answer": 0,
+      "explanation": "Start 5, step 5, stop 21 so 20 is included: 5, 10, 15, 20."
+    },
+    {
+      "id": "u38l09e07",
+      "type": "orderBlocks",
+      "prompt": "Code this plan: print a header once, then Day 1 to Day 3.",
+      "blocks": [
+        "print(\"Schedule:\")",
+        "for i in range(1, 4):",
+        "    print(f\"Day {i}\")"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Header once, then the loop over 1-3, with the f-string using i: Day 1, Day 2, Day 3."
+    },
+    {
+      "id": "u38l09e08",
+      "type": "trueFalse",
+      "prompt": "When the value must change each pass, that's your cue to use the loop variable i.",
+      "answer": true,
+      "explanation": "Same value each pass -> plain range(n). Changing value -> use i. Reading that cue picks the right shape."
+    },
+    {
+      "id": "u38l09e09",
+      "type": "matchPairs",
+      "prompt": "Match each problem to its range.",
+      "pairs": [
+        {
+          "left": "Print 1 to 4",
+          "right": "range(1, 5)"
+        },
+        {
+          "left": "Count down 4 to 1",
+          "right": "range(4, 0, -1)"
+        },
+        {
+          "left": "Print 2, 4, 6",
+          "right": "range(2, 7, 2)"
+        }
+      ],
+      "explanation": "Pick start, stop (one past the last value), and step (size and direction) to match the problem."
+    },
+    {
+      "id": "u38l09e10",
+      "type": "multipleChoice",
+      "prompt": "PROBLEM: label seats 1 to n, where n = 4. Which loop?",
+      "options": [
+        "for i in range(1, n + 1):\n    print(f\"Seat {i}\")",
+        "for i in range(n):\n    print(f\"Seat {i}\")",
+        "for i in range(1, n):\n    print(f\"Seat {i}\")",
+        "for i in range(n + 1):\n    print(\"Seat\")"
+      ],
+      "answer": 0,
+      "explanation": "range(1, n + 1) counts 1 to n (here 1 to 4), and the f-string labels each: Seat 1 through Seat 4."
+    }
+  ]
+}

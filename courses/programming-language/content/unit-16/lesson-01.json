@@ -1,0 +1,140 @@
+{
+  "unitId": "u16",
+  "lessonId": "u16l01",
+  "title": "Two kinds of values: text and numbers",
+  "idea": "A value is either TEXT (a string, in quotes) or a NUMBER (no quotes). The computer keeps them apart.",
+  "exercises": [
+    {
+      "id": "u16l01e01",
+      "type": "multipleChoice",
+      "prompt": "Python values come in kinds (called 'types'). Which two kinds have we been using?",
+      "options": [
+        "Text (strings, in quotes) and numbers",
+        "Big values and small values",
+        "Loud values and quiet values",
+        "New values and old values"
+      ],
+      "answer": 0,
+      "explanation": "Everything so far has been either text (a string, inside quotes) or a number. The computer treats them differently."
+    },
+    {
+      "id": "u16l01e02",
+      "type": "multipleChoice",
+      "prompt": "Which of these is TEXT (a string)?",
+      "options": [
+        "\"hello\"",
+        "42",
+        "7",
+        "100"
+      ],
+      "answer": 0,
+      "explanation": "The quotes are the giveaway. \"hello\" is text. The others are numbers."
+    },
+    {
+      "id": "u16l01e03",
+      "type": "multipleChoice",
+      "prompt": "Which of these is a NUMBER?",
+      "options": [
+        "25",
+        "\"25\"",
+        "\"cat\"",
+        "\"hi\""
+      ],
+      "answer": 0,
+      "explanation": "25 with no quotes is a number. \"25\" with quotes is text that happens to look like a number."
+    },
+    {
+      "id": "u16l01e04",
+      "type": "trueFalse",
+      "prompt": "\"7\" (with quotes) and 7 (no quotes) are the same kind of value.",
+      "answer": false,
+      "explanation": "They look alike but are different kinds. \"7\" is text; 7 is a number. This difference causes a famous bug — you'll meet it soon."
+    },
+    {
+      "id": "u16l01e05",
+      "type": "multiSelect",
+      "prompt": "Select EVERY value here that is text (a string).",
+      "options": [
+        "\"dog\"",
+        "\"5\"",
+        "9",
+        "12"
+      ],
+      "answer": [
+        0,
+        1
+      ],
+      "explanation": "Text is whatever sits inside quotes: \"dog\" and \"5\". The bare 9 and 12 are numbers."
+    },
+    {
+      "id": "u16l01e06",
+      "type": "matchPairs",
+      "prompt": "Match each value to its kind.",
+      "pairs": [
+        {
+          "left": "\"apple\"",
+          "right": "Text (string)"
+        },
+        {
+          "left": "3",
+          "right": "Number"
+        },
+        {
+          "left": "\"100\"",
+          "right": "Text (string)"
+        },
+        {
+          "left": "100",
+          "right": "Number"
+        }
+      ],
+      "explanation": "Quotes decide it. \"100\" is text even though it looks like a number; 100 alone is a real number."
+    },
+    {
+      "id": "u16l01e07",
+      "type": "multipleChoice",
+      "prompt": "What will this show?\n\nage = 12\nprint(age)",
+      "options": [
+        "12",
+        "\"12\"",
+        "age",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "age holds the number 12. Printing it shows 12 — the quotes you see in text never appear for a number."
+    },
+    {
+      "id": "u16l01e08",
+      "type": "multipleChoice",
+      "prompt": "What will this show?\n\nname = \"12\"\nprint(name)",
+      "options": [
+        "12",
+        "\"12\"",
+        "name",
+        "Error"
+      ],
+      "answer": 0,
+      "explanation": "The screen shows 12 either way! You can't SEE the quotes in the output — but inside, name is text, not a number."
+    },
+    {
+      "id": "u16l01e09",
+      "type": "trueFalse",
+      "prompt": "You can tell a value's kind by whether it is written inside quotes.",
+      "answer": true,
+      "explanation": "Quotes mean text. No quotes (just digits) means a number. That one habit saves you from many bugs."
+    },
+    {
+      "id": "u16l01e10",
+      "type": "multipleChoice",
+      "prompt": "Why does it matter whether a value is text or a number?",
+      "options": [
+        "The computer does different things to each — math on numbers, joining on text",
+        "It never matters at all",
+        "Text is always faster",
+        "Numbers cannot be stored in variables"
+      ],
+      "answer": 0,
+      "explanation": "Knowing the kind tells you what the computer will DO. Next lesson: how + behaves differently for each."
+    }
+  ]
+}

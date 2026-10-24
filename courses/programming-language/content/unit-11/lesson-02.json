@@ -1,0 +1,98 @@
+{
+  "unitId": "u11",
+  "lessonId": "u11l02",
+  "title": "Solve it: change from a payment",
+  "idea": "GUIDED PROBLEM. Subtraction problem via UEPCC. Reinforces understand->example->plan->code->check with a new operator.",
+  "problem": "You buy something for 7 and pay with 10. Show the change you get back.",
+  "exercises": [
+    {
+      "id": "u11l02e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: You pay 10 for something that costs 7. Show the change.\n\nWhat is the OUTPUT?",
+      "options": ["The change you get back", "The price, 7", "The payment, 10", "The shop's name"],
+      "answer": 0,
+      "explanation": "Output = the change. Name it before anything else."
+    },
+    {
+      "id": "u11l02e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "What are the INPUTS?",
+      "options": ["The payment (10) and the price (7)", "Just 3", "The word change", "None"],
+      "answer": 0,
+      "explanation": "You start with the payment and the price."
+    },
+    {
+      "id": "u11l02e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Work an example by hand: pay 10, cost 7. The change is?",
+      "options": ["3", "17", "70", "10"],
+      "answer": 0,
+      "explanation": "10 - 7 = 3. This is your check value for later."
+    },
+    {
+      "id": "u11l02e04",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Plan: to get change, what do you do with the two numbers?",
+      "options": ["Subtract the price from the payment", "Add them", "Multiply them", "Show the bigger one"],
+      "answer": 0,
+      "explanation": "Change = payment - price. The plan picks the operation before you code."
+    },
+    {
+      "id": "u11l02e05",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Which operator does 'subtract' in code?",
+      "options": ["-", "+", "*", "/"],
+      "answer": 0,
+      "explanation": "Subtraction is the - operator."
+    },
+    {
+      "id": "u11l02e06",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code it — arrange the lines (remember, compute, show).",
+      "blocks": ["change = paid - price", "price = 7", "paid = 10", "print(change)"],
+      "answer": [2, 1, 0, 3],
+      "explanation": "Store paid, store price, compute change = paid - price, print it. Mirrors the plan."
+    },
+    {
+      "id": "u11l02e07",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Complete it:\n\npaid = 10\nprice = 7\nchange = paid ____ price\nprint(change)",
+      "answer": "-",
+      "acceptable": ["-"],
+      "explanation": "Subtract: change = paid - price, which is 3."
+    },
+    {
+      "id": "u11l02e08",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "The code shows 3. Your example said 3. Verdict?",
+      "options": ["Passes", "Fails", "Can't tell", "Rewrite the example"],
+      "answer": 0,
+      "explanation": "Output matches the hand example — correct."
+    },
+    {
+      "id": "u11l02e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "New inputs: paid = 20, price = 12. What does print(change) show?",
+      "options": ["8", "32", "12", "20"],
+      "answer": 0,
+      "explanation": "20 - 12 = 8. Works for new inputs too."
+    },
+    {
+      "id": "u11l02e10",
+      "type": "trueFalse",
+      "uepcc": "P",
+      "prompt": "Choosing the right operation (+, -, *, /) happens in the Plan step, before writing code.",
+      "answer": true,
+      "explanation": "Yes — decide the operation while planning; the Code step just writes it down."
+    }
+  ]
+}

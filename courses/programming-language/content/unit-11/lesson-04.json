@@ -1,0 +1,104 @@
+{
+  "unitId": "u11",
+  "lessonId": "u11l04",
+  "title": "Solve it: split a bill equally",
+  "idea": "GUIDED PROBLEM. Division via UEPCC. 'Share equally' means divide. (Numbers chosen to divide evenly — remainder comes later in Unit 12.)",
+  "problem": "A bill of 20 is split equally between 4 friends. Show what each person pays.",
+  "exercises": [
+    {
+      "id": "u11l04e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: Split a bill of 20 equally among 4 people. Show each share.\n\nOUTPUT?",
+      "options": ["What each person pays", "The whole bill, 20", "The number of people", "The largest share"],
+      "answer": 0,
+      "explanation": "Output = one person's share."
+    },
+    {
+      "id": "u11l04e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "INPUTS?",
+      "options": ["The bill (20) and the number of people (4)", "Only 5", "The word split", "None"],
+      "answer": 0,
+      "explanation": "The total and how many people share it."
+    },
+    {
+      "id": "u11l04e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "By hand: 20 shared among 4. Each pays?",
+      "options": ["5", "24", "16", "80"],
+      "answer": 0,
+      "explanation": "20 / 4 = 5. Check value: 5."
+    },
+    {
+      "id": "u11l04e04",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "'Share equally among N' — which operation?",
+      "options": ["Divide", "Multiply", "Add", "Subtract"],
+      "answer": 0,
+      "explanation": "Sharing equally means division."
+    },
+    {
+      "id": "u11l04e05",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Which operator divides in Python?",
+      "options": ["/", "*", "-", "%"],
+      "answer": 0,
+      "explanation": "The / symbol divides. (% does something else — you'll meet it in the next unit.)"
+    },
+    {
+      "id": "u11l04e06",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Order matters in division. To get each share, which is right?",
+      "options": ["bill / people", "people / bill", "either one", "bill - people"],
+      "answer": 0,
+      "explanation": "bill / people = 20/4 = 5. Flipping it (4/20) gives the wrong answer — order matters for - and /."
+    },
+    {
+      "id": "u11l04e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code it (remember, compute, show).",
+      "blocks": ["share = bill / people", "people = 4", "bill = 20", "print(share)"],
+      "answer": [2, 1, 0, 3],
+      "explanation": "Store bill, store people, share = bill / people, print share."
+    },
+    {
+      "id": "u11l04e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Complete it:\n\nbill = 20\npeople = 4\nshare = bill ____ people\nprint(share)",
+      "answer": "/",
+      "acceptable": ["/"],
+      "explanation": "Divide: share = bill / people = 5."
+    },
+    {
+      "id": "u11l04e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Code shows 5.0; your example said 5. Did it pass?",
+      "options": [
+        "Yes — 5.0 is the same value as 5 (division gives a decimal)",
+        "No — 5.0 is completely wrong",
+        "Can't tell",
+        "Change the example to 5.0 only"
+      ],
+      "answer": 0,
+      "explanation": "Division in Python gives a decimal (5.0), which equals 5. Good Checking means knowing 5.0 and 5 are the same amount."
+    },
+    {
+      "id": "u11l04e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "New inputs: bill = 30, people = 3. print(share) shows?",
+      "options": ["10.0", "90", "27", "3"],
+      "answer": 0,
+      "explanation": "30 / 3 = 10.0. Same solution, new numbers."
+    }
+  ]
+}

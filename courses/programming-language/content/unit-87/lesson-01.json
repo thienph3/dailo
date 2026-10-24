@@ -1,0 +1,146 @@
+{
+  "unitId": "u87",
+  "lessonId": "u87l01",
+  "title": "Your pattern toolbox",
+  "idea": "MEET: recall the handful of patterns you own — running total, count-with-condition, track biggest/smallest, average, filter, search — one of them fits most sub-problems.",
+  "exercises": [
+    {
+      "type": "multipleChoice",
+      "prompt": "Which pattern adds every item into one growing value?",
+      "options": [
+        "Running total (accumulate)",
+        "Search",
+        "Filter",
+        "Track the biggest"
+      ],
+      "answer": 0,
+      "explanation": "A running total starts at 0 and adds each item. It's the go-to for 'what's the total?'.",
+      "id": "u87l01e01"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Which pattern keeps only the items that pass a rule?",
+      "options": [
+        "Filter",
+        "Running total",
+        "Average",
+        "Search"
+      ],
+      "answer": 0,
+      "explanation": "A filter walks the list and keeps (or collects) just the items matching a condition.",
+      "id": "u87l01e02"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "You already own patterns for total, count, biggest, smallest, average, filter, and search.",
+      "answer": true,
+      "explanation": "Yes — Laps 4 and 5 built all of these. Pattern selection is choosing the right one, not learning new ones.",
+      "id": "u87l01e03"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Which pattern answers 'how many items pass a rule?'",
+      "options": [
+        "Count with a condition",
+        "Running total",
+        "Track the smallest",
+        "Search"
+      ],
+      "answer": 0,
+      "explanation": "A conditional count starts at 0 and adds 1 each time an item passes the rule.",
+      "id": "u87l01e04"
+    },
+    {
+      "type": "multiSelect",
+      "prompt": "Select the patterns you can already use.",
+      "options": [
+        "running total",
+        "count with a condition",
+        "track the biggest",
+        "teleport the list"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "The first three are real patterns from earlier laps. The last one isn't a thing.",
+      "id": "u87l01e05"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Which pattern answers 'is this value present in the list?'",
+      "options": [
+        "Search / membership",
+        "Running total",
+        "Average",
+        "Track the biggest"
+      ],
+      "answer": 0,
+      "explanation": "Search walks the list looking for a match and reports found or not found.",
+      "id": "u87l01e06"
+    },
+    {
+      "type": "matchPairs",
+      "prompt": "Match each pattern to what it produces.",
+      "pairs": [
+        {
+          "left": "running total",
+          "right": "a sum"
+        },
+        {
+          "left": "count with condition",
+          "right": "a how-many number"
+        },
+        {
+          "left": "track the biggest",
+          "right": "the largest value"
+        }
+      ],
+      "explanation": "Each pattern has a signature output. Recognising the output helps you pick the pattern.",
+      "id": "u87l01e07"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Why keep your patterns in mind as a 'toolbox'?",
+      "options": [
+        "Each sub-problem usually matches one familiar tool",
+        "To look busy",
+        "Because tools are heavy",
+        "There's no reason"
+      ],
+      "answer": 0,
+      "explanation": "Decomposition gives you sub-problems; the toolbox gives you a tool for each. Selection links them.",
+      "id": "u87l01e08"
+    },
+    {
+      "type": "orderBlocks",
+      "prompt": "Order the step where patterns come in.",
+      "blocks": [
+        "Understand the problem",
+        "Split into sub-problems",
+        "Pick a pattern for each sub-problem"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Understand, split, THEN choose a pattern per part. Selection is the third step.",
+      "id": "u87l01e09"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "The big idea:",
+      "options": [
+        "You own a small toolbox of patterns; selection picks the right one per sub-problem",
+        "You must invent a new pattern each time",
+        "Patterns are useless",
+        "There is only one pattern"
+      ],
+      "answer": 0,
+      "explanation": "A handful of patterns covers most sub-problems. This unit is about matching part to pattern.",
+      "id": "u87l01e10"
+    }
+  ]
+}

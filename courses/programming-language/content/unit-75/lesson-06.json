@@ -1,0 +1,154 @@
+{
+  "unitId": "u75",
+  "lessonId": "u75l06",
+  "title": "Solve it: a sub-plan that returns a list's total",
+  "idea": "GUIDED PROBLEM (UEPCC). A sub-plan loops over a list to build a running total, then returns it. Practices accumulator + return, no shortcuts.",
+  "problem": "Write sum_scores(scores) that hands back the total of all scores in the list. Use it on [10, 20, 5].",
+  "exercises": [
+    {
+      "id": "u75l06e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: sum_scores(scores) hands back the total of the list; use it on [10, 20, 5].\n\nWhat is the OUTPUT?",
+      "options": [
+        "The total of all the scores",
+        "The number of scores",
+        "The first score",
+        "The biggest score"
+      ],
+      "answer": 0,
+      "explanation": "Output is the total (a running sum), handed back with return."
+    },
+    {
+      "id": "u75l06e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "What is the INPUT (the one parameter)?",
+      "options": [
+        "The list of scores",
+        "A single number",
+        "The total",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "The input is the whole list, scores. The sub-plan walks it to build the total."
+    },
+    {
+      "id": "u75l06e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example by hand — the total of [10, 20, 5] is...",
+      "options": [
+        "35",
+        "30",
+        "3",
+        "20"
+      ],
+      "answer": 0,
+      "explanation": "10 + 20 + 5 = 35. This is the value you'll check the returned total against."
+    },
+    {
+      "id": "u75l06e04",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Walking by hand, a running total goes: start 0, then +10, then +20, then +5. The values are...",
+      "options": [
+        "0, 10, 30, 35",
+        "10, 20, 5, 0",
+        "0, 0, 0, 35",
+        "35, 30, 10, 0"
+      ],
+      "answer": 0,
+      "explanation": "Start at 0; add each score: 0 -> 10 -> 30 -> 35. Tracing the accumulator by hand shows exactly what the loop does."
+    },
+    {
+      "id": "u75l06e05",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Plan the sub-plan in plain English.",
+      "blocks": [
+        "Start a running total at 0",
+        "For each score, add it to the running total",
+        "After the loop, hand the running total back"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Accumulator pattern: start at 0, add each item, return AFTER the loop. Return after, not during."
+    },
+    {
+      "id": "u75l06e06",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Where should 'return total' go?",
+      "options": [
+        "After the loop, so it hands back the finished total",
+        "Inside the loop, after the first add",
+        "Before the loop",
+        "It isn't needed"
+      ],
+      "answer": 0,
+      "explanation": "After the loop, total holds the full sum. Returning inside the loop would stop after the first score."
+    },
+    {
+      "id": "u75l06e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code the body: start total at 0, loop and add, then return total after the loop.",
+      "blocks": [
+        "def sum_scores(scores):",
+        "    total = 0",
+        "    for s in scores:",
+        "        total = total + s",
+        "    return total"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "explanation": "Accumulator at 0, add each s, then return total after the loop. We add it up ourselves — no shortcuts."
+    },
+    {
+      "id": "u75l06e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Complete the add step inside the loop:\n\ndef sum_scores(scores):\n    total = 0\n    for s in scores:\n        total = total ____ s\n    return total",
+      "answer": "+",
+      "acceptable": ["+"],
+      "explanation": "Add each score into total: total = total + s. After the loop, total is the full sum."
+    },
+    {
+      "id": "u75l06e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check — it returns 35 for [10, 20, 5], and your hand total was 35. Verdict?",
+      "options": [
+        "Passes",
+        "Fails",
+        "Unknown",
+        "Rewrite the example"
+      ],
+      "answer": 0,
+      "explanation": "Returned total (35) matches the hand total (35). Correct."
+    },
+    {
+      "id": "u75l06e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Re-check: sum_scores([4, 6]). What comes back?",
+      "options": [
+        "10",
+        "35",
+        "2",
+        "46"
+      ],
+      "answer": 0,
+      "explanation": "0 -> 4 -> 10. The sub-plan totals any list you hand it."
+    }
+  ]
+}

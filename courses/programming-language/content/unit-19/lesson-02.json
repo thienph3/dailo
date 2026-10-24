@@ -1,0 +1,128 @@
+{
+  "unitId": "u19",
+  "lessonId": "u19l02",
+  "title": "Meet True and False",
+  "idea": "Python has two special values for yes/no facts: True and False. They are called booleans. This lesson shows them with visible output.",
+  "exercises": [
+    {
+      "id": "u19l02e01",
+      "type": "multipleChoice",
+      "prompt": "Python has two special words for yes and no. What are they?",
+      "options": [
+        "True and False",
+        "Yes and No",
+        "On and Off",
+        "1 and 0"
+      ],
+      "answer": 0,
+      "explanation": "In Python the two yes/no values are True and False. These are called booleans."
+    },
+    {
+      "id": "u19l02e02",
+      "type": "trueFalse",
+      "prompt": "In Python, the value True must start with a capital T.",
+      "answer": true,
+      "explanation": "Yes. Python is picky: it must be True (capital T) and False (capital F). Lowercase 'true' is not the same."
+    },
+    {
+      "id": "u19l02e03",
+      "type": "multipleChoice",
+      "prompt": "What does this print?\n\nprint(True)",
+      "options": [
+        "True",
+        "true",
+        "\"True\"",
+        "1"
+      ],
+      "answer": 0,
+      "explanation": "print(True) shows the boolean value exactly: True."
+    },
+    {
+      "id": "u19l02e04",
+      "type": "multipleChoice",
+      "prompt": "What does this print?\n\nprint(False)",
+      "options": [
+        "False",
+        "false",
+        "no",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "print(False) shows False. True and False are the only two boolean values."
+    },
+    {
+      "id": "u19l02e05",
+      "type": "multipleChoice",
+      "prompt": "Which of these is written correctly for Python?",
+      "options": [
+        "True",
+        "TRUE",
+        "true",
+        "Ture"
+      ],
+      "answer": 0,
+      "explanation": "Only 'True' with a capital T is the real boolean. The others are typos or wrong capitalization."
+    },
+    {
+      "id": "u19l02e06",
+      "type": "fillBlank",
+      "prompt": "Fill in the yes/no value that means 'no':\n\nprint(____)   # shows: False",
+      "answer": "False",
+      "acceptable": [
+        "False"
+      ],
+      "explanation": "False is the boolean that means 'no'. Remember the capital F."
+    },
+    {
+      "id": "u19l02e07",
+      "type": "trueFalse",
+      "prompt": "True and False are the only two boolean values in Python.",
+      "answer": true,
+      "explanation": "Correct - a boolean is always either True or False. There is no third option."
+    },
+    {
+      "id": "u19l02e08",
+      "type": "tapTokens",
+      "prompt": "Arrange the tokens to print the yes/no value True.",
+      "tokens": [
+        "print",
+        "(",
+        "True",
+        ")"
+      ],
+      "answer": [
+        "print",
+        "(",
+        "True",
+        ")"
+      ],
+      "explanation": "print(True) prints the boolean True. You just used a brand-new kind of value!"
+    },
+    {
+      "id": "u19l02e09",
+      "type": "multipleChoice",
+      "prompt": "A friend writes print(true) and gets an error. Why?",
+      "options": [
+        "'true' is lowercase; Python needs True with a capital T",
+        "print can't show booleans",
+        "booleans must be in quotes",
+        "True is not a real value"
+      ],
+      "answer": 0,
+      "explanation": "Python only knows True and False with capital letters. Lowercase 'true' looks like an undefined name, so it errors."
+    },
+    {
+      "id": "u19l02e10",
+      "type": "multipleChoice",
+      "prompt": "What word do we use for these two special values, True and False?",
+      "options": [
+        "booleans",
+        "numbers",
+        "strings",
+        "variables"
+      ],
+      "answer": 0,
+      "explanation": "True and False are called booleans - the data type for yes/no facts."
+    }
+  ]
+}

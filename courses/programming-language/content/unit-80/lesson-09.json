@@ -1,0 +1,150 @@
+{
+  "unitId": "u80",
+  "lessonId": "u80l09",
+  "title": "Match each problem to its tricky cases",
+  "idea": "MEET (thinking). Practice spotting which edge cases belong to which problem — the core skill of edge-case enumeration.",
+  "exercises": [
+    {
+      "id": "u80l09e01",
+      "type": "matchPairs",
+      "prompt": "Match each problem to a tricky input it should worry about.",
+      "pairs": [
+        {
+          "left": "Average a list of ages",
+          "right": "An empty list of ages"
+        },
+        {
+          "left": "Discount if spending over 100",
+          "right": "Spending exactly 100"
+        },
+        {
+          "left": "Highest temperature of the week",
+          "right": "Two days tied for highest"
+        }
+      ],
+      "explanation": "Average -> empty; cutoff -> the boundary value; highest -> a tie. Each problem carries its own signature edge case."
+    },
+    {
+      "id": "u80l09e02",
+      "type": "multipleChoice",
+      "prompt": "PROBLEM: 'free delivery for orders OF AT LEAST 30.' Which input tests the rule best?",
+      "options": [
+        "An order of exactly 30",
+        "An order of 500",
+        "An order of 1",
+        "An empty order"
+      ],
+      "answer": 0,
+      "explanation": "'At least 30' means >= 30, so exactly 30 is the boundary. Testing 30 proves you used >= and not >."
+    },
+    {
+      "id": "u80l09e03",
+      "type": "multipleChoice",
+      "prompt": "PROBLEM: 'total the items in a cart.' What is the main edge case?",
+      "options": [
+        "An empty cart — the total should be 0, not a crash",
+        "A cart of 3 items",
+        "A cart with expensive items",
+        "There is none"
+      ],
+      "answer": 0,
+      "explanation": "An empty cart is the edge case; summing nothing is a safe 0. Totals rarely crash, but you should still confirm the empty case."
+    },
+    {
+      "id": "u80l09e04",
+      "type": "multiSelect",
+      "prompt": "PROBLEM: 'average the passing scores (>= 50).' Which edge cases apply? (Select all.)",
+      "options": [
+        "No scores pass (filter is empty -> divide by 0)",
+        "A score exactly 50 (boundary of the filter)",
+        "An empty input list",
+        "A normal list where some pass"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "This combines a filter and an average, so it inherits BOTH their edge cases: the boundary 50, the empty input, and the all-fail (empty filter) zero-divide."
+    },
+    {
+      "id": "u80l09e05",
+      "type": "multipleChoice",
+      "prompt": "PROBLEM: 'how many days had rain (above 0 mm)?' Which input is the tricky one?",
+      "options": [
+        "A day with exactly 0 mm — does 0 count as rain?",
+        "A day with 50 mm",
+        "A day with 20 mm",
+        "There is none"
+      ],
+      "answer": 0,
+      "explanation": "Exactly 0 mm is the boundary: 'above 0' (> 0) means 0 does NOT count. The zero/boundary value is the case to pin down."
+    },
+    {
+      "id": "u80l09e06",
+      "type": "matchPairs",
+      "prompt": "Match each edge-case name to an example input.",
+      "pairs": [
+        {
+          "left": "Empty",
+          "right": "[]"
+        },
+        {
+          "left": "Single item",
+          "right": "[7]"
+        },
+        {
+          "left": "Tie at the top",
+          "right": "[9, 9, 2]"
+        }
+      ],
+      "explanation": "Recognizing the shape of each edge case ([], [7], [9, 9, 2]) makes it quick to list them for any problem."
+    },
+    {
+      "id": "u80l09e07",
+      "type": "trueFalse",
+      "prompt": "A problem that both filters AND averages inherits the edge cases of both steps.",
+      "answer": true,
+      "explanation": "Yes. Combined problems carry combined edge cases — here the filter's boundary plus the average's zero-divide. List them all."
+    },
+    {
+      "id": "u80l09e08",
+      "type": "multipleChoice",
+      "prompt": "PROBLEM: 'find the cheapest item.' Which edge cases mirror 'find the highest'?",
+      "options": [
+        "Empty list, single item, and a tie for cheapest",
+        "Only lists of 10 items",
+        "Only sorted lists",
+        "There are none"
+      ],
+      "answer": 0,
+      "explanation": "Cheapest is just 'highest' flipped. Same edge cases: empty (no first item), single item (trivially cheapest), and a tie."
+    },
+    {
+      "id": "u80l09e09",
+      "type": "multipleChoice",
+      "prompt": "REVIEW: which everyday phrasing includes the boundary value?",
+      "options": [
+        "'at least' / 'or more' (>=)",
+        "'over' (>)",
+        "'more than' (>)",
+        "'under' (<)"
+      ],
+      "answer": 0,
+      "explanation": "'At least' and 'or more' include the boundary (>=). 'Over', 'more than', and 'under' exclude it. Words decide the comparison."
+    },
+    {
+      "id": "u80l09e10",
+      "type": "multipleChoice",
+      "prompt": "The lesson in one line:",
+      "options": [
+        "Each problem has signature edge cases — learn to spot and list them",
+        "All problems share the same single edge case",
+        "Edge cases are random",
+        "Combined problems have fewer edge cases"
+      ],
+      "answer": 0,
+      "explanation": "Averages fear empty; cutoffs fear the boundary; max fears empty and ties. Spotting the pattern is edge-case enumeration."
+    }
+  ]
+}

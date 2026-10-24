@@ -1,0 +1,136 @@
+{
+  "unitId": "u21",
+  "lessonId": "u21l07",
+  "title": "Spot the if mistake",
+  "idea": "Common if errors: missing colon, no indentation, and using = instead of ==. Recognizing them is a core debugging skill. Thinking-heavy.",
+  "exercises": [
+    {
+      "id": "u21l07e01",
+      "type": "multipleChoice",
+      "prompt": "What's wrong?\n\nif x > 5\n    print(\"big\")",
+      "options": [
+        "The if line is missing a colon :",
+        "Nothing",
+        "print is wrong",
+        "x is too small"
+      ],
+      "answer": 0,
+      "explanation": "An if line must end with a colon: if x > 5: - the colon is missing here."
+    },
+    {
+      "id": "u21l07e02",
+      "type": "multipleChoice",
+      "prompt": "What's wrong?\n\nif x > 5:\nprint(\"big\")",
+      "options": [
+        "The guarded step is not indented",
+        "The colon is missing",
+        "x is undefined",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "The print must be indented under the if to be the guarded step. Without indentation, Python complains."
+    },
+    {
+      "id": "u21l07e03",
+      "type": "multipleChoice",
+      "prompt": "What's wrong?\n\nif x = 5:\n    print(\"five\")",
+      "options": [
+        "Should be == to compare, not = to store",
+        "Should be a comma",
+        "print is wrong",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "A condition must compare, so use ==. One = tries to store and is a mistake here."
+    },
+    {
+      "id": "u21l07e04",
+      "type": "trueFalse",
+      "prompt": "Every if line must end with a colon.",
+      "answer": true,
+      "explanation": "Yes - the colon is required. It signals that the guarded block follows below."
+    },
+    {
+      "id": "u21l07e05",
+      "type": "multipleChoice",
+      "prompt": "Which if line is written correctly?",
+      "options": [
+        "if score >= 50:",
+        "if score >= 50",
+        "if score = 50:",
+        "if score >= 50;"
+      ],
+      "answer": 0,
+      "explanation": "Correct is a comparison (>=) plus a colon at the end. No missing colon, no single =, no semicolon."
+    },
+    {
+      "id": "u21l07e06",
+      "type": "matchPairs",
+      "prompt": "Match each broken if to its mistake.",
+      "pairs": [
+        {
+          "left": "if x > 5",
+          "right": "missing colon"
+        },
+        {
+          "left": "if x = 5:",
+          "right": "used = instead of =="
+        },
+        {
+          "left": "if x > 5:\\nprint(x)",
+          "right": "guarded step not indented"
+        }
+      ],
+      "explanation": "The three classic if mistakes: no colon, = vs ==, and no indentation."
+    },
+    {
+      "id": "u21l07e07",
+      "type": "fillBlank",
+      "prompt": "Add the missing symbol to end the if line:\n\nif ready____\n    print(\"Go\")",
+      "answer": ":",
+      "acceptable": [
+        ":"
+      ],
+      "explanation": "An if line ends with a colon. if ready: guards the indented print."
+    },
+    {
+      "id": "u21l07e08",
+      "type": "multipleChoice",
+      "prompt": "Which is a correctly written, complete if?",
+      "options": [
+        "if n == 3:\n    print(\"three\")",
+        "if n == 3\n    print(\"three\")",
+        "if n = 3:\nprint(\"three\")",
+        "if n == 3: print"
+      ],
+      "answer": 0,
+      "explanation": "Colon at the end, == to compare, and the guarded step indented below - all correct."
+    },
+    {
+      "id": "u21l07e09",
+      "type": "multipleChoice",
+      "prompt": "A friend's if 'does nothing' even when it should. The condition reads if done = True:. Likely fix?",
+      "options": [
+        "Change = to == (it should compare)",
+        "Remove the colon",
+        "Un-indent everything",
+        "Delete the if"
+      ],
+      "answer": 0,
+      "explanation": "A condition must compare: if done == True:. The single = is the bug."
+    },
+    {
+      "id": "u21l07e10",
+      "type": "multipleChoice",
+      "prompt": "Why learn to SPOT these mistakes, not just avoid them?",
+      "options": [
+        "Because you'll read and fix code with these exact errors often",
+        "Because mistakes are impossible",
+        "Because colons are optional",
+        "To avoid writing if at all"
+      ],
+      "answer": 0,
+      "explanation": "Missing colons, bad indentation, and = vs == are the most common if bugs. Spotting them fast is a real skill."
+    }
+  ]
+}

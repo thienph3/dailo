@@ -1,0 +1,133 @@
+{
+  "unitId": "u35",
+  "lessonId": "u35l05",
+  "title": "Repeat, decide, or just once?",
+  "idea": "Not every problem repeats. Telling a repetition apart from a one-time step or a yes/no decision is a key reading skill.",
+  "exercises": [
+    {
+      "id": "u35l05e01",
+      "type": "multipleChoice",
+      "prompt": "Which problem is about REPETITION?",
+      "options": [
+        "Print each of the numbers 1 to 10",
+        "Print the bigger of two numbers",
+        "Print Hi once",
+        "Check if a number is even"
+      ],
+      "answer": 0,
+      "explanation": "'Each of 1 to 10' repeats a print step ten times. The others happen once or are a decision."
+    },
+    {
+      "id": "u35l05e02",
+      "type": "multipleChoice",
+      "prompt": "Which problem is a DECISION (a yes/no choice), not a repetition?",
+      "options": [
+        "If the score is 50 or more, print Pass",
+        "Print Go five times",
+        "Clap for each of 4 beats",
+        "Ring the bell 3 times"
+      ],
+      "answer": 0,
+      "explanation": "'If ... print Pass' is a one-time decision using if. The others repeat an action."
+    },
+    {
+      "id": "u35l05e03",
+      "type": "trueFalse",
+      "prompt": "A problem can be solved with just one straight-line step (no repeat, no decision).",
+      "answer": true,
+      "explanation": "Plenty of problems are one-shot, like printing a single message. Reading which shape a problem is saves wasted effort."
+    },
+    {
+      "id": "u35l05e04",
+      "type": "matchPairs",
+      "prompt": "Match each problem to its shape.",
+      "pairs": [
+        {
+          "left": "Print Hi to each of 6 people",
+          "right": "Repetition"
+        },
+        {
+          "left": "If age is 18 or more, print Adult",
+          "right": "Decision"
+        },
+        {
+          "left": "Print the word Welcome",
+          "right": "One-time step"
+        }
+      ],
+      "explanation": "Repetition repeats an action, a decision chooses with if, a one-time step just runs once."
+    },
+    {
+      "id": "u35l05e05",
+      "type": "multipleChoice",
+      "prompt": "'Greet every guest at a party of 12.' What shape is this?",
+      "options": [
+        "Repetition — greet runs once per guest",
+        "A single decision",
+        "A one-time step",
+        "No shape at all"
+      ],
+      "answer": 0,
+      "explanation": "One greeting per guest, twelve guests — repetition with a count of 12."
+    },
+    {
+      "id": "u35l05e06",
+      "type": "multipleChoice",
+      "prompt": "A problem can mix shapes. 'For each of 5 scores, decide pass or fail' contains...",
+      "options": [
+        "A repetition with a decision inside it",
+        "Only a decision",
+        "Only a one-time step",
+        "No repetition"
+      ],
+      "answer": 0,
+      "explanation": "The repeat is 'for each of 5 scores'; inside, a pass/fail decision. We'll combine them properly later — for now, just notice both."
+    },
+    {
+      "id": "u35l05e07",
+      "type": "trueFalse",
+      "prompt": "Reading a problem's shape first helps you pick the right tool.",
+      "answer": true,
+      "explanation": "Repetition -> a loop; a yes/no -> an if; one-shot -> a plain line. Naming the shape points to the tool."
+    },
+    {
+      "id": "u35l05e08",
+      "type": "multipleChoice",
+      "prompt": "Which word hints at REPETITION rather than a decision?",
+      "options": [
+        "each",
+        "if",
+        "otherwise",
+        "unless"
+      ],
+      "answer": 0,
+      "explanation": "'Each' points at doing something per item — repetition. 'If', 'otherwise', 'unless' point at decisions."
+    },
+    {
+      "id": "u35l05e09",
+      "type": "multipleChoice",
+      "prompt": "'Print the numbers 1 to 100.' Why is this a repetition and not 100 one-time steps?",
+      "options": [
+        "The same print action is done again for each number",
+        "Because 100 is a big number",
+        "Because numbers are involved",
+        "It is actually a decision"
+      ],
+      "answer": 0,
+      "explanation": "It is one repeated print action, just run 100 times. That is the essence of repetition."
+    },
+    {
+      "id": "u35l05e10",
+      "type": "multipleChoice",
+      "prompt": "You now can read a problem and say its shape. What comes next in this lap?",
+      "options": [
+        "Learning the 'for each' idea to actually repeat a step",
+        "Learning to draw pictures",
+        "Forgetting about decisions",
+        "Stopping here forever"
+      ],
+      "answer": 0,
+      "explanation": "Next unit introduces the gentle 'for each' idea — your first real repetition tool. You've built the thinking foundation."
+    }
+  ]
+}

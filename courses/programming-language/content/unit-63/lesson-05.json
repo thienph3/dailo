@@ -1,0 +1,135 @@
+{
+  "unitId": "u63",
+  "lessonId": "u63l05",
+  "title": "Spot the broken filter",
+  "idea": "TOOL: common filter mistakes — appending outside the if, forgetting the empty list, testing the wrong thing. Read and predict.",
+  "exercises": [
+    {
+      "id": "u63l05e01",
+      "type": "multipleChoice",
+      "prompt": "What will this show? (Look closely at the indentation.)\n\nnums = [4, 9, 2, 7]\nkept = []\nfor n in nums:\n    if n > 5:\n        pass\n    kept.append(n)\nprint(kept)",
+      "options": [
+        "[4, 9, 2, 7]",
+        "[9, 7]",
+        "[4, 2]",
+        "[]"
+      ],
+      "answer": 0,
+      "explanation": "The append is lined up with the if, not inside it, so EVERY item is kept. The filter does nothing — a classic indentation bug."
+    },
+    {
+      "id": "u63l05e02",
+      "type": "multipleChoice",
+      "prompt": "A learner wants to keep numbers above 5 but gets the whole list back. The append line is not indented under the if. What is the fix?",
+      "options": [
+        "Indent the append so it sits inside the if",
+        "Remove the empty list",
+        "Change for to while",
+        "Delete the print"
+      ],
+      "answer": 0,
+      "explanation": "Only items that pass should be appended, so the append must be indented inside the if. Indentation decides what the if controls."
+    },
+    {
+      "id": "u63l05e03",
+      "type": "trueFalse",
+      "prompt": "Putting the append inside the if is what makes a filter keep only SOME items instead of all of them.",
+      "answer": true,
+      "explanation": "The if is the gate. Appending inside it means only passers get through; appending outside keeps everything."
+    },
+    {
+      "id": "u63l05e04",
+      "type": "multipleChoice",
+      "prompt": "This code is meant to keep numbers below 10, but it crashes. Why?\n\nfor n in nums:\n    if n < 10:\n        kept.append(n)\nprint(kept)",
+      "options": [
+        "kept was never created with kept = [] before the loop",
+        "The test n < 10 is wrong",
+        "append cannot be used in a loop",
+        "print cannot show a list"
+      ],
+      "answer": 0,
+      "explanation": "You can't append into a list that doesn't exist yet. The line kept = [] must come before the loop."
+    },
+    {
+      "id": "u63l05e05",
+      "type": "multipleChoice",
+      "prompt": "What will this show?\n\nnums = [3, 6, 9]\nkept = []\nfor n in nums:\n    if n > 5:\n        kept.append(n)\nprint(kept)",
+      "options": [
+        "[6, 9]",
+        "[3]",
+        "[3, 6, 9]",
+        "[]"
+      ],
+      "answer": 0,
+      "explanation": "This one is correct: 6 and 9 pass n > 5, so kept is [6, 9]. Always worth reading a working one to compare against the broken ones."
+    },
+    {
+      "id": "u63l05e06",
+      "type": "multipleChoice",
+      "prompt": "A filter is supposed to keep EVEN numbers but keeps odd ones instead. The test reads if n % 2 == 1. What is wrong?",
+      "options": [
+        "n % 2 == 1 is the ODD test; even should be n % 2 == 0",
+        "You cannot use % in a filter",
+        "The empty list is wrong",
+        "append should be add"
+      ],
+      "answer": 0,
+      "explanation": "Remainder 1 means odd. For even, the remainder must be 0, so the test should be n % 2 == 0. The wrong test keeps the wrong items."
+    },
+    {
+      "id": "u63l05e07",
+      "type": "trueFalse",
+      "prompt": "If a filter returns an empty list, that always means the code is broken.",
+      "answer": false,
+      "explanation": "Not always! If no item passes the test, an empty list is the correct, honest answer. Check your data before assuming a bug."
+    },
+    {
+      "id": "u63l05e08",
+      "type": "multipleChoice",
+      "prompt": "What will this show?\n\nnums = [10, 20, 30]\nkept = []\nfor n in nums:\n    if n > 100:\n        kept.append(n)\nprint(kept)",
+      "options": [
+        "[]",
+        "[10, 20, 30]",
+        "[100]",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "Nothing is above 100, so nothing is appended. The kept list stays empty — a correct result, not an error."
+    },
+    {
+      "id": "u63l05e09",
+      "type": "multipleChoice",
+      "prompt": "A filter accidentally resets kept = [] INSIDE the loop, before each test. What happens?",
+      "options": [
+        "The kept list is wiped every pass, so it ends holding at most the last match",
+        "Nothing changes",
+        "It keeps every item twice",
+        "The program crashes"
+      ],
+      "answer": 0,
+      "explanation": "Resetting the list each pass throws away everything collected so far. The empty-list line belongs BEFORE the loop, once."
+    },
+    {
+      "id": "u63l05e10",
+      "type": "orderBlocks",
+      "prompt": "Arrange the lines into a correct filter for numbers above 5.",
+      "blocks": [
+        "nums = [4, 9, 2, 7]",
+        "kept = []",
+        "for n in nums:",
+        "    if n > 5:",
+        "        kept.append(n)",
+        "print(kept)"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "explanation": "List, empty kept list before the loop, loop, test, append INSIDE the if, then print. Getting this order right avoids every bug above."
+    }
+  ]
+}

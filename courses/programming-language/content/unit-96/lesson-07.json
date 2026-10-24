@@ -1,0 +1,126 @@
+{
+  "unitId": "u96",
+  "lessonId": "u96l07",
+  "title": "Loop back: an unseen problem, start to finish",
+  "idea": "LOOP (review): no new concept. Walk a fresh multi-part problem through understand, plan, build, and check - weaving a loop, a decision, and two trackers.",
+  "exercises": [
+    {
+      "id": "u96l07e01",
+      "type": "multipleChoice",
+      "prompt": "UNSEEN PROBLEM: 'From goals-scored [0, 2, 0, 3, 1], show how many games had NO goals and the total goals.' What are the two outputs?",
+      "options": [
+        "The count of zero-goal games and the total goals",
+        "The highest and lowest scores",
+        "The first and last game",
+        "Just the total"
+      ],
+      "answer": 0,
+      "explanation": "Two outputs: a count (zero-goal games) and a sum (total goals). Two outputs means two pieces of state in one pass."
+    },
+    {
+      "id": "u96l07e02",
+      "type": "multipleChoice",
+      "prompt": "Work the example by hand on [0, 2, 0, 3, 1]. Zero-goal games and total goals?",
+      "options": [
+        "2 zero-goal games, total 6",
+        "3 zero-goal games, total 5",
+        "2 zero-goal games, total 5",
+        "0 zero-goal games, total 6"
+      ],
+      "answer": 0,
+      "explanation": "Two games scored 0; the goals sum to 0+2+0+3+1 = 6. These two hand values become our checks."
+    },
+    {
+      "id": "u96l07e03",
+      "type": "orderBlocks",
+      "prompt": "Plan the steps.",
+      "blocks": [
+        "Start zero_games at 0 and total at 0",
+        "For each game, add its goals to total; if it scored 0, add 1 to zero_games",
+        "Show both results"
+      ],
+      "answer": [0, 1, 2],
+      "explanation": "Init two trackers, update both in one loop (a sum always, a count conditionally), then report. Accumulate and count-with-condition, side by side."
+    },
+    {
+      "id": "u96l07e04",
+      "type": "orderBlocks",
+      "prompt": "Build it. Arrange the code.",
+      "blocks": [
+        "goals = [0, 2, 0, 3, 1]",
+        "total = 0",
+        "zero_games = 0",
+        "for g in goals:",
+        "total = total + g",
+        "if g == 0:",
+        "zero_games = zero_games + 1",
+        "print(total)",
+        "print(zero_games)"
+      ],
+      "answer": [0, 1, 2, 3, 4, 5, 6, 7, 8],
+      "explanation": "Store the list, init both trackers, loop once, always add to total, and conditionally bump zero_games. Both updates live in the same loop body."
+    },
+    {
+      "id": "u96l07e05",
+      "type": "fillBlank",
+      "prompt": "Complete the zero-goal test:\n\nfor g in goals:\n    total = total + g\n    if g ____ 0:\n        zero_games = zero_games + 1",
+      "answer": "==",
+      "acceptable": ["=="],
+      "explanation": "'Scored no goals' means g equals 0, so the test is ==. Note = would be assignment, a classic beginner slip the double-equals avoids."
+    },
+    {
+      "id": "u96l07e06",
+      "type": "multipleChoice",
+      "prompt": "Check. The code prints 6 then 2, matching your hand values (total 6, zero-games 2). So...",
+      "options": [
+        "Both outputs are correct - the solution works on the example",
+        "The total is wrong",
+        "The count is wrong",
+        "Cannot tell"
+      ],
+      "answer": 0,
+      "explanation": "Both tracked values match the hand work. Tracking two things in one pass is a reliable, familiar move."
+    },
+    {
+      "id": "u96l07e07",
+      "type": "multipleChoice",
+      "prompt": "Re-check with [0, 0, 0]. What prints (total then zero-games)?",
+      "options": ["0 then 3", "3 then 0", "0 then 0", "0 then 1"],
+      "answer": 0,
+      "explanation": "Goals sum to 0, and all three games scored 0, so zero_games = 3. The solution generalizes to an all-zero list."
+    },
+    {
+      "id": "u96l07e08",
+      "type": "trueFalse",
+      "prompt": "Updating two trackers in a single loop is fine, as long as each update does its own job independently.",
+      "answer": true,
+      "explanation": "One pass can maintain many pieces of state. The sum and the count never interfere - each has its own variable and its own rule."
+    },
+    {
+      "id": "u96l07e09",
+      "type": "multipleChoice",
+      "prompt": "Which earlier-lap patterns did this unseen problem reuse?",
+      "options": [
+        "Accumulate (the sum) and count-with-condition (the zero-goal count)",
+        "Only a validation loop",
+        "A brand-new technique",
+        "Only printing"
+      ],
+      "answer": 0,
+      "explanation": "Two Lap 2 patterns, run together in one loop. Fresh problems are old patterns recombined - no new syntax needed."
+    },
+    {
+      "id": "u96l07e10",
+      "type": "multipleChoice",
+      "prompt": "What made this unseen problem solvable so smoothly?",
+      "options": [
+        "Naming the outputs, hand-working an example, planning, then building and checking",
+        "Guessing code until it ran",
+        "Avoiding any plan",
+        "Using a new tool"
+      ],
+      "answer": 0,
+      "explanation": "The same spine works every time: understand, example, plan, build, check. That process is what lets you tackle problems you have never seen."
+    }
+  ]
+}

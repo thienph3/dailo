@@ -1,0 +1,136 @@
+{
+  "unitId": "u68",
+  "lessonId": "u68l04",
+  "title": "Solve it: the shopping total",
+  "idea": "LOOP: solve an unseen sum problem end to end, reusing variables, lists, loops. No new concept.",
+  "exercises": [
+    {
+      "id": "u68l04e01",
+      "type": "multipleChoice",
+      "prompt": "PROBLEM: prices = [3, 5, 2, 4]. Show the total cost. What tool fits?",
+      "options": [
+        "sum over the list",
+        "search",
+        "max",
+        "filter"
+      ],
+      "answer": 0,
+      "explanation": "'Total cost' means add every price, so a sum. Name the tool first."
+    },
+    {
+      "id": "u68l04e02",
+      "type": "multipleChoice",
+      "prompt": "Work the example by hand: 3 + 5 + 2 + 4 = ?",
+      "options": [
+        "14",
+        "10",
+        "4",
+        "12"
+      ],
+      "answer": 0,
+      "explanation": "3 + 5 + 2 + 4 = 14. That's the value the code must print."
+    },
+    {
+      "id": "u68l04e03",
+      "type": "multipleChoice",
+      "prompt": "The total should start at...",
+      "options": [
+        "0",
+        "the first price",
+        "1",
+        "the length"
+      ],
+      "answer": 0,
+      "explanation": "A sum starts at 0, meaning nothing added yet."
+    },
+    {
+      "id": "u68l04e04",
+      "type": "fillBlank",
+      "prompt": "Complete the adding step:\n\ntotal = 0\nfor price in prices:\n    total = total ____ price\nprint(total)",
+      "answer": "+",
+      "acceptable": [
+        "+"
+      ],
+      "explanation": "Summing adds each price, so the operator is +. total climbs to 14."
+    },
+    {
+      "id": "u68l04e05",
+      "type": "orderBlocks",
+      "prompt": "Arrange the full solution.",
+      "blocks": [
+        "prices = [3, 5, 2, 4]",
+        "total = 0",
+        "for price in prices:",
+        "    total = total + price",
+        "print(total)"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "explanation": "Store prices, total = 0 once, add each price, print after. Prints 14."
+    },
+    {
+      "id": "u68l04e06",
+      "type": "multipleChoice",
+      "prompt": "Check: the code prints 14, your hand answer was 14. So...",
+      "options": [
+        "it passes",
+        "it fails",
+        "can't tell",
+        "change the example"
+      ],
+      "answer": 0,
+      "explanation": "Output matches the hand result, so the solution is correct."
+    },
+    {
+      "id": "u68l04e07",
+      "type": "multipleChoice",
+      "prompt": "Re-check with new prices [10, 10]. What prints?",
+      "options": [
+        "20",
+        "2",
+        "10",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "10 + 10 = 20. The solution works for fresh inputs — it generalizes."
+    },
+    {
+      "id": "u68l04e08",
+      "type": "trueFalse",
+      "prompt": "REVIEW: 'for price in prices' hands you each price in turn, with no index needed.",
+      "answer": true,
+      "explanation": "Yes — for-each visits items directly, which avoids index off-by-one bugs."
+    },
+    {
+      "id": "u68l04e09",
+      "type": "multipleChoice",
+      "prompt": "If prices were empty [], what would this sum print?",
+      "options": [
+        "0 — the loop never runs, so total stays 0",
+        "it crashes",
+        "14",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "An empty list means zero passes, so total keeps its start value 0. A sum is safe on an empty list (unlike an average)."
+    },
+    {
+      "id": "u68l04e10",
+      "type": "multipleChoice",
+      "prompt": "Why is a sum safe on an empty list but an average is not?",
+      "options": [
+        "sum just stays 0; average divides by the count, which would be 0",
+        "they're the same",
+        "sum crashes too",
+        "average stays 0"
+      ],
+      "answer": 0,
+      "explanation": "Sum needs no division, so empty is fine (0). Average divides by len, which is 0 for an empty list — a crash. That's why average needs a guard."
+    }
+  ]
+}

@@ -1,0 +1,160 @@
+{
+  "unitId": "u93",
+  "lessonId": "u93l08",
+  "title": "Solve it: total of the big orders only",
+  "idea": "GUIDED INTEGRATED PROBLEM. Combine filter + sum: keep only items that pass a rule, then total just those. Two patterns in one solution.",
+  "problem": "Order amounts are [8, 25, 12, 40, 5]. An order is 'big' if it is 20 or more. Show the total of the big orders.",
+  "exercises": [
+    {
+      "id": "u93l08e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: amounts [8, 25, 12, 40, 5]; 'big' means 20 or more. Show the total of the BIG orders only.\n\nUnderstand — the output is...?",
+      "explanation": "The output is one number: the sum of only the orders that pass the 'big' rule.",
+      "options": [
+        "The total of just the big orders",
+        "The count of big orders",
+        "The biggest order",
+        "The total of every order"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u93l08e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "What are the TWO jobs hiding in this one problem?",
+      "explanation": "First decide which orders are big (filter), then total those (sum). Seeing both jobs is the understanding step.",
+      "options": [
+        "Pick the big orders (filter), then total them (sum)",
+        "Only sort them",
+        "Only count them",
+        "Just print the list"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u93l08e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example — by hand, which orders are big (>= 20): 8, 25, 12, 40, 5?",
+      "explanation": "25 and 40 are 20 or more; the rest are below. Those two are the ones you'll total.",
+      "options": [
+        "25 and 40",
+        "8 and 5",
+        "12 only",
+        "all of them"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u93l08e04",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "By hand, total of the big orders (25 and 40)?",
+      "explanation": "25 + 40 = 65. That is your check value for the whole solution.",
+      "options": [
+        "65",
+        "90",
+        "45",
+        "20"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u93l08e05",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Plan — order the combined steps.",
+      "explanation": "Walk the list; only when an order passes the rule, add it to the total. Filter and sum happen in one loop.",
+      "blocks": [
+        "Start the total at 0",
+        "For each order in the list",
+        "If the order is big (>= 20), add it to the total",
+        "Show the total"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "id": "u93l08e06",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Do you need a separate NEW list of big orders first, or can you total them in one loop?",
+      "explanation": "You can add a big order to the total the moment you see it — one loop that filters and sums. Simpler is better.",
+      "options": [
+        "One loop can filter and sum together — add it when it passes the rule",
+        "You must always build a second list first",
+        "You need two full passes always",
+        "You can't combine filter and sum"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u93l08e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code — arrange the filter-and-sum loop.",
+      "explanation": "Store the list, start total at 0, loop with an if that gates the add, then print. Filter (if) + sum (+) combined.",
+      "blocks": [
+        "orders = [8, 25, 12, 40, 5]",
+        "total = 0",
+        "for order in orders:",
+        "    if order >= 20:",
+        "        total = total + order",
+        "print(total)"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "id": "u93l08e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Complete the rule that keeps only big orders:\n\nfor order in orders:\n    if order ____ 20:\n        total = total + order",
+      "explanation": ">= keeps orders of 20 or more. The if is the filter; the add is the sum.",
+      "answer": ">=",
+      "acceptable": [
+        ">="
+      ]
+    },
+    {
+      "id": "u93l08e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check — it prints 65, hand example was 65. Verdict?",
+      "explanation": "Output matches the hand example, so the combined filter-and-sum is correct.",
+      "options": [
+        "Passes",
+        "Fails",
+        "Unknown",
+        "Rewrite the example"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u93l08e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Re-check with [20, 19, 100]. Which get totalled, and what prints?",
+      "explanation": "20 passes (exactly 20), 19 fails, 100 passes: 20 + 100 = 120. Testing the boundary 20 confirms >= is right.",
+      "options": [
+        "120 (20 and 100)",
+        "139",
+        "100",
+        "39"
+      ],
+      "answer": 0
+    }
+  ]
+}

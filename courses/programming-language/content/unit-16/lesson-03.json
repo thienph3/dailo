@@ -1,0 +1,126 @@
+{
+  "unitId": "u16",
+  "lessonId": "u16l03",
+  "title": "int() turns text into a number",
+  "idea": "int(\"5\") hands back the number 5. Now math works on it.",
+  "exercises": [
+    {
+      "id": "u16l03e01",
+      "type": "multipleChoice",
+      "prompt": "int() is a tool that turns text into a whole number. What does int(\"7\") give back?",
+      "options": [
+        "The number 7",
+        "The text \"7\"",
+        "The word seven",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "int(\"7\") converts the text \"7\" into the real number 7. 'int' is short for integer, a whole number."
+    },
+    {
+      "id": "u16l03e02",
+      "type": "multipleChoice",
+      "prompt": "What will this show?\n\nprint(int(\"4\") + int(\"3\"))",
+      "options": [
+        "7",
+        "43",
+        "\"43\"",
+        "Error"
+      ],
+      "answer": 0,
+      "explanation": "int(\"4\") is 4 and int(\"3\") is 3 — both real numbers now. So + adds them: 7. Converting fixed the joining bug."
+    },
+    {
+      "id": "u16l03e03",
+      "type": "multipleChoice",
+      "prompt": "What will this show?\n\nprint(\"4\" + \"3\")",
+      "options": [
+        "43",
+        "7",
+        "4 3",
+        "Error"
+      ],
+      "answer": 0,
+      "explanation": "No int() here, so these stay text and JOIN into 43. Compare with the last question — int() made the difference."
+    },
+    {
+      "id": "u16l03e04",
+      "type": "fillBlank",
+      "prompt": "Complete this so it adds to 15 (not joins to 96):\n\nprint(____(\"9\") + int(\"6\"))",
+      "answer": "int",
+      "acceptable": [
+        "int"
+      ],
+      "explanation": "Wrap the text in int() to make it a number. int(\"9\") + int(\"6\") is 9 + 6 = 15."
+    },
+    {
+      "id": "u16l03e05",
+      "type": "multipleChoice",
+      "prompt": "points = \"20\"\nprint(int(points) + 5)\n\nWhat shows?",
+      "options": [
+        "25",
+        "205",
+        "\"205\"",
+        "Error"
+      ],
+      "answer": 0,
+      "explanation": "points is text \"20\". int(points) turns it into 20, then + 5 adds to 25. You can convert a variable, too."
+    },
+    {
+      "id": "u16l03e06",
+      "type": "trueFalse",
+      "prompt": "int(\"8\") changes the value to a number, so math like + will add it.",
+      "answer": true,
+      "explanation": "Yes. Once text becomes a number with int(), + adds instead of joining. That's the repair for the bug."
+    },
+    {
+      "id": "u16l03e07",
+      "type": "multipleChoice",
+      "prompt": "Which line will ADD to 30?",
+      "options": [
+        "int(\"10\") + int(\"20\")",
+        "\"10\" + \"20\"",
+        "\"10\" + 20",
+        "\"30\""
+      ],
+      "answer": 0,
+      "explanation": "Only when BOTH pieces are numbers does + add. int(\"10\") + int(\"20\") is 10 + 20 = 30."
+    },
+    {
+      "id": "u16l03e08",
+      "type": "orderBlocks",
+      "prompt": "Arrange a program that stores text \"14\", converts it, and shows that number plus 6.",
+      "blocks": [
+        "amount = \"14\"",
+        "total = int(amount) + 6",
+        "print(total)"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Store the text, convert it with int() while adding 6, then print. total holds 20."
+    },
+    {
+      "id": "u16l03e09",
+      "type": "multipleChoice",
+      "prompt": "What will this show?\n\nprint(int(\"100\") - int(\"40\"))",
+      "options": [
+        "60",
+        "10040",
+        "140",
+        "Error"
+      ],
+      "answer": 0,
+      "explanation": "Both become numbers (100 and 40), so subtraction works: 100 - 40 = 60. int() helps every kind of math, not just +."
+    },
+    {
+      "id": "u16l03e10",
+      "type": "trueFalse",
+      "prompt": "int() only works on +; it cannot help with - or *.",
+      "answer": false,
+      "explanation": "False. Once a value is a number, ALL math works: +, -, *, /. int() just makes the value a number first."
+    }
+  ]
+}

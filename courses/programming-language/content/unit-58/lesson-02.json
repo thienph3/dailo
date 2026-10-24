@@ -1,0 +1,145 @@
+{
+  "unitId": "u58",
+  "lessonId": "u58l02",
+  "title": "Meet: count = count + 1 when it matches",
+  "idea": "Introduce the conditional-count pattern with visible output: start at 0, +1 inside an if, print the count.",
+  "exercises": [
+    {
+      "id": "u58l02e01",
+      "type": "multipleChoice",
+      "prompt": "Here is the tool:\n\nscores = [40, 80, 55, 30]\ncount = 0\nfor s in scores:\n    if s >= 50:\n        count = count + 1\nprint(count)\n\nWhat prints?",
+      "options": [
+        "2",
+        "4",
+        "135",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "80 and 55 are >= 50, so count rises to 2. 40 and 30 don't match."
+    },
+    {
+      "id": "u58l02e02",
+      "type": "multipleChoice",
+      "prompt": "What does 'count = count + 1' do, and when?",
+      "options": [
+        "Adds 1 to count, but only when the if is true",
+        "Adds the value s",
+        "Runs every pass no matter what",
+        "Prints count"
+      ],
+      "answer": 0,
+      "explanation": "It's guarded by the if, so the +1 happens only for matching values."
+    },
+    {
+      "id": "u58l02e03",
+      "type": "multipleChoice",
+      "prompt": "Why is 'count = 0' before the loop?",
+      "options": [
+        "So counting starts fresh at zero, once",
+        "It must be inside",
+        "0 is wrong",
+        "It doesn't matter"
+      ],
+      "answer": 0,
+      "explanation": "Initialise once before the loop; inside, it would reset to 0 every pass."
+    },
+    {
+      "id": "u58l02e04",
+      "type": "fillBlank",
+      "prompt": "Fill the blank to count a match:\n\ncount = 0\nfor n in nums:\n    if n > 10:\n        count = count ____ 1",
+      "answer": "+",
+      "acceptable": [
+        "+"
+      ],
+      "explanation": "Each match adds 1: count = count + 1."
+    },
+    {
+      "id": "u58l02e05",
+      "type": "orderBlocks",
+      "prompt": "Arrange: count how many values are over 100, then print the count.",
+      "blocks": [
+        "print(count)",
+        "        count = count + 1",
+        "    if n > 100:",
+        "for n in nums:",
+        "count = 0",
+        "nums = [50, 200, 150]"
+      ],
+      "answer": [
+        5,
+        4,
+        3,
+        2,
+        1,
+        0
+      ],
+      "explanation": "List, start count, loop, if (indent 1), +1 (indent 2), print after. 200 and 150 match -> 2."
+    },
+    {
+      "id": "u58l02e06",
+      "type": "multipleChoice",
+      "prompt": "The '+1' line is indented twice. Why?",
+      "options": [
+        "Once for the loop, once for the if",
+        "By mistake",
+        "To add 2",
+        "Python needs it"
+      ],
+      "answer": 0,
+      "explanation": "It lives inside both the loop and the if, so two indent levels."
+    },
+    {
+      "id": "u58l02e07",
+      "type": "trueFalse",
+      "prompt": "print(count) goes after the loop so it shows the final count once.",
+      "answer": true,
+      "explanation": "After the loop, count is complete. Inside, it would print a partial count every pass."
+    },
+    {
+      "id": "u58l02e08",
+      "type": "multipleChoice",
+      "prompt": "nums = [1, 2, 3]\ncount = 0\nfor n in nums:\n    if n > 100:\n        count = count + 1\nprint(count)\n\nWhat prints?",
+      "options": [
+        "0",
+        "3",
+        "1",
+        "an error"
+      ],
+      "answer": 0,
+      "explanation": "No value is over 100, so no +1 ever runs. count stays 0."
+    },
+    {
+      "id": "u58l02e09",
+      "type": "multipleChoice",
+      "prompt": "The shorthand 'count += 1' means...",
+      "options": [
+        "count = count + 1",
+        "count = 1",
+        "count = count + count",
+        "1 = count"
+      ],
+      "answer": 0,
+      "explanation": "+= 1 is shorthand for adding 1 into count."
+    },
+    {
+      "id": "u58l02e10",
+      "type": "tapTokens",
+      "prompt": "Build the line that adds 1 to the count. (Tap in order.)",
+      "tokens": [
+        "count",
+        "=",
+        "count",
+        "+",
+        "1"
+      ],
+      "answer": [
+        "count",
+        "=",
+        "count",
+        "+",
+        "1"
+      ],
+      "explanation": "count = count + 1 — the match-counting step, placed inside the if."
+    }
+  ]
+}

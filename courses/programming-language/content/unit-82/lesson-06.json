@@ -1,0 +1,158 @@
+{
+  "unitId": "u82",
+  "lessonId": "u82l06",
+  "title": "Solve it together: filter the big orders, then count",
+  "idea": "GUIDED (UEPCC). Two-stage decomposition: a helper is_big(amount) picks orders over a threshold; then count how many pass. Separating the rule from the loop.",
+  "problem": "Order amounts are [20, 60, 45, 80, 10]. A 'big' order is 50 or more. Show how many big orders there are, using an is_big(amount) helper.",
+  "exercises": [
+    {
+      "id": "u82l06e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: amounts [20, 60, 45, 80, 10]; big means >= 50. Show how MANY are big, using is_big(amount).\n\nOUTPUT?",
+      "options": [
+        "A count of big orders",
+        "The list of big orders",
+        "The total of all orders",
+        "The biggest order"
+      ],
+      "answer": 0,
+      "explanation": "Output = how many orders are big — a count, not a list or a sum."
+    },
+    {
+      "id": "u82l06e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "INPUTS?",
+      "options": [
+        "The amounts and the 'big' threshold (50)",
+        "Only the number 2",
+        "The word big",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "Inputs are the amounts and the rule's cutoff, 50."
+    },
+    {
+      "id": "u82l06e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example — by hand. Which of [20, 60, 45, 80, 10] are >= 50?",
+      "options": [
+        "60 and 80 — that's 2",
+        "45 and 10",
+        "All five",
+        "None"
+      ],
+      "answer": 0,
+      "explanation": "60 and 80 are big; the rest aren't. Hand count = 2, our check value."
+    },
+    {
+      "id": "u82l06e04",
+      "type": "trueFalse",
+      "uepcc": "E",
+      "prompt": "is_big(amount) returns a yes/no answer (True or False) for a single order.",
+      "answer": true,
+      "explanation": "Yes — is_big(60) is True, is_big(20) is False. The helper answers the rule once per order."
+    },
+    {
+      "id": "u82l06e05",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Plan — why put the 'big' rule in its own helper?",
+      "options": [
+        "It names the rule clearly and keeps the loop simple",
+        "It makes the code slower",
+        "Rules can't go in loops",
+        "It's required for counting"
+      ],
+      "answer": 0,
+      "explanation": "A named helper (is_big) documents the rule and keeps the counting loop readable — the heart of decomposition."
+    },
+    {
+      "id": "u82l06e06",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Order the plan.",
+      "blocks": [
+        "Make is_big(amount) return amount >= 50",
+        "Start a counter at 0",
+        "For each amount, if is_big(amount), add 1",
+        "Show the counter"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "Rule helper, counter at 0, bump when big, show. Filter-rule + count."
+    },
+    {
+      "id": "u82l06e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code it.",
+      "blocks": [
+        "def is_big(amount):",
+        "    return amount >= 50",
+        "amounts = [20, 60, 45, 80, 10]",
+        "big_count = 0",
+        "for amount in amounts:",
+        "    if is_big(amount):",
+        "        big_count = big_count + 1",
+        "print(big_count)"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "explanation": "Define the rule, store amounts, counter at 0, add 1 when is_big is True, print. The rule lives in one place."
+    },
+    {
+      "id": "u82l06e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Complete the counter update:\n\nif is_big(amount):\n    big_count = big_count ____ 1",
+      "answer": "+",
+      "acceptable": [
+        "+"
+      ],
+      "explanation": "Each big order adds 1 to the counter, so the operator is +. big_count climbs by one each time."
+    },
+    {
+      "id": "u82l06e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check — the code prints 2; hand count was 2. Verdict?",
+      "options": [
+        "Passes",
+        "Fails",
+        "Unknown",
+        "Rewrite example"
+      ],
+      "answer": 0,
+      "explanation": "Output (2) matches the hand count (2). The rule helper plus count is correct."
+    },
+    {
+      "id": "u82l06e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Re-check: amounts [50, 49, 100], big >= 50. How many are big?",
+      "options": [
+        "2",
+        "1",
+        "3",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "50 and 100 are big (>= includes 50); 49 isn't. Count = 2. The same plan handles the boundary 50."
+    }
+  ]
+}

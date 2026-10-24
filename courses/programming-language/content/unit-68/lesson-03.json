@@ -1,0 +1,161 @@
+{
+  "unitId": "u68",
+  "lessonId": "u68l03",
+  "title": "Order the plan for a list problem",
+  "idea": "LOOP: arrange plain-English or code steps for varied list solutions. Reuses the plan-before-code habit from Lap 1.",
+  "exercises": [
+    {
+      "id": "u68l03e01",
+      "type": "orderBlocks",
+      "prompt": "Plan (sum): order the plain-English steps to total a list.",
+      "blocks": [
+        "Start the total at 0",
+        "For each item, add it to the total",
+        "Show the total"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Start at 0, add each item, show the result. The universal accumulate shape."
+    },
+    {
+      "id": "u68l03e02",
+      "type": "orderBlocks",
+      "prompt": "Plan (filter): order the steps to keep only items over 10.",
+      "blocks": [
+        "Start with an empty 'kept' list",
+        "For each item, if it is over 10, add it to kept",
+        "Show the kept list"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Empty list, append the matches, show. Filtering collects, so it needs a fresh list to grow."
+    },
+    {
+      "id": "u68l03e03",
+      "type": "orderBlocks",
+      "prompt": "Plan (max): order the steps to find the biggest.",
+      "blocks": [
+        "Set best to the first item",
+        "For each item, if it beats best, update best",
+        "Show best"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Start best at a real item, compare the rest, show. Starting at the first item keeps it safe for negatives."
+    },
+    {
+      "id": "u68l03e04",
+      "type": "orderBlocks",
+      "prompt": "Arrange the CODE for a count of items below 5.",
+      "blocks": [
+        "count = 0",
+        "for n in nums:",
+        "    if n < 5:",
+        "        count = count + 1",
+        "print(count)"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "explanation": "Set count = 0 once, loop testing each item, increment on a match, print. The counting recipe."
+    },
+    {
+      "id": "u68l03e05",
+      "type": "orderBlocks",
+      "prompt": "Plan (average with guard): order the steps.",
+      "blocks": [
+        "If the list is empty, report 'no average' and stop",
+        "Otherwise divide the sum by the count",
+        "Show the average"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Guard the empty case first, then divide, then show. The guard prevents a divide-by-zero crash."
+    },
+    {
+      "id": "u68l03e06",
+      "type": "orderBlocks",
+      "prompt": "Arrange the CODE for a search (is target present?).",
+      "blocks": [
+        "found = False",
+        "for n in nums:",
+        "    if n == target:",
+        "        found = True",
+        "print(found)"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "explanation": "Assume not found, loop and compare, flip to True on a match, report. The search shape."
+    },
+    {
+      "id": "u68l03e07",
+      "type": "trueFalse",
+      "prompt": "Writing the plan in plain English before coding is still worth it, even for problems you've seen before.",
+      "answer": true,
+      "explanation": "Yes — the plan names the tool and the order. It's fast and keeps you from missing a step like the empty guard."
+    },
+    {
+      "id": "u68l03e08",
+      "type": "orderBlocks",
+      "prompt": "Plan (sum of a filter): total only the even numbers. Order the steps.",
+      "blocks": [
+        "Start total at 0",
+        "For each number, if it is even, add it to total",
+        "Show the total"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Combine filter + sum: start at 0, add only the evens, show. Many problems mix two tools like this."
+    },
+    {
+      "id": "u68l03e09",
+      "type": "multipleChoice",
+      "prompt": "For 'the average age, but say so if there are no ages', which extra step must the plan include?",
+      "options": [
+        "an empty-list guard before dividing",
+        "a second loop",
+        "a search",
+        "nothing extra"
+      ],
+      "answer": 0,
+      "explanation": "No ages means an empty list, which breaks the divide. The plan must guard it first."
+    },
+    {
+      "id": "u68l03e10",
+      "type": "multipleChoice",
+      "prompt": "What's the shared SHAPE behind sum, count, max, and search?",
+      "options": [
+        "set up a variable, loop the list, update it, then report",
+        "always append",
+        "never loop",
+        "divide at the end"
+      ],
+      "answer": 0,
+      "explanation": "Set up, loop, update, report — one shape, different update rules. Seeing it makes every list tool familiar."
+    }
+  ]
+}

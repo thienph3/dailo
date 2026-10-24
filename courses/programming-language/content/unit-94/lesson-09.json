@@ -1,0 +1,131 @@
+{
+  "unitId": "u94",
+  "lessonId": "u94l09",
+  "title": "Does it work for NEW inputs?",
+  "idea": "MEET. A solution must generalise. Reason about whether code that passed one example will still be right on a fresh one.",
+  "exercises": [
+    {
+      "id": "u94l09e01",
+      "type": "multipleChoice",
+      "prompt": "Code total = nums[0] + nums[1] printed 10 for [4, 6]. Will it work for [1, 2, 3]?",
+      "explanation": "It only adds the first two items, so it ignores the third. It got lucky on a 2-item list. A real sum needs a loop.",
+      "options": [
+        "No — it only adds the first two, ignoring the rest",
+        "Yes — it's a correct sum",
+        "Yes — the computer adjusts",
+        "Only on Tuesdays"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u94l09e02",
+      "type": "multipleChoice",
+      "prompt": "Why re-run a passing solution with a DIFFERENT input?",
+      "explanation": "One pass can be a coincidence. A fresh input checks that the logic generalises instead of fitting one example.",
+      "options": [
+        "To check the logic generalises, not just fits one example",
+        "To slow things down",
+        "To change the answer",
+        "Because the first run was fake"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u94l09e03",
+      "type": "multipleChoice",
+      "prompt": "A loop-based sum printed 10 for [2,3,5]. On [1,1,1,1] it prints...",
+      "explanation": "A true accumulate adds every item: 1+1+1+1 = 4. Because it loops, it handles any length correctly.",
+      "options": [
+        "4",
+        "3",
+        "10",
+        "1"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u94l09e04",
+      "type": "trueFalse",
+      "prompt": "A solution that only happens to be right for ONE input is not really solved.",
+      "explanation": "Correct — it must be right for any valid input. Passing one example by luck isn't a solution, it's a coincidence.",
+      "answer": true
+    },
+    {
+      "id": "u94l09e05",
+      "type": "multipleChoice",
+      "prompt": "Hardcoding total = 21 'because the example was 21' will fail when...",
+      "explanation": "A hardcoded answer ignores the input entirely, so any different list gives the wrong (still 21) result.",
+      "options": [
+        "The input changes to any other list",
+        "Never — 21 is always right",
+        "Only for empty lists",
+        "Only for long lists"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u94l09e06",
+      "type": "multipleChoice",
+      "prompt": "A count of '>= 50' passed on [50, 60] (got 2). A good GENERALISING re-test is...",
+      "explanation": "[49, 50, 100] mixes a fail, the boundary, and a clear pass — a fresh shape that stresses the logic differently.",
+      "options": [
+        "[49, 50, 100] → 2",
+        "[50, 60] again → 2",
+        "[] → 0 only",
+        "the same list twice"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u94l09e07",
+      "type": "orderBlocks",
+      "prompt": "Order how to confirm a solution generalises.",
+      "explanation": "Pick a fresh, different-shaped input, hand-work its answer, run, compare. New shape, same rigour.",
+      "blocks": [
+        "Choose a new input with a different shape",
+        "Work out its answer by hand",
+        "Run the code on it",
+        "Compare the output to the hand answer"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "id": "u94l09e08",
+      "type": "multipleChoice",
+      "prompt": "Code passed [3,4] but fails []. What does that tell you about generalisation?",
+      "explanation": "It generalises across non-empty lists but not to the empty edge. Generalisation includes the edges, not just more normal cases.",
+      "options": [
+        "It doesn't yet generalise to the empty edge case",
+        "It generalises perfectly",
+        "Empty lists don't count",
+        "It will fix itself"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u94l09e09",
+      "type": "trueFalse",
+      "prompt": "Using a loop (instead of naming fixed positions like nums[0], nums[1]) is what lets a sum generalise to any length.",
+      "explanation": "Yes — a loop visits however many items there are, so the same code works for a list of 2 or 2000.",
+      "answer": true
+    },
+    {
+      "id": "u94l09e10",
+      "type": "multipleChoice",
+      "prompt": "The point of this lesson is...",
+      "explanation": "A solution is only proven when it's right for fresh inputs of different shapes — generalisation is the real test.",
+      "options": [
+        "Confirm the solution is right for new, differently-shaped inputs",
+        "Run the same input forever",
+        "Hardcode the first answer",
+        "Avoid loops"
+      ],
+      "answer": 0
+    }
+  ]
+}

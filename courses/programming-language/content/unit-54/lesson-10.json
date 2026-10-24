@@ -1,0 +1,132 @@
+{
+  "unitId": "u54",
+  "lessonId": "u54l10",
+  "title": "Growing and changing: all together",
+  "idea": "Review-leaning finale. Recap append (grow) vs assignment (change), build-in-a-loop, len growth. Interleaves indexing, len, and loops.",
+  "exercises": [
+    {
+      "id": "u54l10e01",
+      "type": "multipleChoice",
+      "prompt": "Recap: which adds a NEW item to the end of a list?",
+      "options": [
+        "list.append(value)",
+        "list[i] = value",
+        "len(list)",
+        "list[0]"
+      ],
+      "answer": 0,
+      "explanation": "append grows the list by one at the end. The others change, count, or read — they don't add."
+    },
+    {
+      "id": "u54l10e02",
+      "type": "multipleChoice",
+      "prompt": "Recap: which CHANGES an item already in the list, keeping the length the same?",
+      "options": [
+        "list[i] = value",
+        "list.append(value)",
+        "len(list)",
+        "list[-1]"
+      ],
+      "answer": 0,
+      "explanation": "list[i] = value replaces the item at position i. The count doesn't change — you swapped a value."
+    },
+    {
+      "id": "u54l10e03",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nn = [1, 2]\nn.append(3)\nn[1] = 20\nprint(n)",
+      "options": [
+        "[1, 20, 3]",
+        "[1, 2, 3]",
+        "[1, 20]",
+        "[20, 2, 3]"
+      ],
+      "answer": 0,
+      "explanation": "append 3 -> [1, 2, 3]; n[1] = 20 -> [1, 20, 3]. Grow then change, traced step by step."
+    },
+    {
+      "id": "u54l10e04",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nn = []\nfor i in range(3):\n    n.append(i + 1)\nprint(n)",
+      "options": [
+        "[1, 2, 3]",
+        "[0, 1, 2]",
+        "[3]",
+        "[1, 2, 3, 4]"
+      ],
+      "answer": 0,
+      "explanation": "For i = 0, 1, 2, append i + 1: 1, 2, 3. Start-empty-and-append builds [1, 2, 3]."
+    },
+    {
+      "id": "u54l10e05",
+      "type": "trueFalse",
+      "prompt": "Recap: each append raises len by 1, but item assignment leaves len unchanged.",
+      "answer": true,
+      "explanation": "Adding grows the count; changing a spot does not. That difference is the heart of this unit."
+    },
+    {
+      "id": "u54l10e06",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nn = [4, 5]\nn.append(6)\nprint(len(n))",
+      "options": [
+        "3",
+        "2",
+        "6",
+        "15"
+      ],
+      "answer": 0,
+      "explanation": "Two items plus one append makes three, so len is 3."
+    },
+    {
+      "id": "u54l10e07",
+      "type": "multipleChoice",
+      "prompt": "Review indexing. Predict:\n\nn = [10, 20, 30]\nn.append(40)\nprint(n[-1])",
+      "options": [
+        "40",
+        "30",
+        "10",
+        "[10, 20, 30, 40]"
+      ],
+      "answer": 0,
+      "explanation": "After append, 40 is the last item, so n[-1] is 40. The item you just added sits at the end."
+    },
+    {
+      "id": "u54l10e08",
+      "type": "orderBlocks",
+      "prompt": "Goal: build [2, 4, 6] by appending even numbers in a loop. Arrange the lines.",
+      "blocks": [
+        "evens = []",
+        "for i in range(1, 4):",
+        "    evens.append(i * 2)",
+        "print(evens)"
+      ],
+      "answer": [0, 1, 2, 3],
+      "explanation": "i goes 1, 2, 3; i*2 is 2, 4, 6; each is appended, giving [2, 4, 6]. Loop + append builds the list."
+    },
+    {
+      "id": "u54l10e09",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nn = [5, 5, 5]\nfor i in range(len(n)):\n    n[i] = n[i] + i\nprint(n)",
+      "options": [
+        "[5, 6, 7]",
+        "[5, 5, 5]",
+        "[0, 1, 2]",
+        "[6, 7, 8]"
+      ],
+      "answer": 0,
+      "explanation": "At each position i, add i to n[i]: 5+0=5, 5+1=6, 5+2=7, giving [5, 6, 7]. Assignment in a loop changes every item."
+    },
+    {
+      "id": "u54l10e10",
+      "type": "multipleChoice",
+      "prompt": "You can now make, index, count, grow, and change a list. What's the next list skill the course adds?",
+      "options": [
+        "Looping straight over the items themselves (for item in list)",
+        "Making a list",
+        "Counting items",
+        "Picking by position"
+      ],
+      "answer": 0,
+      "explanation": "You've reached the Lap 4a milestone! Next you'll loop over a list's items directly, without positions. Excellent work."
+    }
+  ]
+}

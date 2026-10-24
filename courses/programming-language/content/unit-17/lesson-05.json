@@ -1,0 +1,136 @@
+{
+  "unitId": "u17",
+  "lessonId": "u17l05",
+  "title": "Share pizza slices and report leftovers",
+  "idea": "GUIDED PROBLEM. Use // for a fair share and % for leftovers, then present both in one message. Walked through UEPCC.",
+  "problem": "There are 13 pizza slices and 4 friends. Show a message like: Each gets 3 slices, with 1 left over.",
+  "exercises": [
+    {
+      "id": "u17l05e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: 13 slices, 4 friends. Show a message like 'Each gets 3 slices, with 1 left over.'\n\nUnderstand. What two numbers must the OUTPUT message contain?",
+      "options": [
+        "Slices each friend gets, and slices left over",
+        "Only the number of friends",
+        "Only the total slices",
+        "The word 'pizza'"
+      ],
+      "answer": 0,
+      "explanation": "The output reports both the fair share AND the leftovers. Two values to produce."
+    },
+    {
+      "id": "u17l05e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "What are the INPUTS?",
+      "options": [
+        "The number of slices (13) and the number of friends (4)",
+        "Only the number 3",
+        "The word 'friends'",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "Inputs are the slice count and the friend count. Both numbers from the problem become named values."
+    },
+    {
+      "id": "u17l05e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example by hand. Share 13 slices among 4 friends. How many does each get, and how many are left?",
+      "options": [
+        "Each gets 3, with 1 left over",
+        "Each gets 4, with 0 left over",
+        "Each gets 3, with 2 left over",
+        "Each gets 2, with 5 left over"
+      ],
+      "answer": 0,
+      "explanation": "4 goes into 13 three times (12 slices), leaving 1. So each gets 3 and 1 is left. This is your check."
+    },
+    {
+      "id": "u17l05e04",
+      "type": "matchPairs",
+      "uepcc": "P",
+      "prompt": "Plan. Match each part of the answer to the operator that finds it.",
+      "pairs": [
+        { "left": "How many each friend gets (whole share)", "right": "// (floor divide)" },
+        { "left": "How many slices are left over", "right": "% (remainder)" }
+      ],
+      "explanation": "// gives the whole share; % gives what's left behind. Together they describe the split exactly."
+    },
+    {
+      "id": "u17l05e05",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Which expression finds the slices LEFT OVER when 13 is shared among 4?",
+      "options": [
+        "13 % 4",
+        "13 // 4",
+        "13 * 4",
+        "13 + 4"
+      ],
+      "answer": 0,
+      "explanation": "% gives the remainder: 13 % 4 = 1. That's the leftover. // would give the whole share instead."
+    },
+    {
+      "id": "u17l05e06",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code. Arrange the lines to match your plan.",
+      "blocks": [
+        "slice_count = 13",
+        "friend_count = 4",
+        "each_gets = slice_count // friend_count",
+        "left_over = slice_count % friend_count",
+        "print(f\"Each gets {each_gets} slices, with {left_over} left over.\")"
+      ],
+      "answer": [0, 1, 2, 3, 4],
+      "explanation": "Store both counts, compute the share with //, the leftover with %, then present both in the message."
+    },
+    {
+      "id": "u17l05e07",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Fill the blank to compute how many each friend gets:\n\nslice_count = 13\nfriend_count = 4\neach_gets = slice_count ____ friend_count",
+      "answer": "//",
+      "acceptable": ["//"],
+      "explanation": "// is whole-number (floor) division: 13 // 4 = 3 slices each."
+    },
+    {
+      "id": "u17l05e08",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check. The code prints 'Each gets 3 slices, with 1 left over.' Hand example said the same. Verdict?",
+      "options": [
+        "Passes — matches the example",
+        "Fails — should be 4 each",
+        "Unknown",
+        "Rewrite the example"
+      ],
+      "answer": 0,
+      "explanation": "Both numbers match the hand example, so the solution is correct."
+    },
+    {
+      "id": "u17l05e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "New inputs: slice_count = 20, friend_count = 6. What message prints?",
+      "options": [
+        "Each gets 3 slices, with 2 left over.",
+        "Each gets 3 slices, with 0 left over.",
+        "Each gets 6 slices, with 2 left over.",
+        "Each gets 2 slices, with 3 left over."
+      ],
+      "answer": 0,
+      "explanation": "20 // 6 = 3 and 20 % 6 = 2. Works for new numbers — the solution generalizes."
+    },
+    {
+      "id": "u17l05e10",
+      "type": "trueFalse",
+      "uepcc": "Check",
+      "prompt": "Using // and % together lets one message report both the fair share and the leftovers.",
+      "answer": true,
+      "explanation": "Yes — // answers 'how many each' and % answers 'how many left'. Together they make a complete, readable report."
+    }
+  ]
+}

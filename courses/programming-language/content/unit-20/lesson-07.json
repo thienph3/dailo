@@ -1,0 +1,136 @@
+{
+  "unitId": "u20",
+  "lessonId": "u20l07",
+  "title": "Picking the right comparison for a problem",
+  "idea": "Different problems need different operators. Translating a plain-English yes/no question into the right symbol is the core thinking skill here.",
+  "exercises": [
+    {
+      "id": "u20l07e01",
+      "type": "multipleChoice",
+      "prompt": "'Is the user old enough (18 or older)?' Which comparison fits?",
+      "options": [
+        "age >= 18",
+        "age > 18",
+        "age == 18",
+        "age < 18"
+      ],
+      "answer": 0,
+      "explanation": "'18 or older' includes 18 itself, so use >=. Exactly 18 should count."
+    },
+    {
+      "id": "u20l07e02",
+      "type": "multipleChoice",
+      "prompt": "'Did the password typed match the real one?' Which comparison fits?",
+      "options": [
+        "typed == real",
+        "typed != real",
+        "typed > real",
+        "typed < real"
+      ],
+      "answer": 0,
+      "explanation": "'Match' means equal, so use ==."
+    },
+    {
+      "id": "u20l07e03",
+      "type": "multipleChoice",
+      "prompt": "'Is the tank running low - less than 10 liters?' Which fits?",
+      "options": [
+        "liters < 10",
+        "liters > 10",
+        "liters == 10",
+        "liters >= 10"
+      ],
+      "answer": 0,
+      "explanation": "'Less than 10' is exactly < 10."
+    },
+    {
+      "id": "u20l07e04",
+      "type": "multipleChoice",
+      "prompt": "'Is this answer wrong - not equal to the correct one?' Which fits?",
+      "options": [
+        "given != correct",
+        "given == correct",
+        "given > correct",
+        "given < correct"
+      ],
+      "answer": 0,
+      "explanation": "'Not equal' is !=."
+    },
+    {
+      "id": "u20l07e05",
+      "type": "matchPairs",
+      "prompt": "Match each plain-English question to its operator.",
+      "pairs": [
+        {
+          "left": "is it bigger?",
+          "right": ">"
+        },
+        {
+          "left": "is it the same?",
+          "right": "=="
+        },
+        {
+          "left": "is it at most this?",
+          "right": "<="
+        }
+      ],
+      "explanation": "'at most' means 'less than or equal', which is <=. Translating words to symbols is the key skill."
+    },
+    {
+      "id": "u20l07e06",
+      "type": "multipleChoice",
+      "prompt": "'Can the ride be entered - height at least 140?' A rider is exactly 140. Which test lets them on?",
+      "options": [
+        "height >= 140",
+        "height > 140",
+        "height < 140",
+        "height != 140"
+      ],
+      "answer": 0,
+      "explanation": "'At least 140' includes 140, so >= is correct. With >, exactly 140 would be turned away."
+    },
+    {
+      "id": "u20l07e07",
+      "type": "trueFalse",
+      "prompt": "'More than 100' should use > (not >=).",
+      "answer": true,
+      "explanation": "Yes - 'more than' does not include the number itself, so > is right. Exactly 100 is not 'more than' 100."
+    },
+    {
+      "id": "u20l07e08",
+      "type": "multipleChoice",
+      "prompt": "'Is the score a perfect 100?' Which fits?",
+      "options": [
+        "score == 100",
+        "score >= 100",
+        "score != 100",
+        "score < 100"
+      ],
+      "answer": 0,
+      "explanation": "'A perfect 100' means exactly equal to 100, so ==."
+    },
+    {
+      "id": "u20l07e09",
+      "type": "fillBlank",
+      "prompt": "'Is the bag overweight - more than 23 kg?' Fill the operator:\n\nweight = 25\nprint(weight ____ 23)   # shows: True",
+      "answer": ">",
+      "acceptable": [
+        ">"
+      ],
+      "explanation": "'More than 23' is > 23. weight is 25, so 25 > 23 is True."
+    },
+    {
+      "id": "u20l07e10",
+      "type": "multipleChoice",
+      "prompt": "What is the main skill this lesson practiced?",
+      "options": [
+        "Turning a yes/no question in words into the right comparison symbol",
+        "Adding numbers quickly",
+        "Printing text",
+        "Storing strings"
+      ],
+      "answer": 0,
+      "explanation": "Choosing ==, !=, <, >, <=, or >= to match the words is the heart of writing correct comparisons."
+    }
+  ]
+}

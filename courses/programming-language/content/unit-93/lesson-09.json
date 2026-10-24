@@ -1,0 +1,162 @@
+{
+  "unitId": "u93",
+  "lessonId": "u93l09",
+  "title": "Solve it: busiest day across two shops",
+  "idea": "GUIDED INTEGRATED PROBLEM. Multiple state variables tracked together: for each day, total two shops' sales and remember the busiest day's total.",
+  "problem": "Shop A daily sales: [30, 50, 20]. Shop B daily sales: [10, 5, 40]. For each day the town total is A+B. Show the highest town total across the three days.",
+  "exercises": [
+    {
+      "id": "u93l09e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: A=[30,50,20], B=[10,5,40]; each day's town total is A+B for that day. Show the HIGHEST town total.\n\nUnderstand — the output is...?",
+      "explanation": "The output is one number: the largest of the three daily town totals.",
+      "options": [
+        "The biggest daily town total",
+        "The total of all six numbers",
+        "Shop A's total only",
+        "How many days there are"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u93l09e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "The two lists line up by day (same index). What does day 0 combine?",
+      "explanation": "Index 0 of each list is the same day: 30 + 10. Lining up by index is key to understanding paired lists.",
+      "options": [
+        "A[0] + B[0] = 30 + 10",
+        "A[0] + A[1]",
+        "B[0] + B[1]",
+        "30 + 40"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u93l09e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example — by hand, the three daily town totals are: day0 30+10, day1 50+5, day2 20+40. What are they?",
+      "explanation": "40, 55, and 60. Working each day by hand gives the three values to pick the max from.",
+      "options": [
+        "40, 55, 60",
+        "30, 50, 20",
+        "10, 5, 40",
+        "40, 50, 60"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u93l09e04",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "By hand, the highest of 40, 55, 60 is?",
+      "explanation": "60 is the largest daily town total — your check value.",
+      "options": [
+        "60",
+        "55",
+        "40",
+        "155"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u93l09e05",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Plan — you track TWO things each day: this day's total and the best so far. Order the steps.",
+      "explanation": "For each day compute the town total, then update the best-so-far if this day beats it. Two state ideas working together.",
+      "blocks": [
+        "Start best at 0",
+        "For each day index i",
+        "Compute day_total = A[i] + B[i]",
+        "If day_total > best, update best",
+        "Show best"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "id": "u93l09e06",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Which loop tool lets you read A[i] and B[i] for the SAME day i?",
+      "explanation": "range(len(A)) gives each index i, so you can reach into both lists at the same position.",
+      "options": [
+        "for i in range(len(A)): use A[i] and B[i]",
+        "for a in A only",
+        "a while with no index",
+        "a nested loop over both lists fully"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u93l09e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code — arrange the solution tracking day_total and best.",
+      "explanation": "Seed best, loop by index, combine both shops, update best on a bigger day, then print. Multiple state tracked cleanly.",
+      "blocks": [
+        "best = 0",
+        "for i in range(len(A)):",
+        "    day_total = A[i] + B[i]",
+        "    if day_total > best:",
+        "        best = day_total",
+        "print(best)"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "id": "u93l09e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Complete the day total from both shops at the same day i:\n\nfor i in range(len(A)):\n    day_total = A[i] ____ B[i]",
+      "explanation": "Add the two shops' sales for that day with +. Then compare day_total to best.",
+      "answer": "+",
+      "acceptable": [
+        "+"
+      ]
+    },
+    {
+      "id": "u93l09e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check — it prints 60, hand example was 60. Verdict?",
+      "explanation": "Output matches the hand example, so tracking two state variables together worked.",
+      "options": [
+        "Passes",
+        "Fails",
+        "Unknown",
+        "Rewrite the example"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u93l09e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Re-check: A=[5], B=[5] (one day). What prints?",
+      "explanation": "One day: 5 + 5 = 10, and best updates from 0 to 10. A single-item case still works — good edge check.",
+      "options": [
+        "10",
+        "5",
+        "0",
+        "2"
+      ],
+      "answer": 0
+    }
+  ]
+}

@@ -1,0 +1,154 @@
+{
+  "unitId": "u97",
+  "lessonId": "u97l07",
+  "title": "Capstone: reverse the digits of a number",
+  "idea": "GUIDED CAPSTONE. Combine %10 (grab), //10 (drop) and *10 (shift) to rebuild a number backwards — three familiar tools, one new shape.",
+  "problem": "Reverse the digits of 123 to get 321.",
+  "exercises": [
+    {
+      "id": "u97l07e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: reverse 123 into 321. OUTPUT is...",
+      "options": [
+        "A new number with the digits reversed",
+        "The digit sum",
+        "The count of digits",
+        "The same number"
+      ],
+      "answer": 0,
+      "explanation": "Output is a number (321), built from 123's digits in reverse order. Not a sum, not a count."
+    },
+    {
+      "id": "u97l07e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "We'll build the result by grabbing the last digit of the input each pass. Which op grabs the last digit?",
+      "options": [
+        "% 10",
+        "// 10",
+        "* 10",
+        "+ 1"
+      ],
+      "answer": 0,
+      "explanation": "% 10 gives the last digit. We'll peel digits off the front of the answer by appending them on the back."
+    },
+    {
+      "id": "u97l07e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example by hand. result starts at 0. Grab 123's last digit (3): result = 0*10 + 3 = 3. Drop it -> 12. Next, last digit 2: result = 3*10 + 2 = ?",
+      "options": [
+        "32",
+        "5",
+        "23",
+        "320"
+      ],
+      "answer": 0,
+      "explanation": "3*10 + 2 = 32. Multiplying result by 10 shifts its digits left, making room for the new digit. That is the reverse-build trick, derived."
+    },
+    {
+      "id": "u97l07e04",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "One more pass: number is now 1, last digit 1. result = 32*10 + 1 = ?",
+      "options": [
+        "321",
+        "33",
+        "322",
+        "312"
+      ],
+      "answer": 0,
+      "explanation": "32*10 + 1 = 321 — the reversed number! Hand answer: 321. Each pass: result = result*10 + last digit."
+    },
+    {
+      "id": "u97l07e05",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Plan the loop. Order the per-pass steps that build the reversed number.",
+      "blocks": [
+        "result = result * 10 + last",
+        "Take last digit: last = number % 10",
+        "Drop it: number = number // 10",
+        "Repeat while number > 0"
+      ],
+      "answer": [
+        1,
+        0,
+        2,
+        3
+      ],
+      "explanation": "Grab the last digit, fold it into result (shift + add), drop it from the input, repeat. Three known ops working together."
+    },
+    {
+      "id": "u97l07e06",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Why multiply result by 10 before adding the new digit?",
+      "options": [
+        "To shift existing digits left and make room",
+        "To make it bigger for no reason",
+        "To divide it",
+        "Because reversing needs division"
+      ],
+      "answer": 0,
+      "explanation": "*10 pushes current digits up one place so the new digit slots into the ones place. That's how place value works."
+    },
+    {
+      "id": "u97l07e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code the three loop-body lines in the right order.",
+      "blocks": [
+        "number = number // 10",
+        "last = number % 10",
+        "result = result * 10 + last"
+      ],
+      "answer": [
+        1,
+        2,
+        0
+      ],
+      "explanation": "Grab last (%10), fold into result, THEN drop from number. Dropping first would lose the digit you need."
+    },
+    {
+      "id": "u97l07e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Complete the shift-and-add line:\n\nnumber = 123\nresult = 0\nwhile number > 0:\n    last = number % 10\n    result = result ____ 10 + last\n    number = number // 10\nprint(result)",
+      "answer": "*",
+      "acceptable": [
+        "*"
+      ],
+      "explanation": "Multiply result by 10 to shift, then + last. This rebuilds 123 as 321."
+    },
+    {
+      "id": "u97l07e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Run it on 123: prints 321. Hand example said 321. Verdict?",
+      "options": [
+        "Passes",
+        "Fails",
+        "Unknown",
+        "Rewrite example"
+      ],
+      "answer": 0,
+      "explanation": "Matches! You reversed a number using only %10, //10 and *10 — tools you already had, combined in a new way."
+    },
+    {
+      "id": "u97l07e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Re-run with number = 40. What should the same code print?",
+      "options": [
+        "4",
+        "04",
+        "40",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "40 reversed: pass 1 last=0 -> result 0; pass 2 last=4 -> result 4. Leading zeros vanish in a number, so 4. A neat edge case!"
+    }
+  ]
+}

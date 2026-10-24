@@ -1,0 +1,152 @@
+{
+  "unitId": "u83",
+  "lessonId": "u83l03",
+  "title": "Fix it together: the helpers wired in the wrong order",
+  "idea": "GUIDED (UEPCC), bug-focused. Both helpers (double, add_one) are correct, but the code is double(add_one(5)) when the goal is 'double then add one'. Fix the wiring, not the helpers.",
+  "problem": "double(n)=n*2 and add_one(n)=n+1 are both correct. The goal 'double then add one' for 5 should give 11, but double(add_one(5)) gives 12. Fix the wiring.",
+  "exercises": [
+    {
+      "id": "u83l03e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: goal is 'double 5 THEN add one' = 11, but double(add_one(5)) gives 12. What does the goal want to happen first?",
+      "options": [
+        "Double first, then add one",
+        "Add one first",
+        "Both at once",
+        "Neither"
+      ],
+      "answer": 0,
+      "explanation": "The goal says double FIRST. The buggy code adds one first, so the order is reversed."
+    },
+    {
+      "id": "u83l03e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "Understand — are the helpers themselves broken?",
+      "options": [
+        "No — both are correct; only the WIRING order is wrong",
+        "Yes, double is broken",
+        "Yes, add_one is broken",
+        "Yes, both are broken"
+      ],
+      "answer": 0,
+      "explanation": "double and add_one each work. The bug is purely in how they're connected — a wiring bug."
+    },
+    {
+      "id": "u83l03e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example — by hand, the RIGHT way: double 5 is 10, then add one is...",
+      "options": [
+        "11",
+        "12",
+        "10",
+        "6"
+      ],
+      "answer": 0,
+      "explanation": "10 + 1 = 11. The correct order gives 11 — our check value. The buggy 12 came from adding first."
+    },
+    {
+      "id": "u83l03e04",
+      "type": "trueFalse",
+      "uepcc": "E",
+      "prompt": "double(add_one(5)) adds one first (6), then doubles (12) — that's why it's wrong.",
+      "answer": true,
+      "explanation": "Yes — the inner call add_one(5)=6 runs first, then double(6)=12. Wrong order, wrong answer."
+    },
+    {
+      "id": "u83l03e05",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Plan the fix. To 'double first', which call must be the INNER one?",
+      "options": [
+        "double — the inner call runs first",
+        "add_one",
+        "print",
+        "Neither"
+      ],
+      "answer": 0,
+      "explanation": "The inner call runs first, so double must be inside: add_one(double(5)). Swap the nesting to fix the order."
+    },
+    {
+      "id": "u83l03e06",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Order the fix-it routine for wrong wiring.",
+      "blocks": [
+        "Confirm both helpers are individually correct",
+        "Trace the value: add_one ran first, giving 12",
+        "Swap so double is the inner call",
+        "Re-check: now it gives 11"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "Clear the helpers, trace the flow, fix the order, re-check. Wiring fixes don't touch the helpers."
+    },
+    {
+      "id": "u83l03e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code the fixed composition (helpers unchanged).",
+      "blocks": [
+        "def double(n):",
+        "    return n * 2",
+        "def add_one(n):",
+        "    return n + 1",
+        "print(add_one(double(5)))"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "explanation": "Same correct helpers; only the composition changed to add_one(double(5)) so double runs first."
+    },
+    {
+      "id": "u83l03e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Repair the wiring so double runs first:\n\nprint(add_one(____(5)))",
+      "answer": "double",
+      "acceptable": [
+        "double"
+      ],
+      "explanation": "double must be the inner call so it runs first: double(5)=10, then add_one(10)=11."
+    },
+    {
+      "id": "u83l03e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check — the fixed code prints 11; your hand example was 11. Verdict?",
+      "options": [
+        "Passes — the wiring is now correct",
+        "Fails",
+        "Unknown",
+        "Rewrite example"
+      ],
+      "answer": 0,
+      "explanation": "Output (11) matches the hand example (11). Reordering the composition fixed it — no helper was changed."
+    },
+    {
+      "id": "u83l03e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Re-check with 4: add_one(double(4)) gives...",
+      "options": [
+        "9",
+        "12",
+        "8",
+        "5"
+      ],
+      "answer": 0,
+      "explanation": "double(4)=8, add_one(8)=9. The fixed wiring works for new inputs. You repaired a wiring bug!"
+    }
+  ]
+}

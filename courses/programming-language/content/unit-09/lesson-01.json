@@ -1,0 +1,120 @@
+{
+  "unitId": "u09",
+  "lessonId": "u09l01",
+  "title": "A box can hold a new number",
+  "idea": "A variable can be given a new number later. When you do, it forgets the old one and keeps the new one. (Numbers only — text as data comes later.)",
+  "exercises": [
+    {
+      "id": "u09l01e01",
+      "type": "multipleChoice",
+      "prompt": "A variable is like a labeled box that holds a number. What do you think happens if we put a NEW number in the same box?",
+      "options": [
+        "The box now holds the new number, and forgets the old one",
+        "The box holds both numbers at once",
+        "The box breaks",
+        "Nothing changes"
+      ],
+      "answer": 0,
+      "explanation": "A box holds one number at a time. Put a new one in and the old one is gone. That's reassignment — our new tool!"
+    },
+    {
+      "id": "u09l01e02",
+      "type": "multipleChoice",
+      "prompt": "What will this show?\n\nscore = 0\nscore = 10\nprint(score)",
+      "options": [
+        "10",
+        "0",
+        "0 10",
+        "010"
+      ],
+      "answer": 0,
+      "explanation": "The second line replaced 0 with 10. By the time we print, the box holds 10."
+    },
+    {
+      "id": "u09l01e03",
+      "type": "trueFalse",
+      "prompt": "After score = 0 and then score = 10, the value 0 is gone.",
+      "answer": true,
+      "explanation": "Right! The new number replaced the old one. The box can't remember 0 anymore."
+    },
+    {
+      "id": "u09l01e04",
+      "type": "multipleChoice",
+      "prompt": "What will this show?\n\nlevel = 1\nlevel = 2\nprint(level)",
+      "options": [
+        "2",
+        "1",
+        "1 2",
+        "12"
+      ],
+      "answer": 0,
+      "explanation": "The box called level held 1, then we gave it 2. The newest number wins: 2."
+    },
+    {
+      "id": "u09l01e05",
+      "type": "trueFalse",
+      "prompt": "You can change what number a variable holds after you first set it.",
+      "answer": true,
+      "explanation": "Yes! That's the whole idea of reassignment. Numbers can change as your program runs."
+    },
+    {
+      "id": "u09l01e06",
+      "type": "fillBlank",
+      "prompt": "Give the box a new value so it holds 7 instead of 3.\n\nlucky = 3\nlucky = ____\nprint(lucky)",
+      "answer": "7",
+      "acceptable": [
+        "7"
+      ],
+      "explanation": "Writing lucky = 7 puts 7 in the box, replacing 3."
+    },
+    {
+      "id": "u09l01e07",
+      "type": "multipleChoice",
+      "prompt": "Which line CHANGES a number we already stored?\n\nfloor = 2\nfloor = 6",
+      "options": [
+        "The second line — it gives floor a new value",
+        "The first line",
+        "Neither line changes anything",
+        "Both lines change it"
+      ],
+      "answer": 0,
+      "explanation": "The first line creates the box. The second line reassigns it — that's the change."
+    },
+    {
+      "id": "u09l01e08",
+      "type": "orderBlocks",
+      "prompt": "Put these lines in order so the program ends up showing 100.",
+      "blocks": [
+        "points = 5",
+        "points = 100",
+        "print(points)"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "First store 5, then replace it with 100, then print. The last value before print is what shows."
+    },
+    {
+      "id": "u09l01e09",
+      "type": "multipleChoice",
+      "prompt": "What will this show?\n\ntemperature = 18\ntemperature = 22\ntemperature = 25\nprint(temperature)",
+      "options": [
+        "25",
+        "18",
+        "22",
+        "18 22 25"
+      ],
+      "answer": 0,
+      "explanation": "Each line replaces the one before. The last value stored is 25, so that's what prints."
+    },
+    {
+      "id": "u09l01e10",
+      "type": "trueFalse",
+      "prompt": "When you print a variable, you see whatever number it holds right now — its newest value.",
+      "answer": true,
+      "explanation": "Exactly. print always shows the current value. You just learned to change values — real power!"
+    }
+  ]
+}

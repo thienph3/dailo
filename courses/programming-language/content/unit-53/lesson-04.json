@@ -1,0 +1,126 @@
+{
+  "unitId": "u53",
+  "lessonId": "u53l04",
+  "title": "Decisions based on how many",
+  "idea": "Use len() inside comparisons and if statements: 'is the list empty?', 'are there enough?'. Reviews if/comparisons from Lap 2.",
+  "exercises": [
+    {
+      "id": "u53l04e01",
+      "type": "multipleChoice",
+      "prompt": "len gives a number, so you can compare it. Predict:\n\ncart = [5, 2, 9]\nprint(len(cart) > 2)",
+      "options": [
+        "True",
+        "False",
+        "3",
+        "2"
+      ],
+      "answer": 0,
+      "explanation": "len(cart) is 3, and 3 > 2 is True. The count behaves like any number in a comparison."
+    },
+    {
+      "id": "u53l04e02",
+      "type": "multipleChoice",
+      "prompt": "A common check is 'is the list empty?'. Predict:\n\nbag = []\nprint(len(bag) == 0)",
+      "options": [
+        "True",
+        "False",
+        "0",
+        "[]"
+      ],
+      "answer": 0,
+      "explanation": "An empty list has len 0, and 0 == 0 is True. Comparing len to 0 is the standard 'is it empty?' test."
+    },
+    {
+      "id": "u53l04e03",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nplayers = [\"A\", \"B\"]\nif len(players) >= 2:\n    print(\"can start\")\nelse:\n    print(\"need more\")",
+      "options": [
+        "can start",
+        "need more",
+        "2",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "len(players) is 2, and 2 >= 2 is True, so it prints 'can start'. len makes 'enough players?' easy to ask."
+    },
+    {
+      "id": "u53l04e04",
+      "type": "fillBlank",
+      "prompt": "Finish the empty-check so it compares the count to zero:\n\nnotes = []\nif len(notes) == ____:\n    print(\"no notes yet\")",
+      "answer": "0",
+      "acceptable": ["0"],
+      "explanation": "An empty list has len 0, so comparing to 0 detects 'nothing yet'. This prints 'no notes yet'."
+    },
+    {
+      "id": "u53l04e05",
+      "type": "trueFalse",
+      "prompt": "len(list) == 0 is a reliable way to check whether a list is empty.",
+      "answer": true,
+      "explanation": "Empty means zero items, so len == 0 exactly matches 'empty'. It's the usual way to guard the empty case."
+    },
+    {
+      "id": "u53l04e06",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nqueue = [1, 2, 3, 4]\nif len(queue) > 3:\n    print(\"busy\")",
+      "options": [
+        "busy",
+        "nothing",
+        "4",
+        "True"
+      ],
+      "answer": 0,
+      "explanation": "len(queue) is 4, and 4 > 3 is True, so it prints 'busy'."
+    },
+    {
+      "id": "u53l04e07",
+      "type": "orderBlocks",
+      "prompt": "Arrange code that warns when a signup list is still empty.",
+      "blocks": [
+        "signups = []",
+        "if len(signups) == 0:",
+        "    print(\"nobody has signed up\")"
+      ],
+      "answer": [0, 1, 2],
+      "explanation": "Make the list, test whether its count is 0, and if so print the warning. Here len is 0, so the warning shows."
+    },
+    {
+      "id": "u53l04e08",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nseats = [1, 1, 1]\nif len(seats) == 3:\n    print(\"full\")\nelse:\n    print(\"space left\")",
+      "options": [
+        "full",
+        "space left",
+        "3",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "len(seats) is 3, and 3 == 3 is True, so it prints 'full'. The values (all 1) don't matter — only the count does."
+    },
+    {
+      "id": "u53l04e09",
+      "type": "multipleChoice",
+      "prompt": "Why is checking len(list) == 0 better than guessing a list isn't empty?",
+      "options": [
+        "It handles the 'nothing yet' case safely, like our edge-case guards",
+        "It makes the list longer",
+        "It sorts the list",
+        "It's never useful"
+      ],
+      "answer": 0,
+      "explanation": "Empty lists are a classic edge case. Checking len first is the same guard habit from Lap 2, now applied to collections."
+    },
+    {
+      "id": "u53l04e10",
+      "type": "multipleChoice",
+      "prompt": "Same code, new list:\n\ncart = [9]\nif len(cart) > 2:\n    print(\"busy\")\nelse:\n    print(\"quiet\")\n\nWhat shows?",
+      "options": [
+        "quiet",
+        "busy",
+        "1",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "len(cart) is 1, and 1 > 2 is False, so the else runs and prints 'quiet'. Same code, different count, different branch."
+    }
+  ]
+}

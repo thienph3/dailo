@@ -1,0 +1,96 @@
+{
+  "unitId": "u50",
+  "lessonId": "u50l01",
+  "title": "Loop back: for and range",
+  "idea": "REVIEW. Revisit the for loop and range from the start of the lap, mixed with print and variables from earlier laps. No new concepts.",
+  "exercises": [
+    {
+      "id": "u50l01e01",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nfor i in range(3):\n    print(i)",
+      "options": ["0, 1, 2 on three lines", "1, 2, 3", "0, 1, 2, 3", "3"],
+      "answer": 0,
+      "explanation": "range(3) gives 0, 1, 2 - three passes. Each pass prints the current i."
+    },
+    {
+      "id": "u50l01e02",
+      "type": "multipleChoice",
+      "prompt": "How many times does the body of for i in range(7) run?",
+      "options": ["7", "6", "8", "1"],
+      "answer": 0,
+      "explanation": "range(7) produces 0 through 6 - seven values, so seven passes. The count equals the stop when starting at 0."
+    },
+    {
+      "id": "u50l01e03",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nfor i in range(1, 4):\n    print(i * 10)",
+      "options": ["10, 20, 30", "1, 2, 3", "0, 10, 20", "30"],
+      "answer": 0,
+      "explanation": "i is 1, 2, 3; i * 10 is 10, 20, 30. The loop variable feeds the line inside."
+    },
+    {
+      "id": "u50l01e04",
+      "type": "trueFalse",
+      "prompt": "Review from Lap 0: print() shows exactly what's in the quotes.",
+      "answer": true,
+      "explanation": "print displays its text literally - a Lap 0 idea that still holds inside loops."
+    },
+    {
+      "id": "u50l01e05",
+      "type": "fillBlank",
+      "prompt": "Fill the blank so the loop runs exactly 5 times (i from 0):\n\nfor i in range(____):\n    print(\"hi\")",
+      "answer": "5",
+      "acceptable": ["5"],
+      "explanation": "range(5) gives 0..4 - five passes, so 'hi' prints five times."
+    },
+    {
+      "id": "u50l01e06",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nfor i in range(2, 6):\n    print(i)",
+      "options": ["2, 3, 4, 5", "2, 3, 4, 5, 6", "0, 1, 2, 3", "2, 6"],
+      "answer": 0,
+      "explanation": "range(2, 6) starts at 2 and stops before 6: 2, 3, 4, 5."
+    },
+    {
+      "id": "u50l01e07",
+      "type": "multipleChoice",
+      "prompt": "Review from Lap 1: what does a variable do?",
+      "options": [
+        "Remembers a value for later use",
+        "Prints text",
+        "Stops a loop",
+        "Divides numbers"
+      ],
+      "answer": 0,
+      "explanation": "A variable stores a value so later lines (including loop bodies) can use it. A Lap 1 staple."
+    },
+    {
+      "id": "u50l01e08",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nstep = 2\nfor i in range(0, 6, step):\n    print(i)",
+      "options": ["0, 2, 4", "0, 2, 4, 6", "2, 4, 6", "0, 1, 2"],
+      "answer": 0,
+      "explanation": "Step 2 from 0, stopping before 6: 0, 2, 4. A variable can supply the step."
+    },
+    {
+      "id": "u50l01e09",
+      "type": "trueFalse",
+      "prompt": "range(4) and range(0, 4) produce the same values.",
+      "answer": true,
+      "explanation": "Both give 0, 1, 2, 3. When the start is 0 you can leave it out."
+    },
+    {
+      "id": "u50l01e10",
+      "type": "multipleChoice",
+      "prompt": "A for loop is the natural choice when...",
+      "options": [
+        "You know how many times to repeat",
+        "You never know when to stop",
+        "You want to print once",
+        "You need no repetition"
+      ],
+      "answer": 0,
+      "explanation": "Known count -> for. This pattern-choice idea ties the whole lap together."
+    }
+  ]
+}

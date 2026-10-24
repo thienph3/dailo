@@ -1,0 +1,121 @@
+{
+  "unitId": "u06",
+  "lessonId": "u06l07",
+  "title": "Spot the mistake with the check",
+  "idea": "Loop back over Unit 1 mistakes (quotes, brackets, capital P) and use the check step to catch them.",
+  "exercises": [
+    {
+      "id": "u06l07e01",
+      "type": "multipleChoice",
+      "prompt": "The task is to show Hello, but the code is:\n\nprint(Hello)\n\nWhat's wrong?",
+      "options": [
+        "Missing quotes around Hello",
+        "Missing a bracket",
+        "print is capitalized",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "Hello is text, so it needs quotes. Without them the computer looks for something named Hello — which doesn't exist."
+    },
+    {
+      "id": "u06l07e02",
+      "type": "multipleChoice",
+      "prompt": "What's wrong?\n\nprint(\"Hello\"",
+      "options": [
+        "Missing the closing bracket )",
+        "Missing quotes",
+        "print is wrong",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "It opens with ( but never closes. A bracket must be closed."
+    },
+    {
+      "id": "u06l07e03",
+      "type": "multipleChoice",
+      "prompt": "What's wrong?\n\nPrint(\"Hello\")",
+      "options": [
+        "print should be lowercase",
+        "Missing quotes",
+        "Missing a bracket",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "The instruction is print, all lowercase. Capital Print is not the same word to the computer."
+    },
+    {
+      "id": "u06l07e04",
+      "type": "trueFalse",
+      "prompt": "A small typo like a missing quote can make the whole instruction fail.",
+      "answer": true,
+      "explanation": "Computers are exact. One missing quote or bracket is enough to break it."
+    },
+    {
+      "id": "u06l07e05",
+      "type": "multiSelect",
+      "prompt": "Which of these are fully correct? (pick all)",
+      "options": [
+        "print(\"ok\")",
+        "print(7)",
+        "print(ok)",
+        "print(\"ok\""
+      ],
+      "answer": [0, 1],
+      "explanation": "Text in quotes (ok) is fine; a bare number (7) is fine. A bare word fails; a missing ) fails. Review from Unit 1."
+    },
+    {
+      "id": "u06l07e06",
+      "type": "multipleChoice",
+      "prompt": "You expected Hello but the broken code showed nothing / an error. How does checking help?",
+      "options": [
+        "It flags a fail, so you go hunt the typo",
+        "It hides the error",
+        "It changes your example",
+        "It does nothing"
+      ],
+      "answer": 0,
+      "explanation": "Checking against the example catches that the output is wrong, which sends you to find the mistake."
+    },
+    {
+      "id": "u06l07e07",
+      "type": "tapTokens",
+      "prompt": "Fix it — build the correct instruction to show Hello.",
+      "tokens": ["print", "(", "\"Hello\"", ")"],
+      "answer": ["print", "(", "\"Hello\"", ")"],
+      "explanation": "print(\"Hello\") — lowercase print, matching quotes, both brackets."
+    },
+    {
+      "id": "u06l07e08",
+      "type": "trueFalse",
+      "prompt": "After fixing a mistake, you should run the check again to confirm the output now matches.",
+      "answer": true,
+      "explanation": "Always re-check after a fix. A fix isn't done until the output matches the example."
+    },
+    {
+      "id": "u06l07e09",
+      "type": "multipleChoice",
+      "prompt": "Which line is correct?",
+      "options": [
+        "print(\"Bye\")",
+        "print(Bye)",
+        "print \"Bye\"",
+        "PRINT(\"Bye\")"
+      ],
+      "answer": 0,
+      "explanation": "print(\"Bye\") has every piece right: lowercase, quotes, brackets."
+    },
+    {
+      "id": "u06l07e10",
+      "type": "multipleChoice",
+      "prompt": "What's the lesson about the check step and mistakes?",
+      "options": [
+        "The check catches mistakes so you can fix them",
+        "The check writes the code for you",
+        "The check hides errors",
+        "The check is optional for broken code"
+      ],
+      "answer": 0,
+      "explanation": "The check is your safety net — it catches a mismatch and points you at the mistake to fix."
+    }
+  ]
+}

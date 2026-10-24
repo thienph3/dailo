@@ -1,0 +1,138 @@
+{
+  "unitId": "u94",
+  "lessonId": "u94l07",
+  "title": "Building a little test plan",
+  "idea": "MEET. For a whole solution, list the cases worth checking: a normal case, the empty case, the boundary. Reason about coverage.",
+  "exercises": [
+    {
+      "id": "u94l07e01",
+      "type": "multipleChoice",
+      "prompt": "For 'count scores >= 50', a solid little test plan is...",
+      "explanation": "A normal mix, the empty list, and the exact boundary 50 together cover the everyday case, the nothing case, and the cutoff.",
+      "options": [
+        "A normal mix, an empty list, and a score of exactly 50",
+        "Only one big list",
+        "Only the empty list",
+        "The same list three times"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u94l07e02",
+      "type": "trueFalse",
+      "prompt": "A good test plan covers the normal case AND the awkward cases, not just one of them.",
+      "explanation": "Yes — coverage means the common path and the corners. Testing only one leaves the others unproven.",
+      "answer": true
+    },
+    {
+      "id": "u94l07e03",
+      "type": "multipleChoice",
+      "prompt": "For 'average with empty guard', which case MUST be in the plan?",
+      "explanation": "The empty list is the whole reason the guard exists, so it must be tested or the guard is unproven.",
+      "options": [
+        "The empty list []",
+        "A list of 100 items",
+        "A list of all the same value only",
+        "No special cases"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u94l07e04",
+      "type": "multipleChoice",
+      "prompt": "For 'highest bid', a thorough plan includes a list where the max is...",
+      "explanation": "Testing the max at the start, middle, AND end proves the update logic works wherever the biggest value sits.",
+      "options": [
+        "First, middle, and last in different test lists",
+        "Always first only",
+        "Never present",
+        "Equal to zero only"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u94l07e05",
+      "type": "matchPairs",
+      "prompt": "Match each test case to what it proves.",
+      "explanation": "Each case has a job: normal proves the everyday path, empty proves the guard, boundary proves the comparison.",
+      "pairs": [
+        {
+          "left": "Normal mixed list",
+          "right": "The everyday path works"
+        },
+        {
+          "left": "Empty list",
+          "right": "The guard works"
+        },
+        {
+          "left": "Boundary value",
+          "right": "> vs >= is right"
+        }
+      ]
+    },
+    {
+      "id": "u94l07e06",
+      "type": "multipleChoice",
+      "prompt": "Your plan has three cases and all three match their expected answers. What can you conclude?",
+      "explanation": "You have good evidence it works for those cases. 'Proven for the cases tested' is honest — more cases give more confidence.",
+      "options": [
+        "Strong evidence it's correct for the cases you covered",
+        "Absolute proof for every possible input",
+        "That it will never have a bug",
+        "Nothing useful"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u94l07e07",
+      "type": "trueFalse",
+      "prompt": "Passing three well-chosen cases guarantees the code is bug-free for ALL inputs.",
+      "explanation": "No — tests give evidence, not a mathematical guarantee. But well-chosen cases catch the vast majority of real bugs.",
+      "answer": false
+    },
+    {
+      "id": "u94l07e08",
+      "type": "orderBlocks",
+      "prompt": "Order how to run a test plan.",
+      "explanation": "List the cases with expected answers, run each, compare each, then judge the whole solution. Coverage then verdict.",
+      "blocks": [
+        "List the cases and their hand-worked answers",
+        "Run the code on each case",
+        "Compare each output to its expected answer",
+        "Give the overall verdict"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "id": "u94l07e09",
+      "type": "multipleChoice",
+      "prompt": "One case fails, two pass. The overall verdict is...",
+      "explanation": "Any failing case means the solution is not yet proven — fix the bug, then re-run the whole plan. One fail = fail.",
+      "options": [
+        "Fail — fix the bug and re-run all cases",
+        "Pass — most passed",
+        "Ignore the failure",
+        "Delete the failing case"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u94l07e10",
+      "type": "multipleChoice",
+      "prompt": "Why write the test plan as a LIST before running anything?",
+      "explanation": "Listing cases first stops you from only testing what you know works; it forces you to include the awkward ones.",
+      "options": [
+        "It forces you to include the awkward cases, not just the easy one",
+        "It makes the code shorter",
+        "Lists run faster",
+        "It replaces the code"
+      ],
+      "answer": 0
+    }
+  ]
+}

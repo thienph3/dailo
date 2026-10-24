@@ -1,0 +1,136 @@
+{
+  "unitId": "u80",
+  "lessonId": "u80l03",
+  "title": "The zero case",
+  "idea": "edge-case enumeration: zero is a sneaky edge — it behaves oddly with division and with 'biggest/smallest' thinking.",
+  "exercises": [
+    {
+      "type": "multipleChoice",
+      "prompt": "Why is the value zero a tricky edge case for a plan that DIVIDES by an input?",
+      "options": [
+        "Dividing by zero breaks — you must check for it first",
+        "Zero is the biggest number",
+        "Zero can't be stored",
+        "Division never uses zero"
+      ],
+      "answer": 0,
+      "explanation": "If an input is used as a divisor and could be 0, you must guard it. Enumerate 'what if this is 0?' while planning.",
+      "id": "u80l03e01"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "If a price could be split among 'people', zero people is an edge case worth checking.",
+      "answer": true,
+      "explanation": "Yes. Splitting among 0 people means dividing by 0. List that case and decide what to do before coding.",
+      "id": "u80l03e02"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "For 'count how many scores are above zero', what should a score of exactly 0 do?",
+      "options": [
+        "It should NOT count — 0 is not above 0",
+        "It should count",
+        "It should crash",
+        "It doubles the count"
+      ],
+      "answer": 0,
+      "explanation": "'Above zero' means > 0, so 0 itself doesn't qualify. The boundary value (0) is exactly the case to think through.",
+      "id": "u80l03e03"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Reading a condition carefully matters at the zero edge. Which counts 0 as passing?",
+      "options": [
+        "score >= 0",
+        "score > 0",
+        "score < 0",
+        "score != 0"
+      ],
+      "answer": 0,
+      "explanation": ">= 0 includes 0; > 0 does not. The boundary value shows whether you want 'at least' or 'more than'.",
+      "id": "u80l03e04"
+    },
+    {
+      "type": "matchPairs",
+      "prompt": "Match the task to how zero behaves in it.",
+      "pairs": [
+        {
+          "left": "Add zero to a total",
+          "right": "No change — total stays the same"
+        },
+        {
+          "left": "Divide by zero",
+          "right": "Breaks — needs a guard"
+        },
+        {
+          "left": "Multiply by zero",
+          "right": "Result becomes zero"
+        }
+      ],
+      "explanation": "Zero is harmless in addition, catastrophic in division, and absorbing in multiplication. Each is worth picturing.",
+      "id": "u80l03e05"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Adding a zero into a running total changes the total.",
+      "answer": false,
+      "explanation": "No — adding 0 leaves the total unchanged. So a zero in a SUM is harmless; a zero DIVISOR is the danger.",
+      "id": "u80l03e06"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "A plan multiplies all the numbers together. A single zero in the list makes the result...",
+      "options": [
+        "Zero — anything times zero is zero",
+        "Unchanged",
+        "The biggest number",
+        "An error"
+      ],
+      "answer": 0,
+      "explanation": "One zero absorbs the whole product. Spotting that a zero can dominate is part of enumerating edge cases.",
+      "id": "u80l03e07"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "REVIEW: 6 / 0 in a program...",
+      "options": [
+        "Breaks (you can't divide by zero)",
+        "Is 0",
+        "Is 6",
+        "Is 60"
+      ],
+      "answer": 0,
+      "explanation": "Division by zero is undefined and breaks. That's why a possibly-zero divisor must be guarded.",
+      "id": "u80l03e08"
+    },
+    {
+      "type": "orderBlocks",
+      "prompt": "Order a safe plan for splitting a bill among people.",
+      "blocks": [
+        "If there are zero people, report 'no one to split with'",
+        "Otherwise, divide the bill by the number of people",
+        "Show each person's share"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Guard the zero-divisor FIRST, then divide. Enumerating the zero case gives you the guard.",
+      "id": "u80l03e09"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "The big idea:",
+      "options": [
+        "Zero is sneaky: harmless in sums, but a dangerous divisor and a dominating multiplier",
+        "Zero is always safe",
+        "Zero is the biggest value",
+        "Zero can be ignored"
+      ],
+      "answer": 0,
+      "explanation": "Enumerate 'what if it's zero?' Different operations treat zero very differently — picture each one.",
+      "id": "u80l03e10"
+    }
+  ]
+}

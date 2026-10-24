@@ -1,0 +1,156 @@
+{
+  "unitId": "u100",
+  "lessonId": "u100l09",
+  "title": "Grand finale: a mini stats report in one pass",
+  "idea": "GUIDED FINALE. Track several things at once over a list: total, biggest, and count — multiple state variables, one loop, no builtins.",
+  "problem": "For scores [8, 3, 10, 5], report the total (26), the biggest (10), and the average (6.5).",
+  "exercises": [
+    {
+      "id": "u100l09e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: from [8, 3, 10, 5] report total, biggest, and average. OUTPUT is...",
+      "options": [
+        "Three numbers from one scan",
+        "Just the total",
+        "Just the biggest",
+        "A sorted list"
+      ],
+      "answer": 0,
+      "explanation": "Output is three stats. We can track all of them in a single loop with multiple state variables — no builtins."
+    },
+    {
+      "id": "u100l09e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "Which three things must we track as we scan?",
+      "options": [
+        "A running total, the biggest so far, and a count",
+        "Only the total",
+        "Only the biggest",
+        "The list itself"
+      ],
+      "answer": 0,
+      "explanation": "total (to sum), best (to track max), and count (for the average). Three state variables, updated together."
+    },
+    {
+      "id": "u100l09e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example by hand: total of 8+3+10+5 and the biggest value?",
+      "options": [
+        "total 26, biggest 10",
+        "total 26, biggest 8",
+        "total 25, biggest 10",
+        "total 26, biggest 5"
+      ],
+      "answer": 0,
+      "explanation": "Sum is 26, biggest is 10. Count is 4, so average = 26/4 = 6.5. These are our check values."
+    },
+    {
+      "id": "u100l09e04",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "With total 26 and count 4, the average is...",
+      "options": [
+        "6.5",
+        "26",
+        "10",
+        "4"
+      ],
+      "answer": 0,
+      "explanation": "26 / 4 = 6.5. We build total and count by hand, then divide — never a builtin."
+    },
+    {
+      "id": "u100l09e05",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Plan the single-pass report. Order the steps.",
+      "blocks": [
+        "Each item: add to total, update biggest, count it",
+        "Seed total=0, best=first item, count=0",
+        "After the loop, average = total / count",
+        "Show total, biggest, average"
+      ],
+      "answer": [
+        1,
+        0,
+        2,
+        3
+      ],
+      "explanation": "Seed the state, update all three per item, compute the average after, then report. One loop does triple duty."
+    },
+    {
+      "id": "u100l09e06",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Inside the loop, which updates happen for each item?",
+      "options": [
+        "total += item, maybe update best, count += 1",
+        "Only total",
+        "Only best",
+        "Only count"
+      ],
+      "answer": 0,
+      "explanation": "All three: accumulate the total, raise best if the item is bigger, and bump the count. Multiple state together."
+    },
+    {
+      "id": "u100l09e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code the loop body (the three per-item updates). Arrange the lines.",
+      "blocks": [
+        "    count = count + 1",
+        "    total = total + item",
+        "    if item > best:",
+        "        best = item"
+      ],
+      "answer": [
+        1,
+        2,
+        3,
+        0
+      ],
+      "explanation": "Add to total, check-and-maybe-update best, count the item. The best-update is nested under its if."
+    },
+    {
+      "id": "u100l09e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Complete the average after the loop (total=26, count=4):\n\naverage = total ____ count",
+      "answer": "/",
+      "acceptable": [
+        "/"
+      ],
+      "explanation": "Divide the total by the count: 26 / 4 = 6.5. Both were built by the loop, not a builtin."
+    },
+    {
+      "id": "u100l09e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Run it: total 26, biggest 10, average 6.5. Hand matched all three. Verdict?",
+      "options": [
+        "Passes",
+        "Fails",
+        "Unknown",
+        "Rewrite example"
+      ],
+      "answer": 0,
+      "explanation": "Matches. Three stats from one pass, each hand-built. You're juggling multiple state variables like a pro!"
+    },
+    {
+      "id": "u100l09e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Re-run on [4, 4, 4]. Total, biggest, average?",
+      "options": [
+        "total 12, biggest 4, average 4",
+        "total 12, biggest 12, average 4",
+        "total 4, biggest 4, average 4",
+        "total 12, biggest 4, average 12"
+      ],
+      "answer": 0,
+      "explanation": "12, 4, and 12/3 = 4. All-equal values handled correctly. The report generalizes to any list."
+    }
+  ]
+}

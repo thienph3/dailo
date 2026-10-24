@@ -1,0 +1,119 @@
+{
+  "unitId": "u06",
+  "lessonId": "u06l02",
+  "title": "Name the input and output again",
+  "idea": "Review the U step: for a tiny show-task, name what goes in and what comes out, then run the rhythm.",
+  "exercises": [
+    {
+      "id": "u06l02e01",
+      "type": "multipleChoice",
+      "prompt": "TASK: Show the greeting Hi there. What is the OUTPUT of this task?",
+      "options": [
+        "The words Hi there on the screen",
+        "The word print",
+        "A blank line",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "The output is what appears on screen: Hi there. Naming the output is the first thing you do."
+    },
+    {
+      "id": "u06l02e02",
+      "type": "multipleChoice",
+      "prompt": "Same task. What is the INPUT — what do you start with?",
+      "options": [
+        "The exact words you want to show: Hi there",
+        "A number",
+        "The screen",
+        "The computer's mood"
+      ],
+      "answer": 0,
+      "explanation": "The input is the text you were given to show. Here it's the words Hi there."
+    },
+    {
+      "id": "u06l02e03",
+      "type": "trueFalse",
+      "prompt": "Naming the input and output is part of understanding a task before you code it.",
+      "answer": true,
+      "explanation": "Yes. Understanding what goes in and comes out is where every task starts."
+    },
+    {
+      "id": "u06l02e04",
+      "type": "multipleChoice",
+      "prompt": "Example step: for the task 'show Hi there', what is the expected output exactly?",
+      "options": [
+        "Hi there",
+        "Hithere",
+        "HI THERE",
+        "hi there!"
+      ],
+      "answer": 0,
+      "explanation": "Exactly Hi there — same words, same spacing. The example must match the task precisely."
+    },
+    {
+      "id": "u06l02e05",
+      "type": "tapTokens",
+      "prompt": "Code step: build the instruction to show Hi there",
+      "tokens": ["print", "(", "\"Hi there\"", ")"],
+      "answer": ["print", "(", "\"Hi there\"", ")"],
+      "explanation": "The whole phrase goes in one set of quotes inside the brackets: print(\"Hi there\")."
+    },
+    {
+      "id": "u06l02e06",
+      "type": "multipleChoice",
+      "prompt": "Check step: it shows Hi there. Your example was Hi there. Result?",
+      "options": [
+        "Pass",
+        "Fail",
+        "Unknown",
+        "Change the task"
+      ],
+      "answer": 0,
+      "explanation": "Output matches the example, so it passes. You just ran the whole rhythm."
+    },
+    {
+      "id": "u06l02e07",
+      "type": "matchPairs",
+      "prompt": "Match each rhythm word to what it means.",
+      "pairs": [
+        { "left": "Input", "right": "What you start with" },
+        { "left": "Output", "right": "What appears on screen" },
+        { "left": "Check", "right": "Compare output to your example" }
+      ],
+      "explanation": "Input is the start, output is the result, check compares the result to the example."
+    },
+    {
+      "id": "u06l02e08",
+      "type": "trueFalse",
+      "prompt": "For a 'show this' task, the input is the text you want shown and the output is that text on screen.",
+      "answer": true,
+      "explanation": "For a simple show-task, input and output look alike — the words you're given, and those words displayed."
+    },
+    {
+      "id": "u06l02e09",
+      "type": "multipleChoice",
+      "prompt": "TASK: Show the word Ready. Which line does it?",
+      "options": [
+        "print(\"Ready\")",
+        "print(Ready)",
+        "show(\"Ready\")",
+        "print \"Ready\""
+      ],
+      "answer": 0,
+      "explanation": "print(\"Ready\") — quotes around the word, brackets around it all."
+    },
+    {
+      "id": "u06l02e10",
+      "type": "multipleChoice",
+      "prompt": "Why name the input and output first?",
+      "options": [
+        "It tells you exactly what the code must produce",
+        "It makes the task longer",
+        "It replaces writing code",
+        "It is never needed"
+      ],
+      "answer": 0,
+      "explanation": "Knowing the output in advance means you can check your code against it. That's the whole point of starting there."
+    }
+  ]
+}

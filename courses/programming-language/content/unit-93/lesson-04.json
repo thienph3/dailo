@@ -1,0 +1,154 @@
+{
+  "unitId": "u93",
+  "lessonId": "u93l04",
+  "title": "Solve it: the highest bid",
+  "idea": "GUIDED INTEGRATED PROBLEM. Track-the-best (max) pattern built by hand with a loop — no max() builtin.",
+  "problem": "Auction bids are [120, 95, 150, 110]. Show the highest bid.",
+  "exercises": [
+    {
+      "id": "u93l04e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: bids [120, 95, 150, 110]. Show the HIGHEST bid.\n\nUnderstand — the output is...?",
+      "explanation": "The output is a single value: the largest bid in the list.",
+      "options": [
+        "One number: the largest bid",
+        "The total of all bids",
+        "How many bids there are",
+        "The first bid"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u93l04e02",
+      "type": "trueFalse",
+      "uepcc": "U",
+      "prompt": "This course lets us call max() to get the biggest value.",
+      "explanation": "No — we build 'track the best' ourselves with a loop. Learning the pattern is the whole point; max() is never used.",
+      "answer": false
+    },
+    {
+      "id": "u93l04e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example — by hand, walk the bids keeping the best so far: 120, then 95, then 150, then 110. Final best?",
+      "explanation": "Best starts at 120, 95 is smaller, 150 is bigger so best=150, 110 is smaller. Highest = 150, your check value.",
+      "options": [
+        "150",
+        "120",
+        "110",
+        "95"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u93l04e04",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "By hand, why start 'best' at the FIRST bid (120) and not at 0?",
+      "explanation": "Starting at the first real value is safe. Starting at 0 would be wrong if all bids were negative — a subtle edge bug.",
+      "options": [
+        "The first real bid is a safe starting best; 0 could be wrong for all-negative data",
+        "0 is always correct",
+        "Starting value never matters",
+        "You must start at 1"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u93l04e05",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Plan — track the best. Order the steps.",
+      "explanation": "Set best to the first bid, then for each bid, if it beats best, replace best. Show best at the end.",
+      "blocks": [
+        "Set best to the first bid",
+        "For each bid in the list",
+        "If this bid is greater than best, update best",
+        "Show best"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "id": "u93l04e06",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Inside the loop, which comparison decides we found a new best?",
+      "explanation": "A new best happens when the current bid is greater than the best so far — bid > best.",
+      "options": [
+        "bid > best",
+        "bid < best",
+        "bid == best",
+        "bid + best"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u93l04e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code — arrange the track-the-best loop.",
+      "explanation": "Seed best with the first item, scan the rest, update on a bigger value, then print. This is max built by hand.",
+      "blocks": [
+        "bids = [120, 95, 150, 110]",
+        "best = bids[0]",
+        "for bid in bids:",
+        "    if bid > best:",
+        "        best = bid",
+        "print(best)"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "id": "u93l04e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Complete the update condition:\n\nbest = bids[0]\nfor bid in bids:\n    if bid ____ best:\n        best = bid",
+      "explanation": "Use > so a strictly larger bid replaces the best. We track the maximum ourselves — no max() call.",
+      "answer": ">",
+      "acceptable": [
+        ">"
+      ]
+    },
+    {
+      "id": "u93l04e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check — it prints 150, hand example was 150. Verdict?",
+      "explanation": "Output matches the hand example, so the track-the-best logic is correct.",
+      "options": [
+        "Passes",
+        "Fails",
+        "Unknown",
+        "Rewrite the example"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u93l04e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Re-check with NEW bids [40, 40, 40]. What prints?",
+      "explanation": "All equal, so best stays 40 the whole way. 'Greater than' never triggers an update, which is correct — 40 is the highest.",
+      "options": [
+        "40",
+        "0",
+        "120",
+        "3"
+      ],
+      "answer": 0
+    }
+  ]
+}

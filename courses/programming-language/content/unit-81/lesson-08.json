@@ -1,0 +1,136 @@
+{
+  "unitId": "u81",
+  "lessonId": "u81l08",
+  "title": "Debug it: one wrong helper poisons the rest",
+  "idea": "When an early helper returns a wrong value, every later step built on it is wrong too. Fixing the ROOT helper fixes the whole chain — don't patch the symptoms downstream.",
+  "exercises": [
+    {
+      "type": "multipleChoice",
+      "prompt": "to_cents(dollars) should return dollars*100 but returns dollars*10. Every later total built on it is wrong. Where should you fix it?",
+      "options": [
+        "In to_cents — fix the root, and the later steps become correct",
+        "In each later total, one by one",
+        "In the print statement",
+        "Nowhere"
+      ],
+      "answer": 0,
+      "explanation": "A wrong early value poisons everything downstream. Fix the root helper and the whole chain heals at once.",
+      "id": "u81l08e01"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "If an early sub-result is wrong, later steps can still end up correct by luck.",
+      "answer": false,
+      "explanation": "Not reliably. A wrong input generally makes the next step wrong too. The error cascades forward.",
+      "id": "u81l08e02"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "A grand total is exactly 10x too small. You trace back and find to_cents multiplies by 10 not 100. This tells you...",
+      "options": [
+        "The single root cause — one wrong factor explains the whole 10x gap",
+        "There are many separate bugs",
+        "The total helper is broken",
+        "Nothing useful"
+      ],
+      "answer": 0,
+      "explanation": "One wrong factor (10 vs 100) explains the whole 10x error. Finding the root beats patching ten downstream numbers.",
+      "id": "u81l08e03"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Patching the FINAL total by multiplying it by 10 to 'fix' the bug is a bad idea because...",
+      "options": [
+        "It hides the real cause and breaks the moment inputs change",
+        "It's the cleanest fix",
+        "It fixes the root",
+        "It's always correct"
+      ],
+      "answer": 0,
+      "explanation": "Masking a symptom leaves the root broken. Change the inputs and the patch fails. Fix the cause, not the symptom.",
+      "id": "u81l08e04"
+    },
+    {
+      "type": "matchPairs",
+      "prompt": "Match each approach to its outcome.",
+      "pairs": [
+        {
+          "left": "Fix the root helper",
+          "right": "Whole chain becomes correct"
+        },
+        {
+          "left": "Patch the final number",
+          "right": "Breaks again on new inputs"
+        },
+        {
+          "left": "Add another helper on top",
+          "right": "More complexity, same root bug"
+        }
+      ],
+      "explanation": "Only fixing the root truly solves a cascading bug. The other 'fixes' just move the problem around.",
+      "id": "u81l08e05"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "To find a cascading bug, you trace BACKWARD from the wrong final answer toward the earliest wrong value.",
+      "answer": true,
+      "explanation": "Yes. Follow the wrongness upstream until you reach the first helper that's off — that's the root.",
+      "id": "u81l08e06"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "get_price returns the right value, but get_total (which calls get_price) is wrong. Where is the bug more likely?",
+      "options": [
+        "In get_total or its wiring — get_price is already cleared",
+        "In get_price",
+        "In both",
+        "Impossible to tell"
+      ],
+      "answer": 0,
+      "explanation": "If the earlier helper is proven correct, the bug is in the later step or how it uses the earlier result.",
+      "id": "u81l08e07"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "The value of fixing the ROOT instead of a symptom is that...",
+      "options": [
+        "One correct fix repairs every step that depended on it",
+        "It takes longer with no benefit",
+        "Symptoms are easier and just as good",
+        "Roots can't be fixed"
+      ],
+      "answer": 0,
+      "explanation": "A root fix propagates correctness forward automatically — the cleanest kind of repair.",
+      "id": "u81l08e08"
+    },
+    {
+      "type": "orderBlocks",
+      "prompt": "Order the cascading-bug hunt.",
+      "blocks": [
+        "Start from the wrong final answer",
+        "Trace backward to the earliest wrong value",
+        "Fix that root helper"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Work upstream from the wrong result to the first wrong value, then fix the root. The chain heals downstream.",
+      "id": "u81l08e09"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "The lesson:",
+      "options": [
+        "A wrong early helper cascades — trace back and fix the root, not the symptom",
+        "Fix the last number",
+        "Early helpers are never wrong",
+        "Cascades can't be traced"
+      ],
+      "answer": 0,
+      "explanation": "Errors flow forward. Find the earliest wrong value and fix it there; everything after it follows.",
+      "id": "u81l08e10"
+    }
+  ]
+}

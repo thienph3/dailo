@@ -1,0 +1,137 @@
+{
+  "unitId": "u70",
+  "lessonId": "u70l03",
+  "title": "Describe the job vs do the job",
+  "idea": "MEET: defining a sub-plan only DESCRIBES it - the steps don't happen until you use it. No code.",
+  "exercises": [
+    {
+      "id": "u70l03e01",
+      "type": "multipleChoice",
+      "prompt": "You write down a recipe for pancakes but don't cook anything yet. The recipe is like...",
+      "options": [
+        "defining a sub-plan - describing the job, not doing it",
+        "using a sub-plan",
+        "eating the pancakes",
+        "throwing the recipe away"
+      ],
+      "answer": 0,
+      "explanation": "Writing the recipe describes the job. No pancakes exist yet. Defining a sub-plan is just like that."
+    },
+    {
+      "id": "u70l03e02",
+      "type": "multipleChoice",
+      "prompt": "Later you follow the recipe and cook. THAT is like...",
+      "options": [
+        "using the sub-plan - now the job actually happens",
+        "defining it again",
+        "deleting the recipe",
+        "naming it"
+      ],
+      "answer": 0,
+      "explanation": "Following the recipe does the job. Using a sub-plan is when its steps actually run."
+    },
+    {
+      "id": "u70l03e03",
+      "type": "trueFalse",
+      "prompt": "Just describing (defining) a job makes its steps happen on their own.",
+      "answer": false,
+      "explanation": "No. Describing a job sets it up but does nothing yet. The steps only happen when you USE the job."
+    },
+    {
+      "id": "u70l03e04",
+      "type": "matchPairs",
+      "prompt": "Match each everyday action to 'describe' or 'do'.",
+      "pairs": [
+        {
+          "left": "write a recipe",
+          "right": "describe the job"
+        },
+        {
+          "left": "cook from the recipe",
+          "right": "do the job"
+        },
+        {
+          "left": "name a dance routine",
+          "right": "describe the job"
+        }
+      ],
+      "explanation": "Writing or naming a plan describes it. Carrying it out does it. Define vs use, in everyday terms."
+    },
+    {
+      "id": "u70l03e05",
+      "type": "multipleChoice",
+      "prompt": "A plan defines 'print_border' but never uses it anywhere. What gets printed?",
+      "options": [
+        "Nothing from the border job - it was only described",
+        "The border, once",
+        "The border, forever",
+        "An error for naming it"
+      ],
+      "answer": 0,
+      "explanation": "Defined but never used means the steps never run. Describing a job does not do it."
+    },
+    {
+      "id": "u70l03e06",
+      "type": "multiSelect",
+      "prompt": "Which statements are TRUE about defining vs using? (Pick all.)",
+      "options": [
+        "Defining describes the job",
+        "Using makes the job happen",
+        "Defining alone runs the steps",
+        "You can define now and use later"
+      ],
+      "answer": [
+        0,
+        1,
+        3
+      ],
+      "explanation": "Defining only describes; using runs it; you can define first and use later. Defining alone does nothing."
+    },
+    {
+      "id": "u70l03e07",
+      "type": "multipleChoice",
+      "prompt": "Why separate 'describe' from 'do'?",
+      "options": [
+        "So you can set a job up once, then choose exactly when to do it",
+        "To confuse the reader",
+        "To make it slower",
+        "There is no reason"
+      ],
+      "answer": 0,
+      "explanation": "Separating them lets you define a job once, then trigger it whenever and however often you want."
+    },
+    {
+      "id": "u70l03e08",
+      "type": "trueFalse",
+      "prompt": "You could define three different jobs and then decide later which ones to use.",
+      "answer": true,
+      "explanation": "Yes. Describing jobs up front, then choosing when to use each, is a flexible and common way to plan."
+    },
+    {
+      "id": "u70l03e09",
+      "type": "multipleChoice",
+      "prompt": "REVIEW: writing 'total = price * count' DESCRIBES a calculation. When does it actually compute?",
+      "options": [
+        "when that line runs",
+        "never",
+        "only if you print the word total",
+        "the moment you think about it"
+      ],
+      "answer": 0,
+      "explanation": "Code describes work; it happens when the line runs. Same spirit: defining a sub-plan is setup, using it is action."
+    },
+    {
+      "id": "u70l03e10",
+      "type": "multipleChoice",
+      "prompt": "The key distinction this lesson teaches:",
+      "options": [
+        "define = describe the job; use = do the job - they are not the same",
+        "define and use are identical",
+        "jobs run when named",
+        "describing is pointless"
+      ],
+      "answer": 0,
+      "explanation": "Define describes, use does. Next unit you'll see this in real code: writing a sub-plan vs running it."
+    }
+  ]
+}

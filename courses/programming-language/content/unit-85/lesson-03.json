@@ -1,0 +1,139 @@
+{
+  "unitId": "u85",
+  "lessonId": "u85l03",
+  "title": "Reading slowly: find every input (the values you're given)",
+  "idea": "MEET: inputs are the values the problem hands you to work from — list them before planning, and tell them apart from numbers that are only part of a rule.",
+  "exercises": [
+    {
+      "type": "multipleChoice",
+      "prompt": "PROBLEM: 'Given a list of ages, show how many are 18 or older.' What is the INPUT?",
+      "options": [
+        "The list of ages",
+        "The number 18",
+        "The word 'older'",
+        "There is no input"
+      ],
+      "answer": 0,
+      "explanation": "The input is the data you work from: the list of ages. 18 is part of the RULE, not the input.",
+      "id": "u85l03e01"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "In that problem, what is the number 18?",
+      "options": [
+        "Part of the rule (the threshold to compare against)",
+        "The input list",
+        "The output",
+        "A mistake"
+      ],
+      "answer": 0,
+      "explanation": "18 is a fixed value inside the rule 'is this age 18 or older?'. It's a constant in the test, not data handed to you.",
+      "id": "u85l03e02"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Every number mentioned in a problem is an input you were given.",
+      "answer": false,
+      "explanation": "No — some numbers are part of a rule (like a threshold or a tax rate). Inputs are the data you work ON.",
+      "id": "u85l03e03"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "PROBLEM: 'For a list of prices, add a 5% tax to the total.' Which is the INPUT?",
+      "options": [
+        "The list of prices",
+        "The 5% tax rate",
+        "The word 'total'",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "The prices are the data (input). 5% is a fixed rule applied to them, not input data.",
+      "id": "u85l03e04"
+    },
+    {
+      "type": "multiSelect",
+      "prompt": "Select the INPUTS: 'Given a list of test scores and the passing mark of 60, count how many passed.'",
+      "options": [
+        "The list of test scores",
+        "The passing mark 60",
+        "The word 'count'",
+        "The world's population"
+      ],
+      "answer": [
+        0,
+        1
+      ],
+      "explanation": "Both the scores AND the passing mark 60 are values you're given to work with. Here 60 is handed to you explicitly, so it counts as a provided input.",
+      "id": "u85l03e05"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Why list the inputs before planning?",
+      "options": [
+        "So you know exactly what you have to work with",
+        "To make the problem harder",
+        "Because inputs are decoration",
+        "The computer demands it"
+      ],
+      "answer": 0,
+      "explanation": "Knowing your inputs tells you what raw material each part of the plan can use.",
+      "id": "u85l03e06"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "A list of many values can be a single input.",
+      "answer": true,
+      "explanation": "Yes — one list (of many numbers) is still one input: the collection you loop over.",
+      "id": "u85l03e07"
+    },
+    {
+      "type": "matchPairs",
+      "prompt": "Match each problem to its input.",
+      "pairs": [
+        {
+          "left": "Average a list of scores",
+          "right": "The list of scores"
+        },
+        {
+          "left": "Find the biggest price",
+          "right": "The list of prices"
+        },
+        {
+          "left": "Is the code in the list?",
+          "right": "The list and the code to find"
+        }
+      ],
+      "explanation": "The input is the data each problem hands you. Some problems have one input; some have two.",
+      "id": "u85l03e08"
+    },
+    {
+      "type": "orderBlocks",
+      "prompt": "Order the habit for finding inputs.",
+      "blocks": [
+        "Read the problem",
+        "List every value you are GIVEN",
+        "Set aside numbers that are only part of a rule"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Find what you're given, then separate true inputs from rule-constants. Now the picture is clear.",
+      "id": "u85l03e09"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "The big idea:",
+      "options": [
+        "Inputs are the values you're given to work ON; rule-numbers are different",
+        "Every number is an input",
+        "Inputs never matter",
+        "You should ignore the inputs"
+      ],
+      "answer": 0,
+      "explanation": "Tell the data apart from the rules. Clean inputs make a clean plan.",
+      "id": "u85l03e10"
+    }
+  ]
+}

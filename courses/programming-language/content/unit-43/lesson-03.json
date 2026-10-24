@@ -1,0 +1,154 @@
+{
+  "unitId": "u43",
+  "lessonId": "u43l03",
+  "title": "Solve it together: total of the big orders",
+  "idea": "GUIDED. Accumulate only the values that pass a rule (counter/accumulator + if in a loop).",
+  "problem": "Daily sales are 20, 50, 10, 80, 30. Add up only the sales that are 50 or more.",
+  "exercises": [
+    {
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: Daily sales 20, 50, 10, 80, 30. Add up only the sales that are 50 or more.\n\nUnderstand -- what is the OUTPUT?",
+      "options": [
+        "The total of just the sales that are 50 or more",
+        "The count of all sales",
+        "The smallest sale",
+        "Every sale printed"
+      ],
+      "answer": 0,
+      "explanation": "The output is a filtered TOTAL -- sum only the sales meeting the rule, not all of them.",
+      "id": "u43l03e01"
+    },
+    {
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "What rule decides whether a sale is added?",
+      "options": [
+        "The sale is 50 or more",
+        "The sale is even",
+        "The sale is the last one",
+        "Every sale is added"
+      ],
+      "answer": 0,
+      "explanation": "The rule is 'sale >= 50.' Only those sales join the total.",
+      "id": "u43l03e02"
+    },
+    {
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "By hand: of 20, 50, 10, 80, 30, which are 50 or more, and what do they add to?",
+      "options": [
+        "50 and 80 -> 130",
+        "50, 80, 30 -> 160",
+        "all of them -> 190",
+        "20 and 10 -> 30"
+      ],
+      "answer": 0,
+      "explanation": "50 and 80 meet the rule; 50 + 80 = 130. This hand total (130) is our check value.",
+      "id": "u43l03e03"
+    },
+    {
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Plan the steps.",
+      "blocks": [
+        "Start a total at 0",
+        "For each sale, check if it is 50 or more",
+        "If it is, add the sale to the total",
+        "Show the total"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "Start the total, test each sale, add the ones that pass, then show the total. The if picks what to add.",
+      "id": "u43l03e04"
+    },
+    {
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Which two tools combine for 'for each, but only when a rule holds'?",
+      "options": [
+        "A for-loop with an if inside it",
+        "Two prints",
+        "input and range",
+        "A single if, no loop"
+      ],
+      "answer": 0,
+      "explanation": "A for-loop visits every sale; an if inside it adds only the ones meeting the rule.",
+      "id": "u43l03e05"
+    },
+    {
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Fill the comparison so only sales of 50 or more are added:\n\ntotal = 0\nfor n in range(1, 6):\n    if sale ____ 50:\n        total = total + sale\nprint(total)",
+      "answer": ">=",
+      "acceptable": [
+        ">=",
+        "> =",
+        "&gt;="
+      ],
+      "explanation": "'50 or more' is >=. Only sales where sale >= 50 pass the if and join the total.",
+      "id": "u43l03e06"
+    },
+    {
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Arrange the full solution (one sale per pass in `sale`).",
+      "blocks": [
+        "total = 0",
+        "for n in range(1, 6):",
+        "    if sale >= 50:",
+        "        total = total + sale",
+        "print(total)"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "explanation": "Total at 0, loop each sale, if it passes add it, print after. The accumulate and filter patterns combine.",
+      "id": "u43l03e07"
+    },
+    {
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "It prints 130, matching your hand answer. This means...",
+      "options": [
+        "The solution is correct",
+        "The rule is wrong",
+        "The loop didn't run",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "Output (130) equals the hand-worked total (130), so the code is right.",
+      "id": "u43l03e08"
+    },
+    {
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Re-check: sales 70, 40, 90 with the rule 'sale >= 50'. What total should it give?",
+      "options": [
+        "160",
+        "200",
+        "130",
+        "110"
+      ],
+      "answer": 0,
+      "explanation": "70 and 90 pass (40 doesn't); 70 + 90 = 160. The solution generalizes to new sales.",
+      "id": "u43l03e09"
+    },
+    {
+      "type": "trueFalse",
+      "uepcc": "Check",
+      "prompt": "If you swapped >= 50 for <= 50, the same code would total the SMALL sales instead.",
+      "answer": true,
+      "explanation": "True -- the rule in the if decides what gets added. Changing it changes which sales the total collects.",
+      "id": "u43l03e10"
+    }
+  ]
+}

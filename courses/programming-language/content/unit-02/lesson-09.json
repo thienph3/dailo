@@ -1,0 +1,126 @@
+{
+  "unitId": "u02",
+  "lessonId": "u02l09",
+  "title": "Reading a task: find the input and output",
+  "idea": "Practice pulling the input and output out of a short task description, mixed with print review.",
+  "exercises": [
+    {
+      "id": "u02l09e01",
+      "type": "multipleChoice",
+      "prompt": "Task: 'Given a word, show it on the screen.' What is the input?",
+      "options": [
+        "The word",
+        "The screen",
+        "The output",
+        "A number"
+      ],
+      "answer": 0,
+      "explanation": "The word you are given is the input. Showing it is the output."
+    },
+    {
+      "id": "u02l09e02",
+      "type": "multipleChoice",
+      "prompt": "Task: 'Given a word, show it on the screen.' Which tool makes the output happen?",
+      "options": [
+        "print()",
+        "A calculator",
+        "A variable",
+        "An if"
+      ],
+      "answer": 0,
+      "explanation": "print() shows things on the screen. It's the only tool you know so far — and the right one here."
+    },
+    {
+      "id": "u02l09e03",
+      "type": "multiSelect",
+      "prompt": "Task: 'Given two prices, show their total.' Pick the TRUE statements. (Choose all.)",
+      "options": [
+        "There are two inputs",
+        "The output is the total",
+        "There is one input",
+        "There is no output"
+      ],
+      "answer": [0, 1],
+      "explanation": "Two prices in, one total out. The other two options are false."
+    },
+    {
+      "id": "u02l09e04",
+      "type": "matchPairs",
+      "prompt": "Match each short task to its OUTPUT.",
+      "pairs": [
+        { "left": "Show the word Ready", "right": "Ready" },
+        { "left": "Count the chairs", "right": "A number of chairs" },
+        { "left": "Greet the team", "right": "A greeting" }
+      ],
+      "explanation": "Reading carefully, the output is the result each task asks you to produce."
+    },
+    {
+      "id": "u02l09e05",
+      "type": "multipleChoice",
+      "prompt": "Task: 'Print the word Start.' What is the output?",
+      "options": [
+        "Start",
+        "print",
+        "A number",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "The output is Start on the screen — the text inside the quotes, shown exactly."
+    },
+    {
+      "id": "u02l09e06",
+      "type": "fillBlank",
+      "prompt": "Write a full program whose output is the word Go.",
+      "answer": "print(\"Go\")",
+      "acceptable": [
+        "print(\"Go\")",
+        "print('Go')"
+      ],
+      "explanation": "print, brackets, the text in quotes: print(\"Go\"). Its output is Go."
+    },
+    {
+      "id": "u02l09e07",
+      "type": "multipleChoice",
+      "prompt": "Task: 'Given a temperature, show whether it is hot or cold.' What is the input?",
+      "options": [
+        "The temperature",
+        "The words hot or cold",
+        "The screen",
+        "A thermometer's price"
+      ],
+      "answer": 0,
+      "explanation": "The temperature is what you start with — the input. The answer (hot or cold) is the output."
+    },
+    {
+      "id": "u02l09e08",
+      "type": "trueFalse",
+      "prompt": "Task: 'Given a temperature, show hot or cold.' The output is a number.",
+      "answer": false,
+      "explanation": "The output is a word — hot or cold — not a number. Read the task carefully to find the real output."
+    },
+    {
+      "id": "u02l09e09",
+      "type": "matchPairs",
+      "prompt": "Match each task to its INPUT.",
+      "pairs": [
+        { "left": "Show a chosen word", "right": "The chosen word" },
+        { "left": "Total up two prices", "right": "The two prices" },
+        { "left": "Count the books", "right": "The books" }
+      ],
+      "explanation": "The input is whatever each task is given to start with."
+    },
+    {
+      "id": "u02l09e10",
+      "type": "multipleChoice",
+      "prompt": "Best habit when you read a new task?",
+      "options": [
+        "Name the input and output before anything else",
+        "Start typing code right away",
+        "Guess the answer",
+        "Skip to the end"
+      ],
+      "answer": 0,
+      "explanation": "Name the input and output first. That's the Understand step, and it keeps the rest of your work on track."
+    }
+  ]
+}

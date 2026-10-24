@@ -1,0 +1,158 @@
+{
+  "unitId": "u67",
+  "lessonId": "u67l10",
+  "title": "Fix-it round-up: name the bug, choose the fix",
+  "idea": "GUIDED review PRACTICE: one small problem plus a tour of the bug families. Diagnose each break and pick the right fix, UEPCC-tagged.",
+  "problem": "A shop totals the cost of items over 5 from [3, 8, 6], expecting 14 (that's 8 + 6). Several broken attempts are shown; diagnose and fix each.",
+  "exercises": [
+    {
+      "id": "u67l10e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: add up only the prices over 5 in [3, 8, 6]. Understand — what is the OUTPUT?",
+      "options": [
+        "The sum of the prices greater than 5",
+        "The count of prices over 5",
+        "The biggest price",
+        "The whole list"
+      ],
+      "answer": 0,
+      "explanation": "Output is a filtered SUM: total of prices over 5. Naming it frames every fix that follows."
+    },
+    {
+      "id": "u67l10e02",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example. By hand: which prices in [3, 8, 6] are over 5, and what's their total?",
+      "options": [
+        "8 and 6, total 14",
+        "3 and 8, total 11",
+        "all three, total 17",
+        "just 8, total 8"
+      ],
+      "answer": 0,
+      "explanation": "Over 5 means 8 and 6 (not 3). 8 + 6 = 14 — the target every correct version must reach."
+    },
+    {
+      "id": "u67l10e03",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Attempt A prints 19, which is 14 + 5. The loop body looks right. Which bug family, and where to look?",
+      "options": [
+        "wrong start — total began at 5 instead of 0",
+        "off-by-one",
+        "wrong comparison",
+        "empty list"
+      ],
+      "answer": 0,
+      "explanation": "Off by a constant 5 means a wrong starting value. Change total's start from 5 to 0."
+    },
+    {
+      "id": "u67l10e04",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Attempt B prints 6 (only the last matching value). Which bug family?",
+      "options": [
+        "reset inside the loop — 'total = 0' runs every pass",
+        "off-by-one",
+        "wrong comparison",
+        "wrong start"
+      ],
+      "answer": 0,
+      "explanation": "Keeping only the last pass's value is the reset-inside signature. Move 'total = 0' above the loop."
+    },
+    {
+      "id": "u67l10e05",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Attempt C uses 'if price > 5' but the shop actually wants prices '5 or more', and it drops the value 5 in another list. Which fix?",
+      "options": [
+        "use >= instead of > to include the boundary",
+        "use < instead of >",
+        "start at 1",
+        "add a print"
+      ],
+      "answer": 0,
+      "explanation": "'5 or more' includes 5, so >= is right. Picking > vs >= by reading the words is the edge-case fix."
+    },
+    {
+      "id": "u67l10e06",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Plan the CORRECT version for 'sum of prices over 5'. Order matters — which outline is right?",
+      "options": [
+        "total = 0 above the loop; for each price, if price > 5 add it; print after",
+        "total = 0 inside the loop; add 1 each pass",
+        "no loop, just print 14",
+        "start total at 5"
+      ],
+      "answer": 0,
+      "explanation": "Set up once (total = 0), filter-and-add inside (if price > 5: total += price), report after. That's the filtered-sum pattern."
+    },
+    {
+      "id": "u67l10e07",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Inside the loop, the accumulate step for a SUM of matches should add...",
+      "options": [
+        "the price itself",
+        "1",
+        "0",
+        "the length"
+      ],
+      "answer": 0,
+      "explanation": "Summing adds the value (price), not 1. Adding 1 would count the matches instead of totalling them."
+    },
+    {
+      "id": "u67l10e08",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Arrange the fully CORRECT solution.",
+      "blocks": [
+        "prices = [3, 8, 6]",
+        "total = 0",
+        "for price in prices:",
+        "    if price > 5:",
+        "        total = total + price",
+        "print(total)"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "explanation": "Store prices, total = 0 once, loop adding each price over 5, print after. It reaches 14 — the hand answer."
+    },
+    {
+      "id": "u67l10e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check. The correct version prints 14; your hand answer was 14. And it avoids all four bug families. So...",
+      "options": [
+        "It passes — right start, no reset inside, right test, right accumulate",
+        "It fails",
+        "You can't tell",
+        "The example was wrong"
+      ],
+      "answer": 0,
+      "explanation": "14 matches the example, and the code sidesteps every bug family you studied. That's a verified fix."
+    },
+    {
+      "id": "u67l10e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Re-check with new inputs: prices = [2, 9, 7], sum those over 5. What should it print?",
+      "options": [
+        "16",
+        "9",
+        "18",
+        "7"
+      ],
+      "answer": 0,
+      "explanation": "Over 5: 9 and 7, total 16. The solution generalizes. You can now diagnose AND repair broken list code — great work!"
+    }
+  ]
+}

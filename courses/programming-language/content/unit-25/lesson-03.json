@@ -1,0 +1,138 @@
+{
+  "unitId": "u25",
+  "lessonId": "u25l03",
+  "title": "Sorting a number into bands",
+  "idea": "Use if/elif/else to drop one number into one of several ranges (bands). Predict which band wins. Thinking plus small code.",
+  "exercises": [
+    {
+      "id": "u25l03e01",
+      "type": "multipleChoice",
+      "prompt": "A grade chain: A for 90+, B for 80-89, C for 70-79, else F. For score 82, which band?",
+      "options": [
+        "B",
+        "A",
+        "C",
+        "F"
+      ],
+      "answer": 0,
+      "explanation": "82 is in the 80-89 band, so it lands in B. Each band is a bucket; 82 fits exactly one."
+    },
+    {
+      "id": "u25l03e02",
+      "type": "multipleChoice",
+      "prompt": "What does this print?\n\nscore = 73\nif score >= 90:\n    print(\"A\")\nelif score >= 80:\n    print(\"B\")\nelif score >= 70:\n    print(\"C\")\nelse:\n    print(\"F\")",
+      "options": [
+        "C",
+        "B",
+        "A",
+        "F"
+      ],
+      "answer": 0,
+      "explanation": "73 fails 90 and 80 but passes >= 70, so 'C' prints. The first matching band wins."
+    },
+    {
+      "id": "u25l03e03",
+      "type": "multipleChoice",
+      "prompt": "Same chain, score = 50. What prints?",
+      "options": [
+        "F",
+        "C",
+        "B",
+        "A"
+      ],
+      "answer": 0,
+      "explanation": "50 fails every >= test, so the else runs: 'F'. else is the catch-all for everything below 70."
+    },
+    {
+      "id": "u25l03e04",
+      "type": "multipleChoice",
+      "prompt": "At exactly score = 80, which band does the chain above choose?",
+      "options": [
+        "B",
+        "A",
+        "C",
+        "F"
+      ],
+      "answer": 0,
+      "explanation": "80 fails >= 90 but passes >= 80, so it lands in B. The boundary value belongs to the band whose >= includes it."
+    },
+    {
+      "id": "u25l03e05",
+      "type": "trueFalse",
+      "prompt": "Each number falls into exactly one band because the chain stops at the first match.",
+      "answer": true,
+      "explanation": "Yes - once a band matches, the rest are skipped, so a value cannot land in two bands."
+    },
+    {
+      "id": "u25l03e06",
+      "type": "orderBlocks",
+      "prompt": "Arrange a three-band size chain (Large 100+, Medium 50+, else Small).",
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "blocks": [
+        "if size >= 100:",
+        "    print(\"Large\")",
+        "elif size >= 50:",
+        "    print(\"Medium\")",
+        "else:",
+        "    print(\"Small\")"
+      ],
+      "explanation": "Strictest band first (>= 100), then >= 50, then else for the rest. Each line follows its test."
+    },
+    {
+      "id": "u25l03e07",
+      "type": "multipleChoice",
+      "prompt": "For the size chain, what does size = 50 print?",
+      "options": [
+        "Medium",
+        "Large",
+        "Small",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "50 fails >= 100 but passes >= 50, so 'Medium' prints. The boundary 50 belongs to Medium."
+    },
+    {
+      "id": "u25l03e08",
+      "type": "fillBlank",
+      "prompt": "Complete the middle band test (Medium is 50 or more):\n\nif size >= 100:\n    print(\"Large\")\nelif size ____ 50:\n    print(\"Medium\")\nelse:\n    print(\"Small\")",
+      "answer": ">=",
+      "acceptable": [
+        ">="
+      ],
+      "explanation": ">= 50 catches the Medium band. Because Large was checked first, this only sees values below 100."
+    },
+    {
+      "id": "u25l03e09",
+      "type": "multipleChoice",
+      "prompt": "Why do we not need a separate test like '50 to 99' for the Medium band?",
+      "options": [
+        "The earlier >= 100 already removed the big values, so >= 50 is enough here",
+        "50 to 99 is illegal",
+        "Medium never happens",
+        "elif cannot use ranges"
+      ],
+      "answer": 0,
+      "explanation": "Each branch only sees what fell through the stricter ones above, so a single >= is enough to bound the band."
+    },
+    {
+      "id": "u25l03e10",
+      "type": "multipleChoice",
+      "prompt": "The big idea of banding is...",
+      "options": [
+        "a strict-first elif chain drops a value into exactly one range",
+        "every band runs",
+        "you must list every number",
+        "bands need no order"
+      ],
+      "answer": 0,
+      "explanation": "A well-ordered elif chain sorts one value into exactly one band - the heart of 'several outcomes'."
+    }
+  ]
+}

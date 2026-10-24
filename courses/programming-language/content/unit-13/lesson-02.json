@@ -1,0 +1,132 @@
+{
+  "unitId": "u13",
+  "lessonId": "u13l02",
+  "title": "Times and divide go first",
+  "idea": "The rule: * and / happen before + and -. This is called precedence.",
+  "exercises": [
+    {
+      "id": "u13l02e01",
+      "type": "multipleChoice",
+      "prompt": "The rule (precedence): which operations happen first?",
+      "options": [
+        "* and / happen before + and -",
+        "+ and - happen before * and /",
+        "Whatever comes last",
+        "They all happen at the same time"
+      ],
+      "answer": 0,
+      "explanation": "Times and divide go first, then plus and minus. Memorize this — it's the heart of the unit."
+    },
+    {
+      "id": "u13l02e02",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nprint(2 + 3 * 4)",
+      "options": [
+        "14",
+        "20",
+        "24",
+        "9"
+      ],
+      "answer": 0,
+      "explanation": "* first: 3 * 4 is 12. Then + : 2 + 12 is 14. Times before plus."
+    },
+    {
+      "id": "u13l02e03",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nprint(10 - 2 * 3)",
+      "options": [
+        "4",
+        "24",
+        "6",
+        "30"
+      ],
+      "answer": 0,
+      "explanation": "* first: 2 * 3 is 6. Then - : 10 - 6 is 4. Times before minus."
+    },
+    {
+      "id": "u13l02e04",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nprint(6 + 8 / 2)",
+      "options": [
+        "10.0",
+        "7.0",
+        "14.0",
+        "4.0"
+      ],
+      "answer": 0,
+      "explanation": "/ first: 8 / 2 is 4.0. Then + : 6 + 4.0 is 10.0. Divide goes before plus, and / gives a decimal."
+    },
+    {
+      "id": "u13l02e05",
+      "type": "trueFalse",
+      "prompt": "In 7 + 2 * 5, the computer does 2 * 5 before the + .",
+      "answer": true,
+      "explanation": "Yes. * before + , so 2 * 5 is 10 first, then 7 + 10 is 17."
+    },
+    {
+      "id": "u13l02e06",
+      "type": "multipleChoice",
+      "prompt": "Which step does the computer do FIRST here?\n\nprint(4 * 5 + 1)",
+      "options": [
+        "4 * 5",
+        "5 + 1",
+        "4 + 1",
+        "It skips the *"
+      ],
+      "answer": 0,
+      "explanation": "The * comes first no matter where it sits: 4 * 5 is 20, then + 1 is 21."
+    },
+    {
+      "id": "u13l02e07",
+      "type": "fillBlank",
+      "prompt": "Fill in the result:\n\nprint(1 + 2 * 3)\n\nOutput: ____",
+      "answer": "7",
+      "acceptable": [
+        "7"
+      ],
+      "explanation": "2 * 3 is 6 first, then 1 + 6 is 7. Times before plus."
+    },
+    {
+      "id": "u13l02e08",
+      "type": "multiSelect",
+      "prompt": "Using the rule (times before plus), which of these equal 11? (pick all)",
+      "options": [
+        "print(5 + 2 * 3)",
+        "print(1 + 2 * 5)",
+        "print(4 + 2 * 2)",
+        "print(10 + 1 * 0)"
+      ],
+      "answer": [
+        0,
+        1
+      ],
+      "explanation": "5+2*3 = 5+6 = 11. 1+2*5 = 1+10 = 11. But 4+2*2 = 4+4 = 8, and 10+1*0 = 10+0 = 10. Only the first two make 11."
+    },
+    {
+      "id": "u13l02e09",
+      "type": "multipleChoice",
+      "prompt": "Review: you can store a result in a variable. What does this show?\n\ntotal = 2 + 3 * 4\nprint(total)",
+      "options": [
+        "14",
+        "20",
+        "total",
+        "24"
+      ],
+      "answer": 0,
+      "explanation": "The same rule applies inside a variable: 3 * 4 is 12, plus 2 is 14. Then print(total) shows 14."
+    },
+    {
+      "id": "u13l02e10",
+      "type": "multipleChoice",
+      "prompt": "Someone says '2 + 3 * 4 is 20'. What mistake did they make?",
+      "options": [
+        "They did the + before the * ",
+        "They forgot to add",
+        "They used the wrong numbers",
+        "No mistake, 20 is right"
+      ],
+      "answer": 0,
+      "explanation": "They added first (2+3=5, then *4=20). The rule says * goes first, so the answer is 14."
+    }
+  ]
+}

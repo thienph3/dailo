@@ -1,0 +1,154 @@
+{
+  "unitId": "u98",
+  "lessonId": "u98l02",
+  "title": "Capstone: average a list, guarding the empty case",
+  "idea": "GUIDED CAPSTONE. Compute an average as total/count built by loop, and guard against dividing by zero when the list is empty.",
+  "problem": "Find the average of [10, 20, 30] (which is 20), and handle an empty list safely.",
+  "exercises": [
+    {
+      "id": "u98l02e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: average of [10, 20, 30]. The average is...",
+      "options": [
+        "The total divided by how many",
+        "The biggest value",
+        "The total only",
+        "The count only"
+      ],
+      "answer": 0,
+      "explanation": "Average = sum / count. We'll build both the running total and the count with a loop."
+    },
+    {
+      "id": "u98l02e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "What dangerous case must we GUARD against before dividing?",
+      "options": [
+        "An empty list — dividing by 0 count",
+        "A list that's too long",
+        "Negative numbers",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "If the list is empty, count is 0 and total/0 would crash. An edge-case guard prevents that."
+    },
+    {
+      "id": "u98l02e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example by hand: total of 10+20+30 and count of items?",
+      "options": [
+        "total 60, count 3",
+        "total 60, count 60",
+        "total 30, count 3",
+        "total 50, count 2"
+      ],
+      "answer": 0,
+      "explanation": "total 60 over count 3. 60 / 3 = 20. That hand value is our check."
+    },
+    {
+      "id": "u98l02e04",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "If the list were empty [], what should we do instead of dividing?",
+      "options": [
+        "Report 0 (or 'no items') — don't divide",
+        "Divide anyway",
+        "Guess a number",
+        "Crash"
+      ],
+      "answer": 0,
+      "explanation": "No items means no meaningful average; return 0 (or a message) to stay safe. The guard decides this first."
+    },
+    {
+      "id": "u98l02e05",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Plan it. Order the steps.",
+      "blocks": [
+        "If count is 0, the average is 0 (guard)",
+        "Build total and count with a loop",
+        "Otherwise average = total / count"
+      ],
+      "answer": [
+        1,
+        0,
+        2
+      ],
+      "explanation": "Accumulate total and count, then guard: zero items -> 0, else divide. The guard must come before the division."
+    },
+    {
+      "id": "u98l02e06",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Which operator gives the count's role in the guard test 'no items'?",
+      "options": [
+        "len(numbers) == 0",
+        "len(numbers) > 0 means empty",
+        "numbers * 0",
+        "count + 1"
+      ],
+      "answer": 0,
+      "explanation": "len gives the SIZE of the list (len is allowed — it's not a sum). len == 0 means empty, so guard there."
+    },
+    {
+      "id": "u98l02e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code the guard-then-divide tail. Arrange the lines.",
+      "blocks": [
+        "else:",
+        "    average = 0",
+        "    average = total / count",
+        "if count == 0:"
+      ],
+      "answer": [
+        3,
+        1,
+        0,
+        2
+      ],
+      "explanation": "Test count==0 first; if empty, average 0; else divide. The guard shields the division."
+    },
+    {
+      "id": "u98l02e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Complete the division (safe because the guard already ran):\n\n# total=60, count=3\nif count == 0:\n    average = 0\nelse:\n    average = total ____ count\nprint(average)",
+      "answer": "/",
+      "acceptable": [
+        "/"
+      ],
+      "explanation": "Divide total by count: 60 / 3 = 20. We only reach this line when count is not 0."
+    },
+    {
+      "id": "u98l02e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Run on [10,20,30]: prints 20. Hand said 20. Verdict?",
+      "options": [
+        "Passes",
+        "Fails",
+        "Unknown",
+        "Rewrite example"
+      ],
+      "answer": 0,
+      "explanation": "Matches. total/count = 60/3 = 20, and the guard stayed out of the way for a non-empty list."
+    },
+    {
+      "id": "u98l02e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Re-run on []. What prints, and does it crash?",
+      "options": [
+        "0 — no crash, the guard caught it",
+        "It crashes dividing by zero",
+        "20",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "count is 0, the guard returns 0, division is skipped — no crash. Edge cases handled like a pro."
+    }
+  ]
+}

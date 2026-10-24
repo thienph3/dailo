@@ -1,0 +1,127 @@
+{
+  "unitId": "u54",
+  "lessonId": "u54l03",
+  "title": "Building a list by appending",
+  "idea": "Practice append(), including the key pattern: start empty and append inside a loop to build a list. Reviews for+range from Lap 3.",
+  "exercises": [
+    {
+      "id": "u54l03e01",
+      "type": "multipleChoice",
+      "prompt": "Predict the final list:\n\nn = [10]\nn.append(20)\nn.append(30)\nprint(n)",
+      "options": [
+        "[10, 20, 30]",
+        "[30, 20, 10]",
+        "[10]",
+        "[60]"
+      ],
+      "answer": 0,
+      "explanation": "Each append adds to the end in order: 20 then 30, giving [10, 20, 30]."
+    },
+    {
+      "id": "u54l03e02",
+      "type": "multipleChoice",
+      "prompt": "A very common pattern: start empty, then add items. Predict:\n\nresult = []\nresult.append(1)\nresult.append(1)\nprint(result)",
+      "options": [
+        "[1, 1]",
+        "[1]",
+        "[2]",
+        "[]"
+      ],
+      "answer": 0,
+      "explanation": "Appending 1 twice gives two items: [1, 1]. Repeats are fine — each append adds one more."
+    },
+    {
+      "id": "u54l03e03",
+      "type": "trueFalse",
+      "prompt": "Starting with an empty list [] and appending items is a normal way to build a list up.",
+      "answer": true,
+      "explanation": "It's one of the most common list patterns: begin empty, add as values arrive. Think of filling a basket."
+    },
+    {
+      "id": "u54l03e04",
+      "type": "multipleChoice",
+      "prompt": "Review a loop. Predict the output:\n\nnums = []\nfor i in range(3):\n    nums.append(i)\nprint(nums)",
+      "options": [
+        "[0, 1, 2]",
+        "[1, 2, 3]",
+        "[3]",
+        "[0, 1, 2, 3]"
+      ],
+      "answer": 0,
+      "explanation": "i takes 0, 1, 2, and each is appended, so nums becomes [0, 1, 2]. Looping + append builds a list automatically."
+    },
+    {
+      "id": "u54l03e05",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nnums = []\nfor i in range(4):\n    nums.append(i * 2)\nprint(nums)",
+      "options": [
+        "[0, 2, 4, 6]",
+        "[0, 1, 2, 3]",
+        "[2, 4, 6, 8]",
+        "[8]"
+      ],
+      "answer": 0,
+      "explanation": "For i = 0, 1, 2, 3, we append i*2: 0, 2, 4, 6. You can append a computed value, not just i."
+    },
+    {
+      "id": "u54l03e06",
+      "type": "fillBlank",
+      "prompt": "Fill in so the loop collects each number into the list:\n\nout = []\nfor i in range(3):\n    out.____(i)\nprint(out)",
+      "answer": "append",
+      "acceptable": ["append"],
+      "explanation": "out.append(i) adds each i to the end. The loop builds [0, 1, 2]."
+    },
+    {
+      "id": "u54l03e07",
+      "type": "orderBlocks",
+      "prompt": "Arrange code that builds a list of the numbers 1, 2, 3 by appending in a loop.",
+      "blocks": [
+        "nums = []",
+        "for i in range(1, 4):",
+        "    nums.append(i)",
+        "print(nums)"
+      ],
+      "answer": [0, 1, 2, 3],
+      "explanation": "Start empty, loop i over 1, 2, 3 (range(1, 4)), append each, then print [1, 2, 3]."
+    },
+    {
+      "id": "u54l03e08",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nn = []\nfor i in range(2):\n    n.append(5)\nprint(n)",
+      "options": [
+        "[5, 5]",
+        "[5]",
+        "[10]",
+        "[0, 1]"
+      ],
+      "answer": 0,
+      "explanation": "The loop runs twice, appending 5 each time, so n is [5, 5]. You can append the same value repeatedly."
+    },
+    {
+      "id": "u54l03e09",
+      "type": "multipleChoice",
+      "prompt": "A learner forgets to start the list and writes just the loop:\n\nfor i in range(3):\n    nums.append(i)\n\nWhat's missing?",
+      "options": [
+        "nums must exist first, e.g. nums = [] before the loop",
+        "The loop needs more range",
+        "append is spelled wrong",
+        "Nothing is missing"
+      ],
+      "answer": 0,
+      "explanation": "You can only append to a list that already exists. Create nums = [] before the loop, then fill it."
+    },
+    {
+      "id": "u54l03e10",
+      "type": "multipleChoice",
+      "prompt": "Why is 'start empty, append in a loop' so useful?",
+      "options": [
+        "It builds a list of any length without writing each item by hand",
+        "It makes lists shorter",
+        "It sorts the list",
+        "It only works for 3 items"
+      ],
+      "answer": 0,
+      "explanation": "The loop can run any number of times, so you can build a list of 3 or 300 items with the same few lines."
+    }
+  ]
+}

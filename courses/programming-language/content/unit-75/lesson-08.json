@@ -1,0 +1,150 @@
+{
+  "unitId": "u75",
+  "lessonId": "u75l08",
+  "title": "Solve it: a returning sub-plan with a guard",
+  "idea": "GUIDED PROBLEM (UEPCC). A sub-plan returns early for a special case (negative input), otherwise returns the normal answer. Practices early return.",
+  "problem": "Write safe_sqrt_input(n) that hands back 0 if n is negative, otherwise hands back n unchanged. Use it on -5 and on 9.",
+  "exercises": [
+    {
+      "id": "u75l08e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: safe_sqrt_input(n) hands back 0 if n is negative, else n. Use it on -5 and on 9.\n\nWhat are the TWO possible outputs?",
+      "options": [
+        "0 (for negatives) or n itself (otherwise)",
+        "Always 0",
+        "Always n",
+        "True or False"
+      ],
+      "answer": 0,
+      "explanation": "Two paths: negative -> 0, otherwise -> n. The output depends on the input."
+    },
+    {
+      "id": "u75l08e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "What is the INPUT, and what special case needs handling?",
+      "options": [
+        "Input: n; special case: n is negative",
+        "Input: 0; special case: none",
+        "Input: a list; special case: empty",
+        "No input"
+      ],
+      "answer": 0,
+      "explanation": "The input is n. The special case is a negative n, which should be turned into 0."
+    },
+    {
+      "id": "u75l08e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example by hand — safe_sqrt_input(-5) should hand back...",
+      "options": [
+        "0",
+        "-5",
+        "5",
+        "None"
+      ],
+      "answer": 0,
+      "explanation": "-5 is negative, so the guard turns it into 0. That's the first expected answer."
+    },
+    {
+      "id": "u75l08e04",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Second example by hand — safe_sqrt_input(9) should hand back...",
+      "options": [
+        "9",
+        "0",
+        "-9",
+        "None"
+      ],
+      "answer": 0,
+      "explanation": "9 is not negative, so it passes through unchanged: 9. Two examples give two check values."
+    },
+    {
+      "id": "u75l08e05",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Plan the sub-plan in plain English.",
+      "blocks": [
+        "If n is negative, hand back 0 (and stop)",
+        "Otherwise, hand back n unchanged"
+      ],
+      "answer": [
+        0,
+        1
+      ],
+      "explanation": "Handle the special case first with an early return, then the normal case. An early return keeps the rest simple."
+    },
+    {
+      "id": "u75l08e06",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Why does returning 0 inside the if mean we DON'T need an else for the normal case?",
+      "options": [
+        "return ends the sub-plan, so if n is negative the last line never runs",
+        "else is illegal here",
+        "the loop skips it",
+        "it doesn't — we need else"
+      ],
+      "answer": 0,
+      "explanation": "An early return stops the sub-plan. If n is negative we return 0 and leave; otherwise we fall through to 'return n'."
+    },
+    {
+      "id": "u75l08e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code it: define the sub-plan, if n < 0 return 0, then return n.",
+      "blocks": [
+        "def safe_sqrt_input(n):",
+        "    if n < 0:",
+        "        return 0",
+        "    return n"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "The guard returns 0 for negatives and stops; otherwise the sub-plan reaches 'return n'."
+    },
+    {
+      "id": "u75l08e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Complete the guard so negatives become 0:\n\ndef safe_sqrt_input(n):\n    if n < 0:\n        return ____\n    return n",
+      "answer": "0",
+      "acceptable": ["0"],
+      "explanation": "Hand back 0 for a negative input, then stop. Otherwise n passes through."
+    },
+    {
+      "id": "u75l08e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check — safe_sqrt_input(-5) returns 0 and safe_sqrt_input(9) returns 9, matching both hand examples. Verdict?",
+      "options": [
+        "Passes — both outputs match",
+        "Fails",
+        "Only the first matters",
+        "Rewrite the examples"
+      ],
+      "answer": 0,
+      "explanation": "Both paths match their hand examples (0 and 9), so the guard works. Checking both cases proves it."
+    },
+    {
+      "id": "u75l08e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Re-check an edge: safe_sqrt_input(0). What comes back?",
+      "options": [
+        "0 — because 0 is NOT negative, it passes through",
+        "0 — because of the guard",
+        "None",
+        "an error"
+      ],
+      "answer": 0,
+      "explanation": "0 < 0 is False, so 0 is not caught by the guard and passes through as n. The result is 0 either way, but for the right reason."
+    }
+  ]
+}

@@ -1,0 +1,162 @@
+{
+  "unitId": "u91",
+  "lessonId": "u91l04",
+  "title": "Solve it: the top and bottom price",
+  "idea": "GUIDED PROBLEM. Track a max AND a min in one pass (multiple state), with attention to starting values.",
+  "problem": "Prices [12, 5, 20, 8]. Show the highest and the lowest price.",
+  "exercises": [
+    {
+      "id": "u91l04e01",
+      "uepcc": "U",
+      "type": "multipleChoice",
+      "prompt": "PROBLEM: prices [12, 5, 20, 8]. Show the HIGHEST and LOWEST.\n\nHow many outputs, and what are they?",
+      "options": [
+        "Two - the biggest price and the smallest price",
+        "One - the total",
+        "Three",
+        "The average"
+      ],
+      "answer": 0,
+      "explanation": "Two outputs: a max and a min. Two outputs suggest two trackers."
+    },
+    {
+      "id": "u91l04e02",
+      "uepcc": "U",
+      "type": "multipleChoice",
+      "prompt": "Which tool keeps a 'biggest so far' AND a 'smallest so far' in one pass?",
+      "options": [
+        "Multiple state variables",
+        "A single if",
+        "input()",
+        "A fixed range"
+      ],
+      "answer": 0,
+      "explanation": "Two running trackers in one loop is multiple state - the same idea as total+count, here max+min."
+    },
+    {
+      "id": "u91l04e03",
+      "uepcc": "E",
+      "type": "multipleChoice",
+      "prompt": "By hand: the highest of 12, 5, 20, 8 is?",
+      "options": [
+        "20",
+        "12",
+        "8",
+        "5"
+      ],
+      "answer": 0,
+      "explanation": "20 is the biggest. Hand-finding it tells you what the max tracker should end at."
+    },
+    {
+      "id": "u91l04e04",
+      "uepcc": "E",
+      "type": "multipleChoice",
+      "prompt": "By hand: the lowest of 12, 5, 20, 8 is?",
+      "options": [
+        "5",
+        "8",
+        "12",
+        "20"
+      ],
+      "answer": 0,
+      "explanation": "5 is the smallest. Now both checks are ready: high 20, low 5."
+    },
+    {
+      "id": "u91l04e05",
+      "uepcc": "P",
+      "type": "multipleChoice",
+      "prompt": "Plan the STARTING values. For a min tracker over these positive prices, start it...",
+      "options": [
+        "High (like 1000), so the first real price replaces it",
+        "At 0, so nothing beats it",
+        "At the average",
+        "It doesn't matter"
+      ],
+      "answer": 0,
+      "explanation": "Start a min tracker high so a real price is smaller and snaps it down. Starting at 0 would leave it stuck at 0."
+    },
+    {
+      "id": "u91l04e06",
+      "uepcc": "P",
+      "type": "orderBlocks",
+      "prompt": "Plan the steps in plain English.",
+      "blocks": [
+        "Start high low and low high",
+        "Walk the prices, updating high if bigger and low if smaller",
+        "Show high and low"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Pick starting values, walk once updating both trackers, then report. Two comparisons per turn."
+    },
+    {
+      "id": "u91l04e07",
+      "uepcc": "C",
+      "type": "orderBlocks",
+      "prompt": "Code the plan.",
+      "blocks": [
+        "high = 0",
+        "low = 1000",
+        "for price in [12, 5, 20, 8]:",
+        "    if price > high:",
+        "        high = price",
+        "    if price < low:",
+        "        low = price",
+        "print(high, low)"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "explanation": "Start high low and low high, test each price against both, print both. Classic max/min multiple state."
+    },
+    {
+      "id": "u91l04e08",
+      "uepcc": "C",
+      "type": "fillBlank",
+      "prompt": "Complete the min test:\n\nlow = 1000\nfor price in [12, 5]:\n    if price ____ low:\n        low = price",
+      "answer": "<",
+      "acceptable": [
+        "<"
+      ],
+      "explanation": "Keep the price when it is LESS than the smallest so far: price < low."
+    },
+    {
+      "id": "u91l04e09",
+      "uepcc": "Check",
+      "type": "multipleChoice",
+      "prompt": "Check: code prints 20 and 5. Hand answers were 20 and 5. Verdict?",
+      "options": [
+        "Passes - both trackers match",
+        "Fails",
+        "Unknown",
+        "Swap them"
+      ],
+      "answer": 0,
+      "explanation": "Max 20 and min 5 match the hand example. The twin-tracker solution is correct."
+    },
+    {
+      "id": "u91l04e10",
+      "uepcc": "Check",
+      "type": "multipleChoice",
+      "prompt": "New data [7] (one price). With high start 0 and low start 1000, what prints?",
+      "options": [
+        "7 and 7",
+        "0 and 1000",
+        "7 and 1000",
+        "0 and 7"
+      ],
+      "answer": 0,
+      "explanation": "The single price beats both starts, so high and low both become 7. One value is its own max and min."
+    }
+  ]
+}

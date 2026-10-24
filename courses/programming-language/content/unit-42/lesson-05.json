@@ -1,0 +1,118 @@
+{
+  "unitId": "u42",
+  "lessonId": "u42l05",
+  "title": "Adding up only the ones that match",
+  "idea": "Combine the accumulator (review from u41) with an if in a loop: sum only the values that pass a test. This is 'total of the ones that match the rule'.",
+  "exercises": [
+    {
+      "id": "u42l05e01",
+      "type": "multipleChoice",
+      "prompt": "To answer 'what's the sum of the even numbers from 1 to 10?', what combines?",
+      "options": [
+        "An accumulator AND an if inside the loop",
+        "A counter only",
+        "Two accumulators",
+        "Just the loop variable"
+      ],
+      "answer": 0,
+      "explanation": "The if picks the even values; the accumulator adds only those. Together they sum the matches."
+    },
+    {
+      "id": "u42l05e02",
+      "type": "multipleChoice",
+      "prompt": "What shows?\n\ntotal = 0\nfor i in range(1, 11):\n    if i % 2 == 0:\n        total += i\nprint(total)",
+      "options": ["30", "25", "55", "5"],
+      "answer": 0,
+      "explanation": "Evens 1 to 10 are 2, 4, 6, 8, 10. Their sum: 2+4+6+8+10 = 30. total += i runs only when even."
+    },
+    {
+      "id": "u42l05e03",
+      "type": "multipleChoice",
+      "prompt": "Where must total += i go to sum only the matches?",
+      "options": [
+        "Inside the if (two levels of indent)",
+        "At level one, every pass",
+        "After the loop",
+        "Before the loop"
+      ],
+      "answer": 0,
+      "explanation": "Inside the if, total += i runs only when the condition is true, so it sums just the matching values."
+    },
+    {
+      "id": "u42l05e04",
+      "type": "multipleChoice",
+      "prompt": "If total += i were at level ONE instead of inside the if, what would it sum (range(1, 11))?",
+      "options": [
+        "All numbers 1 to 10 = 55, ignoring the condition",
+        "Only the evens = 30",
+        "Nothing",
+        "Only the odds"
+      ],
+      "answer": 0,
+      "explanation": "At level one it adds every i, summing all of 1 to 10 (55). The if's filter is lost. Indentation decides what's summed."
+    },
+    {
+      "id": "u42l05e05",
+      "type": "trueFalse",
+      "prompt": "total = 0 still goes before the loop when summing conditionally.",
+      "answer": true,
+      "explanation": "Yes. Initialize once before; the if just decides which values to add, not where the total starts."
+    },
+    {
+      "id": "u42l05e06",
+      "type": "multipleChoice",
+      "prompt": "What shows?\n\ntotal = 0\nfor i in range(1, 11):\n    if i % 2 == 1:\n        total += i\nprint(total)",
+      "options": ["25", "30", "55", "5"],
+      "answer": 0,
+      "explanation": "Odds 1 to 10: 1, 3, 5, 7, 9. Sum: 25. Flipping the test to == 1 sums the odds instead."
+    },
+    {
+      "id": "u42l05e07",
+      "type": "orderBlocks",
+      "prompt": "Arrange code to sum the even numbers from 1 to 6.",
+      "blocks": [
+        "        total += i",
+        "    if i % 2 == 0:",
+        "total = 0",
+        "print(total)",
+        "for i in range(1, 7):"
+      ],
+      "answer": [2, 4, 1, 0, 3],
+      "explanation": "Initialize total, loop, test even, add i inside the if, print after. Result: 2+4+6 = 12."
+    },
+    {
+      "id": "u42l05e08",
+      "type": "multipleChoice",
+      "prompt": "What shows?\n\ntotal = 0\nfor i in range(1, 7):\n    if i % 2 == 0:\n        total += i\nprint(total)",
+      "options": ["12", "9", "21", "6"],
+      "answer": 0,
+      "explanation": "Evens 1 to 6: 2, 4, 6. Sum: 12. The accumulator adds only the matching values."
+    },
+    {
+      "id": "u42l05e09",
+      "type": "multipleChoice",
+      "prompt": "What's the difference between counting matches and summing matches?",
+      "options": [
+        "Count adds 1 per match; sum adds the value i per match",
+        "They are the same",
+        "Summing needs two loops",
+        "Counting needs an accumulator"
+      ],
+      "answer": 0,
+      "explanation": "Inside the if, count += 1 counts how many match; total += i sums their values. The if is the same; what you add differs."
+    },
+    {
+      "id": "u42l05e10",
+      "type": "multipleChoice",
+      "prompt": "Re-check: sum the multiples of 3 from 1 to 10. Which values are added, and what's the total?",
+      "options": [
+        "3 + 6 + 9 = 18",
+        "3 + 6 + 9 + 12 = 30",
+        "1 + 2 + 3 = 6",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "if i % 3 == 0 picks 3, 6, 9; total += i sums them to 18. The combined pattern generalizes to any rule."
+    }
+  ]
+}

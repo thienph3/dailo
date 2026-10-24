@@ -1,0 +1,149 @@
+{
+  "unitId": "u62",
+  "lessonId": "u62l09",
+  "title": "Averages in the wild",
+  "idea": "TOOL: mixed predict/choose/spot combining average with earlier list skills. ~30% review.",
+  "exercises": [
+    {
+      "id": "u62l09e01",
+      "type": "multipleChoice",
+      "prompt": "Predict:\n\nmarks = [60, 70, 80, 90]\ntotal = 0\nfor m in marks:\n    total = total + m\nprint(total / len(marks))",
+      "options": [
+        "75.0",
+        "300",
+        "4",
+        "90"
+      ],
+      "answer": 0,
+      "explanation": "Sum 300, count 4, 300 / 4 = 75.0. The average mark is 75."
+    },
+    {
+      "id": "u62l09e02",
+      "type": "multipleChoice",
+      "prompt": "REVIEW (max): biggest of [60, 70, 80, 90]?",
+      "options": [
+        "90",
+        "60",
+        "300",
+        "4"
+      ],
+      "answer": 0,
+      "explanation": "90 is the biggest. (The average, 75, is lower — it accounts for all the marks.)"
+    },
+    {
+      "id": "u62l09e03",
+      "type": "multipleChoice",
+      "prompt": "Predict:\n\nnums = []\ncount = len(nums)\nif count == 0:\n    print(\"empty\")\nelse:\n    print(sum(nums) / count)",
+      "options": [
+        "empty",
+        "0.0",
+        "An error",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "count is 0, so the guard prints 'empty'. The divide is skipped — no crash."
+    },
+    {
+      "id": "u62l09e04",
+      "type": "trueFalse",
+      "prompt": "You can find the total, the biggest, the smallest, and the average of the same list, each with its own step.",
+      "answer": true,
+      "explanation": "Each tool keeps its own result. The average additionally combines the sum and the count."
+    },
+    {
+      "id": "u62l09e05",
+      "type": "orderBlocks",
+      "prompt": "Arrange the safe-average steps for a list called data.",
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "blocks": [
+        "count = len(data)",
+        "if count == 0:",
+        "    print(\"No data\")",
+        "else:",
+        "    total = 0",
+        "    for d in data:",
+        "        total = total + d",
+        "    print(total / count)"
+      ],
+      "explanation": "Count, guard, else sum-and-divide. The guard sits before the divide every time."
+    },
+    {
+      "id": "u62l09e06",
+      "type": "multipleChoice",
+      "prompt": "REVIEW (count): how many of [60, 70, 80, 90] are at least 75?",
+      "options": [
+        "2",
+        "1",
+        "3",
+        "4"
+      ],
+      "answer": 0,
+      "explanation": "80 and 90 are 75 or more — a count of 2. (Different question from the average.)"
+    },
+    {
+      "id": "u62l09e07",
+      "type": "multipleChoice",
+      "prompt": "Spot the bug:\n\ncount = len(nums)\naverage = total / count\nif count == 0:\n    print(\"No average\")",
+      "options": [
+        "The divide runs BEFORE the guard, so an empty list still crashes",
+        "The guard uses the wrong sign",
+        "len() is wrong",
+        "There is no bug"
+      ],
+      "answer": 0,
+      "explanation": "The guard must come FIRST. Here the division on line 2 crashes before the check on line 3 can help."
+    },
+    {
+      "id": "u62l09e08",
+      "type": "multipleChoice",
+      "prompt": "Predict:\n\nnums = [5]\nprint(sum(nums) / len(nums))",
+      "options": [
+        "5.0",
+        "1",
+        "0",
+        "No average"
+      ],
+      "answer": 0,
+      "explanation": "Sum 5, count 1, 5 / 1 = 5.0. One item is safe — count is 1, not 0."
+    },
+    {
+      "id": "u62l09e09",
+      "type": "multiSelect",
+      "prompt": "Which lines belong in a correct safe-average? (pick all)",
+      "options": [
+        "count = len(nums)",
+        "if count == 0:",
+        "average = total / count (inside else)",
+        "best = nums[0]"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "The first three build the guarded average. 'best = nums[0]' is the max/min start, not part of an average."
+    },
+    {
+      "id": "u62l09e10",
+      "type": "multipleChoice",
+      "prompt": "You read 'the mean temperature this week'. Which tool, and what must you guard?",
+      "options": [
+        "Average; guard the empty week (no readings)",
+        "Max; no guard",
+        "Count; guard negatives",
+        "Sum; guard zeros"
+      ],
+      "answer": 0,
+      "explanation": "'Mean' is an average. The guard protects against a week with no readings (count 0)."
+    }
+  ]
+}

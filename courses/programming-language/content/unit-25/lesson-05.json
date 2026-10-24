@@ -1,0 +1,132 @@
+{
+  "unitId": "u25",
+  "lessonId": "u25l05",
+  "title": "elif versus separate ifs",
+  "idea": "A chain picks one winner; separate ifs can each fire. See why that difference matters for classifying. Thinking-heavy.",
+  "exercises": [
+    {
+      "id": "u25l05e01",
+      "type": "multipleChoice",
+      "prompt": "What does this print?\n\nscore = 95\nif score >= 80:\n    print(\"B or better\")\nif score >= 90:\n    print(\"A\")",
+      "options": [
+        "B or better\nA (both lines)",
+        "A only",
+        "B or better only",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "These are TWO separate ifs, so both tests run. 95 passes both, printing two lines - often not what you want."
+    },
+    {
+      "id": "u25l05e02",
+      "type": "multipleChoice",
+      "prompt": "Now with elif:\n\nscore = 95\nif score >= 90:\n    print(\"A\")\nelif score >= 80:\n    print(\"B\")",
+      "options": [
+        "A only",
+        "A\nB",
+        "B only",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "elif chains them: the first match (A) wins and the elif is skipped. Exactly one line prints."
+    },
+    {
+      "id": "u25l05e03",
+      "type": "trueFalse",
+      "prompt": "Separate ifs each test independently, so more than one can run.",
+      "answer": true,
+      "explanation": "Yes - without elif, each if is its own decision and any number of them can fire."
+    },
+    {
+      "id": "u25l05e04",
+      "type": "trueFalse",
+      "prompt": "An if/elif chain lets at most one branch run.",
+      "answer": true,
+      "explanation": "Right - a chain stops at the first True, so exactly one (or zero, if no else) branch runs."
+    },
+    {
+      "id": "u25l05e05",
+      "type": "multipleChoice",
+      "prompt": "You want to put a score into ONE grade bucket. Which structure is correct?",
+      "options": [
+        "if / elif / else chain",
+        "several separate ifs",
+        "no structure",
+        "only one if"
+      ],
+      "answer": 0,
+      "explanation": "A single bucket means one winner - that is exactly what an if/elif/else chain guarantees."
+    },
+    {
+      "id": "u25l05e06",
+      "type": "multipleChoice",
+      "prompt": "When might separate ifs be the RIGHT choice?",
+      "options": [
+        "When several independent things can each be true at once",
+        "Never",
+        "Only for grades",
+        "Only with else"
+      ],
+      "answer": 0,
+      "explanation": "If conditions are independent (e.g. 'has coupon' and 'is member'), separate ifs let each act on its own."
+    },
+    {
+      "id": "u25l05e07",
+      "type": "multipleChoice",
+      "prompt": "A bug: a grade program prints both 'B' and 'A' for a 95. Likely cause?",
+      "options": [
+        "Two separate ifs were used instead of an elif chain",
+        "The score is wrong",
+        "elif is broken",
+        "95 is not a number"
+      ],
+      "answer": 0,
+      "explanation": "Separate ifs both fired. Chaining them with elif makes only the first match print."
+    },
+    {
+      "id": "u25l05e08",
+      "type": "orderBlocks",
+      "prompt": "Arrange a correct one-winner chain for 90/80/else.",
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "blocks": [
+        "if score >= 90:",
+        "    print(\"A\")",
+        "elif score >= 80:",
+        "    print(\"B\")",
+        "else:",
+        "    print(\"C\")"
+      ],
+      "explanation": "if then elif then else makes exactly one grade print. That is the fix for the double-print bug."
+    },
+    {
+      "id": "u25l05e09",
+      "type": "fillBlank",
+      "prompt": "Change the second if into a chained branch:\n\nif score >= 90:\n    print(\"A\")\n____ score >= 80:\n    print(\"B\")",
+      "answer": "elif",
+      "acceptable": [
+        "elif"
+      ],
+      "explanation": "Replacing the second 'if' with 'elif' links the tests so only the first match prints."
+    },
+    {
+      "id": "u25l05e10",
+      "type": "multipleChoice",
+      "prompt": "The core difference is...",
+      "options": [
+        "elif = one winner; separate ifs = each can fire",
+        "they are identical",
+        "elif is slower",
+        "separate ifs are illegal"
+      ],
+      "answer": 0,
+      "explanation": "Pick a chain when exactly one outcome should win; pick separate ifs when truly independent things can each happen."
+    }
+  ]
+}

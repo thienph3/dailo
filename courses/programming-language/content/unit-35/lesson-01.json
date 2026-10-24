@@ -1,0 +1,127 @@
+{
+  "unitId": "u35",
+  "lessonId": "u35l01",
+  "title": "When a problem says 'do it again'",
+  "idea": "Some problems ask you to do the same thing more than once. Spotting that repetition is the whole idea — no code yet.",
+  "exercises": [
+    {
+      "id": "u35l01e01",
+      "type": "multipleChoice",
+      "prompt": "You want to say 'Hello' to 5 friends. What is the same each time?",
+      "options": [
+        "The action: say 'Hello'",
+        "The friend's height",
+        "The time of day",
+        "Nothing is the same"
+      ],
+      "answer": 0,
+      "explanation": "The same action — saying 'Hello' — happens again and again. Noticing the repeated action is the first step."
+    },
+    {
+      "id": "u35l01e02",
+      "type": "trueFalse",
+      "prompt": "Doing the same step over and over is called repetition.",
+      "answer": true,
+      "explanation": "Repetition just means doing something again and again. Programs do this a lot, and this lap is all about it."
+    },
+    {
+      "id": "u35l01e03",
+      "type": "multipleChoice",
+      "prompt": "Which everyday task is MOST about repetition?",
+      "options": [
+        "Washing each plate in a stack of plates",
+        "Choosing one shirt to wear",
+        "Deciding if it is raining",
+        "Writing your own name once"
+      ],
+      "answer": 0,
+      "explanation": "A stack of plates means doing the same wash step for each plate — that is repetition. The others happen just once."
+    },
+    {
+      "id": "u35l01e04",
+      "type": "multipleChoice",
+      "prompt": "A problem says: 'Clap 3 times.' How many times is the clap repeated?",
+      "options": [
+        "3 times",
+        "1 time",
+        "Forever",
+        "0 times"
+      ],
+      "answer": 0,
+      "explanation": "The clap action repeats exactly 3 times. Reading how many times is just as important as spotting the action."
+    },
+    {
+      "id": "u35l01e05",
+      "type": "trueFalse",
+      "prompt": "If you catch yourself writing the same instruction many times, repetition might help.",
+      "answer": true,
+      "explanation": "Copying the same line over and over is a clue. Later you'll learn a tool that repeats it for you."
+    },
+    {
+      "id": "u35l01e06",
+      "type": "multipleChoice",
+      "prompt": "Which of these is the REPEATED action here: 'Print a star, then print a star, then print a star'?",
+      "options": [
+        "Print a star",
+        "Print three",
+        "Count to three",
+        "Stop"
+      ],
+      "answer": 0,
+      "explanation": "The one action that keeps coming back is 'print a star'. It is done three times."
+    },
+    {
+      "id": "u35l01e07",
+      "type": "matchPairs",
+      "prompt": "Match each task to how many times its action repeats.",
+      "pairs": [
+        {
+          "left": "Knock on the door twice",
+          "right": "2 times"
+        },
+        {
+          "left": "Blink once",
+          "right": "1 time"
+        },
+        {
+          "left": "Count out loud 1 to 4",
+          "right": "4 times"
+        }
+      ],
+      "explanation": "Reading a problem for its repeated action and its count is exactly what this unit practices."
+    },
+    {
+      "id": "u35l01e08",
+      "type": "multipleChoice",
+      "prompt": "Why is spotting repetition useful BEFORE you write any code?",
+      "options": [
+        "It tells you a step will be done many times, so you plan it once",
+        "It makes the problem longer",
+        "It means you can skip the problem",
+        "It changes the answer"
+      ],
+      "answer": 0,
+      "explanation": "Once you see a step repeats, you plan that single step carefully — then let it run many times."
+    },
+    {
+      "id": "u35l01e09",
+      "type": "trueFalse",
+      "prompt": "Every problem in the world is about repetition.",
+      "answer": false,
+      "explanation": "Not at all. Many problems happen once. Repetition is just one shape of problem — the one we study now."
+    },
+    {
+      "id": "u35l01e10",
+      "type": "multipleChoice",
+      "prompt": "A sign says: 'Water each of the 6 plants.' What repeats, and how many times?",
+      "options": [
+        "The action 'water a plant', 6 times",
+        "The action 'count plants', once",
+        "Nothing repeats",
+        "The action 'water a plant', 1 time"
+      ],
+      "answer": 0,
+      "explanation": "Same action for each plant, six plants — so the watering step repeats 6 times. You're reading repetition like a pro."
+    }
+  ]
+}

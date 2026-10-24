@@ -1,0 +1,136 @@
+{
+  "unitId": "u33",
+  "lessonId": "u33l09",
+  "title": "Fix it together: used before it was asked",
+  "idea": "GUIDED PROBLEM via UEPCC, bug-focused. The code prints the greeting before asking the name, so the variable does not exist yet. Fix the line order.",
+  "problem": "A greeter should ask a name then greet, but it tries to greet first. The code is: print(\"Hello, \" + name) / name = input(\"Name: \"). Fix the order.",
+  "exercises": [
+    {
+      "id": "u33l09e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "BROKEN: 'print(\"Hello, \" + name)' comes BEFORE 'name = input(...)'.\n\nUnderstand. What goes wrong when you use a variable before it is set?",
+      "options": [
+        "name does not exist yet, so the program errors on that line",
+        "It prints an empty name",
+        "It asks twice",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "You cannot use a value before you have created it. Using name before the input line is the bug."
+    },
+    {
+      "id": "u33l09e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "Understand the dependency. The greeting NEEDS name. So the asking must happen...",
+      "options": [
+        "Before the greeting",
+        "After the greeting",
+        "At the same time",
+        "It does not matter"
+      ],
+      "answer": 0,
+      "explanation": "A step that produces a value must come before the step that uses it. Ask first, then greet."
+    },
+    {
+      "id": "u33l09e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example by hand. Reading top to bottom, what does the computer hit first in the broken code?",
+      "options": [
+        "The print that uses name, before name has any value",
+        "The input line",
+        "An empty screen",
+        "The end"
+      ],
+      "answer": 0,
+      "explanation": "Lines run top to bottom. The print runs first and needs name, which is not defined yet. That is the failing step."
+    },
+    {
+      "id": "u33l09e04",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "What SHOULD happen, in order, when the program is correct?",
+      "options": [
+        "Ask for the name, store it, then print the greeting using it",
+        "Print the greeting, then ask",
+        "Ask twice, then print",
+        "Only print"
+      ],
+      "answer": 0,
+      "explanation": "The right sequence is ask, store, use. That order is the expected behavior to aim for."
+    },
+    {
+      "id": "u33l09e05",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Plan the fix. What change is needed?",
+      "options": [
+        "Swap the two lines so the input comes first",
+        "Add int()",
+        "Change + to ==",
+        "Remove the print"
+      ],
+      "answer": 0,
+      "explanation": "No code is wrong, only the order. Put the input line first so name exists before the greeting uses it."
+    },
+    {
+      "id": "u33l09e06",
+      "type": "trueFalse",
+      "uepcc": "P",
+      "prompt": "A variable must be given a value before any line that uses it.",
+      "answer": true,
+      "explanation": "This is the ask-before-use rule. Create the value first, then read it later."
+    },
+    {
+      "id": "u33l09e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Arrange the two lines in the correct order.",
+      "blocks": [
+        "print(\"Hello, \" + name)",
+        "name = input(\"Name: \")"
+      ],
+      "answer": [1, 0],
+      "explanation": "Ask first (input), then use the answer (print). Correct order is the whole fix."
+    },
+    {
+      "id": "u33l09e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Fill the tool on the line that must come FIRST:\n\nname = ____(\"Name: \")\nprint(\"Hello, \" + name)",
+      "answer": "input",
+      "acceptable": ["input"],
+      "explanation": "input() asks and stores the name, and it must run before the greeting that uses name."
+    },
+    {
+      "id": "u33l09e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check. Run the fixed code and type Mia. What happens now?",
+      "options": [
+        "It asks the name, then prints 'Hello, Mia'",
+        "It errors before asking",
+        "It prints nothing",
+        "It asks twice"
+      ],
+      "answer": 0,
+      "explanation": "With the input first, name holds 'Mia' before the greeting runs. The order fix works."
+    },
+    {
+      "id": "u33l09e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Re-check with a new name: type Sam. What prints?",
+      "options": [
+        "Hello, Sam",
+        "Hello, Mia",
+        "An error",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "name now holds 'Sam', so 'Hello, Sam'. The reordered code works for any name."
+    }
+  ]
+}

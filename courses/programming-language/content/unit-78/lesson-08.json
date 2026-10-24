@@ -1,0 +1,144 @@
+{
+  "unitId": "u78",
+  "lessonId": "u78l08",
+  "title": "Mixed review: helpers, loops, lists",
+  "idea": "TOOL. Mixed review: helpers-in-loops alongside range, scope, filter, and lists.",
+  "exercises": [
+    {
+      "type": "multipleChoice",
+      "prompt": "REVIEW (loop + range): for i in range(3) prints i as...",
+      "options": [
+        "0, 1, 2",
+        "1, 2, 3",
+        "3",
+        "0, 1, 2, 3"
+      ],
+      "answer": 0,
+      "explanation": "range(3) is 0,1,2.",
+      "id": "u78l08e01"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "HELPER-IN-LOOP: total of each item's double for [2, 3]:",
+      "options": [
+        "10",
+        "5",
+        "6",
+        "error"
+      ],
+      "answer": 0,
+      "explanation": "4 + 6 = 10.",
+      "id": "u78l08e02"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Predict:\n\ndef half(n):\n    return n / 2\n\nfor n in [8, 2]:\n    print(half(n))",
+      "options": [
+        "4.0, 1.0",
+        "8, 2",
+        "4, 1",
+        "error"
+      ],
+      "answer": 0,
+      "explanation": "half(8)=4.0, half(2)=1.0.",
+      "id": "u78l08e03"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "REVIEW (scope): a helper's private variable vanishes when the call ends.",
+      "answer": true,
+      "explanation": "Each call is fresh and private.",
+      "id": "u78l08e04"
+    },
+    {
+      "type": "orderBlocks",
+      "prompt": "Arrange: count items equal to 0 using a helper is_zero.",
+      "blocks": [
+        "def is_zero(n):",
+        "    return n == 0",
+        "count = 0",
+        "for n in [0, 3, 0]:",
+        "    if is_zero(n):",
+        "        count = count + 1",
+        "print(count)"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "explanation": "Two zeros; count 2.",
+      "id": "u78l08e05"
+    },
+    {
+      "type": "fillBlank",
+      "prompt": "REVIEW: accumulate each helper result:\n\ntotal = total + ____(n)\n\n(helper is square)",
+      "answer": "square",
+      "acceptable": [
+        "square"
+      ],
+      "explanation": "Add square(n) each loop.",
+      "id": "u78l08e06"
+    },
+    {
+      "type": "multiSelect",
+      "prompt": "In scope for this unit? (choose all)",
+      "options": [
+        "def + return",
+        "a helper inside a loop",
+        "append and len()",
+        "sorted()"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "First three in scope; sorted() is a banned builtin.",
+      "id": "u78l08e07"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "REVIEW (filter + helper): add n only when is_big(n) is True builds a...",
+      "options": [
+        "filtered total",
+        "sorted list",
+        "random list",
+        "single number always 0"
+      ],
+      "answer": 0,
+      "explanation": "Filter with the helper, accumulate the kept items.",
+      "id": "u78l08e08"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Predict:\n\ndef add2(n):\n    return n + 2\n\nout = []\nfor n in [1, 5]:\n    out.append(add2(n))\nprint(out)",
+      "options": [
+        "[3, 7]",
+        "[1, 5]",
+        "[2]",
+        "error"
+      ],
+      "answer": 0,
+      "explanation": "3 and 7 appended.",
+      "id": "u78l08e09"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Why helpers-in-loops matter:",
+      "options": [
+        "They apply one tested job to every item cleanly",
+        "they slow loops",
+        "they replace lists",
+        "they need builtins"
+      ],
+      "answer": 0,
+      "explanation": "One job, applied to all items, readable and reusable.",
+      "id": "u78l08e10"
+    }
+  ]
+}

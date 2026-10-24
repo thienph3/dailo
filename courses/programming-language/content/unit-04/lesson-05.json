@@ -1,0 +1,117 @@
+{
+  "unitId": "u04",
+  "lessonId": "u04l05",
+  "title": "Writing the expected lines by hand",
+  "idea": "When a task shows several things, your example lists every line that should appear, in order.",
+  "exercises": [
+    {
+      "id": "u04l05e01",
+      "type": "multipleChoice",
+      "prompt": "Task: 'show Hello on one line, then Bye on the next'. How many lines in the expected output?",
+      "options": [
+        "2",
+        "1",
+        "3",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "Two things shown on separate lines means two lines of output: Hello, then Bye."
+    },
+    {
+      "id": "u04l05e02",
+      "type": "orderBlocks",
+      "prompt": "Task: 'show Red, then Green, then Blue'. Put the expected output lines in order.",
+      "blocks": [
+        "Red",
+        "Green",
+        "Blue"
+      ],
+      "answer": [0, 1, 2],
+      "explanation": "The task lists Red, then Green, then Blue — so the output lines come in that exact order."
+    },
+    {
+      "id": "u04l05e03",
+      "type": "trueFalse",
+      "prompt": "When writing a multi-line example by hand, the order of the lines matters.",
+      "answer": true,
+      "explanation": "Output appears top to bottom, in order. Your example must list the lines in the same order the task asks."
+    },
+    {
+      "id": "u04l05e04",
+      "type": "multipleChoice",
+      "prompt": "Task: 'show One, then Two'. Which hand-worked example is correct?",
+      "options": [
+        "Line 1: One, Line 2: Two",
+        "Line 1: Two, Line 2: One",
+        "Line 1: One Two (together)",
+        "Line 1: One"
+      ],
+      "answer": 0,
+      "explanation": "Two lines, in the order given: One first, Two second. Not swapped, not squished together, not missing one."
+    },
+    {
+      "id": "u04l05e05",
+      "type": "multiSelect",
+      "prompt": "Task: 'show Cat, then Dog'. Which examples are WRONG? (pick all)",
+      "options": [
+        "Line 1: Dog, Line 2: Cat",
+        "Line 1: Cat, Line 2: Dog",
+        "Line 1: Cat only",
+        "Line 1: CatDog (one line)"
+      ],
+      "answer": [0, 2, 3],
+      "explanation": "Only 'Cat then Dog' on two lines is right. Swapped, missing a line, or squished onto one line are all wrong."
+    },
+    {
+      "id": "u04l05e06",
+      "type": "matchPairs",
+      "prompt": "Match each task to how many output lines it should have.",
+      "pairs": [
+        { "left": "Show Apple", "right": "1 line" },
+        { "left": "Show Apple, then Pear", "right": "2 lines" },
+        { "left": "Show A, then B, then C", "right": "3 lines" }
+      ],
+      "explanation": "Each separate thing shown on its own line is one line of output. Count the things, count the lines."
+    },
+    {
+      "id": "u04l05e07",
+      "type": "fillBlank",
+      "prompt": "Task: 'show Hi, then Yo'. How many lines are in the expected output? Write the number.",
+      "answer": "2",
+      "acceptable": ["2", "two"],
+      "explanation": "Two separate lines: Hi on the first, Yo on the second."
+    },
+    {
+      "id": "u04l05e08",
+      "type": "trueFalse",
+      "prompt": "A multi-line example is just a list of the lines you expect to see, top to bottom.",
+      "answer": true,
+      "explanation": "Exactly. You write down each line in order, and that's your target for the code to match."
+    },
+    {
+      "id": "u04l05e09",
+      "type": "orderBlocks",
+      "prompt": "Task: 'show the countdown Three, Two, One'. Put the expected lines in order.",
+      "blocks": [
+        "Three",
+        "Two",
+        "One"
+      ],
+      "answer": [0, 1, 2],
+      "explanation": "A countdown goes Three, Two, One — your example lists the lines in that same order."
+    },
+    {
+      "id": "u04l05e10",
+      "type": "multipleChoice",
+      "prompt": "Why write every expected line by hand instead of just the first?",
+      "options": [
+        "So you can check the WHOLE output, not just the start",
+        "To use more paper",
+        "Because the first line doesn't matter",
+        "To confuse the computer"
+      ],
+      "answer": 0,
+      "explanation": "If you only write line one, you can't catch a mistake on line two. Write them all to check everything."
+    }
+  ]
+}

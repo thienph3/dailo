@@ -1,0 +1,124 @@
+{
+  "unitId": "u53",
+  "lessonId": "u53l01",
+  "title": "How many are in there?",
+  "idea": "MEET-style opener for the len() unit: many problems depend on how many items a list has. Thinking first, then the tool arrives next lesson.",
+  "exercises": [
+    {
+      "id": "u53l01e01",
+      "type": "multipleChoice",
+      "prompt": "Some problems need to know HOW MANY items a list has. Which of these needs a count?",
+      "options": [
+        "How many students signed up",
+        "The first student's name",
+        "Whether the list is a list",
+        "The color of the screen"
+      ],
+      "answer": 0,
+      "explanation": "'How many signed up' is a count of the items in the list. Lots of problems hinge on that number."
+    },
+    {
+      "id": "u53l01e02",
+      "type": "multipleChoice",
+      "prompt": "Just by looking, how many items are in [7, 7, 2, 9]?",
+      "options": [
+        "4",
+        "3",
+        "9",
+        "25"
+      ],
+      "answer": 0,
+      "explanation": "Count the values: 7, 7, 2, 9 — four items. Repeated values still count separately."
+    },
+    {
+      "id": "u53l01e03",
+      "type": "trueFalse",
+      "prompt": "The count of items in a list can be different from the values inside it.",
+      "answer": true,
+      "explanation": "[100, 200] has only 2 items, even though the values are big. Count means how MANY, not how large."
+    },
+    {
+      "id": "u53l01e04",
+      "type": "multiSelect",
+      "prompt": "Which questions are really asking for the COUNT of a list (pick all)?",
+      "options": [
+        "How many prices are in the cart?",
+        "How many players joined?",
+        "What is the first price?",
+        "What is the last player's name?"
+      ],
+      "answer": [0, 1],
+      "explanation": "'How many' questions want the count. 'First price' and 'last name' want a single item by position, which is indexing."
+    },
+    {
+      "id": "u53l01e05",
+      "type": "multipleChoice",
+      "prompt": "How many items are in the empty list []?",
+      "options": [
+        "0",
+        "1",
+        "It has no count",
+        "Empty lists aren't allowed"
+      ],
+      "answer": 0,
+      "explanation": "An empty list has 0 items. Zero is a perfectly good count, and it matters for 'nothing yet' problems."
+    },
+    {
+      "id": "u53l01e06",
+      "type": "matchPairs",
+      "prompt": "Match each list to how many items it holds.",
+      "pairs": [
+        { "left": "[5]", "right": "1" },
+        { "left": "[5, 6, 7]", "right": "3" },
+        { "left": "[]", "right": "0" }
+      ],
+      "explanation": "Count the items between the brackets. One, three, or none — the count is just how many."
+    },
+    {
+      "id": "u53l01e07",
+      "type": "multipleChoice",
+      "prompt": "Why might knowing the count matter before you pick items by position?",
+      "options": [
+        "It tells you which positions actually exist",
+        "It sorts the list",
+        "It deletes the list",
+        "It never matters"
+      ],
+      "answer": 0,
+      "explanation": "A list of 3 items has positions 0, 1, 2 — the count sets the boundary. Knowing the count stops you asking for a spot that isn't there."
+    },
+    {
+      "id": "u53l01e08",
+      "type": "trueFalse",
+      "prompt": "Counting items by eye gets hard for a very long list.",
+      "answer": true,
+      "explanation": "For 2 items it's easy; for 2000 it's hopeless by hand. That's why we want the computer to count for us — coming next lesson."
+    },
+    {
+      "id": "u53l01e09",
+      "type": "multipleChoice",
+      "prompt": "Which phrase signals you need the count of a list?",
+      "options": [
+        "'how many'",
+        "'the first'",
+        "'the last'",
+        "'in order'"
+      ],
+      "answer": 0,
+      "explanation": "'How many' is the count question. 'First' and 'last' are position questions you already solved with indexing."
+    },
+    {
+      "id": "u53l01e10",
+      "type": "multipleChoice",
+      "prompt": "This unit adds a tool for counting. What do you expect it to give back?",
+      "options": [
+        "A single number: how many items",
+        "The whole list again",
+        "The first item",
+        "A yes/no answer"
+      ],
+      "answer": 0,
+      "explanation": "The counting tool hands back one number — the item count. Next lesson you meet it: len()."
+    }
+  ]
+}

@@ -1,0 +1,145 @@
+{
+  "unitId": "u33",
+  "lessonId": "u33l03",
+  "title": "Fix it: and that should be or",
+  "idea": "GUIDED BUG. A weekend test uses 'and', so it is never true. Fix the joiner.",
+  "problem": "Rule: 'Weekend' if the day is Saturday or Sunday. Broken: if day == 'Saturday' and day == 'Sunday': print('Weekend') else: print('Weekday').",
+  "exercises": [
+    {
+      "id": "u33l03e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: 'Weekend' for Saturday or Sunday, else 'Weekday'.\n\nWhat is the OUTPUT?",
+      "options": [
+        "'Weekend' or 'Weekday'",
+        "The day number",
+        "A count",
+        "Always 'Weekend'"
+      ],
+      "answer": 0,
+      "explanation": "One of two labels based on a day name. We will compare the typed word."
+    },
+    {
+      "id": "u33l03e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "Can a single day equal BOTH 'Saturday' and 'Sunday' at once?",
+      "options": [
+        "No, a day is only one word",
+        "Yes, sometimes",
+        "Only on holidays",
+        "Only if typed twice"
+      ],
+      "answer": 0,
+      "explanation": "No. A day is one word. So 'and' (both true) can never hold — that is the clue."
+    },
+    {
+      "id": "u33l03e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Work it by hand: day = Saturday. The CORRECT answer is?",
+      "options": [
+        "Weekend",
+        "Weekday",
+        "Saturday",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "Saturday is a weekend day, so 'Weekend'. Check value."
+    },
+    {
+      "id": "u33l03e04",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Run the BROKEN code with day = Saturday (uses 'and'). What prints?",
+      "options": [
+        "Weekday (wrong)",
+        "Weekend",
+        "Saturday",
+        "an error"
+      ],
+      "answer": 0,
+      "explanation": "day == 'Saturday' is True but day == 'Sunday' is False, so 'and' is False -> 'Weekday'. Wrong. Bug confirmed."
+    },
+    {
+      "id": "u33l03e05",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Plan the fix: which joiner means 'either day counts'?",
+      "options": [
+        "or",
+        "and",
+        "not",
+        "=="
+      ],
+      "answer": 0,
+      "explanation": "'or' is true when either side is true — exactly what 'Saturday or Sunday' needs."
+    },
+    {
+      "id": "u33l03e06",
+      "type": "trueFalse",
+      "uepcc": "P",
+      "prompt": "'and' needs both sides true; 'or' needs just one.",
+      "answer": true,
+      "explanation": "True. That difference is the whole fix: swap 'and' for 'or'."
+    },
+    {
+      "id": "u33l03e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Arrange the FIXED code.",
+      "blocks": [
+        "if day == \"Saturday\" or day == \"Sunday\":",
+        "    print(\"Weekend\")",
+        "else:",
+        "    print(\"Weekday\")"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "Join the two day comparisons with 'or' so either weekend day triggers 'Weekend'."
+    },
+    {
+      "id": "u33l03e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Write the fixed joiner:\n\nif day == \"Saturday\" ____ day == \"Sunday\":\n    print(\"Weekend\")\nelse:\n    print(\"Weekday\")",
+      "answer": "or",
+      "acceptable": [
+        "or"
+      ],
+      "explanation": "'or' makes the condition true if either comparison is true."
+    },
+    {
+      "id": "u33l03e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check with the fix: day = Saturday. What prints?",
+      "options": [
+        "Weekend",
+        "Weekday",
+        "Saturday",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "The left side is True, so 'or' is True -> 'Weekend'. Matches the hand answer. Fixed."
+    },
+    {
+      "id": "u33l03e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Re-check a fresh value: day = Tuesday. What prints?",
+      "options": [
+        "Weekday",
+        "Weekend",
+        "Tuesday",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "Neither side is True, so 'or' is False -> 'Weekday'. Correct for a weekday."
+    }
+  ]
+}

@@ -1,0 +1,125 @@
+{
+  "unitId": "u18",
+  "lessonId": "u18l05",
+  "title": "Loop back: group with parentheses",
+  "idea": "REVIEW. A two-step compute where parentheses change the answer. Interleaves + * with precedence/grouping from Lap 1.",
+  "problem": "A shop sells 2 apples at 3 each and 4 bananas at 2 each. Report the total cost of all the fruit.",
+  "exercises": [
+    {
+      "id": "u18l05e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: 2 apples at 3 each, 4 bananas at 2 each. Report the total cost.\n\nWhat is the OUTPUT?",
+      "options": [
+        "The total cost of all fruit",
+        "The apple price only",
+        "The number of bananas",
+        "The word fruit"
+      ],
+      "answer": 0,
+      "explanation": "Output = total cost of everything. Name it first."
+    },
+    {
+      "id": "u18l05e02",
+      "type": "multiSelect",
+      "uepcc": "U",
+      "prompt": "What are the INPUTS? Pick all four — the value-mapping rule says each number is its own named variable.",
+      "options": [
+        "apple_count (2)",
+        "apple_price (3)",
+        "banana_count (4)",
+        "banana_price (2)"
+      ],
+      "answer": [0, 1, 2, 3],
+      "explanation": "Four numbers, four named variables. Nothing hardcoded, nothing dropped."
+    },
+    {
+      "id": "u18l05e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example by hand. Apples: 2*3 = 6. Bananas: 4*2 = 8. Total?",
+      "options": ["14", "6", "8", "22"],
+      "answer": 0,
+      "explanation": "6 + 8 = 14. Your check value is 14."
+    },
+    {
+      "id": "u18l05e04",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Plan. Which reads clearest and computes each fruit's cost before adding?",
+      "options": [
+        "total = (apple_count * apple_price) + (banana_count * banana_price)",
+        "total = apple_count * apple_price + banana_count + banana_price",
+        "total = apple_count + apple_price * banana_count + banana_price",
+        "total = apple_count * (apple_price + banana_count) * banana_price"
+      ],
+      "answer": 0,
+      "explanation": "Parentheses group each fruit's cost, making the intent crystal clear. It also matches how you worked the example."
+    },
+    {
+      "id": "u18l05e05",
+      "type": "trueFalse",
+      "uepcc": "P",
+      "prompt": "In 2 + 3 * 4, the multiplication happens first, giving 14 — not 20.",
+      "answer": true,
+      "explanation": "* binds tighter than +, so 3*4 happens first. Parentheses let you override that order when you need to."
+    },
+    {
+      "id": "u18l05e06",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code it. Arrange the lines (store four values, compute, report).",
+      "blocks": [
+        "apple_count = 2",
+        "apple_price = 3",
+        "banana_count = 4",
+        "banana_price = 2",
+        "total = (apple_count * apple_price) + (banana_count * banana_price)",
+        "print(f\"Total: {total}\")"
+      ],
+      "answer": [0, 1, 2, 3, 4, 5],
+      "explanation": "Store all four inputs, compute the grouped total, then report. The code mirrors the example you worked."
+    },
+    {
+      "id": "u18l05e07",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Fill the blank so bananas are grouped correctly:\n\ntotal = (apple_count * apple_price) + (banana_count ____ banana_price)",
+      "answer": "*",
+      "acceptable": ["*"],
+      "explanation": "Banana cost is count times price, so *. The grouped total becomes 14."
+    },
+    {
+      "id": "u18l05e08",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "It prints 'Total: 14'. Your example said 14. Verdict?",
+      "options": ["Passes", "Fails", "Can't tell", "Change the example"],
+      "answer": 0,
+      "explanation": "Computed 14 matches the hand example 14 — correct."
+    },
+    {
+      "id": "u18l05e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "New inputs: apple_count = 3, apple_price = 2, banana_count = 1, banana_price = 5. What prints?",
+      "options": ["Total: 11", "Total: 14", "Total: 6", "Total: 5"],
+      "answer": 0,
+      "explanation": "(3*2) + (1*5) = 6 + 5 = 11. The grouped formula generalizes to fresh numbers."
+    },
+    {
+      "id": "u18l05e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "A friend wrote total = apple_count * apple_price + banana_count * banana_price (no parentheses). For the original numbers, what does it compute?",
+      "options": [
+        "14 — same answer, because * already happens before +",
+        "20 — parentheses were required here",
+        "0 — it crashes",
+        "6 — bananas are ignored"
+      ],
+      "answer": 0,
+      "explanation": "Because * binds tighter than +, both multiplications happen first anyway: 6 + 8 = 14. The parentheses add clarity, not a different result here."
+    }
+  ]
+}

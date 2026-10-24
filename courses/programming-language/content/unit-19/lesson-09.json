@@ -1,0 +1,139 @@
+{
+  "unitId": "u19",
+  "lessonId": "u19l09",
+  "title": "Showing a fact next to a label",
+  "idea": "We can print a yes/no fact beside a readable label, reusing print with multiple values and f-strings from earlier units. Review-heavy, applied to booleans.",
+  "exercises": [
+    {
+      "id": "u19l09e01",
+      "type": "multipleChoice",
+      "prompt": "What does this print?\n\nis_open = True\nprint(\"Open:\", is_open)",
+      "options": [
+        "Open: True",
+        "Open: is_open",
+        "Open:",
+        "True Open:"
+      ],
+      "answer": 0,
+      "explanation": "print with two values shows them side by side: the label 'Open:' and the boolean True."
+    },
+    {
+      "id": "u19l09e02",
+      "type": "multipleChoice",
+      "prompt": "What does this print?\n\npaid = False\nprint(\"Paid?\", paid)",
+      "options": [
+        "Paid? False",
+        "Paid? True",
+        "Paid?",
+        "False Paid?"
+      ],
+      "answer": 0,
+      "explanation": "The label 'Paid?' prints next to the boolean value False."
+    },
+    {
+      "id": "u19l09e03",
+      "type": "multipleChoice",
+      "prompt": "Using an f-string, what does this print?\n\nready = True\nprint(f\"Ready: {ready}\")",
+      "options": [
+        "Ready: True",
+        "Ready: {ready}",
+        "Ready: ready",
+        "True"
+      ],
+      "answer": 0,
+      "explanation": "The f-string drops the value of ready into the text, showing 'Ready: True'. (f-strings came from an earlier unit.)"
+    },
+    {
+      "id": "u19l09e04",
+      "type": "fillBlank",
+      "prompt": "Complete the f-string to show the fact:\n\ndone = False\nprint(f\"Done: {____}\")   # shows: Done: False",
+      "answer": "done",
+      "acceptable": [
+        "done"
+      ],
+      "explanation": "Put the variable name done inside the braces so its value, False, appears in the text."
+    },
+    {
+      "id": "u19l09e05",
+      "type": "orderBlocks",
+      "prompt": "Arrange: store that the alarm is set (yes), then show it with a label.",
+      "blocks": [
+        "print(\"Alarm set:\", alarm_set)",
+        "alarm_set = True"
+      ],
+      "answer": [
+        1,
+        0
+      ],
+      "explanation": "Store the fact first, then print it beside a label. The result is 'Alarm set: True'."
+    },
+    {
+      "id": "u19l09e06",
+      "type": "multipleChoice",
+      "prompt": "What appears?\n\nlocked = True\nlocked = False\nprint(\"Locked:\", locked)",
+      "options": [
+        "Locked: False",
+        "Locked: True",
+        "Locked:",
+        "an error"
+      ],
+      "answer": 0,
+      "explanation": "locked was updated to False, so the label shows the newest value: 'Locked: False'."
+    },
+    {
+      "id": "u19l09e07",
+      "type": "tapTokens",
+      "prompt": "Arrange the tokens to print a label and the boolean side by side.",
+      "tokens": [
+        "print",
+        "(",
+        "\"Won:\"",
+        ",",
+        "won",
+        ")"
+      ],
+      "answer": [
+        "print",
+        "(",
+        "\"Won:\"",
+        ",",
+        "won",
+        ")"
+      ],
+      "explanation": "print(\"Won:\", won) shows the label then the value of won. Commas put values side by side (an earlier-unit skill)."
+    },
+    {
+      "id": "u19l09e08",
+      "type": "trueFalse",
+      "prompt": "An f-string can show the value of a boolean variable inside text.",
+      "answer": true,
+      "explanation": "Yes - {variable} inside an f-string is replaced by that variable's value, boolean or not."
+    },
+    {
+      "id": "u19l09e09",
+      "type": "multipleChoice",
+      "prompt": "Two lines run:\n\nactive = True\nprint(f\"Active: {active}\")\n\nWhat shows?",
+      "options": [
+        "Active: True",
+        "Active: {active}",
+        "Active:",
+        "active"
+      ],
+      "answer": 0,
+      "explanation": "The f-string inserts active's value, so it prints 'Active: True'."
+    },
+    {
+      "id": "u19l09e10",
+      "type": "multipleChoice",
+      "prompt": "Why show a yes/no fact next to a label?",
+      "options": [
+        "So the output clearly says what the fact is about",
+        "Because booleans can't print alone",
+        "Because labels change the value",
+        "It makes no difference"
+      ],
+      "answer": 0,
+      "explanation": "A label like 'Open:' makes the output readable. On its own, a bare True tells you little about which fact it describes."
+    }
+  ]
+}

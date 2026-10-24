@@ -1,0 +1,135 @@
+{
+  "unitId": "u58",
+  "lessonId": "u58l07",
+  "title": "Count and total together",
+  "idea": "Keep a count and a total in the same loop — two accumulators, two purposes. Reviews the sum tool from u57.",
+  "exercises": [
+    {
+      "id": "u58l07e01",
+      "type": "multipleChoice",
+      "prompt": "nums = [10, 20, 30]\ntotal = 0\ncount = 0\nfor n in nums:\n    total = total + n\n    count = count + 1\nprint(total)\nprint(count)\n\nWhat two numbers print?",
+      "options": [
+        "60 then 3",
+        "3 then 60",
+        "60 then 60",
+        "30 then 3"
+      ],
+      "answer": 0,
+      "explanation": "total sums to 60; count adds 1 per item to 3. Two accumulators, two answers."
+    },
+    {
+      "id": "u58l07e02",
+      "type": "multipleChoice",
+      "prompt": "Can a single loop update two different variables?",
+      "options": [
+        "Yes — each accumulator has its own line in the body",
+        "No, only one per loop",
+        "Only if they are equal",
+        "Only with two loops"
+      ],
+      "answer": 0,
+      "explanation": "The body can do several steps per pass, including updating both a total and a count."
+    },
+    {
+      "id": "u58l07e03",
+      "type": "orderBlocks",
+      "prompt": "Arrange: in one loop, total the prices AND count them.",
+      "blocks": [
+        "    count = count + 1",
+        "    total = total + p",
+        "for p in prices:",
+        "count = 0",
+        "total = 0",
+        "prices = [5, 15]"
+      ],
+      "answer": [
+        5,
+        4,
+        3,
+        2,
+        1,
+        0
+      ],
+      "explanation": "Both start at 0 before the loop; inside, add the value to total and 1 to count. total 20, count 2."
+    },
+    {
+      "id": "u58l07e04",
+      "type": "multipleChoice",
+      "prompt": "nums = [4, 8, 2]\ntotal = 0\ncount = 0\nfor n in nums:\n    total = total + n\n    count = count + 1\nprint(count)\n\nWhat prints?",
+      "options": [
+        "3",
+        "14",
+        "2",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "count adds 1 per item over three items -> 3 (total would be 14, but we print count)."
+    },
+    {
+      "id": "u58l07e05",
+      "type": "trueFalse",
+      "prompt": "Both the total and the count must be initialised before the loop.",
+      "answer": true,
+      "explanation": "Each accumulator needs its own 0 start before the loop begins."
+    },
+    {
+      "id": "u58l07e06",
+      "type": "multipleChoice",
+      "prompt": "You want BOTH 'how many scores >= 50' and 'the sum of those scores'. Where do both updates go?",
+      "options": [
+        "Inside the same if, together",
+        "In two separate loops",
+        "Outside the loop",
+        "count inside, total outside"
+      ],
+      "answer": 0,
+      "explanation": "When both care about the same rule, put both the +1 and the += value inside that if."
+    },
+    {
+      "id": "u58l07e07",
+      "type": "multipleChoice",
+      "prompt": "scores = [40, 60, 80]\ntotal = 0\ncount = 0\nfor s in scores:\n    if s >= 50:\n        total = total + s\n        count = count + 1\nprint(count)\n\nWhat prints?",
+      "options": [
+        "2",
+        "3",
+        "140",
+        "1"
+      ],
+      "answer": 0,
+      "explanation": "60 and 80 pass, so count is 2 (total of those would be 140)."
+    },
+    {
+      "id": "u58l07e08",
+      "type": "multipleChoice",
+      "prompt": "In that same code, what does 'total' hold at the end?",
+      "options": [
+        "140 — the sum of the passing scores",
+        "180",
+        "2",
+        "60"
+      ],
+      "answer": 0,
+      "explanation": "Only passing scores 60 and 80 are summed: 140."
+    },
+    {
+      "id": "u58l07e09",
+      "type": "trueFalse",
+      "prompt": "Counting items while summing them is just two accumulators sharing one walk of the list.",
+      "answer": true,
+      "explanation": "One loop, two running results. Efficient and common."
+    },
+    {
+      "id": "u58l07e10",
+      "type": "multipleChoice",
+      "prompt": "Why keep count and total separate variables?",
+      "options": [
+        "They answer different questions: how many vs how much",
+        "They must be equal",
+        "One is faster",
+        "Python forbids sharing"
+      ],
+      "answer": 0,
+      "explanation": "Count answers 'how many', total answers 'how much'. Different purposes, different variables."
+    }
+  ]
+}

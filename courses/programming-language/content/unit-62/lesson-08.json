@@ -1,0 +1,130 @@
+{
+  "unitId": "u62",
+  "lessonId": "u62l08",
+  "title": "Tricky averages",
+  "idea": "TOOL: reason about empty lists, single items, zeros, and negatives for the average.",
+  "exercises": [
+    {
+      "id": "u62l08e01",
+      "type": "multipleChoice",
+      "prompt": "The average of an empty list [] should be...",
+      "options": [
+        "Reported as 'no average' — there is nothing to average",
+        "0.0",
+        "The biggest value",
+        "1"
+      ],
+      "answer": 0,
+      "explanation": "No items means no average. The guard reports that instead of crashing on 0 / 0."
+    },
+    {
+      "id": "u62l08e02",
+      "type": "multipleChoice",
+      "prompt": "The average of a one-item list [7] is...",
+      "options": [
+        "7.0",
+        "0",
+        "1",
+        "No average"
+      ],
+      "answer": 0,
+      "explanation": "Sum 7, count 1, 7 / 1 = 7.0. The average of a single value is that value — and count 1 is safe to divide by."
+    },
+    {
+      "id": "u62l08e03",
+      "type": "multipleChoice",
+      "prompt": "The average of [0, 0, 0] is...",
+      "options": [
+        "0.0 — safe, because the count is 3",
+        "A crash",
+        "No average",
+        "3"
+      ],
+      "answer": 0,
+      "explanation": "Sum 0, count 3, 0 / 3 = 0.0. Zeros in the list are fine; only an empty list divides by zero."
+    },
+    {
+      "id": "u62l08e04",
+      "type": "multipleChoice",
+      "prompt": "The average of [-4, 4] is...",
+      "options": [
+        "0.0",
+        "8.0",
+        "-4",
+        "4"
+      ],
+      "answer": 0,
+      "explanation": "Sum 0, count 2, 0 / 2 = 0.0. Averages handle negatives; they can balance to 0."
+    },
+    {
+      "id": "u62l08e05",
+      "type": "trueFalse",
+      "prompt": "A list full of zeros is safe to average, but a list with NO items is not (without a guard).",
+      "answer": true,
+      "explanation": "Count distinguishes them: [0,0,0] has count 3; [] has count 0. Only count 0 is the divide-by-zero danger."
+    },
+    {
+      "id": "u62l08e06",
+      "type": "multipleChoice",
+      "prompt": "The average of [10, 20] is 15.0, which is not in the list. Is that wrong?",
+      "options": [
+        "No — an average often lands between the values and need not be one of them",
+        "Yes — it must be a list value",
+        "Yes — it should be 10",
+        "Yes — it should be 20"
+      ],
+      "answer": 0,
+      "explanation": "15 is the fair middle of 10 and 20. Averages are shared-out values, frequently between the items."
+    },
+    {
+      "id": "u62l08e07",
+      "type": "multiSelect",
+      "prompt": "Which lists are SAFE to average without crashing? (pick all)",
+      "options": [
+        "[5]",
+        "[0, 0]",
+        "[-1, 1]",
+        "[]"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "The first three have counts 1, 2, 2. Only the empty list [] (count 0) would crash the divide."
+    },
+    {
+      "id": "u62l08e08",
+      "type": "multipleChoice",
+      "prompt": "You average monthly profits that can be negative. What does the guard protect against?",
+      "options": [
+        "A month with NO entries at all (empty), which would divide by zero",
+        "Negative profits",
+        "A total of zero",
+        "Large profits"
+      ],
+      "answer": 0,
+      "explanation": "Negatives and zero totals are fine. The guard only protects the empty (count 0) case."
+    },
+    {
+      "id": "u62l08e09",
+      "type": "trueFalse",
+      "prompt": "To be sure your average is safe, a good test is to run it on an empty list and confirm it does not crash.",
+      "answer": true,
+      "explanation": "The empty list is the edge case the guard exists for. Testing it proves the guard works."
+    },
+    {
+      "id": "u62l08e10",
+      "type": "multipleChoice",
+      "prompt": "The average of [3, 3, 4] is 10 / 3. Which is closest?",
+      "options": [
+        "About 3.33",
+        "3",
+        "4",
+        "10"
+      ],
+      "answer": 0,
+      "explanation": "10 / 3 is about 3.33 — a decimal between the values. / gives a float, so decimals are normal."
+    }
+  ]
+}

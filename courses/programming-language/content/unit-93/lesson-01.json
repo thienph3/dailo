@@ -1,0 +1,150 @@
+{
+  "unitId": "u93",
+  "lessonId": "u93l01",
+  "title": "Solve it together: total spent at the market",
+  "idea": "GUIDED INTEGRATED PROBLEM. Walk UEPCC over a problem that needs a list, a loop, and an accumulator woven together.",
+  "problem": "A shopper buys items with these prices: [4, 9, 2, 6]. Show the total amount spent.",
+  "exercises": [
+    {
+      "id": "u93l01e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: A shopper's basket has prices [4, 9, 2, 6]. Show the total spent.\n\nFirst — Understand. What is the OUTPUT (what must the program produce)?",
+      "explanation": "The output is the total, one number. Naming the output first keeps the whole solution aimed at the right target.",
+      "options": [
+        "One number: the sum of all the prices",
+        "The number of items",
+        "The most expensive item",
+        "Each price printed one by one"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u93l01e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "Still understanding. What is the INPUT you start with?",
+      "explanation": "The input is the list of four prices. Inputs + output frame every problem before any code.",
+      "options": [
+        "The list of prices [4, 9, 2, 6]",
+        "The single number 21",
+        "The word 'total'",
+        "Nothing — there is no input"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u93l01e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Next — Example. Work it BY HAND: 4 + 9 + 2 + 6 = ?",
+      "explanation": "4+9=13, +2=15, +6=21. This hand answer (21) becomes the value you check the code against later.",
+      "options": [
+        "21",
+        "19",
+        "25",
+        "12"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u93l01e04",
+      "type": "trueFalse",
+      "uepcc": "E",
+      "prompt": "Doing the sum by hand first is pointless because the computer will do it anyway.",
+      "explanation": "The opposite: the hand answer (21) is exactly how you'll KNOW the code is right. Always work one example first.",
+      "answer": false
+    },
+    {
+      "id": "u93l01e05",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Now — Plan. A total over a list needs a running total (accumulator). Order the plain-English steps.",
+      "explanation": "Start the total at 0, add each price as you walk the list, then show it. This is the accumulate pattern.",
+      "blocks": [
+        "Start a running total at 0",
+        "For each price, add it to the running total",
+        "Show the running total"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "id": "u93l01e06",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Your plan says 'add each price'. Which tool walks through every price in the list?",
+      "explanation": "A 'for each' loop visits every item. Pattern choice is the heart of planning — the loop drives the accumulate.",
+      "options": [
+        "A for-each loop over the list",
+        "A single if",
+        "Just one print",
+        "input()"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u93l01e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Now — Code. Arrange the lines to match your plan.",
+      "explanation": "Store the list, start total at 0, loop adding each price, then print. The code mirrors the plan step for step.",
+      "blocks": [
+        "prices = [4, 9, 2, 6]",
+        "total = 0",
+        "for price in prices:",
+        "    total = total + price",
+        "print(total)"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "id": "u93l01e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Complete the accumulate step:\n\nprices = [4, 9, 2, 6]\ntotal = 0\nfor price in prices:\n    total = total ____ price\nprint(total)",
+      "explanation": "You ADD each price onto the running total, so the operator is +. We never use sum() — we build the total ourselves.",
+      "answer": "+",
+      "acceptable": [
+        "+"
+      ]
+    },
+    {
+      "id": "u93l01e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Finally — Check. You run it and it prints 21. Your hand example said 21. Verdict?",
+      "explanation": "Output (21) matches the hand example (21), so the solution is correct. That is what Check means.",
+      "options": [
+        "Passes — output matches the hand example",
+        "Fails — the output is wrong",
+        "Cannot tell",
+        "Change the example to match"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u93l01e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Re-check with NEW input: prices = [10, 5]. Same code. What does it print?",
+      "explanation": "10 + 5 = 15. A correct accumulate works for any list, not just the first example. You solved a list problem with UEPCC!",
+      "options": [
+        "15",
+        "21",
+        "2",
+        "105"
+      ],
+      "answer": 0
+    }
+  ]
+}

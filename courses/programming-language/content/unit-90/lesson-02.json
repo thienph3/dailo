@@ -1,0 +1,128 @@
+{
+  "unitId": "u90",
+  "lessonId": "u90l02",
+  "title": "The ask-again loop",
+  "idea": "TOOL: a while loop that repeats the input until the value passes a check - the core validation shape.",
+  "exercises": [
+    {
+      "type": "multipleChoice",
+      "prompt": "You want to KEEP asking for a number until the user gives one that is 1 or more. Which tool repeats 'until a condition'?",
+      "options": [
+        "A while loop",
+        "A single if",
+        "A for loop over a range",
+        "A print"
+      ],
+      "answer": 0,
+      "explanation": "A while loop repeats as long as its condition holds. 'While the input is still bad, ask again' is a perfect fit.",
+      "id": "u90l02e01"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Predict what this does:\n\nage = int(input())\nwhile age < 1:\n    age = int(input())\nprint(age)\n\nThe user types -3, then 0, then 7. What is printed?",
+      "options": [
+        "7",
+        "-3",
+        "0",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "-3 and 0 are < 1, so the loop re-asks. 7 is not < 1, so the loop stops and prints 7. The loop runs until the value is valid.",
+      "id": "u90l02e02"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "The condition on a validation while loop describes the BAD case ('keep going while it's still invalid').",
+      "answer": true,
+      "explanation": "True. 'while age < 1' means 'while it's still invalid, loop'. When the input becomes valid, the condition fails and the loop ends.",
+      "id": "u90l02e03"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Why must you read the input ONCE before the while, and again INSIDE it?",
+      "options": [
+        "The first read gives the loop something to check; the inside read gets a fresh value each retry",
+        "You don't need the first read",
+        "Reading twice is a bug",
+        "while can't contain input"
+      ],
+      "answer": 0,
+      "explanation": "The while needs a value to test, so you read once first. Inside, you read again so each retry replaces the bad value. This 'read before, read again' shape is standard.",
+      "id": "u90l02e04"
+    },
+    {
+      "type": "fillBlank",
+      "prompt": "Complete the re-ask so it loops while the value is below 1:\n\nn = int(input())\nwhile n ____ 1:\n    n = int(input())\nprint(n)",
+      "answer": "<",
+      "acceptable": [
+        "<"
+      ],
+      "explanation": "Loop while n is LESS than 1 (still invalid). Once n is 1 or more, the loop stops.",
+      "id": "u90l02e05"
+    },
+    {
+      "type": "orderBlocks",
+      "prompt": "Arrange the ask-again loop for 'a positive number'.",
+      "blocks": [
+        "n = int(input())",
+        "while n < 1:",
+        "    n = int(input())",
+        "print(n)"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "Read once, loop while invalid re-reading each turn, then use the good value. The validation skeleton.",
+      "id": "u90l02e06"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "What happens if the user's FIRST input is already valid (say they type 5 for 'at least 1')?",
+      "options": [
+        "The while condition is false, so the loop body never runs",
+        "The loop runs once anyway",
+        "It errors",
+        "It asks again regardless"
+      ],
+      "answer": 0,
+      "explanation": "A while checks its condition first. If the input is already good, 5 < 1 is false, the loop is skipped, and we use 5 straight away.",
+      "id": "u90l02e07"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "If the loop never got a fresh input inside it, a bad first value would loop forever.",
+      "answer": true,
+      "explanation": "True. Without re-reading, the condition stays true and the loop never ends. The inside input() is what lets it eventually pass.",
+      "id": "u90l02e08"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "The user types 0, then 0, then 4 for 'at least 1'. How many times does the loop body run?",
+      "options": [
+        "Two (for the two bad 0s), then it stops once 4 arrives",
+        "Three",
+        "Zero",
+        "One"
+      ],
+      "answer": 0,
+      "explanation": "The first 0 fails the pre-check? No - the first 0 is read before the loop; the loop sees 0 (bad) and re-asks -> 0 (bad) -> 4 (good). The body runs twice.",
+      "id": "u90l02e09"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "The core validation shape is:",
+      "options": [
+        "Read, then WHILE it's invalid: read again; finally use the valid value",
+        "Read once and hope",
+        "Loop a fixed number of times",
+        "Never read input"
+      ],
+      "answer": 0,
+      "explanation": "Read-before, loop-while-invalid-re-reading, use-after. Memorise this skeleton - every validation uses it.",
+      "id": "u90l02e10"
+    }
+  ]
+}

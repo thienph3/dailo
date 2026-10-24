@@ -1,0 +1,129 @@
+{
+  "unitId": "u72",
+  "lessonId": "u72l06",
+  "title": "Spot the parameter mistake",
+  "idea": "TOOL: diagnose common parameter errors — too few/many arguments, wrong order, using a slot name that wasn't defined. Mostly thinking. No return.",
+  "exercises": [
+    {
+      "id": "u72l06e01",
+      "type": "multipleChoice",
+      "prompt": "This has a problem:\n\ndef greet(name):\n    print(\"Hi \" + name)\n\ngreet()\n\nWhat's wrong?",
+      "options": [
+        "greet needs one argument, but none was given",
+        "greet has too many arguments",
+        "The colon is missing",
+        "Nothing is wrong"
+      ],
+      "answer": 0,
+      "explanation": "greet defines one parameter, so a call must hand in one value. greet() gives none — Python reports a missing argument."
+    },
+    {
+      "id": "u72l06e02",
+      "type": "multipleChoice",
+      "prompt": "What's wrong?\n\ndef greet(name):\n    print(\"Hi \" + name)\n\ngreet(\"Sam\", \"Mia\")",
+      "options": [
+        "greet takes one value, but two were given",
+        "greet takes two values",
+        "The quotes are wrong",
+        "Nothing is wrong"
+      ],
+      "answer": 0,
+      "explanation": "One parameter means one argument. Passing two is a mismatch — Python complains about too many arguments."
+    },
+    {
+      "id": "u72l06e03",
+      "type": "trueFalse",
+      "prompt": "The number of arguments in a call should match the number of parameters in the def.",
+      "answer": true,
+      "explanation": "Yes. One slot needs one value; two slots need two values. A mismatch is a common and easy-to-fix error."
+    },
+    {
+      "id": "u72l06e04",
+      "type": "multipleChoice",
+      "prompt": "What's wrong?\n\ndef show(x):\n    print(y)\n\nshow(5)",
+      "options": [
+        "The body uses y, but the slot is named x",
+        "show needs two arguments",
+        "5 is the wrong type",
+        "Nothing is wrong"
+      ],
+      "answer": 0,
+      "explanation": "The parameter is x, but the body prints y — a name that was never defined. Use x, the slot that holds 5."
+    },
+    {
+      "id": "u72l06e05",
+      "type": "multipleChoice",
+      "prompt": "Fix this so it prints 5:\n\ndef show(x):\n    print(____)\n\nshow(5)",
+      "options": [
+        "x",
+        "y",
+        "5x",
+        "show"
+      ],
+      "answer": 0,
+      "explanation": "Print the parameter x, which holds 5. The body must use the same name as the slot in the header."
+    },
+    {
+      "id": "u72l06e06",
+      "type": "multipleChoice",
+      "prompt": "def box(width, height):\n    print(width * height)\n\nSomeone wants a 3-wide, 4-tall box but writes box(4, 3). What's the issue?",
+      "options": [
+        "Arguments are in the wrong order — width got 4, height got 3",
+        "Too few arguments",
+        "Too many arguments",
+        "The def is broken"
+      ],
+      "answer": 0,
+      "explanation": "Order is swapped: width=4, height=3, the opposite of intent. Here the product is the same, but for non-symmetric jobs it would be a real bug."
+    },
+    {
+      "id": "u72l06e07",
+      "type": "trueFalse",
+      "prompt": "Giving too few arguments and giving too many are BOTH mismatches Python will flag.",
+      "answer": true,
+      "explanation": "Yes. The count must match exactly. Both too few and too many raise an error about arguments."
+    },
+    {
+      "id": "u72l06e08",
+      "type": "multipleChoice",
+      "prompt": "Which call correctly matches def price(item, cost): to set item=\"pen\", cost=3?",
+      "options": [
+        "price(\"pen\", 3)",
+        "price(3, \"pen\")",
+        "price(\"pen\")",
+        "price(\"pen\", 3, 1)"
+      ],
+      "answer": 0,
+      "explanation": "Two parameters, two arguments in order: \"pen\" to item, 3 to cost. The others swap, under-fill, or over-fill the slots."
+    },
+    {
+      "id": "u72l06e09",
+      "type": "orderBlocks",
+      "prompt": "Fix the pieces into a correct program that prints 8. (One parameter, matching body, matching call.)",
+      "blocks": [
+        "def show_double(n):",
+        "    print(n * 2)",
+        "show_double(4)"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Header defines n, body uses n, call passes 4. n is 4, so 4 * 2 prints 8 — slot, body, and call all agree."
+    },
+    {
+      "id": "u72l06e10",
+      "type": "multipleChoice",
+      "prompt": "The parameter debugging checklist:",
+      "options": [
+        "Argument count matches slots, order is right, and the body uses the slot names",
+        "Any number of arguments is fine",
+        "Order never matters",
+        "The body can use undefined names"
+      ],
+      "answer": 0,
+      "explanation": "Match the count, get the order right, and use the parameter names in the body. Those three checks catch most parameter bugs."
+    }
+  ]
+}

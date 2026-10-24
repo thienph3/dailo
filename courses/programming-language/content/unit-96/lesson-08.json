@@ -1,0 +1,107 @@
+{
+  "unitId": "u96",
+  "lessonId": "u96l08",
+  "title": "Loop back: choosing the right loop and pattern",
+  "idea": "LOOP (review): no new concept. Re-practice choosing for vs while, break vs continue, and which Lap 2 pattern fits each unseen task.",
+  "exercises": [
+    {
+      "id": "u96l08e01",
+      "type": "multipleChoice",
+      "prompt": "You must do something once for EACH item in a known list. Which loop?",
+      "options": [
+        "A for loop over the list",
+        "A while loop with a manual counter",
+        "No loop",
+        "A nested loop"
+      ],
+      "answer": 0,
+      "explanation": "When you know the collection, 'for item in list' is cleanest. While loops shine when you do NOT know how many times you will repeat."
+    },
+    {
+      "id": "u96l08e02",
+      "type": "multipleChoice",
+      "prompt": "You must keep asking the user until they type something valid. Which loop?",
+      "options": [
+        "A while loop (repeat until the condition is satisfied)",
+        "A for loop over range(3)",
+        "A nested loop",
+        "No loop"
+      ],
+      "answer": 0,
+      "explanation": "An unknown number of repeats - 'until valid' - calls for a while loop. That is the validation-loop pattern."
+    },
+    {
+      "id": "u96l08e03",
+      "type": "multipleChoice",
+      "prompt": "You want to STOP a loop the moment you find the first match. Which keyword?",
+      "options": ["break", "continue", "return", "append"],
+      "answer": 0,
+      "explanation": "break ends the loop immediately - exactly what a 'find the first' search wants once the match is found."
+    },
+    {
+      "id": "u96l08e04",
+      "type": "multipleChoice",
+      "prompt": "You want to SKIP the rest of this turn but keep looping. Which keyword?",
+      "options": ["continue", "break", "stop", "pass"],
+      "answer": 0,
+      "explanation": "continue jumps to the next turn without finishing the current one - handy for skipping items you do not want to process."
+    },
+    {
+      "id": "u96l08e05",
+      "type": "multipleChoice",
+      "prompt": "TASK: 'the total of all prices.' Which Lap 2 pattern?",
+      "options": ["Accumulate (running sum)", "Track the maximum", "Filter", "Search"],
+      "answer": 0,
+      "explanation": "'Total of all' is a running sum you build with an accumulator. Each pattern has a tell-tale phrase; 'total' signals accumulate."
+    },
+    {
+      "id": "u96l08e06",
+      "type": "multipleChoice",
+      "prompt": "TASK: 'the most expensive item.' Which Lap 2 pattern?",
+      "options": ["Track the maximum", "Accumulate", "Count with condition", "Validate"],
+      "answer": 0,
+      "explanation": "'The most' means keep the biggest seen so far - track the maximum, built by hand, never with a builtin."
+    },
+    {
+      "id": "u96l08e07",
+      "type": "multipleChoice",
+      "prompt": "TASK: 'only the items that cost under 20, in a new list.' Which pattern?",
+      "options": ["Filter (keep items that pass a test)", "Search", "Accumulate", "Track maximum"],
+      "answer": 0,
+      "explanation": "Keeping just the items that pass a condition is the filter pattern - often built by appending the keepers to a new list."
+    },
+    {
+      "id": "u96l08e08",
+      "type": "multipleChoice",
+      "prompt": "TASK: 'is there any item equal to 42?' Which pattern?",
+      "options": ["Search / membership (stop at the first match)", "Accumulate", "Average", "Track maximum"],
+      "answer": 0,
+      "explanation": "'Is there any...' is a search - scan until you find it, then you can stop. A yes/no answer, often with break."
+    },
+    {
+      "id": "u96l08e09",
+      "type": "matchPairs",
+      "prompt": "Match each task phrase to its pattern.",
+      "pairs": [
+        {"left": "How many pass the test", "right": "Count with condition"},
+        {"left": "The average score", "right": "Sum and count, then divide"},
+        {"left": "Each item against each other", "right": "Nested loops"},
+        {"left": "Repeat until valid", "right": "Validation while loop"}
+      ],
+      "explanation": "Phrases in the problem point straight to patterns. Learning to hear them is how you pick the right tool fast."
+    },
+    {
+      "id": "u96l08e10",
+      "type": "multipleChoice",
+      "prompt": "Why is picking the right pattern the most important early step?",
+      "options": [
+        "The pattern shapes the whole code - a wrong choice means rewriting, a right one almost writes itself",
+        "It does not matter which you pick",
+        "Patterns are only for experts",
+        "You should always try every pattern"
+      ],
+      "answer": 0,
+      "explanation": "Once you name the pattern, the code structure follows. Choosing well up front saves you from building the wrong thing."
+    }
+  ]
+}

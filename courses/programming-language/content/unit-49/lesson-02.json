@@ -1,0 +1,131 @@
+{
+  "unitId": "u49",
+  "lessonId": "u49l02",
+  "title": "Solve it: keep saving until 100",
+  "idea": "GUIDED PROBLEM. A repeat-until job (unknown count) solved with a while loop and an accumulator. Choosing while is the heart of the Plan step.",
+  "problem": "You add 15 to your savings each week. How many weeks until your savings reach at least 100? Show the number of weeks.",
+  "exercises": [
+    {
+      "id": "u49l02e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: Add 15 to savings each week. How many weeks to reach at least 100?\n\nFirst - Understand. What is the OUTPUT?",
+      "options": [
+        "The number of weeks needed",
+        "The savings amount only",
+        "The weekly deposit",
+        "The number 100"
+      ],
+      "answer": 0,
+      "explanation": "The output is a COUNT of weeks. Naming it first keeps the whole solution aimed at the right target."
+    },
+    {
+      "id": "u49l02e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "Understand. What are the INPUTS?",
+      "options": [
+        "The weekly deposit (15) and the goal (100)",
+        "Only the number of weeks",
+        "The word savings",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "Two values drive it: how much you add each week (15) and the target (100). Both become named variables."
+    },
+    {
+      "id": "u49l02e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example by hand. Track savings week by week: after weeks 1, 2, 3, 4 savings are 15, 30, 45, 60. What are they after weeks 5, 6, 7?",
+      "options": [
+        "75, 90, 105",
+        "75, 90, 100",
+        "70, 85, 100",
+        "80, 95, 110"
+      ],
+      "answer": 0,
+      "explanation": "Keep adding 15: 75, 90, 105. At week 7 savings pass 100 for the first time."
+    },
+    {
+      "id": "u49l02e04",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "So how many weeks until savings reach at least 100?",
+      "options": ["7 weeks (savings become 105)", "6 weeks", "100 weeks", "15 weeks"],
+      "answer": 0,
+      "explanation": "At week 7 savings hit 105, the first time at or above 100. Check value: 7 weeks."
+    },
+    {
+      "id": "u49l02e05",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Plan - choose the loop. Did we know the number of weeks BEFORE starting?",
+      "options": [
+        "No - it depends on reaching 100 - so a while loop",
+        "Yes - always 7 - so a for loop",
+        "Yes - always 100",
+        "No loop is needed"
+      ],
+      "answer": 0,
+      "explanation": "We only learned '7' by adding until we passed 100. The count was unknown up front - that's a condition-controlled while loop."
+    },
+    {
+      "id": "u49l02e06",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Plan - what two things change each pass of the while loop?",
+      "options": [
+        "The savings (accumulator) and the weeks (counter)",
+        "Only the savings",
+        "Only the weeks",
+        "Neither - nothing changes"
+      ],
+      "answer": 0,
+      "explanation": "Savings grows by 15 (accumulator) and weeks grows by 1 (counter) each pass. Both must change or the loop never ends."
+    },
+    {
+      "id": "u49l02e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code it. Arrange the lines to match the plan.",
+      "blocks": [
+        "savings = 0",
+        "weeks = 0",
+        "while savings < 100:",
+        "    savings = savings + 15",
+        "    weeks = weeks + 1",
+        "print(weeks)"
+      ],
+      "answer": [0, 1, 2, 3, 4, 5],
+      "explanation": "Start both at 0, loop while under 100, add 15 and count a week each pass, print weeks. Both variables change so the loop stops."
+    },
+    {
+      "id": "u49l02e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Complete the condition so it stops once savings reach 100:\n\nsavings = 0\nweeks = 0\nwhile savings ____ 100:\n    savings = savings + 15\n    weeks = weeks + 1",
+      "answer": "<",
+      "acceptable": ["<"],
+      "explanation": "Repeat WHILE savings are still below 100. The moment savings reach or pass 100, savings < 100 is false and the loop stops."
+    },
+    {
+      "id": "u49l02e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "The code prints 7; your hand example was 7 weeks. Verdict?",
+      "options": ["Passes", "Fails", "Unknown", "Rewrite the example"],
+      "answer": 0,
+      "explanation": "7 matches 7. The while loop counted exactly the right number of weeks. Passing Check."
+    },
+    {
+      "id": "u49l02e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "New numbers: add 25 each week, goal 100. Same plan. How many weeks?",
+      "options": ["4 weeks (25, 50, 75, 100)", "3 weeks", "5 weeks", "7 weeks"],
+      "answer": 0,
+      "explanation": "25, 50, 75, 100 - reaches 100 at week 4. The same while loop handles new inputs; the count just differs."
+    }
+  ]
+}

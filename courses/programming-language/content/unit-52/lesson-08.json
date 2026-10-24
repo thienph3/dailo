@@ -1,0 +1,115 @@
+{
+  "unitId": "u52",
+  "lessonId": "u52l08",
+  "title": "The index can be a variable",
+  "idea": "The number inside the brackets can be a variable, not just a literal. This connects indexing to the loops from Lap 3. Reviews for + range.",
+  "exercises": [
+    {
+      "id": "u52l08e01",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nnums = [3, 7, 2]\ni = 1\nprint(nums[i])",
+      "options": [
+        "7",
+        "3",
+        "2",
+        "1"
+      ],
+      "answer": 0,
+      "explanation": "i holds 1, so nums[i] is the same as nums[1], which is 7. The index can be any variable that holds a whole number."
+    },
+    {
+      "id": "u52l08e02",
+      "type": "trueFalse",
+      "prompt": "The number inside the index brackets can come from a variable.",
+      "answer": true,
+      "explanation": "Yes. nums[i] uses whatever value i holds as the position. That is what lets a loop walk through a list by index."
+    },
+    {
+      "id": "u52l08e03",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nnums = [10, 20, 30]\npos = 2\nprint(nums[pos])",
+      "options": [
+        "30",
+        "20",
+        "10",
+        "2"
+      ],
+      "answer": 0,
+      "explanation": "pos is 2, so nums[pos] is nums[2], which is 30. The variable just stands in for the position number."
+    },
+    {
+      "id": "u52l08e04",
+      "type": "multipleChoice",
+      "prompt": "Recall range from Lap 3. Predict the output:\n\nnums = [5, 6, 7]\nfor i in range(3):\n    print(nums[i])",
+      "options": [
+        "5\n6\n7",
+        "0\n1\n2",
+        "[5, 6, 7]",
+        "7\n6\n5"
+      ],
+      "answer": 0,
+      "explanation": "range(3) makes i take 0, 1, 2. Each time, nums[i] gives that position's value: 5, then 6, then 7 — each on its own line."
+    },
+    {
+      "id": "u52l08e05",
+      "type": "trueFalse",
+      "prompt": "A loop variable from range can be used as a list index.",
+      "answer": true,
+      "explanation": "Yes — and that is a big idea. range(3) gives 0, 1, 2, which are exactly the indexes of a three-value list. The loop can visit each one."
+    },
+    {
+      "id": "u52l08e06",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nwords = [\"a\", \"b\", \"c\"]\nfor i in range(3):\n    print(words[i])",
+      "options": [
+        "a\nb\nc",
+        "0\n1\n2",
+        "['a', 'b', 'c']",
+        "abc"
+      ],
+      "answer": 0,
+      "explanation": "i is 0, 1, 2 in turn, so words[i] gives \"a\", \"b\", \"c\" — one word per line. The index variable walks across the positions."
+    },
+    {
+      "id": "u52l08e07",
+      "type": "fillBlank",
+      "prompt": "Complete the loop so it prints each value of nums by index:\n\nnums = [8, 9, 10]\nfor i in range(3):\n    print(nums[____])",
+      "answer": "i",
+      "acceptable": ["i"],
+      "explanation": "Use the loop variable i as the index: nums[i]. Each pass, i is 0, then 1, then 2, so every value prints in turn."
+    },
+    {
+      "id": "u52l08e08",
+      "type": "multipleChoice",
+      "prompt": "In nums[i], what does the computer do with i FIRST?",
+      "options": [
+        "Look up the value i holds, then use it as the position",
+        "Print the letter i",
+        "Add i to the list",
+        "Ignore i"
+      ],
+      "answer": 0,
+      "explanation": "The computer reads what i currently holds (say 2), then uses that number as the position: nums[2]. The variable is just a stand-in for a number."
+    },
+    {
+      "id": "u52l08e09",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nnums = [100, 200, 300]\ni = 0\nprint(nums[i])\ni = 2\nprint(nums[i])",
+      "options": [
+        "100\n300",
+        "100\n200",
+        "0\n2",
+        "300\n100"
+      ],
+      "answer": 0,
+      "explanation": "First i is 0, so nums[i] is 100. Then i becomes 2, so nums[i] is 300. Changing the index variable changes which value you get."
+    },
+    {
+      "id": "u52l08e10",
+      "type": "trueFalse",
+      "prompt": "Because range(3) gives 0, 1, 2, it lines up perfectly with the indexes of a 3-value list.",
+      "answer": true,
+      "explanation": "Exactly. The positions of a three-value list are 0, 1, 2 — the very numbers range(3) produces. That match is why loops and indexing fit together so well."
+    }
+  ]
+}

@@ -1,0 +1,130 @@
+{
+  "unitId": "u40",
+  "lessonId": "u40l03",
+  "title": "Counting how many passes happened",
+  "idea": "Use a counter to report how many times a loop ran, even when the body does other work.",
+  "exercises": [
+    {
+      "id": "u40l03e01",
+      "type": "multipleChoice",
+      "prompt": "A loop prints a line each pass AND counts passes. What does the counter end up holding?",
+      "options": [
+        "The number of passes",
+        "The last line printed",
+        "Zero",
+        "The range step"
+      ],
+      "answer": 0,
+      "explanation": "The counter holds the number of passes — the same as the number of printed lines."
+    },
+    {
+      "id": "u40l03e02",
+      "type": "multipleChoice",
+      "prompt": "What shows?\n\ncount = 0\nfor i in range(1, 5):\n    print(\"tick\")\n    count += 1\nprint(count)",
+      "options": [
+        "tick (x4) then 4",
+        "tick (x4) then 5",
+        "4 only",
+        "tick (x5) then 5"
+      ],
+      "answer": 0,
+      "explanation": "range(1, 5) makes four passes; 'tick' prints four times, then the counter 4 prints."
+    },
+    {
+      "id": "u40l03e03",
+      "type": "multipleChoice",
+      "prompt": "In that loop, why does count end at 4 and not 5?",
+      "options": [
+        "range(1, 5) makes four passes",
+        "The counter started at 1",
+        "print uses one count",
+        "It is a bug"
+      ],
+      "answer": 0,
+      "explanation": "range(1, 5) runs four passes (1, 2, 3, 4), so the counter is incremented four times."
+    },
+    {
+      "id": "u40l03e04",
+      "type": "trueFalse",
+      "prompt": "The counter and the loop variable i are the same thing.",
+      "answer": false,
+      "explanation": "False. i is given by range; the counter is a separate variable YOU control and start at 0."
+    },
+    {
+      "id": "u40l03e05",
+      "type": "multipleChoice",
+      "prompt": "Here i goes 0..4 but count goes 1..5 over a range(5) loop. Why can they differ?",
+      "options": [
+        "They start and change by different rules",
+        "They must always match",
+        "count is broken",
+        "i is broken"
+      ],
+      "answer": 0,
+      "explanation": "i starts at 0 (range decides it); the counter starts at 0 and adds 1 each pass, so after five passes it is 5."
+    },
+    {
+      "id": "u40l03e06",
+      "type": "orderBlocks",
+      "prompt": "Arrange a loop that does work and counts its passes.",
+      "blocks": [
+        "    print(\"doing work\")",
+        "count = 0",
+        "    count += 1",
+        "print(count)",
+        "for i in range(3):"
+      ],
+      "answer": [
+        1,
+        4,
+        0,
+        2,
+        3
+      ],
+      "explanation": "Start counter at 0, loop, do the work and add 1 each pass, then print the count."
+    },
+    {
+      "id": "u40l03e07",
+      "type": "fillBlank",
+      "prompt": "Fill the line that bumps the counter each pass:\n\ncount = 0\nfor i in range(7):\n    count ____ 1\nprint(count)",
+      "answer": "+=",
+      "acceptable": [
+        "+="
+      ],
+      "explanation": "count += 1 raises the counter each pass; it ends at 7."
+    },
+    {
+      "id": "u40l03e08",
+      "type": "multipleChoice",
+      "prompt": "What final number prints?\n\ncount = 0\nfor i in range(7):\n    count += 1\nprint(count)",
+      "options": [
+        "7",
+        "6",
+        "0",
+        "8"
+      ],
+      "answer": 0,
+      "explanation": "Seven passes, +1 each from 0: the counter ends at 7."
+    },
+    {
+      "id": "u40l03e09",
+      "type": "multipleChoice",
+      "prompt": "A counter loop runs range(0) (zero passes). What does the counter hold afterward?",
+      "options": [
+        "0",
+        "1",
+        "It errors",
+        "Nothing prints"
+      ],
+      "answer": 0,
+      "explanation": "No passes means nothing is added, so the counter stays at its start value, 0."
+    },
+    {
+      "id": "u40l03e10",
+      "type": "trueFalse",
+      "prompt": "A counter is useful because it tells you HOW MANY, which the loop variable alone does not.",
+      "answer": true,
+      "explanation": "True. i is the current step; the counter summarizes how many passes happened in total."
+    }
+  ]
+}

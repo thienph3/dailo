@@ -1,0 +1,113 @@
+{
+  "unitId": "u03",
+  "lessonId": "u03l09",
+  "title": "Solve it: a to-do list with a title",
+  "idea": "GUIDED PROBLEM. Report a title and three tasks, choosing whether to add a blank line. Reinforces plan-then-check with a slightly open choice.",
+  "problem": "Show a to-do list: the title To Do, then three tasks — call Mum, water plants, read.",
+  "exercises": [
+    {
+      "id": "u03l09e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: Show the title To Do, then three tasks: call Mum, water plants, read.\n\nWhat is the OUTPUT?",
+      "options": [
+        "Four lines: the title then the three tasks",
+        "The number of tasks",
+        "Just the title",
+        "The tasks added together"
+      ],
+      "answer": 0,
+      "explanation": "Title plus three tasks = four lines of output, each on its own line."
+    },
+    {
+      "id": "u03l09e02",
+      "type": "trueFalse",
+      "uepcc": "U",
+      "prompt": "print(\"call Mum\") keeps the capital M in Mum exactly as written.",
+      "answer": true,
+      "explanation": "The computer shows text exactly, so the capital M stays. Capitals matter — a Unit 1 habit."
+    },
+    {
+      "id": "u03l09e03",
+      "type": "orderBlocks",
+      "uepcc": "E",
+      "prompt": "Example. Order the output by hand: title first, then the three tasks as listed.",
+      "blocks": ["To Do", "call Mum", "water plants", "read"],
+      "answer": [0, 1, 2, 3],
+      "explanation": "To Do, call Mum, water plants, read. Four lines in that order — the check value."
+    },
+    {
+      "id": "u03l09e04",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Plan: the solution is...",
+      "options": [
+        "A print for the title, then one print per task",
+        "One print for the whole list",
+        "Three prints, no title",
+        "Five prints"
+      ],
+      "answer": 0,
+      "explanation": "Title line plus one line per task. The plan matches the output shape."
+    },
+    {
+      "id": "u03l09e05",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Which task is printed last?",
+      "options": ["read", "call Mum", "water plants", "To Do"],
+      "answer": 0,
+      "explanation": "read is the third and final task, so its print comes last."
+    },
+    {
+      "id": "u03l09e06",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code. Arrange the four lines: title, then the three tasks.",
+      "blocks": ["print(\"read\")", "print(\"water plants\")", "print(\"To Do\")", "print(\"call Mum\")"],
+      "answer": [2, 3, 1, 0],
+      "explanation": "To Do, call Mum, water plants, read — title first, tasks in order."
+    },
+    {
+      "id": "u03l09e07",
+      "type": "tapTokens",
+      "uepcc": "C",
+      "prompt": "Build the title line (it should show To Do).",
+      "tokens": ["print", "(", "\"To Do\"", ")"],
+      "answer": ["print", "(", "\"To Do\"", ")"],
+      "explanation": "print(\"To Do\") shows the title, space and capitals exactly, on the first line."
+    },
+    {
+      "id": "u03l09e08",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check. Output:\n\nTo Do\ncall Mum\nwater plants\nread\n\nMatches the example?",
+      "options": ["Yes — title then three tasks, right order", "No — a task is missing", "No — title is last", "Can't tell"],
+      "answer": 0,
+      "explanation": "Four lines in the planned order. Check passes."
+    },
+    {
+      "id": "u03l09e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "A tired friend typed print(\"call mum\") with a lowercase m. Against the example (call Mum), what happens?",
+      "options": [
+        "Fails — it shows call mum, but the example has a capital M",
+        "Passes — capitals never matter",
+        "Causes an error",
+        "Shows nothing"
+      ],
+      "answer": 0,
+      "explanation": "The computer shows text exactly, so call mum is not call Mum. Checking against the example catches the slip."
+    },
+    {
+      "id": "u03l09e10",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "To make the list easier to read, you could also add which extra line after the title?",
+      "options": ["An empty print() for a blank line", "A print that repeats the title", "Nothing is ever allowed", "A math line"],
+      "answer": 0,
+      "explanation": "A blank print() after the title would space it from the tasks — an optional readability choice you now know how to make."
+    }
+  ]
+}

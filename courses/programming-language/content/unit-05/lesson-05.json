@@ -1,0 +1,124 @@
+{
+  "unitId": "u05",
+  "lessonId": "u05l05",
+  "title": "Spotting a mismatch",
+  "idea": "A mismatch is any spot where the real output differs from the expected output. Learn to point at it.",
+  "exercises": [
+    {
+      "id": "u05l05e01",
+      "type": "multipleChoice",
+      "prompt": "What is a 'mismatch'?",
+      "options": [
+        "A spot where real output differs from expected output",
+        "A broken keyboard",
+        "A second program",
+        "A blank line"
+      ],
+      "answer": 0,
+      "explanation": "A mismatch is simply a difference between what came out and what you wanted."
+    },
+    {
+      "id": "u05l05e02",
+      "type": "multipleChoice",
+      "prompt": "Expected:\nCoffee\nTea\n\nReal output:\nCoffee\nMilk\n\nWhere is the mismatch?",
+      "options": [
+        "Line 2: expected 'Tea' but got 'Milk'",
+        "Line 1: expected 'Coffee'",
+        "There is no mismatch",
+        "Both lines"
+      ],
+      "answer": 0,
+      "explanation": "Line 1 matches. Line 2 is the mismatch: 'Tea' was expected, 'Milk' appeared."
+    },
+    {
+      "id": "u05l05e03",
+      "type": "multipleChoice",
+      "prompt": "Expected:\nDog\nCat\n\nReal output:\nDog\nCat\n\nWhere is the mismatch?",
+      "options": [
+        "There is no mismatch — it passes",
+        "Line 1",
+        "Line 2",
+        "Both lines"
+      ],
+      "answer": 0,
+      "explanation": "Every line matches. No mismatch means pass. Spotting 'no mismatch' is a valid result too."
+    },
+    {
+      "id": "u05l05e04",
+      "type": "multipleChoice",
+      "prompt": "Expected:\nStep 1\nStep 2\nStep 3\n\nReal output:\nStep 1\nStep two\nStep 3\n\nWhich line mismatches?",
+      "options": [
+        "Line 2 ('Step 2' vs 'Step two')",
+        "Line 1",
+        "Line 3",
+        "None"
+      ],
+      "answer": 0,
+      "explanation": "Lines 1 and 3 match. Line 2 differs: '2' vs the word 'two'. That's the mismatch."
+    },
+    {
+      "id": "u05l05e05",
+      "type": "trueFalse",
+      "prompt": "Pointing exactly at the mismatched line helps you know what to fix.",
+      "answer": true,
+      "explanation": "Naming the exact line turns a vague 'it's wrong' into a clear 'fix line 2'. That's the value of spotting it."
+    },
+    {
+      "id": "u05l05e06",
+      "type": "multiSelect",
+      "prompt": "Expected:\nApple\nBanana\nCherry\n\nReal output:\nApple\nBanana\nBerry\n\nWhich lines are a mismatch? (pick all)",
+      "options": [
+        "Line 1 (Apple)",
+        "Line 2 (Banana)",
+        "Line 3 (Cherry vs Berry)"
+      ],
+      "answer": [2],
+      "explanation": "Only line 3 differs: expected 'Cherry', got 'Berry'. Lines 1 and 2 match."
+    },
+    {
+      "id": "u05l05e07",
+      "type": "matchPairs",
+      "prompt": "For each pair, match expected vs real to 'match' or 'mismatch'.",
+      "pairs": [
+        { "left": "Expected 'Hi' / Real 'Hi'", "right": "match" },
+        { "left": "Expected 'Hi' / Real 'hi'", "right": "mismatch" },
+        { "left": "Expected 'Bye' / Real 'Bye'", "right": "match" },
+        { "left": "Expected 'Yes' / Real 'No'", "right": "mismatch" }
+      ],
+      "explanation": "Same exactly = match. Any difference, even a capital letter, = mismatch."
+    },
+    {
+      "id": "u05l05e08",
+      "type": "trueFalse",
+      "prompt": "A mismatch can be as small as a single letter being different.",
+      "answer": true,
+      "explanation": "Yes. 'cat' vs 'bat' is one letter, but it's still a mismatch. The computer notices every character."
+    },
+    {
+      "id": "u05l05e09",
+      "type": "multipleChoice",
+      "prompt": "Expected:\nWin\n\nReal output:\nWim\n\nIs there a mismatch?",
+      "options": [
+        "Yes — 'Win' vs 'Wim' differ in the last letter",
+        "No, they look the same",
+        "Only the first letter matters",
+        "Error"
+      ],
+      "answer": 0,
+      "explanation": "The last letter differs: 'n' vs 'm'. That's a mismatch, so it fails."
+    },
+    {
+      "id": "u05l05e10",
+      "type": "multipleChoice",
+      "prompt": "You found a mismatch on line 2. What is the useful next thought?",
+      "options": [
+        "Line 2 is where I expected something different — let me look there",
+        "The whole program is useless",
+        "I should give up",
+        "Capitals never matter"
+      ],
+      "answer": 0,
+      "explanation": "A spotted mismatch points you straight at the line to investigate. That's calm, focused debugging."
+    }
+  ]
+}

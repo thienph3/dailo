@@ -1,0 +1,135 @@
+{
+  "unitId": "u40",
+  "lessonId": "u40l02",
+  "title": "A shorter way to add one: +=",
+  "idea": "count += 1 means the same as count = count + 1. Introduce the shorthand with visible output.",
+  "exercises": [
+    {
+      "id": "u40l02e01",
+      "type": "multipleChoice",
+      "prompt": "count += 1 is a shorthand. What does it mean?",
+      "options": [
+        "count = count + 1",
+        "count = 1",
+        "Print count",
+        "count = count - 1"
+      ],
+      "answer": 0,
+      "explanation": "It is exactly count = count + 1 — add one and store it back. Same result, less typing."
+    },
+    {
+      "id": "u40l02e02",
+      "type": "multipleChoice",
+      "prompt": "What shows?\n\ncount = 0\nfor i in range(3):\n    count += 1\nprint(count)",
+      "options": [
+        "3",
+        "0",
+        "1",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "count += 1 raises the counter each pass: 0, 1, 2, 3. It prints 3."
+    },
+    {
+      "id": "u40l02e03",
+      "type": "trueFalse",
+      "prompt": "count += 1 and count = count + 1 give the same result.",
+      "answer": true,
+      "explanation": "True. += is just a tidier way to write the same step."
+    },
+    {
+      "id": "u40l02e04",
+      "type": "matchPairs",
+      "prompt": "Match each line to what it does to count.",
+      "pairs": [
+        {
+          "left": "count += 1",
+          "right": "adds 1"
+        },
+        {
+          "left": "count += 2",
+          "right": "adds 2"
+        },
+        {
+          "left": "count = 0",
+          "right": "resets to 0"
+        }
+      ],
+      "explanation": "+= 1 adds one; += 2 adds two; = 0 resets to zero. The number after += is how much you add."
+    },
+    {
+      "id": "u40l02e05",
+      "type": "fillBlank",
+      "prompt": "Rewrite count = count + 1 using the shorthand:\n\ncount ____ 1",
+      "answer": "+=",
+      "acceptable": [
+        "+="
+      ],
+      "explanation": "The shorthand operator is +=. So count += 1."
+    },
+    {
+      "id": "u40l02e06",
+      "type": "multipleChoice",
+      "prompt": "What shows?\n\ncount = 0\nfor i in range(6):\n    count += 1\nprint(count)",
+      "options": [
+        "6",
+        "5",
+        "0",
+        "16"
+      ],
+      "answer": 0,
+      "explanation": "Six passes, +1 each, from 0: the counter ends at 6."
+    },
+    {
+      "id": "u40l02e07",
+      "type": "multipleChoice",
+      "prompt": "A counter uses count += 1 but was never started before the loop. What goes wrong?",
+      "options": [
+        "It errors — count was never given a starting value",
+        "It prints 1",
+        "It prints 0",
+        "Nothing, it's fine"
+      ],
+      "answer": 0,
+      "explanation": "Without count = 0 first, there is no count to add to — Python errors because count is undefined."
+    },
+    {
+      "id": "u40l02e08",
+      "type": "orderBlocks",
+      "prompt": "Arrange a counter loop using += that counts 3 passes.",
+      "blocks": [
+        "    count += 1",
+        "count = 0",
+        "print(count)",
+        "for i in range(3):"
+      ],
+      "answer": [
+        1,
+        3,
+        0,
+        2
+      ],
+      "explanation": "Start at 0, loop three times with += 1, then print (3)."
+    },
+    {
+      "id": "u40l02e09",
+      "type": "trueFalse",
+      "prompt": "You still must write count = 0 before the loop even when using += 1.",
+      "answer": true,
+      "explanation": "True. The shorthand only changes how you add; the counter still needs a starting value."
+    },
+    {
+      "id": "u40l02e10",
+      "type": "multipleChoice",
+      "prompt": "Which pair of lines counts every pass of a range(4) loop?",
+      "options": [
+        "count = 0 before; count += 1 inside",
+        "count = 1 inside only",
+        "count += 1 before the loop",
+        "print(count) inside only"
+      ],
+      "answer": 0,
+      "explanation": "Start count at 0 before the loop, then count += 1 inside it: the counter ends at 4."
+    }
+  ]
+}

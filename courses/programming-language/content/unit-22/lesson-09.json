@@ -1,0 +1,106 @@
+{
+  "unitId": "u22",
+  "lessonId": "u22l09",
+  "title": "if/else among the tools you know",
+  "idea": "Mix if/else with comparisons, booleans, variables, and math from earlier units. Spaced review alongside the new tool.",
+  "exercises": [
+    {
+      "id": "u22l09e01",
+      "type": "multipleChoice",
+      "prompt": "Review of Unit 20: what will this show?\n\nprint(9 <= 9)",
+      "options": ["True", "False", "18", "0"],
+      "answer": 0,
+      "explanation": "9 equals 9, and <= accepts equal, so True. Comparisons still return booleans."
+    },
+    {
+      "id": "u22l09e02",
+      "type": "multipleChoice",
+      "prompt": "Review of Unit 19: what kind of value is False?",
+      "options": ["Boolean", "Number", "Text", "Nothing"],
+      "answer": 0,
+      "explanation": "False is a boolean — the yes/no kind of value that drives an if/else."
+    },
+    {
+      "id": "u22l09e03",
+      "type": "multipleChoice",
+      "prompt": "A stored boolean drives the choice. What shows?\n\nis_open = True\nif is_open:\n    print(\"Come in\")\nelse:\n    print(\"Closed\")",
+      "options": ["Come in", "Closed", "Both", "Nothing"],
+      "answer": 0,
+      "explanation": "is_open is True, so the if branch runs: Come in. A boolean variable works as the condition on its own."
+    },
+    {
+      "id": "u22l09e04",
+      "type": "multipleChoice",
+      "prompt": "Review of earlier math: what will this show?\n\ntotal = 3 * 4\nprint(total)",
+      "options": ["12", "34", "7", "total"],
+      "answer": 0,
+      "explanation": "3 * 4 is 12, stored in total and printed. Arithmetic still works just as before."
+    },
+    {
+      "id": "u22l09e05",
+      "type": "multipleChoice",
+      "prompt": "Math feeds the condition. What shows?\n\nitems = 6\nif items * 2 >= 10:\n    print(\"Enough\")\nelse:\n    print(\"Need more\")",
+      "options": ["Enough", "Need more", "Both", "Nothing"],
+      "answer": 0,
+      "explanation": "items * 2 is 12, then 12 >= 10 is True, so Enough prints."
+    },
+    {
+      "id": "u22l09e06",
+      "type": "multipleChoice",
+      "prompt": "Review the = vs == trap. Which if condition is correct?",
+      "options": [
+        "if code == 1234:",
+        "if code = 1234:",
+        "if code 1234:",
+        "if = code 1234:"
+      ],
+      "answer": 0,
+      "explanation": "A condition checks, so ==. 'One store, two ask' still holds inside an if/else."
+    },
+    {
+      "id": "u22l09e07",
+      "type": "multipleChoice",
+      "prompt": "What will this show, line by line?\n\nscore = 55\nif score >= 60:\n    print(\"Pass\")\nelse:\n    print(\"Fail\")\nprint(\"Thanks\")",
+      "options": [
+        "Fail then Thanks",
+        "Pass then Thanks",
+        "Fail",
+        "Thanks"
+      ],
+      "answer": 0,
+      "explanation": "55 >= 60 is False, so else runs: Fail. The un-indented Thanks always runs. Output: Fail, then Thanks."
+    },
+    {
+      "id": "u22l09e08",
+      "type": "matchPairs",
+      "prompt": "Match each value to its kind (a mixed review).",
+      "pairs": [
+        { "left": "7", "right": "Number" },
+        { "left": "\"hi\"", "right": "Text" },
+        { "left": "True", "right": "Boolean" }
+      ],
+      "explanation": "Digits are numbers, quotes mark text, True/False are booleans. Booleans are what an if/else acts on."
+    },
+    {
+      "id": "u22l09e09",
+      "type": "multipleChoice",
+      "prompt": "Review of Unit 15: what will this show?\n\nname = \"Sam\"\nprint(\"Hi \" + name)",
+      "options": ["Hi Sam", "Hi + name", "Sam Hi", "name"],
+      "answer": 0,
+      "explanation": "Joining text with + gives \"Hi Sam\". Strings and + still work as they did in the earlier unit."
+    },
+    {
+      "id": "u22l09e10",
+      "type": "multipleChoice",
+      "prompt": "What does this review lesson show about if/else?",
+      "options": [
+        "It works together with comparisons, booleans, variables, and math you already know",
+        "It replaces all the earlier tools",
+        "It only works with numbers",
+        "It cannot use a boolean variable"
+      ],
+      "answer": 0,
+      "explanation": "if/else sits on top of everything so far: a comparison or boolean picks the branch, and each branch uses your existing tools."
+    }
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "unitId": "u58",
+  "lessonId": "u58l04",
+  "title": "Count with a label",
+  "idea": "Use the count in an f-string and simple messages. Reviews f-strings.",
+  "exercises": [
+    {
+      "id": "u58l04e01",
+      "type": "multipleChoice",
+      "prompt": "scores = [40, 80, 90]\ncount = 0\nfor s in scores:\n    if s >= 50:\n        count = count + 1\nprint(f\"{count} passed\")\n\nWhat prints?",
+      "options": [
+        "2 passed",
+        "3 passed",
+        "1 passed",
+        "0 passed"
+      ],
+      "answer": 0,
+      "explanation": "80 and 90 pass; 40 doesn't. '2 passed'."
+    },
+    {
+      "id": "u58l04e02",
+      "type": "fillBlank",
+      "prompt": "Show the count in a sentence:\n\nprint(f\"Rainy days: {____}\")",
+      "answer": "count",
+      "acceptable": [
+        "count"
+      ],
+      "explanation": "Put the variable name in the braces to show its value."
+    },
+    {
+      "id": "u58l04e03",
+      "type": "multipleChoice",
+      "prompt": "After counting, 'count' is just a number. Can you compare it with an if?",
+      "options": [
+        "Yes — e.g. if count > 0: print('some matched')",
+        "No, counts can't be compared",
+        "Only inside the loop",
+        "Only with =="
+      ],
+      "answer": 0,
+      "explanation": "count is an ordinary number after the loop; test it however you like."
+    },
+    {
+      "id": "u58l04e04",
+      "type": "multipleChoice",
+      "prompt": "nums = [1, 2, 3, 4, 5]\ncount = 0\nfor n in nums:\n    if n > 2:\n        count = count + 1\nprint(count)\n\nWhat prints?",
+      "options": [
+        "3",
+        "2",
+        "5",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "3, 4, 5 are over 2 — count 3."
+    },
+    {
+      "id": "u58l04e05",
+      "type": "orderBlocks",
+      "prompt": "Arrange: count how many donations are 10 or more, then print 'Big donors: <count>'.",
+      "blocks": [
+        "print(f\"Big donors: {count}\")",
+        "        count = count + 1",
+        "    if d >= 10:",
+        "for d in donations:",
+        "count = 0",
+        "donations = [5, 20, 10]"
+      ],
+      "answer": [
+        5,
+        4,
+        3,
+        2,
+        1,
+        0
+      ],
+      "explanation": "List, start count, loop, if (indent 1), +1 (indent 2), labelled print. 20 and 10 match -> 2."
+    },
+    {
+      "id": "u58l04e06",
+      "type": "trueFalse",
+      "prompt": "You can label the count with an f-string because count is a number variable after the loop.",
+      "answer": true,
+      "explanation": "Once the loop ends, count is a plain number ready to print or label."
+    },
+    {
+      "id": "u58l04e07",
+      "type": "multipleChoice",
+      "prompt": "Which line correctly counts a match into a counter named passed?",
+      "options": [
+        "passed = passed + 1",
+        "passed = passed + s",
+        "passed = 1",
+        "s = s + 1"
+      ],
+      "answer": 0,
+      "explanation": "Counting adds 1 per match: passed = passed + 1 (adding s would total, not count)."
+    },
+    {
+      "id": "u58l04e08",
+      "type": "multipleChoice",
+      "prompt": "ages = [12, 20, 16, 40]\ncount = 0\nfor age in ages:\n    if age >= 18:\n        count = count + 1\nprint(f\"{count} adults\")\n\nWhat prints?",
+      "options": [
+        "2 adults",
+        "4 adults",
+        "1 adults",
+        "0 adults"
+      ],
+      "answer": 0,
+      "explanation": "20 and 40 are >= 18 — '2 adults'."
+    },
+    {
+      "id": "u58l04e09",
+      "type": "fillBlank",
+      "prompt": "Use the += shorthand to count a match:\n\nif n > 0:\n    count ____ 1",
+      "answer": "+=",
+      "acceptable": [
+        "+="
+      ],
+      "explanation": "count += 1 is shorthand for count = count + 1."
+    },
+    {
+      "id": "u58l04e10",
+      "type": "multipleChoice",
+      "prompt": "The two key lines of the count tool are...",
+      "options": [
+        "count = 0 before the loop, and count = count + 1 inside an if",
+        "count = value, print",
+        "for only",
+        "input, print"
+      ],
+      "answer": 0,
+      "explanation": "Initialise to 0, then add 1 inside the if for each match."
+    }
+  ]
+}

@@ -1,0 +1,125 @@
+{
+  "unitId": "u09",
+  "lessonId": "u09l02",
+  "title": "Print shows the value at that moment",
+  "idea": "Where a print sits matters. It shows whatever number the variable holds on that line — not before, not after. (Numbers only — text as data comes later.)",
+  "exercises": [
+    {
+      "id": "u09l02e01",
+      "type": "multipleChoice",
+      "prompt": "What will this show?\n\nlevel = 1\nprint(level)\nlevel = 2",
+      "options": [
+        "1",
+        "2",
+        "1 2",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "The print runs BEFORE the change. At that moment level is still 1."
+    },
+    {
+      "id": "u09l02e02",
+      "type": "multipleChoice",
+      "prompt": "What will this show (two lines)?\n\nlevel = 1\nprint(level)\nlevel = 2\nprint(level)",
+      "options": [
+        "1 then 2",
+        "2 then 1",
+        "1 then 1",
+        "2 then 2"
+      ],
+      "answer": 0,
+      "explanation": "The first print sees 1. Then we change it. The second print sees 2. Two lines, two moments."
+    },
+    {
+      "id": "u09l02e03",
+      "type": "trueFalse",
+      "prompt": "A print shows the value the variable had WHEN that print line ran.",
+      "answer": true,
+      "explanation": "Yes! Order matters. The computer reads top to bottom, so timing decides what you see."
+    },
+    {
+      "id": "u09l02e04",
+      "type": "multipleChoice",
+      "prompt": "What will this show?\n\nfloor = 1\nfloor = 2\nprint(floor)",
+      "options": [
+        "2",
+        "1",
+        "1 2",
+        "12"
+      ],
+      "answer": 0,
+      "explanation": "By the time print runs, floor has already been changed to 2."
+    },
+    {
+      "id": "u09l02e05",
+      "type": "orderBlocks",
+      "prompt": "Put these lines in order so it shows 10 first, then 20.",
+      "blocks": [
+        "speed = 10",
+        "print(speed)",
+        "speed = 20",
+        "print(speed)"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "Set 10, print it, change to 20, print again. Each print catches the value at its moment."
+    },
+    {
+      "id": "u09l02e06",
+      "type": "multipleChoice",
+      "prompt": "Where should print(count) go to show the value 3?\n\ncount = 1\n____\ncount = 3",
+      "options": [
+        "After count = 3, so it sees 3",
+        "It can go anywhere",
+        "Before count = 1",
+        "Between the two lines"
+      ],
+      "answer": 0,
+      "explanation": "To see 3, the print must run after count becomes 3. Position decides the answer."
+    },
+    {
+      "id": "u09l02e07",
+      "type": "trueFalse",
+      "prompt": "This shows 5:\n\nbattery = 5\nprint(battery)\nbattery = 9",
+      "answer": true,
+      "explanation": "The print runs while battery is still 5. The change to 9 happens after — too late to matter here."
+    },
+    {
+      "id": "u09l02e08",
+      "type": "multipleChoice",
+      "prompt": "What will this show (two lines)?\n\nprice = 5\nprint(price)\nprice = 5\nprint(price)",
+      "options": [
+        "5 then 5",
+        "5 then 10",
+        "10 then 10",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "We set it to 5, print 5, set it to 5 again (same value), print 5. Both prints see 5."
+    },
+    {
+      "id": "u09l02e09",
+      "type": "multipleChoice",
+      "prompt": "What will this show (two lines)?\n\nscore = 3\nscore = 8\nprint(score)\nprint(score)",
+      "options": [
+        "8 then 8",
+        "3 then 8",
+        "8 then 3",
+        "3 then 3"
+      ],
+      "answer": 0,
+      "explanation": "The value is 8 by the time we print. Nothing changes between the two prints, so both show 8."
+    },
+    {
+      "id": "u09l02e10",
+      "type": "trueFalse",
+      "prompt": "Moving a print to a different line can change what number it shows.",
+      "answer": true,
+      "explanation": "Yes! The same print can show different values depending on where it sits. You're thinking like a programmer now."
+    }
+  ]
+}

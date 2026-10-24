@@ -1,0 +1,136 @@
+{
+  "unitId": "u68",
+  "lessonId": "u68l05",
+  "title": "Solve it: how many passed, and who",
+  "idea": "LOOP: an unseen problem using BOTH count and filter on the same data. Reuses conditions and append.",
+  "exercises": [
+    {
+      "id": "u68l05e01",
+      "type": "multipleChoice",
+      "prompt": "PROBLEM: scores = [40, 75, 60, 30], pass mark 50. First question: HOW MANY passed? Which tool?",
+      "options": [
+        "count with a condition",
+        "sum",
+        "max",
+        "search"
+      ],
+      "answer": 0,
+      "explanation": "'How many passed' is a count of items meeting the pass test."
+    },
+    {
+      "id": "u68l05e02",
+      "type": "multipleChoice",
+      "prompt": "By hand, which scores are 50 or more?",
+      "options": [
+        "75 and 60",
+        "40 and 30",
+        "all four",
+        "none"
+      ],
+      "answer": 0,
+      "explanation": "75 and 60 pass; 40 and 30 don't. So the count is 2 and the passers are [75, 60]."
+    },
+    {
+      "id": "u68l05e03",
+      "type": "fillBlank",
+      "prompt": "Count the passers. Complete the test (pass = 50 or more):\n\ncount = 0\nfor s in scores:\n    if s ____ 50:\n        count = count + 1",
+      "answer": ">=",
+      "acceptable": [
+        ">="
+      ],
+      "explanation": "'50 or more' is >=, so a score of exactly 50 would count too. Reading the words picks the operator."
+    },
+    {
+      "id": "u68l05e04",
+      "type": "multipleChoice",
+      "prompt": "After that loop, what is count?",
+      "options": [
+        "2",
+        "4",
+        "1",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "Two scores (75, 60) pass, so count = 2 — matching the hand answer."
+    },
+    {
+      "id": "u68l05e05",
+      "type": "multipleChoice",
+      "prompt": "Second question: build a LIST of the passing scores. Which tool now?",
+      "options": [
+        "filter (empty list + append matches)",
+        "count",
+        "max",
+        "search"
+      ],
+      "answer": 0,
+      "explanation": "'A list of the passers' is a filter: start empty and append each score that passes."
+    },
+    {
+      "id": "u68l05e06",
+      "type": "orderBlocks",
+      "prompt": "Arrange the filter for the passers.",
+      "blocks": [
+        "passed = []",
+        "for s in scores:",
+        "    if s >= 50:",
+        "        passed.append(s)",
+        "print(passed)"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "explanation": "Empty list, loop with the >= test, append matches, print. passed becomes [75, 60]."
+    },
+    {
+      "id": "u68l05e07",
+      "type": "multipleChoice",
+      "prompt": "The filter prints [75, 60]. Does that agree with the count of 2?",
+      "options": [
+        "Yes — 2 passers, and the list has 2 items",
+        "No",
+        "Can't tell",
+        "Only sometimes"
+      ],
+      "answer": 0,
+      "explanation": "The list length (2) matches the count (2). Two tools, one consistent answer — a good cross-check."
+    },
+    {
+      "id": "u68l05e08",
+      "type": "trueFalse",
+      "prompt": "The count and the filter use the SAME test (s >= 50); they differ only in what they do on a match.",
+      "answer": true,
+      "explanation": "Yes — count adds 1, filter appends the score. Same condition, different update. That's the shared shape again."
+    },
+    {
+      "id": "u68l05e09",
+      "type": "multipleChoice",
+      "prompt": "Re-check with scores = [50, 49], pass mark 50. Count of passers?",
+      "options": [
+        "1 — only 50 passes (49 fails)",
+        "0",
+        "2",
+        "49"
+      ],
+      "answer": 0,
+      "explanation": "50 passes (>= 50 includes it), 49 fails, so count 1. The boundary 50 is kept because the test is >=."
+    },
+    {
+      "id": "u68l05e10",
+      "type": "multipleChoice",
+      "prompt": "The takeaway from solving both parts:",
+      "options": [
+        "many problems combine tools you already know (count + filter)",
+        "you need a new tool for each question",
+        "counting is impossible",
+        "lists can't be filtered"
+      ],
+      "answer": 0,
+      "explanation": "Real problems mix familiar tools. Spotting which ones to combine is the heart of solving unseen problems."
+    }
+  ]
+}

@@ -1,0 +1,137 @@
+{
+  "unitId": "u73",
+  "lessonId": "u73l01",
+  "title": "A sub-plan that hands back an answer",
+  "idea": "TOOL: 'return' sends a value back from a sub-plan to wherever it was called, so the caller can use it.",
+  "exercises": [
+    {
+      "id": "u73l01e01",
+      "type": "multipleChoice",
+      "prompt": "A sub-plan can PRINT a value. But sometimes you want the caller to USE the value in more math. For that, the sub-plan must...",
+      "options": [
+        "hand the value back with return",
+        "print louder",
+        "use a loop",
+        "forget the value"
+      ],
+      "answer": 0,
+      "explanation": "print just shows a value on screen. return HANDS the value back so the caller can keep working with it."
+    },
+    {
+      "id": "u73l01e02",
+      "type": "multipleChoice",
+      "prompt": "Look:\n\ndef double(n):\n    return n * 2\n\nWhat does the word 'return' do here?",
+      "options": [
+        "Hands the result (n * 2) back to the caller",
+        "Prints n * 2",
+        "Defines a loop",
+        "Names the sub-plan"
+      ],
+      "answer": 0,
+      "explanation": "return takes the value after it and sends it back to whoever called double. Here it hands back n * 2."
+    },
+    {
+      "id": "u73l01e03",
+      "type": "multipleChoice",
+      "prompt": "def double(n):\n    return n * 2\n\nresult = double(5)\n\nWhat is now stored in result?",
+      "options": [
+        "10",
+        "5",
+        "double",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "double(5) hands back 5 * 2 = 10, and that value lands in result. return feeds the call's value."
+    },
+    {
+      "id": "u73l01e04",
+      "type": "trueFalse",
+      "prompt": "A returned value can be stored in a variable, just like any other value.",
+      "answer": true,
+      "explanation": "Yes. 'result = double(5)' puts the handed-back 10 into result. A returned value acts like the value it is."
+    },
+    {
+      "id": "u73l01e05",
+      "type": "multipleChoice",
+      "prompt": "def add(a, b):\n    return a + b\n\nprint(add(3, 4))\n\nWhat appears on screen?",
+      "options": [
+        "7",
+        "add",
+        "3 4",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "add(3, 4) returns 3 + 4 = 7, and print shows that 7. The call becomes the value it returned."
+    },
+    {
+      "id": "u73l01e06",
+      "type": "multipleChoice",
+      "prompt": "Why is return different from print?",
+      "options": [
+        "return gives the value BACK to be used; print only shows it",
+        "They are the same",
+        "return is slower",
+        "return deletes the value"
+      ],
+      "answer": 0,
+      "explanation": "print puts text on screen and that's it. return hands the value back so the caller can store or combine it."
+    },
+    {
+      "id": "u73l01e07",
+      "type": "multipleChoice",
+      "prompt": "def square(n):\n    return n * n\n\nWhat does square(4) hand back?",
+      "options": [
+        "16",
+        "8",
+        "4",
+        "square"
+      ],
+      "answer": 0,
+      "explanation": "square(4) returns 4 * 4 = 16. The call square(4) stands for the value 16."
+    },
+    {
+      "id": "u73l01e08",
+      "type": "tapTokens",
+      "prompt": "Tap tokens to complete the body that hands back n times 3.",
+      "tokens": [
+        "return",
+        "n",
+        "*",
+        "3"
+      ],
+      "answer": [
+        "return",
+        "n",
+        "*",
+        "3"
+      ],
+      "explanation": "The body is 'return n * 3' - it computes n * 3 and hands that value back to the caller."
+    },
+    {
+      "id": "u73l01e09",
+      "type": "multipleChoice",
+      "prompt": "REVIEW: 'def' and the call still matter. What does return ADD on top of them?",
+      "options": [
+        "A value handed back to the caller",
+        "A new loop",
+        "A list",
+        "An input prompt"
+      ],
+      "answer": 0,
+      "explanation": "def defines, the call runs it, and return is the new tool: it lets the finished sub-plan hand a value back."
+    },
+    {
+      "id": "u73l01e10",
+      "type": "multipleChoice",
+      "prompt": "def half(n):\n    return n / 2\n\nx = half(10)\nprint(x)\n\nWhat prints?",
+      "options": [
+        "5.0",
+        "10",
+        "half",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "half(10) returns 10 / 2 = 5.0, stored in x, then printed. Division gives a decimal, so 5.0."
+    }
+  ]
+}

@@ -1,0 +1,142 @@
+{
+  "unitId": "u31",
+  "lessonId": "u31l01",
+  "title": "Solve it: greet by the name they type",
+  "idea": "GUIDED. One problem through UEPCC: read a name with input(), then respond using it.",
+  "problem": "Ask the user for their name, then print a greeting that includes the name they typed.",
+  "exercises": [
+    {
+      "id": "u31l01e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: Ask for a name, then greet that name.\n\nUnderstand first: what is the OUTPUT?",
+      "options": [
+        "A greeting line that includes the typed name",
+        "The length of the name",
+        "A number",
+        "Nothing is printed"
+      ],
+      "answer": 0,
+      "explanation": "The greeting is the output you must produce — name the goal before anything else."
+    },
+    {
+      "id": "u31l01e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "What is the INPUT (the value you start with)?",
+      "options": [
+        "The name the user types in",
+        "The word 'Hello' by itself",
+        "A price",
+        "There is no input"
+      ],
+      "answer": 0,
+      "explanation": "The only input is the name the user types. input() is how we get it."
+    },
+    {
+      "id": "u31l01e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Work it by hand: the user types Ada. What should the program print?",
+      "options": [
+        "Hello, Ada!",
+        "Hello, name!",
+        "Ada types here",
+        "3"
+      ],
+      "answer": 0,
+      "explanation": "With the name Ada, a natural greeting is 'Hello, Ada!'. This hand answer is your check value."
+    },
+    {
+      "id": "u31l01e04",
+      "type": "trueFalse",
+      "uepcc": "E",
+      "prompt": "If the user types a different name, say Sam, the output should change to use Sam.",
+      "answer": true,
+      "explanation": "Yes — the greeting must reflect whatever was typed. That is the whole point of reading input."
+    },
+    {
+      "id": "u31l01e05",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Plan the steps in plain English.",
+      "blocks": [
+        "Print a greeting that includes the stored name",
+        "Ask the user for their name and store it"
+      ],
+      "answer": [
+        1,
+        0
+      ],
+      "explanation": "Plan: ask and store the name, then print a greeting that uses it. Plan in words first."
+    },
+    {
+      "id": "u31l01e06",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Your plan says 'ask and store the name.' Which tool reads what the user types?",
+      "options": [
+        "input()",
+        "print()",
+        "int()",
+        "a comparison =="
+      ],
+      "answer": 0,
+      "explanation": "input() pauses, waits for the user to type, and hands back what they typed as a string."
+    },
+    {
+      "id": "u31l01e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Arrange the code to match the plan.",
+      "blocks": [
+        "name = input(\"Your name? \")",
+        "print(f\"Hello, {name}!\")"
+      ],
+      "answer": [
+        0,
+        1
+      ],
+      "explanation": "Read the name into a variable, then print a greeting using an f-string so the name drops in."
+    },
+    {
+      "id": "u31l01e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Complete the line that drops the name into the greeting:\n\nname = input(\"Your name? \")\nprint(f\"Hello, {____}!\")",
+      "answer": "name",
+      "acceptable": [
+        "name"
+      ],
+      "explanation": "Inside the f-string braces you put the variable name, so the typed value appears in the text."
+    },
+    {
+      "id": "u31l01e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check with the first example: the user types Ada. What prints?",
+      "options": [
+        "Hello, Ada!",
+        "Hello, {name}!",
+        "Hello, input!",
+        "Ada"
+      ],
+      "answer": 0,
+      "explanation": "The f-string puts Ada where {name} is, so it prints 'Hello, Ada!' — matching your hand answer."
+    },
+    {
+      "id": "u31l01e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Re-check with a fresh input: the user types Sam. What prints?",
+      "options": [
+        "Hello, Sam!",
+        "Hello, Ada!",
+        "Hello, name!",
+        "Sam!"
+      ],
+      "answer": 0,
+      "explanation": "It generalizes: {name} now holds Sam, so 'Hello, Sam!'. A good solution works for new inputs."
+    }
+  ]
+}

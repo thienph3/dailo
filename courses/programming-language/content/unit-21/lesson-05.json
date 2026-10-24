@@ -1,0 +1,135 @@
+{
+  "unitId": "u21",
+  "lessonId": "u21l05",
+  "title": "Building an if from a problem",
+  "idea": "Translate a plain-English 'do X when Y' into an if with the right condition and guarded step. Planning before code.",
+  "exercises": [
+    {
+      "id": "u21l05e01",
+      "type": "multipleChoice",
+      "prompt": "PROBLEM: 'Print \"Warning\" when the battery is below 20.' What is the condition?",
+      "options": [
+        "battery < 20",
+        "battery > 20",
+        "battery == 20",
+        "battery = 20"
+      ],
+      "answer": 0,
+      "explanation": "'Below 20' is < 20. The guarded step prints the warning when that is True."
+    },
+    {
+      "id": "u21l05e02",
+      "type": "multipleChoice",
+      "prompt": "PROBLEM: 'Say \"You win\" when points reach 100 or more.' Condition?",
+      "options": [
+        "points >= 100",
+        "points > 100",
+        "points == 100",
+        "points < 100"
+      ],
+      "answer": 0,
+      "explanation": "'100 or more' includes 100, so >=."
+    },
+    {
+      "id": "u21l05e03",
+      "type": "orderBlocks",
+      "prompt": "Build the if: store points = 100, then print 'You win' when points >= 100.",
+      "blocks": [
+        "    print(\"You win\")",
+        "points = 100",
+        "if points >= 100:"
+      ],
+      "answer": [
+        1,
+        2,
+        0
+      ],
+      "explanation": "Store the value, write the if condition, then the indented guarded step."
+    },
+    {
+      "id": "u21l05e04",
+      "type": "fillBlank",
+      "prompt": "PROBLEM: 'Alert when the price is over the budget of 50.' Fill the condition:\n\nprice = 65\nif price ____ 50:\n    print(\"Over budget\")",
+      "answer": ">",
+      "acceptable": [
+        ">"
+      ],
+      "explanation": "'Over 50' is > 50. price is 65, so 65 > 50 is True and the alert prints."
+    },
+    {
+      "id": "u21l05e05",
+      "type": "multipleChoice",
+      "prompt": "PROBLEM: 'Show \"Match\" when the guess equals the secret.' Condition?",
+      "options": [
+        "guess == secret",
+        "guess = secret",
+        "guess != secret",
+        "guess > secret"
+      ],
+      "answer": 0,
+      "explanation": "'Equals' means ==. Remember: two signs to compare."
+    },
+    {
+      "id": "u21l05e06",
+      "type": "multipleChoice",
+      "prompt": "PROBLEM: 'Print \"Try again\" when the answer is not 42.' Condition?",
+      "options": [
+        "answer != 42",
+        "answer == 42",
+        "answer > 42",
+        "answer = 42"
+      ],
+      "answer": 0,
+      "explanation": "'Not 42' is != 42."
+    },
+    {
+      "id": "u21l05e07",
+      "type": "orderBlocks",
+      "prompt": "PROBLEM: 'Warn when fuel is below 10.' Arrange the code.",
+      "blocks": [
+        "    print(\"Low fuel\")",
+        "if fuel < 10:",
+        "fuel = 6"
+      ],
+      "answer": [
+        2,
+        1,
+        0
+      ],
+      "explanation": "Store fuel, condition fuel < 10, then the guarded warning. 6 < 10 is True, so it prints."
+    },
+    {
+      "id": "u21l05e08",
+      "type": "multipleChoice",
+      "prompt": "What should the GUARDED step be for 'print a reminder when a task is due'?",
+      "options": [
+        "print(\"Reminder\")",
+        "the condition itself",
+        "storing the due date",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "The guarded step is the action to take when True - here, printing the reminder."
+    },
+    {
+      "id": "u21l05e09",
+      "type": "trueFalse",
+      "prompt": "Deciding the condition and the guarded step before typing makes the if easier to write correctly.",
+      "answer": true,
+      "explanation": "Yes - naming 'when (condition), do (step)' in words first turns directly into the if."
+    },
+    {
+      "id": "u21l05e10",
+      "type": "multipleChoice",
+      "prompt": "What two pieces does every if need?",
+      "options": [
+        "a condition (the yes/no test) and a guarded step (what to do)",
+        "two numbers",
+        "two prints",
+        "a loop and a list"
+      ],
+      "answer": 0,
+      "explanation": "An if is condition + guarded step: 'when THIS is True, do THAT.'"
+    }
+  ]
+}

@@ -1,0 +1,156 @@
+{
+  "unitId": "u98",
+  "lessonId": "u98l03",
+  "title": "Capstone: count how many scores pass",
+  "idea": "GUIDED CAPSTONE. Count-with-condition over a list: walk items, bump a counter only when a test holds.",
+  "problem": "Count how many scores in [55, 80, 42, 91, 70] are 60 or higher (passing).",
+  "exercises": [
+    {
+      "id": "u98l03e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: how many of [55, 80, 42, 91, 70] are >= 60? OUTPUT is...",
+      "options": [
+        "A count of passing scores",
+        "The passing scores themselves",
+        "The total of scores",
+        "The average"
+      ],
+      "answer": 0,
+      "explanation": "Output is a single count. Not the scores, not their sum — just how many pass."
+    },
+    {
+      "id": "u98l03e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "What's the passing rule (the condition)?",
+      "options": [
+        "score >= 60",
+        "score > 60",
+        "score == 60",
+        "score < 60"
+      ],
+      "answer": 0,
+      "explanation": "'60 or higher' includes 60 itself, so >= 60. Reading the boundary carefully avoids an off-by-one in logic."
+    },
+    {
+      "id": "u98l03e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example by hand: which of 55, 80, 42, 91, 70 are >= 60?",
+      "options": [
+        "80, 91, 70",
+        "55, 80, 91",
+        "80, 91",
+        "all of them"
+      ],
+      "answer": 0,
+      "explanation": "80, 91, 70 pass; 55 and 42 don't. Three pass."
+    },
+    {
+      "id": "u98l03e04",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "So the hand-worked count is...",
+      "options": [
+        "3",
+        "2",
+        "5",
+        "4"
+      ],
+      "answer": 0,
+      "explanation": "Three scores are 60 or higher. That's our check value."
+    },
+    {
+      "id": "u98l03e05",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Plan the count. Order the steps.",
+      "blocks": [
+        "If the score passes, add 1 to the counter",
+        "Start a passing counter at 0",
+        "For each score in the list",
+        "Show the counter"
+      ],
+      "answer": [
+        1,
+        2,
+        0,
+        3
+      ],
+      "explanation": "Counter at 0, scan each score, bump on pass, show at the end. The count-with-condition pattern."
+    },
+    {
+      "id": "u98l03e06",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Where does the counter get updated — inside or outside the if?",
+      "options": [
+        "Inside the if, so only passing scores count",
+        "Outside, for every score",
+        "Before the loop",
+        "Never"
+      ],
+      "answer": 0,
+      "explanation": "Only passing scores should increment it, so the +1 lives INSIDE the if."
+    },
+    {
+      "id": "u98l03e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code the loop. Arrange the lines.",
+      "blocks": [
+        "    if score >= 60:",
+        "passing = 0",
+        "for score in scores:",
+        "        passing = passing + 1"
+      ],
+      "answer": [
+        1,
+        2,
+        0,
+        3
+      ],
+      "explanation": "passing=0, loop scores, test >=60, increment inside the if. Indentation nests the +1 under the condition."
+    },
+    {
+      "id": "u98l03e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Complete the passing test (60 counts as passing):\n\npassing = 0\nfor score in scores:\n    if score ____ 60:\n        passing = passing + 1",
+      "answer": ">=",
+      "acceptable": [
+        ">="
+      ],
+      "explanation": "Use >= so 60 itself passes. > would wrongly exclude a score of exactly 60."
+    },
+    {
+      "id": "u98l03e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Run it: passing is 3. Hand said 3. Verdict?",
+      "options": [
+        "Passes",
+        "Fails",
+        "Unknown",
+        "Rewrite example"
+      ],
+      "answer": 0,
+      "explanation": "Matches. The counter rose only on 80, 91, and 70."
+    },
+    {
+      "id": "u98l03e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Re-run with threshold 70 (change the 60 to 70). How many pass now?",
+      "options": [
+        "3",
+        "2",
+        "4",
+        "1"
+      ],
+      "answer": 0,
+      "explanation": "80, 91, 70 are all >= 70, so still 3 (70 passes because of >=). Boundary reasoning pays off."
+    }
+  ]
+}

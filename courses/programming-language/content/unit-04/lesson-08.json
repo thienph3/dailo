@@ -1,0 +1,119 @@
+{
+  "unitId": "u04",
+  "lessonId": "u04l08",
+  "title": "Spot the flawed example",
+  "idea": "A bad example can mislead you. Learn to spot one that doesn't match the task.",
+  "exercises": [
+    {
+      "id": "u04l08e01",
+      "type": "multipleChoice",
+      "prompt": "Task: 'show the word Cat'. Which example is flawed?",
+      "options": [
+        "Input: Cat -> Output: Dog",
+        "Input: Cat -> Output: Cat",
+        "Input: Cat -> Output: Cat (one line)",
+        "The word Cat shown on screen"
+      ],
+      "answer": 0,
+      "explanation": "The task asks for Cat, but this example expects Dog. A flawed example would send you building the wrong thing."
+    },
+    {
+      "id": "u04l08e02",
+      "type": "trueFalse",
+      "prompt": "If your example doesn't match the task, the example is the problem — not the task.",
+      "answer": true,
+      "explanation": "The task is the source of truth. A mismatched example must be corrected to match the task."
+    },
+    {
+      "id": "u04l08e03",
+      "type": "multipleChoice",
+      "prompt": "Task: 'show A, then B'. A friend's example says 'Output: B then A'. What's wrong?",
+      "options": [
+        "The lines are in the wrong order",
+        "Nothing is wrong",
+        "There are too many lines",
+        "B is not allowed"
+      ],
+      "answer": 0,
+      "explanation": "The task says A then B. The example flipped them. Order is part of the task, so the example is flawed."
+    },
+    {
+      "id": "u04l08e04",
+      "type": "multiSelect",
+      "prompt": "Task: 'show Up, then Down'. Which examples are flawed? (pick all)",
+      "options": [
+        "Output line 1: Down, line 2: Up",
+        "Output line 1: Up, line 2: Down",
+        "Output: just Up",
+        "Output line 1: UpDown (one line)"
+      ],
+      "answer": [0, 2, 3],
+      "explanation": "Only 'Up then Down' on two lines is correct. Swapped, missing a line, or squished all fail to match the task."
+    },
+    {
+      "id": "u04l08e05",
+      "type": "multipleChoice",
+      "prompt": "Task: 'show the number 5'. A flawed example says the output is 'five'. Why is it flawed?",
+      "options": [
+        "The task wants the digit 5, not the word five",
+        "five is spelled wrong",
+        "Numbers can't be shown",
+        "It isn't flawed"
+      ],
+      "answer": 0,
+      "explanation": "The task asks for 5. 'five' is a different output. The example doesn't match what the task requested."
+    },
+    {
+      "id": "u04l08e06",
+      "type": "trueFalse",
+      "prompt": "A flawed example is dangerous because it makes you build the wrong thing and still think you passed.",
+      "answer": true,
+      "explanation": "If your target is wrong, matching it proves nothing. Always check the example against the task first."
+    },
+    {
+      "id": "u04l08e07",
+      "type": "matchPairs",
+      "prompt": "Match each example to whether it matches the task 'show Hello'.",
+      "pairs": [
+        { "left": "Output: Hello", "right": "Matches" },
+        { "left": "Output: Hi", "right": "Flawed" },
+        { "left": "Output: HELLO", "right": "Flawed" }
+      ],
+      "explanation": "Only the exact word Hello matches. Hi is a different word; HELLO is a different case."
+    },
+    {
+      "id": "u04l08e08",
+      "type": "multipleChoice",
+      "prompt": "How do you catch a flawed example?",
+      "options": [
+        "Read the task again and compare it to your example",
+        "Run the code first",
+        "Ask the computer to guess",
+        "You can't catch it"
+      ],
+      "answer": 0,
+      "explanation": "Compare your example straight back to the task's words. If they differ, fix the example."
+    },
+    {
+      "id": "u04l08e09",
+      "type": "fillBlank",
+      "prompt": "Task: 'show the word Go'. A flawed example expects 'Stop'. Write the CORRECT expected output:",
+      "answer": "Go",
+      "acceptable": ["Go", "go"],
+      "explanation": "The task wants Go, so the correct expected output is Go — not Stop."
+    },
+    {
+      "id": "u04l08e10",
+      "type": "multipleChoice",
+      "prompt": "Task: 'show One, then Two, then Three'. Which example is correct (not flawed)?",
+      "options": [
+        "Line 1: One, Line 2: Two, Line 3: Three",
+        "Line 1: Three, Line 2: Two, Line 3: One",
+        "Line 1: One, Line 2: Three",
+        "Line 1: One Two Three"
+      ],
+      "answer": 0,
+      "explanation": "The task lists One, Two, Three in order on three lines. Only the first example matches it exactly."
+    }
+  ]
+}

@@ -1,0 +1,136 @@
+{
+  "unitId": "u81",
+  "lessonId": "u81l03",
+  "title": "The wrong sub-result: a helper that returns the wrong number",
+  "idea": "Sometimes a helper runs fine but computes the WRONG value — an off-by-one, the wrong operation, or returning before it should. Catch it by comparing the helper's output to a hand-worked example.",
+  "exercises": [
+    {
+      "type": "multipleChoice",
+      "prompt": "double(n) is supposed to return n*2, but a teammate wrote 'return n + 2'. For double(5) it returns 7. How do you KNOW it's wrong?",
+      "options": [
+        "Your hand example says 5 doubled is 10, not 7",
+        "It looks fine, so it's right",
+        "You can't know",
+        "Because 7 is odd"
+      ],
+      "answer": 0,
+      "explanation": "The hand-worked answer (10) doesn't match the output (7). That mismatch is how you catch a wrong sub-result.",
+      "id": "u81l03e01"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "A helper that returns a number without crashing must be returning the CORRECT number.",
+      "answer": false,
+      "explanation": "No. It can run perfectly and still compute the wrong value. 'Runs' and 'correct' are different things.",
+      "id": "u81l03e02"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "area(w, h) should return w*h. It returns w + h. For area(3, 4) you get 7. The right answer is...",
+      "options": [
+        "12 — the helper used + instead of *",
+        "7 — addition is fine",
+        "3",
+        "4"
+      ],
+      "answer": 0,
+      "explanation": "3 * 4 = 12, not 7. The wrong operation (+ instead of *) produced a wrong sub-result.",
+      "id": "u81l03e03"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "A loop-based total returns 0 for every list. Which bug fits best?",
+      "options": [
+        "It returns inside the loop on the first pass, before adding the rest",
+        "It uses the wrong list",
+        "It has too many prints",
+        "Lists can't be summed"
+      ],
+      "answer": 0,
+      "explanation": "Returning too early (inside the loop) hands back a half-done result. A premature return is a classic wrong-sub-result bug.",
+      "id": "u81l03e04"
+    },
+    {
+      "type": "matchPairs",
+      "prompt": "Match each wrong-sub-result symptom to its likely cause.",
+      "pairs": [
+        {
+          "left": "Answer is always 2 too big",
+          "right": "Wrong start value or an extra add"
+        },
+        {
+          "left": "Answer is always one short",
+          "right": "Loop range stops one early"
+        },
+        {
+          "left": "Answer is half-finished",
+          "right": "Returned too early, inside the loop"
+        }
+      ],
+      "explanation": "The shape of the wrongness hints at the cause: too big, off by one, or cut short.",
+      "id": "u81l03e05"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Comparing a helper's output to a value you computed by hand is the surest way to catch a wrong sub-result.",
+      "answer": true,
+      "explanation": "Yes. The hand example is your source of truth. If the helper disagrees with it, the helper is wrong.",
+      "id": "u81l03e06"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "triple(n) returns n*3. For triple(4) a learner expected 7 and calls it buggy. Who's wrong?",
+      "options": [
+        "The learner — 4*3 is 12, the helper is correct",
+        "The helper — it should give 7",
+        "Both",
+        "Neither"
+      ],
+      "answer": 0,
+      "explanation": "4 tripled is 12, not 7. The helper is right; the hand example was done wrong. Re-check your example too!",
+      "id": "u81l03e07"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "You suspect a helper returns the wrong number. The best move is to...",
+      "options": [
+        "Call it alone with a known input and compare to your hand answer",
+        "Change the main program instead",
+        "Add more helpers",
+        "Hope it fixes itself"
+      ],
+      "answer": 0,
+      "explanation": "Isolate the helper: feed it a known input, compare its output to the hand-worked answer. The gap is the bug.",
+      "id": "u81l03e08"
+    },
+    {
+      "type": "orderBlocks",
+      "prompt": "Order the steps to pin down a wrong sub-result.",
+      "blocks": [
+        "Pick an input and work the answer by hand",
+        "Call the helper with that input",
+        "Compare: if outputs differ, the helper is the bug"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Hand answer, call helper, compare. A mismatch points straight at the broken piece.",
+      "id": "u81l03e09"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "The takeaway:",
+      "options": [
+        "A helper can run and still be wrong — compare its output to a hand example",
+        "If it runs, it's correct",
+        "Wrong numbers always crash",
+        "Only loops return wrong values"
+      ],
+      "answer": 0,
+      "explanation": "Running is not the same as correct. The hand example is the judge of a sub-result.",
+      "id": "u81l03e10"
+    }
+  ]
+}

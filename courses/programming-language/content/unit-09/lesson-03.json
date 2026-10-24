@@ -1,0 +1,122 @@
+{
+  "unitId": "u09",
+  "lessonId": "u09l03",
+  "title": "The last value wins",
+  "idea": "If you set a variable many times, only the final number sticks. Everything before it is overwritten. (Numbers only — text as data comes later.)",
+  "exercises": [
+    {
+      "id": "u09l03e01",
+      "type": "multipleChoice",
+      "prompt": "What will this show?\n\npick = 1\npick = 2\npick = 3\nprint(pick)",
+      "options": [
+        "3",
+        "1",
+        "2",
+        "1 2 3"
+      ],
+      "answer": 0,
+      "explanation": "Each line overwrites the last. The final value stored is 3, so that wins."
+    },
+    {
+      "id": "u09l03e02",
+      "type": "trueFalse",
+      "prompt": "If a variable is set three times, the first value is the one that prints.",
+      "answer": false,
+      "explanation": "No — the LAST value wins, not the first. Earlier values are forgotten."
+    },
+    {
+      "id": "u09l03e03",
+      "type": "multipleChoice",
+      "prompt": "What will this show?\n\ntotal = 50\ntotal = 20\ntotal = 80\nprint(total)",
+      "options": [
+        "80",
+        "50",
+        "20",
+        "150"
+      ],
+      "answer": 0,
+      "explanation": "No math happens here — each line just replaces the value. The last one, 80, is what's left."
+    },
+    {
+      "id": "u09l03e04",
+      "type": "fillBlank",
+      "prompt": "You want the box to end up holding 9. Fill the last line.\n\nmedal = 3\nmedal = 6\nmedal = ____\nprint(medal)",
+      "answer": "9",
+      "acceptable": [
+        "9"
+      ],
+      "explanation": "The last value wins, so setting medal = 9 on the final line makes it print 9."
+    },
+    {
+      "id": "u09l03e05",
+      "type": "multipleChoice",
+      "prompt": "Which value will print?\n\nchoice = 7\nchoice = 4\nchoice = 2\nchoice = 7\nprint(choice)",
+      "options": [
+        "7 — because it's set last",
+        "4",
+        "2",
+        "7 — because it's set first"
+      ],
+      "answer": 0,
+      "explanation": "7 appears twice, but only the LAST one matters. The final line sets it to 7."
+    },
+    {
+      "id": "u09l03e06",
+      "type": "trueFalse",
+      "prompt": "Setting a variable to the same number twice in a row changes nothing visible.",
+      "answer": true,
+      "explanation": "Right. If it's already that value, setting it again just keeps it the same."
+    },
+    {
+      "id": "u09l03e07",
+      "type": "orderBlocks",
+      "prompt": "Arrange these so the program ends up showing 9.",
+      "blocks": [
+        "dice = 2",
+        "dice = 6",
+        "dice = 9",
+        "print(dice)"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "The last value before print is 9, so that wins. The 2 and 6 are overwritten."
+    },
+    {
+      "id": "u09l03e08",
+      "type": "multipleChoice",
+      "prompt": "A friend says: 'The box remembers every number you ever put in it.' Are they right?",
+      "options": [
+        "No — it only holds the newest number, one at a time",
+        "Yes, it keeps a list of all of them",
+        "Yes, but only the first two",
+        "No — it forgets everything"
+      ],
+      "answer": 0,
+      "explanation": "A box holds one number at a time. New values replace old ones; nothing is kept in a history."
+    },
+    {
+      "id": "u09l03e09",
+      "type": "multipleChoice",
+      "prompt": "What will this show?\n\nfloor = 3\nfloor = 7\nfloor = 5\nfloor = 3\nprint(floor)",
+      "options": [
+        "3",
+        "7",
+        "5",
+        "3 7 5 3"
+      ],
+      "answer": 0,
+      "explanation": "Lots of changes, but the final line sets it back to 3. The last value always wins."
+    },
+    {
+      "id": "u09l03e10",
+      "type": "trueFalse",
+      "prompt": "To know what a variable will print, read down to the LAST time it was set before that print.",
+      "answer": true,
+      "explanation": "Exactly the trick! Scan down for the final assignment before the print. That's your answer."
+    }
+  ]
+}

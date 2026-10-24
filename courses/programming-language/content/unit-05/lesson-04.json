@@ -1,0 +1,119 @@
+{
+  "unitId": "u05",
+  "lessonId": "u05l04",
+  "title": "Pass or fail?",
+  "idea": "After comparing, you give a clear verdict: pass if everything matches, fail if anything differs.",
+  "exercises": [
+    {
+      "id": "u05l04e01",
+      "type": "multipleChoice",
+      "prompt": "When do you say 'pass'?",
+      "options": [
+        "When every line of the real output matches the expected output",
+        "When at least one line matches",
+        "When the program runs without crashing",
+        "When you feel like it"
+      ],
+      "answer": 0,
+      "explanation": "Pass means a full match — every line, in order. Anything less is a fail."
+    },
+    {
+      "id": "u05l04e02",
+      "type": "trueFalse",
+      "prompt": "A program can run with no crash and still fail the Check.",
+      "answer": true,
+      "explanation": "Running is not the same as being correct. It can run fine and still print the wrong thing — that's a fail."
+    },
+    {
+      "id": "u05l04e03",
+      "type": "multipleChoice",
+      "prompt": "Expected:\nGood\n\nReal output:\nGood\n\nVerdict?",
+      "options": [
+        "Pass",
+        "Fail",
+        "Error",
+        "Unknown"
+      ],
+      "answer": 0,
+      "explanation": "One expected line, one matching real line. Pass."
+    },
+    {
+      "id": "u05l04e04",
+      "type": "multipleChoice",
+      "prompt": "Expected:\nYes\n\nReal output:\nyes\n\nVerdict? (notice the capital letter)",
+      "options": [
+        "Fail — 'Yes' and 'yes' are different",
+        "Pass",
+        "Error",
+        "Pass, capitals don't matter"
+      ],
+      "answer": 0,
+      "explanation": "The computer treats 'Yes' and 'yes' as different. A capital letter mismatch is still a mismatch — fail."
+    },
+    {
+      "id": "u05l04e05",
+      "type": "multipleChoice",
+      "prompt": "Expected:\nHello world\n\nReal output:\nHello  world\n\n(There are two spaces in the real output.) Verdict?",
+      "options": [
+        "Fail — the spacing is different",
+        "Pass",
+        "Error",
+        "Pass, spaces don't count"
+      ],
+      "answer": 0,
+      "explanation": "Extra spaces make the line different. The computer sees every space, so this fails."
+    },
+    {
+      "id": "u05l04e06",
+      "type": "trueFalse",
+      "prompt": "Being close is not the same as a pass.",
+      "answer": true,
+      "explanation": "The Check wants an exact match. 'Close' with a small difference is still a fail."
+    },
+    {
+      "id": "u05l04e07",
+      "type": "matchPairs",
+      "prompt": "Match each situation to its verdict.",
+      "pairs": [
+        { "left": "Every line matches exactly", "right": "Pass" },
+        { "left": "One line is different", "right": "Fail" },
+        { "left": "A line is missing", "right": "Fail" },
+        { "left": "An extra line appears", "right": "Fail" }
+      ],
+      "explanation": "Only a full, exact match is a pass. Any difference — wrong line, missing line, extra line — is a fail."
+    },
+    {
+      "id": "u05l04e08",
+      "type": "multipleChoice",
+      "prompt": "Expected:\nA\nB\n\nReal output:\nA\nB\n\nVerdict?",
+      "options": [
+        "Pass",
+        "Fail",
+        "Half",
+        "Error"
+      ],
+      "answer": 0,
+      "explanation": "Line 1: A = A. Line 2: B = B. Full match. Pass."
+    },
+    {
+      "id": "u05l04e09",
+      "type": "trueFalse",
+      "prompt": "A 'fail' verdict is a bad thing you should hide.",
+      "answer": false,
+      "explanation": "A fail is good news — it means you caught a problem before anyone else did. That's exactly what the Check is for."
+    },
+    {
+      "id": "u05l04e10",
+      "type": "multipleChoice",
+      "prompt": "You compared and found one line different. What do you do next?",
+      "options": [
+        "Mark it fail, then look at what to fix",
+        "Mark it pass anyway",
+        "Ignore it",
+        "Delete the expected output"
+      ],
+      "answer": 0,
+      "explanation": "Fail is honest. It points you at what to fix next. That's how the Check helps you improve the program."
+    }
+  ]
+}

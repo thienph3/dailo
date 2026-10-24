@@ -1,0 +1,151 @@
+{
+  "unitId": "u28",
+  "lessonId": "u28l09",
+  "title": "Putting nested if to work",
+  "idea": "Apply nested if to small everyday rules, mixing in review of elif, and / or, and comparisons from earlier units. Predict and assemble.",
+  "exercises": [
+    {
+      "id": "u28l09e01",
+      "type": "multipleChoice",
+      "prompt": "A parking rule: 'If the gate is open, members park free, others pay.' Trace:\n\ngate_open = True\nmember = False\nif gate_open:\n    if member:\n        print(\"Park free\")\n    else:\n        print(\"Pay to park\")\nelse:\n    print(\"Gate closed\")",
+      "options": [
+        "Pay to park",
+        "Park free",
+        "Gate closed",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "gate_open is True so we enter; member is False, so the inner else: 'Pay to park'."
+    },
+    {
+      "id": "u28l09e02",
+      "type": "multipleChoice",
+      "prompt": "Same code, gate_open = False. What prints?",
+      "options": [
+        "Gate closed",
+        "Pay to park",
+        "Park free",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "The outer if is False, so the member question is skipped and the outer else runs: 'Gate closed'."
+    },
+    {
+      "id": "u28l09e03",
+      "type": "multipleChoice",
+      "prompt": "Review from last unit: inside a branch you can still combine conditions. What prints?\n\nvip = True\nage = 20\nmoney = 30\nif vip:\n    if age >= 18 and money >= 40:\n        print(\"Lounge\")\n    else:\n        print(\"Main floor\")\nelse:\n    print(\"No access\")",
+      "options": [
+        "Main floor",
+        "Lounge",
+        "No access",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "vip is True so we enter; age >= 18 is True but money >= 40 is False, so the 'and' is False and the inner else runs: 'Main floor'."
+    },
+    {
+      "id": "u28l09e04",
+      "type": "orderBlocks",
+      "prompt": "Plan then arrange: 'If it is a weekday, open at 9 if sunny, else open at 10; on weekends stay closed.'",
+      "blocks": [
+        "if weekday:",
+        "    if sunny:",
+        "        print(\"Open at 9\")",
+        "    else:",
+        "        print(\"Open at 10\")",
+        "else:",
+        "    print(\"Closed\")"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "explanation": "The sunny question only matters on weekdays, so it nests inside the weekday branch. The outer else closes on weekends."
+    },
+    {
+      "id": "u28l09e05",
+      "type": "fillBlank",
+      "prompt": "Complete the inner comparison so a temperature of exactly 0 counts as freezing:\n\nif outdoors:\n    if temp __ 0:\n        print(\"Freezing\")\n    else:\n        print(\"Above freezing\")",
+      "answer": "<=",
+      "acceptable": [
+        "<="
+      ],
+      "explanation": "Use <= so 0 itself counts as freezing. A plain < would wrongly call 0 'Above freezing'. Edge-case care, reviewed from earlier units."
+    },
+    {
+      "id": "u28l09e06",
+      "type": "multipleChoice",
+      "prompt": "Review 'or' inside a branch. What prints?\n\nopen_today = True\nholiday = True\nweekend = False\nif open_today:\n    if holiday or weekend:\n        print(\"Short hours\")\n    else:\n        print(\"Normal hours\")\nelse:\n    print(\"Closed\")",
+      "options": [
+        "Short hours",
+        "Normal hours",
+        "Closed",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "open_today is True so we enter; holiday is True, so 'holiday or weekend' is True (only one side needs to hold), giving 'Short hours'."
+    },
+    {
+      "id": "u28l09e07",
+      "type": "trueFalse",
+      "prompt": "You can review and reuse elif, and, or, and comparisons freely inside a nested if's branches.",
+      "answer": true,
+      "explanation": "Yes. Everything learned earlier still works inside a branch - nesting just wraps those tools in a dependent decision."
+    },
+    {
+      "id": "u28l09e08",
+      "type": "multipleChoice",
+      "prompt": "A shipping rule: 'Members ship free. Non-members ship free over 50, else pay 5.' Trace for member = False, total = 60.",
+      "options": [
+        "Free shipping (over 50)",
+        "Pay 5",
+        "Free (member)",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "Not a member, so we enter the else branch; total 60 is over 50, so the inner if gives free shipping."
+    },
+    {
+      "id": "u28l09e09",
+      "type": "orderBlocks",
+      "prompt": "Arrange the shipping rule (member free; else free over 50, else 5).",
+      "blocks": [
+        "if member:",
+        "    print(\"Free (member)\")",
+        "else:",
+        "    if total > 50:",
+        "        print(\"Free shipping\")",
+        "    else:",
+        "        print(\"Pay 5\")"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "explanation": "The amount question only applies to non-members, so it nests inside the else. Members never reach it."
+    },
+    {
+      "id": "u28l09e10",
+      "type": "multipleChoice",
+      "prompt": "Across these examples, what makes nesting the right call?",
+      "options": [
+        "The inner rule only applies within a specific outer branch",
+        "There are exactly two variables",
+        "The variables are numbers",
+        "You dislike elif"
+      ],
+      "answer": 0,
+      "explanation": "Nest when an inner rule is scoped to one branch - members vs non-members, weekday vs weekend. That dependency is the signal."
+    }
+  ]
+}

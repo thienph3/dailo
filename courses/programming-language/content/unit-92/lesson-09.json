@@ -1,0 +1,138 @@
+{
+  "unitId": "u92",
+  "lessonId": "u92l09",
+  "title": "Read a whole woven program",
+  "idea": "TOOL: trace a complete small program that uses a helper, a loop, and a decision together - predicting its output.",
+  "exercises": [
+    {
+      "type": "multipleChoice",
+      "prompt": "Read this program. What does it compute?\n\ndef is_pass(s):\n    if s >= 50:\n        return 1\n    else:\n        return 0\n\npasses = 0\nfor score in [70, 40, 90]:\n    passes = passes + is_pass(score)\nprint(passes)",
+      "options": [
+        "How many scores passed",
+        "The total of the scores",
+        "The average",
+        "The biggest score"
+      ],
+      "answer": 0,
+      "explanation": "is_pass returns 1 per pass; the loop sums those 1s. So passes is the number of passing scores - a counted decision.",
+      "id": "u92l09e01"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Predict the output of that program.",
+      "options": [
+        "2",
+        "3",
+        "1",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "70 and 90 pass (1 each), 40 fails (0). passes = 2.",
+      "id": "u92l09e02"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Returning 1 or 0 from is_pass lets the loop COUNT passes just by adding the returns.",
+      "answer": true,
+      "explanation": "True. A 1/0 return turns 'did it pass?' into a number you can accumulate. A tidy weave of decision and loop.",
+      "id": "u92l09e03"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Read this program. Predict the output.\n\ndef big_fee(p):\n    if p > 100:\n        return 10\n    else:\n        return 0\n\ntotal = 0\nfor price in [120, 50, 300]:\n    total = total + price + big_fee(price)\nprint(total)",
+      "options": [
+        "490",
+        "470",
+        "20",
+        "450"
+      ],
+      "answer": 0,
+      "explanation": "Prices sum to 120+50+300 = 470. big_fee adds 10 for 120 and 300 (not 50) = 20. total = 490. Helper, loop, decision together.",
+      "id": "u92l09e04"
+    },
+    {
+      "type": "fillBlank",
+      "prompt": "In that program, big_fee returns 10 only when the price is over 100. Complete the test:\n\ndef big_fee(p):\n    if p ____ 100:\n        return 10\n    else:\n        return 0",
+      "answer": ">",
+      "acceptable": [
+        ">"
+      ],
+      "explanation": "Over 100 is p > 100. The fee applies to 120 and 300 only.",
+      "id": "u92l09e05"
+    },
+    {
+      "type": "orderBlocks",
+      "prompt": "Arrange this woven program: count passes with a helper.",
+      "blocks": [
+        "def is_pass(s):",
+        "    if s >= 50:",
+        "        return 1",
+        "    else:",
+        "        return 0",
+        "passes = 0",
+        "for score in [70, 40, 90]:",
+        "    passes = passes + is_pass(score)",
+        "print(passes)"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "explanation": "Define the decision helper, start the counter, loop adding its 1/0 result, print. Output: 2.",
+      "id": "u92l09e06"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Trace: with scores [10, 20, 30] (all fail), what does the passes program print?",
+      "options": [
+        "0",
+        "3",
+        "1",
+        "60"
+      ],
+      "answer": 0,
+      "explanation": "is_pass returns 0 for all three, so passes stays 0. The woven logic handles the all-fail case correctly.",
+      "id": "u92l09e07"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "You can understand a woven program by tracing ONE item through the helper, then through the loop's accumulate step.",
+      "answer": true,
+      "explanation": "True. Follow one score: is_pass gives 1 or 0, the loop adds it. Repeat mentally for each item - that's reading integrated code.",
+      "id": "u92l09e08"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\ndef is_pass(s):\n    if s >= 50:\n        return 1\n    else:\n        return 0\n\npasses = 0\nfor score in [50, 49, 51]:\n    passes = passes + is_pass(score)\nprint(passes)",
+      "options": [
+        "2",
+        "3",
+        "1",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "50 passes (>= 50), 49 fails, 51 passes. passes = 2. The edge value 50 passes because the test is >= not >.",
+      "id": "u92l09e09"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "The skill this lesson builds:",
+      "options": [
+        "Confidently reading and predicting a program that weaves all three threads",
+        "Only writing new code",
+        "Avoiding functions",
+        "Ignoring the loop"
+      ],
+      "answer": 0,
+      "explanation": "Tracing woven programs - helper, loop, decision - is how you verify and debug integrated solutions.",
+      "id": "u92l09e10"
+    }
+  ]
+}

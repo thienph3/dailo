@@ -1,0 +1,125 @@
+{
+  "unitId": "u42",
+  "lessonId": "u42l07",
+  "title": "Reading the current value in the condition",
+  "idea": "The if's condition uses the loop variable i, which changes each pass — so the same condition gives different answers across passes. Deepen the mental model.",
+  "exercises": [
+    {
+      "id": "u42l07e01",
+      "type": "multipleChoice",
+      "prompt": "Why can the SAME condition (if i > 3) act differently on different passes?",
+      "options": [
+        "Because i changes each pass, so the comparison's result changes too",
+        "The condition randomly changes",
+        "if statements are unpredictable",
+        "It can't — it's always the same"
+      ],
+      "answer": 0,
+      "explanation": "The condition reads i, and i is different each pass. So i > 3 is false early and true later."
+    },
+    {
+      "id": "u42l07e02",
+      "type": "multipleChoice",
+      "prompt": "For i in range(1, 6), on which passes is i > 3 true?",
+      "options": [
+        "When i is 4 and 5",
+        "Every pass",
+        "Never",
+        "Only when i is 3"
+      ],
+      "answer": 0,
+      "explanation": "i > 3 is true for 4 and 5, false for 1, 2, 3. The same test, re-checked with each new i."
+    },
+    {
+      "id": "u42l07e03",
+      "type": "multipleChoice",
+      "prompt": "What shows?\n\nfor i in range(1, 6):\n    if i == 3:\n        print(\"found 3\")\n    print(i)",
+      "options": [
+        "1\n2\nfound 3\n3\n4\n5",
+        "found 3",
+        "1\n2\n3\n4\n5",
+        "found 3\n1\n2\n3\n4\n5"
+      ],
+      "answer": 0,
+      "explanation": "print(i) runs every pass; 'found 3' only when i == 3. The condition fires on exactly one pass."
+    },
+    {
+      "id": "u42l07e04",
+      "type": "trueFalse",
+      "prompt": "A condition inside a loop is re-evaluated with the current value of i on every single pass.",
+      "answer": true,
+      "explanation": "Yes. Each pass, the if looks at the current i and decides afresh. That's why its behavior can change pass to pass."
+    },
+    {
+      "id": "u42l07e05",
+      "type": "multipleChoice",
+      "prompt": "What shows?\n\nfor i in range(1, 6):\n    if i >= 3:\n        print(i)",
+      "options": [
+        "3\n4\n5",
+        "4\n5",
+        "1\n2\n3",
+        "3"
+      ],
+      "answer": 0,
+      "explanation": ">= includes 3, so 3, 4, 5 print. Recall: >= means 'greater than OR equal to'."
+    },
+    {
+      "id": "u42l07e06",
+      "type": "matchPairs",
+      "prompt": "Match each condition to the i values that pass it, for i in range(1, 6).",
+      "pairs": [
+        {"left": "i > 3", "right": "4, 5"},
+        {"left": "i >= 3", "right": "3, 4, 5"},
+        {"left": "i == 1", "right": "1"}
+      ],
+      "explanation": "Each condition selects a different set of passes as i walks 1 to 5. Reading the comparison predicts the set."
+    },
+    {
+      "id": "u42l07e07",
+      "type": "multipleChoice",
+      "prompt": "You can compare i to another variable too. What shows?\n\nlimit = 3\nfor i in range(1, 6):\n    if i > limit:\n        print(i)",
+      "options": [
+        "4\n5",
+        "3\n4\n5",
+        "1\n2\n3",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "i > limit (3) is true for 4 and 5. The condition can compare i to a named value, not just a literal."
+    },
+    {
+      "id": "u42l07e08",
+      "type": "fillBlank",
+      "prompt": "Fill the comparison so only values at or above limit print:\n\nlimit = 3\nfor i in range(1, 6):\n    if i ____ limit:\n        print(i)",
+      "answer": ">=",
+      "acceptable": [">="],
+      "explanation": ">= includes the limit itself, so 3, 4, 5 print. Choosing > vs >= decides whether the boundary is included."
+    },
+    {
+      "id": "u42l07e09",
+      "type": "multipleChoice",
+      "prompt": "What shows?\n\nfor i in range(1, 6):\n    if i != 3:\n        print(i)",
+      "options": [
+        "1\n2\n4\n5",
+        "3",
+        "1\n2\n3\n4\n5",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "!= means 'not equal'. Every i except 3 passes, so 1, 2, 4, 5 print. The one value where it's equal is skipped."
+    },
+    {
+      "id": "u42l07e10",
+      "type": "multipleChoice",
+      "prompt": "A learner expected if i > 3 to act on every pass. Why does it only act on some?",
+      "options": [
+        "Because i is small (1, 2, 3) early and the test is false then — it only becomes true at 4",
+        "The loop is broken",
+        "i never changes",
+        "> should be >="
+      ],
+      "answer": 0,
+      "explanation": "The condition depends on i, which starts small. It stays false until i grows past 3. Conditions in loops respond to the changing value."
+    }
+  ]
+}

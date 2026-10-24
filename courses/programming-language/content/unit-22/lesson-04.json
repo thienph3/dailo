@@ -1,0 +1,143 @@
+{
+  "unitId": "u22",
+  "lessonId": "u22l04",
+  "title": "Turning a two-outcome problem into if/else",
+  "idea": "Problems that say 'do A, otherwise B' map directly onto if/else. Planning the condition and the two branches. Thinking-first.",
+  "exercises": [
+    {
+      "id": "u22l04e01",
+      "type": "multipleChoice",
+      "prompt": "PROBLEM: 'If the score is 50 or more, say Pass, otherwise say Fail.' The condition goes with the if. What is it?",
+      "options": [
+        "score >= 50",
+        "score < 50",
+        "score == 50",
+        "score != 50"
+      ],
+      "answer": 0,
+      "explanation": "Put the 'pass' test on the if: score >= 50. The else then handles everything below 50 (Fail)."
+    },
+    {
+      "id": "u22l04e02",
+      "type": "multipleChoice",
+      "prompt": "For that problem, what goes in the else branch?",
+      "options": [
+        "print(\"Fail\")",
+        "print(\"Pass\")",
+        "score = 50",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "The else is the 'otherwise' outcome - here, print Fail."
+    },
+    {
+      "id": "u22l04e03",
+      "type": "orderBlocks",
+      "prompt": "Build it: score = 72, pass if >= 50, otherwise fail.",
+      "blocks": [
+        "    print(\"Fail\")",
+        "if score >= 50:",
+        "    print(\"Pass\")",
+        "else:",
+        "score = 72"
+      ],
+      "answer": [
+        4,
+        1,
+        2,
+        3,
+        0
+      ],
+      "explanation": "Store score, if with its Pass branch, then else with its Fail branch. 72 >= 50 is True, so Pass prints."
+    },
+    {
+      "id": "u22l04e04",
+      "type": "multipleChoice",
+      "prompt": "PROBLEM: 'A number is even or odd.' Which condition fits the if?",
+      "options": [
+        "n % 2 == 0",
+        "n == 2",
+        "n > 2",
+        "n != 0"
+      ],
+      "answer": 0,
+      "explanation": "Even means the remainder when divided by 2 is 0: n % 2 == 0. The else covers odd."
+    },
+    {
+      "id": "u22l04e05",
+      "type": "fillBlank",
+      "prompt": "'Positive or not' - fill the condition:\n\nif n ____ 0:\n    print(\"positive\")\nelse:\n    print(\"zero or less\")",
+      "answer": ">",
+      "acceptable": [
+        ">"
+      ],
+      "explanation": "'Positive' means greater than 0: n > 0. Everything else (0 and negatives) goes to the else."
+    },
+    {
+      "id": "u22l04e06",
+      "type": "multipleChoice",
+      "prompt": "PROBLEM: 'If the guess matches the secret, say Correct, otherwise Wrong.' Condition?",
+      "options": [
+        "guess == secret",
+        "guess != secret",
+        "guess > secret",
+        "guess = secret"
+      ],
+      "answer": 0,
+      "explanation": "'Matches' means equal: guess == secret. The else branch prints Wrong."
+    },
+    {
+      "id": "u22l04e07",
+      "type": "multipleChoice",
+      "prompt": "PROBLEM: 'Charge 0 shipping if total is over 50, otherwise charge 5.' Which should the if test?",
+      "options": [
+        "total > 50",
+        "total < 50",
+        "total == 50",
+        "total != 50"
+      ],
+      "answer": 0,
+      "explanation": "Put the free-shipping test on the if: total > 50. The else handles the paid case."
+    },
+    {
+      "id": "u22l04e08",
+      "type": "orderBlocks",
+      "prompt": "Build: n = 7, print 'even' if n % 2 == 0, otherwise 'odd'.",
+      "blocks": [
+        "else:",
+        "    print(\"even\")",
+        "if n % 2 == 0:",
+        "    print(\"odd\")",
+        "n = 7"
+      ],
+      "answer": [
+        4,
+        2,
+        1,
+        0,
+        3
+      ],
+      "explanation": "Store n, if with 'even', else with 'odd'. 7 % 2 is 1, so the else runs: odd."
+    },
+    {
+      "id": "u22l04e09",
+      "type": "trueFalse",
+      "prompt": "Planning the condition and BOTH outcomes in words first makes the if/else easier to write.",
+      "answer": true,
+      "explanation": "Yes - 'when X do A, otherwise B' translates straight into if/else once you've named all three parts."
+    },
+    {
+      "id": "u22l04e10",
+      "type": "multipleChoice",
+      "prompt": "What three things does a two-outcome problem give you?",
+      "options": [
+        "a condition, the True outcome, and the False outcome",
+        "three numbers",
+        "three prints that all run",
+        "a loop and a list"
+      ],
+      "answer": 0,
+      "explanation": "Condition + two outcomes = if/else. Spotting all three is the planning skill."
+    }
+  ]
+}

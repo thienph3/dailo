@@ -1,0 +1,154 @@
+{
+  "unitId": "u65",
+  "lessonId": "u65l01",
+  "title": "Solve it: keep only the passing scores",
+  "idea": "GUIDED PROBLEM (filter). Walk UEPCC on a keep-only problem: build a new list of the scores that are 50 or more. Every value in the problem maps to a named variable; the pass mark is not hardcoded.",
+  "problem": "A class has these scores: [40, 70, 55, 30, 90]. The pass mark is 50. Build a list of only the scores that passed.",
+  "exercises": [
+    {
+      "id": "u65l01e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: scores are [40, 70, 55, 30, 90], the pass mark is 50. Build a list of only the scores that passed.\n\nFirst \u2014 Understand. What is the OUTPUT (what must you produce)?",
+      "options": [
+        "A new list holding only the scores that are 50 or more",
+        "The total of all the scores",
+        "How many scores there are",
+        "The single biggest score"
+      ],
+      "answer": 0,
+      "explanation": "A filter problem produces a NEW, shorter list \u2014 here, only the passing scores. Naming the output first keeps you aimed at the right thing."
+    },
+    {
+      "id": "u65l01e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "Still understanding. What are the INPUTS (the values you start with)?",
+      "options": [
+        "The list of scores and the pass mark (50)",
+        "Only the number 50",
+        "The word 'passed'",
+        "Nothing \u2014 there are no inputs"
+      ],
+      "answer": 0,
+      "explanation": "Two inputs: the list of scores and the pass mark. Both will appear in the code as named variables."
+    },
+    {
+      "id": "u65l01e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Next \u2014 Example. Work it by hand: from [40, 70, 55, 30, 90] with pass mark 50, which scores do you keep?",
+      "options": [
+        "70, 55, 90",
+        "40, 30",
+        "all five",
+        "just 90"
+      ],
+      "answer": 0,
+      "explanation": "Check each: 40 no, 70 yes, 55 yes, 30 no, 90 yes. The kept list is [70, 55, 90]. That hand result is your check value."
+    },
+    {
+      "id": "u65l01e04",
+      "type": "trueFalse",
+      "uepcc": "E",
+      "prompt": "A score exactly equal to the pass mark (50) should be KEPT, because 'pass mark is 50' means 50 and up.",
+      "answer": true,
+      "explanation": "Working the edge by hand matters: 'pass mark 50' includes 50 itself, so the test is >= 50, not > 50."
+    },
+    {
+      "id": "u65l01e05",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Now \u2014 Plan. Put these plain-English steps for a filter in order.",
+      "blocks": [
+        "For each score, if it is 50 or more, add it to the kept list",
+        "Start with an empty 'kept' list",
+        "Show the kept list"
+      ],
+      "answer": [
+        1,
+        0,
+        2
+      ],
+      "explanation": "The filter recipe: start empty, walk every item and append the ones that match, then show the result."
+    },
+    {
+      "id": "u65l01e06",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Your plan says 'start with an empty kept list, then add matches.' Which tools do that?",
+      "options": [
+        "An empty list [] plus append() inside the loop",
+        "print() twice",
+        "Division",
+        "max()"
+      ],
+      "answer": 0,
+      "explanation": "Filtering collects results, so you need a fresh empty list and append() to grow it as you find matches."
+    },
+    {
+      "id": "u65l01e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Now \u2014 Code. Arrange the lines to match your plan (empty list, loop + test + append, show).",
+      "blocks": [
+        "passed = []",
+        "scores = [40, 70, 55, 30, 90]",
+        "pass_mark = 50",
+        "for score in scores:",
+        "    if score >= pass_mark:",
+        "        passed.append(score)",
+        "print(passed)"
+      ],
+      "answer": [
+        1,
+        2,
+        0,
+        3,
+        4,
+        5,
+        6
+      ],
+      "explanation": "Store the scores and the pass_mark, start passed empty, loop and keep each score that is >= pass_mark, then print. Notice pass_mark is a named variable, not a hardcoded 50."
+    },
+    {
+      "id": "u65l01e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Complete the test so only passing scores are kept:\n\nfor score in scores:\n    if score ____ pass_mark:\n        passed.append(score)",
+      "answer": ">=",
+      "acceptable": [
+        ">="
+      ],
+      "explanation": "Pass mark 50 means 50 and up, so the test is >= pass_mark. Using > would wrongly drop a score of exactly 50."
+    },
+    {
+      "id": "u65l01e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Finally \u2014 Check. The code prints [70, 55, 90]. Your hand example said [70, 55, 90]. So...",
+      "options": [
+        "It passes \u2014 the output matches the example",
+        "It fails \u2014 the output is wrong",
+        "You can't tell",
+        "You must change the example"
+      ],
+      "answer": 0,
+      "explanation": "Output matches the by-hand result, so the filter is correct. That is exactly what Check means."
+    },
+    {
+      "id": "u65l01e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Same plan, new inputs: scores = [20, 50, 80] with pass_mark = 50. What will the code print?",
+      "options": [
+        "[50, 80]",
+        "[80]",
+        "[20, 50, 80]",
+        "[20]"
+      ],
+      "answer": 0,
+      "explanation": "20 is below, 50 and 80 are 50-or-more, so [50, 80]. A good filter works for fresh inputs \u2014 and keeps the 50 because the test is >=."
+    }
+  ]
+}

@@ -1,0 +1,142 @@
+{
+  "unitId": "u71",
+  "lessonId": "u71l02",
+  "title": "Calling the sub-plan to run it",
+  "idea": "TOOL: write 'greet()' to CALL (run) a defined sub-plan. Define sets up; call runs. Visible output appears on the call.",
+  "exercises": [
+    {
+      "id": "u71l02e01",
+      "type": "multipleChoice",
+      "prompt": "You defined:\n\ndef greet():\n    print(\"Hi there\")\n\nTo actually RUN it, you write...",
+      "options": [
+        "greet()",
+        "def greet",
+        "print greet",
+        "run greet"
+      ],
+      "answer": 0,
+      "explanation": "Write the name followed by '()' - greet() - to call it. Calling runs the steps inside."
+    },
+    {
+      "id": "u71l02e02",
+      "type": "multipleChoice",
+      "prompt": "Full program:\n\ndef greet():\n    print(\"Hi there\")\ngreet()\n\nWhat prints?",
+      "options": [
+        "Hi there",
+        "Nothing",
+        "greet",
+        "greet()"
+      ],
+      "answer": 0,
+      "explanation": "The def sets greet up. The call greet() runs it, so 'Hi there' prints. Define, then call."
+    },
+    {
+      "id": "u71l02e03",
+      "type": "multipleChoice",
+      "prompt": "In that program, which line DOES the printing happen because of?",
+      "options": [
+        "greet() - the call",
+        "def greet(): - the definition",
+        "the blank line",
+        "none of them"
+      ],
+      "answer": 0,
+      "explanation": "The call greet() triggers the body to run. The def alone printed nothing - the call is what runs it."
+    },
+    {
+      "id": "u71l02e04",
+      "type": "trueFalse",
+      "prompt": "Defining a sub-plan and calling it are two separate actions.",
+      "answer": true,
+      "explanation": "Yes - define describes the job, call runs it. This 'define is not run' idea is the heart of the unit."
+    },
+    {
+      "id": "u71l02e05",
+      "type": "multipleChoice",
+      "prompt": "Program:\n\ndef greet():\n    print(\"Hi\")\ngreet()\ngreet()\n\nWhat prints?",
+      "options": [
+        "Hi\nHi",
+        "Hi",
+        "Nothing",
+        "Hi\nHi\nHi"
+      ],
+      "answer": 0,
+      "explanation": "Defined once, called twice - so 'Hi' prints twice. Define once, call many times."
+    },
+    {
+      "id": "u71l02e06",
+      "type": "tapTokens",
+      "prompt": "greet is already defined. Tap the tokens to CALL it.",
+      "tokens": [
+        "greet",
+        "(",
+        ")"
+      ],
+      "answer": [
+        "greet",
+        "(",
+        ")"
+      ],
+      "explanation": "A call is the name plus empty parentheses: greet(). That runs the sub-plan's steps."
+    },
+    {
+      "id": "u71l02e07",
+      "type": "multipleChoice",
+      "prompt": "Program:\n\ndef greet():\n    print(\"Hi\")\n\nThere is NO call. What prints?",
+      "options": [
+        "Nothing",
+        "Hi",
+        "greet",
+        "an error"
+      ],
+      "answer": 0,
+      "explanation": "A defined-but-never-called sub-plan runs nothing. No call means no output. Define alone is quiet."
+    },
+    {
+      "id": "u71l02e08",
+      "type": "matchPairs",
+      "prompt": "Match each piece of code to what it does.",
+      "pairs": [
+        {
+          "left": "def greet():",
+          "right": "describe the sub-plan"
+        },
+        {
+          "left": "greet()",
+          "right": "run the sub-plan"
+        },
+        {
+          "left": "print(\"Hi\") inside greet",
+          "right": "runs only when greet is called"
+        }
+      ],
+      "explanation": "def describes; greet() runs; the inside print fires only on a call. Define vs run, in real code."
+    },
+    {
+      "id": "u71l02e09",
+      "type": "multipleChoice",
+      "prompt": "Why is being able to call it many times useful?",
+      "options": [
+        "One definition, reused by calling whenever you need it",
+        "It makes the code shorter to define",
+        "Calls are decoration",
+        "It avoids printing"
+      ],
+      "answer": 0,
+      "explanation": "Define the job once, then call it as often as you like. That's 'define once, use many' as real code."
+    },
+    {
+      "id": "u71l02e10",
+      "type": "multipleChoice",
+      "prompt": "The two halves of this unit's tool are...",
+      "options": [
+        "def to define, and name() to call",
+        "print and input",
+        "for and while",
+        "if and else"
+      ],
+      "answer": 0,
+      "explanation": "def writes the sub-plan; name() calls it. Together they let you define a job and run it on demand."
+    }
+  ]
+}

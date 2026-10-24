@@ -1,0 +1,148 @@
+{
+  "unitId": "u98",
+  "lessonId": "u98l05",
+  "title": "Capstone: search a list for a value",
+  "idea": "GUIDED CAPSTONE. Scan for a target, set a found-flag, and stop early with break — the search pattern.",
+  "problem": "Decide whether the number 7 appears in the list [3, 5, 7, 9].",
+  "exercises": [
+    {
+      "id": "u98l05e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: is 7 in [3, 5, 7, 9]? OUTPUT is...",
+      "options": [
+        "A yes/no (found or not)",
+        "The position count",
+        "The whole list",
+        "The sum"
+      ],
+      "answer": 0,
+      "explanation": "Output is a verdict: present or not. Search answers 'does it exist here?'"
+    },
+    {
+      "id": "u98l05e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "To search, what should we REMEMBER while scanning?",
+      "options": [
+        "Whether we've found the target yet (a flag)",
+        "The biggest item",
+        "The total",
+        "The length only"
+      ],
+      "answer": 0,
+      "explanation": "A found-flag. It starts False and flips True the moment we see the target."
+    },
+    {
+      "id": "u98l05e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example by hand: scanning 3, 5, 7, 9 for 7 — at which item do we find it?",
+      "options": [
+        "The third item (7)",
+        "The first item",
+        "Never",
+        "The last item"
+      ],
+      "answer": 0,
+      "explanation": "7 is the third item, so we find it on the third comparison. Then we can stop."
+    },
+    {
+      "id": "u98l05e04",
+      "type": "trueFalse",
+      "uepcc": "E",
+      "prompt": "Once we find 7, there's no reason to keep scanning the rest of the list.",
+      "answer": true,
+      "explanation": "Right — the answer can't change once found, so we break early. For 7 the hand answer is 'found'."
+    },
+    {
+      "id": "u98l05e05",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Plan the search. Order the steps.",
+      "blocks": [
+        "If an item equals the target, set found True and break",
+        "Start found as False",
+        "For each item in the list",
+        "found now holds the answer"
+      ],
+      "answer": [
+        1,
+        2,
+        0,
+        3
+      ],
+      "explanation": "Start False, scan, flip True and break on a match. The flag remembers the result past the loop."
+    },
+    {
+      "id": "u98l05e06",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Which test means 'this item IS the target'?",
+      "options": [
+        "item == target",
+        "item = target",
+        "item > target",
+        "item % target"
+      ],
+      "answer": 0,
+      "explanation": "== compares for equality. (= would assign, a classic slip you've learned to catch.)"
+    },
+    {
+      "id": "u98l05e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code the search body. Arrange the lines.",
+      "blocks": [
+        "        break",
+        "    if item == target:",
+        "        found = True"
+      ],
+      "answer": [
+        1,
+        2,
+        0
+      ],
+      "explanation": "Test equality; on a match set found True and break. The two actions are nested under the if."
+    },
+    {
+      "id": "u98l05e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Complete the match test:\n\ntarget = 7\nfound = False\nfor item in [3, 5, 7, 9]:\n    if item ____ target:\n        found = True\n        break\nprint(found)",
+      "answer": "==",
+      "acceptable": [
+        "=="
+      ],
+      "explanation": "Use == to compare. When item equals 7, found flips to True and we break. Prints True."
+    },
+    {
+      "id": "u98l05e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Run it: found is True. 7 really is in the list. Verdict?",
+      "options": [
+        "Passes",
+        "Fails",
+        "Unknown",
+        "Rewrite example"
+      ],
+      "answer": 0,
+      "explanation": "Matches. The flag flipped at the third item and break stopped the scan."
+    },
+    {
+      "id": "u98l05e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Re-run searching for 8. What does found end as?",
+      "options": [
+        "False — 8 is not in the list",
+        "True",
+        "Unknown",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "No item equals 8, so found never flips: stays False. The 'not found' case works too."
+    }
+  ]
+}

@@ -1,0 +1,126 @@
+{
+  "unitId": "u53",
+  "lessonId": "u53l08",
+  "title": "Problems that depend on the size",
+  "idea": "Apply len() to real 'how many' problems: enough players, is it empty, pick based on count. The unit's goal in action.",
+  "exercises": [
+    {
+      "id": "u53l08e01",
+      "type": "multipleChoice",
+      "prompt": "A game needs at least 4 players. The list players holds who joined. Which test decides if the game can start?",
+      "options": [
+        "len(players) >= 4",
+        "players >= 4",
+        "len(players) == players",
+        "players[4]"
+      ],
+      "answer": 0,
+      "explanation": "You compare the COUNT to 4: len(players) >= 4. You can't compare a whole list to a number directly."
+    },
+    {
+      "id": "u53l08e02",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nplayers = [\"A\", \"B\", \"C\", \"D\", \"E\"]\nif len(players) >= 4:\n    print(\"start\")\nelse:\n    print(\"wait\")",
+      "options": [
+        "start",
+        "wait",
+        "5",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "len(players) is 5, and 5 >= 4 is True, so it prints 'start'. Five players is enough."
+    },
+    {
+      "id": "u53l08e03",
+      "type": "multipleChoice",
+      "prompt": "A shop shows 'cart is empty' when nothing is in it. Which condition is right for cart?",
+      "options": [
+        "len(cart) == 0",
+        "cart == 0",
+        "len(cart) == []",
+        "cart[0] == 0"
+      ],
+      "answer": 0,
+      "explanation": "Empty means a count of 0: len(cart) == 0. Comparing the list itself to 0 doesn't make sense."
+    },
+    {
+      "id": "u53l08e04",
+      "type": "fillBlank",
+      "prompt": "Warn when there are too many items (more than 10). Fill in the count tool:\n\nif ____(cart) > 10:\n    print(\"too many items\")",
+      "answer": "len",
+      "acceptable": ["len"],
+      "explanation": "len(cart) is the count. Comparing it to 10 answers 'are there more than ten items?'"
+    },
+    {
+      "id": "u53l08e05",
+      "type": "orderBlocks",
+      "prompt": "Arrange code that prints 'sold out' when a seats list is empty.",
+      "blocks": [
+        "seats = []",
+        "if len(seats) == 0:",
+        "    print(\"sold out\")"
+      ],
+      "answer": [0, 1, 2],
+      "explanation": "An empty seats list has len 0, so the condition is True and it prints 'sold out'. The empty guard again."
+    },
+    {
+      "id": "u53l08e06",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\norders = [1, 2, 3]\nprint(\"Orders today:\")\nprint(len(orders))",
+      "options": [
+        "Orders today:\n3",
+        "Orders today:\n[1, 2, 3]",
+        "3\nOrders today:",
+        "6"
+      ],
+      "answer": 0,
+      "explanation": "The label prints first, then the count 3. Showing 'how many' is a very common reason to use len."
+    },
+    {
+      "id": "u53l08e07",
+      "type": "trueFalse",
+      "prompt": "To answer 'how many people replied?', you'd use len on the list of replies.",
+      "answer": true,
+      "explanation": "The number of replies is the count of items in the replies list — exactly what len gives."
+    },
+    {
+      "id": "u53l08e08",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nbox = [9, 9]\nif len(box) == 1:\n    print(\"one item\")\nelif len(box) == 2:\n    print(\"two items\")\nelse:\n    print(\"other\")",
+      "options": [
+        "two items",
+        "one item",
+        "other",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "len(box) is 2, so the elif matches and prints 'two items'. len works inside elif chains like any value."
+    },
+    {
+      "id": "u53l08e09",
+      "type": "multipleChoice",
+      "prompt": "Why compare len(list) to a number instead of the list itself?",
+      "options": [
+        "A comparison like > needs numbers, and len turns the list into a count",
+        "Lists are always bigger than numbers",
+        "You can't use len in an if",
+        "The list has no count"
+      ],
+      "answer": 0,
+      "explanation": "Comparisons work on numbers. len converts 'the list' into 'how many', which you can then compare."
+    },
+    {
+      "id": "u53l08e10",
+      "type": "multipleChoice",
+      "prompt": "Same code, new list:\n\nplayers = [\"A\", \"B\"]\nif len(players) >= 4:\n    print(\"start\")\nelse:\n    print(\"wait\")\n\nWhat shows now?",
+      "options": [
+        "wait",
+        "start",
+        "2",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "len(players) is now 2, and 2 >= 4 is False, so the else prints 'wait'. The same size-check adapts to the new count."
+    }
+  ]
+}

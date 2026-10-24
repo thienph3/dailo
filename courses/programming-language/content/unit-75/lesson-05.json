@@ -1,0 +1,150 @@
+{
+  "unitId": "u75",
+  "lessonId": "u75l05",
+  "title": "Solve it: a sub-plan that returns yes/no (is it big enough?)",
+  "idea": "GUIDED PROBLEM (UEPCC). A one-parameter sub-plan returns True/False from a comparison; the caller uses the boolean in an if.",
+  "problem": "Write is_big_enough(height) that hands back whether height is at least 120. Use it to check a rider who is 115 tall.",
+  "exercises": [
+    {
+      "id": "u75l05e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: is_big_enough(height) hands back whether height is at least 120; check a rider who is 115.\n\nWhat KIND of value should it hand back?",
+      "options": [
+        "A True/False (yes or no)",
+        "A total",
+        "A name",
+        "The height doubled"
+      ],
+      "answer": 0,
+      "explanation": "The output is a yes/no — a True/False value — handed back so the caller can decide what to do."
+    },
+    {
+      "id": "u75l05e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "What is the single INPUT (the one parameter)?",
+      "options": [
+        "The rider's height",
+        "The number 120",
+        "True",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "The input is the rider's height. 120 is a fixed limit inside the rule, not an input."
+    },
+    {
+      "id": "u75l05e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example by hand — a rider 115 tall, limit 120. Is 115 at least 120?",
+      "options": [
+        "No (False)",
+        "Yes (True)",
+        "Maybe",
+        "It's equal"
+      ],
+      "answer": 0,
+      "explanation": "115 is less than 120, so 'at least 120' is False. That's the answer the code must hand back."
+    },
+    {
+      "id": "u75l05e04",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "'At least 120' means which comparison?",
+      "options": [
+        "height >= 120",
+        "height > 120",
+        "height == 120",
+        "height < 120"
+      ],
+      "answer": 0,
+      "explanation": "'At least' includes 120 itself, so >= . height >= 120 is True for 120 and up."
+    },
+    {
+      "id": "u75l05e05",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Plan the sub-plan in plain English.",
+      "blocks": [
+        "Name the sub-plan is_big_enough with input height",
+        "Compare height to the limit 120 with >=",
+        "Hand the True/False back"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Define with the height input, compare to 120, return the yes/no. Plan the comparison before coding."
+    },
+    {
+      "id": "u75l05e06",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "A comparison already gives True or False. So the body can be just...",
+      "options": [
+        "return height >= 120",
+        "if height >= 120: print('yes')",
+        "return 120",
+        "print(height)"
+      ],
+      "answer": 0,
+      "explanation": "Return the comparison directly — it IS the True/False. No need for an if just to make a boolean."
+    },
+    {
+      "id": "u75l05e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code it: define is_big_enough, return height >= 120, then print is_big_enough(115).",
+      "blocks": [
+        "def is_big_enough(height):",
+        "    return height >= 120",
+        "print(is_big_enough(115))"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Define with the one parameter, return the comparison, call with 115 inside print."
+    },
+    {
+      "id": "u75l05e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Complete the comparison for 'at least 120':\n\ndef is_big_enough(height):\n    return height ____ 120",
+      "answer": ">=",
+      "acceptable": [">="],
+      "explanation": ">= means 'at least'. height >= 120 is True for 120 and up, False below."
+    },
+    {
+      "id": "u75l05e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check — it prints False for 115, and your hand answer was False. Verdict?",
+      "options": [
+        "Passes",
+        "Fails",
+        "Unknown",
+        "Rewrite the example"
+      ],
+      "answer": 0,
+      "explanation": "Output (False) matches your hand answer (False). Correct."
+    },
+    {
+      "id": "u75l05e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Re-check: is_big_enough(130). What comes back?",
+      "options": [
+        "True",
+        "False",
+        "130",
+        "None"
+      ],
+      "answer": 0,
+      "explanation": "130 >= 120 is True. The sub-plan correctly says this rider is tall enough."
+    }
+  ]
+}

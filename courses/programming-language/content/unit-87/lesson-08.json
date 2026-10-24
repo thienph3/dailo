@@ -1,0 +1,139 @@
+{
+  "unitId": "u87",
+  "lessonId": "u87l08",
+  "title": "When no single pattern fits a part",
+  "idea": "MEET: if a sub-problem seems to need two patterns at once, that's a sign it should be split further into smaller parts.",
+  "exercises": [
+    {
+      "type": "multipleChoice",
+      "prompt": "A sub-problem is 'the average of the big orders'. It seems to need filter AND total AND divide. What does that tell you?",
+      "options": [
+        "Split it further into smaller single-pattern parts",
+        "Pick just one pattern and ignore the rest",
+        "Give up",
+        "Use no pattern"
+      ],
+      "answer": 0,
+      "explanation": "Needing several patterns means the part is still too big. Split it into filter, then total/count, then divide.",
+      "id": "u87l08e01"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "If one sub-problem needs several patterns, it should be split into smaller sub-problems.",
+      "answer": true,
+      "explanation": "Yes — one part, one pattern. Needing several is the signal to decompose that part further.",
+      "id": "u87l08e02"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "'The average of the passing scores' is best seen as...",
+      "options": [
+        "several small parts, each with one pattern",
+        "one part with no pattern",
+        "one giant pattern",
+        "impossible"
+      ],
+      "answer": 0,
+      "explanation": "It's filter + total + count + divide — four small single-pattern parts, not one blurry step.",
+      "id": "u87l08e03"
+    },
+    {
+      "type": "multiSelect",
+      "prompt": "Select the sub-problems that are still too big (need splitting further).",
+      "options": [
+        "the average of the orders over 100",
+        "the total AND the count in one breath",
+        "total the prices",
+        "count the passers"
+      ],
+      "answer": [
+        0,
+        1
+      ],
+      "explanation": "The first two bundle multiple jobs. The last two are each a single clean pattern.",
+      "id": "u87l08e04"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Why aim for 'one part, one pattern'?",
+      "options": [
+        "Each part becomes a known loop shape you can code directly",
+        "To make more parts for fun",
+        "Patterns dislike company",
+        "It's a rule with no reason"
+      ],
+      "answer": 0,
+      "explanation": "A single-pattern part maps straight to code. Bundled parts hide the shape and invite bugs.",
+      "id": "u87l08e05"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "A part that needs two patterns is fine to leave as-is.",
+      "answer": false,
+      "explanation": "No — leave it and you'll write tangled code. Split it so each piece has one clear pattern.",
+      "id": "u87l08e06"
+    },
+    {
+      "type": "matchPairs",
+      "prompt": "Match each 'too big' part to how it splits.",
+      "pairs": [
+        {
+          "left": "average of the passers",
+          "right": "filter, total, count, divide"
+        },
+        {
+          "left": "total and count over 10",
+          "right": "running total + conditional count"
+        },
+        {
+          "left": "biggest of the cheap items",
+          "right": "filter, then track the biggest"
+        }
+      ],
+      "explanation": "Each bundled part breaks into single-pattern pieces. Splitting further is just more decomposition.",
+      "id": "u87l08e07"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "How deep do you keep splitting?",
+      "options": [
+        "Until every part is a single familiar pattern",
+        "Until there are exactly two parts",
+        "Forever",
+        "Never — one part is always enough"
+      ],
+      "answer": 0,
+      "explanation": "Stop when each part is one pattern you know. That's the natural floor for decomposition.",
+      "id": "u87l08e08"
+    },
+    {
+      "type": "orderBlocks",
+      "prompt": "Order the 'split further' habit.",
+      "blocks": [
+        "Try to label a part with one pattern",
+        "If it needs several, split the part into smaller parts",
+        "Label each smaller part with its single pattern"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Attempt a label; if it resists, split again; then label the pieces. Recursion by hand, no code.",
+      "id": "u87l08e09"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "The big idea:",
+      "options": [
+        "If a part needs several patterns, split it further until each part has exactly one",
+        "Big parts are fine",
+        "Never split a part twice",
+        "One pattern can do everything"
+      ],
+      "answer": 0,
+      "explanation": "One part, one pattern. When a part resists a single label, decompose it further.",
+      "id": "u87l08e10"
+    }
+  ]
+}

@@ -1,0 +1,144 @@
+{
+  "unitId": "u84",
+  "lessonId": "u84l02",
+  "title": "Loop back: name the output, then pick the parts",
+  "idea": "LOOP. Practise the first two habits — naming inputs/output and splitting into sub-problems — across varied problems drawn from several laps.",
+  "exercises": [
+    {
+      "id": "u84l02e01",
+      "type": "multipleChoice",
+      "prompt": "PROBLEM: 'Show the average test score of a class.' What is the OUTPUT?",
+      "options": [
+        "One number: the average score",
+        "The list of all scores",
+        "The highest score",
+        "The number of students only"
+      ],
+      "answer": 0,
+      "explanation": "Output = the average, a single number. Naming it first frames the solve."
+    },
+    {
+      "id": "u84l02e02",
+      "type": "multipleChoice",
+      "prompt": "Same problem. What SUB-PROBLEMS does the average split into?",
+      "options": [
+        "The total of the scores, and how many scores there are",
+        "Just the total",
+        "Just the count",
+        "The biggest and smallest"
+      ],
+      "answer": 0,
+      "explanation": "Average = total / count. Two sub-problems, each a known pattern, then one division."
+    },
+    {
+      "id": "u84l02e03",
+      "type": "multipleChoice",
+      "prompt": "PROBLEM: 'How many students scored above 80?' The OUTPUT is...",
+      "options": [
+        "A count",
+        "A total",
+        "An average",
+        "A list of names"
+      ],
+      "answer": 0,
+      "explanation": "'How many' means a count — the count-with-condition pattern."
+    },
+    {
+      "id": "u84l02e04",
+      "type": "matchPairs",
+      "prompt": "Match each problem to its output type.",
+      "pairs": [
+        {
+          "left": "Total spent on a shopping list",
+          "right": "A sum"
+        },
+        {
+          "left": "The most expensive item",
+          "right": "The biggest (track)"
+        },
+        {
+          "left": "Is this code in the list?",
+          "right": "A yes/no (search)"
+        }
+      ],
+      "explanation": "Reading the question tells you the output type, which tells you the pattern. Thinking before coding."
+    },
+    {
+      "id": "u84l02e05",
+      "type": "trueFalse",
+      "prompt": "Naming the inputs and output BEFORE splitting the problem makes the split clearer.",
+      "answer": true,
+      "explanation": "Yes — you can't pick the right sub-problems until you know what you're producing and from what."
+    },
+    {
+      "id": "u84l02e06",
+      "type": "multipleChoice",
+      "prompt": "PROBLEM: 'Average of only the passing scores.' Why is this TWO stages?",
+      "options": [
+        "First filter to passing scores, THEN average that smaller list",
+        "It isn't — average everything",
+        "You only need to count",
+        "You only need the biggest"
+      ],
+      "answer": 0,
+      "explanation": "Filter then average — two stages. Averaging everything would answer the wrong question."
+    },
+    {
+      "id": "u84l02e07",
+      "type": "orderBlocks",
+      "prompt": "Order the planning for 'average of passing scores'.",
+      "blocks": [
+        "Name the output: average of the passing subset",
+        "List the inputs: scores and the pass mark",
+        "Split: filter passers, then average them",
+        "Note the edge: what if nobody passes?"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "Output, inputs, split into stages, and flag the edge case. Planning before a single line of code."
+    },
+    {
+      "id": "u84l02e08",
+      "type": "multipleChoice",
+      "prompt": "REVIEW (Lap 2): a plan divides by a count. Which edge case must it guard?",
+      "options": [
+        "An empty list (count of zero — divide-by-zero)",
+        "A list of three",
+        "A list of ten",
+        "No edge case"
+      ],
+      "answer": 0,
+      "explanation": "Zero count breaks division. The empty-list guard is the edge-case habit at work."
+    },
+    {
+      "id": "u84l02e09",
+      "type": "multipleChoice",
+      "prompt": "PROBLEM: 'Total of the discounted prices.' The repeated small job is...",
+      "options": [
+        "Discount one price — a good helper to reuse per item",
+        "Sorting the list",
+        "Printing each price",
+        "Counting the items"
+      ],
+      "answer": 0,
+      "explanation": "The per-item job (discount one price) becomes a helper used inside the totalling loop."
+    },
+    {
+      "id": "u84l02e10",
+      "type": "multipleChoice",
+      "prompt": "The skill this lesson loops back on:",
+      "options": [
+        "Name the output and inputs, then split the problem into the right patterns",
+        "Memorize syntax only",
+        "Always use one big function",
+        "Skip planning"
+      ],
+      "answer": 0,
+      "explanation": "Output, inputs, split, pattern-per-part — the planning muscles for any 'too big' problem."
+    }
+  ]
+}

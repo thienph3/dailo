@@ -1,0 +1,136 @@
+{
+  "unitId": "u63",
+  "lessonId": "u63l04",
+  "title": "Counting the matches instead of keeping them",
+  "idea": "TOOL: a close cousin of filter — if you only need HOW MANY pass, use a counter instead of a kept list. Compare the two.",
+  "exercises": [
+    {
+      "id": "u63l04e01",
+      "type": "multipleChoice",
+      "prompt": "What will this show?\n\nscores = [4, 9, 2, 7, 8]\ncount = 0\nfor score in scores:\n    if score > 5:\n        count = count + 1\nprint(count)",
+      "options": [
+        "3",
+        "2",
+        "5",
+        "[9, 7, 8]"
+      ],
+      "answer": 0,
+      "explanation": "Three scores (9, 7, 8) pass the test, and count goes up by one for each. The result is the number 3, not a list."
+    },
+    {
+      "id": "u63l04e02",
+      "type": "multipleChoice",
+      "prompt": "What is the difference between filtering and counting with a condition?",
+      "options": [
+        "Filtering keeps the passing items in a list; counting just tallies how many passed",
+        "There is no difference",
+        "Counting changes the original list",
+        "Filtering can only be done with numbers"
+      ],
+      "answer": 0,
+      "explanation": "Same loop and same test. Filter appends each passer into a list; counting just adds 1 to a number. Pick whichever answer you need."
+    },
+    {
+      "id": "u63l04e03",
+      "type": "multipleChoice",
+      "prompt": "If you only need to know HOW MANY items are above 5 (not which ones), which is the better tool?",
+      "options": [
+        "A counter that adds 1 for each passing item",
+        "A kept list of the passing items",
+        "The sum of all items",
+        "The biggest item"
+      ],
+      "answer": 0,
+      "explanation": "A counter answers 'how many' directly. Building a whole list just to measure its length is more work than you need."
+    },
+    {
+      "id": "u63l04e04",
+      "type": "fillBlank",
+      "prompt": "Complete the counting step.\n\ncount = 0\nfor n in nums:\n    if n < 10:\n        count = count ____ 1",
+      "answer": "+",
+      "acceptable": [
+        "+"
+      ],
+      "explanation": "Each time an item passes, you add 1 to the counter: count = count + 1. The counter is an accumulator you met earlier."
+    },
+    {
+      "id": "u63l04e05",
+      "type": "multipleChoice",
+      "prompt": "What will this show?\n\nnums = [12, 3, 20, 8, 1]\ncount = 0\nfor n in nums:\n    if n < 10:\n        count = count + 1\nprint(count)",
+      "options": [
+        "3",
+        "2",
+        "5",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "The numbers below 10 are 3, 8 and 1 — three of them — so count ends at 3."
+    },
+    {
+      "id": "u63l04e06",
+      "type": "trueFalse",
+      "prompt": "A counter should start at 0, before the loop begins.",
+      "answer": true,
+      "explanation": "You start at 0 because nothing has been counted yet. Then each passing item bumps it up by one."
+    },
+    {
+      "id": "u63l04e07",
+      "type": "multipleChoice",
+      "prompt": "A filter built kept = [9, 7, 8]. How could you get the COUNT of matches from that list without a separate counter?",
+      "options": [
+        "len(kept)",
+        "sum(kept)",
+        "kept.append(3)",
+        "print(kept)"
+      ],
+      "answer": 0,
+      "explanation": "len(kept) gives how many items the list holds — here 3. So one option is: filter, then len. The counter just skips building the list."
+    },
+    {
+      "id": "u63l04e08",
+      "type": "multipleChoice",
+      "prompt": "What will this show?\n\ntemps = [30, 18, 25, 12, 28]\nhot = 0\nfor t in temps:\n    if t >= 25:\n        hot = hot + 1\nprint(hot)",
+      "options": [
+        "3",
+        "2",
+        "5",
+        "83"
+      ],
+      "answer": 0,
+      "explanation": "30, 25 and 28 pass t >= 25, so hot is bumped three times and ends at 3."
+    },
+    {
+      "id": "u63l04e09",
+      "type": "orderBlocks",
+      "prompt": "Arrange a counter that tallies how many numbers are even.",
+      "blocks": [
+        "count = 0",
+        "for n in nums:",
+        "    if n % 2 == 0:",
+        "        count = count + 1",
+        "print(count)"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "explanation": "Start the counter at 0, loop, test for even, add 1 on a pass, then print. It mirrors the filter but tallies instead of collecting."
+    },
+    {
+      "id": "u63l04e10",
+      "type": "multipleChoice",
+      "prompt": "You want the actual passing scores to show a student, not just how many. Which do you use?",
+      "options": [
+        "A filter that keeps them in a list",
+        "A counter",
+        "The sum",
+        "The average"
+      ],
+      "answer": 0,
+      "explanation": "If you need the items themselves, filter into a list. A counter only tells you how many — it throws the values away."
+    }
+  ]
+}

@@ -1,0 +1,117 @@
+{
+  "unitId": "u21",
+  "lessonId": "u21l10",
+  "title": "Put it together: everything about if",
+  "idea": "Wrap up the unit: the if shape, indentation, the = vs == trap, and run-or-skip behaviour, with review of earlier tools.",
+  "exercises": [
+    {
+      "id": "u21l10e01",
+      "type": "matchPairs",
+      "prompt": "Match each part of an if to its job.",
+      "pairs": [
+        { "left": "if", "right": "Starts the conditional" },
+        { "left": "the condition", "right": "The yes/no fact to check" },
+        { "left": "the colon  :", "right": "Ends the header" },
+        { "left": "the indent", "right": "Marks the step inside the if" }
+      ],
+      "explanation": "if + condition + colon on the header, then an indented step. That is the full shape of a one-sided if."
+    },
+    {
+      "id": "u21l10e02",
+      "type": "multipleChoice",
+      "prompt": "What will this show?\n\npoints = 90\nif points >= 60:\n    print(\"Pass\")",
+      "options": ["Pass", "Nothing", "90", "60"],
+      "answer": 0,
+      "explanation": "points >= 60 is True (90 is at least 60), so Pass prints."
+    },
+    {
+      "id": "u21l10e03",
+      "type": "multipleChoice",
+      "prompt": "Review the trap: which symbol does an if condition use to CHECK equality?",
+      "options": ["==", "=", "!", "+"],
+      "answer": 0,
+      "explanation": "An if checks, so it uses ==. One = would store, which is not a condition. 'One store, two ask.'"
+    },
+    {
+      "id": "u21l10e04",
+      "type": "multipleChoice",
+      "prompt": "What will this show, line by line?\n\nlevel = 5\nif level == 5:\n    print(\"Max level\")\nprint(\"Done\")",
+      "options": [
+        "Max level then Done",
+        "Done",
+        "Max level",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "Condition True, so the indented Max level runs. Done is un-indented, so it always runs. Both appear."
+    },
+    {
+      "id": "u21l10e05",
+      "type": "multipleChoice",
+      "prompt": "Review of Unit 20: what will this show?\n\nprint(7 != 7)",
+      "options": ["False", "True", "0", "7"],
+      "answer": 0,
+      "explanation": "7 and 7 are equal, so 'are they different?' is False. Comparisons still return booleans."
+    },
+    {
+      "id": "u21l10e06",
+      "type": "multipleChoice",
+      "prompt": "Review of earlier units: what will this show?\n\ntotal = 4 + 6\nprint(total)",
+      "options": ["10", "46", "4 + 6", "total"],
+      "answer": 0,
+      "explanation": "A quick arithmetic review: 4 + 6 is 10, stored in total and printed."
+    },
+    {
+      "id": "u21l10e07",
+      "type": "multipleChoice",
+      "prompt": "What is wrong here?\n\nif stock == 0\n    print(\"Sold out\")",
+      "options": [
+        "The if line is missing its colon",
+        "stock should be in quotes",
+        "print needs a number",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "The header must end with a colon: if stock == 0: . A missing colon is the classic if slip."
+    },
+    {
+      "id": "u21l10e08",
+      "type": "multipleChoice",
+      "prompt": "A comparison can feed the if directly. What shows?\n\nbill = 30\nif bill * 2 > 50:\n    print(\"Big\")",
+      "options": [
+        "Big",
+        "Nothing",
+        "60",
+        "30"
+      ],
+      "answer": 0,
+      "explanation": "bill * 2 is 60 first, then 60 > 50 is True, so Big prints. Math on each side still works inside an if."
+    },
+    {
+      "id": "u21l10e09",
+      "type": "multiSelect",
+      "prompt": "Select EVERY true statement about a one-sided if.",
+      "options": [
+        "The header ends with a colon",
+        "The step is indented",
+        "A True condition runs the step",
+        "A False condition still runs the step"
+      ],
+      "answer": [0, 1, 2],
+      "explanation": "Colon on the header, indented step, True runs it. A False condition SKIPS the step — that last option is false."
+    },
+    {
+      "id": "u21l10e10",
+      "type": "multipleChoice",
+      "prompt": "What can you now do that you could not before this unit?",
+      "options": [
+        "Make a step run only when a fact is true, using if with the right comparison and indentation",
+        "Choose between two outcomes with else",
+        "Repeat a step many times",
+        "Ask the user for input"
+      ],
+      "answer": 0,
+      "explanation": "You can write a one-sided conditional: do this only when the fact is true. Next unit adds else for 'otherwise do that'."
+    }
+  ]
+}

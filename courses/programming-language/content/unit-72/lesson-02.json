@@ -1,0 +1,145 @@
+{
+  "unitId": "u72",
+  "lessonId": "u72l02",
+  "title": "Giving one value to a sub-plan",
+  "idea": "TOOL: define a sub-plan with one parameter; call it with one argument; predict the print.",
+  "exercises": [
+    {
+      "id": "u72l02e01",
+      "type": "multipleChoice",
+      "prompt": "Which def line creates a sub-plan 'show' with ONE parameter named n?",
+      "options": [
+        "def show(n):",
+        "def show():",
+        "def show n:",
+        "show(n):"
+      ],
+      "answer": 0,
+      "explanation": "The parameter goes inside the parentheses: def show(n):. Now show expects one value when called."
+    },
+    {
+      "id": "u72l02e02",
+      "type": "tapTokens",
+      "prompt": "Tap tokens for a def line: a sub-plan named show with one parameter n.",
+      "tokens": [
+        "def",
+        "show",
+        "(",
+        "n",
+        ")",
+        ":"
+      ],
+      "answer": [
+        "def",
+        "show",
+        "(",
+        "n",
+        ")",
+        ":"
+      ],
+      "explanation": "def show(n): - the parameter n sits inside the parentheses. A call like show(5) fills n with 5."
+    },
+    {
+      "id": "u72l02e03",
+      "type": "multipleChoice",
+      "prompt": "Program:\n\ndef show(n):\n    print(n)\nshow(8)\n\nWhat prints?",
+      "options": [
+        "8",
+        "n",
+        "show",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "The argument 8 fills the parameter n, so print(n) shows 8. The call's value flows into the body."
+    },
+    {
+      "id": "u72l02e04",
+      "type": "fillBlank",
+      "prompt": "Complete the call so it prints 25:\n\ndef show(n):\n    print(n)\nshow(____)",
+      "answer": "25",
+      "acceptable": [
+        "25"
+      ],
+      "explanation": "Put 25 in the call: show(25). It fills n, and print(n) shows 25. The argument sets what the body sees."
+    },
+    {
+      "id": "u72l02e05",
+      "type": "multipleChoice",
+      "prompt": "Program:\n\ndef show(n):\n    print(n)\nshow(3)\nshow(9)\n\nWhat prints?",
+      "options": [
+        "3\n9",
+        "9\n3",
+        "3",
+        "n\nn"
+      ],
+      "answer": 0,
+      "explanation": "show(3) prints 3, show(9) prints 9. Same sub-plan, two calls, two different values in n."
+    },
+    {
+      "id": "u72l02e06",
+      "type": "trueFalse",
+      "prompt": "Calling show() with NO value, when it expects one parameter, is a mistake.",
+      "answer": true,
+      "explanation": "Yes. show(n) needs one argument. show() gives it nothing to put in n - that's an error. Match the count."
+    },
+    {
+      "id": "u72l02e07",
+      "type": "matchPairs",
+      "prompt": "Match each call to its printed output for def show(n): print(n).",
+      "pairs": [
+        {
+          "left": "show(1)",
+          "right": "1"
+        },
+        {
+          "left": "show(100)",
+          "right": "100"
+        },
+        {
+          "left": "show(7)",
+          "right": "7"
+        }
+      ],
+      "explanation": "The argument fills n and the body prints it. Different arguments, different output, one definition."
+    },
+    {
+      "id": "u72l02e08",
+      "type": "multipleChoice",
+      "prompt": "Inside def show(n), can the body use n like a normal variable?",
+      "options": [
+        "Yes - n holds the value handed in, so print(n) works",
+        "No - n is only a name",
+        "Only if n is 0",
+        "Only outside the sub-plan"
+      ],
+      "answer": 0,
+      "explanation": "A parameter acts like a variable inside the body, holding the value from the call. print(n) uses it."
+    },
+    {
+      "id": "u72l02e09",
+      "type": "multipleChoice",
+      "prompt": "A sub-plan def double_it(n): print(n + n). What does double_it(6) print?",
+      "options": [
+        "12",
+        "6",
+        "66",
+        "n + n"
+      ],
+      "answer": 0,
+      "explanation": "n becomes 6, so n + n is 12. The body can compute with the parameter, then print the result."
+    },
+    {
+      "id": "u72l02e10",
+      "type": "multipleChoice",
+      "prompt": "The shape to remember for one parameter:",
+      "options": [
+        "def name(param): ... then call name(value)",
+        "def name(): ... call name(value)",
+        "def name(param): ... call name()",
+        "no parentheses at all"
+      ],
+      "answer": 0,
+      "explanation": "Define with the parameter in the (), call with the value in the (). The value fills the parameter."
+    }
+  ]
+}

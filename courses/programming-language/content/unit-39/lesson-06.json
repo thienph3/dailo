@@ -1,0 +1,143 @@
+{
+  "unitId": "u39",
+  "lessonId": "u39l06",
+  "title": "Solve it together: why did it print the wrong count?",
+  "idea": "GUIDED PROBLEM. Spot a wrong approach: an off-by-one stop value. Thinking-heavy.",
+  "problem": "A learner wants to print 1 to 5 but their loop prints 1 to 4. Find and fix the mistake.",
+  "exercises": [
+    {
+      "id": "u39l06e01",
+      "type": "multipleChoice",
+      "prompt": "PROBLEM: We want to print 1, 2, 3, 4, 5.\n\nUnderstand. What is the correct OUTPUT?",
+      "uepcc": "U",
+      "options": [
+        "1, 2, 3, 4, 5",
+        "1, 2, 3, 4",
+        "0 through 5",
+        "Just 5"
+      ],
+      "answer": 0,
+      "explanation": "The goal is five lines: 1 through 5."
+    },
+    {
+      "id": "u39l06e02",
+      "type": "multipleChoice",
+      "prompt": "Example. By hand, what SHOULD the last printed number be?",
+      "uepcc": "E",
+      "options": [
+        "5",
+        "4",
+        "6",
+        "1"
+      ],
+      "answer": 0,
+      "explanation": "The last number should be 5. Hold onto this when checking the buggy code."
+    },
+    {
+      "id": "u39l06e03",
+      "type": "multipleChoice",
+      "prompt": "Here is the learner's code:\n\nfor i in range(1, 5):\n    print(i)\n\nWhat does it actually print?",
+      "uepcc": "Check",
+      "options": [
+        "1, 2, 3, 4",
+        "1, 2, 3, 4, 5",
+        "1 to 6",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "range(1, 5) stops before 5, so it prints 1, 2, 3, 4 — one short."
+    },
+    {
+      "id": "u39l06e04",
+      "type": "multipleChoice",
+      "prompt": "Why is 5 missing from the output?",
+      "uepcc": "Check",
+      "options": [
+        "The stop value 5 is excluded by range",
+        "print is broken",
+        "i is misspelled",
+        "The loop runs twice"
+      ],
+      "answer": 0,
+      "explanation": "In range(start, stop), the stop value is excluded. range(1, 5) never reaches 5."
+    },
+    {
+      "id": "u39l06e05",
+      "type": "orderBlocks",
+      "prompt": "Plan the fix. Order the thinking steps.",
+      "uepcc": "P",
+      "blocks": [
+        "Raise the stop value so 5 is included",
+        "Notice 5 is missing from the output",
+        "Compare the output to the target 1..5"
+      ],
+      "answer": [
+        2,
+        1,
+        0
+      ],
+      "explanation": "Compare actual output to the target, see the last number is missing, then raise the stop by one."
+    },
+    {
+      "id": "u39l06e06",
+      "type": "multipleChoice",
+      "prompt": "Plan: to include 5, what must the stop become?",
+      "uepcc": "P",
+      "options": [
+        "6",
+        "5",
+        "4",
+        "7"
+      ],
+      "answer": 0,
+      "explanation": "Stop is one past the last number, so 6 makes 5 appear."
+    },
+    {
+      "id": "u39l06e07",
+      "type": "fillBlank",
+      "prompt": "Code the fix. Correct the stop value:\n\nfor i in range(1, ____):\n    print(i)",
+      "uepcc": "C",
+      "answer": "6",
+      "acceptable": [
+        "6"
+      ],
+      "explanation": "range(1, 6) now prints 1, 2, 3, 4, 5."
+    },
+    {
+      "id": "u39l06e08",
+      "type": "trueFalse",
+      "prompt": "Code: changing only the stop from 5 to 6 fixes the bug.",
+      "uepcc": "C",
+      "answer": true,
+      "explanation": "True. The off-by-one lived entirely in the stop value."
+    },
+    {
+      "id": "u39l06e09",
+      "type": "multipleChoice",
+      "prompt": "Check. With range(1, 6) you now see 1, 2, 3, 4, 5. Matches the target?",
+      "uepcc": "Check",
+      "options": [
+        "Yes, it passes now",
+        "No, still wrong",
+        "Can't tell",
+        "It prints 6"
+      ],
+      "answer": 0,
+      "explanation": "Yes — the last number is now 5, matching the by-hand answer. Fixed."
+    },
+    {
+      "id": "u39l06e10",
+      "type": "multipleChoice",
+      "prompt": "Check the habit: what is the quickest way to catch off-by-one errors like this?",
+      "uepcc": "Check",
+      "options": [
+        "Compare the output to a hand-worked example",
+        "Run it twice",
+        "Make the range bigger always",
+        "Remove the loop"
+      ],
+      "answer": 0,
+      "explanation": "Working the example by hand gives a target (last number = 5) you can compare the output to."
+    }
+  ]
+}

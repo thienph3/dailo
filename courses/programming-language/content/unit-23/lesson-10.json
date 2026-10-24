@@ -1,0 +1,155 @@
+{
+  "unitId": "u23",
+  "lessonId": "u23l10",
+  "title": "Review: one-choice problems",
+  "idea": "GUIDED review of the whole unit: comparisons, if/else, one-sided choices, and the UEPCC habit, plus a fresh tiny problem.",
+  "problem": "Review of deciding between two outcomes, end-to-end with UEPCC.",
+  "exercises": [
+    {
+      "id": "u23l10e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: a parking fee is 0 for under 15 minutes, else 5. The OUTPUT is...",
+      "options": [
+        "The fee (0 or 5)",
+        "The minutes",
+        "A label",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "Output is one fee value. Name it first."
+    },
+    {
+      "id": "u23l10e02",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "By hand: minutes = 10 gives what fee?",
+      "options": [
+        "0",
+        "5",
+        "10",
+        "15"
+      ],
+      "answer": 0,
+      "explanation": "10 is under 15, so the fee is 0."
+    },
+    {
+      "id": "u23l10e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "By hand: minutes = 30 gives what fee?",
+      "options": [
+        "5",
+        "0",
+        "30",
+        "15"
+      ],
+      "answer": 0,
+      "explanation": "30 is not under 15, so the fee is 5."
+    },
+    {
+      "id": "u23l10e04",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Which comparison means 'under 15'?",
+      "options": [
+        "minutes < 15",
+        "minutes <= 15",
+        "minutes > 15",
+        "minutes == 15"
+      ],
+      "answer": 0,
+      "explanation": "'Under' is strictly less, so < 15. Exactly 15 is NOT under 15."
+    },
+    {
+      "id": "u23l10e05",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Plan the steps.",
+      "blocks": [
+        "Compare minutes with 15",
+        "If under 15, fee = 0",
+        "Otherwise fee = 5",
+        "Show the fee"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "Compare, branch to set the fee, then print it."
+    },
+    {
+      "id": "u23l10e06",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Arrange the code.",
+      "blocks": [
+        "if minutes < 15:",
+        "    fee = 0",
+        "else:",
+        "    fee = 5",
+        "print(fee)"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "explanation": "Set fee inside the matching branch, then print it."
+    },
+    {
+      "id": "u23l10e07",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Run with minutes = 10. What does print(fee) show?",
+      "options": [
+        "0",
+        "5",
+        "10",
+        "15"
+      ],
+      "answer": 0,
+      "explanation": "10 < 15 is True, so fee = 0 - matches the hand example."
+    },
+    {
+      "id": "u23l10e08",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Re-check the edge: minutes = 15. What prints?",
+      "options": [
+        "5",
+        "0",
+        "15",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "15 < 15 is False, so the else runs: fee = 5. The edge confirms < was correct."
+    },
+    {
+      "id": "u23l10e09",
+      "type": "trueFalse",
+      "uepcc": "P",
+      "prompt": "if/else always runs exactly one of its two branches - never both, never neither.",
+      "answer": true,
+      "explanation": "Right. With an else, one path always runs and only one. That is the two-outcome choice."
+    },
+    {
+      "id": "u23l10e10",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "After this unit you can confidently solve which kind of problem?",
+      "options": [
+        "Decide between two outcomes using a comparison",
+        "Sort into many buckets",
+        "Repeat a step many times",
+        "Ask the user to type"
+      ],
+      "answer": 0,
+      "explanation": "Two-outcome decisions are solid now. Many buckets (elif) and more conditions come in the next units."
+    }
+  ]
+}

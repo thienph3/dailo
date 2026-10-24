@@ -1,0 +1,141 @@
+{
+  "unitId": "u60",
+  "lessonId": "u60l09",
+  "title": "Min in the wild",
+  "idea": "TOOL: mixed predict/choose/spot combining min with earlier list skills. ~30% review.",
+  "exercises": [
+    {
+      "id": "u60l09e01",
+      "type": "multipleChoice",
+      "prompt": "Predict:\n\ntemps = [4, 2, 6, 1, 3]\nlow = temps[0]\nfor t in temps:\n    if t < low:\n        low = t\nprint(low)",
+      "options": [
+        "1",
+        "6",
+        "4",
+        "16"
+      ],
+      "answer": 0,
+      "explanation": "The coldest reading is 1. The smallest-so-far drops to 1 and stops."
+    },
+    {
+      "id": "u60l09e02",
+      "type": "multipleChoice",
+      "prompt": "REVIEW (max): biggest of [4, 2, 6, 1, 3]?",
+      "options": [
+        "6",
+        "1",
+        "16",
+        "4"
+      ],
+      "answer": 0,
+      "explanation": "Same list, flipped question. The biggest is 6."
+    },
+    {
+      "id": "u60l09e03",
+      "type": "multipleChoice",
+      "prompt": "Predict:\n\nnums = [8, 3, 8, 1]\nlow = nums[0]\nfor n in nums:\n    if n < low:\n        low = n\ncount = 0\nfor n in nums:\n    if n > 2:\n        count = count + 1\nprint(low, count)",
+      "options": [
+        "1 3",
+        "1 4",
+        "8 3",
+        "1 1"
+      ],
+      "answer": 0,
+      "explanation": "low = 1 (smallest); count of values > 2 is 8,3,8 = 3. Two walks, two answers."
+    },
+    {
+      "id": "u60l09e04",
+      "type": "trueFalse",
+      "prompt": "You can run a min loop and a count loop over the same list to answer two different questions.",
+      "answer": true,
+      "explanation": "Each tool keeps its own result. Mix and match as the problem needs."
+    },
+    {
+      "id": "u60l09e05",
+      "type": "orderBlocks",
+      "prompt": "Trace [6, 10, 4, 4] for the smallest. Put the smallest-so-far after each value in order (start 6).",
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "blocks": [
+        "Start best = 6",
+        "10 is not < 6, best stays 6",
+        "4 < 6, best = 4",
+        "4 is not < 4, best stays 4"
+      ],
+      "explanation": "best goes 6 -> 6 -> 4 -> 4. The smallest is 4; the tie does not change it."
+    },
+    {
+      "id": "u60l09e06",
+      "type": "multipleChoice",
+      "prompt": "REVIEW: 'add up all the rainfall this week' uses which tool?",
+      "options": [
+        "sum (running total)",
+        "min",
+        "max",
+        "count"
+      ],
+      "answer": 0,
+      "explanation": "'Add up all' is the sum pattern from Unit 57, not min."
+    },
+    {
+      "id": "u60l09e07",
+      "type": "multipleChoice",
+      "prompt": "To find the smallest, which ONE change to the max loop is enough?",
+      "options": [
+        "Flip > to <",
+        "Start at 0",
+        "Add a second loop",
+        "Remove the if"
+      ],
+      "answer": 0,
+      "explanation": "Flipping the comparison is the whole change. The rest of the loop is identical."
+    },
+    {
+      "id": "u60l09e08",
+      "type": "multipleChoice",
+      "prompt": "Predict:\n\nscores = [70]\nlow = scores[0]\nfor s in scores:\n    if s < low:\n        low = s\nprint(low)",
+      "options": [
+        "70",
+        "0",
+        "1",
+        "An error"
+      ],
+      "answer": 0,
+      "explanation": "One score, so low is 70. The min of a single-item list is that item."
+    },
+    {
+      "id": "u60l09e09",
+      "type": "multiSelect",
+      "prompt": "Which code lines belong in a correct MIN loop? (pick all)",
+      "options": [
+        "best = nums[0]",
+        "if n < best:",
+        "best = n",
+        "if n > best:"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "The first three build the min. 'if n > best' is the MAX comparison, not min."
+    },
+    {
+      "id": "u60l09e10",
+      "type": "multipleChoice",
+      "prompt": "You read 'the fastest runner's time...'. Which list tool finds it?",
+      "options": [
+        "min — the smallest time",
+        "max",
+        "sum",
+        "count"
+      ],
+      "answer": 0,
+      "explanation": "Fastest = smallest time, so it is the min pattern."
+    }
+  ]
+}

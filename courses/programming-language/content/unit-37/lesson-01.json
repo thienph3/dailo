@@ -1,0 +1,123 @@
+{
+  "unitId": "u37",
+  "lessonId": "u37l01",
+  "title": "for and range(n): repeat exactly n times",
+  "idea": "Python's real counting loop: for ... in range(n): repeats the indented body exactly n times. Meet it with visible output.",
+  "exercises": [
+    {
+      "id": "u37l01e01",
+      "type": "multipleChoice",
+      "prompt": "What does range(3) set up in a loop?",
+      "options": [
+        "Repeating the body 3 times",
+        "The number 3 on screen",
+        "A decision",
+        "Three separate programs"
+      ],
+      "answer": 0,
+      "explanation": "range(3) tells the for loop to run its body 3 times. The number inside range is how many repeats."
+    },
+    {
+      "id": "u37l01e02",
+      "type": "multipleChoice",
+      "prompt": "What shows?\n\nfor i in range(3):\n    print(\"Hi\")",
+      "options": [
+        "Hi\nHi\nHi",
+        "Hi",
+        "3",
+        "i\ni\ni"
+      ],
+      "answer": 0,
+      "explanation": "range(3) repeats the body 3 times, so Hi prints on three lines. This is the 'for each' idea, now in real Python."
+    },
+    {
+      "id": "u37l01e03",
+      "type": "trueFalse",
+      "prompt": "for i in range(n): repeats its indented body exactly n times.",
+      "answer": true,
+      "explanation": "Yes — the number in range(n) is the repeat count. range(5) means five passes."
+    },
+    {
+      "id": "u37l01e04",
+      "type": "multipleChoice",
+      "prompt": "How many lines does this print?\n\nfor i in range(5):\n    print(\"Go\")",
+      "options": [
+        "5",
+        "1",
+        "4",
+        "6"
+      ],
+      "answer": 0,
+      "explanation": "range(5) = five passes, one Go each — five lines."
+    },
+    {
+      "id": "u37l01e05",
+      "type": "multipleChoice",
+      "prompt": "Which line correctly starts a loop that repeats 4 times?",
+      "options": [
+        "for i in range(4):",
+        "for range(4):",
+        "range(4) times:",
+        "repeat i in 4:"
+      ],
+      "answer": 0,
+      "explanation": "The shape is: for <name> in range(<count>): — so 'for i in range(4):' repeats four times."
+    },
+    {
+      "id": "u37l01e06",
+      "type": "trueFalse",
+      "prompt": "The body of a for loop must be indented, just like the 'for each' loops you practiced.",
+      "answer": true,
+      "explanation": "Same shape as before: header ends with a colon, body is indented beneath. Only the header wording changed."
+    },
+    {
+      "id": "u37l01e07",
+      "type": "fillBlank",
+      "prompt": "Fill the count so this repeats 6 times:\n\nfor i in range(____):\n    print(\"Hi\")",
+      "answer": "6",
+      "acceptable": [
+        "6"
+      ],
+      "explanation": "range(6) makes the body run six times. The number in range is the repeat count."
+    },
+    {
+      "id": "u37l01e08",
+      "type": "multipleChoice",
+      "prompt": "What shows?\n\nfor i in range(2):\n    print(\"A\")\n    print(\"B\")",
+      "options": [
+        "A\nB\nA\nB",
+        "A\nB",
+        "A\nA\nB\nB",
+        "A"
+      ],
+      "answer": 0,
+      "explanation": "Both indented lines are the body, so each of the 2 passes prints A then B: A, B, A, B."
+    },
+    {
+      "id": "u37l01e09",
+      "type": "multipleChoice",
+      "prompt": "Why learn for/range instead of only the plain-English 'for each'?",
+      "options": [
+        "range(n) is real Python that actually runs on a computer",
+        "It looks fancier",
+        "The 'for each' idea was wrong",
+        "range makes output bigger"
+      ],
+      "answer": 0,
+      "explanation": "'for each' built your intuition; for/range is the real code that runs. Same idea, now executable."
+    },
+    {
+      "id": "u37l01e10",
+      "type": "multipleChoice",
+      "prompt": "You wrote for i in range(3): with print(\"Hi\") inside. What should you do to trust it?",
+      "options": [
+        "Trace the output: expect Hi three times, then confirm",
+        "Assume it works",
+        "Change 3 to a word",
+        "Remove the colon"
+      ],
+      "answer": 0,
+      "explanation": "Predict three Hi lines, then check. Writing plus tracing is how you trust a loop — the Check habit continues."
+    }
+  ]
+}

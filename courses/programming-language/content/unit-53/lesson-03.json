@@ -1,0 +1,119 @@
+{
+  "unitId": "u53",
+  "lessonId": "u53l03",
+  "title": "Counting all kinds of lists",
+  "idea": "Fluency with len() across empty, one-item, number, and word lists. Reinforce count is independent of the values.",
+  "exercises": [
+    {
+      "id": "u53l03e01",
+      "type": "multipleChoice",
+      "prompt": "Predict:\n\nprint(len([3, 6, 9, 12, 15]))",
+      "options": [
+        "5",
+        "45",
+        "15",
+        "4"
+      ],
+      "answer": 0,
+      "explanation": "Count the items: five of them, so len is 5. You can call len on a list written directly, no variable needed."
+    },
+    {
+      "id": "u53l03e02",
+      "type": "multipleChoice",
+      "prompt": "Predict:\n\nprint(len([\"hi\"]))",
+      "options": [
+        "1",
+        "2",
+        "hi",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "One item in the list means len is 1 — even though the word 'hi' has two letters. len counts items, not letters."
+    },
+    {
+      "id": "u53l03e03",
+      "type": "trueFalse",
+      "prompt": "len([100, 200, 300]) is 3, not 600.",
+      "answer": true,
+      "explanation": "Three items, so len is 3. Adding the values would give 600, but len never adds — it counts."
+    },
+    {
+      "id": "u53l03e04",
+      "type": "matchPairs",
+      "prompt": "Match each list to its len.",
+      "pairs": [
+        { "left": "[]", "right": "0" },
+        { "left": "[42]", "right": "1" },
+        { "left": "[1, 1, 1, 1]", "right": "4" }
+      ],
+      "explanation": "Count the items between the brackets. Empty is 0, single is 1, four repeats is still 4."
+    },
+    {
+      "id": "u53l03e05",
+      "type": "fillBlank",
+      "prompt": "A list of the week's days has 7 items. Fill in what len prints:\n\ndays = [\"Mon\", \"Tue\", \"Wed\", \"Thu\", \"Fri\", \"Sat\", \"Sun\"]\nprint(len(days))\n\nIt prints: ____",
+      "answer": "7",
+      "acceptable": ["7"],
+      "explanation": "Seven day-words means len is 7. Counting items works the same for words as for numbers."
+    },
+    {
+      "id": "u53l03e06",
+      "type": "multipleChoice",
+      "prompt": "Predict:\n\ndata = [5, 5]\nprint(len(data))",
+      "options": [
+        "2",
+        "1",
+        "10",
+        "5"
+      ],
+      "answer": 0,
+      "explanation": "Two items, even though both are 5. Repeated values each count once, so len is 2."
+    },
+    {
+      "id": "u53l03e07",
+      "type": "trueFalse",
+      "prompt": "Two lists with the same len can hold completely different values.",
+      "answer": true,
+      "explanation": "[1, 2] and [99, 4] both have len 2 but share no values. len tells you count, nothing about the contents."
+    },
+    {
+      "id": "u53l03e08",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nbag = [2, 4, 6]\ntotal_items = len(bag)\nprint(total_items)",
+      "options": [
+        "3",
+        "12",
+        "6",
+        "bag"
+      ],
+      "answer": 0,
+      "explanation": "len(bag) is 3, stored in total_items. A descriptive name like total_items makes the count's meaning clear."
+    },
+    {
+      "id": "u53l03e09",
+      "type": "multipleChoice",
+      "prompt": "Which call gives a count of 0?",
+      "options": [
+        "len([])",
+        "len([0])",
+        "len([0, 0])",
+        "len([\"\"])"
+      ],
+      "answer": 0,
+      "explanation": "Only [] is empty, so only len([]) is 0. [0] has one item, and [\"\"] has one item (an empty word still counts)."
+    },
+    {
+      "id": "u53l03e10",
+      "type": "multipleChoice",
+      "prompt": "A friend says 'len tells me the biggest value.' Correct them.",
+      "options": [
+        "len tells how many items, not the biggest value",
+        "They're right",
+        "len tells the smallest value",
+        "len tells the first value"
+      ],
+      "answer": 0,
+      "explanation": "len is purely a count of items. Finding the biggest value is a different tool you'll meet later."
+    }
+  ]
+}

@@ -1,0 +1,129 @@
+{
+  "unitId": "u36",
+  "lessonId": "u36l04",
+  "title": "One loop beats many copies",
+  "idea": "See a copy-paste version and the loop version side by side, and feel why the loop is better: shorter, clearer, and easy to change.",
+  "exercises": [
+    {
+      "id": "u36l04e01",
+      "type": "multipleChoice",
+      "prompt": "These two programs print Hi 3 times. Which is the loop version?\n\nA) print(\"Hi\")\n   print(\"Hi\")\n   print(\"Hi\")\n\nB) for each of 3 times:\n       print(\"Hi\")",
+      "options": [
+        "B",
+        "A",
+        "Neither",
+        "Both are loops"
+      ],
+      "answer": 0,
+      "explanation": "B uses 'for each' to repeat the body — that's the loop. A just copies the same line three times."
+    },
+    {
+      "id": "u36l04e02",
+      "type": "trueFalse",
+      "prompt": "The copy-paste version and the loop version can produce the exact same output.",
+      "answer": true,
+      "explanation": "Both print Hi three times. The difference is how they're written, not what shows."
+    },
+    {
+      "id": "u36l04e03",
+      "type": "multipleChoice",
+      "prompt": "To change 'print Hi 3 times' to '300 times', which version is easier?",
+      "options": [
+        "The loop — change one number",
+        "The copy-paste — add 297 more lines",
+        "They are equally easy",
+        "Neither can do 300"
+      ],
+      "answer": 0,
+      "explanation": "With a loop you edit the count. With copies you'd paste 297 more lines. The loop wins big as the count grows."
+    },
+    {
+      "id": "u36l04e04",
+      "type": "multipleChoice",
+      "prompt": "To change the word Hi to Hello everywhere, which version is safer?",
+      "options": [
+        "The loop — one body line to edit",
+        "The copy-paste — edit every copy",
+        "They are the same",
+        "Neither allows changes"
+      ],
+      "answer": 0,
+      "explanation": "The loop has one body to update. Copy-paste means editing each copy and risking a missed one."
+    },
+    {
+      "id": "u36l04e05",
+      "type": "trueFalse",
+      "prompt": "For a step that runs just once, a loop is overkill — a plain line is fine.",
+      "answer": true,
+      "explanation": "Loops shine for repetition. A one-time step needs no loop — right tool for the shape."
+    },
+    {
+      "id": "u36l04e06",
+      "type": "multipleChoice",
+      "prompt": "Which is the clearest sign a loop would help?",
+      "options": [
+        "The same line appears many times in a row",
+        "There is a single print",
+        "There is one if statement",
+        "There is no output"
+      ],
+      "answer": 0,
+      "explanation": "Many identical lines in a row scream 'repetition' — a loop would make it one body. Recap of Unit 35's lesson."
+    },
+    {
+      "id": "u36l04e07",
+      "type": "orderBlocks",
+      "prompt": "Order the thinking for choosing a loop over copies.",
+      "blocks": [
+        "Notice the same step repeats many times",
+        "Pull out the single body step",
+        "Write it once in a 'for each' loop"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Spot the repeat, name the body, write it once in a loop. That's how you refactor copies into a loop."
+    },
+    {
+      "id": "u36l04e08",
+      "type": "multipleChoice",
+      "prompt": "Both versions print Go twice. Which is shorter to read?\n\nA) print(\"Go\")\n   print(\"Go\")\n\nB) for each of 2 times:\n       print(\"Go\")",
+      "options": [
+        "For only 2 times, they're about the same length",
+        "The loop is always much shorter at 2",
+        "Copy-paste is impossible at 2",
+        "The loop can't do 2"
+      ],
+      "answer": 0,
+      "explanation": "At tiny counts the loop isn't shorter — its win is at bigger counts and easy changes. Honest trade-offs matter."
+    },
+    {
+      "id": "u36l04e09",
+      "type": "multipleChoice",
+      "prompt": "What shows?\n\nfor each of 3 times:\n    print(\"Hi\")",
+      "options": [
+        "Hi\nHi\nHi",
+        "Hi",
+        "3",
+        "times"
+      ],
+      "answer": 0,
+      "explanation": "The loop body runs three times — three Hi lines. Same output as three copied prints."
+    },
+    {
+      "id": "u36l04e10",
+      "type": "multipleChoice",
+      "prompt": "Main reason professionals prefer loops over copy-paste?",
+      "options": [
+        "One place to read and change, any count",
+        "Loops make the font nicer",
+        "Loops are required by law",
+        "Copies are forbidden in Python"
+      ],
+      "answer": 0,
+      "explanation": "A loop keeps the repeated step in one place, readable and flexible. That's the lasting lesson here."
+    }
+  ]
+}

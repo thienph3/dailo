@@ -1,0 +1,150 @@
+{
+  "unitId": "u75",
+  "lessonId": "u75l10",
+  "title": "Solve it: pick the right sub-plan shape",
+  "idea": "GUIDED PROBLEM (UEPCC), review-heavy. Mixed practice choosing parameters and what to return across the unit's patterns. Reinforces def + params + return.",
+  "problem": "Write perimeter(width, height) that hands back the distance around a rectangle (twice width plus twice height). Use it on a 6 by 4 room.",
+  "exercises": [
+    {
+      "id": "u75l10e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: perimeter(width, height) hands back twice width plus twice height; use it on a 6 by 4 room.\n\nWhat is the OUTPUT?",
+      "options": [
+        "The perimeter (distance around the rectangle)",
+        "The area",
+        "The width only",
+        "A yes/no"
+      ],
+      "answer": 0,
+      "explanation": "Output is the perimeter — the distance all the way around — returned so the main plan can use it."
+    },
+    {
+      "id": "u75l10e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "REVIEW: how many parameters does perimeter need, and what are they?",
+      "options": [
+        "Two: width and height",
+        "One: width",
+        "Three: width, height, perimeter",
+        "None"
+      ],
+      "answer": 0,
+      "explanation": "A rectangle's perimeter depends on width AND height, so two parameters: width and height."
+    },
+    {
+      "id": "u75l10e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example by hand — a 6 by 4 rectangle. Twice 6 is 12, twice 4 is 8. The perimeter is...",
+      "options": [
+        "20",
+        "24",
+        "10",
+        "48"
+      ],
+      "answer": 0,
+      "explanation": "2*6 + 2*4 = 12 + 8 = 20. This hand answer is what we'll check against."
+    },
+    {
+      "id": "u75l10e04",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Why is perimeter NOT the same as area here?",
+      "options": [
+        "Perimeter adds the sides (20); area multiplies them (24)",
+        "They are always equal",
+        "Area is always bigger",
+        "Perimeter uses division"
+      ],
+      "answer": 0,
+      "explanation": "Perimeter 2*6 + 2*4 = 20; area 6*4 = 24. Different operations, different answers — read the problem carefully."
+    },
+    {
+      "id": "u75l10e05",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Plan perimeter in plain English.",
+      "blocks": [
+        "Name the sub-plan perimeter with inputs width and height",
+        "Compute twice width plus twice height",
+        "Hand the perimeter back"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Define with two inputs, compute 2*width + 2*height, return it. Plan before coding."
+    },
+    {
+      "id": "u75l10e06",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Which expression matches 'twice width plus twice height'?",
+      "options": [
+        "2 * width + 2 * height",
+        "2 * (width + height) * 2",
+        "width * height",
+        "width + height / 2"
+      ],
+      "answer": 0,
+      "explanation": "2 * width + 2 * height. (Note 2 * (width + height) would also work, but the first matches the wording directly.)"
+    },
+    {
+      "id": "u75l10e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code it: define perimeter, return 2 * width + 2 * height, then print perimeter(6, 4).",
+      "blocks": [
+        "def perimeter(width, height):",
+        "    return 2 * width + 2 * height",
+        "print(perimeter(6, 4))"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Define with both parameters, return the sum of the two doubled sides, call with 6 and 4 inside print."
+    },
+    {
+      "id": "u75l10e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Complete the body:\n\ndef perimeter(width, height):\n    return 2 * width ____ 2 * height",
+      "answer": "+",
+      "acceptable": ["+"],
+      "explanation": "Add the two doubled sides: 2 * width + 2 * height. For 6 and 4 that's 20."
+    },
+    {
+      "id": "u75l10e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check — it prints 20 and your hand example was 20. Verdict?",
+      "options": [
+        "Passes",
+        "Fails",
+        "Unknown",
+        "Rewrite the example"
+      ],
+      "answer": 0,
+      "explanation": "Output (20) matches the hand example (20). Correct."
+    },
+    {
+      "id": "u75l10e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Re-check: perimeter(10, 5). What comes back?",
+      "options": [
+        "30",
+        "20",
+        "50",
+        "15"
+      ],
+      "answer": 0,
+      "explanation": "2*10 + 2*5 = 20 + 10 = 30. New inputs, correct new answer. You've practiced def + parameters + return!"
+    }
+  ]
+}

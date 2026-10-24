@@ -1,0 +1,146 @@
+{
+  "unitId": "u97",
+  "lessonId": "u97l06",
+  "title": "Capstone: count how many digits a number has",
+  "idea": "GUIDED CAPSTONE. Reuse the // 10 peeling idea, but count passes instead of summing — same tool, different accumulator.",
+  "problem": "Count the digits in 4072 (it has 4 digits).",
+  "exercises": [
+    {
+      "id": "u97l06e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: how many digits in 4072? OUTPUT is...",
+      "options": [
+        "A count of digits (one number)",
+        "The digit sum",
+        "The number reversed",
+        "The first digit"
+      ],
+      "answer": 0,
+      "explanation": "Output is a count. Compare to the digit-sum lesson: same peeling, but now we count passes instead of adding values."
+    },
+    {
+      "id": "u97l06e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "Which single operation 'drops the last digit' of a number?",
+      "options": [
+        "// 10",
+        "% 10",
+        "* 10",
+        "+ 10"
+      ],
+      "answer": 0,
+      "explanation": "// 10 floor-divides, chopping the last digit. Each drop is one digit, so counting drops counts digits."
+    },
+    {
+      "id": "u97l06e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example by hand. Start 4072. Keep doing // 10 and count steps until you reach 0: 4072 -> 407 -> 40 -> 4 -> 0. How many steps?",
+      "options": [
+        "4",
+        "3",
+        "5",
+        "7"
+      ],
+      "answer": 0,
+      "explanation": "Four drops to empty the number, so four digits. That matches 4-0-7-2 by eye. Hand answer: 4."
+    },
+    {
+      "id": "u97l06e04",
+      "type": "trueFalse",
+      "uepcc": "E",
+      "prompt": "Each time we do number // 10 and the number is still above 0, that represents one more digit to count.",
+      "answer": true,
+      "explanation": "Exactly — count one per surviving pass. The hand trace proves the loop will run 4 times for 4072."
+    },
+    {
+      "id": "u97l06e05",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Plan the counting loop. Order the steps.",
+      "blocks": [
+        "Add 1 to the digit count",
+        "Drop the last digit with // 10",
+        "Start a count at 0",
+        "Repeat while the number is still > 0"
+      ],
+      "answer": [
+        2,
+        0,
+        1,
+        3
+      ],
+      "explanation": "Start count at 0; each pass: count +1, then drop a digit; stop at 0. It's the counter pattern driven by //10."
+    },
+    {
+      "id": "u97l06e06",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Why a while loop and not a fixed range here?",
+      "options": [
+        "We don't know the digit count in advance — that's what we're finding",
+        "range is broken",
+        "while is faster",
+        "We do know it: always 4"
+      ],
+      "answer": 0,
+      "explanation": "The number of passes IS the answer we're computing, so we can't fix it ahead. while stops when number hits 0."
+    },
+    {
+      "id": "u97l06e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code the loop body (the two lines run each pass).",
+      "blocks": [
+        "number = number // 10",
+        "count = count + 1"
+      ],
+      "answer": [
+        1,
+        0
+      ],
+      "explanation": "Count the digit first, then drop it. Either line order works for the count here, but count-then-drop reads cleanly."
+    },
+    {
+      "id": "u97l06e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Complete the loop so it stops when the number is gone:\n\nnumber = 4072\ncount = 0\nwhile number > 0:\n    count = count + 1\n    number = number ____ 10\nprint(count)",
+      "answer": "//",
+      "acceptable": [
+        "//"
+      ],
+      "explanation": "Use // 10 to drop a digit each pass. (/ would give a decimal and never cleanly reach 0.)"
+    },
+    {
+      "id": "u97l06e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Run it on 4072: prints 4. Hand example said 4. Verdict?",
+      "options": [
+        "Passes",
+        "Fails",
+        "Unknown",
+        "Rewrite example"
+      ],
+      "answer": 0,
+      "explanation": "Matches. Same //10 tool as digit-sum, but counting passes instead of adding digits. One idea, two uses."
+    },
+    {
+      "id": "u97l06e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Re-run with number = 9. What does the count come out to?",
+      "options": [
+        "1",
+        "0",
+        "9",
+        "2"
+      ],
+      "answer": 0,
+      "explanation": "9 has one digit: one pass (9 -> 0), count 1. The single-digit edge case works — nice generalization."
+    }
+  ]
+}

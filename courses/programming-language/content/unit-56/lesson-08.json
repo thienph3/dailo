@@ -1,0 +1,143 @@
+{
+  "unitId": "u56",
+  "lessonId": "u56l08",
+  "title": "Solve it together: predict before you run",
+  "idea": "GUIDED UEPCC that leans on tracing. Predict the output of a per-item loop, then confirm by checking.",
+  "problem": "For each number in a list, print the number and whether it is even or odd.",
+  "exercises": [
+    {
+      "id": "u56l08e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: For each number, print it with 'even' or 'odd'.\n\nWhat is the OUTPUT per item?",
+      "options": [
+        "The number plus a label even/odd",
+        "Just the number",
+        "Just the label",
+        "The count of evens"
+      ],
+      "answer": 0,
+      "explanation": "Each item produces the value and a label — a per-item decision and print."
+    },
+    {
+      "id": "u56l08e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "How do you tell even from odd?",
+      "options": [
+        "Remainder when divided by 2 (0 = even)",
+        "Whether it is big",
+        "Its position",
+        "Its sign only"
+      ],
+      "answer": 0,
+      "explanation": "n % 2 == 0 means even; otherwise odd. The % tool from Lap 1."
+    },
+    {
+      "id": "u56l08e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example by hand. nums = [4, 7]. What are the two labels?",
+      "options": [
+        "even, odd",
+        "odd, even",
+        "even, even",
+        "odd, odd"
+      ],
+      "answer": 0,
+      "explanation": "4 % 2 == 0 -> even; 7 % 2 == 1 -> odd."
+    },
+    {
+      "id": "u56l08e04",
+      "type": "trueFalse",
+      "uepcc": "E",
+      "prompt": "0 is even, because 0 % 2 == 0.",
+      "answer": true,
+      "explanation": "Zero divided by 2 leaves remainder 0, so it's even. A good edge to confirm by hand."
+    },
+    {
+      "id": "u56l08e05",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Plan it. Order the steps for each number.",
+      "blocks": [
+        "If remainder by 2 is 0, label 'even'",
+        "Take each number",
+        "Otherwise label 'odd'"
+      ],
+      "answer": [
+        1,
+        0,
+        2
+      ],
+      "explanation": "Take each number, test n % 2, pick the label. Repeat."
+    },
+    {
+      "id": "u56l08e06",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Which tools does the plan use?",
+      "options": [
+        "for-each + if/else + %",
+        "append only",
+        "two loops",
+        "input + range"
+      ],
+      "answer": 0,
+      "explanation": "Walk, decide with if/else, test with the remainder operator %."
+    },
+    {
+      "id": "u56l08e07",
+      "type": "multipleChoice",
+      "uepcc": "C",
+      "prompt": "nums = [4, 7, 10]\nfor n in nums:\n    if n % 2 == 0:\n        print(n, \"even\")\n    else:\n        print(n, \"odd\")\n\nPredict line 2 of the output.",
+      "options": [
+        "7 odd",
+        "4 even",
+        "10 even",
+        "7 even"
+      ],
+      "answer": 0,
+      "explanation": "Second item is 7, which is odd, so line 2 is '7 odd'."
+    },
+    {
+      "id": "u56l08e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Fill the test for even:\n\nfor n in nums:\n    if n % 2 ____ 0:\n        print(n, \"even\")\n    else:\n        print(n, \"odd\")",
+      "answer": "==",
+      "acceptable": [
+        "=="
+      ],
+      "explanation": "Even means the remainder equals 0: n % 2 == 0."
+    },
+    {
+      "id": "u56l08e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check. For nums = [4, 7], the code prints '4 even' then '7 odd'. Your hand example said even, odd. Verdict?",
+      "options": [
+        "Passes",
+        "Fails",
+        "Unknown",
+        "Change the example"
+      ],
+      "answer": 0,
+      "explanation": "Matches the predicted labels — correct."
+    },
+    {
+      "id": "u56l08e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Re-check with nums = [2, 3, 6]. What are the labels, in order?",
+      "options": [
+        "even, odd, even",
+        "odd, even, odd",
+        "even, even, even",
+        "odd, odd, odd"
+      ],
+      "answer": 0,
+      "explanation": "2 even, 3 odd, 6 even. The solution generalizes to new numbers."
+    }
+  ]
+}

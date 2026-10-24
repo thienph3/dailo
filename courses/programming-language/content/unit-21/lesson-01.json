@@ -1,0 +1,123 @@
+{
+  "unitId": "u21",
+  "lessonId": "u21l01",
+  "title": "Do a step only when it's True",
+  "idea": "'if' lets the computer run a step only when a yes/no fact is True. If the fact is False, the step is skipped. Meet if with visible output.",
+  "exercises": [
+    {
+      "id": "u21l01e01",
+      "type": "multipleChoice",
+      "prompt": "What is 'if' for?",
+      "options": [
+        "To run a step only when something is True",
+        "To add numbers",
+        "To store a value",
+        "To print everything twice"
+      ],
+      "answer": 0,
+      "explanation": "'if' guards a step: it runs only when the condition is True."
+    },
+    {
+      "id": "u21l01e02",
+      "type": "multipleChoice",
+      "prompt": "What does this print?\n\nif True:\n    print(\"Hello\")",
+      "options": [
+        "Hello",
+        "nothing",
+        "True",
+        "an error"
+      ],
+      "answer": 0,
+      "explanation": "The condition is True, so the guarded print runs and shows Hello."
+    },
+    {
+      "id": "u21l01e03",
+      "type": "multipleChoice",
+      "prompt": "What does this print?\n\nif False:\n    print(\"Hello\")",
+      "options": [
+        "nothing",
+        "Hello",
+        "False",
+        "an error"
+      ],
+      "answer": 0,
+      "explanation": "The condition is False, so the guarded step is skipped. Nothing prints."
+    },
+    {
+      "id": "u21l01e04",
+      "type": "trueFalse",
+      "prompt": "If the condition after 'if' is False, the guarded step is skipped.",
+      "answer": true,
+      "explanation": "Yes - a False condition means the indented step does not run at all."
+    },
+    {
+      "id": "u21l01e05",
+      "type": "multipleChoice",
+      "prompt": "What must come right after the condition in an if line?",
+      "options": [
+        "a colon :",
+        "a semicolon ;",
+        "a comma ,",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "An if line ends with a colon: if True: - the colon introduces the guarded step below."
+    },
+    {
+      "id": "u21l01e06",
+      "type": "multipleChoice",
+      "prompt": "What does this print?\n\nis_open = True\nif is_open:\n    print(\"Come in\")",
+      "options": [
+        "Come in",
+        "nothing",
+        "True",
+        "is_open"
+      ],
+      "answer": 0,
+      "explanation": "is_open is True, so the guarded print runs: Come in."
+    },
+    {
+      "id": "u21l01e07",
+      "type": "multipleChoice",
+      "prompt": "What does this print?\n\nis_open = False\nif is_open:\n    print(\"Come in\")",
+      "options": [
+        "nothing",
+        "Come in",
+        "False",
+        "error"
+      ],
+      "answer": 0,
+      "explanation": "is_open is False, so the guarded step is skipped - nothing prints."
+    },
+    {
+      "id": "u21l01e08",
+      "type": "fillBlank",
+      "prompt": "Complete the keyword that guards a step:\n\n____ True:\n    print(\"Yes\")",
+      "answer": "if",
+      "acceptable": [
+        "if"
+      ],
+      "explanation": "The keyword is 'if'. It runs the indented step only when the condition is True."
+    },
+    {
+      "id": "u21l01e09",
+      "type": "trueFalse",
+      "prompt": "'if' can make the computer SKIP a step it would otherwise do.",
+      "answer": true,
+      "explanation": "Exactly - that's the whole power of if. A step runs only when the condition holds."
+    },
+    {
+      "id": "u21l01e10",
+      "type": "multipleChoice",
+      "prompt": "Last unit you MADE yes/no answers with comparisons. What does if add?",
+      "options": [
+        "It ACTS on the answer - doing a step only when it's True",
+        "It deletes comparisons",
+        "It stores numbers",
+        "Nothing new"
+      ],
+      "answer": 0,
+      "explanation": "Comparisons produce the yes/no answer; if finally lets the computer DO something based on it."
+    }
+  ]
+}

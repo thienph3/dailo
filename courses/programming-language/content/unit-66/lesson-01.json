@@ -1,0 +1,127 @@
+{
+  "unitId": "u66",
+  "lessonId": "u66l01",
+  "title": "What a bug really is",
+  "idea": "A bug is just an instruction that does not say what you meant. The computer is right; the code is wrong. Thinking only.",
+  "exercises": [
+    {
+      "id": "u66l01e01",
+      "type": "multipleChoice",
+      "prompt": "Your list-summing code prints the wrong total. What is the MOST likely cause?",
+      "options": [
+        "The code told it to — an instruction is wrong",
+        "The computer made a mistake",
+        "The list got tired",
+        "Numbers are random"
+      ],
+      "answer": 0,
+      "explanation": "A bug is a mismatch between what you MEANT and what you WROTE. The computer followed your code exactly, so the fix is in the code."
+    },
+    {
+      "id": "u66l01e02",
+      "type": "trueFalse",
+      "prompt": "A 'bug' means the computer broke and needs replacing.",
+      "answer": false,
+      "explanation": "No. A bug is a wrong instruction. The computer did exactly what the code said. Debugging means finding the instruction that doesn't match your intent."
+    },
+    {
+      "id": "u66l01e03",
+      "type": "multipleChoice",
+      "prompt": "The first step when code gives a wrong answer is to...",
+      "options": [
+        "Work out by hand what the RIGHT answer should be",
+        "Delete everything and start over",
+        "Blame the list",
+        "Run it again and hope"
+      ],
+      "answer": 0,
+      "explanation": "You can't tell if an answer is wrong until you know the right one. Hand-work the correct result first; that's your target."
+    },
+    {
+      "id": "u66l01e04",
+      "type": "trueFalse",
+      "prompt": "If you don't know what the correct answer should be, you can't tell whether there's a bug.",
+      "answer": true,
+      "explanation": "Exactly. 'Wrong' only has meaning against a known 'right'. Always decide the expected answer by hand before judging the code."
+    },
+    {
+      "id": "u66l01e05",
+      "type": "multipleChoice",
+      "prompt": "A loop should add up [2, 4, 6] to get 12, but it prints 10. This gap between expected and actual is called...",
+      "options": [
+        "a bug",
+        "a feature",
+        "an upgrade",
+        "a list"
+      ],
+      "answer": 0,
+      "explanation": "Expected 12, got 10 — that mismatch is a bug. The next units teach you to hunt down where the 2 went missing."
+    },
+    {
+      "id": "u66l01e06",
+      "type": "multipleChoice",
+      "prompt": "REVIEW: what does sum([2, 4, 6]) give?",
+      "options": [
+        "12",
+        "10",
+        "6",
+        "246"
+      ],
+      "answer": 0,
+      "explanation": "2 + 4 + 6 = 12. Knowing the correct total by hand is how you'd catch a loop that prints 10 instead."
+    },
+    {
+      "id": "u66l01e07",
+      "type": "trueFalse",
+      "prompt": "Debugging is a normal part of programming, not a sign you're bad at it.",
+      "answer": true,
+      "explanation": "Every programmer debugs, every day. Finding and fixing bugs is a core skill, and this lap builds it on purpose."
+    },
+    {
+      "id": "u66l01e08",
+      "type": "matchPairs",
+      "prompt": "Match each debugging word to its meaning.",
+      "pairs": [
+        {
+          "left": "Bug",
+          "right": "An instruction that doesn't do what you meant"
+        },
+        {
+          "left": "Expected",
+          "right": "The answer you worked out by hand"
+        },
+        {
+          "left": "Actual",
+          "right": "The answer the code really printed"
+        }
+      ],
+      "explanation": "You compare EXPECTED (your hand result) against ACTUAL (what ran). A difference points to a BUG."
+    },
+    {
+      "id": "u66l01e09",
+      "type": "multipleChoice",
+      "prompt": "Which attitude helps you debug fastest?",
+      "options": [
+        "Calm curiosity: 'what did the code actually do, step by step?'",
+        "Panic",
+        "Guessing random changes",
+        "Assuming the computer is broken"
+      ],
+      "answer": 0,
+      "explanation": "Debugging is detective work. Trace what the code really did, line by line, instead of guessing and changing."
+    },
+    {
+      "id": "u66l01e10",
+      "type": "multipleChoice",
+      "prompt": "This unit is about...",
+      "options": [
+        "spotting WHY list code gives a wrong answer",
+        "writing brand-new list tools",
+        "making the computer faster",
+        "sorting lists"
+      ],
+      "answer": 0,
+      "explanation": "You already know the list tools. Now you learn to find the small mistakes that make them give the wrong result."
+    }
+  ]
+}

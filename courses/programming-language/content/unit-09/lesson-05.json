@@ -1,0 +1,126 @@
+{
+  "unitId": "u09",
+  "lessonId": "u09l05",
+  "title": "Tracking a value as the plan runs",
+  "idea": "Reassignment lets a value change step by step. A print in the middle catches it part-way through. (Numbers only — text as data comes later.)",
+  "exercises": [
+    {
+      "id": "u09l05e01",
+      "type": "multipleChoice",
+      "prompt": "A scoreboard changes as the program runs. What will this show (three lines)?\n\nscore = 0\nprint(score)\nscore = 5\nprint(score)\nscore = 12\nprint(score)",
+      "options": [
+        "0, 5, 12",
+        "12, 12, 12",
+        "0, 0, 0",
+        "17"
+      ],
+      "answer": 0,
+      "explanation": "Each print catches the score at its moment: 0, then 5, then 12. The value changes as we go (no math — each line just sets a new value)."
+    },
+    {
+      "id": "u09l05e02",
+      "type": "trueFalse",
+      "prompt": "Putting a print between two changes lets you see the value part-way through.",
+      "answer": true,
+      "explanation": "Yes! That's a great way to watch a value change step by step as your program runs."
+    },
+    {
+      "id": "u09l05e03",
+      "type": "multipleChoice",
+      "prompt": "What will this show (three lines)?\n\nfloor = 1\nprint(floor)\nfloor = 5\nprint(floor)\nfloor = 9\nprint(floor)",
+      "options": [
+        "1, 5, 9",
+        "9, 9, 9",
+        "1, 1, 1",
+        "9, 5, 1"
+      ],
+      "answer": 0,
+      "explanation": "The elevator's floor changes between prints. Each print shows where it is at that line."
+    },
+    {
+      "id": "u09l05e04",
+      "type": "orderBlocks",
+      "prompt": "Arrange so the program shows 0, then 50, then 100 (a loading bar filling up).",
+      "blocks": [
+        "progress = 0",
+        "print(progress)",
+        "progress = 50",
+        "print(progress)",
+        "progress = 100",
+        "print(progress)"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "explanation": "Set, print, change, print, change, print. The loading bar fills step by step on screen: 0, 50, 100."
+    },
+    {
+      "id": "u09l05e05",
+      "type": "multipleChoice",
+      "prompt": "The print is missing in the middle. What shows here (two lines)?\n\nstage = 1\nstage = 2\nprint(stage)\nstage = 3\nprint(stage)",
+      "options": [
+        "2 then 3",
+        "1 then 2",
+        "1 then 3",
+        "3 then 3"
+      ],
+      "answer": 0,
+      "explanation": "By the first print, stage is already 2 (the 1 was overwritten before any print). Then it becomes 3 for the second print."
+    },
+    {
+      "id": "u09l05e06",
+      "type": "trueFalse",
+      "prompt": "A value can be different each time you print it, if you change it in between.",
+      "answer": true,
+      "explanation": "Exactly. The variable holds whatever its newest value is, and that can change as the plan runs."
+    },
+    {
+      "id": "u09l05e07",
+      "type": "multipleChoice",
+      "prompt": "A phone battery is tracked. What will this show (three lines)?\n\nbattery = 100\nprint(battery)\nbattery = 50\nprint(battery)\nbattery = 20\nprint(battery)",
+      "options": [
+        "100, 50, 20",
+        "20, 20, 20",
+        "100, 100, 100",
+        "170"
+      ],
+      "answer": 0,
+      "explanation": "No math — each line just sets a new value. The prints catch 100, then 50, then 20."
+    },
+    {
+      "id": "u09l05e08",
+      "type": "fillBlank",
+      "prompt": "Add the line that changes level to 2 before the second print.\n\nlevel = 1\nprint(level)\n____\nprint(level)",
+      "answer": "level = 2",
+      "acceptable": [
+        "level = 2"
+      ],
+      "explanation": "Setting level = 2 between the prints makes the first show 1 and the second show 2."
+    },
+    {
+      "id": "u09l05e09",
+      "type": "multipleChoice",
+      "prompt": "Why does the SAME print line show a different value the second time?\n\ncount = 3\nprint(count)\ncount = 8\nprint(count)",
+      "options": [
+        "Because count was reassigned in between the two prints",
+        "Because print is random",
+        "Because print remembers the old value",
+        "It always shows the same value"
+      ],
+      "answer": 0,
+      "explanation": "The change between the prints is what makes the second one show 8 instead of 3."
+    },
+    {
+      "id": "u09l05e10",
+      "type": "trueFalse",
+      "prompt": "Reassignment is useful for problems where a value changes as the program runs — like a score or a battery level.",
+      "answer": true,
+      "explanation": "Yes! That's exactly why we learned it. You can now track things that change. Nice work!"
+    }
+  ]
+}

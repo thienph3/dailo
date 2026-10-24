@@ -1,0 +1,149 @@
+{
+  "unitId": "u80",
+  "lessonId": "u80l10",
+  "title": "The edge-case habit, pulled together",
+  "idea": "MEET (thinking), review-heavy. Consolidate the edge cases — empty, zero, one item, boundary, ties, all-fail — and the habit of listing them before coding.",
+  "exercises": [
+    {
+      "id": "u80l10e01",
+      "type": "multipleChoice",
+      "prompt": "What is an edge case, in one sentence?",
+      "options": [
+        "An unusual input that can break a plan built for normal inputs",
+        "The first item in a list",
+        "A faster kind of loop",
+        "A spelling mistake"
+      ],
+      "answer": 0,
+      "explanation": "An edge case is an unusual or extreme input — empty, zero, boundary — that ordinary-looking code can mishandle."
+    },
+    {
+      "id": "u80l10e02",
+      "type": "multiSelect",
+      "prompt": "Which of these are edge cases worth listing when you plan? (Select all that apply.)",
+      "options": [
+        "An empty list",
+        "A zero you divide by",
+        "A value exactly on a cutoff",
+        "A tie for the highest"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "Empty, zero-divisor, boundary, and tie are all classic edge cases. Each stresses a plan in a different way."
+    },
+    {
+      "id": "u80l10e03",
+      "type": "multipleChoice",
+      "prompt": "REVIEW: averaging an empty list is dangerous because...",
+      "options": [
+        "count is 0 and dividing by 0 crashes",
+        "the total is too big",
+        "the list is too long",
+        "it is never dangerous"
+      ],
+      "answer": 0,
+      "explanation": "Empty means count 0, and total / 0 breaks. The empty guard protects the divide. A classic edge case."
+    },
+    {
+      "id": "u80l10e04",
+      "type": "multipleChoice",
+      "prompt": "REVIEW: for 'passes if 50 or more', which input proves you used >= and not >?",
+      "options": [
+        "Exactly 50 — it must pass",
+        "100",
+        "0",
+        "an empty list"
+      ],
+      "answer": 0,
+      "explanation": "The boundary value 50 is the test. With >= it passes; with > it would wrongly fail. Check the boundary directly."
+    },
+    {
+      "id": "u80l10e05",
+      "type": "trueFalse",
+      "prompt": "REVIEW: summing or counting an empty list is safely 0, but averaging it needs a guard.",
+      "answer": true,
+      "explanation": "Yes. Summing and counting nothing give 0 harmlessly. Averaging nothing divides by 0, so it needs a guard."
+    },
+    {
+      "id": "u80l10e06",
+      "type": "matchPairs",
+      "prompt": "REVIEW: match each problem to its signature edge case.",
+      "pairs": [
+        {
+          "left": "Average a list",
+          "right": "Empty list"
+        },
+        {
+          "left": "Count over a cutoff",
+          "right": "Value on the boundary"
+        },
+        {
+          "left": "Highest value",
+          "right": "Empty list or a tie"
+        }
+      ],
+      "explanation": "Averages fear empty; cutoffs fear the boundary; max fears empty and ties. Spotting these fast is the whole habit."
+    },
+    {
+      "id": "u80l10e07",
+      "type": "orderBlocks",
+      "prompt": "REVIEW: put the edge-case-aware planning routine in order.",
+      "blocks": [
+        "Understand the normal case and its answer",
+        "List the tricky inputs for this problem",
+        "Decide what each tricky input should do",
+        "Write code that handles the normal and tricky cases"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "Understand normal, list edge cases, decide each one's behavior, then code. Edge-case enumeration lives inside planning."
+    },
+    {
+      "id": "u80l10e08",
+      "type": "multipleChoice",
+      "prompt": "REVIEW: a single-item list [7] is safe for totals and max, but risky for...",
+      "options": [
+        "plans that compare each item to the NEXT one",
+        "all plans",
+        "nothing",
+        "counting"
+      ],
+      "answer": 0,
+      "explanation": "One item has no 'next', so pair-comparing plans struggle. Totals, counts, and max handle a single item fine."
+    },
+    {
+      "id": "u80l10e09",
+      "type": "multipleChoice",
+      "prompt": "REVIEW: if you filter then average, and no item passes, the danger is...",
+      "options": [
+        "averaging over 0 matches — a divide by zero",
+        "the list is too long",
+        "the boundary is wrong",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "An all-fail filter leaves 0 matches. Averaging them divides by zero — the same guard the empty case needs."
+    },
+    {
+      "id": "u80l10e10",
+      "type": "multipleChoice",
+      "prompt": "You've built the edge-case habit. The big takeaway:",
+      "options": [
+        "Before coding, list the tricky inputs and plan for each — sturdier solutions, fewer surprises",
+        "Edge cases don't matter",
+        "Always code first",
+        "Only normal inputs count"
+      ],
+      "answer": 0,
+      "explanation": "Naming the empty, zero, one-item, boundary, tie, and all-fail cases up front makes your plans robust. A habit for every problem. Well done!"
+    }
+  ]
+}

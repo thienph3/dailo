@@ -1,0 +1,147 @@
+{
+  "unitId": "u61",
+  "lessonId": "u61l03",
+  "title": "Solve it together: the best jump",
+  "idea": "GUIDED PROBLEM via UEPCC. Choose and apply the MAX pattern to find the longest jump.",
+  "problem": "Long-jump distances are [4, 7, 5, 6]. What was the best (longest) jump?",
+  "exercises": [
+    {
+      "id": "u61l03e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: jumps [4, 7, 5, 6]. What was the best (longest) jump?\n\nUnderstand. What is the OUTPUT?",
+      "options": [
+        "One number: the biggest distance",
+        "The total of all jumps",
+        "How many jumps there were",
+        "Each jump printed"
+      ],
+      "answer": 0,
+      "explanation": "'Best/longest' is the single biggest value — the max pattern. Name the output first."
+    },
+    {
+      "id": "u61l03e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "What is the INPUT?",
+      "options": [
+        "The list of jump distances [4, 7, 5, 6]",
+        "One jump",
+        "The word 'best'",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "The input is the list of distances; you will walk it keeping the best so far."
+    },
+    {
+      "id": "u61l03e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example by hand. Scan [4, 7, 5, 6] keeping the best so far. What is the longest?",
+      "options": [
+        "7",
+        "4",
+        "6",
+        "22"
+      ],
+      "answer": 0,
+      "explanation": "best goes 4 -> 7, and 5 and 6 never beat 7. The longest jump is 7 — your check value."
+    },
+    {
+      "id": "u61l03e04",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Plan. Which pattern fits 'the biggest'?",
+      "options": [
+        "Max — keep a best-so-far, replace when bigger",
+        "Sum — add the values",
+        "Count — add 1 per match",
+        "Min — keep the smallest"
+      ],
+      "answer": 0,
+      "explanation": "'Biggest/longest/best' is the MAX pattern: a best-so-far replaced on a bigger value."
+    },
+    {
+      "id": "u61l03e05",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Where should the best-so-far start?",
+      "options": [
+        "At the first jump, jumps[0]",
+        "At 0",
+        "At the list length",
+        "At 100"
+      ],
+      "answer": 0,
+      "explanation": "Start at the first real value so the comparison works for any numbers, even negatives."
+    },
+    {
+      "id": "u61l03e06",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code it. Arrange the lines to find the longest jump.",
+      "answer": [
+        1,
+        3,
+        0,
+        2,
+        4
+      ],
+      "blocks": [
+        "    if jump > best:",
+        "best = jumps[0]",
+        "        best = jump",
+        "for jump in jumps:",
+        "print(best)"
+      ],
+      "explanation": "Start best at the first jump, loop, replace when bigger, print. Mirrors the plan."
+    },
+    {
+      "id": "u61l03e07",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Finish the comparison so this keeps the LONGEST jump:\n\nfor jump in jumps:\n    if jump ____ best:\n        best = jump",
+      "answer": ">",
+      "acceptable": [
+        ">"
+      ],
+      "explanation": "Replace best only when the jump is bigger, so the sign is >."
+    },
+    {
+      "id": "u61l03e08",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check. The code prints 7. Your hand example said 7. So...",
+      "options": [
+        "It passes — output matches the example",
+        "It fails",
+        "You can't tell",
+        "Change the example"
+      ],
+      "answer": 0,
+      "explanation": "Output matches the hand-found best, so the max solution is correct."
+    },
+    {
+      "id": "u61l03e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "New input: jumps = [9, 2, 9, 3]. With the same code, what prints?",
+      "options": [
+        "9",
+        "2",
+        "23",
+        "4"
+      ],
+      "answer": 0,
+      "explanation": "The best is 9 (it appears twice). Max reports the single biggest value."
+    },
+    {
+      "id": "u61l03e10",
+      "type": "trueFalse",
+      "uepcc": "Check",
+      "prompt": "If you had used < instead of > by mistake, this would have found the SHORTEST jump, not the longest.",
+      "answer": true,
+      "explanation": "The comparison sign decides the job. > finds the biggest; < would find the smallest."
+    }
+  ]
+}

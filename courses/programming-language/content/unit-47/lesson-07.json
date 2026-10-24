@@ -1,0 +1,136 @@
+{
+  "unitId": "u47",
+  "lessonId": "u47l07",
+  "title": "What do you keep across passes?",
+  "idea": "MEET. Many loops keep a value across passes: a COUNTER (how many) or an ACCUMULATOR (a running total). Recognising which the problem needs. Thinking only.",
+  "exercises": [
+    {
+      "id": "u47l07e01",
+      "type": "multipleChoice",
+      "prompt": "'How many of the numbers 1 to 10 are even?' This needs you to keep...",
+      "options": [
+        "a counter — how many fit the rule",
+        "a running total of their values",
+        "nothing across passes",
+        "the loop variable only"
+      ],
+      "answer": 0,
+      "explanation": "You are counting HOW MANY, so you keep a counter that goes up by 1 each time a number is even."
+    },
+    {
+      "id": "u47l07e02",
+      "type": "multipleChoice",
+      "prompt": "'What is the sum of the numbers 1 to 10?' This needs you to keep...",
+      "options": [
+        "an accumulator — a running total",
+        "a counter of how many",
+        "nothing",
+        "the largest number only"
+      ],
+      "answer": 0,
+      "explanation": "You are adding values together, so you keep a running total (accumulator) that grows each pass."
+    },
+    {
+      "id": "u47l07e03",
+      "type": "matchPairs",
+      "prompt": "Match each goal to what you keep across passes.",
+      "pairs": [
+        {
+          "left": "Count the odd numbers",
+          "right": "a counter"
+        },
+        {
+          "left": "Total up all the prices",
+          "right": "an accumulator"
+        },
+        {
+          "left": "Count how many passed",
+          "right": "a counter"
+        }
+      ],
+      "explanation": "Counting HOW MANY uses a counter (+1 each time). Adding VALUES uses an accumulator (+ the value each time)."
+    },
+    {
+      "id": "u47l07e04",
+      "type": "trueFalse",
+      "prompt": "A counter usually goes up by 1 each time; an accumulator usually adds the current value.",
+      "answer": true,
+      "explanation": "True. A counter tallies occurrences (+1); an accumulator builds a sum by adding each value."
+    },
+    {
+      "id": "u47l07e05",
+      "type": "multipleChoice",
+      "prompt": "'Add up everyone's score' — counter or accumulator?",
+      "options": [
+        "accumulator — a running total of scores",
+        "counter — how many people",
+        "neither",
+        "both, equally"
+      ],
+      "answer": 0,
+      "explanation": "Adding the scores builds a total, so you keep an accumulator."
+    },
+    {
+      "id": "u47l07e06",
+      "type": "multipleChoice",
+      "prompt": "'How many days was it sunny?' — counter or accumulator?",
+      "options": [
+        "counter — how many sunny days",
+        "accumulator — total sunshine",
+        "neither",
+        "the last day only"
+      ],
+      "answer": 0,
+      "explanation": "You are tallying how many, so a counter that increases by 1 on each sunny day fits."
+    },
+    {
+      "id": "u47l07e07",
+      "type": "trueFalse",
+      "prompt": "A counter and an accumulator both must START at a value before the loop (often 0).",
+      "answer": true,
+      "explanation": "True. You set it to 0 before the loop, then update it each pass. Starting value matters."
+    },
+    {
+      "id": "u47l07e08",
+      "type": "orderBlocks",
+      "prompt": "Order the plan for 'count how many numbers 1 to 5 are over 2'.",
+      "blocks": [
+        "Start a counter at 0 before the loop",
+        "Each pass, if the number is over 2, add 1 to the counter",
+        "After the loop, the counter is the answer"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Start at 0, add 1 when the rule holds, read the counter at the end. Classic counting loop."
+    },
+    {
+      "id": "u47l07e09",
+      "type": "multipleChoice",
+      "prompt": "A problem needs BOTH 'how many' and 'the total'. What do you keep?",
+      "options": [
+        "both a counter and an accumulator",
+        "only a counter",
+        "only an accumulator",
+        "neither"
+      ],
+      "answer": 0,
+      "explanation": "If you need a count and a sum, keep both: one tallies occurrences, the other builds the total."
+    },
+    {
+      "id": "u47l07e10",
+      "type": "multipleChoice",
+      "prompt": "Why decide counter vs accumulator before coding?",
+      "options": [
+        "It tells you what to start at 0 and how to update it each pass",
+        "It changes the loop count",
+        "It removes the loop",
+        "It picks the user's name"
+      ],
+      "answer": 0,
+      "explanation": "Knowing which you keep shapes the body: +1 for a counter, + value for an accumulator. Plan it first."
+    }
+  ]
+}

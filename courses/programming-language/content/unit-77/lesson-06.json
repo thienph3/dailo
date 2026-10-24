@@ -1,0 +1,131 @@
+{
+  "unitId": "u77",
+  "lessonId": "u77l06",
+  "title": "Two helpers, two private worlds",
+  "idea": "TOOL. Two helpers, two private worlds: same names don't clash across functions. Includes spot-the-bug.",
+  "exercises": [
+    {
+      "type": "multipleChoice",
+      "prompt": "Predict:\n\ndef a():\n    total = 5\n    return total\n\ndef b():\n    total = 9\n    return total\n\nprint(a() + b())",
+      "options": [
+        "14",
+        "10",
+        "18",
+        "error"
+      ],
+      "answer": 0,
+      "explanation": "Each total is private; 5 + 9 = 14.",
+      "id": "u77l06e01"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Because total is private in each, the two functions do not interfere.",
+      "answer": true,
+      "explanation": "Separate scopes mean separate totals.",
+      "id": "u77l06e02"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Predict:\n\ndef f():\n    n = 2\n    return n\n\nn = 7\nprint(f() + n)",
+      "options": [
+        "9",
+        "4",
+        "14",
+        "error"
+      ],
+      "answer": 0,
+      "explanation": "f()'s n is 2; the outer n is 7; 2 + 7 = 9.",
+      "id": "u77l06e03"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Spot the bug:\n\ndef f():\n    x = 3\n\nprint(f() + 1)",
+      "options": [
+        "f returns None, so None + 1 errors",
+        "prints 4",
+        "prints 3",
+        "no bug"
+      ],
+      "answer": 0,
+      "explanation": "No return means None; None + 1 fails.",
+      "id": "u77l06e04"
+    },
+    {
+      "type": "fillBlank",
+      "prompt": "Fix it so f returns x:\n\ndef f():\n    x = 3\n    ____ x",
+      "answer": "return",
+      "acceptable": [
+        "return"
+      ],
+      "explanation": "return x makes f() equal 3, so f() + 1 = 4.",
+      "id": "u77l06e05"
+    },
+    {
+      "type": "orderBlocks",
+      "prompt": "REVIEW: arrange a returning helper used in a sum.",
+      "blocks": [
+        "def half(n):",
+        "    return n / 2",
+        "result = half(10) + half(4)",
+        "print(result)"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "half(10)=5.0, half(4)=2.0, result 7.0.",
+      "id": "u77l06e06"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Why not just read a()'s total from inside b()?",
+      "options": [
+        "It's private to a — b cannot see it",
+        "It's too slow",
+        "it works fine",
+        "b has no total"
+      ],
+      "answer": 0,
+      "explanation": "Each function's variables are private to itself.",
+      "id": "u77l06e07"
+    },
+    {
+      "type": "multiSelect",
+      "prompt": "Visible to the MAIN code? (choose all)",
+      "options": [
+        "a value returned by a()",
+        "a's private total",
+        "a main-code variable",
+        "b's private total"
+      ],
+      "answer": [
+        0,
+        2
+      ],
+      "explanation": "Only returned values and main-code variables are visible outside.",
+      "id": "u77l06e08"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Giving two helpers the same private name is allowed and safe.",
+      "answer": true,
+      "explanation": "Scope keeps them apart.",
+      "id": "u77l06e09"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Takeaway:",
+      "options": [
+        "Each helper has its own private variables; share only via return",
+        "Variables are shared across functions",
+        "return is unnecessary",
+        "print shares between functions"
+      ],
+      "answer": 0,
+      "explanation": "Private worlds, return to share.",
+      "id": "u77l06e10"
+    }
+  ]
+}

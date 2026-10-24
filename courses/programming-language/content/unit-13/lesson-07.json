@@ -1,0 +1,146 @@
+{
+  "unitId": "u13",
+  "lessonId": "u13l07",
+  "title": "Building the right expression",
+  "idea": "Turn a word problem into an expression, adding parentheses only where the order needs forcing.",
+  "exercises": [
+    {
+      "id": "u13l07e01",
+      "type": "multipleChoice",
+      "prompt": "A shirt costs 8 and you buy 3. Which expression gives the total cost?",
+      "options": [
+        "3 * 8",
+        "3 + 8",
+        "3 / 8",
+        "3 - 8"
+      ],
+      "answer": 0,
+      "explanation": "'Buy 3 at 8 each' is multiply: 3 * 8 is 24. No parentheses needed for one operation."
+    },
+    {
+      "id": "u13l07e02",
+      "type": "multipleChoice",
+      "prompt": "Two friends split a bill. The bill is 20 plus a 4 tip, split in 2. Which is correct?",
+      "options": [
+        "print((20 + 4) / 2)",
+        "print(20 + 4 / 2)",
+        "print(20 / 2 + 4)",
+        "print(20 + 4 * 2)"
+      ],
+      "answer": 0,
+      "explanation": "Add the tip FIRST, then split: (20 + 4) / 2 is 12.0 each. Without ( ), divide would hit only the tip."
+    },
+    {
+      "id": "u13l07e03",
+      "type": "multipleChoice",
+      "prompt": "You buy 2 pens at 3 each and 1 notebook at 5. Total cost?",
+      "options": [
+        "print(2 * 3 + 5)",
+        "print((2 * 3) + 5)",
+        "print(2 * (3 + 5))",
+        "Both A and B give 11"
+      ],
+      "answer": 3,
+      "explanation": "2 * 3 is 6 (times first), + 5 is 11. The ( ) in B just make that visible — same answer. C would be wrong (16)."
+    },
+    {
+      "id": "u13l07e04",
+      "type": "multipleChoice",
+      "prompt": "A recipe needs (2 cups plus 1 cup) multiplied by 3 batches. Which expression?",
+      "options": [
+        "print((2 + 1) * 3)",
+        "print(2 + 1 * 3)",
+        "print(2 * 3 + 1)",
+        "print(2 + 1 + 3)"
+      ],
+      "answer": 0,
+      "explanation": "Add the cups first, then scale by batches: (2 + 1) * 3 is 9. Parentheses force the add."
+    },
+    {
+      "id": "u13l07e05",
+      "type": "trueFalse",
+      "prompt": "For 'buy 4 at 2 each, then add a 3 delivery fee', the expression 4 * 2 + 3 is correct without any parentheses.",
+      "answer": true,
+      "explanation": "Times already goes first: 4*2=8, +3=11. The delivery fee is a plain add at the end — no ( ) needed."
+    },
+    {
+      "id": "u13l07e06",
+      "type": "fillBlank",
+      "prompt": "Finish the average of 10 and 20 (add, then divide by 2):\n\nprint((10 + 20) / ____ )",
+      "answer": "2",
+      "acceptable": [
+        "2"
+      ],
+      "explanation": "(10 + 20) / 2 is 30 / 2 is 15.0. The parentheses add first, then divide."
+    },
+    {
+      "id": "u13l07e07",
+      "type": "multiSelect",
+      "prompt": "Which problems REQUIRE parentheses to be correct? (pick all)",
+      "options": [
+        "Add the two prices, then split by 3",
+        "Multiply count by price, then add shipping",
+        "Add bill and tip, then divide among 4",
+        "Just multiply 5 by 6"
+      ],
+      "answer": [
+        0,
+        2
+      ],
+      "explanation": "'Add then divide' needs the add forced first (options 1 and 3). Multiply-then-add and a single multiply follow the normal order already."
+    },
+    {
+      "id": "u13l07e08",
+      "type": "orderBlocks",
+      "prompt": "Order the steps to compute the cost: (base 10 plus tax 2), then times 2 people.",
+      "blocks": [
+        "Add base and tax: 10 + 2",
+        "Multiply the result by 2",
+        "Show the total"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Add inside the parentheses first (12), then times 2 (24), then show it. Expression: (10 + 2) * 2."
+    },
+    {
+      "id": "u13l07e09",
+      "type": "tapTokens",
+      "prompt": "Build: add 6 and 9, then divide by 3. Tap the tokens in order.",
+      "tokens": [
+        "(",
+        "6",
+        "+",
+        "9",
+        ")",
+        "/",
+        "3"
+      ],
+      "answer": [
+        "(",
+        "6",
+        "+",
+        "9",
+        ")",
+        "/",
+        "3"
+      ],
+      "explanation": "(6 + 9) / 3 — inside first gives 15, then 15 / 3 is 5.0."
+    },
+    {
+      "id": "u13l07e10",
+      "type": "multipleChoice",
+      "prompt": "Review: variables make it readable. Which reads most like the plan for 'bill 24 plus tip 6, split by 3'?",
+      "options": [
+        "bill = 24\ntip = 6\nprint((bill + tip) / 3)",
+        "print((24 + 6) / 3)",
+        "print(24 + 6 / 3)",
+        "print(30 / 3)"
+      ],
+      "answer": 0,
+      "explanation": "Naming bill and tip makes the code read like the problem. (bill + tip) / 3 is 10.0 each."
+    }
+  ]
+}

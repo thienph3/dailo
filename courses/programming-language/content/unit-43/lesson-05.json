@@ -1,0 +1,148 @@
+{
+  "unitId": "u43",
+  "lessonId": "u43l05",
+  "title": "Solve it together: add up 1 to n",
+  "idea": "GUIDED. Accumulate the numbers in a range, using the loop variable itself.",
+  "problem": "Add up every whole number from 1 to 5.",
+  "exercises": [
+    {
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: Add up every whole number from 1 to 5.\n\nUnderstand -- what is the OUTPUT?",
+      "options": [
+        "The sum 1 + 2 + 3 + 4 + 5",
+        "How many numbers there are",
+        "The biggest number",
+        "The number 5"
+      ],
+      "answer": 0,
+      "explanation": "The output is the SUM of 1 through 5. Naming it keeps the plan focused.",
+      "id": "u43l05e01"
+    },
+    {
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "By hand: 1 + 2 + 3 + 4 + 5 equals what?",
+      "options": [
+        "15",
+        "10",
+        "25",
+        "5"
+      ],
+      "answer": 0,
+      "explanation": "1+2+3+4+5 = 15. This hand answer (15) is our check value.",
+      "id": "u43l05e02"
+    },
+    {
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Plan the steps.",
+      "blocks": [
+        "Start a total at 0",
+        "For each number from 1 to 5, add it to the total",
+        "Show the total"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Start the total, add each number as you walk the range, then show it. The loop variable IS the value to add.",
+      "id": "u43l05e03"
+    },
+    {
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Which range gives the numbers 1, 2, 3, 4, 5?",
+      "options": [
+        "range(1, 6)",
+        "range(1, 5)",
+        "range(5)",
+        "range(0, 5)"
+      ],
+      "answer": 0,
+      "explanation": "range(1, 6) produces 1 through 5. The stop value 6 is excluded.",
+      "id": "u43l05e04"
+    },
+    {
+      "type": "multipleChoice",
+      "uepcc": "C",
+      "prompt": "In the loop, what do you add to total each pass?",
+      "options": [
+        "The loop variable n (the current number)",
+        "Always 1",
+        "Always 5",
+        "The total"
+      ],
+      "answer": 0,
+      "explanation": "You add the current number n. Over the range that adds 1, then 2, ... up to 5.",
+      "id": "u43l05e05"
+    },
+    {
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Fill the add-step that sums each number:\n\ntotal = 0\nfor n in range(1, 6):\n    total = total ____ n\nprint(total)",
+      "answer": "+",
+      "acceptable": [
+        "+"
+      ],
+      "explanation": "Add n each pass: total = total + n. After the loop total is 15.",
+      "id": "u43l05e06"
+    },
+    {
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Arrange the full solution.",
+      "blocks": [
+        "total = 0",
+        "for n in range(1, 6):",
+        "    total = total + n",
+        "print(total)"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "Total at 0, loop 1..5 adding n, then print. The accumulator grows by the loop variable each pass.",
+      "id": "u43l05e07"
+    },
+    {
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "It prints 15, matching your hand answer. The solution is...",
+      "options": [
+        "Correct",
+        "Wrong",
+        "Untested",
+        "Random"
+      ],
+      "answer": 0,
+      "explanation": "Output (15) equals the hand sum (15), so the loop sums the range correctly.",
+      "id": "u43l05e08"
+    },
+    {
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Re-check: add up 1 to 4 with range(1, 5). What should it print?",
+      "options": [
+        "10",
+        "15",
+        "4",
+        "6"
+      ],
+      "answer": 0,
+      "explanation": "1+2+3+4 = 10. Changing the range changes which numbers get summed.",
+      "id": "u43l05e09"
+    },
+    {
+      "type": "trueFalse",
+      "uepcc": "Check",
+      "prompt": "Starting total at 5 instead of 0 would make the answer wrong.",
+      "answer": true,
+      "explanation": "True -- the accumulator must start at 0, or the first add builds on the wrong base and the total is off.",
+      "id": "u43l05e10"
+    }
+  ]
+}

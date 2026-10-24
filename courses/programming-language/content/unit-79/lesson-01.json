@@ -1,0 +1,150 @@
+{
+  "unitId": "u79",
+  "lessonId": "u79l01",
+  "title": "Solve it together: compose two sub-plans",
+  "idea": "GUIDED (UEPCC). Compose two helpers: double a number, then add one. The inner result feeds the outer call.",
+  "problem": "There are two sub-plans: double(n) returns n*2, and add_one(n) returns n+1. Show add_one(double(5)).",
+  "exercises": [
+    {
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: double(n) returns n*2; add_one(n) returns n+1. Show add_one(double(5)).\n\nUnderstand first — what is the OUTPUT we want?",
+      "options": [
+        "One number: 5 doubled, then increased by one",
+        "The list [double, add_one]",
+        "Only 5",
+        "How many sub-plans there are"
+      ],
+      "answer": 0,
+      "explanation": "The output is a single number: take 5, double it, then add one. Naming the output frames the whole solve.",
+      "id": "u79l01e01"
+    },
+    {
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "Still understanding. What is the INPUT the whole expression starts from?",
+      "options": [
+        "The number 5",
+        "The word 'double'",
+        "Nothing",
+        "Two lists"
+      ],
+      "answer": 0,
+      "explanation": "The starting input is 5. It flows through double first, then add_one. Inputs in, one number out.",
+      "id": "u79l01e02"
+    },
+    {
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example — work it by hand. Double 5 is 10; add one to 10 is...",
+      "options": [
+        "11",
+        "10",
+        "6",
+        "15"
+      ],
+      "answer": 0,
+      "explanation": "10 + 1 = 11. Doing it by hand first gives you the answer to check your code against.",
+      "id": "u79l01e03"
+    },
+    {
+      "type": "trueFalse",
+      "uepcc": "E",
+      "prompt": "Working add_one(double(5)) by hand (getting 11) before coding is wasted effort.",
+      "answer": false,
+      "explanation": "The opposite — 11 becomes the value you Check the code against later. Always hand-work one example first.",
+      "id": "u79l01e04"
+    },
+    {
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Plan in plain English. Put the steps in order.",
+      "blocks": [
+        "Double the number first",
+        "Add one to that result",
+        "Show the final number"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Inner job first (double), then the outer job (add one), then show it. Plan the order before coding.",
+      "id": "u79l01e05"
+    },
+    {
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Your plan says 'double first, then add one'. In add_one(double(5)), which call runs first?",
+      "options": [
+        "double(5) — the inner call",
+        "add_one — the outer call",
+        "print",
+        "They tie"
+      ],
+      "answer": 0,
+      "explanation": "The inner call runs first: double(5) becomes 10, then add_one(10) runs. Inside-out, like nested math.",
+      "id": "u79l01e06"
+    },
+    {
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code it. Arrange the lines: define double, define add_one, then compose them in a print.",
+      "blocks": [
+        "def double(n):",
+        "    return n * 2",
+        "def add_one(n):",
+        "    return n + 1",
+        "print(add_one(double(5)))"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "explanation": "Define both helpers, then feed double(5) into add_one in one line. The code mirrors the plan.",
+      "id": "u79l01e07"
+    },
+    {
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Complete the composition so double runs first:\n\nprint(add_one(____(5)))",
+      "answer": "double",
+      "acceptable": [
+        "double"
+      ],
+      "explanation": "double(5) is the inner call (10); add_one(10) is 11. The inner result feeds the outer call.",
+      "id": "u79l01e08"
+    },
+    {
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check — the code prints 11. Your hand example said 11. So...",
+      "options": [
+        "It passes — output matches the example",
+        "It fails",
+        "Can't tell",
+        "Change the example"
+      ],
+      "answer": 0,
+      "explanation": "Output (11) matches your hand-worked 11, so the composition is correct. That's Check.",
+      "id": "u79l01e09"
+    },
+    {
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Re-check with a new input: add_one(double(4)). What does it give?",
+      "options": [
+        "9",
+        "11",
+        "8",
+        "5"
+      ],
+      "answer": 0,
+      "explanation": "double(4)=8, add_one(8)=9. A good solution works for new inputs too. You composed with UEPCC!",
+      "id": "u79l01e10"
+    }
+  ]
+}

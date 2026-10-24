@@ -1,0 +1,152 @@
+{
+  "unitId": "u67",
+  "lessonId": "u67l07",
+  "title": "Fix it: the search that always says no",
+  "idea": "GUIDED BUG-FIX (search flag). A found-flag is reset to False every pass, so a real match is forgotten. Fix with indentation.",
+  "problem": "This code should report whether 7 is in [3, 7, 5] (answer: True). Instead it prints False. Fix it.",
+  "exercises": [
+    {
+      "id": "u67l07e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "BROKEN CODE:\n\nnums = [3, 7, 5]\ntarget = 7\nfor n in nums:\n    found = False\n    if n == target:\n        found = True\nprint(found)\n\nUnderstand. What yes/no question is this answering?",
+      "options": [
+        "Is the target present in the list?",
+        "What is the total?",
+        "Which is biggest?",
+        "How many items?"
+      ],
+      "answer": 0,
+      "explanation": "A search gives a yes/no (True/False): is the target in the list? Here we're asking whether 7 appears."
+    },
+    {
+      "id": "u67l07e02",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example. By hand, is 7 in [3, 7, 5]?",
+      "options": [
+        "Yes — True",
+        "No — False",
+        "Maybe",
+        "Only once"
+      ],
+      "answer": 0,
+      "explanation": "7 is the middle item, so the correct answer is True. The code's False is therefore wrong."
+    },
+    {
+      "id": "u67l07e03",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Trace it: on the pass where n is 7, found becomes True. But then the NEXT pass (n = 5) runs 'found = False' again. So at the end found is...",
+      "options": [
+        "False — the match was overwritten by a later reset",
+        "True",
+        "5",
+        "unknown"
+      ],
+      "answer": 0,
+      "explanation": "'found = False' inside the loop runs every pass, wiping out the True set when 7 matched. The last pass leaves it False."
+    },
+    {
+      "id": "u67l07e04",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "Which bug family is 'a correct result gets erased by a later pass'?",
+      "options": [
+        "resetting a variable inside the loop",
+        "off-by-one",
+        "wrong comparison",
+        "empty list"
+      ],
+      "answer": 0,
+      "explanation": "The same reset-inside family as a broken counter. 'found = False' belongs ABOVE the loop so it's set just once."
+    },
+    {
+      "id": "u67l07e05",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Plan the fix. Where should 'found = False' go?",
+      "options": [
+        "above the loop, run once as the starting assumption",
+        "inside the loop, as now",
+        "after the loop",
+        "inside the if"
+      ],
+      "answer": 0,
+      "explanation": "Start by ASSUMING not found, once, above the loop. Then a match can flip it to True and it will stick."
+    },
+    {
+      "id": "u67l07e06",
+      "type": "trueFalse",
+      "uepcc": "P",
+      "prompt": "The comparison 'if n == target: found = True' is correct and stays inside the loop.",
+      "answer": true,
+      "explanation": "Yes — checking each item and flipping found to True on a match is right. Only the 'found = False' setup is misplaced."
+    },
+    {
+      "id": "u67l07e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Arrange the FIXED search (assume not found once, loop and compare, print).",
+      "blocks": [
+        "nums = [3, 7, 5]",
+        "target = 7",
+        "found = False",
+        "for n in nums:",
+        "    if n == target:",
+        "        found = True",
+        "print(found)"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "explanation": "Set found = False ONCE above the loop, then let a match set it True. It now survives to the end as True."
+    },
+    {
+      "id": "u67l07e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "In the fixed version, the found flag starts as what, above the loop?\n\nfound = ____",
+      "answer": "False",
+      "acceptable": [
+        "False",
+        "false"
+      ],
+      "explanation": "Start by assuming False (not found). A match later flips it to True — and because the reset is gone, it stays True."
+    },
+    {
+      "id": "u67l07e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check. The fixed code prints True. Your hand answer was True. So...",
+      "options": [
+        "It passes — the match is remembered now",
+        "It still prints False",
+        "You can't tell",
+        "The example was wrong"
+      ],
+      "answer": 0,
+      "explanation": "Output True matches the hand answer. Moving 'found = False' above the loop fixed it."
+    },
+    {
+      "id": "u67l07e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Re-check a 'not present' case: nums = [3, 5], target = 7, found = False above the loop. What prints?",
+      "options": [
+        "False",
+        "True",
+        "7",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "7 isn't there, so no pass flips found, and it stays False — correct. The fix gives right answers both ways."
+    }
+  ]
+}

@@ -1,0 +1,130 @@
+{
+  "unitId": "u76",
+  "lessonId": "u76l10",
+  "title": "Composing, pulled together",
+  "idea": "Composing functions review: consolidate inside-out order, return-to-feed, the None trap, and building from small pieces. Review-heavy.",
+  "exercises": [
+    {
+      "id": "u76l10e01",
+      "type": "multipleChoice",
+      "prompt": "What does 'composing functions' mean?",
+      "options": [
+        "Using one sub-plan's RETURNED value as the input to another",
+        "printing two sub-plans",
+        "defining a sub-plan twice",
+        "deleting a sub-plan"
+      ],
+      "answer": 0,
+      "explanation": "Composing feeds the returned value of one call into another. That's the whole unit in a sentence."
+    },
+    {
+      "id": "u76l10e02",
+      "type": "multipleChoice",
+      "prompt": "Predict:\n\ndef double(n):\n    return n * 2\n\ndef add_one(n):\n    return n + 1\n\nprint(double(add_one(4)))",
+      "options": [
+        "10",
+        "9",
+        "8",
+        "5"
+      ],
+      "answer": 0,
+      "explanation": "add_one(4) is 5; double(5) is 10. Inner first, then outer."
+    },
+    {
+      "id": "u76l10e03",
+      "type": "trueFalse",
+      "prompt": "Nested calls are resolved innermost-first.",
+      "answer": true,
+      "explanation": "Yes. The outer call needs the inner call's value, so the inner one runs first."
+    },
+    {
+      "id": "u76l10e04",
+      "type": "multipleChoice",
+      "prompt": "Spot the bug:\n\ndef double(n):\n    print(n * 2)\n\ndef add_one(n):\n    return n + 1\n\nprint(add_one(double(5)))",
+      "options": [
+        "double returns None, so add_one(None) + 1 fails",
+        "it prints 11",
+        "no bug",
+        "double returns 10"
+      ],
+      "answer": 0,
+      "explanation": "double PRINTS but returns None, so add_one gets None and errors. The inner sub-plan must return to be composed."
+    },
+    {
+      "id": "u76l10e05",
+      "type": "fillBlank",
+      "prompt": "Fix the inner sub-plan so it can be composed:\n\ndef double(n):\n    ____ n * 2",
+      "answer": "return",
+      "acceptable": ["return"],
+      "explanation": "return n * 2 hands back a value, so add_one(double(5)) = add_one(10) = 11."
+    },
+    {
+      "id": "u76l10e06",
+      "type": "orderBlocks",
+      "prompt": "REVIEW: trace triple(add_one(2)) where triple returns n*3 and add_one returns n+1.",
+      "blocks": [
+        "add_one(2) returns 3",
+        "triple(3) returns 9",
+        "the value is 9"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "add_one(2)=3, triple(3)=9. Inside-out gives 9."
+    },
+    {
+      "id": "u76l10e07",
+      "type": "multipleChoice",
+      "prompt": "A middle variable version of double(add_one(4)) is...",
+      "options": [
+        "step = add_one(4); print(double(step))",
+        "print(double(add_one))",
+        "step = double; print(step)",
+        "it can't be split"
+      ],
+      "answer": 0,
+      "explanation": "Store the inner result in step, then feed it to double. Same answer (10), often clearer."
+    },
+    {
+      "id": "u76l10e08",
+      "type": "multipleChoice",
+      "prompt": "REVIEW (return vs print): why must the inner call RETURN?",
+      "options": [
+        "The outer call needs a real value as its argument; print gives None",
+        "print is faster",
+        "return is shorter",
+        "both work equally"
+      ],
+      "answer": 0,
+      "explanation": "Composing needs a value to pass along. Only return provides one; print leaves None."
+    },
+    {
+      "id": "u76l10e09",
+      "type": "multipleChoice",
+      "prompt": "Why build programs from small composable sub-plans?",
+      "options": [
+        "Small single-job pieces are reusable and combine in many ways",
+        "big pieces are always better",
+        "composing is decoration",
+        "it makes code slower"
+      ],
+      "answer": 0,
+      "explanation": "Small returning sub-plans snap together like blocks — the foundation of building larger programs."
+    },
+    {
+      "id": "u76l10e10",
+      "type": "multipleChoice",
+      "prompt": "You can now define, call, pass parameters, return, choose return vs print, and compose. That's a complete toolkit for...",
+      "options": [
+        "building bigger programs out of small, reusable sub-plans",
+        "nothing new",
+        "only printing",
+        "only single-line programs"
+      ],
+      "answer": 0,
+      "explanation": "Together these let you split a big problem into small pieces, solve each, and compose the answers. Well done!"
+    }
+  ]
+}

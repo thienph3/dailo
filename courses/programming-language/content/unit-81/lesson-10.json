@@ -1,0 +1,136 @@
+{
+  "unitId": "u81",
+  "lessonId": "u81l10",
+  "title": "Loop back: the three decomposition bugs",
+  "idea": "Review across Lap 5: name the three classic decomposition bugs (missing case, wrong sub-result, wrong wiring) and the one habit that catches them all — isolate and compare to a hand example.",
+  "exercises": [
+    {
+      "type": "multipleChoice",
+      "prompt": "Name the three classic bugs in a split-up solution.",
+      "options": [
+        "Missing case, wrong sub-result, wrong wiring",
+        "Loops, lists, functions",
+        "Print, input, return",
+        "Add, subtract, multiply"
+      ],
+      "answer": 0,
+      "explanation": "The three to hunt for: a forgotten case, a helper returning the wrong value, and pieces connected wrongly.",
+      "id": "u81l10e01"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "The single best habit for all three bugs is: isolate each piece and compare its output to a hand-worked answer.",
+      "answer": true,
+      "explanation": "Yes. Isolation plus a hand example finds the missing case, the wrong value, and the bad wiring alike.",
+      "id": "u81l10e02"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "REVIEW (Lap 4): a running total helper should start its accumulator at...",
+      "options": [
+        "0",
+        "1",
+        "the last item",
+        "len(nums)"
+      ],
+      "answer": 0,
+      "explanation": "A total starts at 0, then adds each item. Starting elsewhere is a classic wrong-sub-result bug.",
+      "id": "u81l10e03"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "REVIEW (Lap 2): a helper divides by a count. What edge case must it guard?",
+      "options": [
+        "A count of zero (an empty list)",
+        "A count of three",
+        "A count of ten",
+        "No edge case"
+      ],
+      "answer": 0,
+      "explanation": "Zero count means divide-by-zero. The empty-list guard is the edge-case habit protecting a helper.",
+      "id": "u81l10e04"
+    },
+    {
+      "type": "matchPairs",
+      "prompt": "Match each bug to the move that finds it.",
+      "pairs": [
+        {
+          "left": "Missing case",
+          "right": "Trace the edge inputs (empty, zero, one)"
+        },
+        {
+          "left": "Wrong sub-result",
+          "right": "Compare the helper's output to a hand answer"
+        },
+        {
+          "left": "Wrong wiring",
+          "right": "Follow the value from helper to helper"
+        }
+      ],
+      "explanation": "Each bug has a matching move. Together they make a reliable debugging routine.",
+      "id": "u81l10e05"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "REVIEW: in add_one(double(5)), the inner call double(5) runs before add_one.",
+      "answer": true,
+      "explanation": "Inside-out: double(5)=10 first, then add_one(10)=11. Getting this order right avoids a wiring bug.",
+      "id": "u81l10e06"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "REVIEW (Lap 5): why split a big problem into helpers at all?",
+      "options": [
+        "Smaller pieces are easier to understand, reuse, AND debug",
+        "To make the file longer",
+        "Because loops require it",
+        "It has no benefit"
+      ],
+      "answer": 0,
+      "explanation": "Decomposition tames complexity: each piece is simple to grasp, reuse, and — as this unit showed — debug.",
+      "id": "u81l10e07"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "A total is wrong by exactly one sub-result's value. The quickest suspect is...",
+      "options": [
+        "The step that produces that sub-result (it may be dropped or mis-added)",
+        "The print line",
+        "A random helper",
+        "The loop variable name"
+      ],
+      "answer": 0,
+      "explanation": "Off by exactly one piece's worth points straight at that piece's wiring. Read the clue, don't guess.",
+      "id": "u81l10e08"
+    },
+    {
+      "type": "orderBlocks",
+      "prompt": "Order the universal debugging routine for a broken split.",
+      "blocks": [
+        "Work the correct answer by hand (including edges)",
+        "Isolate and check each helper against it",
+        "Fix the one piece or connection that disagrees"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Hand answer, isolate-and-compare, fix the one that's off. The same routine beats all three bug types.",
+      "id": "u81l10e09"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "The unit in one line:",
+      "options": [
+        "A split can be buggy; find the fault by isolating pieces and comparing to a hand answer",
+        "Splits are always correct",
+        "Debugging is guessing",
+        "Only beginners write bugs"
+      ],
+      "answer": 0,
+      "explanation": "You can now debug a faulty decomposition — the thinking skill that sets up the practice units ahead.",
+      "id": "u81l10e10"
+    }
+  ]
+}

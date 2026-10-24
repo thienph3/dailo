@@ -1,0 +1,136 @@
+{
+  "unitId": "u20",
+  "lessonId": "u20l02",
+  "title": "Less than, and the two directions",
+  "idea": "The < operator asks 'is the left smaller than the right?'. Comparisons point a direction; getting the direction right matters.",
+  "exercises": [
+    {
+      "id": "u20l02e01",
+      "type": "multipleChoice",
+      "prompt": "What does the symbol < mean?",
+      "options": [
+        "less than",
+        "greater than",
+        "equal to",
+        "not equal"
+      ],
+      "answer": 0,
+      "explanation": "< means 'less than' - is the left side smaller than the right side?"
+    },
+    {
+      "id": "u20l02e02",
+      "type": "multipleChoice",
+      "prompt": "What does this print?\n\nprint(3 < 8)",
+      "options": [
+        "True",
+        "False",
+        "3",
+        "8"
+      ],
+      "answer": 0,
+      "explanation": "3 is less than 8, so 3 < 8 is True."
+    },
+    {
+      "id": "u20l02e03",
+      "type": "multipleChoice",
+      "prompt": "What does this print?\n\nprint(10 < 4)",
+      "options": [
+        "False",
+        "True",
+        "10",
+        "4"
+      ],
+      "answer": 0,
+      "explanation": "10 is not less than 4, so the result is False."
+    },
+    {
+      "id": "u20l02e04",
+      "type": "multipleChoice",
+      "prompt": "The open side of < and > always points to the...",
+      "options": [
+        "larger value (when true)",
+        "smaller value",
+        "left always",
+        "right always"
+      ],
+      "answer": 0,
+      "explanation": "The wide-open mouth points toward the bigger value. 3 < 8: the open side faces 8, the larger one."
+    },
+    {
+      "id": "u20l02e05",
+      "type": "fillBlank",
+      "prompt": "Complete so the result is True:\n\nprint(2 ____ 6)   # shows: True",
+      "answer": "<",
+      "acceptable": [
+        "<"
+      ],
+      "explanation": "2 < 6 is True because 2 is less than 6."
+    },
+    {
+      "id": "u20l02e06",
+      "type": "multipleChoice",
+      "prompt": "Which is True?",
+      "options": [
+        "1 < 5",
+        "5 < 1",
+        "9 < 9",
+        "100 < 2"
+      ],
+      "answer": 0,
+      "explanation": "Only 1 < 5 is true. 9 < 9 is false because 9 is not less than itself."
+    },
+    {
+      "id": "u20l02e07",
+      "type": "multipleChoice",
+      "prompt": "What does this print?\n\ntemp = 15\nprint(temp < 20)",
+      "options": [
+        "True",
+        "False",
+        "15",
+        "20"
+      ],
+      "answer": 0,
+      "explanation": "temp is 15, and 15 < 20 is True."
+    },
+    {
+      "id": "u20l02e08",
+      "type": "matchPairs",
+      "prompt": "Match each comparison to its boolean result.",
+      "pairs": [
+        {
+          "left": "4 < 9",
+          "right": "True"
+        },
+        {
+          "left": "9 < 4",
+          "right": "False"
+        },
+        {
+          "left": "6 > 2",
+          "right": "True"
+        }
+      ],
+      "explanation": "Read each one carefully: 4<9 is True, 9<4 is False, 6>2 is True."
+    },
+    {
+      "id": "u20l02e09",
+      "type": "trueFalse",
+      "prompt": "5 < 5 is True.",
+      "answer": false,
+      "explanation": "No - 5 is not less than 5. They are equal, so < gives False."
+    },
+    {
+      "id": "u20l02e10",
+      "type": "multipleChoice",
+      "prompt": "Why be careful about the direction of < and >?",
+      "options": [
+        "Because swapping the sides flips the answer",
+        "Because direction never matters",
+        "Because they both mean equal",
+        "Because < is always True"
+      ],
+      "answer": 0,
+      "explanation": "3 < 8 is True but 8 < 3 is False. The order of the two sides changes the result."
+    }
+  ]
+}

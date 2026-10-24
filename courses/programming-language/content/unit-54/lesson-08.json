@@ -1,0 +1,127 @@
+{
+  "unitId": "u54",
+  "lessonId": "u54l08",
+  "title": "Problems that add or change",
+  "idea": "Apply append and item-assignment to real 'add this / change that' problems. The unit's goal in action.",
+  "exercises": [
+    {
+      "id": "u54l08e01",
+      "type": "multipleChoice",
+      "prompt": "A scoreboard scores = [10, 20] needs a new player's score of 15 added. Which line does it?",
+      "options": [
+        "scores.append(15)",
+        "scores[2] = 15",
+        "scores = 15",
+        "scores[15]"
+      ],
+      "answer": 0,
+      "explanation": "Adding a new score at the end is append: scores.append(15) gives [10, 20, 15]. scores[2] = 15 would fail — there's no position 2 yet."
+    },
+    {
+      "id": "u54l08e02",
+      "type": "multipleChoice",
+      "prompt": "A typo: the first price should be 9, not 8. For prices = [8, 20, 30], which line fixes it?",
+      "options": [
+        "prices[0] = 9",
+        "prices.append(9)",
+        "prices = 9",
+        "prices[9] = 0"
+      ],
+      "answer": 0,
+      "explanation": "Fixing an existing item is assignment: prices[0] = 9 gives [9, 20, 30]. append would wrongly add a new item instead."
+    },
+    {
+      "id": "u54l08e03",
+      "type": "multipleChoice",
+      "prompt": "Which word in a problem suggests APPEND (grow), and which suggests ASSIGNMENT (change)?",
+      "options": [
+        "'add a new one' -> append; 'fix/replace this one' -> assignment",
+        "'add' -> assignment; 'replace' -> append",
+        "Both mean append",
+        "Both mean assignment"
+      ],
+      "answer": 0,
+      "explanation": "'Add a new' item grows the list (append). 'Fix' or 'replace' an existing item changes it in place (assignment)."
+    },
+    {
+      "id": "u54l08e04",
+      "type": "orderBlocks",
+      "prompt": "Arrange code that starts an empty guest list, adds two guests, and shows how many.",
+      "blocks": [
+        "guests = []",
+        "guests.append(\"Ana\")",
+        "guests.append(\"Bo\")",
+        "print(len(guests))"
+      ],
+      "answer": [0, 1, 2, 3],
+      "explanation": "Start empty, append each guest, then print len: 2. A classic 'collect as they arrive' pattern."
+    },
+    {
+      "id": "u54l08e05",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\ncart = [5, 5]\ncart.append(10)\nprint(cart)",
+      "options": [
+        "[5, 5, 10]",
+        "[10, 5, 5]",
+        "[5, 5]",
+        "[20]"
+      ],
+      "answer": 0,
+      "explanation": "Adding 10 to the end gives [5, 5, 10]. The cart grew by one item."
+    },
+    {
+      "id": "u54l08e06",
+      "type": "fillBlank",
+      "prompt": "A store marks the second item as sold out by setting it to 0. Fill in the position:\n\nstock = [7, 3, 9]\nstock[____] = 0\nprint(stock)",
+      "answer": "1",
+      "acceptable": ["1"],
+      "explanation": "The second item is position 1, so stock[1] = 0 gives [7, 0, 9]. Assignment changes just that spot."
+    },
+    {
+      "id": "u54l08e07",
+      "type": "trueFalse",
+      "prompt": "To record each new quiz answer as it comes in, append is the right tool.",
+      "answer": true,
+      "explanation": "Each new answer is a new item at the end — that's append. The list grows one answer at a time."
+    },
+    {
+      "id": "u54l08e08",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nlevels = [1, 2, 3]\nlevels[2] = levels[2] + 1\nprint(levels)",
+      "options": [
+        "[1, 2, 4]",
+        "[2, 3, 4]",
+        "[1, 2, 3]",
+        "[1, 2, 3, 4]"
+      ],
+      "answer": 0,
+      "explanation": "levels[2] is 3; 3 + 1 is 4; stored back in spot 2: [1, 2, 4]. Bumping one item up by one is an in-place change."
+    },
+    {
+      "id": "u54l08e09",
+      "type": "multipleChoice",
+      "prompt": "A problem says 'put the newcomer at the end of the line.' Append or assignment?",
+      "options": [
+        "append — a new item joins at the end",
+        "assignment — change an existing spot",
+        "Neither works",
+        "Both do the same"
+      ],
+      "answer": 0,
+      "explanation": "A newcomer is a new item, added at the end: append. No existing spot is being changed."
+    },
+    {
+      "id": "u54l08e10",
+      "type": "multipleChoice",
+      "prompt": "Same code idea, new data:\n\ntally = []\ntally.append(1)\ntally.append(1)\ntally[0] = 5\nprint(tally)",
+      "options": [
+        "[5, 1]",
+        "[1, 1]",
+        "[5, 5]",
+        "[1, 5]"
+      ],
+      "answer": 0,
+      "explanation": "Appends build [1, 1]; then tally[0] = 5 changes the first spot: [5, 1]. Grow, then change — both tools together."
+    }
+  ]
+}

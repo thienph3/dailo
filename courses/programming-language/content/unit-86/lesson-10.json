@@ -1,0 +1,142 @@
+{
+  "unitId": "u86",
+  "lessonId": "u86l10",
+  "title": "The splitting habit, pulled together",
+  "idea": "MEET: review — turn any understood big problem into an ordered list of familiar sub-problems, checking for missing steps and impossible order.",
+  "exercises": [
+    {
+      "type": "orderBlocks",
+      "prompt": "REVIEW: order the full splitting habit.",
+      "blocks": [
+        "List every output the problem asks for",
+        "Make each output (and each needed step) a sub-problem",
+        "Order them so each step's inputs come first",
+        "Check nothing is missing and no order is impossible"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "Outputs, sub-problems, order, check. That's decomposition at scale in four moves.",
+      "id": "u86l10e01"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "REVIEW: the first sub-problem in an ordered list is always the one that...",
+      "options": [
+        "needs no results from any other step",
+        "is the hardest",
+        "is alphabetically first",
+        "produces the final answer"
+      ],
+      "answer": 0,
+      "explanation": "The first step has no prerequisites. Everything with a dependency comes after what it depends on.",
+      "id": "u86l10e02"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "REVIEW: a problem with one output can still need several ordered sub-problems.",
+      "answer": true,
+      "explanation": "Yes — 'average the passing scores' is one output but a four-step chain. Outputs count asks, not steps.",
+      "id": "u86l10e03"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "REVIEW (Lap 4b): which sub-problem is a 'running total'?",
+      "options": [
+        "Add each price into a total that starts at 0",
+        "Compare two numbers",
+        "Print a message",
+        "Filter a list"
+      ],
+      "answer": 0,
+      "explanation": "A running total (accumulator) adds each item into a total starting at 0 — a very common sub-problem.",
+      "id": "u86l10e04"
+    },
+    {
+      "type": "multiSelect",
+      "prompt": "REVIEW: select the real flaws a split can have.",
+      "options": [
+        "a missing sub-problem (dropped output)",
+        "an impossible order (uses a result too early)",
+        "wasted work (two passes where one would do)",
+        "using descriptive variable names"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Missing, mis-ordered, wasteful are the flaws. Good naming is a virtue, not a flaw.",
+      "id": "u86l10e05"
+    },
+    {
+      "type": "matchPairs",
+      "prompt": "REVIEW: match each sub-problem to its familiar pattern.",
+      "pairs": [
+        {
+          "left": "keep items passing a rule",
+          "right": "filter"
+        },
+        {
+          "left": "how many pass a rule",
+          "right": "count with condition"
+        },
+        {
+          "left": "the biggest value",
+          "right": "track the max"
+        }
+      ],
+      "explanation": "Each sub-problem maps to a pattern you already know. Choosing the pattern is the NEXT unit's job.",
+      "id": "u86l10e06"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "REVIEW: why order the sub-problems instead of leaving a pile?",
+      "options": [
+        "So each step runs with its inputs ready, top to bottom",
+        "A pile is neater",
+        "Order is decoration",
+        "Lists can't be ordered"
+      ],
+      "answer": 0,
+      "explanation": "An ordered list is a runnable plan: do step 1, then 2, each with what it needs.",
+      "id": "u86l10e07"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "REVIEW: checking a split against the outputs list catches dropped sub-problems.",
+      "answer": true,
+      "explanation": "Yes — compare your sub-problems to the outputs you listed. A missing match is a dropped output.",
+      "id": "u86l10e08"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "REVIEW: a split for 'subtotal then fee' puts 'add fee' before 'compute subtotal'. This is...",
+      "options": [
+        "an impossible order — the fee needs the subtotal",
+        "correct",
+        "faster",
+        "the only option"
+      ],
+      "answer": 0,
+      "explanation": "The fee depends on the subtotal, so the subtotal must come first. Dependencies set the order.",
+      "id": "u86l10e09"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "The big idea you're pulling together:",
+      "options": [
+        "Turn an understood big problem into an ordered list of familiar sub-problems, then check it",
+        "Big problems can't be split",
+        "Order never matters",
+        "Skip the check"
+      ],
+      "answer": 0,
+      "explanation": "That's the whole unit: decomposition at scale is listing the parts, ordering them by dependency, and checking. Next, we pick a pattern for each part.",
+      "id": "u86l10e10"
+    }
+  ]
+}

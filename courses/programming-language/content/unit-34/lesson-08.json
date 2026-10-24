@@ -1,0 +1,127 @@
+{
+  "unitId": "u34",
+  "lessonId": "u34l08",
+  "title": "Loop back: numbers, sharing, and leftovers",
+  "idea": "LOOP. No new concept. Review arithmetic from Lap 1 (// and %) inside decisions - sharing items and checking remainders.",
+  "exercises": [
+    {
+      "id": "u34l08e01",
+      "type": "multipleChoice",
+      "prompt": "What is 17 // 5?",
+      "options": [
+        "3",
+        "4",
+        "2",
+        "3.4"
+      ],
+      "answer": 0,
+      "explanation": "// is whole-number division: 17 divided by 5 is 3 whole times. (Review of //.)"
+    },
+    {
+      "id": "u34l08e02",
+      "type": "multipleChoice",
+      "prompt": "What is 17 % 5?",
+      "options": [
+        "2",
+        "3",
+        "0",
+        "5"
+      ],
+      "answer": 0,
+      "explanation": "% is the remainder: 17 is 3*5 + 2, so the remainder is 2. (Review of %.)"
+    },
+    {
+      "id": "u34l08e03",
+      "type": "multipleChoice",
+      "prompt": "13 sweets shared among 4 children. How many does each get, and how many are left?\n\nper_child = 13 // 4\nleftover = 13 % 4",
+      "options": [
+        "3 each, 1 left",
+        "4 each, 0 left",
+        "3 each, 2 left",
+        "2 each, 5 left"
+      ],
+      "answer": 0,
+      "explanation": "13 // 4 is 3 (each child), 13 % 4 is 1 (leftover). (Review of // and % together.)"
+    },
+    {
+      "id": "u34l08e04",
+      "type": "multipleChoice",
+      "prompt": "What prints?\n\nitems = 20\nif items % 2 == 0:\n    print(\"Can split in two evenly\")\nelse:\n    print(\"One left over\")",
+      "options": [
+        "Can split in two evenly",
+        "One left over",
+        "20",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "20 % 2 is 0, so it splits evenly. (Review of % in a decision.)"
+    },
+    {
+      "id": "u34l08e05",
+      "type": "fillBlank",
+      "prompt": "Fill the operator that gives whole groups:\n\ngroups = total ____ group_size",
+      "answer": "//",
+      "acceptable": ["//"],
+      "explanation": "// gives the number of whole groups. (Review of //.)"
+    },
+    {
+      "id": "u34l08e06",
+      "type": "multipleChoice",
+      "prompt": "What does this print?\n\neggs = 25\nboxes = eggs // 6\nprint(f\"Full boxes: {boxes}\")",
+      "options": [
+        "Full boxes: 4",
+        "Full boxes: 5",
+        "Full boxes: 1",
+        "Full boxes: 25"
+      ],
+      "answer": 0,
+      "explanation": "25 // 6 is 4 full boxes (with 1 egg left over). (Review of // + f-string.)"
+    },
+    {
+      "id": "u34l08e07",
+      "type": "multipleChoice",
+      "prompt": "Using the eggs above, how many eggs are left over?\n\nleft = eggs % 6",
+      "options": [
+        "1",
+        "4",
+        "6",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "25 % 6 is 1, since 4*6 is 24 with 1 remaining. (Review of %.)"
+    },
+    {
+      "id": "u34l08e08",
+      "type": "multipleChoice",
+      "prompt": "What prints?\n\nn = 15\nif n % 3 == 0 and n % 5 == 0:\n    print(\"Divisible by 15\")\nelse:\n    print(\"Not\")",
+      "options": [
+        "Divisible by 15",
+        "Not",
+        "15",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "15 % 3 is 0 AND 15 % 5 is 0, so both sides of 'and' are true. (Review of % + and.)"
+    },
+    {
+      "id": "u34l08e09",
+      "type": "trueFalse",
+      "prompt": "A remainder of 0 (using %) means one number divides evenly into another.",
+      "answer": true,
+      "explanation": "Remainder 0 means no leftover, so it divides evenly. (Review of %.)"
+    },
+    {
+      "id": "u34l08e10",
+      "type": "multipleChoice",
+      "prompt": "What is 9 // 2 plus 9 % 2?",
+      "options": [
+        "5",
+        "4",
+        "9",
+        "1"
+      ],
+      "answer": 0,
+      "explanation": "9 // 2 is 4 and 9 % 2 is 1, and 4 + 1 is 5. (Review of // and % and +.)"
+    }
+  ]
+}

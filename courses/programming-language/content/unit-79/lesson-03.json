@@ -1,0 +1,152 @@
+{
+  "unitId": "u79",
+  "lessonId": "u79l03",
+  "title": "Solve it together: total the doubles of a list",
+  "idea": "GUIDED (UEPCC). Use a helper inside a loop and an accumulator to total the doubles of each item.",
+  "problem": "double(n) returns n*2. Using a list of scores [1, 2, 3], show the total of all their doubles.",
+  "exercises": [
+    {
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: double(n) returns n*2; for scores [1, 2, 3], show the total of their doubles.\n\nWhat is the OUTPUT?",
+      "options": [
+        "One number: the sum of each score doubled",
+        "The list of doubles only",
+        "The biggest score",
+        "The count of scores"
+      ],
+      "answer": 0,
+      "explanation": "Output is a single total: double each score, add them up. Name the output first.",
+      "id": "u79l03e01"
+    },
+    {
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "What are the INPUTS?",
+      "options": [
+        "The list of scores [1, 2, 3]",
+        "Only the number 3",
+        "The word 'double'",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "The input is the list of scores. We'll loop over it, doubling each and summing.",
+      "id": "u79l03e02"
+    },
+    {
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example by hand. Doubles of 1, 2, 3 are 2, 4, 6. Their total is...",
+      "options": [
+        "12",
+        "6",
+        "3",
+        "24"
+      ],
+      "answer": 0,
+      "explanation": "2 + 4 + 6 = 12. Hand-work it first so Check has a known answer.",
+      "id": "u79l03e03"
+    },
+    {
+      "type": "trueFalse",
+      "uepcc": "E",
+      "prompt": "We compute the total ourselves with a loop, not with the builtin sum().",
+      "answer": true,
+      "explanation": "Yes. This course builds running totals by hand: start at 0, add each value in the loop.",
+      "id": "u79l03e04"
+    },
+    {
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Plan the steps.",
+      "blocks": [
+        "Start a total at 0",
+        "For each score, add its double to the total",
+        "Show the total"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Init the accumulator, loop adding each double, then show. The helper does the 'double' part.",
+      "id": "u79l03e05"
+    },
+    {
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Where must 'total = 0' go?",
+      "options": [
+        "Before the loop, so it survives every pass",
+        "Inside the loop",
+        "After the loop",
+        "Inside double"
+      ],
+      "answer": 0,
+      "explanation": "Before the loop. Inside, it would reset to 0 each pass and lose the total.",
+      "id": "u79l03e06"
+    },
+    {
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code it: define double, init total, loop adding double(x), print total.",
+      "blocks": [
+        "def double(n):",
+        "    return n * 2",
+        "total = 0",
+        "for x in [1, 2, 3]:",
+        "    total = total + double(x)",
+        "print(total)"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "explanation": "Define the helper, start total at 0, loop adding each double, then print 12.",
+      "id": "u79l03e07"
+    },
+    {
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Add each item's double to the total:\n\ntotal = 0\nfor x in [1, 2, 3]:\n    total = total + ____(x)",
+      "answer": "double",
+      "acceptable": [
+        "double"
+      ],
+      "explanation": "Call double(x) each pass and add its result. total becomes 2, then 6, then 12.",
+      "id": "u79l03e08"
+    },
+    {
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check — the code prints 12; your example said 12. So...",
+      "options": [
+        "It passes",
+        "It fails",
+        "Unknown",
+        "Change the example"
+      ],
+      "answer": 0,
+      "explanation": "Output (12) matches the hand-worked 12. The helper-in-loop total is correct.",
+      "id": "u79l03e09"
+    },
+    {
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Re-check with scores [2, 5]. Total of their doubles?",
+      "options": [
+        "14",
+        "12",
+        "7",
+        "10"
+      ],
+      "answer": 0,
+      "explanation": "double(2)=4, double(5)=10; 4+10 = 14. Works for new inputs too.",
+      "id": "u79l03e10"
+    }
+  ]
+}

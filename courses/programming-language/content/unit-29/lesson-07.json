@@ -1,0 +1,135 @@
+{
+  "unitId": "u29",
+  "lessonId": "u29l07",
+  "title": "A word check inside a choice",
+  "idea": "Word comparisons fit inside nested ifs too. Combine last unit's nesting with this unit's word tests. Predict the path.",
+  "exercises": [
+    {
+      "id": "u29l07e01",
+      "type": "multipleChoice",
+      "prompt": "What does this print?\n\nsigned_in = True\nrole = \"admin\"\nif signed_in:\n    if role == \"admin\":\n        print(\"Admin tools\")\n    else:\n        print(\"User tools\")\nelse:\n    print(\"Please sign in\")",
+      "options": [
+        "Admin tools",
+        "User tools",
+        "Please sign in",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "signed_in is True, so enter the branch; role == \"admin\" is True, so the inner if prints \"Admin tools\"."
+    },
+    {
+      "id": "u29l07e02",
+      "type": "multipleChoice",
+      "prompt": "Same code, role = \"editor\" (still signed in). What prints?",
+      "options": [
+        "User tools",
+        "Admin tools",
+        "Please sign in",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "Signed in, but \"editor\" is not \"admin\", so the inner else runs: \"User tools\"."
+    },
+    {
+      "id": "u29l07e03",
+      "type": "multipleChoice",
+      "prompt": "Same code, signed_in = False. What prints?",
+      "options": [
+        "Please sign in",
+        "Admin tools",
+        "User tools",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "The outer gate is False, so the role check is skipped and the outer else runs: \"Please sign in\"."
+    },
+    {
+      "id": "u29l07e04",
+      "type": "multipleChoice",
+      "prompt": "Why does checking the role go INSIDE the signed-in check?",
+      "options": [
+        "The role only matters once the user is signed in",
+        "Roles are always inner",
+        "It runs faster",
+        "No reason"
+      ],
+      "answer": 0,
+      "explanation": "A follow-up that only matters after the first answer is settled belongs nested inside - the same nesting idea as last unit."
+    },
+    {
+      "id": "u29l07e05",
+      "type": "orderBlocks",
+      "prompt": "Build: if the door state is \"open\", then if the word is \"vip\" print \"Lounge\" else print \"Hall\"; if the door is not open, print \"Closed\".",
+      "blocks": [
+        "if door == \"open\":",
+        "    if guest == \"vip\":",
+        "        print(\"Lounge\")",
+        "    else:",
+        "        print(\"Hall\")",
+        "else:",
+        "    print(\"Closed\")"
+      ],
+      "answer": [0, 1, 2, 3, 4, 5, 6],
+      "explanation": "Outer word test on door; inner word test on guest; outer else for a closed door. Word checks nest like any condition."
+    },
+    {
+      "id": "u29l07e06",
+      "type": "multipleChoice",
+      "prompt": "For that code with door = \"open\", guest = \"regular\", what prints?",
+      "options": [
+        "Hall",
+        "Lounge",
+        "Closed",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "Door open, but \"regular\" is not \"vip\", so the inner else prints \"Hall\"."
+    },
+    {
+      "id": "u29l07e07",
+      "type": "multipleChoice",
+      "prompt": "Same code, door = \"shut\", guest = \"vip\". What prints?",
+      "options": [
+        "Closed",
+        "Lounge",
+        "Hall",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "\"shut\" is not \"open\", so the inner check is skipped and the outer else prints \"Closed\". The guest word never matters."
+    },
+    {
+      "id": "u29l07e08",
+      "type": "trueFalse",
+      "prompt": "A word comparison can be the OUTER condition of a nested if.",
+      "answer": true,
+      "explanation": "Yes - door == \"open\" is just True/False, so it works as an outer gate exactly like a number test."
+    },
+    {
+      "id": "u29l07e09",
+      "type": "multipleChoice",
+      "prompt": "This combines two units. Which two ideas?",
+      "options": [
+        "Nested if (from last unit) and word comparison (this unit)",
+        "Loops and lists",
+        "Functions and input",
+        "Only printing"
+      ],
+      "answer": 0,
+      "explanation": "You are layering a word test inside a nested if - the new tool slotting into the structure you already learned."
+    },
+    {
+      "id": "u29l07e10",
+      "type": "multipleChoice",
+      "prompt": "The takeaway:",
+      "options": [
+        "Word tests behave like any condition, so they fit anywhere a condition can go - including nested ifs",
+        "Words only work at the top level",
+        "Nesting breaks word tests",
+        "You must use numbers inside nests"
+      ],
+      "answer": 0,
+      "explanation": "A condition is a condition. Word comparisons plug into ifs, elifs, and nested branches just like number comparisons."
+    }
+  ]
+}

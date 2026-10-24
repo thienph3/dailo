@@ -1,0 +1,132 @@
+{
+  "unitId": "u01",
+  "lessonId": "u01l02",
+  "title": "Your first instruction: print",
+  "idea": "print(...) tells the computer to show something on the screen. First real code.",
+  "exercises": [
+    {
+      "id": "u01l02e01",
+      "type": "multipleChoice",
+      "prompt": "In Python, which instruction shows something on the screen?",
+      "options": [
+        "print(...)",
+        "show(...)",
+        "say(...)",
+        "display(...)"
+      ],
+      "answer": 0,
+      "explanation": "print(...) is Python's instruction for showing output. It's the one you'll use most at first."
+    },
+    {
+      "id": "u01l02e02",
+      "type": "multipleChoice",
+      "prompt": "What does this show on the screen?\n\nprint(\"Hello\")",
+      "options": [
+        "Hello",
+        "print",
+        "\"Hello\"",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "print shows what's inside the ( ). The quotes just mark the text — they aren't shown."
+    },
+    {
+      "id": "u01l02e03",
+      "type": "trueFalse",
+      "prompt": "The quotes \" \" are shown on the screen along with the text.",
+      "answer": false,
+      "explanation": "Quotes mark where the text starts and ends. print(\"Hi\") shows Hi, not \"Hi\"."
+    },
+    {
+      "id": "u01l02e04",
+      "type": "tapTokens",
+      "prompt": "Build an instruction that shows the word Dailo.",
+      "tokens": [
+        "print",
+        "(",
+        "\"Dailo\"",
+        ")"
+      ],
+      "answer": [
+        "print",
+        "(",
+        "\"Dailo\"",
+        ")"
+      ],
+      "explanation": "print, then ( , then your text in quotes, then ). This shows: Dailo"
+    },
+    {
+      "id": "u01l02e05",
+      "type": "fillBlank",
+      "prompt": "Complete the instruction so it shows the word Hi:\n\nprint(____)",
+      "answer": "\"Hi\"",
+      "acceptable": [
+        "\"Hi\"",
+        "'Hi'"
+      ],
+      "explanation": "Text goes in quotes inside the brackets. Single or double quotes both work."
+    },
+    {
+      "id": "u01l02e06",
+      "type": "multipleChoice",
+      "prompt": "Which one correctly shows the word Cat?",
+      "options": [
+        "print(\"Cat\")",
+        "print(Cat)",
+        "Print(\"Cat\")",
+        "print \"Cat\""
+      ],
+      "answer": 0,
+      "explanation": "Lowercase print, brackets, and quotes around the text. The others are each missing one piece — we'll meet those mistakes soon."
+    },
+    {
+      "id": "u01l02e07",
+      "type": "tapTokens",
+      "prompt": "Build an instruction that shows: Good morning",
+      "tokens": [
+        "print",
+        "(",
+        "\"Good morning\"",
+        ")"
+      ],
+      "answer": [
+        "print",
+        "(",
+        "\"Good morning\"",
+        ")"
+      ],
+      "explanation": "The whole phrase, spaces and all, goes inside one pair of quotes."
+    },
+    {
+      "id": "u01l02e08",
+      "type": "trueFalse",
+      "prompt": "print(\"123\") will show 123 on the screen.",
+      "answer": true,
+      "explanation": "Anything inside the quotes is shown exactly — even if it looks like a number."
+    },
+    {
+      "id": "u01l02e09",
+      "type": "multipleChoice",
+      "prompt": "What will this show?\n\nprint(\"I can code\")",
+      "options": [
+        "I can code",
+        "\"I can code\"",
+        "print",
+        "code"
+      ],
+      "answer": 0,
+      "explanation": "The text inside the quotes, shown exactly: I can code."
+    },
+    {
+      "id": "u01l02e10",
+      "type": "fillBlank",
+      "prompt": "Write a full instruction that shows the word Yes.",
+      "answer": "print(\"Yes\")",
+      "acceptable": [
+        "print(\"Yes\")",
+        "print('Yes')"
+      ],
+      "explanation": "print, brackets, quotes: print(\"Yes\"). You just wrote real code!"
+    }
+  ]
+}

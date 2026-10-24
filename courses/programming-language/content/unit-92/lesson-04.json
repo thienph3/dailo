@@ -1,0 +1,140 @@
+{
+  "unitId": "u92",
+  "lessonId": "u92l04",
+  "title": "All three threads at once",
+  "idea": "TOOL: the full weave - a function holding a decision, called inside a loop that accumulates.",
+  "exercises": [
+    {
+      "type": "multipleChoice",
+      "prompt": "You want a loop to total only the 'big' items, with the 'is it big?' rule reusable. How do you braid all three threads?",
+      "options": [
+        "A function holds the decision; the loop calls it and totals when it says yes",
+        "One if, no function",
+        "One function, no loop",
+        "No decision at all"
+      ],
+      "answer": 0,
+      "explanation": "Function = the reusable choice, loop = the repeat, decision = inside the function. All three threads woven.",
+      "id": "u92l04e01"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\ndef is_big(n):\n    if n > 100:\n        return 1\n    else:\n        return 0\n\ntotal = 0\nfor price in [120, 50, 200]:\n    if is_big(price) == 1:\n        total = total + price\nprint(total)",
+      "options": [
+        "320",
+        "370",
+        "120",
+        "200"
+      ],
+      "answer": 0,
+      "explanation": "is_big returns 1 for 120 and 200, 0 for 50. The loop totals the big ones: 120 + 200 = 320.",
+      "id": "u92l04e02"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "The decision can live INSIDE the function, so the loop just asks 'is it big?' and acts on the answer.",
+      "answer": true,
+      "explanation": "True. The function hides the choice behind a name. The loop reads cleanly: ask the helper, then total if yes.",
+      "id": "u92l04e03"
+    },
+    {
+      "type": "fillBlank",
+      "prompt": "Complete the helper's decision (big means over 100):\n\ndef is_big(n):\n    if n ____ 100:\n        return 1\n    else:\n        return 0",
+      "answer": ">",
+      "acceptable": [
+        ">"
+      ],
+      "explanation": "'Over 100' is n > 100. The function returns 1 when big, 0 otherwise.",
+      "id": "u92l04e04"
+    },
+    {
+      "type": "orderBlocks",
+      "prompt": "Arrange the full weave: total items the helper calls 'big'.",
+      "blocks": [
+        "def is_big(n):",
+        "    if n > 100:",
+        "        return 1",
+        "    else:",
+        "        return 0",
+        "total = 0",
+        "for price in [120, 50, 200]:",
+        "    if is_big(price) == 1:",
+        "        total = total + price",
+        "print(total)"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "explanation": "Define the decision helper, start the total, loop asking the helper and totalling the big ones, print. Functions + loop + decision.",
+      "id": "u92l04e05"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "What is the advantage of the rule living in 'is_big' rather than written inline in the loop?",
+      "options": [
+        "The same rule can be reused elsewhere and the loop stays readable",
+        "It runs faster",
+        "It avoids loops",
+        "It hides the total"
+      ],
+      "answer": 0,
+      "explanation": "A named rule is reusable and makes the loop self-explaining. That's the clarity integration buys you.",
+      "id": "u92l04e06"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\ndef is_big(n):\n    if n > 100:\n        return 1\n    else:\n        return 0\n\ncount = 0\nfor price in [10, 20, 30]:\n    if is_big(price) == 1:\n        count = count + 1\nprint(count)",
+      "options": [
+        "0 - none are over 100",
+        "3",
+        "1",
+        "30"
+      ],
+      "answer": 0,
+      "explanation": "is_big returns 0 for all three, so count never rises. The weave correctly finds no big items.",
+      "id": "u92l04e07"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "This combines functions, loops, and decisions without any new syntax.",
+      "answer": true,
+      "explanation": "True. Every piece is a tool you already know. The lesson is the clean braid, not a new construct.",
+      "id": "u92l04e08"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "If you wanted to COUNT big items instead of totalling them, what single change is needed?",
+      "options": [
+        "Add 1 to a counter instead of adding the price",
+        "Rewrite is_big",
+        "Remove the loop",
+        "Delete the decision"
+      ],
+      "answer": 0,
+      "explanation": "The scaffold stays; only the accumulate step changes from 'add price' to 'add 1'. Reusable structure, swappable action.",
+      "id": "u92l04e09"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "The lesson:",
+      "options": [
+        "A decision-holding function called in a loop is the full three-thread weave",
+        "You can only use two threads",
+        "Functions can't hold decisions",
+        "Loops replace functions"
+      ],
+      "answer": 0,
+      "explanation": "Function + loop + decision, braided cleanly, is the shape most real solutions take.",
+      "id": "u92l04e10"
+    }
+  ]
+}

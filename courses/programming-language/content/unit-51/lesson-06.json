@@ -1,0 +1,130 @@
+{
+  "unitId": "u51",
+  "lessonId": "u51l06",
+  "title": "Is this one value or many?",
+  "idea": "Classify problems: does it need a single variable or a list? Builds the recognition that is the real goal of this MEET unit.",
+  "exercises": [
+    {
+      "id": "u51l06e01",
+      "type": "multipleChoice",
+      "prompt": "'Store the winning lottery number.' One value or many?",
+      "options": [
+        "One value — a single variable",
+        "Many values — a list",
+        "No values",
+        "It depends on the weather"
+      ],
+      "answer": 0,
+      "explanation": "One winning number is a single value. A plain variable fits; no list needed."
+    },
+    {
+      "id": "u51l06e02",
+      "type": "multipleChoice",
+      "prompt": "'Store the prices of every item in the cart.' One value or many?",
+      "options": [
+        "Many values — a list",
+        "One value — a single variable",
+        "No values",
+        "Exactly two values always"
+      ],
+      "answer": 0,
+      "explanation": "'Every item' is a group, so you want a list holding all the prices."
+    },
+    {
+      "id": "u51l06e03",
+      "type": "multiSelect",
+      "prompt": "Pick the problems that call for a LIST (many values).",
+      "options": [
+        "The ages of all your cousins",
+        "Each day's high temperature this week",
+        "Your single phone number",
+        "The one correct answer"
+      ],
+      "answer": [0, 1],
+      "explanation": "Cousins' ages and each day's temperature are groups — lists. A single phone number or one answer is a single value."
+    },
+    {
+      "id": "u51l06e04",
+      "type": "matchPairs",
+      "prompt": "Match each problem to the right storage choice.",
+      "pairs": [
+        { "left": "Your current level in a game", "right": "single variable" },
+        { "left": "The scores of all levels you've played", "right": "a list" },
+        { "left": "How many coins you have now", "right": "single variable" }
+      ],
+      "explanation": "'Current level' and 'coins now' are single values. 'Scores of all levels' is a group — a list."
+    },
+    {
+      "id": "u51l06e05",
+      "type": "trueFalse",
+      "prompt": "'The temperatures recorded every hour today' should be stored as a list.",
+      "answer": true,
+      "explanation": "Every hour means many readings — a group of values. A list holds them all in order."
+    },
+    {
+      "id": "u51l06e06",
+      "type": "multipleChoice",
+      "prompt": "'The total of all the prices.' After you compute it, what shape is the ANSWER?",
+      "options": [
+        "One value (a single number)",
+        "A list of many values",
+        "A list of words",
+        "Two values"
+      ],
+      "answer": 0,
+      "explanation": "A total is a single number, even though it came from a list. The inputs were many; the output is one. (We can't compute it yet — just noticing its shape.)"
+    },
+    {
+      "id": "u51l06e07",
+      "type": "multipleChoice",
+      "prompt": "Which word is the strongest clue that the INPUT is a group of values?",
+      "options": [
+        "'every'",
+        "'the'",
+        "'a'",
+        "'only'"
+      ],
+      "answer": 0,
+      "explanation": "'Every', 'all', and 'each' point to a whole group — a list. 'The', 'a', and 'only' usually mean a single value."
+    },
+    {
+      "id": "u51l06e08",
+      "type": "multipleChoice",
+      "prompt": "'Keep the names of the three finalists.' One value or many?",
+      "options": [
+        "Many values — a list of words",
+        "One value — a single word",
+        "No values",
+        "A list of numbers"
+      ],
+      "answer": 0,
+      "explanation": "Three finalists is a small group of names — a list of words, like [\"Ana\", \"Bo\", \"Cy\"]."
+    },
+    {
+      "id": "u51l06e09",
+      "type": "multiSelect",
+      "prompt": "Pick the problems best stored as a single variable (NOT a list).",
+      "options": [
+        "The current score",
+        "Your age",
+        "The high temperatures for each day",
+        "The prices of all cart items"
+      ],
+      "answer": [0, 1],
+      "explanation": "Current score and age are single values. The last two are groups ('each day', 'all items') and want lists."
+    },
+    {
+      "id": "u51l06e10",
+      "type": "multipleChoice",
+      "prompt": "Why is it worth pausing to ask 'one value or many?' before coding?",
+      "options": [
+        "It tells you whether to reach for a variable or a list",
+        "It makes the problem longer",
+        "Lists are always better",
+        "Single values are always better"
+      ],
+      "answer": 0,
+      "explanation": "Choosing the right container up front shapes the whole solution. Recognizing 'this is a group' is exactly what this unit builds."
+    }
+  ]
+}

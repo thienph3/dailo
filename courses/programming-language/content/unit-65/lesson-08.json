@@ -1,0 +1,172 @@
+{
+  "unitId": "u65",
+  "lessonId": "u65l08",
+  "title": "Solve it: filter or search?",
+  "idea": "GUIDED PROBLEM (filter vs search decision). The core skill of this unit: reading a problem and choosing the right tool. Several prompts ask which approach fits, then code the one that does. Thinking-heavy.",
+  "problem": "A shop's stock ids are [101, 205, 310, 205, 420]. Two jobs: (A) is id 310 in stock? (B) build a list of every id that is 300 or higher.",
+  "exercises": [
+    {
+      "id": "u65l08e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "Job A: 'Is id 310 in stock?' What KIND of answer does this want?",
+      "options": [
+        "A yes/no (True/False) \u2014 it is a search for presence",
+        "A new list of ids",
+        "A total",
+        "An average"
+      ],
+      "answer": 0,
+      "explanation": "'Is it in stock?' is a membership question \u2014 a search \u2014 answered by True or False."
+    },
+    {
+      "id": "u65l08e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "Job B: 'build a list of every id that is 300 or higher.' What KIND of answer does this want?",
+      "options": [
+        "A new list of the matching ids \u2014 it is a filter",
+        "A single yes/no",
+        "A total",
+        "The biggest id"
+      ],
+      "answer": 0,
+      "explanation": "'Build a list of every one that matches' collects items \u2014 that is a filter, which produces a new list."
+    },
+    {
+      "id": "u65l08e03",
+      "type": "matchPairs",
+      "uepcc": "P",
+      "prompt": "Match each kind of question to the tool that fits it.",
+      "pairs": [
+        {
+          "left": "Is this one value present?",
+          "right": "Search (in / found flag)"
+        },
+        {
+          "left": "Keep every value that matches",
+          "right": "Filter (empty list + append)"
+        },
+        {
+          "left": "How many match?",
+          "right": "Count (counter or len of the filtered list)"
+        }
+      ],
+      "explanation": "Present-or-not is a search; keep-all-matches is a filter; how-many is a count. Reading the question tells you the tool."
+    },
+    {
+      "id": "u65l08e04",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example for Job A. By hand, is 310 in [101, 205, 310, 205, 420]?",
+      "options": [
+        "Yes (True)",
+        "No (False)",
+        "Only if it is first",
+        "Can't tell"
+      ],
+      "answer": 0,
+      "explanation": "310 is the third id, so the search answer is True. That is Job A's check value."
+    },
+    {
+      "id": "u65l08e05",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example for Job B. By hand, which ids are 300-or-higher in [101, 205, 310, 205, 420]?",
+      "options": [
+        "310, 420",
+        "101, 205, 205",
+        "420 only",
+        "all five"
+      ],
+      "answer": 0,
+      "explanation": "310 and 420 are 300 or more; the rest are below. Job B's check value is [310, 420]."
+    },
+    {
+      "id": "u65l08e06",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code Job A (search). Arrange the lines.",
+      "blocks": [
+        "ids = [101, 205, 310, 205, 420]",
+        "wanted = 310",
+        "found = wanted in ids",
+        "print(found)"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "A search is short: store the ids and wanted value, use 'in' for True/False, print it."
+    },
+    {
+      "id": "u65l08e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code Job B (filter). Arrange the lines.",
+      "blocks": [
+        "big = []",
+        "ids = [101, 205, 310, 205, 420]",
+        "limit = 300",
+        "for item in ids:",
+        "    if item >= limit:",
+        "        big.append(item)",
+        "print(big)"
+      ],
+      "answer": [
+        1,
+        2,
+        0,
+        3,
+        4,
+        5,
+        6
+      ],
+      "explanation": "A filter collects: store ids and the limit, start big empty, append each id >= limit, then print the list."
+    },
+    {
+      "id": "u65l08e08",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Why can't you answer Job A with the filter from Job B?",
+      "options": [
+        "A filter gives a list; Job A needs a yes/no, which is a different output shape",
+        "You can \u2014 they are the same",
+        "Filters are always slower",
+        "'in' does not exist"
+      ],
+      "answer": 0,
+      "explanation": "The tool must match the OUTPUT. Presence wants True/False (search); keep-all wants a list (filter). Choosing by output is the skill."
+    },
+    {
+      "id": "u65l08e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check. Job A prints True and Job B prints [310, 420]. Your hand examples were True and [310, 420]. Verdict?",
+      "options": [
+        "Both pass",
+        "Both fail",
+        "Only A passes",
+        "Only B passes"
+      ],
+      "answer": 0,
+      "explanation": "Each output matches its by-hand example, so both the search and the filter are correct."
+    },
+    {
+      "id": "u65l08e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "New question: 'How many ids are 300 or higher?' Which tool fits best?",
+      "options": [
+        "Count \u2014 filter them, then len the list (or use a counter)",
+        "A plain search with 'in'",
+        "An average",
+        "Nothing can answer it"
+      ],
+      "answer": 0,
+      "explanation": "'How many' is a count. You can reuse the Job B filter and take len() of 'big' \u2014 reading the question still picks the tool."
+    }
+  ]
+}

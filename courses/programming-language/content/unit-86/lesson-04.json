@@ -1,0 +1,144 @@
+{
+  "unitId": "u86",
+  "lessonId": "u86l04",
+  "title": "Ordering the sub-problems",
+  "idea": "MEET: producing an ordered list means arranging sub-problems so every step has what it needs from the steps before it.",
+  "exercises": [
+    {
+      "type": "orderBlocks",
+      "prompt": "PROBLEM: 'Show the final bill: total the item prices, then add a 10% tip.' Order the sub-problems.",
+      "blocks": [
+        "Total the item prices",
+        "Compute the tip from the total",
+        "Add the tip to the total for the final bill"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Total first, then the tip needs that total, then the final bill needs both. Each step has what it needs.",
+      "id": "u86l04e01"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "A correct ordered list has the property that...",
+      "options": [
+        "every step's inputs are ready by the time it runs",
+        "the hardest step is always first",
+        "steps are in alphabetical order",
+        "the last step comes first"
+      ],
+      "answer": 0,
+      "explanation": "Ordering is about readiness: a step can only run once its inputs exist. That's the rule for the whole list.",
+      "id": "u86l04e02"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "If a step needs a result that hasn't been computed yet, the order is wrong.",
+      "answer": true,
+      "explanation": "Yes — that's the classic ordering bug. A step must come AFTER whatever produces its inputs.",
+      "id": "u86l04e03"
+    },
+    {
+      "type": "orderBlocks",
+      "prompt": "PROBLEM: 'Average the scores and say if it passed (>=60).' Order the sub-problems.",
+      "blocks": [
+        "Total the scores",
+        "Count the scores",
+        "Divide total by count to get the average",
+        "Decide pass/fail: is the average >= 60?"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "Total and count first (either order), then the average needs both, then pass/fail needs the average.",
+      "id": "u86l04e04"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "In that plan, could 'count the scores' come BEFORE 'total the scores'?",
+      "options": [
+        "Yes — they're independent, so either order works before the divide",
+        "No — totalling must always be first",
+        "No — counting is illegal early",
+        "Only on Tuesdays"
+      ],
+      "answer": 0,
+      "explanation": "Total and count don't need each other, so their order is flexible. Only the divide depends on both.",
+      "id": "u86l04e05"
+    },
+    {
+      "type": "multiSelect",
+      "prompt": "Select the ordering mistakes.",
+      "options": [
+        "Dividing to get the average before you have the total",
+        "Adding a tip before computing the subtotal",
+        "Totalling the list before dividing",
+        "Filtering before counting the filtered items"
+      ],
+      "answer": [
+        0,
+        1
+      ],
+      "explanation": "The first two use a result that doesn't exist yet — ordering bugs. The last two are correctly ordered.",
+      "id": "u86l04e06"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Why write the sub-problems as an ORDERED list, not just a pile?",
+      "options": [
+        "So you can code them top to bottom with each input ready",
+        "A pile looks neater",
+        "Order is decoration",
+        "Lists are faster to type"
+      ],
+      "answer": 0,
+      "explanation": "An ordered list becomes your code's shape: do step 1, then step 2, each with its inputs ready.",
+      "id": "u86l04e07"
+    },
+    {
+      "type": "matchPairs",
+      "prompt": "Match each step to what must come BEFORE it.",
+      "pairs": [
+        {
+          "left": "compute the average",
+          "right": "total and count"
+        },
+        {
+          "left": "final bill",
+          "right": "subtotal and tip"
+        },
+        {
+          "left": "count the big orders",
+          "right": "filter the big orders"
+        }
+      ],
+      "explanation": "Every later step points back at its prerequisites. Those arrows are your ordering.",
+      "id": "u86l04e08"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Independent sub-problems can be placed in either order relative to each other.",
+      "answer": true,
+      "explanation": "Yes — if neither needs the other's result, either order is fine. Only dependencies force a position.",
+      "id": "u86l04e09"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "The big idea:",
+      "options": [
+        "Order the sub-problems so every step's inputs are ready before it runs",
+        "Order the hardest step first always",
+        "Ordering doesn't matter",
+        "Put the last step first"
+      ],
+      "answer": 0,
+      "explanation": "A correct decomposition is an ordered list where every step can actually run when its turn comes.",
+      "id": "u86l04e10"
+    }
+  ]
+}

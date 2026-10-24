@@ -1,0 +1,136 @@
+{
+  "unitId": "u81",
+  "lessonId": "u81l05",
+  "title": "Locate the fault: which piece is lying?",
+  "idea": "Given a broken multi-helper solution and the right answer, narrow the bug to ONE piece by checking each helper's output against what it should be. This is the core debugging skill.",
+  "exercises": [
+    {
+      "type": "multipleChoice",
+      "prompt": "total_cost should be 33 but prints 24. You know meals_cost=24 is right and drinks_cost should be 9. Where is the bug?",
+      "options": [
+        "The drinks part — it's missing, so 9 was never added",
+        "The meals part — 24 is wrong",
+        "The print statement",
+        "There is no bug"
+      ],
+      "answer": 0,
+      "explanation": "Meals is right (24); the total is short by exactly 9 (the drinks). The drinks sub-result never made it in.",
+      "id": "u81l05e01"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "When a total is wrong by exactly one sub-result's value, that sub-result is a prime suspect.",
+      "answer": true,
+      "explanation": "Yes. If the answer is off by exactly the drinks' cost, the drinks step is almost certainly where to look.",
+      "id": "u81l05e02"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "A solution uses area(w,h) then perimeter(w,h). area is right (12) but the final answer uses area where it meant perimeter. This is a...",
+      "options": [
+        "Wiring bug — the wrong sub-result was used",
+        "Missing case",
+        "Syntax error",
+        "Correct solution"
+      ],
+      "answer": 0,
+      "explanation": "The helper is fine; the wrong one was plugged in. That's a wiring bug, found by matching each value to where it's used.",
+      "id": "u81l05e03"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "To narrow a bug to one helper, the fastest check is to...",
+      "options": [
+        "Print or trace each helper's output and compare to the hand answer",
+        "Rewrite the whole thing",
+        "Delete helpers one by one at random",
+        "Change variable names"
+      ],
+      "answer": 0,
+      "explanation": "Compare each helper's actual output to its expected (hand) value. The one that disagrees is the culprit.",
+      "id": "u81l05e04"
+    },
+    {
+      "type": "matchPairs",
+      "prompt": "Match each symptom to the most likely broken piece.",
+      "pairs": [
+        {
+          "left": "Total short by the drinks' cost",
+          "right": "The drinks step"
+        },
+        {
+          "left": "Crashes only on empty input",
+          "right": "A missing edge-case guard"
+        },
+        {
+          "left": "Every number doubled",
+          "right": "A helper multiplying where it shouldn't"
+        }
+      ],
+      "explanation": "The symptom's shape points to the piece. Debugging is reading those clues, not guessing.",
+      "id": "u81l05e05"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Once you find the one broken helper, you can fix it without touching the correct helpers.",
+      "answer": true,
+      "explanation": "Yes — that's the payoff of a clean split. Fix the broken piece in isolation; the correct ones stay as they are.",
+      "id": "u81l05e06"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "A helper's output matches your hand answer for every input you try. What can you conclude?",
+      "options": [
+        "This helper is probably NOT the bug — look elsewhere",
+        "This helper is definitely the bug",
+        "The whole program is correct",
+        "You need more helpers"
+      ],
+      "answer": 0,
+      "explanation": "If it matches, it's cleared as a suspect. Move on and test the other pieces — the bug is elsewhere.",
+      "id": "u81l05e07"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Why check each helper's output rather than staring at all the code at once?",
+      "options": [
+        "It isolates the problem to one piece instead of the whole program",
+        "Staring is faster",
+        "Helpers can't be checked",
+        "Output is always wrong"
+      ],
+      "answer": 0,
+      "explanation": "Isolation shrinks the search. One failing output points at one piece — far easier than scanning everything.",
+      "id": "u81l05e08"
+    },
+    {
+      "type": "orderBlocks",
+      "prompt": "Order the fault-location routine.",
+      "blocks": [
+        "Decide the correct answer by hand",
+        "Check each helper's output against what it should be",
+        "Point at the one piece that disagrees"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Know the right answer, test each piece, name the one that's off. Then — and only then — fix it.",
+      "id": "u81l05e09"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "The takeaway:",
+      "options": [
+        "Locate the ONE lying piece by comparing each helper's output to its expected value",
+        "Fix everything at once",
+        "Trust that helpers are correct",
+        "A wrong total means rewrite all helpers"
+      ],
+      "answer": 0,
+      "explanation": "Find the single piece whose output disagrees with the hand answer. That's where the fix belongs.",
+      "id": "u81l05e10"
+    }
+  ]
+}

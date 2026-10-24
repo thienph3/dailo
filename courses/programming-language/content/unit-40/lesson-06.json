@@ -1,0 +1,135 @@
+{
+  "unitId": "u40",
+  "lessonId": "u40l06",
+  "title": "A common mistake: starting the counter inside the loop",
+  "idea": "Spot the classic bug: resetting the counter to 0 inside the loop so it never grows.",
+  "exercises": [
+    {
+      "id": "u40l06e01",
+      "type": "multipleChoice",
+      "prompt": "Buggy code:\n\nfor i in range(4):\n    count = 0\n    count += 1\nprint(count)\n\nWhat does it print, and why?",
+      "options": [
+        "1 — the counter resets to 0 every pass",
+        "4 — it counts correctly",
+        "0 — it never adds",
+        "It errors"
+      ],
+      "answer": 0,
+      "explanation": "count = 0 is inside the loop, so every pass resets it before adding 1 — it always ends at 1."
+    },
+    {
+      "id": "u40l06e02",
+      "type": "multipleChoice",
+      "prompt": "What SHOULD this loop print if we wanted to count the 4 passes?",
+      "options": [
+        "4",
+        "1",
+        "0",
+        "5"
+      ],
+      "answer": 0,
+      "explanation": "Four passes should give 4. The bug makes it stick at 1."
+    },
+    {
+      "id": "u40l06e03",
+      "type": "multipleChoice",
+      "prompt": "Where should count = 0 go to fix it?",
+      "options": [
+        "Before the loop (not indented)",
+        "Keep it inside",
+        "After the loop",
+        "Delete it entirely"
+      ],
+      "answer": 0,
+      "explanation": "Move it ABOVE the loop so it is set once; then += 1 can build up across passes."
+    },
+    {
+      "id": "u40l06e04",
+      "type": "orderBlocks",
+      "prompt": "Arrange the FIXED version that counts 4 passes.",
+      "blocks": [
+        "    count += 1",
+        "count = 0",
+        "print(count)",
+        "for i in range(4):"
+      ],
+      "answer": [
+        1,
+        3,
+        0,
+        2
+      ],
+      "explanation": "count = 0 before the loop, then += 1 inside, then print — gives 4."
+    },
+    {
+      "id": "u40l06e05",
+      "type": "trueFalse",
+      "prompt": "Putting count = 0 inside the loop wipes out the count on every pass.",
+      "answer": true,
+      "explanation": "True. Resetting inside means each pass starts over, so the counter can never grow past 1."
+    },
+    {
+      "id": "u40l06e06",
+      "type": "multipleChoice",
+      "prompt": "Another version:\n\ncount = 0\nfor i in range(4):\n    count += 1\n    print(count)\n\nWhat prints?",
+      "options": [
+        "1, 2, 3, 4 on four lines",
+        "4 only",
+        "0, 1, 2, 3",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "count printed inside the loop shows 1, 2, 3, 4 — one line per pass as it grows."
+    },
+    {
+      "id": "u40l06e07",
+      "type": "multipleChoice",
+      "prompt": "In that last code, is printing inside the loop a bug, or just a choice?",
+      "options": [
+        "A valid choice — it shows the counter building up",
+        "A bug that breaks counting",
+        "It errors",
+        "It resets the counter"
+      ],
+      "answer": 0,
+      "explanation": "It is a choice — it shows the counter growing. Where you print changes what you see, not the final count."
+    },
+    {
+      "id": "u40l06e08",
+      "type": "fillBlank",
+      "prompt": "Fix the reset bug by moving the start line. Where should 'count = 0' be — 'before' or 'inside' the loop?",
+      "answer": "before",
+      "acceptable": [
+        "before",
+        "Before"
+      ],
+      "explanation": "Before the loop, so it is set once and the counter can accumulate across passes."
+    },
+    {
+      "id": "u40l06e09",
+      "type": "multipleChoice",
+      "prompt": "A counter prints 1 every time instead of the total. What is the most likely cause?",
+      "options": [
+        "It is reset to 0 inside the loop",
+        "range is wrong",
+        "print is broken",
+        "i is misspelled"
+      ],
+      "answer": 0,
+      "explanation": "A counter stuck at 1 almost always means it is being reset to 0 inside the loop."
+    },
+    {
+      "id": "u40l06e10",
+      "type": "multipleChoice",
+      "prompt": "Habit: how do you quickly confirm a counter bug like this?",
+      "options": [
+        "Trace its value pass by pass",
+        "Make the range bigger",
+        "Remove the loop",
+        "Add another counter"
+      ],
+      "answer": 0,
+      "explanation": "Trace the counter by hand; if it keeps snapping back to 0 or 1, the start line is misplaced."
+    }
+  ]
+}

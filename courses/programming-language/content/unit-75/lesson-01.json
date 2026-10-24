@@ -1,0 +1,144 @@
+{
+  "unitId": "u75",
+  "lessonId": "u75l01",
+  "title": "Solve it together: a sub-plan that returns a rectangle's area",
+  "idea": "GUIDED PROBLEM (UEPCC). Write ONE sub-plan with parameters that RETURNS the area of a rectangle, then use its answer. Practices def + parameters + return.",
+  "problem": "Write a sub-plan area(width, height) that hands back width times height. Use it to show the area of a 6 by 4 room.",
+  "exercises": [
+    {
+      "id": "u75l01e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: write area(width, height) that hands back width * height; show the area of a 6 by 4 room.\n\nUnderstand first — what should the sub-plan HAND BACK (its output)?",
+      "options": [
+        "The area: width times height",
+        "The width only",
+        "The number of walls",
+        "Nothing — it should print"
+      ],
+      "answer": 0,
+      "explanation": "The output is the area, handed back with return so the main plan can use it. Naming the output first frames everything."
+    },
+    {
+      "id": "u75l01e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "Still understanding. What are the INPUTS the sub-plan needs?",
+      "options": [
+        "The width and the height",
+        "Only the width",
+        "The area",
+        "There are no inputs"
+      ],
+      "answer": 0,
+      "explanation": "Inputs are width and height — they become the two parameters. Inputs in, area out."
+    },
+    {
+      "id": "u75l01e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example — work it by hand. For a 6 by 4 room, the area is...",
+      "options": [
+        "24",
+        "10",
+        "64",
+        "2"
+      ],
+      "answer": 0,
+      "explanation": "6 * 4 = 24. This hand-worked answer becomes the value you'll check the code against later."
+    },
+    {
+      "id": "u75l01e04",
+      "type": "trueFalse",
+      "uepcc": "E",
+      "prompt": "The hand-worked answer (24) is what we'll compare the sub-plan's returned value against.",
+      "answer": true,
+      "explanation": "Yes. Work the example by hand FIRST so you have a known-correct value to check the code's output."
+    },
+    {
+      "id": "u75l01e05",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Plan the sub-plan in plain English. Put the steps in order.",
+      "blocks": [
+        "Name the sub-plan area with inputs width and height",
+        "Compute width times height",
+        "Hand the area back"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Plan: define with its two inputs, compute the area, then return it. Plan in words before writing code."
+    },
+    {
+      "id": "u75l01e06",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Your plan says 'hand the area back'. Which tool does that?",
+      "options": [
+        "return",
+        "print",
+        "input",
+        "a loop"
+      ],
+      "answer": 0,
+      "explanation": "return hands the value back to the caller. The main plan can then show or reuse it."
+    },
+    {
+      "id": "u75l01e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code the sub-plan and a call: define area, return width * height, then print area(6, 4).",
+      "blocks": [
+        "def area(width, height):",
+        "    return width * height",
+        "print(area(6, 4))"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Define with both parameters, return their product, then call area(6, 4) inside print. The code mirrors the plan."
+    },
+    {
+      "id": "u75l01e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Complete the body so the area is handed back:\n\ndef area(width, height):\n    ____ width * height",
+      "answer": "return",
+      "acceptable": ["return"],
+      "explanation": "return hands back width * height. Now area(6, 4) becomes 24 for the main plan to print."
+    },
+    {
+      "id": "u75l01e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check — you run it and it prints 24. Your hand example said 24. So...",
+      "options": [
+        "It passes — the output matches the example",
+        "It fails",
+        "You can't tell",
+        "Change the example"
+      ],
+      "answer": 0,
+      "explanation": "Output (24) matches the hand example (24), so the sub-plan is correct. That's what Check means."
+    },
+    {
+      "id": "u75l01e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Re-check with new inputs: area(5, 2). What does it hand back?",
+      "options": [
+        "10",
+        "24",
+        "7",
+        "52"
+      ],
+      "answer": 0,
+      "explanation": "5 * 2 = 10. A good sub-plan works for new inputs, not just the first example. You solved it with UEPCC!"
+    }
+  ]
+}

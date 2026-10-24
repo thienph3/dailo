@@ -1,0 +1,150 @@
+{
+  "unitId": "u98",
+  "lessonId": "u98l04",
+  "title": "Capstone: filter the even numbers into a new list",
+  "idea": "GUIDED CAPSTONE. Build a NEW list by appending only items that pass a test — the filter pattern.",
+  "problem": "From [3, 8, 5, 12, 7], collect just the even numbers into a new list [8, 12].",
+  "exercises": [
+    {
+      "id": "u98l04e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: collect the evens from [3, 8, 5, 12, 7]. OUTPUT is...",
+      "options": [
+        "A new list of the even numbers",
+        "A count of evens",
+        "The sum of evens",
+        "True or False"
+      ],
+      "answer": 0,
+      "explanation": "Output is a NEW list, not a count or sum. Filtering keeps the items that pass."
+    },
+    {
+      "id": "u98l04e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "How do we test 'is this number even'?",
+      "options": [
+        "number % 2 == 0",
+        "number // 2 == 0",
+        "number > 2",
+        "number * 2"
+      ],
+      "answer": 0,
+      "explanation": "Even means remainder 0 when divided by 2. You derived this in the number-puzzles unit."
+    },
+    {
+      "id": "u98l04e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example by hand: which of 3, 8, 5, 12, 7 are even?",
+      "options": [
+        "8 and 12",
+        "3 and 5",
+        "8, 12, 7",
+        "all"
+      ],
+      "answer": 0,
+      "explanation": "8 and 12 are even; the rest are odd. The filtered list should be [8, 12]."
+    },
+    {
+      "id": "u98l04e04",
+      "type": "trueFalse",
+      "uepcc": "E",
+      "prompt": "The filtered list should keep the evens in the SAME order they appeared in the original.",
+      "answer": true,
+      "explanation": "Yes — appending as we scan preserves order, giving [8, 12]. That's our check."
+    },
+    {
+      "id": "u98l04e05",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Plan the filter. Order the steps.",
+      "blocks": [
+        "If the number is even, append it to the new list",
+        "Start an empty new list",
+        "For each number in the original",
+        "The new list is the result"
+      ],
+      "answer": [
+        1,
+        2,
+        0,
+        3
+      ],
+      "explanation": "Empty list, scan, append on pass. Building a fresh list is the heart of the filter pattern."
+    },
+    {
+      "id": "u98l04e06",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Which method adds an item to the end of the new list?",
+      "options": [
+        "append()",
+        "len()",
+        "range()",
+        "print()"
+      ],
+      "answer": 0,
+      "explanation": "append() grows a list by one item. We call it only when the number passes the even test."
+    },
+    {
+      "id": "u98l04e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code the filter. Arrange the lines.",
+      "blocks": [
+        "evens = []",
+        "    if number % 2 == 0:",
+        "for number in numbers:",
+        "        evens.append(number)"
+      ],
+      "answer": [
+        0,
+        2,
+        1,
+        3
+      ],
+      "explanation": "Start evens empty, loop, test even, append inside the if. Order and indentation both matter."
+    },
+    {
+      "id": "u98l04e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Complete the append so only evens are kept:\n\nevens = []\nfor number in numbers:\n    if number % 2 == 0:\n        evens.____(number)\nprint(evens)",
+      "answer": "append",
+      "acceptable": [
+        "append"
+      ],
+      "explanation": "append(number) adds the passing number to evens. Result: [8, 12]."
+    },
+    {
+      "id": "u98l04e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Run it: prints [8, 12]. Hand said [8, 12]. Verdict?",
+      "options": [
+        "Passes",
+        "Fails",
+        "Unknown",
+        "Rewrite example"
+      ],
+      "answer": 0,
+      "explanation": "Matches. Only evens were appended, in original order."
+    },
+    {
+      "id": "u98l04e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Re-run on [2, 4, 6]. What's the filtered list?",
+      "options": [
+        "[2, 4, 6] — all even",
+        "[]",
+        "[2]",
+        "[4, 6]"
+      ],
+      "answer": 0,
+      "explanation": "Every item passes, so all are appended. Filter keeps as many as qualify — here, all of them."
+    }
+  ]
+}

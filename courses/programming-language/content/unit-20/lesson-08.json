@@ -1,0 +1,143 @@
+{
+  "unitId": "u20",
+  "lessonId": "u20l08",
+  "title": "Reading a comparison correctly",
+  "idea": "Predicting the boolean a comparison gives - and spotting the = vs == mix-up - builds careful reading. Mostly thinking.",
+  "exercises": [
+    {
+      "id": "u20l08e01",
+      "type": "multipleChoice",
+      "prompt": "What does this print?\n\nprint(10 >= 10)",
+      "options": [
+        "True",
+        "False",
+        "10",
+        "20"
+      ],
+      "answer": 0,
+      "explanation": "10 equals 10, and >= allows equal, so True."
+    },
+    {
+      "id": "u20l08e02",
+      "type": "multipleChoice",
+      "prompt": "What does this print?\n\nprint(10 > 10)",
+      "options": [
+        "False",
+        "True",
+        "10",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "10 is not greater than 10, and > does not count equal, so False."
+    },
+    {
+      "id": "u20l08e03",
+      "type": "multipleChoice",
+      "prompt": "A learner wants to CHECK if x equals 5 but writes x = 5. What went wrong?",
+      "options": [
+        "One = stores 5 into x instead of comparing",
+        "Nothing, it compares",
+        "It errors always",
+        "It prints True"
+      ],
+      "answer": 0,
+      "explanation": "One = assigns. To compare, they needed two: x == 5. This is the classic = vs == trap."
+    },
+    {
+      "id": "u20l08e04",
+      "type": "multipleChoice",
+      "prompt": "What does this print?\n\na = 6\nb = 9\nprint(a < b)",
+      "options": [
+        "True",
+        "False",
+        "6",
+        "9"
+      ],
+      "answer": 0,
+      "explanation": "6 < 9 is True."
+    },
+    {
+      "id": "u20l08e05",
+      "type": "multiSelect",
+      "prompt": "Select ALL comparisons that are True.",
+      "options": [
+        "5 == 5",
+        "5 != 6",
+        "7 < 3",
+        "2 <= 2"
+      ],
+      "answer": [
+        0,
+        1,
+        3
+      ],
+      "explanation": "5==5 True, 5!=6 True, 2<=2 True (equal counts). 7<3 is False."
+    },
+    {
+      "id": "u20l08e06",
+      "type": "multipleChoice",
+      "prompt": "What does this print?\n\nx = 3\nprint(x != 3)",
+      "options": [
+        "False",
+        "True",
+        "3",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "x is 3, so 3 != 3 is False - they are equal, so 'not equal' fails."
+    },
+    {
+      "id": "u20l08e07",
+      "type": "trueFalse",
+      "prompt": "In a comparison, the = vs == difference can change a store into a compare (a real bug).",
+      "answer": true,
+      "explanation": "Yes - = changes a variable, == asks a question. Mixing them is a frequent mistake to watch for."
+    },
+    {
+      "id": "u20l08e08",
+      "type": "matchPairs",
+      "prompt": "Match each comparison to its result.",
+      "pairs": [
+        {
+          "left": "8 > 8",
+          "right": "False"
+        },
+        {
+          "left": "8 >= 8",
+          "right": "True"
+        },
+        {
+          "left": "8 != 9",
+          "right": "True"
+        }
+      ],
+      "explanation": "Watch the boundary: > excludes equal, >= includes it."
+    },
+    {
+      "id": "u20l08e09",
+      "type": "multipleChoice",
+      "prompt": "What does this print?\n\nprice = 50\nprint(price <= 50)",
+      "options": [
+        "True",
+        "False",
+        "50",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "price is 50, and 50 <= 50 is True because <= allows equal."
+    },
+    {
+      "id": "u20l08e10",
+      "type": "multipleChoice",
+      "prompt": "Why read comparisons slowly, one side at a time?",
+      "options": [
+        "Because boundary and direction mistakes are easy to miss",
+        "Because they are always True",
+        "Because reading is optional",
+        "Because numbers change"
+      ],
+      "answer": 0,
+      "explanation": "Small details - the direction, the extra =, one vs two equals - decide the answer. Careful reading prevents bugs."
+    }
+  ]
+}

@@ -1,0 +1,146 @@
+{
+  "unitId": "u69",
+  "lessonId": "u69l02",
+  "title": "Spotting the separate jobs",
+  "idea": "MEET: practice naming the distinct sub-jobs inside a worded task. No code.",
+  "exercises": [
+    {
+      "id": "u69l02e01",
+      "type": "multipleChoice",
+      "prompt": "TASK: 'Take an order, add up the bill, then print the receipt.' What is the FIRST sub-job?",
+      "options": [
+        "Take the order",
+        "Print the receipt",
+        "Add up the bill",
+        "There are no sub-jobs"
+      ],
+      "answer": 0,
+      "explanation": "Read left to right: the first job is taking the order. Naming jobs in order is decomposition."
+    },
+    {
+      "id": "u69l02e02",
+      "type": "multipleChoice",
+      "prompt": "Same task. What is the LAST sub-job?",
+      "options": [
+        "Print the receipt",
+        "Take the order",
+        "Add up the bill",
+        "Open the shop"
+      ],
+      "answer": 0,
+      "explanation": "The task ends with printing the receipt, so that's the last job. The jobs run in order, like steps."
+    },
+    {
+      "id": "u69l02e03",
+      "type": "multiSelect",
+      "prompt": "TASK: 'Check the password, then show the menu, then record the visit.' Which are the sub-jobs? (Pick all.)",
+      "options": [
+        "Check the password",
+        "Show the menu",
+        "Record the visit",
+        "Buy a new computer"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Three jobs joined by 'then': check, show, record. The last option isn't part of the task at all."
+    },
+    {
+      "id": "u69l02e04",
+      "type": "orderBlocks",
+      "prompt": "Put the sub-jobs of 'make tea' in a sensible order.",
+      "blocks": [
+        "Pour hot water over the teabag",
+        "Boil the water",
+        "Put a teabag in the cup"
+      ],
+      "answer": [
+        1,
+        2,
+        0
+      ],
+      "explanation": "Boil first, add the teabag, then pour. Order matters - you can't pour water before it's boiled."
+    },
+    {
+      "id": "u69l02e05",
+      "type": "trueFalse",
+      "prompt": "Words like 'then', 'next', and 'after that' are good clues that a new sub-job is starting.",
+      "answer": true,
+      "explanation": "Yes - those joining words usually separate one job from the next. They help you spot the parts."
+    },
+    {
+      "id": "u69l02e06",
+      "type": "multipleChoice",
+      "prompt": "TASK: 'Count how many scores are above 90, then show that count.' How many sub-jobs?",
+      "options": [
+        "Two: count the high scores, then show the count",
+        "One",
+        "Three",
+        "Four"
+      ],
+      "answer": 0,
+      "explanation": "Two jobs: first count, then show. You already know how to do each one from earlier laps."
+    },
+    {
+      "id": "u69l02e07",
+      "type": "multipleChoice",
+      "prompt": "REVIEW: one of those sub-jobs is 'count how many scores are above 90.' Which earlier tool does that job?",
+      "options": [
+        "A count with a condition",
+        "A plain sum of everything",
+        "print() only",
+        "A single variable"
+      ],
+      "answer": 0,
+      "explanation": "'How many ... above' is a count with a test - a tool you learned with lists. Each sub-job maps to a tool."
+    },
+    {
+      "id": "u69l02e08",
+      "type": "matchPairs",
+      "prompt": "Match each sub-job to the list tool that does it.",
+      "pairs": [
+        {
+          "left": "the total of all prices",
+          "right": "sum"
+        },
+        {
+          "left": "the biggest value",
+          "right": "max"
+        },
+        {
+          "left": "only the passing marks",
+          "right": "filter"
+        }
+      ],
+      "explanation": "Every sub-job is really a familiar recipe. Naming the tool for each job is the plan step."
+    },
+    {
+      "id": "u69l02e09",
+      "type": "multipleChoice",
+      "prompt": "Why name the sub-jobs BEFORE writing any code?",
+      "options": [
+        "So you solve one clear job at a time instead of a tangle",
+        "So the code is longer",
+        "So you can skip testing",
+        "Because names look nice"
+      ],
+      "answer": 0,
+      "explanation": "Naming the jobs turns a scary big task into a short list of small, familiar tasks. Then you solve each."
+    },
+    {
+      "id": "u69l02e10",
+      "type": "multipleChoice",
+      "prompt": "TASK: 'Greet, then show the average of the scores (handle empty safely), then say bye.' Which sub-job needs extra care?",
+      "options": [
+        "Show the average - it needs an empty-list guard",
+        "Greet",
+        "Say bye",
+        "None of them"
+      ],
+      "answer": 0,
+      "explanation": "Average is sum/count, and an empty list would divide by zero. That guard is part of that one sub-job."
+    }
+  ]
+}

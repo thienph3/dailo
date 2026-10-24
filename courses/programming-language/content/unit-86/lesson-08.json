@@ -1,0 +1,145 @@
+{
+  "unitId": "u86",
+  "lessonId": "u86l08",
+  "title": "Three outputs, one ordered plan",
+  "idea": "MEET: scale the habit up — a three-output problem splits into three (or more) sub-problems, arranged so shared values are computed once and reused.",
+  "exercises": [
+    {
+      "type": "multipleChoice",
+      "prompt": "PROBLEM: 'For the bill, show the subtotal, the 10% tip, and the final total.' How many outputs?",
+      "options": [
+        "Three — subtotal, tip, final total",
+        "Two",
+        "One",
+        "Four"
+      ],
+      "answer": 0,
+      "explanation": "Three things to show. Each is a candidate sub-problem, and some feed the others.",
+      "id": "u86l08e01"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "By hand: items cost 20 and 30. The subtotal is...",
+      "options": [
+        "50",
+        "60",
+        "10",
+        "5"
+      ],
+      "answer": 0,
+      "explanation": "20 + 30 = 50. The subtotal is the first value everything else builds on.",
+      "id": "u86l08e02"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Same example — the 10% tip on a subtotal of 50 is...",
+      "options": [
+        "5",
+        "50",
+        "10",
+        "55"
+      ],
+      "answer": 0,
+      "explanation": "10% of 50 is 5. The tip needs the subtotal first — a dependency.",
+      "id": "u86l08e03"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Same example — the final total is...",
+      "options": [
+        "55 (subtotal 50 + tip 5)",
+        "50",
+        "5",
+        "605"
+      ],
+      "answer": 0,
+      "explanation": "50 + 5 = 55. The final needs BOTH the subtotal and the tip. It must come last.",
+      "id": "u86l08e04"
+    },
+    {
+      "type": "orderBlocks",
+      "prompt": "Order the three sub-problems.",
+      "blocks": [
+        "Compute the subtotal (total the item prices)",
+        "Compute the tip (10% of the subtotal)",
+        "Compute the final total (subtotal + tip)"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Subtotal first, tip depends on it, final depends on both. The dependencies force this exact order.",
+      "id": "u86l08e05"
+    },
+    {
+      "type": "multiSelect",
+      "prompt": "Select the SHARED values that should be computed ONCE and reused.",
+      "options": [
+        "the subtotal (used by both tip and final)",
+        "the tip (used by the final)",
+        "the number of items",
+        "the weather"
+      ],
+      "answer": [
+        0,
+        1
+      ],
+      "explanation": "Subtotal feeds tip and final; tip feeds final. Computing the subtotal twice would be wasted work.",
+      "id": "u86l08e06"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Computing the subtotal once and reusing it is better than recomputing it for the tip and again for the final.",
+      "answer": true,
+      "explanation": "Yes — compute shared values once, store them, reuse them. That's clean decomposition at scale.",
+      "id": "u86l08e07"
+    },
+    {
+      "type": "matchPairs",
+      "prompt": "Match each output to what it depends on.",
+      "pairs": [
+        {
+          "left": "subtotal",
+          "right": "the item prices"
+        },
+        {
+          "left": "tip",
+          "right": "the subtotal"
+        },
+        {
+          "left": "final total",
+          "right": "the subtotal and the tip"
+        }
+      ],
+      "explanation": "A dependency chain: prices -> subtotal -> tip -> final. The chain is the order.",
+      "id": "u86l08e08"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Why does scaling to three outputs use the SAME habit as two?",
+      "options": [
+        "List outputs, make each a sub-problem, order by dependency — regardless of count",
+        "Three outputs need a brand-new method",
+        "More outputs means no plan is possible",
+        "Only two outputs can be planned"
+      ],
+      "answer": 0,
+      "explanation": "The habit doesn't change with size. Three, five, or ten outputs: list them, split, order. That's decomposition at scale.",
+      "id": "u86l08e09"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "The big idea:",
+      "options": [
+        "More outputs just means more sub-problems — same list-and-order habit, computing shared values once",
+        "Big problems need luck",
+        "Three outputs can't be ordered",
+        "Shared values must be recomputed each time"
+      ],
+      "answer": 0,
+      "explanation": "Decomposition scales: the method is identical whether there are two parts or ten. Reuse shared results.",
+      "id": "u86l08e10"
+    }
+  ]
+}

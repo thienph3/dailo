@@ -1,0 +1,145 @@
+{
+  "unitId": "u86",
+  "lessonId": "u86l05",
+  "title": "Splitting a 'total and count' problem",
+  "idea": "MEET: walk a concrete two-output problem into an ordered sub-problem list — total the list, count a condition — practising decomposition end to end (no code yet).",
+  "exercises": [
+    {
+      "type": "multipleChoice",
+      "prompt": "PROBLEM: 'For a list of prices, show the total and how many are above 10.' First, the OUTPUTS are...",
+      "options": [
+        "the total; the count above 10",
+        "only the total",
+        "only the count",
+        "the list itself"
+      ],
+      "answer": 0,
+      "explanation": "Two outputs. We found these in Unit 85 — they become our starter sub-problems.",
+      "id": "u86l05e01"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "One concrete example by hand: prices are 5, 12, 8, 20. The total is...",
+      "options": [
+        "45",
+        "40",
+        "4",
+        "2"
+      ],
+      "answer": 0,
+      "explanation": "5 + 12 + 8 + 20 = 45. Working it by hand gives a value we can check later.",
+      "id": "u86l05e02"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Same example — how many prices are above 10?",
+      "options": [
+        "2 (12 and 20)",
+        "1",
+        "3",
+        "4"
+      ],
+      "answer": 0,
+      "explanation": "12 and 20 are above 10, so the count is 2. Our hand example gives total 45, count 2.",
+      "id": "u86l05e03"
+    },
+    {
+      "type": "multiSelect",
+      "prompt": "Select the sub-problems this split needs.",
+      "options": [
+        "Add up the prices (running total)",
+        "Count the prices above 10",
+        "Sort the prices",
+        "Delete prices under 10"
+      ],
+      "answer": [
+        0,
+        1
+      ],
+      "explanation": "Two jobs: a running total, and a conditional count. No sorting or deleting is asked for.",
+      "id": "u86l05e04"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Do these two sub-problems depend on each other?",
+      "options": [
+        "No — the total and the count are independent",
+        "Yes — the count needs the total",
+        "Yes — the total needs the count",
+        "They can't both be done"
+      ],
+      "answer": 0,
+      "explanation": "Totalling and counting don't share a result. They're independent, so either can go first.",
+      "id": "u86l05e05"
+    },
+    {
+      "type": "orderBlocks",
+      "prompt": "Order a reasonable plan for this problem.",
+      "blocks": [
+        "Start a total at 0 and a count at 0",
+        "Go through each price: add to total; if it's above 10, add 1 to count",
+        "Show the total and the count"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Set up the accumulators, walk the list once doing both jobs, then show both results. Clean and ordered.",
+      "id": "u86l05e06"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Because the two jobs are independent, one walk through the list can do both.",
+      "answer": true,
+      "explanation": "Yes — a single loop can add to the total AND check the rule for the count. Independent jobs, one pass.",
+      "id": "u86l05e07"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "If the code showed total 40 and count 2, but your hand example said total 45, you should...",
+      "options": [
+        "Trust the hand example and find the bug — a price was dropped",
+        "Change the example to 40",
+        "Ignore it",
+        "Assume the computer is right"
+      ],
+      "answer": 0,
+      "explanation": "The hand-worked total (45) is your check. A mismatch means a bug — likely a dropped value.",
+      "id": "u86l05e08"
+    },
+    {
+      "type": "matchPairs",
+      "prompt": "Match each sub-problem to its pattern name.",
+      "pairs": [
+        {
+          "left": "add up the prices",
+          "right": "running total (accumulate)"
+        },
+        {
+          "left": "count prices above 10",
+          "right": "count with a condition"
+        },
+        {
+          "left": "show both results",
+          "right": "print output"
+        }
+      ],
+      "explanation": "Each sub-problem has a familiar pattern. Naming the pattern is the bridge to coding (next unit).",
+      "id": "u86l05e09"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "The big idea:",
+      "options": [
+        "Split into total + conditional count, order them, check against a hand example",
+        "Guess the answer",
+        "Use one giant unplanned step",
+        "Skip the example"
+      ],
+      "answer": 0,
+      "explanation": "A two-output problem becomes two familiar sub-problems in an ordered plan, checked by hand first.",
+      "id": "u86l05e10"
+    }
+  ]
+}

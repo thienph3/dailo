@@ -1,0 +1,133 @@
+{
+  "unitId": "u72",
+  "lessonId": "u72l01",
+  "title": "A sub-plan that needs a value",
+  "idea": "TOOL: a parameter lets a sub-plan take a value when you call it, so each call can differ.",
+  "exercises": [
+    {
+      "id": "u72l01e01",
+      "type": "multipleChoice",
+      "prompt": "def greet() always prints the same 'Hi'. To greet a SPECIFIC score each time, the sub-plan needs...",
+      "options": [
+        "a value handed in when you call it",
+        "a bigger name",
+        "two defs",
+        "a loop"
+      ],
+      "answer": 0,
+      "explanation": "A sub-plan that should change per call needs information passed in. That slot is called a parameter."
+    },
+    {
+      "id": "u72l01e02",
+      "type": "multipleChoice",
+      "prompt": "Look:\n\ndef show_score(points):\n    print(points)\n\nWhat is 'points'?",
+      "options": [
+        "a parameter - a slot for a value handed in",
+        "a print command",
+        "the sub-plan's name",
+        "a loop variable"
+      ],
+      "answer": 0,
+      "explanation": "'points' is a parameter: a named slot. When you call show_score, you hand it a value for points."
+    },
+    {
+      "id": "u72l01e03",
+      "type": "multipleChoice",
+      "prompt": "You call show_score(10). What does the body print?",
+      "options": [
+        "10",
+        "points",
+        "show_score",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "The 10 goes into the parameter points, so print(points) shows 10. The call supplies the value."
+    },
+    {
+      "id": "u72l01e04",
+      "type": "trueFalse",
+      "prompt": "A parameter lets the SAME sub-plan behave differently depending on the value you give it.",
+      "answer": true,
+      "explanation": "Yes. show_score(10) prints 10; show_score(7) prints 7. One definition, different values per call."
+    },
+    {
+      "id": "u72l01e05",
+      "type": "multipleChoice",
+      "prompt": "Why is a parameter useful?",
+      "options": [
+        "One sub-plan handles many values instead of one fixed value",
+        "It makes code slower",
+        "It removes the need to call",
+        "It hides the value"
+      ],
+      "answer": 0,
+      "explanation": "Without parameters you'd need a separate sub-plan per value. A parameter lets one sub-plan serve all values."
+    },
+    {
+      "id": "u72l01e06",
+      "type": "matchPairs",
+      "prompt": "Match each call to what show_score(points) prints.",
+      "pairs": [
+        {
+          "left": "show_score(5)",
+          "right": "5"
+        },
+        {
+          "left": "show_score(42)",
+          "right": "42"
+        },
+        {
+          "left": "show_score(0)",
+          "right": "0"
+        }
+      ],
+      "explanation": "The value in the call fills the parameter, and the body prints it. Each call can carry a different value."
+    },
+    {
+      "id": "u72l01e07",
+      "type": "multipleChoice",
+      "prompt": "The value you put in the call, like the 10 in show_score(10), is called...",
+      "options": [
+        "an argument",
+        "a colon",
+        "a loop",
+        "a border"
+      ],
+      "answer": 0,
+      "explanation": "The value handed in is the argument; the slot that receives it is the parameter. 10 is the argument here."
+    },
+    {
+      "id": "u72l01e08",
+      "type": "trueFalse",
+      "prompt": "REVIEW: you still need both a def (to define) and a call (to run) - parameters just add a value to the call.",
+      "answer": true,
+      "explanation": "Yes. def+call from last unit still apply. A parameter adds a value slot; the argument fills it on the call."
+    },
+    {
+      "id": "u72l01e09",
+      "type": "multipleChoice",
+      "prompt": "This idea matches which thinking lesson from before?",
+      "options": [
+        "'sub-plans that need information' - handing values to a job",
+        "drawing a tree",
+        "a one-off print",
+        "avoiding names"
+      ],
+      "answer": 0,
+      "explanation": "You met the idea conceptually. Now parameters are the real code for handing a job the values it needs."
+    },
+    {
+      "id": "u72l01e10",
+      "type": "multipleChoice",
+      "prompt": "The new tool this unit adds on top of def and call is...",
+      "options": [
+        "parameters - a way to hand values into a sub-plan",
+        "loops",
+        "lists",
+        "input()"
+      ],
+      "answer": 0,
+      "explanation": "Parameters let a sub-plan accept values when called, so one definition can work for many inputs."
+    }
+  ]
+}

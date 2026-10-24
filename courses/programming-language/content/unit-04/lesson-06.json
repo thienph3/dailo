@@ -1,0 +1,118 @@
+{
+  "unitId": "u04",
+  "lessonId": "u04l06",
+  "title": "One task, one hand-worked example",
+  "idea": "Take a whole tiny task, name its input and output, and write the full example — all before coding.",
+  "exercises": [
+    {
+      "id": "u04l06e01",
+      "type": "multipleChoice",
+      "prompt": "Task: 'show the shop name Bean Cafe'. What is the input?",
+      "options": [
+        "The name Bean Cafe",
+        "A number",
+        "The screen",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "You're handed the name Bean Cafe to display. That's the input."
+    },
+    {
+      "id": "u04l06e02",
+      "type": "multipleChoice",
+      "prompt": "Same task. What is the expected output?",
+      "options": [
+        "Bean Cafe",
+        "Bean",
+        "Cafe",
+        "shop name"
+      ],
+      "answer": 0,
+      "explanation": "The screen should show the full name: Bean Cafe. Copy the task's words exactly."
+    },
+    {
+      "id": "u04l06e03",
+      "type": "orderBlocks",
+      "prompt": "Put the steps of building this example in order.",
+      "blocks": [
+        "Name the input: Bean Cafe",
+        "Decide the output: Bean Cafe",
+        "Write the example: input Bean Cafe -> output Bean Cafe"
+      ],
+      "answer": [0, 1, 2],
+      "explanation": "Input first, then output, then join them into one clear example. That's the E step done."
+    },
+    {
+      "id": "u04l06e04",
+      "type": "multipleChoice",
+      "prompt": "Task: 'show a menu: Coffee, then Tea'. What is the expected output?",
+      "options": [
+        "Line 1: Coffee, Line 2: Tea",
+        "Line 1: Tea, Line 2: Coffee",
+        "Line 1: Coffee Tea",
+        "Line 1: menu"
+      ],
+      "answer": 0,
+      "explanation": "Two menu lines, in order: Coffee then Tea. You worked the full example by hand."
+    },
+    {
+      "id": "u04l06e05",
+      "type": "trueFalse",
+      "prompt": "A full example names the input AND lists the exact output.",
+      "answer": true,
+      "explanation": "Both sides matter. An example with only one side can't guide or check the code."
+    },
+    {
+      "id": "u04l06e06",
+      "type": "matchPairs",
+      "prompt": "Match each part of the example to its role.",
+      "pairs": [
+        { "left": "Bean Cafe (given)", "right": "Input" },
+        { "left": "Bean Cafe (on screen)", "right": "Output" },
+        { "left": "input -> output", "right": "The worked example" }
+      ],
+      "explanation": "The given value is the input, the screen result is the output, and the pair is your example."
+    },
+    {
+      "id": "u04l06e07",
+      "type": "multiSelect",
+      "prompt": "Task: 'show Open, then Closed'. Which is a correctly hand-worked example? (pick all that are correct)",
+      "options": [
+        "Input: Open and Closed -> Output line 1: Open, line 2: Closed",
+        "Input: Open and Closed -> Output line 1: Closed, line 2: Open",
+        "Output line 1: Open, line 2: Closed (input named too)",
+        "Output: just Open"
+      ],
+      "answer": [0, 2],
+      "explanation": "Both correct examples show Open then Closed, in order, with the input named. Swapped or missing-line versions are wrong."
+    },
+    {
+      "id": "u04l06e08",
+      "type": "fillBlank",
+      "prompt": "Task: 'show the word Save'. Write the expected output:",
+      "answer": "Save",
+      "acceptable": ["Save", "save"],
+      "explanation": "Input Save -> Output Save. A tiny task where input and output are the same word."
+    },
+    {
+      "id": "u04l06e09",
+      "type": "trueFalse",
+      "prompt": "You can work a full example even when you haven't written one line of code.",
+      "answer": true,
+      "explanation": "That's the goal of this unit: you can describe the right answer before building it. The code comes later."
+    },
+    {
+      "id": "u04l06e10",
+      "type": "multipleChoice",
+      "prompt": "Task: 'show the score 3, then the word Win'. What's the full expected output?",
+      "options": [
+        "Line 1: 3, Line 2: Win",
+        "Line 1: Win, Line 2: 3",
+        "Line 1: 3 Win",
+        "Line 1: score"
+      ],
+      "answer": 0,
+      "explanation": "The task gives the score 3 first, then the word Win — so line 1 is 3 and line 2 is Win."
+    }
+  ]
+}

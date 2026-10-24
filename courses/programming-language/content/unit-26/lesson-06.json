@@ -1,0 +1,145 @@
+{
+  "unitId": "u26",
+  "lessonId": "u26l06",
+  "title": "Reading 'unless' as not",
+  "idea": "Translate 'unless ...' wording into a 'not' condition (or a flipped comparison). Thinking-heavy mapping.",
+  "exercises": [
+    {
+      "id": "u26l06e01",
+      "type": "multipleChoice",
+      "prompt": "'Go outside unless it is raining.' The 'unless' maps to which operator?",
+      "options": [
+        "not",
+        "and",
+        "or",
+        "none"
+      ],
+      "answer": 0,
+      "explanation": "'unless X' means 'if not X'. So 'unless raining' becomes 'if not is_raining'."
+    },
+    {
+      "id": "u26l06e02",
+      "type": "multipleChoice",
+      "prompt": "Example by hand: is_raining = False. Under 'go outside unless raining', do you go?",
+      "options": [
+        "Yes - it is not raining",
+        "No",
+        "Only if it rains",
+        "Cannot tell"
+      ],
+      "answer": 0,
+      "explanation": "Not raining means the 'unless' does not block you - you go outside."
+    },
+    {
+      "id": "u26l06e03",
+      "type": "multipleChoice",
+      "prompt": "Now is_raining = True. Do you go outside?",
+      "options": [
+        "No - the 'unless' condition is met",
+        "Yes",
+        "Only at night",
+        "Cannot tell"
+      ],
+      "answer": 0,
+      "explanation": "It is raining, so the 'unless' blocks you. 'not True' is False, so you stay in."
+    },
+    {
+      "id": "u26l06e04",
+      "type": "orderBlocks",
+      "prompt": "Plan the 'unless' rule.",
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "blocks": [
+        "Remember whether it is raining",
+        "If it is NOT raining, go outside",
+        "Otherwise stay in"
+      ],
+      "explanation": "Remember the fact, flip it with 'not', then choose the action."
+    },
+    {
+      "id": "u26l06e05",
+      "type": "multipleChoice",
+      "prompt": "Which code matches 'go outside unless raining'?",
+      "options": [
+        "if not is_raining:",
+        "if is_raining:",
+        "if is_raining and sunny:",
+        "if is_raining or cold:"
+      ],
+      "answer": 0,
+      "explanation": "'if not is_raining' runs the 'go outside' action whenever it is not raining."
+    },
+    {
+      "id": "u26l06e06",
+      "type": "orderBlocks",
+      "prompt": "Code the 'unless' rule.",
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "blocks": [
+        "is_raining = False",
+        "if not is_raining:",
+        "    print(\"Go outside\")",
+        "else:",
+        "    print(\"Stay in\")"
+      ],
+      "explanation": "Store the fact, flip with 'not', and print the matching action."
+    },
+    {
+      "id": "u26l06e07",
+      "type": "fillBlank",
+      "prompt": "Complete the 'unless' condition:\n\nif ____ is_raining:\n    print(\"Go outside\")\nelse:\n    print(\"Stay in\")",
+      "answer": "not",
+      "acceptable": [
+        "not"
+      ],
+      "explanation": "'not is_raining' is True when it is not raining - the meaning of 'unless it is raining'."
+    },
+    {
+      "id": "u26l06e08",
+      "type": "multipleChoice",
+      "prompt": "Check. is_raining = False prints 'Go outside'. Hand answer: 'Go outside'. Verdict?",
+      "options": [
+        "Pass - matches",
+        "Fail",
+        "Cannot tell",
+        "Change the example"
+      ],
+      "answer": 0,
+      "explanation": "'not False' is True, so the if runs and 'Go outside' prints - the hand answer."
+    },
+    {
+      "id": "u26l06e09",
+      "type": "multipleChoice",
+      "prompt": "Re-check: is_raining = True. What prints?",
+      "options": [
+        "Stay in",
+        "Go outside",
+        "True",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "'not True' is False, so the else runs: 'Stay in'. The 'unless' blocked the action."
+    },
+    {
+      "id": "u26l06e10",
+      "type": "multipleChoice",
+      "prompt": "Word-to-code tip: the word 'unless' usually means...",
+      "options": [
+        "flip the condition with 'not' (or an opposite comparison)",
+        "use 'and'",
+        "use 'or'",
+        "use elif"
+      ],
+      "answer": 0,
+      "explanation": "'unless X' is 'if not X'. 'not' (or flipping the comparison) captures it cleanly."
+    }
+  ]
+}

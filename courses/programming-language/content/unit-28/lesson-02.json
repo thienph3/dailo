@@ -1,0 +1,137 @@
+{
+  "unitId": "u28",
+  "lessonId": "u28l02",
+  "title": "Reading the indentation",
+  "idea": "Indentation decides which if an else belongs to. Learning to read the levels tells you exactly which branch runs. Visible output throughout.",
+  "exercises": [
+    {
+      "id": "u28l02e01",
+      "type": "multipleChoice",
+      "prompt": "In a nested if, how do you tell which 'else' belongs to which 'if'?",
+      "options": [
+        "By how far it is indented - an else lines up with its own if",
+        "By its colour",
+        "The last else always wins",
+        "Guess"
+      ],
+      "answer": 0,
+      "explanation": "An else belongs to the if at the same indentation level. Lining them up by eye tells you the pairing."
+    },
+    {
+      "id": "u28l02e02",
+      "type": "multipleChoice",
+      "prompt": "What does this print?\n\nraining = True\nhave_umbrella = True\nif raining:\n    if have_umbrella:\n        print(\"Walk with umbrella\")\n    else:\n        print(\"Wait inside\")\nelse:\n    print(\"Just walk\")",
+      "options": [
+        "Walk with umbrella",
+        "Wait inside",
+        "Just walk",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "raining is True so we enter the body; have_umbrella is True so the inner if runs: 'Walk with umbrella'."
+    },
+    {
+      "id": "u28l02e03",
+      "type": "multipleChoice",
+      "prompt": "Same code, raining = True, have_umbrella = False. What prints?",
+      "options": [
+        "Wait inside",
+        "Walk with umbrella",
+        "Just walk",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "We are inside the raining branch. The inner if is False, so its else - indented to match the inner if - runs: 'Wait inside'."
+    },
+    {
+      "id": "u28l02e04",
+      "type": "multipleChoice",
+      "prompt": "Same code, raining = False. What prints?",
+      "options": [
+        "Just walk",
+        "Wait inside",
+        "Walk with umbrella",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "The outer if is False, so Python jumps to the outer else (lined up with the outer if): 'Just walk'. The umbrella question is skipped entirely."
+    },
+    {
+      "id": "u28l02e05",
+      "type": "multipleChoice",
+      "prompt": "The outer else lines up with the outer if (no extra indent). What does that tell you?",
+      "options": [
+        "It runs when the OUTER condition is False",
+        "It runs when the inner condition is False",
+        "It always runs",
+        "It never runs"
+      ],
+      "answer": 0,
+      "explanation": "An else matched to the outer if handles the outer-False case. Indentation is the clue to which if it answers."
+    },
+    {
+      "id": "u28l02e06",
+      "type": "orderBlocks",
+      "prompt": "Arrange these lines so the inner else belongs to the inner if.",
+      "blocks": [
+        "if raining:",
+        "    if have_umbrella:",
+        "        print(\"Walk with umbrella\")",
+        "    else:",
+        "        print(\"Wait inside\")"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "explanation": "The inner else is indented to match the inner if, so it answers the umbrella question, not the rain question."
+    },
+    {
+      "id": "u28l02e07",
+      "type": "trueFalse",
+      "prompt": "Two elses at different indent levels can answer two different ifs in the same nested block.",
+      "answer": true,
+      "explanation": "Yes. The deeply indented else answers the inner if; the less indented else answers the outer if."
+    },
+    {
+      "id": "u28l02e08",
+      "type": "fillBlank",
+      "prompt": "Indent the inner if's body so it belongs to the inner if. How many spaces lead the print below (match the pattern of 4 per level)?\n\nif raining:\n    if cold:\n____print(\"Coat and umbrella\")",
+      "answer": "8",
+      "acceptable": [
+        "8",
+        "eight"
+      ],
+      "explanation": "Two levels deep means 8 spaces (4 for the outer body, 4 more for the inner body). The print belongs to the inner if."
+    },
+    {
+      "id": "u28l02e09",
+      "type": "multipleChoice",
+      "prompt": "What does this print?\n\ndoor_open = True\nlight_on = False\nif door_open:\n    if light_on:\n        print(\"Come in\")\n    else:\n        print(\"Flip the switch\")\nelse:\n    print(\"Knock first\")",
+      "options": [
+        "Flip the switch",
+        "Come in",
+        "Knock first",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "door_open is True, so we enter. light_on is False, so the inner else runs: 'Flip the switch'."
+    },
+    {
+      "id": "u28l02e10",
+      "type": "multipleChoice",
+      "prompt": "Reading nested code, what should you check first to predict the output?",
+      "options": [
+        "The outer condition - if it is False, the whole inner block is skipped",
+        "The last line only",
+        "The inner condition first, always",
+        "Nothing; just guess the middle line"
+      ],
+      "answer": 0,
+      "explanation": "Always read outer-first. A False outer condition means you never even reach the inner question."
+    }
+  ]
+}

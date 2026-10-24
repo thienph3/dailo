@@ -1,0 +1,148 @@
+{
+  "unitId": "u56",
+  "lessonId": "u56l03",
+  "title": "Solve it together: show only passing scores",
+  "idea": "GUIDED UEPCC. Walk a list of scores and print only those that are 50 or more.",
+  "problem": "A class has a list of test scores. Print only the scores that are 50 or more (a pass).",
+  "exercises": [
+    {
+      "id": "u56l03e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: Print only the scores that are 50 or more.\n\nWhat is the OUTPUT?",
+      "options": [
+        "The passing scores, printed",
+        "Every score",
+        "The number of passers",
+        "The highest score"
+      ],
+      "answer": 0,
+      "explanation": "Output is the subset that passes — printed. Not a count, not the biggest."
+    },
+    {
+      "id": "u56l03e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "What decides whether a score is printed?",
+      "options": [
+        "Whether it is 50 or more",
+        "Whether it is first",
+        "Its position",
+        "Nothing — print all"
+      ],
+      "answer": 0,
+      "explanation": "A per-item test: is this score >= 50? That's the rule."
+    },
+    {
+      "id": "u56l03e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example by hand. scores = [40, 80, 55, 30]. Which get printed?",
+      "options": [
+        "80 and 55",
+        "40 and 30",
+        "all four",
+        "none"
+      ],
+      "answer": 0,
+      "explanation": "80 and 55 are >= 50; 40 and 30 are not. Those two are your expected output."
+    },
+    {
+      "id": "u56l03e04",
+      "type": "trueFalse",
+      "uepcc": "E",
+      "prompt": "For scores = [50], the score 50 should be printed (50 or more includes 50).",
+      "answer": true,
+      "explanation": "'50 or more' means >= 50, so exactly 50 passes. Edge values are worth checking by hand."
+    },
+    {
+      "id": "u56l03e05",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Plan it. Order the steps for each score.",
+      "blocks": [
+        "If it is 50 or more, print it",
+        "Take each score from the list",
+        "Otherwise skip it"
+      ],
+      "answer": [
+        1,
+        0,
+        2
+      ],
+      "explanation": "Take each score; if it passes the test, print it; else do nothing. Repeat."
+    },
+    {
+      "id": "u56l03e06",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Which two tools does the plan combine?",
+      "options": [
+        "for-each loop + if",
+        "two loops",
+        "if + input",
+        "range + append"
+      ],
+      "answer": 0,
+      "explanation": "Walk with for-each, decide with an if inside the body."
+    },
+    {
+      "id": "u56l03e07",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Code it. Fill the comparison:\n\nfor score in scores:\n    if score ____ 50:\n        print(score)",
+      "answer": ">=",
+      "acceptable": [
+        ">="
+      ],
+      "explanation": "'50 or more' is >= 50, which includes 50 itself."
+    },
+    {
+      "id": "u56l03e08",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Arrange the full solution.",
+      "blocks": [
+        "        print(score)",
+        "    if score >= 50:",
+        "for score in scores:",
+        "scores = [40, 80, 55, 30]"
+      ],
+      "answer": [
+        3,
+        2,
+        1,
+        0
+      ],
+      "explanation": "List, loop (indent 0), if (indent 1), print (indent 2). Prints 80 and 55."
+    },
+    {
+      "id": "u56l03e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check. The code prints 80 and 55. Hand example said 80 and 55. Verdict?",
+      "options": [
+        "Passes",
+        "Fails",
+        "Unknown",
+        "Change the rule"
+      ],
+      "answer": 0,
+      "explanation": "Output matches — correct."
+    },
+    {
+      "id": "u56l03e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Re-check with scores = [10, 90]. What prints?",
+      "options": [
+        "90",
+        "10",
+        "10 and 90",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "Only 90 passes the >= 50 test. The solution generalizes."
+    }
+  ]
+}

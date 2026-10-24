@@ -1,0 +1,120 @@
+{
+  "unitId": "u52",
+  "lessonId": "u52l07",
+  "title": "Using a value you picked out",
+  "idea": "An indexed value is just a number (or word) you can compute with. Add two indexed values, compare them, store them. Reviews arithmetic and comparisons.",
+  "exercises": [
+    {
+      "id": "u52l07e01",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nnums = [3, 7, 2]\nprint(nums[0] + nums[1])",
+      "options": [
+        "10",
+        "37",
+        "[3, 7]",
+        "5"
+      ],
+      "answer": 0,
+      "explanation": "nums[0] is 3 and nums[1] is 7. Adding the two indexed values gives 3 + 7 = 10. An indexed number acts like any number."
+    },
+    {
+      "id": "u52l07e02",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nprices = [5, 8, 2]\ntotal = prices[0] + prices[2]\nprint(total)",
+      "options": [
+        "7",
+        "13",
+        "15",
+        "52"
+      ],
+      "answer": 0,
+      "explanation": "prices[0] is 5, prices[2] is 2. total = 5 + 2 = 7. You can store the result of adding two picked-out values."
+    },
+    {
+      "id": "u52l07e03",
+      "type": "trueFalse",
+      "prompt": "You can compare two indexed values, like nums[0] > nums[1].",
+      "answer": true,
+      "explanation": "Yes. Each indexed value is just a number, so comparisons work normally. The result is True or False."
+    },
+    {
+      "id": "u52l07e04",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nnums = [9, 4]\nprint(nums[0] > nums[1])",
+      "options": [
+        "True",
+        "False",
+        "9 > 4",
+        "5"
+      ],
+      "answer": 0,
+      "explanation": "nums[0] is 9, nums[1] is 4. Is 9 > 4? Yes, so it prints True. Indexed values compare like any numbers."
+    },
+    {
+      "id": "u52l07e05",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nnums = [10, 20, 30]\nprint(nums[1] * 2)",
+      "options": [
+        "40",
+        "20",
+        "60",
+        "1020"
+      ],
+      "answer": 0,
+      "explanation": "nums[1] is 20, and 20 * 2 = 40. You can use an indexed value directly in a calculation."
+    },
+    {
+      "id": "u52l07e06",
+      "type": "orderBlocks",
+      "prompt": "Arrange these lines to add the first two values of nums and print the total.",
+      "blocks": [
+        "nums = [4, 6, 1]",
+        "total = nums[0] + nums[1]",
+        "print(total)"
+      ],
+      "answer": [0, 1, 2],
+      "explanation": "First make the list, then add the two indexed values into total, then print it. The code mirrors the plan step by step."
+    },
+    {
+      "id": "u52l07e07",
+      "type": "fillBlank",
+      "prompt": "Complete the line so it adds the first and last value (using the end shortcut):\n\nnums = [3, 5, 9]\ntotal = nums[0] + nums[____]\nprint(total)",
+      "answer": "-1",
+      "acceptable": ["-1"],
+      "explanation": "nums[0] is 3 and nums[-1] is the last, 9. total becomes 12. The end shortcut saves you from counting positions."
+    },
+    {
+      "id": "u52l07e08",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nnums = [12, 8, 20]\nbigger = nums[0] > nums[1]\nprint(bigger)",
+      "options": [
+        "True",
+        "False",
+        "12",
+        "20"
+      ],
+      "answer": 0,
+      "explanation": "nums[0] is 12, nums[1] is 8. 12 > 8 is True, stored in bigger, then printed. A comparison of indexed values is still a boolean."
+    },
+    {
+      "id": "u52l07e09",
+      "type": "trueFalse",
+      "prompt": "nums[0] + nums[1] adds the two VALUES, not the two index numbers.",
+      "answer": true,
+      "explanation": "Right. The brackets pull out the values first, THEN the + adds those values. It is the values 3 and 7 that get added, not 0 and 1."
+    },
+    {
+      "id": "u52l07e10",
+      "type": "multipleChoice",
+      "prompt": "Two sales are stored as sales = [40, 25]. Which line prints how much MORE the first sold than the second?",
+      "options": [
+        "print(sales[0] - sales[1])",
+        "print(sales[0] + sales[1])",
+        "print(sales - sales)",
+        "print(sales[2])"
+      ],
+      "answer": 0,
+      "explanation": "sales[0] is 40, sales[1] is 25. 40 - 25 = 15, the difference. Picking out values lets you compute with just the ones you need."
+    }
+  ]
+}

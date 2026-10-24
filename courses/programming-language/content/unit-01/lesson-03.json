@@ -1,0 +1,134 @@
+{
+  "unitId": "u01",
+  "lessonId": "u01l03",
+  "title": "Text can be anything",
+  "idea": "The text inside the quotes can be words, whole sentences, or symbols — the computer shows it exactly.",
+  "exercises": [
+    {
+      "id": "u01l03e01",
+      "type": "multipleChoice",
+      "prompt": "What will this show?\n\nprint(\"Hello, world!\")",
+      "options": [
+        "Hello, world!",
+        "Hello world",
+        "Hello, world",
+        "world!"
+      ],
+      "answer": 0,
+      "explanation": "Everything inside the quotes is shown exactly, including the comma and the !"
+    },
+    {
+      "id": "u01l03e02",
+      "type": "trueFalse",
+      "prompt": "You can put a whole sentence inside one print.",
+      "answer": true,
+      "explanation": "One pair of quotes can hold a single word or a long sentence — all shown exactly."
+    },
+    {
+      "id": "u01l03e03",
+      "type": "multipleChoice",
+      "prompt": "What will this show?\n\nprint(\"3 + 4\")",
+      "options": [
+        "3 + 4",
+        "7",
+        "34",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "It's inside quotes, so it's just text. The computer shows 3 + 4, it does NOT do the math. (Numbers without quotes behave differently — more soon.)"
+    },
+    {
+      "id": "u01l03e04",
+      "type": "tapTokens",
+      "prompt": "Build an instruction that shows: I love coding",
+      "tokens": [
+        "print",
+        "(",
+        "\"I love coding\"",
+        ")"
+      ],
+      "answer": [
+        "print",
+        "(",
+        "\"I love coding\"",
+        ")"
+      ],
+      "explanation": "The whole phrase with its spaces lives in one pair of quotes."
+    },
+    {
+      "id": "u01l03e05",
+      "type": "multipleChoice",
+      "prompt": "What will this show?\n\nprint(\"***\")",
+      "options": [
+        "***",
+        "three stars",
+        "Nothing",
+        "Error"
+      ],
+      "answer": 0,
+      "explanation": "Symbols are text too. The computer shows exactly what's in the quotes: ***"
+    },
+    {
+      "id": "u01l03e06",
+      "type": "fillBlank",
+      "prompt": "Complete this to show the sentence: See you soon\n\nprint(____)",
+      "answer": "\"See you soon\"",
+      "acceptable": [
+        "\"See you soon\"",
+        "'See you soon'"
+      ],
+      "explanation": "The full sentence goes inside one pair of quotes."
+    },
+    {
+      "id": "u01l03e07",
+      "type": "trueFalse",
+      "prompt": "print(\"7\") shows 7 on the screen.",
+      "answer": true,
+      "explanation": "Anything inside the quotes is shown exactly — even if it looks like a number. So print(\"7\") shows 7."
+    },
+    {
+      "id": "u01l03e08",
+      "type": "multipleChoice",
+      "prompt": "Which instruction shows this exact line?\n\nWelcome to Dailo",
+      "options": [
+        "print(\"Welcome to Dailo\")",
+        "print(Welcome to Dailo)",
+        "print(\"Welcome\" to \"Dailo\")",
+        "print(Welcome to Dailo\")"
+      ],
+      "answer": 0,
+      "explanation": "The whole line, as one piece of text, inside one pair of quotes."
+    },
+    {
+      "id": "u01l03e09",
+      "type": "tapTokens",
+      "prompt": "Build an instruction that shows: 100%",
+      "tokens": [
+        "print",
+        "(",
+        "\"100%\"",
+        ")"
+      ],
+      "answer": [
+        "print",
+        "(",
+        "\"100%\"",
+        ")"
+      ],
+      "explanation": "Digits and symbols are fine as text. This shows 100%"
+    },
+    {
+      "id": "u01l03e10",
+      "type": "multipleChoice",
+      "prompt": "What will this show?\n\nprint(\"Line one\")",
+      "options": [
+        "Line one",
+        "Line",
+        "one",
+        "\"Line one\""
+      ],
+      "answer": 0,
+      "explanation": "Exactly the text in the quotes: Line one."
+    }
+  ]
+}

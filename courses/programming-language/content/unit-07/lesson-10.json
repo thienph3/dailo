@@ -1,0 +1,128 @@
+{
+  "unitId": "u07",
+  "lessonId": "u07l10",
+  "title": "Break it, plan it, build it",
+  "idea": "Review: take a slightly bigger task, break it into steps, plan it, and map each step to a print line.",
+  "exercises": [
+    {
+      "id": "u07l10e01",
+      "type": "multipleChoice",
+      "prompt": "Task: 'Print a short welcome card: a greeting, the guest's name, and a thank-you.' How many steps?",
+      "options": [
+        "3 steps",
+        "1 step",
+        "7 steps",
+        "0 steps"
+      ],
+      "answer": 0,
+      "explanation": "Greeting, name, thank-you — three separate things to show, so three steps."
+    },
+    {
+      "id": "u07l10e02",
+      "type": "orderBlocks",
+      "prompt": "Break that welcome card into an ordered plan.",
+      "blocks": [
+        "Step 1: show the greeting",
+        "Step 2: show the guest's name",
+        "Step 3: show the thank-you"
+      ],
+      "answer": [0, 1, 2],
+      "explanation": "Greeting, name, thank-you — a clear three-step plan in a sensible order."
+    },
+    {
+      "id": "u07l10e03",
+      "type": "multipleChoice",
+      "prompt": "How many print lines will that 3-step plan become?",
+      "options": [
+        "3 print lines",
+        "1 print line",
+        "2 print lines",
+        "9 print lines"
+      ],
+      "answer": 0,
+      "explanation": "One print line per show-step. Three steps means three print lines."
+    },
+    {
+      "id": "u07l10e04",
+      "type": "orderBlocks",
+      "prompt": "Map the plan to code. Output should read Hello, then a name, then Thank you.",
+      "blocks": [
+        "print(\"Hello\")",
+        "print(\"...guest name...\")",
+        "print(\"Thank you\")"
+      ],
+      "answer": [0, 1, 2],
+      "explanation": "Each plan step became one print line, in the plan's order. Plan to program, done."
+    },
+    {
+      "id": "u07l10e05",
+      "type": "trueFalse",
+      "prompt": "Remember from unit 1-2: print shows what's inside the quotes, and the quotes themselves don't appear.",
+      "answer": true,
+      "explanation": "Yes — a quick review. print(\"Hi\") shows Hi, not \"Hi\". Good to keep in mind."
+    },
+    {
+      "id": "u07l10e06",
+      "type": "multipleChoice",
+      "prompt": "Task: show a title then a subtitle. A friend's plan has only one step: show the title. What's wrong?",
+      "options": [
+        "The subtitle step is missing",
+        "There are too many steps",
+        "The order is wrong",
+        "Nothing is wrong"
+      ],
+      "answer": 0,
+      "explanation": "The task asked for two things; the plan has one. Spotting the missing step — a skill from this unit."
+    },
+    {
+      "id": "u07l10e07",
+      "type": "multipleChoice",
+      "prompt": "A plan shows the thank-you FIRST and the greeting last. What's the problem?",
+      "options": [
+        "The steps are out of order",
+        "A step is missing",
+        "There are extra steps",
+        "Nothing is wrong"
+      ],
+      "answer": 0,
+      "explanation": "Right steps, wrong order. A thank-you before a greeting reads backwards — swap them."
+    },
+    {
+      "id": "u07l10e08",
+      "type": "matchPairs",
+      "prompt": "Match each idea from this unit to its meaning.",
+      "pairs": [
+        { "left": "Decompose", "right": "Break a task into 2-3 steps" },
+        { "left": "Plan", "right": "The steps written in order, plain words" },
+        { "left": "Order", "right": "Steps must run in the right sequence" }
+      ],
+      "explanation": "Decompose, plan, order — the three big ideas you practiced in Unit 7."
+    },
+    {
+      "id": "u07l10e09",
+      "type": "multipleChoice",
+      "prompt": "Example for the welcome card: Hello / Sam / Thank you. Real output: Hello / Sam / Thank you. Check?",
+      "options": [
+        "Pass — output matches the example",
+        "Fail",
+        "Can't tell",
+        "The example was wrong"
+      ],
+      "answer": 0,
+      "explanation": "Line for line, the output matches the hand-worked example. Pass! You ran the whole rhythm."
+    },
+    {
+      "id": "u07l10e10",
+      "type": "multipleChoice",
+      "prompt": "You can now take a slightly bigger task and do what?",
+      "options": [
+        "Break it into 2-3 ordered steps and write a plain-English plan",
+        "Only print one word",
+        "Solve it without any thinking",
+        "Skip planning entirely"
+      ],
+      "answer": 0,
+      "explanation": "That's exactly the Unit 7 goal: decompose into steps, order them, and plan in plain words. You're ready for what's next!"
+    }
+  ]
+}

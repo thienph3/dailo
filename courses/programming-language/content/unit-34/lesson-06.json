@@ -1,0 +1,125 @@
+{
+  "unitId": "u34",
+  "lessonId": "u34l06",
+  "title": "Loop back: nested decisions",
+  "idea": "LOOP. No new concept. Review a choice inside a choice - trace the outer gate then the inner decision.",
+  "exercises": [
+    {
+      "id": "u34l06e01",
+      "type": "multipleChoice",
+      "prompt": "What prints?\n\nmember = True\nage = 70\nif member:\n    if age >= 65:\n        print(\"Senior member discount\")\n    else:\n        print(\"Member\")\nelse:\n    print(\"Not a member\")",
+      "options": [
+        "Senior member discount",
+        "Member",
+        "Not a member",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "member is True (outer passes), then age 70 >= 65 (inner passes): 'Senior member discount'. (Review of nested if.)"
+    },
+    {
+      "id": "u34l06e02",
+      "type": "multipleChoice",
+      "prompt": "Same code, but member = False. What prints?",
+      "options": [
+        "Not a member",
+        "Member",
+        "Senior member discount",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "The outer gate fails, so the inner decision is skipped and the outer else runs. (Review of outer gate.)"
+    },
+    {
+      "id": "u34l06e03",
+      "type": "trueFalse",
+      "prompt": "An inner if only runs when the outer condition is true.",
+      "answer": true,
+      "explanation": "The inner block is trapped inside the outer branch, so it needs the outer to pass first. (Review of nesting.)"
+    },
+    {
+      "id": "u34l06e04",
+      "type": "multipleChoice",
+      "prompt": "To debug a nested decision, you should trace...",
+      "options": [
+        "the outer condition first, then the inner one",
+        "only the inner one",
+        "the print text only",
+        "nothing - guess"
+      ],
+      "answer": 0,
+      "explanation": "Outer decides whether inner runs, so check it first. (Review of tracing nesting.)"
+    },
+    {
+      "id": "u34l06e05",
+      "type": "multipleChoice",
+      "prompt": "What prints?\n\nn = 8\nif n > 0:\n    if n % 2 == 0:\n        print(\"Positive even\")\n    else:\n        print(\"Positive odd\")\nelse:\n    print(\"Not positive\")",
+      "options": [
+        "Positive even",
+        "Positive odd",
+        "Not positive",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "8 > 0 (outer), and 8 % 2 == 0 (inner), so 'Positive even'. (Review of nested if with %.)"
+    },
+    {
+      "id": "u34l06e06",
+      "type": "multipleChoice",
+      "prompt": "For the code above, what does n = 7 give?",
+      "options": [
+        "Positive odd",
+        "Positive even",
+        "Not positive",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "7 > 0 (outer passes), 7 % 2 is 1 (inner else), so 'Positive odd'. (Review of inner else.)"
+    },
+    {
+      "id": "u34l06e07",
+      "type": "multipleChoice",
+      "prompt": "For the same code, what does n = -4 give?",
+      "options": [
+        "Not positive",
+        "Positive even",
+        "Positive odd",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "-4 is not > 0, so the outer else runs and the inner even/odd check is skipped. (Review of outer gate.)"
+    },
+    {
+      "id": "u34l06e08",
+      "type": "trueFalse",
+      "prompt": "If a nested inner check should apply to everyone, it should NOT be trapped inside a stricter outer condition.",
+      "answer": true,
+      "explanation": "Nesting creates a dependency. If the inner rule is universal, the nesting is a bug. (Review of nesting choices.)"
+    },
+    {
+      "id": "u34l06e09",
+      "type": "orderBlocks",
+      "prompt": "Order the steps to trace a nested decision for one input.",
+      "blocks": [
+        "Check the outer condition",
+        "If it passes, check the inner condition",
+        "Read which branch finally runs"
+      ],
+      "answer": [0, 1, 2],
+      "explanation": "Outer, then inner, then the branch. Trace nesting from outside in. (Review of tracing.)"
+    },
+    {
+      "id": "u34l06e10",
+      "type": "multipleChoice",
+      "prompt": "A discount applies only to members. Non-members never get it. Is the members-only nesting a bug?",
+      "options": [
+        "No - if the rule is members-only, the nesting is correct",
+        "Yes, always",
+        "Only on weekends",
+        "Cannot tell ever"
+      ],
+      "answer": 0,
+      "explanation": "Whether nesting is a bug depends on the intended rule. Members-only nesting matches a members-only rule. (Review of reasoning about structure.)"
+    }
+  ]
+}

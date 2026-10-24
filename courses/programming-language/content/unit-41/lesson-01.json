@@ -1,0 +1,134 @@
+{
+  "unitId": "u41",
+  "lessonId": "u41l01",
+  "title": "An accumulator: a running total",
+  "idea": "Meet the accumulator: a variable that starts at 0 and ADDS a value each pass to build a total.",
+  "exercises": [
+    {
+      "id": "u41l01e01",
+      "type": "multipleChoice",
+      "prompt": "An accumulator keeps a running total. What value should it start at before the loop?",
+      "options": [
+        "0",
+        "1",
+        "the first number",
+        "the loop's range"
+      ],
+      "answer": 0,
+      "explanation": "A total starts at 0 — nothing has been added yet. Set it before the loop begins."
+    },
+    {
+      "id": "u41l01e02",
+      "type": "multipleChoice",
+      "prompt": "What does total = total + i do inside a loop?",
+      "options": [
+        "Adds i onto the total and saves it back in total",
+        "Replaces total with i",
+        "Prints i",
+        "Resets total to i"
+      ],
+      "answer": 0,
+      "explanation": "It adds the current value i onto the running total and stores the result back in total."
+    },
+    {
+      "id": "u41l01e03",
+      "type": "multipleChoice",
+      "prompt": "What shows?\n\ntotal = 0\nfor i in range(1, 4):\n    total = total + i\nprint(total)",
+      "options": [
+        "6",
+        "3",
+        "0",
+        "1"
+      ],
+      "answer": 0,
+      "explanation": "i is 1, 2, 3. The total grows 0 -> 1 -> 3 -> 6, then prints 6."
+    },
+    {
+      "id": "u41l01e04",
+      "type": "trueFalse",
+      "prompt": "An accumulator adds a VALUE each pass, but a counter just adds 1 each pass.",
+      "answer": true,
+      "explanation": "True. A counter answers 'how many'; an accumulator answers 'what is the total' by adding real values."
+    },
+    {
+      "id": "u41l01e05",
+      "type": "multipleChoice",
+      "prompt": "In total = total + i, what is different from a counter's count = count + 1?",
+      "options": [
+        "It adds i (a value) instead of a fixed 1",
+        "It subtracts",
+        "It never changes",
+        "It prints each pass"
+      ],
+      "answer": 0,
+      "explanation": "The accumulator adds i (a changing value); the counter always adds the fixed amount 1."
+    },
+    {
+      "id": "u41l01e06",
+      "type": "multipleChoice",
+      "prompt": "After\n\ntotal = 0\nfor i in range(1, 5):\n    total = total + i\n\nwhat does total hold?",
+      "options": [
+        "10",
+        "4",
+        "6",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "1 + 2 + 3 + 4 = 10. The running total ends at 10."
+    },
+    {
+      "id": "u41l01e07",
+      "type": "fillBlank",
+      "prompt": "Fill the start value for a running total:\n\ntotal = ____\nfor i in range(1, 4):\n    total = total + i\nprint(total)",
+      "answer": "0",
+      "acceptable": [
+        "0"
+      ],
+      "explanation": "A total starts at 0 so the first add is honest — nothing counted before."
+    },
+    {
+      "id": "u41l01e08",
+      "type": "orderBlocks",
+      "prompt": "Arrange a loop that totals the numbers 1, 2, 3.",
+      "blocks": [
+        "    total = total + i",
+        "total = 0",
+        "print(total)",
+        "for i in range(1, 4):"
+      ],
+      "answer": [
+        1,
+        3,
+        0,
+        2
+      ],
+      "explanation": "Start total at 0, loop over 1..3 adding i each pass, then print the total (6)."
+    },
+    {
+      "id": "u41l01e09",
+      "type": "multipleChoice",
+      "prompt": "Why must the total start OUTSIDE the loop?",
+      "options": [
+        "So it keeps growing across every pass",
+        "To make it faster",
+        "To skip the first number",
+        "No reason"
+      ],
+      "answer": 0,
+      "explanation": "It must survive across passes to build up. Starting it inside would reset it to 0 each time."
+    },
+    {
+      "id": "u41l01e10",
+      "type": "multipleChoice",
+      "prompt": "A running total answers which kind of question?",
+      "options": [
+        "What is the total of these values?",
+        "How many are there?",
+        "Which is biggest?",
+        "Is it even?"
+      ],
+      "answer": 0,
+      "explanation": "It answers 'what is the total / sum?' — adding up values as the loop goes."
+    }
+  ]
+}

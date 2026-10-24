@@ -1,0 +1,103 @@
+{
+  "unitId": "u06",
+  "lessonId": "u06l05",
+  "title": "Pass or fail: judging the output",
+  "idea": "Loop back over Unit 5: compare real output to the expected example and call it pass or fail.",
+  "exercises": [
+    {
+      "id": "u06l05e01",
+      "type": "multipleChoice",
+      "prompt": "Example: Hello. Output the code gave: Hello. Pass or fail?",
+      "options": ["Pass", "Fail", "Can't tell", "Neither"],
+      "answer": 0,
+      "explanation": "They match exactly, so it passes."
+    },
+    {
+      "id": "u06l05e02",
+      "type": "multipleChoice",
+      "prompt": "Example: Hello. Output: hello (lowercase h). Pass or fail?",
+      "options": ["Fail — a capital H differs from a lowercase h", "Pass", "Can't tell", "Both"],
+      "answer": 0,
+      "explanation": "The computer treats H and h as different. A small difference is still a fail."
+    },
+    {
+      "id": "u06l05e03",
+      "type": "multipleChoice",
+      "prompt": "Example: two lines, Cat then Dog. Output: one line, CatDog. Pass or fail?",
+      "options": ["Fail — one line instead of two", "Pass", "Can't tell", "Both"],
+      "answer": 0,
+      "explanation": "The example wanted two lines. One joined line doesn't match, so it fails."
+    },
+    {
+      "id": "u06l05e04",
+      "type": "trueFalse",
+      "prompt": "Checking means comparing the real output to the example you wrote by hand.",
+      "answer": true,
+      "explanation": "Exactly. Same output as example = pass; different = fail."
+    },
+    {
+      "id": "u06l05e05",
+      "type": "multipleChoice",
+      "prompt": "Example: Hi. Output: Hi (with a trailing space you can't see). The task wanted no extra space. Best move?",
+      "options": [
+        "Treat it as a fail and look for the stray space",
+        "Call it pass and ignore it",
+        "Change the example",
+        "Give up"
+      ],
+      "answer": 0,
+      "explanation": "Even invisible differences count. If it doesn't match the example, investigate — that's good checking."
+    },
+    {
+      "id": "u06l05e06",
+      "type": "trueFalse",
+      "prompt": "If the output fails the check, the right response is to find and fix the mistake.",
+      "answer": true,
+      "explanation": "A fail is useful — it tells you to look at the code or the example and fix what's wrong."
+    },
+    {
+      "id": "u06l05e07",
+      "type": "multipleChoice",
+      "prompt": "Example: Red, Green, Blue on three lines. Output: Red, Blue, Green on three lines. Pass or fail?",
+      "options": ["Fail — order differs from the example", "Pass", "Can't tell", "Both"],
+      "answer": 0,
+      "explanation": "Right words, wrong order. Order is part of the example, so it fails."
+    },
+    {
+      "id": "u06l05e08",
+      "type": "matchPairs",
+      "prompt": "Match each check result to what it tells you.",
+      "pairs": [
+        { "left": "Pass", "right": "Output matches the example" },
+        { "left": "Fail", "right": "Output differs — go fix something" }
+      ],
+      "explanation": "Pass means match; fail means mismatch and a reason to investigate."
+    },
+    {
+      "id": "u06l05e09",
+      "type": "multipleChoice",
+      "prompt": "Why is a fail actually helpful?",
+      "options": [
+        "It points you to a mistake before you ship it",
+        "It means you should stop coding forever",
+        "It never happens",
+        "It hides problems"
+      ],
+      "answer": 0,
+      "explanation": "Catching a mismatch early is a win — you fix it now instead of being surprised later."
+    },
+    {
+      "id": "u06l05e10",
+      "type": "multipleChoice",
+      "prompt": "You can now do what after running code?",
+      "options": [
+        "Compare output to the example and judge pass or fail",
+        "Only write new code",
+        "Nothing",
+        "Delete the example"
+      ],
+      "answer": 0,
+      "explanation": "You can check honestly — pass if it matches, fail if it doesn't. That closes the mini-rhythm."
+    }
+  ]
+}

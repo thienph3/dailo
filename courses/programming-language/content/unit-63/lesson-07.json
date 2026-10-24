@@ -1,0 +1,130 @@
+{
+  "unitId": "u63",
+  "lessonId": "u63l07",
+  "title": "Filtering with strings",
+  "idea": "TOOL: filters work on lists of strings too — keep words by length or by equality. Introduces string tests inside the same shape.",
+  "exercises": [
+    {
+      "id": "u63l07e01",
+      "type": "multipleChoice",
+      "prompt": "What will this show?\n\nwords = [\"cat\", \"elephant\", \"dog\", \"ant\"]\nshort = []\nfor word in words:\n    if len(word) <= 3:\n        short.append(word)\nprint(short)",
+      "options": [
+        "['cat', 'dog', 'ant']",
+        "['elephant']",
+        "['cat', 'elephant', 'dog', 'ant']",
+        "[]"
+      ],
+      "answer": 0,
+      "explanation": "len(word) gives how many letters a word has. 'cat', 'dog' and 'ant' each have 3, so they pass len(word) <= 3."
+    },
+    {
+      "id": "u63l07e02",
+      "type": "trueFalse",
+      "prompt": "A filter can keep strings just as easily as numbers — only the test changes.",
+      "answer": true,
+      "explanation": "The empty-list, loop, if, append shape does not care what is in the list. You just write a test that fits strings."
+    },
+    {
+      "id": "u63l07e03",
+      "type": "multipleChoice",
+      "prompt": "What does len(\"hello\") give?",
+      "options": [
+        "5",
+        "1",
+        "'hello'",
+        "4"
+      ],
+      "answer": 0,
+      "explanation": "len counts the characters in a string: 'hello' has 5 letters. You can test a word's length inside a filter."
+    },
+    {
+      "id": "u63l07e04",
+      "type": "multipleChoice",
+      "prompt": "What will this show?\n\nnames = [\"Ada\", \"Bo\", \"Ada\", \"Cy\"]\nadas = []\nfor name in names:\n    if name == \"Ada\":\n        adas.append(name)\nprint(adas)",
+      "options": [
+        "['Ada', 'Ada']",
+        "['Ada']",
+        "['Bo', 'Cy']",
+        "[]"
+      ],
+      "answer": 0,
+      "explanation": "name == \"Ada\" keeps every item equal to 'Ada'. There are two, so adas is ['Ada', 'Ada']."
+    },
+    {
+      "id": "u63l07e05",
+      "type": "fillBlank",
+      "prompt": "Complete the test so this keeps only words longer than 4 letters.\n\nlong = []\nfor word in words:\n    if ____(word) > 4:\n        long.append(word)",
+      "answer": "len",
+      "acceptable": [
+        "len"
+      ],
+      "explanation": "len(word) gives the number of letters. Testing len(word) > 4 keeps the longer words."
+    },
+    {
+      "id": "u63l07e06",
+      "type": "multipleChoice",
+      "prompt": "What will this show?\n\nwords = [\"sun\", \"moon\", \"sky\", \"star\"]\nkept = []\nfor w in words:\n    if len(w) == 3:\n        kept.append(w)\nprint(kept)",
+      "options": [
+        "['sun', 'sky']",
+        "['moon', 'star']",
+        "['sun', 'moon', 'sky', 'star']",
+        "[]"
+      ],
+      "answer": 0,
+      "explanation": "'sun' and 'sky' have exactly 3 letters; 'moon' and 'star' have 4. So kept is ['sun', 'sky']."
+    },
+    {
+      "id": "u63l07e07",
+      "type": "trueFalse",
+      "prompt": "String comparison with == is case-sensitive, so \"Ada\" == \"ada\" is false.",
+      "answer": true,
+      "explanation": "Capital 'A' and small 'a' are different characters, so the two strings are not equal. You met this in the string-comparison unit."
+    },
+    {
+      "id": "u63l07e08",
+      "type": "multipleChoice",
+      "prompt": "What will this show?\n\nwords = [\"red\", \"blue\", \"green\", \"go\"]\nkept = []\nfor w in words:\n    if len(w) >= 4:\n        kept.append(w)\nprint(len(kept))",
+      "options": [
+        "2",
+        "4",
+        "3",
+        "['blue', 'green']"
+      ],
+      "answer": 0,
+      "explanation": "'blue' (4) and 'green' (5) pass; 'red' (3) and 'go' (2) do not. The kept list has 2 words, so len(kept) is 2."
+    },
+    {
+      "id": "u63l07e09",
+      "type": "orderBlocks",
+      "prompt": "Arrange a filter that keeps words with more than 3 letters.",
+      "blocks": [
+        "long = []",
+        "for word in words:",
+        "    if len(word) > 3:",
+        "        long.append(word)",
+        "print(long)"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "explanation": "Empty list, loop over the words, test the length, append the longer ones, print. The shape is identical to a number filter."
+    },
+    {
+      "id": "u63l07e10",
+      "type": "multipleChoice",
+      "prompt": "Which test keeps only words that are exactly the word 'yes'?",
+      "options": [
+        "if word == \"yes\"",
+        "if len(word) == 3",
+        "if word > \"yes\"",
+        "if word != \"yes\""
+      ],
+      "answer": 0,
+      "explanation": "To match an exact word, compare it with ==. Testing the length instead would keep any 3-letter word like 'cat', so length is not the same as equality."
+    }
+  ]
+}

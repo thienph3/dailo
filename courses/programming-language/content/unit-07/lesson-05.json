@@ -1,0 +1,118 @@
+{
+  "unitId": "u07",
+  "lessonId": "u07l05",
+  "title": "One step, one print line",
+  "idea": "In lap 1, each plan step that shows something becomes one print line. Plan maps to code.",
+  "exercises": [
+    {
+      "id": "u07l05e01",
+      "type": "multipleChoice",
+      "prompt": "Your plan has 3 steps, each one 'show something'. How many print lines will the code have?",
+      "options": [
+        "3 print lines, one per step",
+        "1 print line",
+        "0 print lines",
+        "10 print lines"
+      ],
+      "answer": 0,
+      "explanation": "Each 'show' step becomes one print line. Three steps means three print lines."
+    },
+    {
+      "id": "u07l05e02",
+      "type": "multipleChoice",
+      "prompt": "Plan step: 'show the word Hello'. Which line of code matches it?",
+      "options": [
+        "print(\"Hello\")",
+        "show(\"Hello\")",
+        "Hello",
+        "print Hello"
+      ],
+      "answer": 0,
+      "explanation": "'Show something' becomes print(\"...\"). The plan step turns straight into one print line."
+    },
+    {
+      "id": "u07l05e03",
+      "type": "trueFalse",
+      "prompt": "A plan step that says 'show X' usually becomes one print line in the code.",
+      "answer": true,
+      "explanation": "Yes! That is the neat part: each show-step maps to one print line. Plan, then code."
+    },
+    {
+      "id": "u07l05e04",
+      "type": "orderBlocks",
+      "prompt": "Plan: show Hi, then show Bye. Order the matching code lines.",
+      "blocks": [
+        "print(\"Hi\")",
+        "print(\"Bye\")"
+      ],
+      "answer": [0, 1],
+      "explanation": "The code lines follow the plan's order: Hi first, Bye second. Each step became one print line."
+    },
+    {
+      "id": "u07l05e05",
+      "type": "multipleChoice",
+      "prompt": "Plan: Step 1 show Good, Step 2 show Morning. What will the code show on screen?",
+      "options": [
+        "Good then Morning on two lines",
+        "GoodMorning on one line",
+        "Only Good",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "Two print lines each show their text on their own line: Good, then Morning."
+    },
+    {
+      "id": "u07l05e06",
+      "type": "tapTokens",
+      "prompt": "Plan step: 'show the word Welcome'. Build the matching print line.",
+      "tokens": [
+        "print",
+        "(",
+        "\"Welcome\"",
+        ")"
+      ],
+      "answer": ["print", "(", "\"Welcome\"", ")"],
+      "explanation": "print, brackets, your text in quotes. One plan step became one tidy print line."
+    },
+    {
+      "id": "u07l05e07",
+      "type": "orderBlocks",
+      "prompt": "Plan: show Name, then show Age, then show Thanks. Order the code lines.",
+      "blocks": [
+        "print(\"Name\")",
+        "print(\"Age\")",
+        "print(\"Thanks\")"
+      ],
+      "answer": [0, 1, 2],
+      "explanation": "Three plan steps, three print lines, same order. Your plan became your program."
+    },
+    {
+      "id": "u07l05e08",
+      "type": "trueFalse",
+      "prompt": "The order of your print lines should match the order of steps in your plan.",
+      "answer": true,
+      "explanation": "Yes. The code follows the plan top to bottom. Same steps, same order."
+    },
+    {
+      "id": "u07l05e09",
+      "type": "multipleChoice",
+      "prompt": "Plan: show Start, then show End. But the code is print(\"End\") then print(\"Start\"). What's wrong?",
+      "options": [
+        "The code lines are in the wrong order",
+        "There are too few lines",
+        "print is spelled wrong",
+        "Nothing is wrong"
+      ],
+      "answer": 0,
+      "explanation": "The plan said Start first, but the code shows End first. The lines are swapped — fix the order."
+    },
+    {
+      "id": "u07l05e10",
+      "type": "fillBlank",
+      "prompt": "Plan step: 'show the word Done'. Write the full print line that matches it.",
+      "answer": "print(\"Done\")",
+      "acceptable": ["print(\"Done\")", "print('Done')"],
+      "explanation": "One plan step, one print line: print(\"Done\"). You turned a plan into real code!"
+    }
+  ]
+}

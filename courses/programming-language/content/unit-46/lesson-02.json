@@ -1,0 +1,128 @@
+{
+  "unitId": "u46",
+  "lessonId": "u46l02",
+  "title": "break: leave the loop now",
+  "idea": "Introduce break: when it runs, the loop ends immediately, even if the condition is still true. Show predictable output.",
+  "exercises": [
+    {
+      "id": "u46l02e01",
+      "type": "multipleChoice",
+      "prompt": "What prints?\n\nfor i in range(1, 6):\n    if i == 3:\n        break\n    print(i)",
+      "explanation": "It prints 1, 2, then at i == 3 break ends the loop before printing 3. So 1 and 2.",
+      "options": [
+        "1\n2",
+        "1\n2\n3",
+        "1\n2\n3\n4\n5",
+        "3"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u46l02e02",
+      "type": "multipleChoice",
+      "prompt": "When break runs, what happens to the rest of the loop?",
+      "explanation": "The loop ends immediately; no more passes happen, even if the condition would still be true.",
+      "options": [
+        "The loop ends right away",
+        "It finishes the current pass then stops next time",
+        "It restarts",
+        "Nothing changes"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u46l02e03",
+      "type": "trueFalse",
+      "prompt": "break leaves the loop even if the loop's condition (or range) has not run out yet.",
+      "explanation": "True - break overrides the normal stopping point and exits at once.",
+      "answer": true
+    },
+    {
+      "id": "u46l02e04",
+      "type": "fillBlank",
+      "prompt": "Complete the keyword that stops the loop early:\n\nfor i in range(1, 6):\n    if i == 3:\n        ____\n    print(i)",
+      "explanation": "break ends the loop immediately when i reaches 3.",
+      "answer": "break",
+      "acceptable": [
+        "break"
+      ]
+    },
+    {
+      "id": "u46l02e05",
+      "type": "multipleChoice",
+      "prompt": "What prints?\n\nn = 1\nwhile n <= 10:\n    if n == 4:\n        break\n    print(n)\n    n = n + 1",
+      "explanation": "Prints 1, 2, 3; at n == 4 break exits before printing 4, even though n <= 10 is still true.",
+      "options": [
+        "1\n2\n3",
+        "1\n2\n3\n4",
+        "1 through 10",
+        "4"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u46l02e06",
+      "type": "multipleChoice",
+      "prompt": "Why put break inside an if?",
+      "explanation": "So the loop stops only when a specific condition is met, not on every pass.",
+      "options": [
+        "So it stops only when a condition is met",
+        "So it prints faster",
+        "break must always be in an if",
+        "To skip the first pass"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u46l02e07",
+      "type": "orderBlocks",
+      "prompt": "Arrange a loop that prints 1, 2 then stops at 3.",
+      "explanation": "Loop 1..5, if i == 3 break, otherwise print i. The break is checked before printing.",
+      "blocks": [
+        "    if i == 3:",
+        "for i in range(1, 6):",
+        "        break",
+        "    print(i)"
+      ],
+      "answer": [
+        1,
+        0,
+        2,
+        3
+      ]
+    },
+    {
+      "id": "u46l02e08",
+      "type": "multipleChoice",
+      "prompt": "Where does the program go right after break runs?",
+      "explanation": "To the first line AFTER the loop - the loop body and remaining passes are skipped.",
+      "options": [
+        "To the code after the loop",
+        "Back to the loop's first line",
+        "To the condition again",
+        "It ends the program"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u46l02e09",
+      "type": "trueFalse",
+      "prompt": "break is handy for 'stop at the first match' because it exits as soon as the match is found.",
+      "explanation": "True - once found, there is no need to continue, and break makes that exit happen.",
+      "answer": true
+    },
+    {
+      "id": "u46l02e10",
+      "type": "multipleChoice",
+      "prompt": "What single power does break add to a loop?",
+      "explanation": "The ability to leave early, before the normal stopping point.",
+      "options": [
+        "Leaving the loop early",
+        "Printing in order",
+        "Counting faster",
+        "Reading input"
+      ],
+      "answer": 0
+    }
+  ]
+}

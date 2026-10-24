@@ -1,0 +1,160 @@
+{
+  "unitId": "u91",
+  "lessonId": "u91l01",
+  "title": "Solve it: total and average of some scores",
+  "idea": "GUIDED PROBLEM. A two-part ask (total AND average) walked through UEPCC, using multiple state (total + count) from this lap.",
+  "problem": "Given the scores [8, 6, 10], show both the total and the average.",
+  "exercises": [
+    {
+      "id": "u91l01e01",
+      "uepcc": "U",
+      "type": "multipleChoice",
+      "prompt": "PROBLEM: scores [8, 6, 10]. Show the TOTAL and the AVERAGE.\n\nUnderstand first: how many things does this problem ask you to OUTPUT?",
+      "options": [
+        "Two - a total and an average",
+        "One - just the total",
+        "Three",
+        "None"
+      ],
+      "answer": 0,
+      "explanation": "Two outputs: total and average. Spotting that it is multi-part up front shapes the whole plan."
+    },
+    {
+      "id": "u91l01e02",
+      "uepcc": "U",
+      "type": "multipleChoice",
+      "prompt": "What are the INPUTS?",
+      "options": [
+        "The list of scores [8, 6, 10]",
+        "Just the number 24",
+        "The word average",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "The input is the list of scores. The two outputs are computed from it."
+    },
+    {
+      "id": "u91l01e03",
+      "uepcc": "E",
+      "type": "multipleChoice",
+      "prompt": "Example by hand: what is the total of 8, 6, and 10?",
+      "options": [
+        "24",
+        "18",
+        "16",
+        "26"
+      ],
+      "answer": 0,
+      "explanation": "8 + 6 + 10 = 24. Working it by hand gives you a value to check the code against later."
+    },
+    {
+      "id": "u91l01e04",
+      "uepcc": "E",
+      "type": "multipleChoice",
+      "prompt": "Still by hand: the average is the total divided by how many scores. With total 24 and 3 scores, the average is?",
+      "options": [
+        "8",
+        "24",
+        "3",
+        "12"
+      ],
+      "answer": 0,
+      "explanation": "24 / 3 = 8. Now you have both hand answers: total 24, average 8 - your checks."
+    },
+    {
+      "id": "u91l01e05",
+      "uepcc": "P",
+      "type": "orderBlocks",
+      "prompt": "Plan the steps in plain English.",
+      "blocks": [
+        "Walk the scores, keeping a running total AND a running count",
+        "Divide total by count to get the average",
+        "Show the total and the average"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "One pass for total and count, then divide, then show both. The average needs the count, so track it alongside."
+    },
+    {
+      "id": "u91l01e06",
+      "uepcc": "P",
+      "type": "multipleChoice",
+      "prompt": "Which technique from this lap fits 'keep a total AND a count in one pass'?",
+      "options": [
+        "Multiple state variables",
+        "A single if",
+        "String joining",
+        "A fixed range only"
+      ],
+      "answer": 0,
+      "explanation": "Two running values in one loop is exactly multiple state. The plan picks the tool."
+    },
+    {
+      "id": "u91l01e07",
+      "uepcc": "C",
+      "type": "orderBlocks",
+      "prompt": "Code the plan.",
+      "blocks": [
+        "total = 0",
+        "count = 0",
+        "for score in [8, 6, 10]:",
+        "    total = total + score",
+        "    count = count + 1",
+        "average = total / count",
+        "print(total, average)"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "explanation": "Start both running values, walk updating both, divide for the average, print both. Every score is used via the list."
+    },
+    {
+      "id": "u91l01e08",
+      "uepcc": "C",
+      "type": "fillBlank",
+      "prompt": "Complete the average step:\n\ntotal = 24\ncount = 3\naverage = total ____ count\nprint(average)",
+      "answer": "/",
+      "acceptable": [
+        "/"
+      ],
+      "explanation": "Average is total divided by count, so the operator is /. 24 / 3 = 8."
+    },
+    {
+      "id": "u91l01e09",
+      "uepcc": "Check",
+      "type": "multipleChoice",
+      "prompt": "Check: the code prints 24 and 8.0. Your hand answers were total 24 and average 8. Verdict?",
+      "options": [
+        "Passes - both match the hand example",
+        "Fails",
+        "Can't tell",
+        "Rewrite the example"
+      ],
+      "answer": 0,
+      "explanation": "Both outputs match what you worked by hand, so the two-part solution is correct."
+    },
+    {
+      "id": "u91l01e10",
+      "uepcc": "Check",
+      "type": "multipleChoice",
+      "prompt": "New numbers [2, 4] with the same code. total = ?, average = ?",
+      "options": [
+        "6 and 3.0",
+        "6 and 2.0",
+        "2 and 4.0",
+        "8 and 4.0"
+      ],
+      "answer": 0,
+      "explanation": "total = 2 + 4 = 6, count = 2, average = 6 / 2 = 3. It generalises - the sign of a good solution."
+    }
+  ]
+}

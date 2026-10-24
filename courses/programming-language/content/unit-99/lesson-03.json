@@ -1,0 +1,142 @@
+{
+  "unitId": "u99",
+  "lessonId": "u99l03",
+  "title": "Capstone: a function that reports even or odd",
+  "idea": "GUIDED CAPSTONE. Return a boolean (True/False) from a function — a tidy yes/no helper you can reuse anywhere.",
+  "problem": "Write is_even(n) that returns True when n is even, so is_even(4) is True.",
+  "exercises": [
+    {
+      "id": "u99l03e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: is_even(n) returns True/False. OUTPUT is...",
+      "options": [
+        "A boolean: True if even, else False",
+        "The number itself",
+        "'even' or 'odd' text",
+        "A count"
+      ],
+      "answer": 0,
+      "explanation": "Output is a boolean. A yes/no helper is most useful when it returns True/False you can test later."
+    },
+    {
+      "id": "u99l03e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "How do we tell even from odd (from the number puzzles)?",
+      "options": [
+        "n % 2 == 0 means even",
+        "n // 2 == 0",
+        "n > 2",
+        "n * 2"
+      ],
+      "answer": 0,
+      "explanation": "Remainder 0 when divided by 2 means even. We RETURN the result of that comparison."
+    },
+    {
+      "id": "u99l03e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example by hand: is_even(4) — what is 4 % 2, and so True or False?",
+      "options": [
+        "0, so True",
+        "1, so False",
+        "2, so True",
+        "4, so False"
+      ],
+      "answer": 0,
+      "explanation": "4 % 2 = 0, which is even, so True. The comparison 4 % 2 == 0 IS True — we return it directly."
+    },
+    {
+      "id": "u99l03e04",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "And is_even(7) returns...",
+      "options": [
+        "False — 7 is odd",
+        "True",
+        "7",
+        "1"
+      ],
+      "answer": 0,
+      "explanation": "7 % 2 = 1 (not 0), so the comparison is False. Two examples pin the behavior."
+    },
+    {
+      "id": "u99l03e05",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Plan it. Order the pieces.",
+      "blocks": [
+        "Return whether the remainder is 0",
+        "Define is_even with parameter n"
+      ],
+      "answer": [
+        1,
+        0
+      ],
+      "explanation": "Header, then return the True/False result of n % 2 == 0. No if needed — the comparison already IS a boolean."
+    },
+    {
+      "id": "u99l03e06",
+      "type": "trueFalse",
+      "uepcc": "P",
+      "prompt": "We can return a comparison like n % 2 == 0 directly — it already evaluates to True or False.",
+      "answer": true,
+      "explanation": "Yes! A comparison is a boolean expression. return n % 2 == 0 hands back True or False with no extra if."
+    },
+    {
+      "id": "u99l03e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code it. Arrange the two lines.",
+      "blocks": [
+        "    return n % 2 == 0",
+        "def is_even(n):"
+      ],
+      "answer": [
+        1,
+        0
+      ],
+      "explanation": "Header first, then return the comparison. Short and reusable."
+    },
+    {
+      "id": "u99l03e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Complete the even test to return:\n\ndef is_even(n):\n    return n % 2 ____ 0",
+      "answer": "==",
+      "acceptable": [
+        "=="
+      ],
+      "explanation": "Compare the remainder to 0 with ==. is_even(4) returns True, is_even(7) returns False."
+    },
+    {
+      "id": "u99l03e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Call is_even(4): returns True. Hand said True. Verdict?",
+      "options": [
+        "Passes",
+        "Fails",
+        "Unknown",
+        "Rewrite example"
+      ],
+      "answer": 0,
+      "explanation": "Matches. A boolean-returning helper — perfect for use inside ifs and loops later."
+    },
+    {
+      "id": "u99l03e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "What does is_even(0) return?",
+      "options": [
+        "True — 0 is even",
+        "False",
+        "0",
+        "None"
+      ],
+      "answer": 0,
+      "explanation": "0 % 2 == 0 is True, and 0 is indeed even. The edge case checks out."
+    }
+  ]
+}

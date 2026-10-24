@@ -1,0 +1,121 @@
+{
+  "unitId": "u50",
+  "lessonId": "u50l06",
+  "title": "Loop back: choosing the loop",
+  "idea": "REVIEW. Revisit the pattern-choice skill from Unit 47 - for (known count) vs while (repeat until). Interleaves many problem framings. No new concepts.",
+  "exercises": [
+    {
+      "id": "u50l06e01",
+      "type": "multipleChoice",
+      "prompt": "The question that decides your loop is:",
+      "options": [
+        "Do I know the number of repeats before starting?",
+        "Is the number big?",
+        "Does it print?",
+        "Is it even?"
+      ],
+      "answer": 0,
+      "explanation": "Known count -> for; unknown, condition-based -> while. One question does most of the work."
+    },
+    {
+      "id": "u50l06e02",
+      "type": "multipleChoice",
+      "prompt": "'Ring the bell 4 times.' Which loop?",
+      "options": ["for (known count)", "while (repeat until)", "neither", "both wrong"],
+      "answer": 0,
+      "explanation": "4 is a known count. for over range(4)."
+    },
+    {
+      "id": "u50l06e03",
+      "type": "multipleChoice",
+      "prompt": "'Keep stirring until the sugar dissolves.' Which loop?",
+      "options": ["while (repeat until)", "for (known count)", "neither", "both wrong"],
+      "answer": 0,
+      "explanation": "Unknown number of stirs - stop on a condition. while loop."
+    },
+    {
+      "id": "u50l06e04",
+      "type": "multiSelect",
+      "prompt": "Select ALL phrases that signal a known count (for).",
+      "options": [
+        "'repeat 8 times'",
+        "'for each of the 30 days'",
+        "'until the light turns green'",
+        "'print 1 to 25'"
+      ],
+      "answer": [0, 1, 3],
+      "explanation": "'8 times', 'each of the 30', and '1 to 25' are counts. 'Until the light turns green' is a condition - while."
+    },
+    {
+      "id": "u50l06e05",
+      "type": "multiSelect",
+      "prompt": "Select ALL phrases that signal a repeat-until (while).",
+      "options": [
+        "'keep trying until it works'",
+        "'as long as there is time'",
+        "'for all 6 sides'",
+        "'until the total passes 50'"
+      ],
+      "answer": [0, 1, 3],
+      "explanation": "'Until it works', 'as long as time', and 'until passes 50' are conditions. 'For all 6 sides' is a count - for."
+    },
+    {
+      "id": "u50l06e06",
+      "type": "multipleChoice",
+      "prompt": "'Repeat until you have printed exactly 12 lines.' Tricky wording - real choice?",
+      "options": [
+        "for - '12 lines' is a known count despite 'until'",
+        "while - it says until",
+        "neither",
+        "it can't be done"
+      ],
+      "answer": 0,
+      "explanation": "Look past 'until' to the real rule: exactly 12. Known count -> for over range(12)."
+    },
+    {
+      "id": "u50l06e07",
+      "type": "trueFalse",
+      "prompt": "Using the right loop usually makes the code shorter and less buggy.",
+      "answer": true,
+      "explanation": "The matching tool handles the hard part, so fewer moving parts and fewer mistakes. That's why choosing matters."
+    },
+    {
+      "id": "u50l06e08",
+      "type": "matchPairs",
+      "prompt": "Match each problem to its loop kind.",
+      "pairs": [
+        { "left": "'greet all 10 winners'", "right": "for" },
+        { "left": "'keep asking until valid'", "right": "while" },
+        { "left": "'print 1 through 9'", "right": "for" },
+        { "left": "'empty the bucket until dry'", "right": "while" }
+      ],
+      "explanation": "Known counts -> for; repeat-until conditions -> while. You can sort any of these on sight."
+    },
+    {
+      "id": "u50l06e09",
+      "type": "multipleChoice",
+      "prompt": "'Among 1 to 50, find the first multiple of 9.' Best fit?",
+      "options": [
+        "for over range with an if and a break at the first match",
+        "while forever with no break",
+        "for with an accumulator only",
+        "no loop"
+      ],
+      "answer": 0,
+      "explanation": "Known search range -> for; the if spots the match; break stops at the FIRST. Tools combine cleanly."
+    },
+    {
+      "id": "u50l06e10",
+      "type": "multipleChoice",
+      "prompt": "The loop kind should match...",
+      "options": [
+        "How you know the loop will stop",
+        "The output color",
+        "The length of your name",
+        "The weather"
+      ],
+      "answer": 0,
+      "explanation": "Known count -> for; stops on a condition -> while. Match the loop to its stopping rule."
+    }
+  ]
+}

@@ -1,0 +1,141 @@
+{
+  "unitId": "u48",
+  "lessonId": "u48l02",
+  "title": "Trace a counter",
+  "idea": "MEET. Hand-trace a counter that goes up by 1 on some passes. Predicting the final count. Reading only.",
+  "exercises": [
+    {
+      "id": "u48l02e01",
+      "type": "multipleChoice",
+      "prompt": "count starts at 0. Each pass of the loop does count = count + 1. After 3 passes, count is...",
+      "options": [
+        "3",
+        "0",
+        "1",
+        "4"
+      ],
+      "answer": 0,
+      "explanation": "Start 0, then +1 three times: 0->1->2->3. Tracing each pass gives 3."
+    },
+    {
+      "id": "u48l02e02",
+      "type": "orderBlocks",
+      "prompt": "Trace count = count + 1 starting at 0, for 3 passes. Put the values in order.",
+      "blocks": [
+        "Start: count is 0",
+        "After pass 1: count is 1",
+        "After pass 2: count is 2",
+        "After pass 3: count is 3"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "Write the value after each pass. The counter climbs 0,1,2,3 — the final answer is 3."
+    },
+    {
+      "id": "u48l02e03",
+      "type": "multipleChoice",
+      "prompt": "A counter only goes up when a number is even. For 1,2,3,4 (count starts 0), the final count is...",
+      "options": [
+        "2",
+        "4",
+        "1",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "Even numbers are 2 and 4, so count goes up twice: 0->1->2. Trace only the passes that act."
+    },
+    {
+      "id": "u48l02e04",
+      "type": "matchPairs",
+      "prompt": "A counter starts at 0 and +1 on each pass. Match passes to the value after that pass.",
+      "pairs": [
+        {
+          "left": "after 1 pass",
+          "right": "1"
+        },
+        {
+          "left": "after 2 passes",
+          "right": "2"
+        },
+        {
+          "left": "after 5 passes",
+          "right": "5"
+        }
+      ],
+      "explanation": "A +1 counter equals the number of passes it acted on. Tracing confirms the pattern."
+    },
+    {
+      "id": "u48l02e05",
+      "type": "trueFalse",
+      "prompt": "If the counter's if is False on a pass, the counter does NOT change that pass.",
+      "answer": true,
+      "explanation": "True. The +1 only happens when the if is true. On a false pass the counter holds its value."
+    },
+    {
+      "id": "u48l02e06",
+      "type": "multipleChoice",
+      "prompt": "For numbers 1..5, count the ones over 3 (count starts 0). Trace it. Final count?",
+      "options": [
+        "2",
+        "3",
+        "5",
+        "1"
+      ],
+      "answer": 0,
+      "explanation": "Over 3 means 4 and 5 — two numbers — so the counter ends at 2. Trace each pass to be sure."
+    },
+    {
+      "id": "u48l02e07",
+      "type": "multipleChoice",
+      "prompt": "Why does a counter START before the loop?",
+      "options": [
+        "so there is a value to add to on the first pass",
+        "to make the loop longer",
+        "it does not need to",
+        "to print it early"
+      ],
+      "answer": 0,
+      "explanation": "You must set it (usually 0) first, or the first count = count + 1 has nothing to build on."
+    },
+    {
+      "id": "u48l02e08",
+      "type": "orderBlocks",
+      "prompt": "Trace counting the evens in 2,3,4 (count starts 0).",
+      "blocks": [
+        "2 is even: count becomes 1",
+        "3 is odd: count stays 1",
+        "4 is even: count becomes 2"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Only even numbers bump the counter. The odd pass leaves it unchanged. Final count is 2."
+    },
+    {
+      "id": "u48l02e09",
+      "type": "multipleChoice",
+      "prompt": "A counter ended at 4 after looping 1..6, counting a rule. How many numbers fit the rule?",
+      "options": [
+        "4",
+        "6",
+        "2",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "The counter equals how many passes matched the rule — here 4. That is what a counter measures."
+    },
+    {
+      "id": "u48l02e10",
+      "type": "trueFalse",
+      "prompt": "Tracing a counter means writing its value after each pass and reading the last value as the answer.",
+      "answer": true,
+      "explanation": "True. The counter's final value, after the last pass, is the count you were looking for."
+    }
+  ]
+}

@@ -1,0 +1,139 @@
+{
+  "unitId": "u85",
+  "lessonId": "u85l04",
+  "title": "Restate it in your own words: goal, inputs, outputs",
+  "idea": "MEET: restating a problem as 'GOAL / INPUTS / OUTPUTS' proves you understood it and sets up the split that comes next.",
+  "exercises": [
+    {
+      "type": "multipleChoice",
+      "prompt": "PROBLEM: 'From a list of orders, show the total and how many were above 100.' Which restatement is correct?",
+      "options": [
+        "GOAL: summarise orders. INPUTS: the list of orders. OUTPUTS: the total, and the count above 100.",
+        "GOAL: print Hello. INPUTS: none. OUTPUTS: a greeting.",
+        "GOAL: sort the orders. INPUTS: 100. OUTPUTS: one number.",
+        "GOAL: guess. INPUTS: everything. OUTPUTS: anything."
+      ],
+      "answer": 0,
+      "explanation": "A good restatement names the goal, lists the inputs, and lists every output. This one captures both outputs.",
+      "id": "u85l04e01"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Restating a problem in your own words helps you check you actually understood it.",
+      "answer": true,
+      "explanation": "Yes — if you can't restate it cleanly, you don't understand it yet. Restating is a built-in check.",
+      "id": "u85l04e02"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "A restatement is missing an output. What's the risk?",
+      "options": [
+        "You'll build a solution that forgets part of the answer",
+        "The code will run faster",
+        "Nothing — outputs are optional",
+        "The inputs will change"
+      ],
+      "answer": 0,
+      "explanation": "A dropped output means an incomplete solution. The restatement is where you catch that early.",
+      "id": "u85l04e03"
+    },
+    {
+      "type": "orderBlocks",
+      "prompt": "Order the three parts of a clean restatement.",
+      "blocks": [
+        "GOAL: one sentence on what we're producing overall",
+        "INPUTS: the values we're given",
+        "OUTPUTS: every thing we must show"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Goal first (the big picture), then inputs (what we have), then outputs (what we must produce).",
+      "id": "u85l04e04"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "PROBLEM: 'Given a list of scores, report the average and whether it passed (at least 60).' The OUTPUTS line should be...",
+      "options": [
+        "the average, and a yes/no for passing",
+        "the list of scores",
+        "the number 60",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "Two outputs: the average number and the pass yes/no. Both go on the OUTPUTS line.",
+      "id": "u85l04e05"
+    },
+    {
+      "type": "multiSelect",
+      "prompt": "Select the problems that ask for BOTH a number and a yes/no.",
+      "options": [
+        "Report the average and whether it passed",
+        "Show the total and whether any order exceeded 100",
+        "Add two numbers",
+        "Show the biggest price"
+      ],
+      "answer": [
+        0,
+        1
+      ],
+      "explanation": "The first two pair a number with a yes/no. The last two produce a single number only.",
+      "id": "u85l04e06"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "The GOAL line and the OUTPUTS line are always the same thing.",
+      "answer": false,
+      "explanation": "Not quite — the GOAL is the one-sentence purpose; OUTPUTS are the specific things you must show. Related, but not identical.",
+      "id": "u85l04e07"
+    },
+    {
+      "type": "matchPairs",
+      "prompt": "Match each restatement part to its question.",
+      "pairs": [
+        {
+          "left": "GOAL",
+          "right": "What are we producing overall?"
+        },
+        {
+          "left": "INPUTS",
+          "right": "What values are we given?"
+        },
+        {
+          "left": "OUTPUTS",
+          "right": "What exact things must we show?"
+        }
+      ],
+      "explanation": "Three questions, three answers. Answer all three and the problem is understood.",
+      "id": "u85l04e08"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Why does restating set up the NEXT step (splitting)?",
+      "options": [
+        "Once outputs are listed, each output hints at a part to plan",
+        "It doesn't — restating is pointless",
+        "Because splitting needs no understanding",
+        "Because the computer restates for you"
+      ],
+      "answer": 0,
+      "explanation": "Each output is usually its own sub-problem. Listing them is the first half of splitting.",
+      "id": "u85l04e09"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "The big idea:",
+      "options": [
+        "Restate every problem as GOAL / INPUTS / OUTPUTS before planning",
+        "Skip understanding and start typing",
+        "Restating wastes time",
+        "Only the goal matters"
+      ],
+      "answer": 0,
+      "explanation": "Goal, inputs, outputs — the three-line restatement is your proof of understanding.",
+      "id": "u85l04e10"
+    }
+  ]
+}

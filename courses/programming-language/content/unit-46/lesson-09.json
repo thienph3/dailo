@@ -1,0 +1,128 @@
+{
+  "unitId": "u46",
+  "lessonId": "u46l09",
+  "title": "Search problems: stop at the first match",
+  "idea": "Apply break to realistic 'find the first one that fits' searches, reviewing conditions, counters, and input.",
+  "exercises": [
+    {
+      "id": "u46l09e01",
+      "type": "multipleChoice",
+      "prompt": "'Find the first number from 1 up whose triple is over 20.' Which tool stops the search at the match?",
+      "options": [
+        "break — stop as soon as it is found",
+        "continue — skip until found",
+        "a counter guard",
+        "no loop needed"
+      ],
+      "answer": 0,
+      "explanation": "A search ends at the first success, which is exactly what break does."
+    },
+    {
+      "id": "u46l09e02",
+      "type": "multipleChoice",
+      "prompt": "What does this print?\n\nfound = 0\nn = 1\nwhile n <= 20:\n    if n * 3 > 20:\n        found = n\n        break\n    n = n + 1\nprint(found)",
+      "options": [
+        "7",
+        "6",
+        "21",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "n * 3 > 20 first happens at n = 7 (7 * 3 = 21). found becomes 7 and break stops the loop."
+    },
+    {
+      "id": "u46l09e03",
+      "type": "multipleChoice",
+      "prompt": "'Keep reading words until one is longer than... until the user types the secret word secret.' Which loop + tool?",
+      "options": [
+        "A while True loop with break when the word equals secret",
+        "A for loop over range(3)",
+        "A single if",
+        "continue on every word"
+      ],
+      "answer": 0,
+      "explanation": "The number of tries is unknown, so loop forever and break out when the secret word arrives."
+    },
+    {
+      "id": "u46l09e04",
+      "type": "orderBlocks",
+      "prompt": "Arrange a search that reads words until the user types secret.",
+      "blocks": [
+        "while True:",
+        "    word = input(\"word? \")",
+        "    if word == \"secret\":",
+        "        break",
+        "print(\"unlocked\")"
+      ],
+      "answer": [0, 1, 2, 3, 4],
+      "explanation": "Loop forever, read a word, test it, break on the match, then print after. break is the exit."
+    },
+    {
+      "id": "u46l09e05",
+      "type": "multipleChoice",
+      "prompt": "In a search, why is a 'found' variable started at 0 useful?",
+      "options": [
+        "If the loop ends without a match, found is still 0, signalling 'not found'",
+        "Because 0 is always the answer",
+        "To count the passes",
+        "It is not useful"
+      ],
+      "answer": 0,
+      "explanation": "Starting found at 0 gives a clear 'nothing matched' signal when break never fires."
+    },
+    {
+      "id": "u46l09e06",
+      "type": "multipleChoice",
+      "prompt": "What does this print?\n\nfound = 0\nfor i in range(2, 30):\n    if i % 7 == 0:\n        found = i\n        break\nprint(found)",
+      "options": [
+        "7 — the first multiple of 7 in the range",
+        "14",
+        "0",
+        "28"
+      ],
+      "answer": 0,
+      "explanation": "The first i divisible by 7 is 7; found becomes 7 and break stops. Later multiples are never reached."
+    },
+    {
+      "id": "u46l09e07",
+      "type": "multipleChoice",
+      "prompt": "How many passes does the loop above actually make before break?",
+      "options": [
+        "6 (i = 2, 3, 4, 5, 6, 7)",
+        "28",
+        "1",
+        "7"
+      ],
+      "answer": 0,
+      "explanation": "It checks 2, 3, 4, 5, 6, then 7 matches and breaks — six passes. break saves it from scanning the whole range."
+    },
+    {
+      "id": "u46l09e08",
+      "type": "multipleChoice",
+      "prompt": "You want to count how many values you checked BEFORE finding the match. What do you add?",
+      "options": [
+        "A counter bumped each pass, read after the loop",
+        "A second break",
+        "A continue on the match",
+        "Nothing is possible"
+      ],
+      "answer": 0,
+      "explanation": "Add a counter that grows each pass; after break, it tells you how many values were examined. Counters and break combine neatly."
+    },
+    {
+      "id": "u46l09e09",
+      "type": "fillBlank",
+      "prompt": "Fill the keyword so the search stops at the first value over 50:\n\nfound = 0\nn = 1\nwhile n <= 100:\n    if n * n > 50:\n        found = n\n        ____\n    n = n + 1\nprint(found)",
+      "answer": "break",
+      "acceptable": ["break"],
+      "explanation": "break ends the loop once n * n first passes 50 (at n = 8, since 8 * 8 = 64). found holds 8."
+    },
+    {
+      "id": "u46l09e10",
+      "type": "trueFalse",
+      "prompt": "break makes searches efficient by stopping the loop the instant the answer is found.",
+      "answer": true,
+      "explanation": "Yes — no wasted passes after success. 'Stop at the first match' is break's signature use."
+    }
+  ]
+}

@@ -1,0 +1,129 @@
+{
+  "unitId": "u26",
+  "lessonId": "u26l09",
+  "title": "Spot the logic bug",
+  "idea": "Read conditions using and/or/not and find the mistake - wrong operator, or using and where or is meant. Wrong-approach spotting. Thinking-heavy.",
+  "exercises": [
+    {
+      "id": "u26l09e01",
+      "type": "multipleChoice",
+      "prompt": "Rule: 'free if member OR under 12.' A friend wrote 'if is_member and age < 12'. Why is this wrong?",
+      "options": [
+        "'and' requires BOTH, but the rule says EITHER is enough",
+        "'and' is not real Python",
+        "age < 12 is illegal",
+        "it is actually correct"
+      ],
+      "answer": 0,
+      "explanation": "'and' demands both a membership and being under 12. The rule only needs one, so the operator should be 'or'."
+    },
+    {
+      "id": "u26l09e02",
+      "type": "multipleChoice",
+      "prompt": "Fix it:",
+      "options": [
+        "Use 'if is_member or age < 12'",
+        "Remove the age test",
+        "Use 'not is_member'",
+        "Add another and"
+      ],
+      "answer": 0,
+      "explanation": "Switching 'and' to 'or' matches 'either qualifies'. Now a member OR a child gets in free."
+    },
+    {
+      "id": "u26l09e03",
+      "type": "multipleChoice",
+      "prompt": "Rule: 'comfortable only between 18 and 24.' A friend wrote 'if temp >= 18 or temp <= 24'. What goes wrong?",
+      "options": [
+        "'or' accepts almost every temperature",
+        "'or' rejects everything",
+        "it errors",
+        "it is correct"
+      ],
+      "answer": 0,
+      "explanation": "Almost every number passes at least one side of that 'or', so it never pins the value in the range. It should be 'and'."
+    },
+    {
+      "id": "u26l09e04",
+      "type": "multipleChoice",
+      "prompt": "What does this buggy check print for temp = 100?\n\nif temp >= 18 or temp <= 24:\n    print(\"Comfortable\")\nelse:\n    print(\"No\")",
+      "options": [
+        "Comfortable",
+        "No",
+        "100",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "100 >= 18 is True, so the 'or' is True and it wrongly prints 'Comfortable'. The bug is using 'or' instead of 'and'."
+    },
+    {
+      "id": "u26l09e05",
+      "type": "trueFalse",
+      "prompt": "Swapping 'and' and 'or' is one of the most common logic bugs.",
+      "answer": true,
+      "explanation": "Yes - they read similarly in English but behave very differently. Always match 'both' to 'and' and 'either' to 'or'."
+    },
+    {
+      "id": "u26l09e06",
+      "type": "multipleChoice",
+      "prompt": "Rule: 'enter unless banned.' A friend wrote 'if is_banned: print(\"Enter\")'. What is wrong?",
+      "options": [
+        "It lets banned people in - it should be 'if not is_banned'",
+        "is_banned is illegal",
+        "print is wrong",
+        "it is correct"
+      ],
+      "answer": 0,
+      "explanation": "'unless banned' means 'if NOT banned'. The missing 'not' flipped the whole meaning."
+    },
+    {
+      "id": "u26l09e07",
+      "type": "fillBlank",
+      "prompt": "Fix the 'unless banned' rule:\n\nif ____ is_banned:\n    print(\"Enter\")\nelse:\n    print(\"Blocked\")",
+      "answer": "not",
+      "acceptable": [
+        "not"
+      ],
+      "explanation": "'not is_banned' lets people in only when they are NOT banned - the correct 'unless' logic."
+    },
+    {
+      "id": "u26l09e08",
+      "type": "multipleChoice",
+      "prompt": "To check which operator a rule needs, ask...",
+      "options": [
+        "Does it need BOTH (and), EITHER (or), or a FLIP (not)?",
+        "What color is it?",
+        "How long is the code?",
+        "Is there a loop?"
+      ],
+      "answer": 0,
+      "explanation": "Map the English: 'both' to and, 'either' to or, 'unless/not' to not. That mapping catches most logic bugs."
+    },
+    {
+      "id": "u26l09e09",
+      "type": "multipleChoice",
+      "prompt": "What does 'not (temp >= 18 and temp <= 24)' describe?",
+      "options": [
+        "Temperatures OUTSIDE the comfortable range",
+        "Only 18",
+        "The comfortable range",
+        "An error"
+      ],
+      "answer": 0,
+      "explanation": "'not' flips the whole 'between' condition, so it is True for temperatures outside 18-24."
+    },
+    {
+      "id": "u26l09e10",
+      "type": "multipleChoice",
+      "prompt": "The debugging skill here is...",
+      "options": [
+        "match the problem's wording to the right operator (and/or/not)",
+        "type faster",
+        "use longer variable names",
+        "avoid booleans"
+      ],
+      "answer": 0,
+      "explanation": "Most logic bugs are a mismatch between the words and the operator. Re-read the rule and pick the operator that fits."
+    }
+  ]
+}

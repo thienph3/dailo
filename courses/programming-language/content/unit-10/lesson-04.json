@@ -1,0 +1,91 @@
+{
+  "unitId": "u10",
+  "lessonId": "u10l04",
+  "title": "Dividing with /",
+  "idea": "The / sign means divide — split a number into equal parts. print(10 / 2) shows 5.",
+  "exercises": [
+    {
+      "id": "u10l04e01",
+      "type": "multipleChoice",
+      "prompt": "What will this show?\n\nprint(10 / 2)",
+      "options": ["5.0", "5 / 2", "12", "20"],
+      "answer": 0,
+      "explanation": "The / sign divides. 10 split into 2 equal parts is 5. Division shows it as 5.0, with a dot."
+    },
+    {
+      "id": "u10l04e02",
+      "type": "multipleChoice",
+      "prompt": "What does the / sign tell the computer to do?",
+      "options": ["Divide", "Add", "Multiply", "Subtract"],
+      "answer": 0,
+      "explanation": "The slash / means divide: split a number into equal parts."
+    },
+    {
+      "id": "u10l04e03",
+      "type": "multipleChoice",
+      "prompt": "You share 12 sweets equally among 3 friends. Which instruction shows how many each gets?",
+      "options": ["print(12 / 3)", "print(12 * 3)", "print(12 + 3)", "print(12 - 3)"],
+      "answer": 0,
+      "explanation": "Sharing equally means divide: 12 / 3 shows 4.0, so 4 each."
+    },
+    {
+      "id": "u10l04e04",
+      "type": "trueFalse",
+      "prompt": "Order matters with division too: 10 / 2 and 2 / 10 are different.",
+      "answer": true,
+      "explanation": "10 / 2 is 5.0. 2 / 10 is a small part less than 1. Just like subtracting, order changes the answer."
+    },
+    {
+      "id": "u10l04e05",
+      "type": "fillBlank",
+      "prompt": "Fill the blank so the screen shows 4.0:\n\nprint(20 ____ 5)",
+      "answer": "/",
+      "acceptable": ["/"],
+      "explanation": "20 / 5 is 4.0. The slash means divide."
+    },
+    {
+      "id": "u10l04e06",
+      "type": "multipleChoice",
+      "prompt": "What will this show?\n\nprint(9 / 3)",
+      "options": ["3.0", "3", "6", "27"],
+      "answer": 0,
+      "explanation": "9 split into 3 equal parts is 3. Division shows it with a dot: 3.0."
+    },
+    {
+      "id": "u10l04e07",
+      "type": "tapTokens",
+      "prompt": "Build an instruction that divides 8 by 2 and shows the result.",
+      "tokens": ["print", "(", "8", "/", "2", ")"],
+      "answer": ["print", "(", "8", "/", "2", ")"],
+      "explanation": "print(8 / 2) shows 4.0."
+    },
+    {
+      "id": "u10l04e08",
+      "type": "matchPairs",
+      "prompt": "Match each sign to what it does.",
+      "pairs": [
+        {"left": "+", "right": "Add"},
+        {"left": "-", "right": "Subtract"},
+        {"left": "*", "right": "Multiply"},
+        {"left": "/", "right": "Divide"}
+      ],
+      "explanation": "These four signs are your whole math toolbox for now: + - * /."
+    },
+    {
+      "id": "u10l04e09",
+      "type": "multipleChoice",
+      "prompt": "Which instruction DIVIDES 100 by 4?",
+      "options": ["print(100 / 4)", "print(100 * 4)", "print(100 - 4)", "print(4 / 100)"],
+      "answer": 0,
+      "explanation": "print(100 / 4) shows 25.0. The bigger number goes first because we split 100 into 4 parts."
+    },
+    {
+      "id": "u10l04e10",
+      "type": "fillBlank",
+      "prompt": "Write a full instruction that divides 30 by 6 and shows the result.",
+      "answer": "print(30 / 6)",
+      "acceptable": ["print(30 / 6)", "print(30/6)"],
+      "explanation": "print(30 / 6) shows 5.0. You now know all four math signs!"
+    }
+  ]
+}

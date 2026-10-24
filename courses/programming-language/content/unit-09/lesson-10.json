@@ -1,0 +1,138 @@
+{
+  "unitId": "u09",
+  "lessonId": "u09l10",
+  "title": "Putting it all together",
+  "idea": "Review: print shows labels and variables; variables store numbers; reassignment changes them. The last value before a print wins. (Numbers only — text as data comes later.)",
+  "exercises": [
+    {
+      "id": "u09l10e01",
+      "type": "multipleChoice",
+      "prompt": "Review: what does this show?\n\nprint(\"Hello\")",
+      "options": [
+        "Hello",
+        "\"Hello\"",
+        "print",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "print shows the label inside the quotes, exactly. A tool you've known since the start!"
+    },
+    {
+      "id": "u09l10e02",
+      "type": "multipleChoice",
+      "prompt": "Review: a variable stores a number. What shows?\n\npets = 2\nprint(pets)",
+      "options": [
+        "2",
+        "pets",
+        "\"pets\"",
+        "2 pets"
+      ],
+      "answer": 0,
+      "explanation": "The box pets holds 2. Printing the box shows its value, 2 — not the name of the box."
+    },
+    {
+      "id": "u09l10e03",
+      "type": "multipleChoice",
+      "prompt": "New tool: what shows after reassignment?\n\npets = 2\npets = 5\nprint(pets)",
+      "options": [
+        "5",
+        "2",
+        "2 5",
+        "pets"
+      ],
+      "answer": 0,
+      "explanation": "Reassignment replaced 2 with 5. The box's current value is 5."
+    },
+    {
+      "id": "u09l10e04",
+      "type": "multipleChoice",
+      "prompt": "Review: multiple print lines. What shows?\n\nprint(\"one\")\nprint(\"two\")",
+      "options": [
+        "one on one line, two on the next",
+        "one two on the same line",
+        "onetwo",
+        "two then one"
+      ],
+      "answer": 0,
+      "explanation": "Each print makes its own line, in order. You learned this a few units back — still true!"
+    },
+    {
+      "id": "u09l10e05",
+      "type": "multipleChoice",
+      "prompt": "What shows (two lines)?\n\nday = 1\nprint(day)\nday = 5\nprint(day)",
+      "options": [
+        "1 then 5",
+        "5 then 1",
+        "1 then 1",
+        "5 then 5"
+      ],
+      "answer": 0,
+      "explanation": "First print catches 1. Then reassignment changes it to 5 for the second print."
+    },
+    {
+      "id": "u09l10e06",
+      "type": "trueFalse",
+      "prompt": "Review: a variable holds a number, and printing it shows that number — not the box's name.",
+      "answer": true,
+      "explanation": "Yes, from earlier units: print(box) shows the value inside, like 42, not the word box."
+    },
+    {
+      "id": "u09l10e07",
+      "type": "orderBlocks",
+      "prompt": "Build a small plan: store a number, show it, change it, show it again.",
+      "blocks": [
+        "hero_hp = 10",
+        "print(hero_hp)",
+        "hero_hp = 7",
+        "print(hero_hp)"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "Store, show, reassign, show. This combines variables, print, and reassignment — all your tools so far."
+    },
+    {
+      "id": "u09l10e08",
+      "type": "multipleChoice",
+      "prompt": "What shows?\n\nrank = 1\nrank = 2\nrank = 3\nprint(rank)",
+      "options": [
+        "3",
+        "1",
+        "2",
+        "1 2 3"
+      ],
+      "answer": 0,
+      "explanation": "The last value wins. After three reassignments, the box holds 3."
+    },
+    {
+      "id": "u09l10e09",
+      "type": "matchPairs",
+      "prompt": "Match each tool to what it does.",
+      "pairs": [
+        {
+          "left": "print(...)",
+          "right": "Shows a value on screen"
+        },
+        {
+          "left": "name = number",
+          "right": "Stores (or changes) a number in a box"
+        },
+        {
+          "left": "Reassignment",
+          "right": "Replaces a box's number with a new one"
+        }
+      ],
+      "explanation": "Three tools, working together. You can now store numbers and change them as a plan runs."
+    },
+    {
+      "id": "u09l10e10",
+      "type": "trueFalse",
+      "prompt": "You can now solve problems where a value changes as the program runs.",
+      "answer": true,
+      "explanation": "Yes! That was the goal of this unit. Store a number, change it, show the current one. Well done — on to what's next!"
+    }
+  ]
+}

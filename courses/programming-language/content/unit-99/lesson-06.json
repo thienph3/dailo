@@ -1,0 +1,150 @@
+{
+  "unitId": "u99",
+  "lessonId": "u99l06",
+  "title": "Capstone: why return beats print here",
+  "idea": "GUIDED CAPSTONE. Reason through a bug where a function prints instead of returns, so its value can't be reused.",
+  "problem": "A function area(side) should let us compute total = area(2) + area(3). Fix it so that works (should be 4 + 9 = 13).",
+  "exercises": [
+    {
+      "id": "u99l06e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: we want total = area(2) + area(3) to be 13. For that, area must give back a value we can ADD. OUTPUT of area should be...",
+      "options": [
+        "A returned number (the squared side)",
+        "A printed message only",
+        "Nothing",
+        "Text"
+      ],
+      "answer": 0,
+      "explanation": "To add results together, each call must RETURN a number. A print can't be added — this frames the bug."
+    },
+    {
+      "id": "u99l06e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "If area only PRINTS the value instead of returning it, what does area(2) give back to be added?",
+      "options": [
+        "None (nothing usable) — so the addition breaks",
+        "4",
+        "The printed text",
+        "13"
+      ],
+      "answer": 0,
+      "explanation": "A function with no return hands back None. None + None can't make 13. That's the bug we're hunting."
+    },
+    {
+      "id": "u99l06e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example by hand: a square with side 2 has area 2*2 = ? and side 3 has 3*3 = ?",
+      "options": [
+        "4 and 9",
+        "2 and 3",
+        "8 and 27",
+        "4 and 6"
+      ],
+      "answer": 0,
+      "explanation": "4 and 9. So total should be 4 + 9 = 13 — our check once area returns properly."
+    },
+    {
+      "id": "u99l06e04",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "With the buggy print-only version, running total = area(2) + area(3) would...",
+      "options": [
+        "Fail — you can't add None values",
+        "Give 13 anyway",
+        "Print 13",
+        "Give 0"
+      ],
+      "answer": 0,
+      "explanation": "It errors (or misbehaves) because the returns are None. Seeing the failure motivates the fix."
+    },
+    {
+      "id": "u99l06e05",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Plan the fix. Order the steps.",
+      "blocks": [
+        "Replace print with return inside area",
+        "Then total = area(2) + area(3) works",
+        "Keep computing side * side"
+      ],
+      "answer": [
+        2,
+        0,
+        1
+      ],
+      "explanation": "Compute the area, RETURN it (not print), and the addition composes. The fix is swapping print for return."
+    },
+    {
+      "id": "u99l06e06",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "So the single-word fix inside area is to change print to...",
+      "options": [
+        "return",
+        "input",
+        "def",
+        "len"
+      ],
+      "answer": 0,
+      "explanation": "return sends the value out so it can be added. This is the return-vs-print lesson in action."
+    },
+    {
+      "id": "u99l06e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code the fixed function. Arrange the lines.",
+      "blocks": [
+        "    return side * side",
+        "def area(side):"
+      ],
+      "answer": [
+        1,
+        0
+      ],
+      "explanation": "Header, then RETURN side*side. Now each call gives back a number."
+    },
+    {
+      "id": "u99l06e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Complete the fixed function with the right keyword:\n\ndef area(side):\n    ____ side * side",
+      "answer": "return",
+      "acceptable": [
+        "return"
+      ],
+      "explanation": "return hands back side*side. Now area(2)=4 and area(3)=9 can be added."
+    },
+    {
+      "id": "u99l06e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "With the fix, total = area(2) + area(3) is 13. Hand said 13. Verdict?",
+      "options": [
+        "Passes",
+        "Fails",
+        "Unknown",
+        "Rewrite example"
+      ],
+      "answer": 0,
+      "explanation": "Matches. Returning (not printing) let the two results compose into 13. That's why return matters."
+    },
+    {
+      "id": "u99l06e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "What is area(5) + area(1) with the fixed function?",
+      "options": [
+        "26 — 25 + 1",
+        "6",
+        "25",
+        "13"
+      ],
+      "answer": 0,
+      "explanation": "5*5 + 1*1 = 25 + 1 = 26. Returned values compose cleanly for any inputs. Bug understood and fixed!"
+    }
+  ]
+}

@@ -1,0 +1,133 @@
+{
+  "unitId": "u44",
+  "lessonId": "u44l02",
+  "title": "The shape of a while loop",
+  "idea": "while condition: then an indented body, just like if and for.",
+  "exercises": [
+    {
+      "type": "multipleChoice",
+      "prompt": "A while loop's header ends with a colon, and its body is...",
+      "options": [
+        "Indented underneath",
+        "On the same line",
+        "Not needed",
+        "Before the header"
+      ],
+      "answer": 0,
+      "explanation": "Just like if and for, the body is indented under the header. The colon and indentation mark what repeats.",
+      "id": "u44l02e01"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Which line is the condition in this loop?\n\ni = 0\nwhile i < 5:\n    print(i)\n    i = i + 1",
+      "options": [
+        "i < 5",
+        "i = 0",
+        "print(i)",
+        "i = i + 1"
+      ],
+      "answer": 0,
+      "explanation": "i < 5 is the condition. The loop repeats as long as it's true.",
+      "id": "u44l02e02"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "The body of a while loop must be indented, the same way an if's body is.",
+      "answer": true,
+      "explanation": "True. Indentation shows which lines belong to the loop and will repeat.",
+      "id": "u44l02e03"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "What's wrong?\n\ni = 1\nwhile i <= 3\n    print(i)\n    i = i + 1",
+      "options": [
+        "The header is missing its colon",
+        "print is misspelled",
+        "The body is wrong",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "A while header must end with a colon: while i <= 3:. Without it, Python can't tell where the body begins.",
+      "id": "u44l02e04"
+    },
+    {
+      "type": "multiSelect",
+      "prompt": "Which parts does a basic while loop have?",
+      "options": [
+        "The keyword while",
+        "A condition",
+        "A colon at the end of the header",
+        "An indented body"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "while, a condition, a colon, and an indented body -- the same shape as an if, but it repeats.",
+      "id": "u44l02e05"
+    },
+    {
+      "type": "orderBlocks",
+      "prompt": "Arrange the lines of a correctly shaped while loop.",
+      "blocks": [
+        "    print(i)",
+        "while i < 2:",
+        "    i = i + 1",
+        "i = 0"
+      ],
+      "answer": [
+        3,
+        1,
+        0,
+        2
+      ],
+      "explanation": "Setup i = 0, header while i < 2:, then the indented body print(i) and i = i + 1.",
+      "id": "u44l02e06"
+    },
+    {
+      "type": "fillBlank",
+      "prompt": "Fill the punctuation the while header needs at the end:\n\nwhile i < 5____\n    print(i)",
+      "answer": ":",
+      "acceptable": [
+        ":"
+      ],
+      "explanation": "A colon ends the header, just like with if and for. It introduces the indented body.",
+      "id": "u44l02e07"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "What shows?\n\ni = 0\nwhile i < 2:\n    print(i)\n    i = i + 1",
+      "options": [
+        "0\n1",
+        "0\n1\n2",
+        "1\n2",
+        "forever"
+      ],
+      "answer": 0,
+      "explanation": "While i < 2: prints 0, then 1. At i = 2 the condition is false, so it stops. Two passes.",
+      "id": "u44l02e08"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "while, if, and for all use a colon and an indented body.",
+      "answer": true,
+      "explanation": "True. They share the same block shape. What differs is when and how often the body runs.",
+      "id": "u44l02e09"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Why does a while loop look so much like an if?",
+      "options": [
+        "Both test a condition -- while just keeps repeating while it's true",
+        "They are the same thing",
+        "while is shorter",
+        "if repeats too"
+      ],
+      "answer": 0,
+      "explanation": "An if runs the body once if true; a while runs it over and over while true. Same test, different repetition.",
+      "id": "u44l02e10"
+    }
+  ]
+}

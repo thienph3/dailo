@@ -1,0 +1,129 @@
+{
+  "unitId": "u57",
+  "lessonId": "u57l03",
+  "title": "Trace the running total",
+  "idea": "Predict the accumulator's value pass by pass; see partial sums vs the final total. Thinking-heavy.",
+  "exercises": [
+    {
+      "id": "u57l03e01",
+      "type": "orderBlocks",
+      "prompt": "nums = [2, 4, 6]\ntotal = 0\nfor n in nums:\n    total = total + n\n\nPut the value of total after each pass in order (start 0).",
+      "blocks": [
+        "2",
+        "6",
+        "12"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "0+2=2, 2+4=6, 6+6=12. The total after each pass: 2, 6, 12."
+    },
+    {
+      "id": "u57l03e02",
+      "type": "multipleChoice",
+      "prompt": "For nums = [2, 4, 6], what is the FINAL total?",
+      "options": [
+        "12",
+        "6",
+        "2",
+        "3"
+      ],
+      "answer": 0,
+      "explanation": "2 + 4 + 6 = 12. The last pass leaves total at 12."
+    },
+    {
+      "id": "u57l03e03",
+      "type": "multipleChoice",
+      "prompt": "nums = [5]\ntotal = 0\nfor n in nums:\n    total = total + n\nprint(total)\n\nWhat prints?",
+      "options": [
+        "5",
+        "0",
+        "1",
+        "10"
+      ],
+      "answer": 0,
+      "explanation": "One value: 0 + 5 = 5. A single-item list totals to that item."
+    },
+    {
+      "id": "u57l03e04",
+      "type": "multipleChoice",
+      "prompt": "What if print(total) is INSIDE the loop (indented)?\n\nnums = [1, 2, 3]\ntotal = 0\nfor n in nums:\n    total = total + n\n    print(total)",
+      "options": [
+        "Prints 1, 3, 6 — the partial totals",
+        "Prints 6 once",
+        "Prints 0",
+        "Prints 1, 2, 3"
+      ],
+      "answer": 0,
+      "explanation": "Printing each pass shows the running total growing: 1, 3, 6. Useful for debugging, but usually you print once after."
+    },
+    {
+      "id": "u57l03e05",
+      "type": "trueFalse",
+      "prompt": "The total variable must be created before the loop, or the first 'total = total + n' has no old value to use.",
+      "answer": true,
+      "explanation": "You can't add into something that doesn't exist yet. Start total = 0 first."
+    },
+    {
+      "id": "u57l03e06",
+      "type": "multipleChoice",
+      "prompt": "nums = [100, 100, 100]\ntotal = 0\nfor n in nums:\n    total = total + n\n\nWhat is total at the end?",
+      "options": [
+        "300",
+        "100",
+        "3",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "100 added three times to 0 gives 300."
+    },
+    {
+      "id": "u57l03e07",
+      "type": "multipleChoice",
+      "prompt": "A learner starts total = 10 by mistake, then sums [1, 2]. What total do they get?",
+      "options": [
+        "13 — the wrong start is included",
+        "3",
+        "2",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "Starting at 10 adds an extra 10: 10 + 1 + 2 = 13. That's why the start must be 0."
+    },
+    {
+      "id": "u57l03e08",
+      "type": "multipleChoice",
+      "prompt": "nums = [7, 0, 3]\ntotal = 0\nfor n in nums:\n    total = total + n\n\nFinal total?",
+      "options": [
+        "10",
+        "7",
+        "3",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "7 + 0 + 3 = 10. A 0 in the list adds nothing, which is fine."
+    },
+    {
+      "id": "u57l03e09",
+      "type": "trueFalse",
+      "prompt": "After the loop, 'total' holds the sum of all the values you visited.",
+      "answer": true,
+      "explanation": "That's the whole point: once the loop ends, total is the complete sum."
+    },
+    {
+      "id": "u57l03e10",
+      "type": "multipleChoice",
+      "prompt": "Which values does the accumulator need, in order, to end at the right sum?",
+      "options": [
+        "Start 0, then add each value once",
+        "Add each value twice",
+        "Start at the first value and skip it",
+        "Add only the last value"
+      ],
+      "answer": 0,
+      "explanation": "Start 0, add each value exactly once — no more, no less."
+    }
+  ]
+}

@@ -1,0 +1,121 @@
+{
+  "unitId": "u34",
+  "lessonId": "u34l07",
+  "title": "Loop back: deciding based on words",
+  "idea": "LOOP. No new concept. Review string comparison in decisions, case sensitivity, and matching one of several words.",
+  "exercises": [
+    {
+      "id": "u34l07e01",
+      "type": "multipleChoice",
+      "prompt": "What prints?\n\ncolor = \"red\"\nif color == \"red\":\n    print(\"Stop\")\nelse:\n    print(\"Go\")",
+      "options": [
+        "Stop",
+        "Go",
+        "red",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "color equals 'red', so 'Stop'. (Review of string comparison.)"
+    },
+    {
+      "id": "u34l07e02",
+      "type": "trueFalse",
+      "prompt": "String comparison with == treats 'Red' and 'red' as the same.",
+      "answer": false,
+      "explanation": "== is case-sensitive, so 'Red' and 'red' differ. (Review of case sensitivity.)"
+    },
+    {
+      "id": "u34l07e03",
+      "type": "multipleChoice",
+      "prompt": "What prints?\n\nday = \"Sun\"\nif day == \"Sat\" or day == \"Sun\":\n    print(\"Weekend\")\nelse:\n    print(\"Weekday\")",
+      "options": [
+        "Weekend",
+        "Weekday",
+        "Sun",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "'Sun' matches the second side of 'or', so 'Weekend'. (Review of or with strings.)"
+    },
+    {
+      "id": "u34l07e04",
+      "type": "fillBlank",
+      "prompt": "Fill the operator to test if two words are equal:\n\nif command ____ \"start\":\n    print(\"Starting\")",
+      "answer": "==",
+      "acceptable": ["=="],
+      "explanation": "== compares the strings. (Review of == for words.)"
+    },
+    {
+      "id": "u34l07e05",
+      "type": "multipleChoice",
+      "prompt": "What prints?\n\nanswer = \"MAYBE\"\nif answer == \"yes\":\n    print(\"Confirmed\")\nelse:\n    print(\"Not confirmed\")",
+      "options": [
+        "Not confirmed",
+        "Confirmed",
+        "MAYBE",
+        "An error"
+      ],
+      "answer": 0,
+      "explanation": "'MAYBE' is not 'yes', so the else runs. (Review of string == + else.)"
+    },
+    {
+      "id": "u34l07e06",
+      "type": "multipleChoice",
+      "prompt": "To accept 'north', 'south', 'east', or 'west' as a valid direction, you would use...",
+      "options": [
+        "several == tests joined by 'or'",
+        "several == tests joined by 'and'",
+        "one == test",
+        "no test"
+      ],
+      "answer": 0,
+      "explanation": "Any one of several words -> 'or'. (Review of or for multiple matches.)"
+    },
+    {
+      "id": "u34l07e07",
+      "type": "multipleChoice",
+      "prompt": "What prints?\n\nsize = \"M\"\nif size == \"S\":\n    print(\"Small\")\nelif size == \"M\":\n    print(\"Medium\")\nelse:\n    print(\"Large\")",
+      "options": [
+        "Medium",
+        "Small",
+        "Large",
+        "M"
+      ],
+      "answer": 0,
+      "explanation": "size is 'M', matching the elif: 'Medium'. (Review of elif with strings.)"
+    },
+    {
+      "id": "u34l07e08",
+      "type": "trueFalse",
+      "prompt": "An else branch is a good way to handle any word you did not explicitly list.",
+      "answer": true,
+      "explanation": "else catches unexpected words, like an invalid size. (Review of else as catch-all.)"
+    },
+    {
+      "id": "u34l07e09",
+      "type": "multipleChoice",
+      "prompt": "A quiz checks 'if answer == \"Paris\"' and the user typed 'paris'. Why is it marked wrong?",
+      "options": [
+        "Case sensitivity - 'paris' is not 'Paris'",
+        "Paris is misspelled",
+        "== is broken",
+        "It is marked right"
+      ],
+      "answer": 0,
+      "explanation": "The capital P matters in ==. Plan for case if needed. (Review of case sensitivity.)"
+    },
+    {
+      "id": "u34l07e10",
+      "type": "multipleChoice",
+      "prompt": "What prints?\n\nfruit = \"apple\"\nif fruit == \"banana\":\n    print(\"Yellow\")\nelif fruit == \"apple\":\n    print(\"Red\")\nelse:\n    print(\"Unknown\")",
+      "options": [
+        "Red",
+        "Yellow",
+        "Unknown",
+        "apple"
+      ],
+      "answer": 0,
+      "explanation": "'apple' matches the elif, so 'Red'. (Review of elif ladder with strings.)"
+    }
+  ]
+}

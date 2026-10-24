@@ -1,0 +1,136 @@
+{
+  "unitId": "u38",
+  "lessonId": "u38l02",
+  "title": "range(start, stop): choose where to begin",
+  "idea": "range(start, stop) counts from start up to (but not including) stop. This lets you print 1..N instead of 0..N-1.",
+  "exercises": [
+    {
+      "id": "u38l02e01",
+      "type": "multipleChoice",
+      "prompt": "What values does range(1, 4) give the loop variable?",
+      "options": [
+        "1, 2, 3",
+        "1, 2, 3, 4",
+        "0, 1, 2, 3",
+        "1, 4"
+      ],
+      "answer": 0,
+      "explanation": "range(1, 4) starts at 1 and stops before 4: 1, 2, 3. Two numbers: start (included) and stop (excluded)."
+    },
+    {
+      "id": "u38l02e02",
+      "type": "multipleChoice",
+      "prompt": "What shows?\n\nfor i in range(1, 4):\n    print(i)",
+      "options": [
+        "1\n2\n3",
+        "0\n1\n2\n3",
+        "1\n2\n3\n4",
+        "1\n4"
+      ],
+      "answer": 0,
+      "explanation": "range(1, 4) is 1, 2, 3. Printing i shows each: 1, 2, 3. The stop value 4 is not included."
+    },
+    {
+      "id": "u38l02e03",
+      "type": "trueFalse",
+      "prompt": "In range(start, stop), the stop value is NOT included.",
+      "answer": true,
+      "explanation": "The loop goes up to but not including stop. range(1, 4) ends at 3, not 4. This is the key rule to remember."
+    },
+    {
+      "id": "u38l02e04",
+      "type": "multipleChoice",
+      "prompt": "To print the numbers 1 to 5, which range do you use?",
+      "options": [
+        "range(1, 6)",
+        "range(1, 5)",
+        "range(0, 5)",
+        "range(5)"
+      ],
+      "answer": 0,
+      "explanation": "To include 5, stop must be 6 (one past it): range(1, 6) gives 1, 2, 3, 4, 5. Stop is always one beyond the last number."
+    },
+    {
+      "id": "u38l02e05",
+      "type": "multipleChoice",
+      "prompt": "What shows?\n\nfor i in range(2, 5):\n    print(i)",
+      "options": [
+        "2\n3\n4",
+        "2\n3\n4\n5",
+        "0\n1\n2\n3\n4",
+        "2\n5"
+      ],
+      "answer": 0,
+      "explanation": "range(2, 5) starts at 2, stops before 5: 2, 3, 4."
+    },
+    {
+      "id": "u38l02e06",
+      "type": "fillBlank",
+      "prompt": "Fill the stop so this prints 1, 2, 3, 4:\n\nfor i in range(1, ____):\n    print(i)",
+      "answer": "5",
+      "acceptable": [
+        "5"
+      ],
+      "explanation": "To end at 4, stop is 5 (one past). range(1, 5) gives 1, 2, 3, 4."
+    },
+    {
+      "id": "u38l02e07",
+      "type": "matchPairs",
+      "prompt": "Match each range to the values it produces.",
+      "pairs": [
+        {
+          "left": "range(1, 4)",
+          "right": "1, 2, 3"
+        },
+        {
+          "left": "range(3, 6)",
+          "right": "3, 4, 5"
+        },
+        {
+          "left": "range(0, 3)",
+          "right": "0, 1, 2"
+        }
+      ],
+      "explanation": "Start included, stop excluded. The values run from start up to stop minus one."
+    },
+    {
+      "id": "u38l02e08",
+      "type": "multipleChoice",
+      "prompt": "How many passes does range(3, 7) make?",
+      "options": [
+        "4 (values 3, 4, 5, 6)",
+        "7",
+        "3",
+        "5"
+      ],
+      "answer": 0,
+      "explanation": "3, 4, 5, 6 is four values. A handy trick: stop minus start = 7 - 3 = 4 passes."
+    },
+    {
+      "id": "u38l02e09",
+      "type": "multipleChoice",
+      "prompt": "A scoreboard needs to label rounds 1 through 10. Which range?",
+      "options": [
+        "range(1, 11)",
+        "range(1, 10)",
+        "range(0, 10)",
+        "range(10)"
+      ],
+      "answer": 0,
+      "explanation": "To include 10, stop is 11: range(1, 11) gives 1 through 10. Stop is one past the last label."
+    },
+    {
+      "id": "u38l02e10",
+      "type": "multipleChoice",
+      "prompt": "Common slip: range(1, 5) and you expected it to include 5. What actually prints?",
+      "options": [
+        "1, 2, 3, 4 — 5 is excluded",
+        "1, 2, 3, 4, 5",
+        "5 only",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "Stop is excluded, so 5 is left out. Remember: to reach 5, stop at 6. This off-by-one is worth checking every time."
+    }
+  ]
+}

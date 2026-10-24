@@ -1,0 +1,134 @@
+{
+  "unitId": "u34",
+  "lessonId": "u34l03",
+  "title": "Loop back: combining conditions",
+  "idea": "LOOP. No new concept. Review and / or / not in unseen decision problems, including the both/either distinction.",
+  "exercises": [
+    {
+      "id": "u34l03e01",
+      "type": "multipleChoice",
+      "prompt": "What prints?\n\nrain = True\nhave_umbrella = False\nif rain and not have_umbrella:\n    print(\"Stay in\")\nelse:\n    print(\"Go out\")",
+      "options": [
+        "Stay in",
+        "Go out",
+        "True",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "rain is True and 'not have_umbrella' is True, so 'and' is True: 'Stay in'. (Review of and/not.)"
+    },
+    {
+      "id": "u34l03e02",
+      "type": "multipleChoice",
+      "prompt": "'A or B' is true when...",
+      "options": [
+        "at least one of A or B is true",
+        "both are true",
+        "both are false",
+        "never"
+      ],
+      "answer": 0,
+      "explanation": "'or' needs only one true side. (Review of or.)"
+    },
+    {
+      "id": "u34l03e03",
+      "type": "multipleChoice",
+      "prompt": "A rule: 'free gift if member AND spent 50+'. For a member who spent 20, is the gift given?",
+      "options": [
+        "No - 'and' needs both, and the spend is too low",
+        "Yes",
+        "Only if not a member",
+        "It errors"
+      ],
+      "answer": 0,
+      "explanation": "'and' requires both conditions; one fails, so no gift. (Review of and.)"
+    },
+    {
+      "id": "u34l03e04",
+      "type": "trueFalse",
+      "prompt": "To accept either 'cash' or 'card', you should use 'or' between two comparisons.",
+      "answer": true,
+      "explanation": "'either' means 'or'. Each side is a full comparison. (Review of or.)"
+    },
+    {
+      "id": "u34l03e05",
+      "type": "multipleChoice",
+      "prompt": "What prints?\n\nx = 5\nif x > 0 and x < 10:\n    print(\"Single digit positive\")\nelse:\n    print(\"Other\")",
+      "options": [
+        "Single digit positive",
+        "Other",
+        "5",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "5 is > 0 AND < 10, so both sides true: the first branch prints. (Review of range checks with and.)"
+    },
+    {
+      "id": "u34l03e06",
+      "type": "multipleChoice",
+      "prompt": "Why does 'if answer == \"y\" and answer == \"yes\"' never run?",
+      "options": [
+        "One value cannot equal both at once - 'or' is needed",
+        "'and' is disabled",
+        "The quotes are wrong",
+        "It does run"
+      ],
+      "answer": 0,
+      "explanation": "'and' demands both, impossible for one answer. Use 'or'. (Review of the and/or trap.)"
+    },
+    {
+      "id": "u34l03e07",
+      "type": "fillBlank",
+      "prompt": "Fill the keyword so the gift needs BOTH conditions:\n\nif is_member ____ spent >= 50:\n    print(\"Free gift\")",
+      "answer": "and",
+      "acceptable": ["and"],
+      "explanation": "'both' means 'and'. The gift needs membership and the spend. (Review of and.)"
+    },
+    {
+      "id": "u34l03e08",
+      "type": "multipleChoice",
+      "prompt": "What does 'not (3 > 5)' evaluate to?",
+      "options": [
+        "True",
+        "False",
+        "3",
+        "5"
+      ],
+      "answer": 0,
+      "explanation": "3 > 5 is False, and 'not False' is True. (Review of not.)"
+    },
+    {
+      "id": "u34l03e09",
+      "type": "matchPairs",
+      "prompt": "Match each phrasing to the operator it needs.",
+      "pairs": [
+        {
+          "left": "must be adult AND verified",
+          "right": "and"
+        },
+        {
+          "left": "accept tea OR coffee",
+          "right": "or"
+        },
+        {
+          "left": "if it is NOT raining",
+          "right": "not"
+        }
+      ],
+      "explanation": "both -> and, either -> or, negation -> not. (Review of boolean operators.)"
+    },
+    {
+      "id": "u34l03e10",
+      "type": "multipleChoice",
+      "prompt": "What prints?\n\nlogged_in = True\nis_admin = False\nif logged_in and is_admin:\n    print(\"Admin panel\")\nelse:\n    print(\"No access\")",
+      "options": [
+        "No access",
+        "Admin panel",
+        "True",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "'and' needs both true, but is_admin is False, so 'No access'. (Review of and.)"
+    }
+  ]
+}

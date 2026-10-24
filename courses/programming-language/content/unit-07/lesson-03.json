@@ -1,0 +1,120 @@
+{
+  "unitId": "u07",
+  "lessonId": "u07l03",
+  "title": "Putting the steps in order",
+  "idea": "Steps must run in a sensible order. The same steps in the wrong order give the wrong result.",
+  "exercises": [
+    {
+      "id": "u07l03e01",
+      "type": "orderBlocks",
+      "prompt": "Put these steps for making tea in a sensible order.",
+      "blocks": [
+        "Boil the water",
+        "Add the tea bag",
+        "Pour and drink"
+      ],
+      "answer": [0, 1, 2],
+      "explanation": "Water first, then the tea bag, then pour and drink. Order makes the result come out right."
+    },
+    {
+      "id": "u07l03e02",
+      "type": "trueFalse",
+      "prompt": "The same steps in a different order can give a different result.",
+      "answer": true,
+      "explanation": "Yes. Socks before shoes works; shoes before socks does not. Order matters a lot."
+    },
+    {
+      "id": "u07l03e03",
+      "type": "orderBlocks",
+      "prompt": "Task: greet, then give a name, then say goodbye. Order the show-steps.",
+      "blocks": [
+        "Show Hello",
+        "Show the name",
+        "Show Goodbye"
+      ],
+      "answer": [0, 1, 2],
+      "explanation": "Greeting first, name in the middle, goodbye last. That reads the way we expect."
+    },
+    {
+      "id": "u07l03e04",
+      "type": "multipleChoice",
+      "prompt": "A program runs its steps in what order?",
+      "options": [
+        "Top to bottom, one after another",
+        "Bottom to top",
+        "All at the same time",
+        "In a random order"
+      ],
+      "answer": 0,
+      "explanation": "The computer runs each line top to bottom, in order. So your steps must be listed in the order you want them to happen."
+    },
+    {
+      "id": "u07l03e05",
+      "type": "orderBlocks",
+      "prompt": "Order these steps for sending a letter.",
+      "blocks": [
+        "Write the letter",
+        "Put it in an envelope",
+        "Mail it"
+      ],
+      "answer": [0, 1, 2],
+      "explanation": "Write, then envelope, then mail. You can't mail a letter you haven't written yet."
+    },
+    {
+      "id": "u07l03e06",
+      "type": "multipleChoice",
+      "prompt": "Task: show a title, then show the author below it. Which order is right?",
+      "options": [
+        "Show the title first, then the author",
+        "Show the author first, then the title",
+        "Show them at the same time",
+        "Order does not matter here"
+      ],
+      "answer": 0,
+      "explanation": "The task said the author goes BELOW the title, so the title must be shown first."
+    },
+    {
+      "id": "u07l03e07",
+      "type": "trueFalse",
+      "prompt": "If a task says 'first A, then B', the plan should list A before B.",
+      "answer": true,
+      "explanation": "Yes. The order in the task tells you the order in the plan."
+    },
+    {
+      "id": "u07l03e08",
+      "type": "orderBlocks",
+      "prompt": "Order the steps to introduce a pet: show the pet's name, then what sound it makes.",
+      "blocks": [
+        "Show the pet's name",
+        "Show the sound it makes"
+      ],
+      "answer": [0, 1],
+      "explanation": "Name first, then the sound. Even two steps need the right order."
+    },
+    {
+      "id": "u07l03e09",
+      "type": "multipleChoice",
+      "prompt": "You wrote: show Goodbye, then show Hello. What is wrong?",
+      "options": [
+        "The steps are in the wrong order",
+        "There are too many steps",
+        "Hello is spelled wrong",
+        "Nothing is wrong"
+      ],
+      "answer": 0,
+      "explanation": "Saying goodbye before hello is backwards. The steps are right but the order is wrong."
+    },
+    {
+      "id": "u07l03e10",
+      "type": "orderBlocks",
+      "prompt": "Order the steps for a short welcome: show Welcome, show your name, show Enjoy.",
+      "blocks": [
+        "Show Welcome",
+        "Show your name",
+        "Show Enjoy"
+      ],
+      "answer": [0, 1, 2],
+      "explanation": "Welcome, name, Enjoy — a friendly order. You've mastered putting steps in line!"
+    }
+  ]
+}

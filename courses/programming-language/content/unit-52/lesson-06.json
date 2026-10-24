@@ -1,0 +1,128 @@
+{
+  "unitId": "u52",
+  "lessonId": "u52l06",
+  "title": "Picking a word out by position",
+  "idea": "Indexing works the same for a list of words. The index gives back one word. Mixes review of strings and print.",
+  "exercises": [
+    {
+      "id": "u52l06e01",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\ndays = [\"Mon\", \"Tue\", \"Wed\"]\nprint(days[0])",
+      "options": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "Index 0 is the first word, \"Mon\". When you print a single word from a list, the quotes are not shown — just the text Mon."
+    },
+    {
+      "id": "u52l06e02",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nnames = [\"Ada\", \"Grace\", \"Alan\"]\nprint(names[2])",
+      "options": [
+        "Alan",
+        "Grace",
+        "Ada",
+        "2"
+      ],
+      "answer": 0,
+      "explanation": "Positions: Ada at 0, Grace at 1, Alan at 2. So names[2] gives the third name, Alan."
+    },
+    {
+      "id": "u52l06e03",
+      "type": "trueFalse",
+      "prompt": "Indexing a list of words follows the same 0-based rule as a list of numbers.",
+      "answer": true,
+      "explanation": "Yes. Whether the values are numbers or words, the first is at index 0. The rule does not change with the kind of value."
+    },
+    {
+      "id": "u52l06e04",
+      "type": "multipleChoice",
+      "prompt": "Note the difference. Predict the output:\n\ncolors = [\"red\", \"green\"]\nprint(colors)",
+      "options": [
+        "['red', 'green']",
+        "red",
+        "green",
+        "red green"
+      ],
+      "answer": 0,
+      "explanation": "Printing the WHOLE list shows brackets and quotes: ['red', 'green']. Only when you index ONE word do you get bare text."
+    },
+    {
+      "id": "u52l06e05",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\ncolors = [\"red\", \"green\"]\nprint(colors[0])",
+      "options": [
+        "red",
+        "['red', 'green']",
+        "'red'",
+        "green"
+      ],
+      "answer": 0,
+      "explanation": "colors[0] is the single word \"red\". Printing one string shows just its text: red, with no brackets or quotes."
+    },
+    {
+      "id": "u52l06e06",
+      "type": "matchPairs",
+      "prompt": "For fruits = [\"apple\", \"pear\", \"plum\"], match each index to its word.",
+      "pairs": [
+        {
+          "left": "fruits[0]",
+          "right": "apple"
+        },
+        {
+          "left": "fruits[1]",
+          "right": "pear"
+        },
+        {
+          "left": "fruits[-1]",
+          "right": "plum"
+        }
+      ],
+      "explanation": "apple is first (0), pear is second (1), and -1 reaches the last word, plum."
+    },
+    {
+      "id": "u52l06e07",
+      "type": "fillBlank",
+      "prompt": "Complete the line to print the SECOND name:\n\nnames = [\"Sam\", \"Lee\", \"Kai\"]\nprint(names[____])",
+      "answer": "1",
+      "acceptable": ["1"],
+      "explanation": "The second name is at index 1 (Lee). The first, Sam, would be index 0."
+    },
+    {
+      "id": "u52l06e08",
+      "type": "multipleChoice",
+      "prompt": "You can join an indexed word to other text with +. Predict the output:\n\nnames = [\"Ada\", \"Grace\"]\nprint(\"Hi \" + names[0])",
+      "options": [
+        "Hi Ada",
+        "Hi names[0]",
+        "Hi Grace",
+        "Ada"
+      ],
+      "answer": 0,
+      "explanation": "names[0] is \"Ada\", and \"Hi \" + \"Ada\" joins to \"Hi Ada\". An indexed word behaves just like any string."
+    },
+    {
+      "id": "u52l06e09",
+      "type": "trueFalse",
+      "prompt": "A word pulled from a list can be used in string joining, just like any other string.",
+      "answer": true,
+      "explanation": "Yes. Indexing gives back an ordinary string, so you can join it with + or use it anywhere a string fits."
+    },
+    {
+      "id": "u52l06e10",
+      "type": "multipleChoice",
+      "prompt": "A menu = [\"soup\", \"salad\", \"pasta\"]. Which line greets with today's special (the first item)?",
+      "options": [
+        "print(\"Today: \" + menu[0])",
+        "print(\"Today: \" + menu)",
+        "print(\"Today: \" + menu[3])",
+        "print(menu[1])"
+      ],
+      "answer": 0,
+      "explanation": "menu[0] is \"soup\", and joining gives \"Today: soup\". Indexing picks the first item; printing the whole menu would show the brackets."
+    }
+  ]
+}

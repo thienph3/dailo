@@ -1,0 +1,132 @@
+{
+  "unitId": "u73",
+  "lessonId": "u73l06",
+  "title": "Using a returned value right away",
+  "idea": "TOOL: you can feed a returned value straight into print, another call, or an expression.",
+  "exercises": [
+    {
+      "id": "u73l06e01",
+      "type": "multipleChoice",
+      "prompt": "def double(n):\n    return n * 2\n\nprint(double(6))\n\nWhat prints?",
+      "options": [
+        "12",
+        "6",
+        "double",
+        "None"
+      ],
+      "answer": 0,
+      "explanation": "double(6) returns 12, and print shows it. You can print a returned value without storing it first."
+    },
+    {
+      "id": "u73l06e02",
+      "type": "multipleChoice",
+      "prompt": "def add(a, b):\n    return a + b\n\nbill = add(10, 5) * 2\n\nWhat is bill?",
+      "options": [
+        "30",
+        "15",
+        "20",
+        "25"
+      ],
+      "answer": 0,
+      "explanation": "add(10,5) returns 15, then 15 * 2 = 30. The returned value joins the expression like any number."
+    },
+    {
+      "id": "u73l06e03",
+      "type": "multipleChoice",
+      "prompt": "def tax(p):\n    return p * 0.2\n\ntotal = 100 + tax(100)\n\nWhat is total?",
+      "options": [
+        "120.0",
+        "100",
+        "20",
+        "tax"
+      ],
+      "answer": 0,
+      "explanation": "tax(100) returns 20.0, then 100 + 20.0 = 120.0. The returned value is added right into the sum."
+    },
+    {
+      "id": "u73l06e04",
+      "type": "trueFalse",
+      "prompt": "You can use a call's returned value without ever putting it in a variable.",
+      "answer": true,
+      "explanation": "Yes. 'print(double(6))' uses the returned value immediately. Storing it first is optional."
+    },
+    {
+      "id": "u73l06e05",
+      "type": "multipleChoice",
+      "prompt": "def half(n):\n    return n / 2\n\nif half(10) > 4:\n    print(\"big\")\n\nWhat prints?",
+      "options": [
+        "big",
+        "4",
+        "5.0",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "half(10) returns 5.0; 5.0 > 4 is True, so 'big' prints. A returned value can be compared like any number."
+    },
+    {
+      "id": "u73l06e06",
+      "type": "multipleChoice",
+      "prompt": "def square(n):\n    return n * n\n\nx = square(3) + square(4)\n\nWhat is x?",
+      "options": [
+        "25",
+        "7",
+        "49",
+        "12"
+      ],
+      "answer": 0,
+      "explanation": "square(3)=9 and square(4)=16; 9 + 16 = 25. Each call becomes its value, then they add."
+    },
+    {
+      "id": "u73l06e07",
+      "type": "orderBlocks",
+      "prompt": "Order how 'print(add(2, 3))' runs, where add returns a + b.",
+      "blocks": [
+        "add(2, 3) runs and returns 5",
+        "print receives 5",
+        "5 appears on screen"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "The inner call resolves to its returned value first, then print shows it. Inside-out order."
+    },
+    {
+      "id": "u73l06e08",
+      "type": "fillBlank",
+      "prompt": "def triple(n):\n    return n * 3\n\nFill the blank so it prints 15:\nprint(triple(____))",
+      "answer": "5",
+      "acceptable": [
+        "5"
+      ],
+      "explanation": "triple(5) returns 5 * 3 = 15, which print shows. Choose the input that makes the result 15."
+    },
+    {
+      "id": "u73l06e09",
+      "type": "multipleChoice",
+      "prompt": "REVIEW: 'if half(10) > 4' combines a call with which earlier tool?",
+      "options": [
+        "a comparison (>)",
+        "a loop",
+        "a list",
+        "input()"
+      ],
+      "answer": 0,
+      "explanation": "The returned value is compared with >. Returned values work with every tool that works on numbers."
+    },
+    {
+      "id": "u73l06e10",
+      "type": "multipleChoice",
+      "prompt": "def add(a, b):\n    return a + b\n\nprint(add(add(1, 1), add(2, 2)))\n\nWhat prints?",
+      "options": [
+        "6",
+        "4",
+        "2",
+        "add"
+      ],
+      "answer": 0,
+      "explanation": "add(1,1)=2 and add(2,2)=4; then add(2,4)=6. Resolve the inner calls to values, then the outer call."
+    }
+  ]
+}

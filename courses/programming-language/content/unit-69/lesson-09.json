@@ -1,0 +1,145 @@
+{
+  "unitId": "u69",
+  "lessonId": "u69l09",
+  "title": "Choosing the sub-jobs yourself",
+  "idea": "MEET: given a fresh task, pick a sensible set of named sub-jobs. No code.",
+  "exercises": [
+    {
+      "id": "u69l09e01",
+      "type": "multipleChoice",
+      "prompt": "NEW TASK: 'Run a short quiz: ask three questions, count the right answers, then show the score.' A good first sub-job is...",
+      "options": [
+        "Ask the questions",
+        "Show the score",
+        "Count the right answers",
+        "Close the app"
+      ],
+      "answer": 0,
+      "explanation": "Reading in order, asking the questions comes first. You pick the sub-jobs by following the task's order."
+    },
+    {
+      "id": "u69l09e02",
+      "type": "orderBlocks",
+      "prompt": "Order the three sub-jobs of that quiz task.",
+      "blocks": [
+        "Show the score",
+        "Ask the questions",
+        "Count the right answers"
+      ],
+      "answer": [
+        1,
+        2,
+        0
+      ],
+      "explanation": "Ask, then count, then show. The sub-jobs run in the order the task describes."
+    },
+    {
+      "id": "u69l09e03",
+      "type": "multipleChoice",
+      "prompt": "NEW TASK: 'Print a star border, print a title, print the same star border again.' Which sub-job REPEATS?",
+      "options": [
+        "Print the star border",
+        "Print the title",
+        "Nothing repeats",
+        "All of them"
+      ],
+      "answer": 0,
+      "explanation": "The border job appears at the top and bottom - it repeats. That's the job worth naming once."
+    },
+    {
+      "id": "u69l09e04",
+      "type": "multiSelect",
+      "prompt": "For the border task, which named sub-jobs make sense? (Pick all.)",
+      "options": [
+        "print the star border",
+        "print the title",
+        "repaint the house",
+        "learn to swim"
+      ],
+      "answer": [
+        0,
+        1
+      ],
+      "explanation": "The border and the title are the real jobs. The other two have nothing to do with the task."
+    },
+    {
+      "id": "u69l09e05",
+      "type": "multipleChoice",
+      "prompt": "NEW TASK: 'For each player, greet them and show their score.' What's the repeated set of jobs?",
+      "options": [
+        "greet + show score, once per player",
+        "greet only, once ever",
+        "nothing repeats",
+        "the app restarts each time"
+      ],
+      "answer": 0,
+      "explanation": "For every player you greet and show a score - a repeated pair of jobs. Repetition says 'reuse me'."
+    },
+    {
+      "id": "u69l09e06",
+      "type": "matchPairs",
+      "prompt": "Match each new task to a sensible sub-job inside it.",
+      "pairs": [
+        {
+          "left": "run a quiz",
+          "right": "count the right answers"
+        },
+        {
+          "left": "check out a basket",
+          "right": "apply the discount"
+        },
+        {
+          "left": "greet every player",
+          "right": "print one greeting"
+        }
+      ],
+      "explanation": "Given any task, you can now name its sub-jobs. That's the planning skill of this whole unit."
+    },
+    {
+      "id": "u69l09e07",
+      "type": "multipleChoice",
+      "prompt": "REVIEW: the quiz sub-job 'count the right answers' uses which tool?",
+      "options": [
+        "a count with a condition",
+        "a sum of all answers",
+        "a search for one answer",
+        "input() only"
+      ],
+      "answer": 0,
+      "explanation": "'Count the right answers' tallies the ones that pass the test - a count with a condition."
+    },
+    {
+      "id": "u69l09e08",
+      "type": "trueFalse",
+      "prompt": "There can be more than one reasonable way to split a task into sub-jobs.",
+      "answer": true,
+      "explanation": "True. Different sensible splits can all work, as long as each sub-job is clear and the parts cover the task."
+    },
+    {
+      "id": "u69l09e09",
+      "type": "multipleChoice",
+      "prompt": "What makes a split 'good'?",
+      "options": [
+        "Each sub-job is clear, and together they do the whole task",
+        "It has exactly one job always",
+        "It uses the biggest numbers",
+        "It has no names"
+      ],
+      "answer": 0,
+      "explanation": "A good split covers the whole task with clear, named jobs - none missing, none vague."
+    },
+    {
+      "id": "u69l09e10",
+      "type": "multipleChoice",
+      "prompt": "You can now take a fresh task and...",
+      "options": [
+        "name a sensible set of sub-jobs, in order, spotting any repeats",
+        "only print one line",
+        "avoid all planning",
+        "solve it without thinking"
+      ],
+      "answer": 0,
+      "explanation": "That's the goal of this MEET unit: read a task and decompose it into named sub-jobs - ready to code next."
+    }
+  ]
+}

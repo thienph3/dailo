@@ -1,0 +1,118 @@
+{
+  "unitId": "u07",
+  "lessonId": "u07l01",
+  "title": "Some tasks need a few steps",
+  "idea": "A bigger task is easier when you break it into 2-3 smaller steps. No code yet — just the idea.",
+  "exercises": [
+    {
+      "id": "u07l01e01",
+      "type": "multipleChoice",
+      "prompt": "A task feels too big to do all at once. What is a smart first move?",
+      "options": [
+        "Break it into a few smaller steps",
+        "Do it all in one giant action",
+        "Skip it",
+        "Guess the answer"
+      ],
+      "answer": 0,
+      "explanation": "Breaking a big task into a few small steps makes it easy to do one piece at a time. This is called decomposition."
+    },
+    {
+      "id": "u07l01e02",
+      "type": "trueFalse",
+      "prompt": "'Make a sandwich' can be broken into smaller steps like get bread, add filling, close it.",
+      "answer": true,
+      "explanation": "Yes! Almost any task hides a few smaller steps inside it. Spotting them is the skill."
+    },
+    {
+      "id": "u07l01e03",
+      "type": "multipleChoice",
+      "prompt": "Which of these is already one tiny step, not something to break up more?",
+      "options": [
+        "Say hello",
+        "Plan a whole party",
+        "Cook a three-course dinner",
+        "Clean the entire house"
+      ],
+      "answer": 0,
+      "explanation": "'Say hello' is already a single tiny action. The others are big tasks made of many smaller steps."
+    },
+    {
+      "id": "u07l01e04",
+      "type": "multipleChoice",
+      "prompt": "How many steps do we aim for when breaking a small task in this unit?",
+      "options": [
+        "About 2 or 3",
+        "Exactly 100",
+        "Zero",
+        "As many as possible"
+      ],
+      "answer": 0,
+      "explanation": "For now we break a task into just 2 or 3 steps. Small and clear beats long and messy."
+    },
+    {
+      "id": "u07l01e05",
+      "type": "trueFalse",
+      "prompt": "Breaking a task into steps makes each piece easier to think about.",
+      "answer": true,
+      "explanation": "One small step at a time is far easier than one huge leap. That is the whole point."
+    },
+    {
+      "id": "u07l01e06",
+      "type": "matchPairs",
+      "prompt": "Match each word to what it means.",
+      "pairs": [
+        { "left": "Task", "right": "The whole thing you want to do" },
+        { "left": "Step", "right": "One small part of the task" },
+        { "left": "Plan", "right": "The steps written in order" }
+      ],
+      "explanation": "A task is the big goal. Steps are the small parts. A plan is those steps in order."
+    },
+    {
+      "id": "u07l01e07",
+      "type": "multiSelect",
+      "prompt": "Task: 'Greet someone warmly.' Which of these are reasonable smaller steps?",
+      "options": [
+        "Say hello",
+        "Say their name",
+        "Fly to the moon",
+        "Ask how they are"
+      ],
+      "answer": [0, 1, 3],
+      "explanation": "Hello, their name, and asking how they are all fit the task. Flying to the moon has nothing to do with it."
+    },
+    {
+      "id": "u07l01e08",
+      "type": "multipleChoice",
+      "prompt": "Why do we break a task into steps BEFORE writing any code?",
+      "options": [
+        "So we know exactly what to tell the computer, one piece at a time",
+        "Because code is not allowed",
+        "To make the task longer",
+        "So we never have to think"
+      ],
+      "answer": 0,
+      "explanation": "A clear list of steps tells us what each line of code should do. Think first, type second."
+    },
+    {
+      "id": "u07l01e09",
+      "type": "trueFalse",
+      "prompt": "A task with just 2 or 3 steps still counts as a plan.",
+      "answer": true,
+      "explanation": "Yes. A plan can be short. Two clear steps in order is a perfectly good plan."
+    },
+    {
+      "id": "u07l01e10",
+      "type": "multipleChoice",
+      "prompt": "You learned the show -> example -> check rhythm. Where does 'break into steps' fit best?",
+      "options": [
+        "It helps you make the plan before you code",
+        "It replaces checking your output",
+        "It only happens after the code runs",
+        "It is never useful"
+      ],
+      "answer": 0,
+      "explanation": "Breaking into steps is how you plan. Then you code each step, then you check. Nice work spotting the fit!"
+    }
+  ]
+}

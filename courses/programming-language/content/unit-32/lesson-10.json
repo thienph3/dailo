@@ -1,0 +1,141 @@
+{
+  "unitId": "u32",
+  "lessonId": "u32l10",
+  "title": "A debugging checklist",
+  "idea": "REVIEW. Pull the unit together: a short mental checklist for finding why a decision gives the wrong answer.",
+  "exercises": [
+    {
+      "id": "u32l10e01",
+      "type": "orderBlocks",
+      "prompt": "Put the debugging checklist in order.",
+      "blocks": [
+        "Work out the correct answer by hand",
+        "Run and compare with the actual output",
+        "Check the boundaries (> vs >=)",
+        "Check the branch order and the and/or joiners"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "Decide the right answer by hand, run and compare, then check boundary, order, joiner, and missed cases."
+    },
+    {
+      "id": "u32l10e02",
+      "type": "multipleChoice",
+      "prompt": "First checklist item when a decision looks wrong?",
+      "options": [
+        "Work out the correct answer by hand",
+        "Rewrite everything",
+        "Add random prints",
+        "Blame the computer"
+      ],
+      "answer": 0,
+      "explanation": "Know the correct answer by hand first; without it you cannot tell the output is wrong."
+    },
+    {
+      "id": "u32l10e03",
+      "type": "multipleChoice",
+      "prompt": "The rule says 'at most 5 items' and the code is if items < 5. Which checklist item catches this?",
+      "options": [
+        "The boundary check: < should be <=",
+        "The and/or check",
+        "The spelling check",
+        "The order check"
+      ],
+      "answer": 0,
+      "explanation": "'at most 5' includes 5, so < misses the boundary. The boundary check (< vs <=) catches it."
+    },
+    {
+      "id": "u32l10e04",
+      "type": "multipleChoice",
+      "prompt": "A specific branch never runs. Which checklist item is most relevant?",
+      "options": [
+        "The branch-order check",
+        "The int() check",
+        "The boundary check",
+        "The spelling check"
+      ],
+      "answer": 0,
+      "explanation": "An unreachable branch usually means a broader condition is listed first — the order check."
+    },
+    {
+      "id": "u32l10e05",
+      "type": "multipleChoice",
+      "prompt": "A rule needs BOTH conditions but the code lets EITHER pass. Which item?",
+      "options": [
+        "The and/or joiner check",
+        "The order check",
+        "The int() check",
+        "The boundary check"
+      ],
+      "answer": 0,
+      "explanation": "That is the and/or check: 'both' means and; the code wrongly used or."
+    },
+    {
+      "id": "u32l10e06",
+      "type": "multipleChoice",
+      "prompt": "An input comparison gives odd results and the value came from input(). Which item?",
+      "options": [
+        "The int()/type check",
+        "The order check",
+        "The and/or check",
+        "The spelling check"
+      ],
+      "answer": 0,
+      "explanation": "The int() check: text from input() must be converted before number comparisons."
+    },
+    {
+      "id": "u32l10e07",
+      "type": "multipleChoice",
+      "prompt": "Some inputs print nothing at all. Which item?",
+      "options": [
+        "The missed-case / coverage check",
+        "The boundary check",
+        "The int() check",
+        "The and/or check"
+      ],
+      "answer": 0,
+      "explanation": "The missed-case check: a range has no branch (often needs an else)."
+    },
+    {
+      "id": "u32l10e08",
+      "type": "trueFalse",
+      "prompt": "Tracing a boundary value and a middle value catches most decision bugs.",
+      "answer": true,
+      "explanation": "True. Boundaries expose > vs >= bugs; middle values expose missed cases and order bugs."
+    },
+    {
+      "id": "u32l10e09",
+      "type": "multiSelect",
+      "prompt": "Select the reasoning checks on our debugging checklist.",
+      "options": [
+        "Boundary (> vs >=)",
+        "Branch order",
+        "and/or joiner",
+        "Favorite color of the variable"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Boundaries, branch order, and/or joiners, and missed cases are all reasoning checks we learned this unit."
+    },
+    {
+      "id": "u32l10e10",
+      "type": "multipleChoice",
+      "prompt": "You applied the checklist and the output now matches your hand answer for several inputs. What can you say?",
+      "options": [
+        "The reasoning is very likely correct now",
+        "It can never be trusted",
+        "You must change the hand answers",
+        "Nothing is proven"
+      ],
+      "answer": 0,
+      "explanation": "Matching the hand answer across varied inputs (including boundaries) gives good confidence the logic is fixed."
+    }
+  ]
+}

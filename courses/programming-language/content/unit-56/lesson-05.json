@@ -1,0 +1,147 @@
+{
+  "unitId": "u56",
+  "lessonId": "u56l05",
+  "title": "Solve it together: find the wrong approach",
+  "idea": "GUIDED UEPCC with a wrong-approach focus. Print each temperature labelled hot/cold; spot and fix a flawed plan.",
+  "problem": "For each temperature in a list, print 'hot' if it is above 30, otherwise 'cold'.",
+  "exercises": [
+    {
+      "id": "u56l05e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: For each temperature, print 'hot' if above 30, else 'cold'.\n\nWhat is the OUTPUT?",
+      "options": [
+        "One label (hot/cold) per temperature",
+        "A single label for the list",
+        "The hottest temperature",
+        "The count of hot days"
+      ],
+      "answer": 0,
+      "explanation": "One label per item — a per-item decision, not a single summary."
+    },
+    {
+      "id": "u56l05e02",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example by hand. temps = [25, 35, 30]. What labels, in order?",
+      "options": [
+        "cold, hot, cold",
+        "hot, cold, hot",
+        "cold, cold, cold",
+        "hot, hot, hot"
+      ],
+      "answer": 0,
+      "explanation": "25 not above 30 -> cold; 35 above -> hot; 30 is NOT above 30 -> cold. Mind the edge at 30."
+    },
+    {
+      "id": "u56l05e03",
+      "type": "trueFalse",
+      "uepcc": "E",
+      "prompt": "A temperature of exactly 30 is 'cold' here, because the rule says ABOVE 30 (strictly greater).",
+      "answer": true,
+      "explanation": "'Above 30' means > 30, so 30 itself does not count as hot. Checking the edge by hand avoids a classic bug."
+    },
+    {
+      "id": "u56l05e04",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Plan: for each temp, decide hot/cold. Which tools?",
+      "options": [
+        "for-each loop + if/else",
+        "for-each + append only",
+        "two ifs, no loop",
+        "range + print"
+      ],
+      "answer": 0,
+      "explanation": "Walk with for-each; choose with if/else so every item prints exactly one label."
+    },
+    {
+      "id": "u56l05e05",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "A friend plans: 'check only the first temperature, then print one label for the whole list.' Why is that wrong?",
+      "options": [
+        "It ignores the other temperatures — each needs its own label",
+        "It uses too many loops",
+        "It is too slow",
+        "It needs input()"
+      ],
+      "answer": 0,
+      "explanation": "The problem is per-item. Judging only the first temperature drops the rest — the wrong shape entirely."
+    },
+    {
+      "id": "u56l05e06",
+      "type": "multipleChoice",
+      "uepcc": "C",
+      "prompt": "Which comparison correctly tests 'above 30'?",
+      "options": [
+        "temp > 30",
+        "temp >= 30",
+        "temp < 30",
+        "temp == 30"
+      ],
+      "answer": 0,
+      "explanation": "'Above 30' is strictly greater: temp > 30. (>= would wrongly call 30 hot.)"
+    },
+    {
+      "id": "u56l05e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Arrange the solution.",
+      "blocks": [
+        "        print(\"hot\")",
+        "    if temp > 30:",
+        "    else:",
+        "        print(\"cold\")",
+        "for temp in temps:"
+      ],
+      "answer": [
+        4,
+        1,
+        0,
+        2,
+        3
+      ],
+      "explanation": "Loop header, if (indent 1) + its print (indent 2), else (indent 1) + its print (indent 2)."
+    },
+    {
+      "id": "u56l05e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Fill the keyword that gives the other branch:\n\nfor temp in temps:\n    if temp > 30:\n        print(\"hot\")\n    ____:\n        print(\"cold\")",
+      "answer": "else",
+      "acceptable": [
+        "else"
+      ],
+      "explanation": "else runs when the if is false, so every temperature gets exactly one label."
+    },
+    {
+      "id": "u56l05e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check. Code on [25, 35, 30] prints cold, hot, cold. Hand example said cold, hot, cold. Verdict?",
+      "options": [
+        "Passes",
+        "Fails",
+        "Unknown",
+        "Change the rule"
+      ],
+      "answer": 0,
+      "explanation": "Matches, including the tricky 30 -> cold edge. Correct."
+    },
+    {
+      "id": "u56l05e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Re-check with temps = [31, 30]. What prints?",
+      "options": [
+        "hot, cold",
+        "cold, hot",
+        "hot, hot",
+        "cold, cold"
+      ],
+      "answer": 0,
+      "explanation": "31 > 30 -> hot; 30 is not > 30 -> cold. The edge still behaves."
+    }
+  ]
+}

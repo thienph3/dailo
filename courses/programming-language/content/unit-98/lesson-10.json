@@ -1,0 +1,148 @@
+{
+  "unitId": "u98",
+  "lessonId": "u98l10",
+  "title": "Capstone: does a list contain a duplicate?",
+  "idea": "GUIDED CAPSTONE. The toughest list puzzle: compare every pair with a nested loop and a flag — all your tools woven together.",
+  "problem": "Decide whether [4, 1, 7, 1] has any repeated value (yes — 1 appears twice).",
+  "exercises": [
+    {
+      "id": "u98l10e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: does [4, 1, 7, 1] have a duplicate? OUTPUT is...",
+      "options": [
+        "A yes/no (has a duplicate or not)",
+        "The duplicate's count",
+        "The list sorted",
+        "The sum"
+      ],
+      "answer": 0,
+      "explanation": "Output is a verdict. We check whether any value appears more than once."
+    },
+    {
+      "id": "u98l10e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "To compare every value with every other, what structure do we need?",
+      "options": [
+        "A loop inside a loop (nested loops)",
+        "One loop only",
+        "No loop",
+        "A single if"
+      ],
+      "answer": 0,
+      "explanation": "A nested loop pairs each item with every other item. That's how we check all pairs."
+    },
+    {
+      "id": "u98l10e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example by hand: comparing positions, which two positions hold equal values in [4, 1, 7, 1]?",
+      "options": [
+        "Positions 1 and 3 (both hold 1)",
+        "Positions 0 and 1",
+        "None",
+        "All"
+      ],
+      "answer": 0,
+      "explanation": "Index 1 and index 3 both hold 1 — a duplicate. Found by comparing pairs."
+    },
+    {
+      "id": "u98l10e04",
+      "type": "trueFalse",
+      "uepcc": "E",
+      "prompt": "We must avoid comparing an item with ITSELF (same position), or every item looks like a duplicate.",
+      "answer": true,
+      "explanation": "Right — compare position i with a LATER position j (j after i). That's why the inner loop starts past i."
+    },
+    {
+      "id": "u98l10e05",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Plan it. Order the steps.",
+      "blocks": [
+        "For each later item j, if numbers[i] == numbers[j], set found True",
+        "Start found as False",
+        "For each position i",
+        "found holds the verdict"
+      ],
+      "answer": [
+        1,
+        2,
+        0,
+        3
+      ],
+      "explanation": "Flag False; outer loop picks i, inner loop checks every j after i for an equal value. Nested-loop search."
+    },
+    {
+      "id": "u98l10e06",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "To avoid self-comparison and double-checking, the inner loop should start at...",
+      "options": [
+        "i + 1 (only later items)",
+        "0 (every item)",
+        "i (includes itself)",
+        "len(numbers)"
+      ],
+      "answer": 0,
+      "explanation": "Starting at i+1 compares each pair once and never an item with itself. A deliberate index choice."
+    },
+    {
+      "id": "u98l10e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code the inner comparison. Arrange the lines.",
+      "blocks": [
+        "            found = True",
+        "        if numbers[i] == numbers[j]:",
+        "    for j in range(i + 1, len(numbers)):"
+      ],
+      "answer": [
+        2,
+        1,
+        0
+      ],
+      "explanation": "Inner loop over later positions, compare the two items, flip found on a match. Deep indentation marks the nesting."
+    },
+    {
+      "id": "u98l10e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Complete the equality test between two positions:\n\nfound = False\nfor i in range(len(numbers)):\n    for j in range(i + 1, len(numbers)):\n        if numbers[i] ____ numbers[j]:\n            found = True\nprint(found)",
+      "answer": "==",
+      "acceptable": [
+        "=="
+      ],
+      "explanation": "== compares the two values. For [4,1,7,1], positions 1 and 3 match, so found becomes True."
+    },
+    {
+      "id": "u98l10e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Run it on [4, 1, 7, 1]: found is True. Hand said duplicate exists. Verdict?",
+      "options": [
+        "Passes",
+        "Fails",
+        "Unknown",
+        "Rewrite example"
+      ],
+      "answer": 0,
+      "explanation": "Matches. The nested loop found the repeated 1. You just used loops inside loops — the full toolkit!"
+    },
+    {
+      "id": "u98l10e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Re-run on [4, 1, 7, 9] (all different). What does found end as?",
+      "options": [
+        "False — no repeats",
+        "True",
+        "Unknown",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "No pair is equal, so found stays False. The 'no duplicate' case works. You've mastered nested-loop reasoning!"
+    }
+  ]
+}

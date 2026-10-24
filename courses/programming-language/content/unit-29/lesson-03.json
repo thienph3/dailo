@@ -1,0 +1,127 @@
+{
+  "unitId": "u29",
+  "lessonId": "u29l03",
+  "title": "Is it NOT this word? using !=",
+  "idea": "!= asks 'are these words different?'. It is True when the words do not match. Predict output using != on strings.",
+  "exercises": [
+    {
+      "id": "u29l03e01",
+      "type": "multipleChoice",
+      "prompt": "The != operator asks...",
+      "options": [
+        "are these two values different?",
+        "are they the same?",
+        "which is bigger?",
+        "add them"
+      ],
+      "answer": 0,
+      "explanation": "!= means 'not equal'. For words it is True when they are different, False when they match."
+    },
+    {
+      "id": "u29l03e02",
+      "type": "multipleChoice",
+      "prompt": "What is the value of this?\n\n\"cat\" != \"dog\"",
+      "options": [
+        "True",
+        "False",
+        "an error",
+        "cat"
+      ],
+      "answer": 0,
+      "explanation": "The words differ, so 'not equal' is True. != is the opposite of ==."
+    },
+    {
+      "id": "u29l03e03",
+      "type": "multipleChoice",
+      "prompt": "What is the value of this?\n\n\"cat\" != \"cat\"",
+      "options": [
+        "False",
+        "True",
+        "an error",
+        "cat"
+      ],
+      "answer": 0,
+      "explanation": "The words are the same, so 'not equal' is False. They ARE equal, so != is False."
+    },
+    {
+      "id": "u29l03e04",
+      "type": "multipleChoice",
+      "prompt": "What does this print?\n\nstatus = \"open\"\nif status != \"closed\":\n    print(\"Come in\")\nelse:\n    print(\"Sorry, closed\")",
+      "options": [
+        "Come in",
+        "Sorry, closed",
+        "open",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "\"open\" is not \"closed\", so status != \"closed\" is True and \"Come in\" prints."
+    },
+    {
+      "id": "u29l03e05",
+      "type": "multipleChoice",
+      "prompt": "Same code, but status = \"closed\". What prints?",
+      "options": [
+        "Sorry, closed",
+        "Come in",
+        "closed",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "Now status != \"closed\" is False (they match), so the else runs: \"Sorry, closed\"."
+    },
+    {
+      "id": "u29l03e06",
+      "type": "trueFalse",
+      "prompt": "== and != always give opposite answers for the same two values.",
+      "answer": true,
+      "explanation": "Yes - if two words are equal, == is True and != is False, and the other way around. They are mirror opposites."
+    },
+    {
+      "id": "u29l03e07",
+      "type": "fillBlank",
+      "prompt": "Fill the blank so the message shows only when the command is NOT \"quit\":\n\nif cmd ____ \"quit\":\n    print(\"Still running\")",
+      "answer": "!=",
+      "acceptable": ["!="],
+      "explanation": "!= means not equal, so the message runs for any command except \"quit\"."
+    },
+    {
+      "id": "u29l03e08",
+      "type": "multipleChoice",
+      "prompt": "When is != a clearer choice than ==?",
+      "options": [
+        "When you want to act on everything EXCEPT one specific word",
+        "Never",
+        "Only with numbers",
+        "When the words are long"
+      ],
+      "answer": 0,
+      "explanation": "'Do this unless the word is X' reads naturally as != X. Choose the operator that matches your intent."
+    },
+    {
+      "id": "u29l03e09",
+      "type": "multipleChoice",
+      "prompt": "What does this print?\n\nrole = \"guest\"\nif role != \"admin\":\n    print(\"Limited access\")\nelse:\n    print(\"Full access\")",
+      "options": [
+        "Limited access",
+        "Full access",
+        "guest",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "\"guest\" is not \"admin\", so != is True and \"Limited access\" prints."
+    },
+    {
+      "id": "u29l03e10",
+      "type": "multipleChoice",
+      "prompt": "The idea of != with words:",
+      "options": [
+        "It is True when the words do not match - the opposite of ==",
+        "It adds two words",
+        "It capitalizes a word",
+        "It counts letters"
+      ],
+      "answer": 0,
+      "explanation": "!= flags a mismatch. Paired with ==, you can test for a word or for anything-but a word."
+    }
+  ]
+}

@@ -1,0 +1,114 @@
+{
+  "unitId": "u96",
+  "lessonId": "u96l01",
+  "title": "Loop back: every tool is still in your hands",
+  "idea": "LOOP (review): no new concept. Recall that the whole toolkit from Laps 0-6 is available at once, and that solving means choosing and weaving the right pieces.",
+  "exercises": [
+    {
+      "id": "u96l01e01",
+      "type": "multipleChoice",
+      "prompt": "This unit is a LOOP-BACK. What does that mean?",
+      "options": [
+        "No new ideas - we recombine everything you already learned to solve fresh problems",
+        "A brand-new kind of loop",
+        "A faster version of print",
+        "A new data structure"
+      ],
+      "answer": 0,
+      "explanation": "A loop-back unit introduces nothing new. It mixes old laps together so the skills stick and transfer to unseen problems."
+    },
+    {
+      "id": "u96l01e02",
+      "type": "matchPairs",
+      "prompt": "Match each tool to the job it does.",
+      "pairs": [
+        {"left": "A repeated action over items", "right": "A loop"},
+        {"left": "A choice between paths", "right": "An if / else"},
+        {"left": "A reusable named sub-plan", "right": "A function"},
+        {"left": "Holding a value for later", "right": "A variable"}
+      ],
+      "explanation": "Loops repeat, decisions choose, functions reuse, variables remember. Knowing which tool fits which job is the core skill this unit exercises."
+    },
+    {
+      "id": "u96l01e03",
+      "type": "trueFalse",
+      "prompt": "Review (Lap 0): a variable can hold a value now and be reassigned a different value later.",
+      "answer": true,
+      "explanation": "Reassignment is a Lap 0 idea. A running total, a counter, a tracked best - all rely on reassigning a variable as we go."
+    },
+    {
+      "id": "u96l01e04",
+      "type": "multipleChoice",
+      "prompt": "Predict the output (loop + accumulator, a core weave):\n\ntotal = 0\nfor n in [4, 6, 10]:\n    total = total + n\nprint(total)",
+      "options": ["20", "10", "3", "0"],
+      "answer": 0,
+      "explanation": "The accumulator grows 0 -> 4 -> 10 -> 20. Building a sum by hand with a loop - never a builtin - is the accumulate pattern."
+    },
+    {
+      "id": "u96l01e05",
+      "type": "multipleChoice",
+      "prompt": "A problem says: 'For each order, if it is over 100, add it to a running total.' Which tools does that sentence name?",
+      "options": [
+        "A loop ('for each'), a decision ('if'), and an accumulator ('running total')",
+        "Only a print",
+        "Only a function",
+        "A brand-new tool"
+      ],
+      "answer": 0,
+      "explanation": "Reading the words tells you the tools: 'for each' is a loop, 'if' is a decision, 'running total' is an accumulator. Decomposition starts with the sentence."
+    },
+    {
+      "id": "u96l01e06",
+      "type": "orderBlocks",
+      "prompt": "Order the habit for ANY unseen problem.",
+      "blocks": [
+        "Name the inputs and the output",
+        "Break it into parts and pick a tool for each",
+        "Weave the parts and trace one example to check"
+      ],
+      "answer": [0, 1, 2],
+      "explanation": "Understand, decompose-and-choose, then build-and-check. This is the same spine you practiced - it works on problems you have never seen."
+    },
+    {
+      "id": "u96l01e07",
+      "type": "trueFalse",
+      "prompt": "Review (no-builtin rule): to find the biggest value in a list, you call max() on it.",
+      "answer": false,
+      "explanation": "This course builds the biggest by hand: seed best with the first item, then keep the larger as you loop. We never use the max builtin."
+    },
+    {
+      "id": "u96l01e08",
+      "type": "multipleChoice",
+      "prompt": "Predict the output (decision inside a loop):\n\nbig = 0\nfor n in [3, 50, 8, 90]:\n    if n > 20:\n        big = big + 1\nprint(big)",
+      "options": ["2", "4", "1", "3"],
+      "answer": 0,
+      "explanation": "50 and 90 are over 20, so big becomes 2. A choice made every turn, counting the matches - the count-with-condition pattern."
+    },
+    {
+      "id": "u96l01e09",
+      "type": "multipleChoice",
+      "prompt": "Which everyday task clearly needs a loop, a decision, AND a function together?",
+      "options": [
+        "For each student, decide pass/fail using a shared grading rule, and tally the passes",
+        "Print a single greeting",
+        "Add two fixed numbers",
+        "Store one value in a variable"
+      ],
+      "answer": 0,
+      "explanation": "'For each' (loop), 'decide pass/fail' (decision), 'shared rule' (function), 'tally' (accumulator) - all four threads in one task."
+    },
+    {
+      "id": "u96l01e10",
+      "type": "multipleChoice",
+      "prompt": "The goal of this whole unit is to...",
+      "options": [
+        "Solve unseen multi-part problems by recombining everything from Laps 0-6",
+        "Learn a new concept each lesson",
+        "Only review printing",
+        "Avoid using functions"
+      ],
+      "answer": 0,
+      "explanation": "No new concepts - just confident recombination of your full toolkit on problems you have not seen before. That is mastery."
+    }
+  ]
+}

@@ -1,0 +1,124 @@
+{
+  "unitId": "u49",
+  "lessonId": "u49l03",
+  "title": "Solve it: count the multiples of 3",
+  "idea": "GUIDED PROBLEM. A counted loop with an if inside and a counter. Choosing for (known range) and spotting the in-loop condition are the Plan steps.",
+  "problem": "How many numbers from 1 to 20 are multiples of 3? Show the count.",
+  "exercises": [
+    {
+      "id": "u49l03e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: How many numbers from 1 to 20 are multiples of 3?\n\nFirst - Understand. What is the OUTPUT?",
+      "options": [
+        "A count of how many qualify",
+        "The sum of the numbers",
+        "The number 20",
+        "The largest multiple"
+      ],
+      "answer": 0,
+      "explanation": "The output is a COUNT - 'how many'. That word is your clue you'll need a counter."
+    },
+    {
+      "id": "u49l03e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "Understand. What makes a number 'qualify'?",
+      "options": [
+        "It is a multiple of 3 (divides by 3 with no remainder)",
+        "It is even",
+        "It is bigger than 10",
+        "It ends in 3"
+      ],
+      "answer": 0,
+      "explanation": "A multiple of 3 leaves remainder 0 when divided by 3 - that's number % 3 == 0. This rule becomes the if inside the loop."
+    },
+    {
+      "id": "u49l03e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example by hand. List the multiples of 3 from 1 to 20: 3, 6, 9, 12, 15, 18. How many is that?",
+      "options": ["6", "5", "7", "3"],
+      "answer": 0,
+      "explanation": "3, 6, 9, 12, 15, 18 - six numbers. Check value: 6. Listing them by hand gives us the target."
+    },
+    {
+      "id": "u49l03e04",
+      "type": "trueFalse",
+      "uepcc": "E",
+      "prompt": "21 would also be counted if the range went that far.",
+      "answer": false,
+      "explanation": "The range stops at 20, so 21 is outside it - even though 21 is a multiple of 3. Staying inside the stated range matters."
+    },
+    {
+      "id": "u49l03e05",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Plan - choose the loop. Do we know how many numbers to check ahead of time?",
+      "options": [
+        "Yes - 1 to 20 is a known range - so a for loop",
+        "No - so a while loop",
+        "We never know",
+        "No loop is needed"
+      ],
+      "answer": 0,
+      "explanation": "Checking 1 through 20 is a fixed, known count. A for loop over range fits the walk."
+    },
+    {
+      "id": "u49l03e06",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Plan - inside the loop, what two tools do we need?",
+      "options": [
+        "An if to test the multiple-of-3 rule, and a counter to tally the matches",
+        "Two accumulators",
+        "A while and a break",
+        "Just a print"
+      ],
+      "answer": 0,
+      "explanation": "The if decides if a number qualifies; the counter adds 1 each time it does. Count-with-a-rule = loop + if + counter."
+    },
+    {
+      "id": "u49l03e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code it. Arrange the lines to match the plan.",
+      "blocks": [
+        "count = 0",
+        "for i in range(1, 21):",
+        "    if i % 3 == 0:",
+        "        count = count + 1",
+        "print(count)"
+      ],
+      "answer": [0, 1, 2, 3, 4],
+      "explanation": "Start count at 0, loop 1..20, and when i divides by 3 add 1 to count. range(1, 21) reaches 20."
+    },
+    {
+      "id": "u49l03e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Complete the test for 'multiple of 3':\n\nfor i in range(1, 21):\n    if i % 3 ____ 0:\n        count = count + 1",
+      "answer": "==",
+      "acceptable": ["=="],
+      "explanation": "A multiple of 3 leaves remainder 0, so we check i % 3 == 0. Remember == compares (= would assign)."
+    },
+    {
+      "id": "u49l03e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "The code prints 6; your hand list had 6 multiples. Verdict?",
+      "options": ["Passes", "Fails", "Unknown", "Rewrite the example"],
+      "answer": 0,
+      "explanation": "6 matches 6, so the counter and the if did their job. Passing Check."
+    },
+    {
+      "id": "u49l03e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "New version: count multiples of 5 from 1 to 20 instead (i % 5 == 0). What should it print?",
+      "options": ["4 (5, 10, 15, 20)", "3", "6", "5"],
+      "answer": 0,
+      "explanation": "5, 10, 15, 20 - four multiples. The same loop-plus-if plan handles a new rule just by changing the number."
+    }
+  ]
+}

@@ -1,0 +1,159 @@
+{
+  "unitId": "u27",
+  "lessonId": "u27l10",
+  "title": "Solve it on your own: ticket price buckets",
+  "idea": "GUIDED but review-heavy. A final multi-condition problem through UEPCC, interleaving elif, and/or, comparisons, and a guard from earlier units.",
+  "problem": "Ticket price by age: under 5 is free (print 'Free'), 5 to 17 is 'Child', 18 to 64 is 'Adult', 65 and over is 'Senior'. Given age, print the right label.",
+  "exercises": [
+    {
+      "id": "u27l10e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: under 5 Free, 5-17 Child, 18-64 Adult, 65+ Senior. Print the label for age.\n\nWhat is the OUTPUT?",
+      "options": [
+        "One label: Free, Child, Adult, or Senior",
+        "The age",
+        "The price in dollars",
+        "A count of tickets"
+      ],
+      "answer": 0,
+      "explanation": "One of four labels. The age is the only input."
+    },
+    {
+      "id": "u27l10e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "How many buckets, and what does that suggest?",
+      "options": [
+        "Four buckets - use an if/elif/elif/else chain",
+        "Two buckets - a simple if/else",
+        "One bucket - a single print",
+        "Infinite buckets - impossible"
+      ],
+      "answer": 0,
+      "explanation": "Four ordered buckets map cleanly onto an elif chain where exactly one branch wins."
+    },
+    {
+      "id": "u27l10e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "By hand: age 10. Which label?",
+      "options": [
+        "Child",
+        "Free",
+        "Adult",
+        "Senior"
+      ],
+      "answer": 0,
+      "explanation": "10 is not under 5, but it is in 5-17, so 'Child'. Your first check value."
+    },
+    {
+      "id": "u27l10e04",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "By hand: age 3. Which label?",
+      "options": [
+        "Free",
+        "Child",
+        "Adult",
+        "Senior"
+      ],
+      "answer": 0,
+      "explanation": "3 is under 5, so 'Free'. Checking the youngest bucket confirms the first test."
+    },
+    {
+      "id": "u27l10e05",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Plan: writing the chain lowest-age-first, which test comes first?",
+      "options": [
+        "age < 5 (Free)",
+        "age >= 65 (Senior)",
+        "age >= 18 (Adult)",
+        "age >= 5 (Child)"
+      ],
+      "answer": 0,
+      "explanation": "Starting with age < 5 catches the youngest, then each elif handles the next band up. Once a band matches, the rest are skipped."
+    },
+    {
+      "id": "u27l10e06",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "After 'if age < 5', why is 'elif age <= 17' enough for Child (no need to also test age >= 5)?",
+      "options": [
+        "If we reached the elif, age < 5 was already False, so age is at least 5",
+        "Because elif tests two things at once",
+        "Because 17 includes 5 automatically",
+        "It is not enough; the test is wrong"
+      ],
+      "answer": 0,
+      "explanation": "An elif only runs when earlier tests failed, so 'at least 5' is already guaranteed. The chain's order does the lower-bound work for you."
+    },
+    {
+      "id": "u27l10e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Arrange the chain from youngest to oldest.",
+      "blocks": [
+        "if age < 5:",
+        "    print(\"Free\")",
+        "elif age <= 17:",
+        "    print(\"Child\")",
+        "elif age <= 64:",
+        "    print(\"Adult\")",
+        "else:",
+        "    print(\"Senior\")"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "explanation": "Free, Child, Adult, then Senior as the else. Each elif's lower bound is handled by the tests above it."
+    },
+    {
+      "id": "u27l10e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Complete the Child upper bound so 17 is included:\n\nif age < 5:\n    print(\"Free\")\nelif age __ 17:\n    print(\"Child\")",
+      "answer": "<=",
+      "acceptable": [
+        "<="
+      ],
+      "explanation": "<= 17 includes 17 itself. A plain < would push a 17-year-old into the Adult band by mistake."
+    },
+    {
+      "id": "u27l10e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check the first example: age 10. What prints?",
+      "options": [
+        "Child",
+        "Free",
+        "Adult",
+        "Senior"
+      ],
+      "answer": 0,
+      "explanation": "10 < 5 False, 10 <= 17 True, so 'Child' - matching your hand answer."
+    },
+    {
+      "id": "u27l10e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Re-check the Senior edge: age 65. What prints?",
+      "options": [
+        "Senior",
+        "Adult",
+        "Child",
+        "Free"
+      ],
+      "answer": 0,
+      "explanation": "65 fails < 5, <= 17, and <= 64, so it falls to the else: 'Senior'. Testing the boundary proves the chain covers it. You solved it with UEPCC!"
+    }
+  ]
+}

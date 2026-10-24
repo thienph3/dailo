@@ -1,0 +1,136 @@
+{
+  "unitId": "u71",
+  "lessonId": "u71l10",
+  "title": "Put it together: def and call",
+  "idea": "LOOP: mix recall across the unit - define vs run, calling, reuse, tracing. Review-heavy.",
+  "exercises": [
+    {
+      "id": "u71l10e01",
+      "type": "multipleChoice",
+      "prompt": "Which word DEFINES a named sub-plan in Python?",
+      "options": [
+        "def",
+        "call",
+        "print",
+        "for"
+      ],
+      "answer": 0,
+      "explanation": "'def' starts a definition. def name(): writes a sub-plan; calling it with name() runs it."
+    },
+    {
+      "id": "u71l10e02",
+      "type": "multipleChoice",
+      "prompt": "How do you CALL a sub-plan named greet?",
+      "options": [
+        "greet()",
+        "def greet",
+        "greet",
+        "call greet"
+      ],
+      "answer": 0,
+      "explanation": "Write the name with empty parentheses: greet(). That runs the sub-plan's body."
+    },
+    {
+      "id": "u71l10e03",
+      "type": "trueFalse",
+      "prompt": "Defining a sub-plan runs its body straight away.",
+      "answer": false,
+      "explanation": "No. Defining only describes it. The body runs when you CALL the sub-plan. Define is not run."
+    },
+    {
+      "id": "u71l10e04",
+      "type": "multipleChoice",
+      "prompt": "Program:\n\ndef greet():\n    print(\"Hi\")\ngreet()\ngreet()\n\nWhat prints?",
+      "options": [
+        "Hi\nHi",
+        "Hi",
+        "Nothing",
+        "Hi\nHi\nHi"
+      ],
+      "answer": 0,
+      "explanation": "One def, two calls, so 'Hi' prints twice. Output follows the calls, not the definition."
+    },
+    {
+      "id": "u71l10e05",
+      "type": "multipleChoice",
+      "prompt": "Program:\n\ndef greet():\n    print(\"Hi\")\n\n(no call) What prints?",
+      "options": [
+        "Nothing",
+        "Hi",
+        "greet",
+        "an error"
+      ],
+      "answer": 0,
+      "explanation": "Defined but never called, so nothing runs. Without a call, the body's print never fires."
+    },
+    {
+      "id": "u71l10e06",
+      "type": "orderBlocks",
+      "prompt": "Arrange a program: define greet (prints 'Hi'), then call it.",
+      "blocks": [
+        "greet()",
+        "def greet():",
+        "    print(\"Hi\")"
+      ],
+      "answer": [
+        1,
+        2,
+        0
+      ],
+      "explanation": "def line, indented body, then the call. Define first, run second - the shape of every sub-plan."
+    },
+    {
+      "id": "u71l10e07",
+      "type": "matchPairs",
+      "prompt": "Match each piece to its role.",
+      "pairs": [
+        {
+          "left": "def greet():",
+          "right": "define the sub-plan"
+        },
+        {
+          "left": "greet()",
+          "right": "call (run) it"
+        },
+        {
+          "left": "the indented print",
+          "right": "the body, runs on a call"
+        }
+      ],
+      "explanation": "Define, call, body: a def describes the job, a call runs it, and the body is what runs."
+    },
+    {
+      "id": "u71l10e08",
+      "type": "trueFalse",
+      "prompt": "You can define a sub-plan once and call it as many times as you like.",
+      "answer": true,
+      "explanation": "Yes - define once, call many. Each call re-runs the body. That reuse is why named sub-plans are powerful."
+    },
+    {
+      "id": "u71l10e09",
+      "type": "multipleChoice",
+      "prompt": "REVIEW: this code idea matches which earlier thinking lesson?",
+      "options": [
+        "'describe the job (def) vs do the job (call)'",
+        "a list",
+        "a comparison",
+        "input()"
+      ],
+      "answer": 0,
+      "explanation": "def is 'describe', calling is 'do'. The code made real the define-vs-use idea you learned conceptually."
+    },
+    {
+      "id": "u71l10e10",
+      "type": "multipleChoice",
+      "prompt": "You can now write and run sub-plans. What do these sub-plans still NOT do yet?",
+      "options": [
+        "take in information or hand back an answer - that's coming next",
+        "print anything",
+        "get called",
+        "get defined"
+      ],
+      "answer": 0,
+      "explanation": "So far they just print. Next unit adds parameters (information in); later units let them hand an answer back. Great progress!"
+    }
+  ]
+}

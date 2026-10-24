@@ -1,0 +1,127 @@
+{
+  "unitId": "u14",
+  "lessonId": "u14l03",
+  "title": "Solve it: full boxes and the leftover together",
+  "idea": "GUIDED PROBLEM. One problem that needs BOTH // (full groups) and % (leftover). Two outputs, two operators, all values named. Reinforces lessons 1 and 2.",
+  "problem": "You have 29 apples and each tray holds 8. Show how many trays fill up AND how many apples are left over.",
+  "exercises": [
+    {
+      "id": "u14l03e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: 29 apples, trays hold 8. Show full trays AND leftover apples.\n\nUnderstand — how many OUTPUTS does this problem want?",
+      "options": [
+        "Two: the number of full trays and the leftover apples",
+        "One: just the full trays",
+        "One: just the leftover",
+        "Three"
+      ],
+      "answer": 0,
+      "explanation": "This problem asks for two things at once. Spotting that early stops you from forgetting one."
+    },
+    {
+      "id": "u14l03e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "What are the INPUTS?",
+      "options": [
+        "The apples (29) and the tray size (8)",
+        "Only the number 5",
+        "The words 'full' and 'leftover'",
+        "None"
+      ],
+      "answer": 0,
+      "explanation": "The same two inputs feed both answers: 29 apples and a tray size of 8."
+    },
+    {
+      "id": "u14l03e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example by hand: 29 apples, 8 per tray. Full trays and leftover?",
+      "options": [
+        "3 full trays, 5 left over",
+        "4 full trays, 0 left over",
+        "3 full trays, 8 left over",
+        "2 full trays, 13 left over"
+      ],
+      "answer": 0,
+      "explanation": "3 trays hold 24 apples; 29 - 24 = 5 left. So 3 full trays and 5 leftover. Check values: 3 and 5."
+    },
+    {
+      "id": "u14l03e04",
+      "type": "matchPairs",
+      "uepcc": "P",
+      "prompt": "Match each output to the operator that produces it.",
+      "pairs": [
+        { "left": "full trays", "right": "apples // tray_size" },
+        { "left": "leftover apples", "right": "apples % tray_size" }
+      ],
+      "explanation": "// gives the whole count of full trays; % gives what's left. Two outputs, two operators, same inputs."
+    },
+    {
+      "id": "u14l03e05",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Put the plan in order.",
+      "blocks": [
+        "Work out full trays with //",
+        "Remember the apples and tray size",
+        "Work out leftover with %",
+        "Show both results"
+      ],
+      "answer": [1, 0, 2, 3],
+      "explanation": "Remember inputs, compute full trays, compute leftover, then show both."
+    },
+    {
+      "id": "u14l03e06",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Complete the leftover step:\n\napples = 29\ntray_size = 8\nfull_trays = apples // tray_size\nleftover = apples ____ tray_size",
+      "answer": "%",
+      "acceptable": ["%"],
+      "explanation": "% gives the remainder: 29 % 8 = 5. leftover holds 5."
+    },
+    {
+      "id": "u14l03e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Arrange the full solution. Note we print on two lines.",
+      "blocks": [
+        "apples = 29",
+        "tray_size = 8",
+        "full_trays = apples // tray_size",
+        "leftover = apples % tray_size",
+        "print(full_trays)",
+        "print(leftover)"
+      ],
+      "answer": [0, 1, 2, 3, 4, 5],
+      "explanation": "Store both inputs, compute full_trays with //, leftover with %, then print each. Both values from the problem are used."
+    },
+    {
+      "id": "u14l03e08",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "The code prints 3 then 5. Hand example said 3 and 5. Verdict?",
+      "options": ["Passes — both outputs match", "Fails", "Only the first is right", "Unknown"],
+      "answer": 0,
+      "explanation": "Both outputs match the example, so the solution is correct. With two outputs, check both."
+    },
+    {
+      "id": "u14l03e09",
+      "type": "trueFalse",
+      "uepcc": "Check",
+      "prompt": "A quick sanity check: full_trays times tray_size, plus leftover, should equal the apples you started with.",
+      "answer": true,
+      "explanation": "Yes! 3 x 8 + 5 = 29. If // and % are right, rebuilding the total always gets you back the start. A great way to check."
+    },
+    {
+      "id": "u14l03e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "New numbers: 50 apples, tray size 9. Same code. What do the two prints show?",
+      "options": ["5 and 5", "5 and 4", "6 and 0", "4 and 14"],
+      "answer": 0,
+      "explanation": "50 // 9 = 5 full trays, 50 % 9 = 5 leftover. And 5 x 9 + 5 = 50. The plan generalizes."
+    }
+  ]
+}

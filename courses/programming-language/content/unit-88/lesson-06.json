@@ -1,0 +1,126 @@
+{
+  "unitId": "u88",
+  "lessonId": "u88l06",
+  "title": "An if inside a nested loop",
+  "idea": "TOOL: combine nested loops with an if to act only on pairs that matter. Recall of if-in-loop. Thinking-heavy.",
+  "exercises": [
+    {
+      "id": "u88l06e01",
+      "type": "multipleChoice",
+      "prompt": "You want to print only the pairs where the two numbers are EQUAL. Where does the if go?",
+      "options": [
+        "Inside the inner loop, around the print",
+        "Before both loops",
+        "After both loops",
+        "It can't be done"
+      ],
+      "answer": 0,
+      "explanation": "The if tests each pair, so it lives inside the inner loop where both values are known. You already use if-inside-a-loop — now there are two loops."
+    },
+    {
+      "id": "u88l06e02",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nfor a in range(3):\n    for b in range(3):\n        if a == b:\n            print(a, b)",
+      "options": [
+        "0 0, 1 1, 2 2",
+        "every pair",
+        "nothing",
+        "0 1, 1 2"
+      ],
+      "answer": 0,
+      "explanation": "The if only lets equal pairs through, so you get the 'diagonal': 0 0, 1 1, 2 2. The other pairs are skipped."
+    },
+    {
+      "id": "u88l06e03",
+      "type": "multipleChoice",
+      "prompt": "Predict how many lines print:\n\nfor a in range(3):\n    for b in range(3):\n        if a != b:\n            print(a, b)",
+      "options": [
+        "6 (9 pairs minus 3 equal pairs)",
+        "9",
+        "3",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "'a != b' skips the 3 self-pairs (0 0, 1 1, 2 2) out of 9 total, leaving 6 printed. The if filters which pairs act."
+    },
+    {
+      "id": "u88l06e04",
+      "type": "trueFalse",
+      "prompt": "An if inside a nested loop lets you act on only the pairs that pass a test.",
+      "answer": true,
+      "explanation": "Yes — the loops generate every pair, and the if chooses which ones matter. Loops make the pairs; the if filters them."
+    },
+    {
+      "id": "u88l06e05",
+      "type": "orderBlocks",
+      "prompt": "Order the output of:\n\nfor a in range(3):\n    for b in range(3):\n        if a < b:\n            print(a, b)",
+      "blocks": [
+        "0 1",
+        "0 2",
+        "1 2"
+      ],
+      "answer": [0, 1, 2],
+      "explanation": "Only pairs where a < b pass: 0<1, 0<2, 1<2. This is a neat way to get each unordered pair once, with no repeats or self-pairs."
+    },
+    {
+      "id": "u88l06e06",
+      "type": "multipleChoice",
+      "prompt": "Why does 'if a < b' give each pair only ONCE (no '1 0' AND '0 1')?",
+      "options": [
+        "It keeps only the pair where the first is smaller, dropping the mirror",
+        "It drops all pairs",
+        "It keeps self-pairs only",
+        "It doubles the pairs"
+      ],
+      "answer": 0,
+      "explanation": "'a < b' accepts 0 1 but rejects 1 0 (since 1 is not < 0). You get each unordered pair exactly once — a very handy trick."
+    },
+    {
+      "id": "u88l06e07",
+      "type": "multipleChoice",
+      "prompt": "Real task: 'among the scores, print every pair that ADDS UP to 10.' Where does the addition test go?",
+      "options": [
+        "In an if inside the inner loop: if a + b == 10",
+        "Before the loops",
+        "After the loops",
+        "It needs no loops"
+      ],
+      "answer": 0,
+      "explanation": "Test each pair inside the inner loop: 'if a + b == 10'. The nested loops make every pair; the if keeps the ones summing to 10."
+    },
+    {
+      "id": "u88l06e08",
+      "type": "fillBlank",
+      "prompt": "Complete the test so only pairs where both equal 5 print:\n\nfor a in nums:\n    for b in nums:\n        if a == 5 and b ____ 5:\n            print(a, b)",
+      "answer": "==",
+      "acceptable": ["=="],
+      "explanation": "Use == to test b equals 5. Combined with 'a == 5', only the pair (5, 5) prints. You're reusing comparison and 'and' inside nesting."
+    },
+    {
+      "id": "u88l06e09",
+      "type": "multipleChoice",
+      "prompt": "Predict the output values of:\n\nfor a in range(1, 4):\n    for b in range(1, 4):\n        if a + b == 4:\n            print(a, b)",
+      "options": [
+        "1 3, 2 2, 3 1",
+        "2 2 only",
+        "nothing",
+        "1 1, 2 2, 3 3"
+      ],
+      "answer": 0,
+      "explanation": "Pairs summing to 4 from 1..3: 1+3, 2+2, 3+1. The if finds exactly those three pairs among all nine."
+    },
+    {
+      "id": "u88l06e10",
+      "type": "multipleChoice",
+      "prompt": "What does adding an if to a nested loop unlock?",
+      "options": [
+        "Acting only on the pairs that satisfy a condition",
+        "Removing the loops",
+        "Printing everything twice",
+        "Nothing new"
+      ],
+      "answer": 0,
+      "explanation": "Nested loops generate all pairs; the if selects which ones matter — equal pairs, pairs summing to a target, each unordered pair once."
+    }
+  ]
+}

@@ -1,0 +1,121 @@
+{
+  "unitId": "u07",
+  "lessonId": "u07l07",
+  "title": "Spotting a step out of place",
+  "idea": "A plan can have all the right steps but in the wrong order. Find and fix the misplaced step.",
+  "exercises": [
+    {
+      "id": "u07l07e01",
+      "type": "multipleChoice",
+      "prompt": "Plan: show Bye, show Hello. Task wanted Hello first. What's the fix?",
+      "options": [
+        "Swap them: show Hello first, then Bye",
+        "Add a third step",
+        "Delete both steps",
+        "Leave it — order never matters"
+      ],
+      "answer": 0,
+      "explanation": "The steps are right but reversed. Swap them so Hello comes first, as the task asked."
+    },
+    {
+      "id": "u07l07e02",
+      "type": "trueFalse",
+      "prompt": "A plan can have every correct step and still be wrong because of the order.",
+      "answer": true,
+      "explanation": "Yes. Right steps, wrong order equals wrong result. Order is part of being correct."
+    },
+    {
+      "id": "u07l07e03",
+      "type": "orderBlocks",
+      "prompt": "Task: show the title, then the author. Fix this plan into the right order.",
+      "blocks": [
+        "Show the title",
+        "Show the author"
+      ],
+      "answer": [0, 1],
+      "explanation": "Title first, author second — the order the task asked for."
+    },
+    {
+      "id": "u07l07e04",
+      "type": "multipleChoice",
+      "prompt": "Code: print(\"Second\") then print(\"First\"). Task wanted First then Second. What's wrong?",
+      "options": [
+        "The two print lines are out of order",
+        "A line is missing",
+        "print is misspelled",
+        "Nothing is wrong"
+      ],
+      "answer": 0,
+      "explanation": "Both lines exist but they're swapped. Put print(\"First\") above print(\"Second\")."
+    },
+    {
+      "id": "u07l07e05",
+      "type": "orderBlocks",
+      "prompt": "Task: show Ready, then Set, then Go. Fix the order.",
+      "blocks": [
+        "Show Ready",
+        "Show Set",
+        "Show Go"
+      ],
+      "answer": [0, 1, 2],
+      "explanation": "Ready, Set, Go — the only order that makes sense here."
+    },
+    {
+      "id": "u07l07e06",
+      "type": "multipleChoice",
+      "prompt": "A plan shows a goodbye in the MIDDLE, before the main message. Is that sensible?",
+      "options": [
+        "No — goodbye usually comes last",
+        "Yes — goodbye goes anywhere",
+        "Yes — always put goodbye first",
+        "There is no way to tell"
+      ],
+      "answer": 0,
+      "explanation": "A goodbye out of place reads oddly. Think about what order makes sense for the reader."
+    },
+    {
+      "id": "u07l07e07",
+      "type": "orderBlocks",
+      "prompt": "Task: show Welcome, then the guest's name, then Enjoy. Order the code lines correctly.",
+      "blocks": [
+        "print(\"Welcome\")",
+        "print(\"...guest name...\")",
+        "print(\"Enjoy\")"
+      ],
+      "answer": [0, 1, 2],
+      "explanation": "Welcome, name, Enjoy — the plan's order carried straight into the code."
+    },
+    {
+      "id": "u07l07e08",
+      "type": "trueFalse",
+      "prompt": "To fix a step that's out of place, you move it — you don't need to delete it.",
+      "answer": true,
+      "explanation": "Right. The step is correct; it just needs to be in the right spot. Move, don't delete."
+    },
+    {
+      "id": "u07l07e09",
+      "type": "multipleChoice",
+      "prompt": "Which has the RIGHT steps but the WRONG order for 'greet, then name'?",
+      "options": [
+        "Show the name, then show the greeting",
+        "Show the greeting, then show the name",
+        "Show the greeting only",
+        "Show the weather, then the name"
+      ],
+      "answer": 0,
+      "explanation": "Both steps are correct, but swapped — name before greeting. The second option is the right order."
+    },
+    {
+      "id": "u07l07e10",
+      "type": "orderBlocks",
+      "prompt": "Task: show Hello, show your name, show Goodbye. Put the plan in the correct order.",
+      "blocks": [
+        "Show Hello",
+        "Show your name",
+        "Show Goodbye"
+      ],
+      "answer": [0, 1, 2],
+      "explanation": "Hello, name, Goodbye. You can now spot AND fix an out-of-place step. Strong work!"
+    }
+  ]
+}

@@ -1,0 +1,126 @@
+{
+  "unitId": "u38",
+  "lessonId": "u38l08",
+  "title": "Spot the range mistake",
+  "idea": "Common range bugs: off-by-one at the stop, forgetting range starts at 0, wrong step sign, or wrong step size. Find and fix them.",
+  "exercises": [
+    {
+      "id": "u38l08e01",
+      "type": "multipleChoice",
+      "prompt": "Goal: print 1 to 5. What's wrong?\n\nfor i in range(1, 5):\n    print(i)",
+      "options": [
+        "Stop is one too low — it prints 1 to 4, not 5",
+        "It should start at 0",
+        "The step is wrong",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "range(1, 5) stops before 5, giving 1-4. To include 5, use range(1, 6)."
+    },
+    {
+      "id": "u38l08e02",
+      "type": "multipleChoice",
+      "prompt": "Goal: print 1 to 3. What's wrong?\n\nfor i in range(3):\n    print(i)",
+      "options": [
+        "range(3) starts at 0 — it prints 0, 1, 2",
+        "It prints 1, 2, 3 correctly",
+        "The colon is missing",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "range(3) is 0, 1, 2. For 1, 2, 3 you need range(1, 4). Remember range starts at 0 by default."
+    },
+    {
+      "id": "u38l08e03",
+      "type": "multipleChoice",
+      "prompt": "Goal: count down 5 to 1. What's wrong?\n\nfor i in range(5, 0):\n    print(i)",
+      "options": [
+        "Missing the negative step — this produces nothing",
+        "It counts 5 to 1 fine",
+        "It counts up",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "range(5, 0) with the default step +1 can't go from 5 to 0, so it's empty. You need step -1: range(5, 0, -1)."
+    },
+    {
+      "id": "u38l08e04",
+      "type": "trueFalse",
+      "prompt": "range(5, 0) with no step gives no values, because the default step +1 never reaches 0 from 5.",
+      "answer": true,
+      "explanation": "To count downward you must give a negative step. Without it, a high start and low stop is empty."
+    },
+    {
+      "id": "u38l08e05",
+      "type": "multipleChoice",
+      "prompt": "Goal: 2, 4, 6, 8. What's wrong?\n\nfor i in range(2, 8, 2):\n    print(i)",
+      "options": [
+        "Stop too low — gives 2, 4, 6 (8 excluded)",
+        "Step should be 1",
+        "It starts at 0",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "range(2, 8, 2) stops before 8: 2, 4, 6. To include 8, stop at 9 (or 10): range(2, 9, 2)."
+    },
+    {
+      "id": "u38l08e06",
+      "type": "multipleChoice",
+      "prompt": "Goal: 10, 20, 30. What's wrong?\n\nfor i in range(10, 31, 1):\n    print(i)",
+      "options": [
+        "Step should be 10, not 1 — this prints 10, 11, 12, ... 30",
+        "Stop should be 30",
+        "It starts at 0",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "Step 1 counts every number. For 10, 20, 30 use step 10: range(10, 31, 10)."
+    },
+    {
+      "id": "u38l08e07",
+      "type": "multipleChoice",
+      "prompt": "Fix: print 1 to 10. Which is correct?",
+      "options": [
+        "range(1, 11)",
+        "range(1, 10)",
+        "range(10)",
+        "range(0, 10)"
+      ],
+      "answer": 0,
+      "explanation": "To include 10, stop at 11. range(1, 11) gives 1 through 10."
+    },
+    {
+      "id": "u38l08e08",
+      "type": "trueFalse",
+      "prompt": "The off-by-one at the stop (forgetting it's excluded) is the most common range bug.",
+      "answer": true,
+      "explanation": "Yes — people expect stop to be included. It isn't. Always ask: does my stop need to be one higher?"
+    },
+    {
+      "id": "u38l08e09",
+      "type": "multipleChoice",
+      "prompt": "Fix: count down 3, 2, 1. Which is correct?",
+      "options": [
+        "range(3, 0, -1)",
+        "range(3, 1, -1)",
+        "range(3, 0, 1)",
+        "range(1, 3)"
+      ],
+      "answer": 0,
+      "explanation": "Start 3, step -1, stop 0 (excluded) so 1 is the last: 3, 2, 1."
+    },
+    {
+      "id": "u38l08e10",
+      "type": "multipleChoice",
+      "prompt": "The reliable way to catch all these range bugs is to...",
+      "options": [
+        "Write out the first few and last values by hand and compare to the goal",
+        "Guess",
+        "Always use step 1",
+        "Skip the trace"
+      ],
+      "answer": 0,
+      "explanation": "Listing the actual values and comparing to what you wanted catches off-by-one, start-at-0, and step mistakes."
+    }
+  ]
+}

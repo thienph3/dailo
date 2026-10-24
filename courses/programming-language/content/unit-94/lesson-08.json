@@ -1,0 +1,133 @@
+{
+  "unitId": "u94",
+  "lessonId": "u94l08",
+  "title": "Spot the case they forgot",
+  "idea": "MEET. Given someone's testing, reason about which input they never tried — the gap where a bug could still hide.",
+  "exercises": [
+    {
+      "id": "u94l08e01",
+      "type": "multipleChoice",
+      "prompt": "An average function was tested on [2,4] and [10,20] only. Which important case is MISSING?",
+      "explanation": "Both tests are non-empty, so the empty list — the one the guard exists for — was never exercised.",
+      "options": [
+        "The empty list []",
+        "A two-item list",
+        "A list of positive numbers",
+        "Any list at all"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u94l08e02",
+      "type": "multipleChoice",
+      "prompt": "A 'passes if >= 50' counter was tested on 30 and 90. The gap is...",
+      "explanation": "30 fails and 90 passes, but neither is near 50, so the boundary itself (49, 50, 51) was never tested.",
+      "options": [
+        "The boundary around 50",
+        "Nothing — it's thorough",
+        "Values above 90",
+        "The number 0 only"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u94l08e03",
+      "type": "multipleChoice",
+      "prompt": "A 'highest bid' function was tested on [1, 2, 3] (max last). The untested worry is...",
+      "explanation": "With the max always last, the update-partway logic isn't tested. Try the max first or in the middle.",
+      "options": [
+        "A list where the biggest value is NOT last",
+        "An empty bid list only",
+        "Lists with decimals",
+        "Nothing"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u94l08e04",
+      "type": "multipleChoice",
+      "prompt": "A 'total of big orders (>= 20)' sum was tested on [30, 40] only. What path is never exercised?",
+      "explanation": "Both orders are big, so the 'skip the small ones' path never runs — a bug in the filter could hide.",
+      "options": [
+        "The path where an order is too small and gets skipped",
+        "The addition itself",
+        "The print",
+        "Nothing"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u94l08e05",
+      "type": "trueFalse",
+      "prompt": "Testing only inputs that all take the SAME path through the code leaves the other paths unproven.",
+      "explanation": "Yes — if every test passes the condition, the 'false' branch is never checked. Vary inputs to hit every path.",
+      "answer": true
+    },
+    {
+      "id": "u94l08e06",
+      "type": "multipleChoice",
+      "prompt": "A two-output solution (count AND total) was checked only for the total. The gap?",
+      "explanation": "The count output was never compared to a hand answer, so a bug in the counting half could slip through.",
+      "options": [
+        "The count output was never verified",
+        "Nothing — one output is enough",
+        "The total is wrong",
+        "Both are fine automatically"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u94l08e07",
+      "type": "multipleChoice",
+      "prompt": "Someone tested a list of all identical values [5,5,5]. What subtle case might they still miss?",
+      "explanation": "All-equal never triggers a strict > update or a change of best, so mixed values (some bigger, some smaller) should also be tried.",
+      "options": [
+        "A list with different values that force updates",
+        "An empty list is impossible",
+        "Nothing is missed",
+        "Only huge lists"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u94l08e08",
+      "type": "matchPairs",
+      "prompt": "Match each solution to the edge case most often forgotten for it.",
+      "explanation": "Each pattern has a classic blind spot: average forgets empty, counts forget the boundary, max forgets 'biggest not last'.",
+      "pairs": [
+        {
+          "left": "Average",
+          "right": "Empty list"
+        },
+        {
+          "left": "Count with >= cutoff",
+          "right": "The boundary value"
+        },
+        {
+          "left": "Highest value",
+          "right": "Biggest value not last"
+        }
+      ]
+    },
+    {
+      "id": "u94l08e09",
+      "type": "trueFalse",
+      "prompt": "Finding the untested case is a thinking skill — you reason about paths, you don't just add random inputs.",
+      "explanation": "Right — you ask 'which branch or corner has no test?' and target it. That's smarter than random inputs.",
+      "answer": true
+    },
+    {
+      "id": "u94l08e10",
+      "type": "multipleChoice",
+      "prompt": "The habit this lesson builds is...",
+      "explanation": "Looking at existing tests and asking 'what did they NOT try?' then testing exactly that gap.",
+      "options": [
+        "Asking 'what input was never tried?' and testing that gap",
+        "Testing the same input repeatedly",
+        "Trusting that it works",
+        "Writing more code"
+      ],
+      "answer": 0
+    }
+  ]
+}

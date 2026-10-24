@@ -1,0 +1,126 @@
+{
+  "unitId": "u53",
+  "lessonId": "u53l05",
+  "title": "The last position is len minus one",
+  "idea": "Connect len() with indexing: a list of N items has positions 0..N-1, so the last position is len-1. Combines this unit's tool with the previous one.",
+  "exercises": [
+    {
+      "id": "u53l05e01",
+      "type": "multipleChoice",
+      "prompt": "A list has 4 items, so len is 4. What positions actually exist?",
+      "options": [
+        "0, 1, 2, 3",
+        "1, 2, 3, 4",
+        "0, 1, 2, 3, 4",
+        "Only 4"
+      ],
+      "answer": 0,
+      "explanation": "Positions start at 0, so 4 items fill 0, 1, 2, 3. The highest position is one less than the count."
+    },
+    {
+      "id": "u53l05e02",
+      "type": "multipleChoice",
+      "prompt": "If a list's len is 4, what is the position of the LAST item?",
+      "options": [
+        "3",
+        "4",
+        "0",
+        "5"
+      ],
+      "answer": 0,
+      "explanation": "Last position is len - 1 = 4 - 1 = 3. Counting from 0 means the final spot is always one below the count."
+    },
+    {
+      "id": "u53l05e03",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nn = [10, 20, 30, 40]\nlast_pos = len(n) - 1\nprint(last_pos)",
+      "options": [
+        "3",
+        "4",
+        "40",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "len(n) is 4, minus 1 is 3 — the last valid position. We can compute where the last item lives."
+    },
+    {
+      "id": "u53l05e04",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nn = [10, 20, 30, 40]\nlast_pos = len(n) - 1\nprint(n[last_pos])",
+      "options": [
+        "40",
+        "30",
+        "4",
+        "3"
+      ],
+      "answer": 0,
+      "explanation": "last_pos is 3, so n[3] is the last item, 40. You computed the last position with len, then indexed with it."
+    },
+    {
+      "id": "u53l05e05",
+      "type": "trueFalse",
+      "prompt": "n[len(n) - 1] and n[-1] both give the last item of n.",
+      "answer": true,
+      "explanation": "len(n)-1 is the last position, and -1 also means last. Two routes to the same item; -1 is just shorter."
+    },
+    {
+      "id": "u53l05e06",
+      "type": "fillBlank",
+      "prompt": "Fill in so this prints the last item using len:\n\nvals = [5, 8, 2]\nprint(vals[len(vals) - ____])",
+      "answer": "1",
+      "acceptable": ["1"],
+      "explanation": "Last position is len - 1. len(vals) is 3, so vals[3 - 1] = vals[2] = 2, the last item."
+    },
+    {
+      "id": "u53l05e07",
+      "type": "multipleChoice",
+      "prompt": "A list has len 1 (one item). What is the last valid position?",
+      "options": [
+        "0",
+        "1",
+        "-1 only",
+        "There is none"
+      ],
+      "answer": 0,
+      "explanation": "len - 1 = 1 - 1 = 0. With one item, the only position is 0, which is both first and last."
+    },
+    {
+      "id": "u53l05e08",
+      "type": "multipleChoice",
+      "prompt": "Why might len - 1 be handy even though -1 also finds the last item?",
+      "options": [
+        "It shows exactly which position number the last item sits at",
+        "It's the only way to index",
+        "-1 doesn't work",
+        "It sorts the list"
+      ],
+      "answer": 0,
+      "explanation": "Sometimes you want the actual position number (like 3), not just 'the last one'. len - 1 gives you that number."
+    },
+    {
+      "id": "u53l05e09",
+      "type": "orderBlocks",
+      "prompt": "Arrange code that prints the last score using len.",
+      "blocks": [
+        "scores = [70, 85, 90]",
+        "last_pos = len(scores) - 1",
+        "print(scores[last_pos])"
+      ],
+      "answer": [0, 1, 2],
+      "explanation": "len(scores) is 3, last_pos is 2, and scores[2] is 90 — the last score."
+    },
+    {
+      "id": "u53l05e10",
+      "type": "multipleChoice",
+      "prompt": "A learner writes n[len(n)] to get the last item of n. Why does it fail?",
+      "options": [
+        "len(n) is one past the last position — it must be len(n) - 1",
+        "len(n) is negative",
+        "n[len(n)] gives the first item",
+        "Nothing fails"
+      ],
+      "answer": 0,
+      "explanation": "For 4 items, len is 4 but the last position is 3. n[4] asks for a spot that doesn't exist. Always len - 1 for the last position."
+    }
+  ]
+}

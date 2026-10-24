@@ -1,0 +1,132 @@
+{
+  "unitId": "u21",
+  "lessonId": "u21l09",
+  "title": "Solve one together: a low-battery warning",
+  "idea": "Walk a tiny 'do it only when true' problem end to end: understand it, work an example, plan, write the if, and check.",
+  "exercises": [
+    {
+      "id": "u21l09e01",
+      "type": "multipleChoice",
+      "prompt": "PROBLEM: 'Show a warning only when the battery is below 20.' First — what is the yes/no fact the warning depends on?",
+      "options": [
+        "Whether the battery is below 20",
+        "The exact battery number",
+        "The color of the battery icon",
+        "How long charging takes"
+      ],
+      "answer": 0,
+      "explanation": "Start by naming the fact: is the battery below 20? The warning rides on that single yes/no."
+    },
+    {
+      "id": "u21l09e02",
+      "type": "multipleChoice",
+      "prompt": "What is the step that should run only sometimes?",
+      "options": [
+        "Showing the warning message",
+        "Charging the battery",
+        "Turning off the screen",
+        "Nothing runs"
+      ],
+      "answer": 0,
+      "explanation": "The conditional step is printing the warning. It runs only when the fact is true."
+    },
+    {
+      "id": "u21l09e03",
+      "type": "multipleChoice",
+      "prompt": "Work an example by hand. If the battery is 15, should the warning show?",
+      "options": [
+        "Yes — 15 is below 20",
+        "No — 15 is above 20",
+        "Only if we charge first",
+        "We cannot tell"
+      ],
+      "answer": 0,
+      "explanation": "15 is below 20, so the warning should show. This hand example is what we will check the code against."
+    },
+    {
+      "id": "u21l09e04",
+      "type": "multipleChoice",
+      "prompt": "Another example. If the battery is 80, should the warning show?",
+      "options": [
+        "No — 80 is not below 20",
+        "Yes — always warn",
+        "Only on weekends",
+        "We cannot tell"
+      ],
+      "answer": 0,
+      "explanation": "80 is not below 20, so the warning is skipped. A good rule must handle both a true and a false case."
+    },
+    {
+      "id": "u21l09e05",
+      "type": "multipleChoice",
+      "prompt": "Plan: which comparison matches 'below 20'?",
+      "options": [
+        "battery < 20",
+        "battery <= 20",
+        "battery > 20",
+        "battery == 20"
+      ],
+      "answer": 0,
+      "explanation": "'Below 20' is strictly less than 20, so <. Exactly 20 is not below 20."
+    },
+    {
+      "id": "u21l09e06",
+      "type": "orderBlocks",
+      "prompt": "Arrange the code: store the battery level, then warn only if it is below 20.",
+      "blocks": [
+        "    print(\"Low battery\")",
+        "battery = 15",
+        "if battery < 20:"
+      ],
+      "answer": [1, 2, 0],
+      "explanation": "Store the value, write the if header with a colon, then indent the warning step under it."
+    },
+    {
+      "id": "u21l09e07",
+      "type": "fillBlank",
+      "prompt": "Complete the condition (remember: check, don't store):\n\nbattery = 15\nif battery ____ 20:\n    print(\"Low battery\")",
+      "answer": "<",
+      "acceptable": ["<"],
+      "explanation": "'Below 20' is <, and a condition checks, so the comparison symbol is correct. No single = here."
+    },
+    {
+      "id": "u21l09e08",
+      "type": "multipleChoice",
+      "prompt": "Check: run the code with battery = 15. What shows?\n\nbattery = 15\nif battery < 20:\n    print(\"Low battery\")",
+      "options": [
+        "Low battery",
+        "Nothing",
+        "15",
+        "True"
+      ],
+      "answer": 0,
+      "explanation": "15 < 20 is True, so the warning prints. This matches our hand example (15 should warn). The code is correct."
+    },
+    {
+      "id": "u21l09e09",
+      "type": "multipleChoice",
+      "prompt": "Check again with fresh numbers: battery = 80. What shows?\n\nbattery = 80\nif battery < 20:\n    print(\"Low battery\")",
+      "options": [
+        "Nothing",
+        "Low battery",
+        "80",
+        "False"
+      ],
+      "answer": 0,
+      "explanation": "80 < 20 is False, so the warning is skipped — matching our second hand example (80 should not warn). The solution works for both cases."
+    },
+    {
+      "id": "u21l09e10",
+      "type": "multipleChoice",
+      "prompt": "What did walking this problem teach about writing a conditional?",
+      "options": [
+        "Name the fact, work examples, pick the comparison, write the if, then check both cases",
+        "Always print the warning",
+        "Skip the examples to save time",
+        "Use = inside the if"
+      ],
+      "answer": 0,
+      "explanation": "That full path — fact, examples, comparison, if, check — is how you build a reliable 'only sometimes' step."
+    }
+  ]
+}

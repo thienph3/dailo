@@ -1,0 +1,125 @@
+{
+  "unitId": "u51",
+  "lessonId": "u51l09",
+  "title": "Spot the list mistake",
+  "idea": "Debug common list-writing slips: missing brackets, missing quotes on words, lost commas, dropped values. Thinking-heavy.",
+  "exercises": [
+    {
+      "id": "u51l09e01",
+      "type": "multipleChoice",
+      "prompt": "A learner writes nums = 3, 5, 7 and expects a list. What's missing?",
+      "options": [
+        "The square brackets: nums = [3, 5, 7]",
+        "More numbers",
+        "A print",
+        "Nothing is missing"
+      ],
+      "answer": 0,
+      "explanation": "Without square brackets it isn't written as a list. Brackets are the signal that says 'this is a list.'"
+    },
+    {
+      "id": "u51l09e02",
+      "type": "multipleChoice",
+      "prompt": "A learner writes colors = [red, green, blue] for the words red, green, blue. What's wrong?",
+      "options": [
+        "The words need quotes: [\"red\", \"green\", \"blue\"]",
+        "The brackets are wrong",
+        "There are too many commas",
+        "Nothing is wrong"
+      ],
+      "answer": 0,
+      "explanation": "Without quotes, red looks like a variable name, not the word 'red'. Words in a list need quotes."
+    },
+    {
+      "id": "u51l09e03",
+      "type": "multipleChoice",
+      "prompt": "A learner means three items but writes vals = [4 9 2] (no commas). What happens?",
+      "options": [
+        "It's broken — items must be separated by commas",
+        "It becomes the number 492",
+        "It's fine as written",
+        "It makes a list of one item"
+      ],
+      "answer": 0,
+      "explanation": "Commas separate the items. Without them, [4 9 2] isn't a valid list. The fix is [4, 9, 2]."
+    },
+    {
+      "id": "u51l09e04",
+      "type": "trueFalse",
+      "prompt": "The problem has prices 5, 5, and 8, but a learner writes [5, 8]. This is correct.",
+      "answer": false,
+      "explanation": "They dropped one of the 5s. The list must keep every value: [5, 5, 8]. Dropping a repeat loses real data."
+    },
+    {
+      "id": "u51l09e05",
+      "type": "multipleChoice",
+      "prompt": "Which of these is a correctly written list of numbers?",
+      "options": [
+        "[6, 2, 9]",
+        "[6 2 9]",
+        "6, 2, 9",
+        "(6, 2, 9)"
+      ],
+      "answer": 0,
+      "explanation": "Square brackets plus commas: [6, 2, 9]. The others miss commas, miss brackets, or use round brackets."
+    },
+    {
+      "id": "u51l09e06",
+      "type": "multipleChoice",
+      "prompt": "A learner uses round brackets: data = (1, 2, 3). Why isn't that the list we want?",
+      "options": [
+        "A list uses square brackets [ ], not round ( )",
+        "Round brackets hold more items",
+        "Lists can't hold 1, 2, 3",
+        "It needs more commas"
+      ],
+      "answer": 0,
+      "explanation": "Square brackets make a list. We've only learned square-bracket lists, so [1, 2, 3] is the right form."
+    },
+    {
+      "id": "u51l09e07",
+      "type": "multipleChoice",
+      "prompt": "A problem is about 'the one highest score.' A learner stores it as best = [95]. Is a list the right choice?",
+      "options": [
+        "No — one value fits a plain variable: best = 95",
+        "Yes, always use a list",
+        "No, it should be two values",
+        "Yes, single values must be lists"
+      ],
+      "answer": 0,
+      "explanation": "One value is a single variable's job: best = 95. Wrapping a lone value in a list adds needless brackets."
+    },
+    {
+      "id": "u51l09e08",
+      "type": "trueFalse",
+      "prompt": "[\"7\", \"8\"] and [7, 8] are the same list.",
+      "answer": false,
+      "explanation": "[\"7\", \"8\"] holds two WORDS (strings in quotes); [7, 8] holds two NUMBERS. Same look, different kinds of items."
+    },
+    {
+      "id": "u51l09e09",
+      "type": "orderBlocks",
+      "prompt": "A learner wants a correct list of the words \"up\" and \"down\". Arrange the right tokens.",
+      "blocks": [
+        "moves = [",
+        "\"up\", \"down\"",
+        "]"
+      ],
+      "answer": [0, 1, 2],
+      "explanation": "moves = [\"up\", \"down\"] — brackets around, quotes on each word, a comma between. That's a valid list of words."
+    },
+    {
+      "id": "u51l09e10",
+      "type": "multipleChoice",
+      "prompt": "What three things make a correct list of words?",
+      "options": [
+        "Square brackets, quotes on each word, commas between",
+        "Round brackets and no quotes",
+        "Just commas, no brackets",
+        "One long word with no spaces"
+      ],
+      "answer": 0,
+      "explanation": "Brackets wrap it, quotes mark each word, commas separate the items. Miss any one and the list is wrong."
+    }
+  ]
+}

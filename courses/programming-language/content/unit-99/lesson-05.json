@@ -1,0 +1,150 @@
+{
+  "unitId": "u99",
+  "lessonId": "u99l05",
+  "title": "Capstone: a function that totals 1 to n",
+  "idea": "GUIDED CAPSTONE. Put an accumulator loop INSIDE a function and return the total — combining loops and return, no builtin.",
+  "problem": "Write sum_to(n) that returns 1+2+...+n, so sum_to(4) is 10.",
+  "exercises": [
+    {
+      "id": "u99l05e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: sum_to(n) returns 1+2+...+n. OUTPUT is...",
+      "options": [
+        "One number: the running total, returned",
+        "The list of numbers",
+        "The count n",
+        "The biggest"
+      ],
+      "answer": 0,
+      "explanation": "Output is a single total handed back. We build it with the accumulator pattern inside the function."
+    },
+    {
+      "id": "u99l05e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "The function wraps a loop. What must it do with the total when the loop ends?",
+      "options": [
+        "Return it to the caller",
+        "Print it and forget it",
+        "Discard it",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "Return the finished total so the caller can use it. The loop builds it; return delivers it."
+    },
+    {
+      "id": "u99l05e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example by hand: sum_to(4) = 1+2+3+4 = ?",
+      "options": [
+        "10",
+        "7",
+        "24",
+        "4"
+      ],
+      "answer": 0,
+      "explanation": "10. Our check value. (We build it with a loop, never a builtin.)"
+    },
+    {
+      "id": "u99l05e04",
+      "type": "trueFalse",
+      "uepcc": "E",
+      "prompt": "The accumulator total must start at 0 before the loop, exactly like when the loop wasn't in a function.",
+      "answer": true,
+      "explanation": "Same discipline — functions don't change the accumulate pattern. total=0, then add each number."
+    },
+    {
+      "id": "u99l05e05",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Plan the function. Order the pieces.",
+      "blocks": [
+        "Return the total",
+        "Define sum_to(n) and set total = 0",
+        "Loop 1..n adding each to total"
+      ],
+      "answer": [
+        1,
+        2,
+        0
+      ],
+      "explanation": "Header + init, loop to accumulate, return. The loop lives inside; the return comes after it."
+    },
+    {
+      "id": "u99l05e06",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "To cover 1 through n with range, the stop value must be...",
+      "options": [
+        "n + 1 (stop is exclusive)",
+        "n",
+        "n - 1",
+        "1"
+      ],
+      "answer": 0,
+      "explanation": "range(1, n+1) yields 1..n. The exclusive stop needs the +1 — the off-by-one lesson, still true inside a function."
+    },
+    {
+      "id": "u99l05e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code the function. Arrange the lines.",
+      "blocks": [
+        "    for number in range(1, n + 1):",
+        "def sum_to(n):",
+        "    return total",
+        "    total = 0",
+        "        total = total + number"
+      ],
+      "answer": [
+        1,
+        3,
+        0,
+        4,
+        2
+      ],
+      "explanation": "def, init total, loop 1..n, accumulate, return. Indentation: the loop body is one level deeper than the return."
+    },
+    {
+      "id": "u99l05e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Complete the range stop so it includes n:\n\ndef sum_to(n):\n    total = 0\n    for number in range(1, n ____ 1):\n        total = total + number\n    return total",
+      "answer": "+",
+      "acceptable": [
+        "+"
+      ],
+      "explanation": "n + 1 as the stop makes range include n. sum_to(4) loops 1,2,3,4 and returns 10."
+    },
+    {
+      "id": "u99l05e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Call sum_to(4): returns 10. Hand said 10. Verdict?",
+      "options": [
+        "Passes",
+        "Fails",
+        "Unknown",
+        "Rewrite example"
+      ],
+      "answer": 0,
+      "explanation": "Matches. A loop and an accumulator, neatly packaged in a reusable function."
+    },
+    {
+      "id": "u99l05e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "What does sum_to(1) return?",
+      "options": [
+        "1",
+        "0",
+        "2",
+        "10"
+      ],
+      "answer": 0,
+      "explanation": "range(1, 2) is just [1], so total is 1. The smallest input works — the function generalizes."
+    }
+  ]
+}

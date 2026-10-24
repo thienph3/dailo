@@ -1,0 +1,128 @@
+{
+  "unitId": "u45",
+  "lessonId": "u45l04",
+  "title": "Off-by-one: too many or too few",
+  "idea": "Check the boundary carefully so a loop runs the right number of times.",
+  "exercises": [
+    {
+      "type": "multipleChoice",
+      "prompt": "An 'off-by-one' bug means the loop runs...",
+      "options": [
+        "One time too many or one time too few",
+        "Exactly right",
+        "Never",
+        "Twice as fast"
+      ],
+      "answer": 0,
+      "explanation": "Off-by-one bugs come from the boundary -- using < vs <= or the wrong start -- so the count is one off.",
+      "id": "u45l04e01"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "How many times does this print?\n\ni = 1\nwhile i <= 5:\n    print(i)\n    i = i + 1",
+      "options": [
+        "5",
+        "4",
+        "6",
+        "forever"
+      ],
+      "answer": 0,
+      "explanation": "i is 1,2,3,4,5 -- five prints. At i = 6 the condition 6 <= 5 is false. <= 5 starting from 1 gives exactly 5.",
+      "id": "u45l04e02"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "How many times does this print?\n\ni = 1\nwhile i < 5:\n    print(i)\n    i = i + 1",
+      "options": [
+        "4",
+        "5",
+        "6",
+        "forever"
+      ],
+      "answer": 0,
+      "explanation": "i is 1,2,3,4 -- four prints. < 5 stops before 5, so starting from 1 you get four, not five.",
+      "id": "u45l04e03"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Changing < to <= in a while condition can change how many times the loop runs.",
+      "answer": true,
+      "explanation": "True. <= includes the boundary value, < excludes it. That one character shifts the count by one.",
+      "id": "u45l04e04"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "You want to print 1 through 10 (ten numbers). Which condition is right, starting at i = 1?",
+      "options": [
+        "while i <= 10",
+        "while i < 10",
+        "while i <= 9",
+        "while i > 10"
+      ],
+      "answer": 0,
+      "explanation": "Starting at 1, i <= 10 includes 10, giving ten numbers. i < 10 would stop at 9 -- one too few.",
+      "id": "u45l04e05"
+    },
+    {
+      "type": "orderBlocks",
+      "prompt": "Arrange a loop that prints exactly 1 through 4.",
+      "blocks": [
+        "    i = i + 1",
+        "i = 1",
+        "while i <= 4:",
+        "    print(i)"
+      ],
+      "answer": [
+        1,
+        2,
+        3,
+        0
+      ],
+      "explanation": "Start at 1, loop while i <= 4, print, then grow i. That prints 1, 2, 3, 4 -- four numbers.",
+      "id": "u45l04e06"
+    },
+    {
+      "type": "fillBlank",
+      "prompt": "Fill the boundary so this prints 1 through 6 (six numbers):\n\ni = 1\nwhile i <= ____:\n    print(i)\n    i = i + 1",
+      "answer": "6",
+      "acceptable": [
+        "6"
+      ],
+      "explanation": "Starting at 1, i <= 6 includes 6, so it prints 1 through 6 -- exactly six numbers.",
+      "id": "u45l04e07"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "This should print five numbers but prints six. What's the off-by-one fix?\n\ni = 0\nwhile i <= 5:\n    print(i)\n    i = i + 1",
+      "options": [
+        "Start at i = 1, or use i < 5",
+        "Add another print",
+        "Remove the update",
+        "Change <= to >="
+      ],
+      "answer": 0,
+      "explanation": "Starting at 0 with <= 5 gives 0..5 = six numbers. Start at 1 (1..5) or use i < 5 (0..4) to get five.",
+      "id": "u45l04e08"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "What shows?\n\ni = 0\nwhile i < 3:\n    print(i)\n    i = i + 1",
+      "options": [
+        "0\n1\n2",
+        "0\n1\n2\n3",
+        "1\n2\n3",
+        "0\n1"
+      ],
+      "answer": 0,
+      "explanation": "Starting at 0 with < 3 gives 0, 1, 2 -- three numbers. The boundary value 3 is excluded.",
+      "id": "u45l04e09"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "The safest way to catch an off-by-one is to count the passes by hand for small numbers.",
+      "answer": true,
+      "explanation": "True. Tracing a few values by hand shows the real count and reveals a boundary that's one off.",
+      "id": "u45l04e10"
+    }
+  ]
+}

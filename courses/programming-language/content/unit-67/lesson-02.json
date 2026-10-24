@@ -1,0 +1,144 @@
+{
+  "unitId": "u67",
+  "lessonId": "u67l02",
+  "title": "Finish it: the loop that skips the last score",
+  "idea": "GUIDED BUG-FIX (off-by-one). A loop over indexes uses range(len - 1) and drops the final item. Find and fix.",
+  "problem": "This code should print all four scores [10, 20, 30, 40]. Instead it prints only 10, 20, 30. Fix it so every score prints.",
+  "exercises": [
+    {
+      "id": "u67l02e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "BROKEN CODE:\n\nscores = [10, 20, 30, 40]\nfor i in range(len(scores) - 1):\n    print(scores[i])\n\nUnderstand. What should this code do?",
+      "options": [
+        "Print every score in the list",
+        "Print only the first score",
+        "Add the scores",
+        "Count the scores"
+      ],
+      "answer": 0,
+      "explanation": "The goal is to print every score. Knowing the intended output lets you see that a missing score is a bug."
+    },
+    {
+      "id": "u67l02e02",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example. By hand, how many scores are there, and which should print?",
+      "options": [
+        "4 scores: 10, 20, 30, 40",
+        "3 scores: 10, 20, 30",
+        "1 score: 10",
+        "0 scores"
+      ],
+      "answer": 0,
+      "explanation": "There are 4 scores and all 4 should print. The code only shows 3, so exactly one is being skipped."
+    },
+    {
+      "id": "u67l02e03",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Expected 10, 20, 30, 40 but got 10, 20, 30. Which item is missing?",
+      "options": [
+        "the last one, 40",
+        "the first one, 10",
+        "the middle one",
+        "none"
+      ],
+      "answer": 0,
+      "explanation": "The final item 40 never prints. A loop that drops the LAST item points straight at the off-by-one family."
+    },
+    {
+      "id": "u67l02e04",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "len(scores) is 4. What does range(len(scores) - 1), that is range(3), produce?",
+      "options": [
+        "0, 1, 2",
+        "0, 1, 2, 3",
+        "1, 2, 3",
+        "3"
+      ],
+      "answer": 0,
+      "explanation": "range(3) is 0, 1, 2 — only three indexes. Index 3 (holding 40) is never visited, so 40 is skipped."
+    },
+    {
+      "id": "u67l02e05",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Plan the fix. To visit EVERY index of a 4-item list, the range should be...",
+      "options": [
+        "range(len(scores)) — that is range(4), giving 0,1,2,3",
+        "range(len(scores) - 1)",
+        "range(5)",
+        "range(1, 4)"
+      ],
+      "answer": 0,
+      "explanation": "range(len(scores)) covers all indexes 0..3. The '- 1' was the bug; removing it lets the last item through."
+    },
+    {
+      "id": "u67l02e06",
+      "type": "trueFalse",
+      "uepcc": "P",
+      "prompt": "Another valid fix is to drop indexes entirely and write 'for score in scores:' to visit each item directly.",
+      "answer": true,
+      "explanation": "True — 'for score in scores' needs no index math, so it can't be off by one. It's often the cleaner fix."
+    },
+    {
+      "id": "u67l02e07",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Fix the loop header so every index 0,1,2,3 is visited. Fill the blank with what goes INSIDE range(...):\n\nscores = [10, 20, 30, 40]\nfor i in range(____):\n    print(scores[i])",
+      "answer": "len(scores)",
+      "acceptable": [
+        "len(scores)",
+        "4"
+      ],
+      "explanation": "range(len(scores)) is range(4) = 0,1,2,3, so all four indexes are visited. Removing the '- 1' is the fix; writing 4 directly would also work here."
+    },
+    {
+      "id": "u67l02e08",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Arrange the cleaner FIXED version that visits each item directly.",
+      "blocks": [
+        "scores = [10, 20, 30, 40]",
+        "for score in scores:",
+        "    print(score)"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "'for score in scores' hands you each item in turn, printing all four with no index to get wrong."
+    },
+    {
+      "id": "u67l02e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check. The fixed code now prints 10, 20, 30, 40. Your hand list was 10, 20, 30, 40. So...",
+      "options": [
+        "It passes — all four print, matching the example",
+        "It still skips one",
+        "You can't tell",
+        "The example was wrong"
+      ],
+      "answer": 0,
+      "explanation": "All four scores now appear, matching the hand-worked list. The off-by-one is fixed."
+    },
+    {
+      "id": "u67l02e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Re-check with a new list: scores = [7, 8]. Using 'for score in scores', how many lines print?",
+      "options": [
+        "2",
+        "1",
+        "0",
+        "3"
+      ],
+      "answer": 0,
+      "explanation": "Both items print, so 2 lines. The fix generalizes to any list length — no last item ever dropped again."
+    }
+  ]
+}

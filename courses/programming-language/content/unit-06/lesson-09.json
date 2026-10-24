@@ -1,0 +1,109 @@
+{
+  "unitId": "u06",
+  "lessonId": "u06l09",
+  "title": "Re-run with a new task",
+  "idea": "Prove the rhythm generalizes: run the same example -> code -> check loop on a fresh show-task.",
+  "exercises": [
+    {
+      "id": "u06l09e01",
+      "type": "multipleChoice",
+      "prompt": "NEW TASK: Show a score line — Points, then 42. What is the by-hand example?",
+      "options": [
+        "Points on one line, 42 on the next",
+        "Points42 on one line",
+        "42, then Points",
+        "Just Points"
+      ],
+      "answer": 0,
+      "explanation": "Two lines: the word Points, then the number 42. Numbers can be printed too (Unit 1)."
+    },
+    {
+      "id": "u06l09e02",
+      "type": "trueFalse",
+      "prompt": "A bare number like 42 can go inside print without quotes.",
+      "answer": true,
+      "explanation": "Numbers don't need quotes: print(42) is fine. Review from Unit 1."
+    },
+    {
+      "id": "u06l09e03",
+      "type": "orderBlocks",
+      "prompt": "Code step: arrange to show Points then 42.",
+      "blocks": [
+        "print(\"Points\")",
+        "print(42)"
+      ],
+      "answer": [0, 1],
+      "explanation": "The word Points (in quotes) first, then the number 42 (no quotes)."
+    },
+    {
+      "id": "u06l09e04",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nprint(\"Points\")\nprint(42)",
+      "options": [
+        "Points, then 42 on two lines",
+        "Points42",
+        "42, then Points",
+        "Points 42 on one line"
+      ],
+      "answer": 0,
+      "explanation": "Two prints, two lines: Points, then 42."
+    },
+    {
+      "id": "u06l09e05",
+      "type": "multipleChoice",
+      "prompt": "Check: output is Points then 42, matching the example. Result?",
+      "options": ["Pass", "Fail", "Unknown", "Rewrite"],
+      "answer": 0,
+      "explanation": "The output matches the hand example, so it passes — on a brand-new task."
+    },
+    {
+      "id": "u06l09e06",
+      "type": "trueFalse",
+      "prompt": "The same rhythm (example -> code -> check) works on a task you've never seen before.",
+      "answer": true,
+      "explanation": "That's the point of a rhythm: it's a reliable habit you reuse on any small show-task."
+    },
+    {
+      "id": "u06l09e07",
+      "type": "multipleChoice",
+      "prompt": "ANOTHER TASK: show just the number 7. Which line does it?",
+      "options": [
+        "print(7)",
+        "print(\"seven\")",
+        "print(seven)",
+        "show(7)"
+      ],
+      "answer": 0,
+      "explanation": "print(7) shows the number 7. No quotes needed for a number."
+    },
+    {
+      "id": "u06l09e08",
+      "type": "multipleChoice",
+      "prompt": "For 'show the number 7', the example (expected output) is:",
+      "options": ["7", "seven", "\"7\"", "print(7)"],
+      "answer": 0,
+      "explanation": "The output is just the digit 7 on screen — that's your target."
+    },
+    {
+      "id": "u06l09e09",
+      "type": "tapTokens",
+      "prompt": "Build the line that shows the number 42.",
+      "tokens": ["print", "(", "42", ")"],
+      "answer": ["print", "(", "42", ")"],
+      "explanation": "print(42) — a number goes straight in, no quotes."
+    },
+    {
+      "id": "u06l09e10",
+      "type": "multipleChoice",
+      "prompt": "Running the rhythm on a fresh task proved what?",
+      "options": [
+        "The habit generalizes — it isn't tied to one example",
+        "The rhythm only works once",
+        "Numbers can't be printed",
+        "Checking is unnecessary"
+      ],
+      "answer": 0,
+      "explanation": "A good habit works on new inputs, not just the first one. You re-ran it and it held."
+    }
+  ]
+}

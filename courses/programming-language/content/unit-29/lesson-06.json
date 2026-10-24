@@ -1,0 +1,127 @@
+{
+  "unitId": "u29",
+  "lessonId": "u29l06",
+  "title": "Combining word tests with and / or",
+  "idea": "Word comparisons are conditions, so they combine with and/or just like number comparisons. Predict combined results.",
+  "exercises": [
+    {
+      "id": "u29l06e01",
+      "type": "multipleChoice",
+      "prompt": "A word comparison like name == \"Sam\" produces...",
+      "options": [
+        "a True/False value, just like a number comparison",
+        "a new word",
+        "a number",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "== gives True or False. Because it is a boolean, it can be joined with and/or - exactly like 3 < 5."
+    },
+    {
+      "id": "u29l06e02",
+      "type": "multipleChoice",
+      "prompt": "What does this print?\n\nday = \"Sat\"\npaid = True\nif day == \"Sat\" and paid:\n    print(\"Weekend pass\")\nelse:\n    print(\"No pass\")",
+      "options": [
+        "Weekend pass",
+        "No pass",
+        "Sat",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "day == \"Sat\" is True and paid is True, so 'and' is True and \"Weekend pass\" prints."
+    },
+    {
+      "id": "u29l06e03",
+      "type": "multipleChoice",
+      "prompt": "Same code, day = \"Sat\", paid = False. What prints?",
+      "options": [
+        "No pass",
+        "Weekend pass",
+        "Sat",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "The day matches, but paid is False, so 'and' fails. One false side means \"No pass\"."
+    },
+    {
+      "id": "u29l06e04",
+      "type": "multipleChoice",
+      "prompt": "What does this print?\n\nsize = \"L\"\nif size == \"L\" or size == \"XL\":\n    print(\"Large range\")\nelse:\n    print(\"Other\")",
+      "options": [
+        "Large range",
+        "Other",
+        "L",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "size == \"L\" is True, so 'or' is True regardless of the XL test. \"Large range\" prints."
+    },
+    {
+      "id": "u29l06e05",
+      "type": "multipleChoice",
+      "prompt": "Why is 'size == \"L\" or size == \"XL\"' handy?",
+      "options": [
+        "It accepts either of two words with one condition",
+        "It compares numbers",
+        "It changes size",
+        "It is slower"
+      ],
+      "answer": 0,
+      "explanation": "'or' lets one test pass for several accepted words - cleaner than two separate ifs."
+    },
+    {
+      "id": "u29l06e06",
+      "type": "fillBlank",
+      "prompt": "Accept either \"yes\" or \"y\":\n\nif answer == \"yes\" ____ answer == \"y\":\n    print(\"Confirmed\")",
+      "answer": "or",
+      "acceptable": ["or"],
+      "explanation": "'or' is True when either variant matches, so both \"yes\" and \"y\" confirm."
+    },
+    {
+      "id": "u29l06e07",
+      "type": "multipleChoice",
+      "prompt": "A rule needs BOTH the command to be \"delete\" AND the user to be an admin. Which joiner?",
+      "options": [
+        "and",
+        "or",
+        "not",
+        "no joiner"
+      ],
+      "answer": 0,
+      "explanation": "'Both must hold' is 'and'. Only an admin issuing \"delete\" should pass. (Reviewing boolean joiners.)"
+    },
+    {
+      "id": "u29l06e08",
+      "type": "multipleChoice",
+      "prompt": "What does this print?\n\ncmd = \"delete\"\nis_admin = False\nif cmd == \"delete\" and is_admin:\n    print(\"Deleting\")\nelse:\n    print(\"Denied\")",
+      "options": [
+        "Denied",
+        "Deleting",
+        "delete",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "The command matches, but is_admin is False, so 'and' fails and \"Denied\" prints. A safe guard."
+    },
+    {
+      "id": "u29l06e09",
+      "type": "trueFalse",
+      "prompt": "You can mix a word comparison and a number comparison in the same 'and' condition.",
+      "answer": true,
+      "explanation": "Yes - both produce True/False, so day == \"Sat\" and age >= 18 is a perfectly valid combined condition."
+    },
+    {
+      "id": "u29l06e10",
+      "type": "multipleChoice",
+      "prompt": "The main idea:",
+      "options": [
+        "Word comparisons are booleans, so they combine with and/or like any condition",
+        "Words cannot be combined",
+        "Only numbers use and/or",
+        "and/or change the words"
+      ],
+      "answer": 0,
+      "explanation": "Treat word tests as True/False building blocks. Everything you learned about and/or applies to them too."
+    }
+  ]
+}

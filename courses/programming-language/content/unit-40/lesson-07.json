@@ -1,0 +1,130 @@
+{
+  "unitId": "u40",
+  "lessonId": "u40l07",
+  "title": "Counting matches in a range you choose",
+  "idea": "Combine a chosen range with a counter to answer 'how many fit the rule?'",
+  "exercises": [
+    {
+      "id": "u40l07e01",
+      "type": "multipleChoice",
+      "prompt": "How many multiples of 5 are there from 1 to 20? (i % 5 == 0)",
+      "options": [
+        "4",
+        "5",
+        "20",
+        "3"
+      ],
+      "answer": 0,
+      "explanation": "5, 10, 15, 20 are multiples of 5 — four of them. A counter would end at 4."
+    },
+    {
+      "id": "u40l07e02",
+      "type": "multipleChoice",
+      "prompt": "What prints?\n\ncount = 0\nfor i in range(1, 21):\n    if i % 5 == 0:\n        count += 1\nprint(count)",
+      "options": [
+        "4",
+        "5",
+        "20",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "Multiples of 5 up to 20 are 5, 10, 15, 20 — four matches, so 4 prints."
+    },
+    {
+      "id": "u40l07e03",
+      "type": "multipleChoice",
+      "prompt": "The loop goes 1 to 20 but the counter ends at 4. Why so much smaller?",
+      "options": [
+        "Only matching passes raise the counter",
+        "The loop is broken",
+        "range is wrong",
+        "The counter resets"
+      ],
+      "answer": 0,
+      "explanation": "The loop visits 20 numbers, but the counter only rises on the 4 that match the rule."
+    },
+    {
+      "id": "u40l07e04",
+      "type": "trueFalse",
+      "prompt": "The number of passes and the final count can be different when you count only matches.",
+      "answer": true,
+      "explanation": "True. Passes = how many numbers; count = how many passed the condition."
+    },
+    {
+      "id": "u40l07e05",
+      "type": "fillBlank",
+      "prompt": "Fill the operator to count numbers 1..20 divisible by 4 (remainder 0):\n\nif i % 4 ____ 0:\n    count += 1",
+      "answer": "==",
+      "acceptable": [
+        "=="
+      ],
+      "explanation": "Equality is ==. Numbers 4, 8, 12, 16, 20 match, so the counter would end at 5."
+    },
+    {
+      "id": "u40l07e06",
+      "type": "multipleChoice",
+      "prompt": "How many numbers from 1 to 20 are divisible by 4?",
+      "options": [
+        "5",
+        "4",
+        "20",
+        "6"
+      ],
+      "answer": 0,
+      "explanation": "4, 8, 12, 16, 20 — five of them."
+    },
+    {
+      "id": "u40l07e07",
+      "type": "orderBlocks",
+      "prompt": "Arrange a loop that counts multiples of 3 from 1 to 10.",
+      "blocks": [
+        "        count += 1",
+        "count = 0",
+        "    if i % 3 == 0:",
+        "print(count)",
+        "for i in range(1, 11):"
+      ],
+      "answer": [
+        1,
+        4,
+        2,
+        0,
+        3
+      ],
+      "explanation": "Start the counter, loop 1..10, if i % 3 == 0 add 1, then print."
+    },
+    {
+      "id": "u40l07e08",
+      "type": "multipleChoice",
+      "prompt": "For that multiples-of-3 loop over 1..10, what is the final count?",
+      "options": [
+        "3",
+        "4",
+        "10",
+        "2"
+      ],
+      "answer": 0,
+      "explanation": "3, 6, 9 are multiples of 3 up to 10 — three matches."
+    },
+    {
+      "id": "u40l07e09",
+      "type": "multipleChoice",
+      "prompt": "You want 'how many', but you printed i instead of count inside the loop. What happens to the answer?",
+      "options": [
+        "You see numbers, not the count — print count after the loop",
+        "The count is wrong",
+        "It errors",
+        "Nothing prints"
+      ],
+      "answer": 0,
+      "explanation": "Printing i shows each number but never reports the total; the counter's value is the actual 'how many'."
+    },
+    {
+      "id": "u40l07e10",
+      "type": "trueFalse",
+      "prompt": "To answer 'how many fit the rule?', print the counter AFTER the loop, not during it.",
+      "answer": true,
+      "explanation": "True. During the loop the count is still growing; the final answer is ready only after the loop ends."
+    }
+  ]
+}

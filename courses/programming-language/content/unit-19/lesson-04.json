@@ -1,0 +1,133 @@
+{
+  "unitId": "u19",
+  "lessonId": "u19l04",
+  "title": "Remembering a yes/no fact in a variable",
+  "idea": "A variable can hold a boolean, just like it can hold a number. This lets us name and remember a yes/no fact for later.",
+  "exercises": [
+    {
+      "id": "u19l04e01",
+      "type": "multipleChoice",
+      "prompt": "Can a variable hold a yes/no value like True or False?",
+      "options": [
+        "Yes - a variable can hold a boolean",
+        "No - only numbers",
+        "No - only text",
+        "Only if it's named 'yes'"
+      ],
+      "answer": 0,
+      "explanation": "A variable can remember any value, including a boolean. This lets us name a yes/no fact."
+    },
+    {
+      "id": "u19l04e02",
+      "type": "multipleChoice",
+      "prompt": "What does this print?\n\nis_open = True\nprint(is_open)",
+      "options": [
+        "True",
+        "is_open",
+        "\"True\"",
+        "False"
+      ],
+      "answer": 0,
+      "explanation": "is_open holds the boolean True, so print(is_open) shows True."
+    },
+    {
+      "id": "u19l04e03",
+      "type": "multipleChoice",
+      "prompt": "What does this print?\n\nraining = False\nprint(raining)",
+      "options": [
+        "False",
+        "raining",
+        "True",
+        "\"False\""
+      ],
+      "answer": 0,
+      "explanation": "raining holds False, so printing it shows False."
+    },
+    {
+      "id": "u19l04e04",
+      "type": "fillBlank",
+      "prompt": "Store the yes/no fact that the door is locked (yes):\n\nlocked = ____\nprint(locked)   # shows: True",
+      "answer": "True",
+      "acceptable": [
+        "True"
+      ],
+      "explanation": "Assign the boolean True to 'locked'. Now the variable remembers that the door is locked."
+    },
+    {
+      "id": "u19l04e05",
+      "type": "multipleChoice",
+      "prompt": "Which variable name best describes a yes/no fact about whether a game is finished?",
+      "options": [
+        "is_finished",
+        "x",
+        "number",
+        "color"
+      ],
+      "answer": 0,
+      "explanation": "Names like is_finished read like a yes/no question, which makes True/False feel natural. Clear names make code read like plain English."
+    },
+    {
+      "id": "u19l04e06",
+      "type": "orderBlocks",
+      "prompt": "Arrange these lines: remember that the light is on (yes), then show it.",
+      "blocks": [
+        "print(light_on)",
+        "light_on = True"
+      ],
+      "answer": [
+        1,
+        0
+      ],
+      "explanation": "First store the fact (light_on = True), then print it. Order matters: you can't show a value before it exists."
+    },
+    {
+      "id": "u19l04e07",
+      "type": "trueFalse",
+      "prompt": "A boolean variable is assigned the same way as a number variable, using =.",
+      "answer": true,
+      "explanation": "Yes - name = value works the same whether the value is a number or a boolean."
+    },
+    {
+      "id": "u19l04e08",
+      "type": "multipleChoice",
+      "prompt": "After this code runs, what does ready hold?\n\nready = False\nprint(ready)",
+      "options": [
+        "The boolean False",
+        "The text 'ready'",
+        "The number 0",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "ready holds the boolean False. The variable now remembers a 'no' fact."
+    },
+    {
+      "id": "u19l04e09",
+      "type": "tapTokens",
+      "prompt": "Arrange the tokens to store the fact 'paid' as yes (True).",
+      "tokens": [
+        "paid",
+        "=",
+        "True"
+      ],
+      "answer": [
+        "paid",
+        "=",
+        "True"
+      ],
+      "explanation": "paid = True stores the boolean True in the variable paid. Clean and readable."
+    },
+    {
+      "id": "u19l04e10",
+      "type": "multipleChoice",
+      "prompt": "Why is it useful to store a yes/no fact in a variable?",
+      "options": [
+        "So we can name it and use it in a later step",
+        "Because booleans can't be printed otherwise",
+        "Because variables delete the value",
+        "It is never useful"
+      ],
+      "answer": 0,
+      "explanation": "Naming a fact (like is_open) lets us refer to it later when the computer makes a decision."
+    }
+  ]
+}

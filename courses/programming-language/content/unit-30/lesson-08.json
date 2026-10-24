@@ -1,0 +1,128 @@
+{
+  "unitId": "u30",
+  "lessonId": "u30l08",
+  "title": "Build an interactive greeter",
+  "idea": "Put it together: ask, decide, and reply with a personalized f-string message. Learner assembles a full small interactive program.",
+  "exercises": [
+    {
+      "id": "u30l08e01",
+      "type": "multipleChoice",
+      "prompt": "Task: ask for a name, then if the name is \"admin\" greet with special access, else a normal welcome, using the name in the message. What are the pieces?",
+      "options": [
+        "input() to ask, if/else to decide, an f-string to reply with the name",
+        "Only print",
+        "Only a number",
+        "A loop"
+      ],
+      "answer": 0,
+      "explanation": "Ask, decide, reply - the full interactive pattern, with an f-string to personalize the message."
+    },
+    {
+      "id": "u30l08e02",
+      "type": "multipleChoice",
+      "prompt": "Which line asks for the name and stores it?",
+      "options": [
+        "name = input(\"Your name: \")",
+        "name = \"name\"",
+        "input(name)",
+        "print(name)"
+      ],
+      "answer": 0,
+      "explanation": "input() shows the prompt and returns the typed text into name."
+    },
+    {
+      "id": "u30l08e03",
+      "type": "orderBlocks",
+      "prompt": "Assemble the greeter.",
+      "blocks": [
+        "name = input(\"Your name: \")",
+        "if name == \"admin\":",
+        "    print(\"Welcome, boss!\")",
+        "else:",
+        "    print(f\"Hello, {name}!\")"
+      ],
+      "answer": [0, 1, 2, 3, 4],
+      "explanation": "Ask, branch on the name, and reply - the else uses an f-string to drop the name into the greeting."
+    },
+    {
+      "id": "u30l08e04",
+      "type": "fillBlank",
+      "prompt": "Fill the marker so {name} is replaced by its value:\n\nprint(____\"Hello, {name}!\")",
+      "answer": "f",
+      "acceptable": ["f"],
+      "explanation": "The f makes it an f-string, so {name} shows the typed name. (f-string review, now with live input.)"
+    },
+    {
+      "id": "u30l08e05",
+      "type": "multipleChoice",
+      "prompt": "The user types admin. What prints?",
+      "options": [
+        "Welcome, boss!",
+        "Hello, admin!",
+        "admin",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "\"admin\" matches the if, so the special branch prints \"Welcome, boss!\"."
+    },
+    {
+      "id": "u30l08e06",
+      "type": "multipleChoice",
+      "prompt": "The user types Ada. What prints?",
+      "options": [
+        "Hello, Ada!",
+        "Welcome, boss!",
+        "Hello, {name}!",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "\"Ada\" is not \"admin\", so the else runs and the f-string fills in the name: \"Hello, Ada!\"."
+    },
+    {
+      "id": "u30l08e07",
+      "type": "multipleChoice",
+      "prompt": "The user types Admin (capital A). What prints?",
+      "options": [
+        "Hello, Admin! - because \"Admin\" does not equal \"admin\"",
+        "Welcome, boss!",
+        "an error",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "Case matters: \"Admin\" fails the == \"admin\" test, so it falls to the friendly else. A real capitalization gotcha."
+    },
+    {
+      "id": "u30l08e08",
+      "type": "trueFalse",
+      "prompt": "The greeter behaves differently for different typed names, proving input() drives the output.",
+      "answer": true,
+      "explanation": "Yes - \"admin\" gets one message, other names get another. The user's answer shapes the result."
+    },
+    {
+      "id": "u30l08e09",
+      "type": "multipleChoice",
+      "prompt": "To check this program works, which inputs should you try?",
+      "options": [
+        "\"admin\" (hits the if) and a normal name like \"Ada\" (hits the else)",
+        "Only \"admin\"",
+        "A number",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "Test one input per branch. Covering both the if and else proves the whole decision."
+    },
+    {
+      "id": "u30l08e10",
+      "type": "multipleChoice",
+      "prompt": "What you just built:",
+      "options": [
+        "A complete ask-decide-reply program using input(), if/else, and an f-string",
+        "A program with no input",
+        "A loop",
+        "A list"
+      ],
+      "answer": 0,
+      "explanation": "That is a real interactive program - the full decision toolkit reacting to a typed answer."
+    }
+  ]
+}

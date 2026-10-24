@@ -1,0 +1,152 @@
+{
+  "unitId": "u97",
+  "lessonId": "u97l09",
+  "title": "Capstone: print one row of a multiplication table",
+  "idea": "GUIDED CAPSTONE. Loop a counter, multiply by a fixed base, and print each product — pattern plus arithmetic woven together.",
+  "problem": "Print the 7 times table for 1 to 5: 7, 14, 21, 28, 35.",
+  "exercises": [
+    {
+      "id": "u97l09e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: print 7x1 up to 7x5. OUTPUT is...",
+      "options": [
+        "Five products, one per line",
+        "The sum of them",
+        "Just 35",
+        "A count"
+      ],
+      "answer": 0,
+      "explanation": "Output is each product printed. Five lines, not a single total. Name the output before coding."
+    },
+    {
+      "id": "u97l09e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "What are the two givens?",
+      "options": [
+        "The base (7) and how far to go (1 to 5)",
+        "Only 7",
+        "Only 5",
+        "The answer 35"
+      ],
+      "answer": 0,
+      "explanation": "The base 7 and the range 1..5. Both must become named values in the code — the value-mapping habit."
+    },
+    {
+      "id": "u97l09e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example by hand: 7 x 1, 7 x 2, 7 x 3 are...",
+      "options": [
+        "7, 14, 21",
+        "7, 9, 11",
+        "1, 2, 3",
+        "7, 77, 777"
+      ],
+      "answer": 0,
+      "explanation": "Multiply the base by the step counter. 7x1=7, 7x2=14, 7x3=21. Hand-work the first few to set the pattern."
+    },
+    {
+      "id": "u97l09e04",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Continuing, 7 x 4 and 7 x 5 are...",
+      "options": [
+        "28 and 35",
+        "32 and 40",
+        "11 and 12",
+        "28 and 32"
+      ],
+      "answer": 0,
+      "explanation": "28 and 35. So the full expected row is 7, 14, 21, 28, 35 — our check values."
+    },
+    {
+      "id": "u97l09e05",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Plan it. Order the steps.",
+      "blocks": [
+        "Multiply the base by the counter",
+        "For each counter from 1 to 5",
+        "Print the product"
+      ],
+      "answer": [
+        1,
+        0,
+        2
+      ],
+      "explanation": "Walk the counter 1..5, multiply base by it, print the result. The loop variable IS the multiplier."
+    },
+    {
+      "id": "u97l09e06",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Which range gives the multipliers 1, 2, 3, 4, 5?",
+      "options": [
+        "range(1, 6)",
+        "range(1, 5)",
+        "range(0, 5)",
+        "range(5)"
+      ],
+      "answer": 0,
+      "explanation": "range(1, 6) yields 1..5 (stop exclusive). range(1,5) would stop at 4, and range(5) starts at 0."
+    },
+    {
+      "id": "u97l09e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code it. Arrange the lines.",
+      "blocks": [
+        "    print(base * multiplier)",
+        "base = 7",
+        "for multiplier in range(1, 6):"
+      ],
+      "answer": [
+        1,
+        2,
+        0
+      ],
+      "explanation": "Name base=7, loop the multiplier 1..5, print base*multiplier each pass. Both givens are named — no hardcoded 7 inside the print's math beyond the variable."
+    },
+    {
+      "id": "u97l09e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Complete the product line:\n\nbase = 7\nfor multiplier in range(1, 6):\n    print(base ____ multiplier)",
+      "answer": "*",
+      "acceptable": [
+        "*"
+      ],
+      "explanation": "Multiply base by the current multiplier. This prints 7, 14, 21, 28, 35 one per line."
+    },
+    {
+      "id": "u97l09e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Run it: prints 7, 14, 21, 28, 35. Hand example matched. Verdict?",
+      "options": [
+        "Passes",
+        "Fails",
+        "Unknown",
+        "Rewrite example"
+      ],
+      "answer": 0,
+      "explanation": "Matches. The loop counter doubled as the multiplier — a tidy way to weave a pattern with arithmetic."
+    },
+    {
+      "id": "u97l09e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Generalize: set base = 3, same loop. What prints?",
+      "options": [
+        "3, 6, 9, 12, 15",
+        "7, 14, 21, 28, 35",
+        "3, 3, 3, 3, 3",
+        "1, 2, 3, 4, 5"
+      ],
+      "answer": 0,
+      "explanation": "3x1..3x5 = 3, 6, 9, 12, 15. Change the base, the pattern holds — because the base is a named variable, not hardcoded."
+    }
+  ]
+}

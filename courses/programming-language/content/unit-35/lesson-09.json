@@ -1,0 +1,142 @@
+{
+  "unitId": "u35",
+  "lessonId": "u35l09",
+  "title": "Plan a repetition in plain words",
+  "idea": "Put it together: for a repeat problem, name the output, the body, and the count — a plain-English plan. This is the Plan step of UEPCC for loops.",
+  "exercises": [
+    {
+      "id": "u35l09e01",
+      "type": "multipleChoice",
+      "prompt": "PROBLEM: 'Show the word Hi five times.' What is the OUTPUT?",
+      "options": [
+        "Five lines, each showing Hi",
+        "The number 5",
+        "One line showing Hi",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "Output is what shows: five Hi lines. Naming the output first keeps the plan honest."
+    },
+    {
+      "id": "u35l09e02",
+      "type": "multipleChoice",
+      "prompt": "Same problem. What is the BODY (the one repeated step)?",
+      "options": [
+        "Show Hi",
+        "Show Hi five times",
+        "Count to 5",
+        "Stop"
+      ],
+      "answer": 0,
+      "explanation": "The body is the single step done each pass: show Hi."
+    },
+    {
+      "id": "u35l09e03",
+      "type": "multipleChoice",
+      "prompt": "Same problem. What is the COUNT?",
+      "options": [
+        "5",
+        "1",
+        "0",
+        "Hi"
+      ],
+      "answer": 0,
+      "explanation": "Five times, so the count is 5. Output + body + count = a complete plan for a repetition."
+    },
+    {
+      "id": "u35l09e04",
+      "type": "orderBlocks",
+      "prompt": "Order a plain-English plan for 'show Hi five times'.",
+      "blocks": [
+        "Decide the body: show Hi",
+        "Decide the count: 5",
+        "Repeat the body 5 times"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Name the body, name the count, then repeat. That three-line plan maps straight onto a loop you'll write soon."
+    },
+    {
+      "id": "u35l09e05",
+      "type": "multipleChoice",
+      "prompt": "PROBLEM: 'Print a dash for each of 7 blanks.' What is the count?",
+      "options": [
+        "7",
+        "1",
+        "0",
+        "Dash"
+      ],
+      "answer": 0,
+      "explanation": "Seven blanks, one dash each — count is 7. 'For each of 7' is a repetition with a known count."
+    },
+    {
+      "id": "u35l09e06",
+      "type": "trueFalse",
+      "prompt": "A plain-English plan should name the body and the count before any code.",
+      "answer": true,
+      "explanation": "Yes — plan in words first. Code is just the plan written in Python, which you'll do in the next units."
+    },
+    {
+      "id": "u35l09e07",
+      "type": "matchPairs",
+      "prompt": "Match each problem to its count.",
+      "pairs": [
+        {
+          "left": "Print Welcome 3 times",
+          "right": "3"
+        },
+        {
+          "left": "Print a row for each of 6 seats",
+          "right": "6"
+        },
+        {
+          "left": "Print OK twice",
+          "right": "2"
+        }
+      ],
+      "explanation": "Pulling the count out of each problem is step one of planning a loop."
+    },
+    {
+      "id": "u35l09e08",
+      "type": "multipleChoice",
+      "prompt": "Why plan the body for ONE pass instead of all passes at once?",
+      "options": [
+        "The loop repeats the one-pass body for you",
+        "Because one pass is all you ever need",
+        "Because counting is banned",
+        "To make it harder"
+      ],
+      "answer": 0,
+      "explanation": "Plan the single step; the repetition handles doing it the counted number of times. Plan small, repeat many."
+    },
+    {
+      "id": "u35l09e09",
+      "type": "multipleChoice",
+      "prompt": "A plan says: body = 'print Go', count = 4. What output do you expect?",
+      "options": [
+        "Go printed on 4 lines",
+        "Go printed once",
+        "The number 4",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "Body 'print Go' repeated 4 times gives four Go lines. The plan predicts the output, which you can later check."
+    },
+    {
+      "id": "u35l09e10",
+      "type": "multipleChoice",
+      "prompt": "You finished a repetition plan. What's the natural next step?",
+      "options": [
+        "Write the loop code, then check the output against the plan",
+        "Throw the plan away",
+        "Change the problem",
+        "Do nothing"
+      ],
+      "answer": 0,
+      "explanation": "Plan -> Code -> Check. The next units give you the loop to turn this plan into working, checkable code."
+    }
+  ]
+}

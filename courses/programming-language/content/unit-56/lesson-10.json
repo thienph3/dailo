@@ -1,0 +1,150 @@
+{
+  "unitId": "u56",
+  "lessonId": "u56l10",
+  "title": "Practice finale: choose your plan",
+  "idea": "GUIDED UEPCC finale. Review: pick the right per-item shape (print-each / collect-each / filter-each) for a problem.",
+  "problem": "For each price in a list, build a new list of prices that are under 50.",
+  "exercises": [
+    {
+      "id": "u56l10e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: Build a new list of only the prices under 50.\n\nWhat is the OUTPUT?",
+      "options": [
+        "A new list of the cheap prices",
+        "A single number",
+        "How many are cheap",
+        "The first price"
+      ],
+      "answer": 0,
+      "explanation": "Output is a new list of the items that pass the test (under 50)."
+    },
+    {
+      "id": "u56l10e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "Which per-item shape does this need?",
+      "options": [
+        "Walk, test each, collect the keepers",
+        "Walk and print each",
+        "Transform every item",
+        "Read the first item"
+      ],
+      "answer": 0,
+      "explanation": "It's a filter-and-collect: keep only items passing 'under 50'."
+    },
+    {
+      "id": "u56l10e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example by hand. prices = [20, 60, 49, 50]. What new list?",
+      "options": [
+        "[20, 49]",
+        "[60, 50]",
+        "[20, 49, 50]",
+        "[20, 60, 49, 50]"
+      ],
+      "answer": 0,
+      "explanation": "Under 50 means < 50: 20 and 49 qualify; 60 and 50 do not (50 is not under 50)."
+    },
+    {
+      "id": "u56l10e04",
+      "type": "trueFalse",
+      "uepcc": "E",
+      "prompt": "A price of exactly 50 is NOT kept, because 'under 50' means < 50.",
+      "answer": true,
+      "explanation": "Under 50 is strictly less, so 50 is excluded. Hand-check the boundary."
+    },
+    {
+      "id": "u56l10e05",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Plan it. Order the steps.",
+      "blocks": [
+        "Start an empty 'cheap' list",
+        "For each price, if it is under 50, append it",
+        "Skip prices 50 and over"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Empty list, then for each price test-and-maybe-append. Classic collect-with-filter."
+    },
+    {
+      "id": "u56l10e06",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Which earlier tools are you reusing here?",
+      "options": [
+        "empty list, for-each, if, append",
+        "range and a counter",
+        "input and f-strings only",
+        "nested loops"
+      ],
+      "answer": 0,
+      "explanation": "All tools you already have: an empty list, the for-each walk, an if test, and append."
+    },
+    {
+      "id": "u56l10e07",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Code it. Fill the comparison:\n\ncheap = []\nfor price in prices:\n    if price ____ 50:\n        cheap.append(price)",
+      "answer": "<",
+      "acceptable": [
+        "<"
+      ],
+      "explanation": "'Under 50' is < 50 (strictly less, so 50 is excluded)."
+    },
+    {
+      "id": "u56l10e08",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Arrange the full solution.",
+      "blocks": [
+        "        cheap.append(price)",
+        "    if price < 50:",
+        "for price in prices:",
+        "cheap = []",
+        "prices = [20, 60, 49, 50]"
+      ],
+      "answer": [
+        4,
+        3,
+        2,
+        1,
+        0
+      ],
+      "explanation": "Input list, empty result, loop, if (indent 1), append (indent 2). cheap ends [20, 49]."
+    },
+    {
+      "id": "u56l10e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check. 'cheap' ends [20, 49]. Hand example said [20, 49]. Verdict?",
+      "options": [
+        "Passes",
+        "Fails",
+        "Unknown",
+        "Change the test"
+      ],
+      "answer": 0,
+      "explanation": "Matches, including the excluded 50 edge. Correct."
+    },
+    {
+      "id": "u56l10e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Re-check with prices = [49, 50, 51]. What is 'cheap'?",
+      "options": [
+        "[49]",
+        "[49, 50]",
+        "[50, 51]",
+        "[]"
+      ],
+      "answer": 0,
+      "explanation": "Only 49 is under 50. You chose the right per-item shape and it generalizes — great finale!"
+    }
+  ]
+}

@@ -1,0 +1,120 @@
+{
+  "unitId": "u06",
+  "lessonId": "u06l01",
+  "title": "The mini-rhythm: example, code, check",
+  "idea": "Review lap. Name the tiny loop you already use: work an example, write the print code, check the output matches. No new tool.",
+  "exercises": [
+    {
+      "id": "u06l01e01",
+      "type": "multipleChoice",
+      "prompt": "You've learned a tiny rhythm for small 'show this' tasks. What are the three steps, in order?",
+      "options": [
+        "Example by hand -> write the code -> check the output",
+        "Guess -> run -> hope",
+        "Code -> delete -> code again",
+        "Check -> example -> code"
+      ],
+      "answer": 0,
+      "explanation": "First work an example by hand, then write the print code, then check the real output against your example. You already know each piece."
+    },
+    {
+      "id": "u06l01e02",
+      "type": "trueFalse",
+      "prompt": "This unit teaches a brand-new tool you haven't seen before.",
+      "answer": false,
+      "explanation": "No new tool here. This is a review lap — we just loop back over print, examples, and checking."
+    },
+    {
+      "id": "u06l01e03",
+      "type": "multipleChoice",
+      "prompt": "The task is: show the word Hello. First step of the rhythm — the example. What should the output be?",
+      "options": [
+        "Hello",
+        "print",
+        "the word",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "The expected output is just: Hello. Working the example first tells you what the code must produce."
+    },
+    {
+      "id": "u06l01e04",
+      "type": "tapTokens",
+      "prompt": "Second step — the code. Build an instruction to show: Hello",
+      "tokens": ["print", "(", "\"Hello\"", ")"],
+      "answer": ["print", "(", "\"Hello\"", ")"],
+      "explanation": "print(\"Hello\") — the word in quotes, inside the brackets. Same print you met in Unit 1."
+    },
+    {
+      "id": "u06l01e05",
+      "type": "multipleChoice",
+      "prompt": "Third step — check. You run print(\"Hello\") and it shows Hello. Your example said Hello. So...",
+      "options": [
+        "It passes — the output matches the example",
+        "It fails",
+        "You can't tell",
+        "You must change the example"
+      ],
+      "answer": 0,
+      "explanation": "Output matches the hand example, so it passes. That is exactly what checking means."
+    },
+    {
+      "id": "u06l01e06",
+      "type": "orderBlocks",
+      "prompt": "Put the mini-rhythm steps in the right order.",
+      "blocks": [
+        "Write the print code",
+        "Work the example by hand",
+        "Check the output matches"
+      ],
+      "answer": [1, 0, 2],
+      "explanation": "Example first (so you know the target), then code, then check against the example."
+    },
+    {
+      "id": "u06l01e07",
+      "type": "trueFalse",
+      "prompt": "The hand example is what you compare the real output against when you check.",
+      "answer": true,
+      "explanation": "The example is your target. Checking is just: does the output match the example?"
+    },
+    {
+      "id": "u06l01e08",
+      "type": "multipleChoice",
+      "prompt": "Which instruction correctly shows the word Welcome?",
+      "options": [
+        "print(\"Welcome\")",
+        "print(Welcome)",
+        "Print(\"Welcome\")",
+        "print \"Welcome\""
+      ],
+      "answer": 0,
+      "explanation": "Lowercase print, matching quotes, both brackets. A quick review from Unit 1."
+    },
+    {
+      "id": "u06l01e09",
+      "type": "multipleChoice",
+      "prompt": "Why do we work the example BEFORE writing the code?",
+      "options": [
+        "So we know the right answer to check against",
+        "To make the task slower",
+        "Because code is optional",
+        "To skip the checking step"
+      ],
+      "answer": 0,
+      "explanation": "If you don't know the expected output first, you have nothing to check against. Example first, always."
+    },
+    {
+      "id": "u06l01e10",
+      "type": "multipleChoice",
+      "prompt": "You finished naming the rhythm. What can you do now?",
+      "options": [
+        "Take a tiny 'show this' task and run example -> code -> check",
+        "Only print numbers",
+        "Nothing new",
+        "Read the computer's mind"
+      ],
+      "answer": 0,
+      "explanation": "You can run the full mini-circle on a small task. The rest of this unit is practice loops."
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "unitId": "u10",
+  "lessonId": "u10l08",
+  "title": "Choosing the right operation",
+  "idea": "The hard part isn't the math sign — it's picking which one the problem needs: add, subtract, multiply, or divide.",
+  "exercises": [
+    {
+      "id": "u10l08e01",
+      "type": "multipleChoice",
+      "prompt": "You have 4 boxes, each with 10 pens. To find the TOTAL pens, which operation fits?",
+      "options": ["Multiply", "Add", "Subtract", "Divide"],
+      "answer": 0,
+      "explanation": "Same amount repeated many times means multiply: 4 * 10."
+    },
+    {
+      "id": "u10l08e02",
+      "type": "multipleChoice",
+      "prompt": "You share 24 cookies equally among 6 people. Which operation fits?",
+      "options": ["Divide", "Multiply", "Add", "Subtract"],
+      "answer": 0,
+      "explanation": "Splitting equally means divide: 24 / 6."
+    },
+    {
+      "id": "u10l08e03",
+      "type": "multipleChoice",
+      "prompt": "You had 50 and gave away 15. To find what's left, which operation fits?",
+      "options": ["Subtract", "Add", "Multiply", "Divide"],
+      "answer": 0,
+      "explanation": "Giving away or taking away means subtract: 50 - 15."
+    },
+    {
+      "id": "u10l08e04",
+      "type": "multipleChoice",
+      "prompt": "You add up 3 scores to find the combined total. Which operation fits?",
+      "options": ["Add", "Subtract", "Multiply", "Divide"],
+      "answer": 0,
+      "explanation": "Putting amounts together means add."
+    },
+    {
+      "id": "u10l08e05",
+      "type": "matchPairs",
+      "prompt": "Match each everyday phrase to its operation.",
+      "pairs": [
+        {"left": "total of all of them", "right": "+"},
+        {"left": "how much is left", "right": "-"},
+        {"left": "this many, repeated", "right": "*"},
+        {"left": "shared equally", "right": "/"}
+      ],
+      "explanation": "Reading the problem for these clues tells you which sign to reach for."
+    },
+    {
+      "id": "u10l08e06",
+      "type": "multipleChoice",
+      "prompt": "A ticket costs 8 and you buy 5. Which instruction finds the total cost?",
+      "options": ["print(8 * 5)", "print(8 + 5)", "print(8 - 5)", "print(8 / 5)"],
+      "answer": 0,
+      "explanation": "One price repeated 5 times means multiply: 8 * 5 is 40."
+    },
+    {
+      "id": "u10l08e07",
+      "type": "multipleChoice",
+      "prompt": "A pizza is cut into 8 slices for 4 people, shared equally. How many slices each?",
+      "options": ["print(8 / 4)", "print(8 * 4)", "print(8 + 4)", "print(8 - 4)"],
+      "answer": 0,
+      "explanation": "Shared equally means divide: 8 / 4 is 2.0, so 2 slices each."
+    },
+    {
+      "id": "u10l08e08",
+      "type": "trueFalse",
+      "prompt": "Picking + when the problem says 'shared equally' would give the wrong answer.",
+      "answer": true,
+      "explanation": "Sharing equally is divide, not add. The right sign matters as much as the numbers."
+    },
+    {
+      "id": "u10l08e09",
+      "type": "multipleChoice",
+      "prompt": "You start with 12 apples and pick 7 more. Spot the WRONG choice.",
+      "options": ["print(12 - 7)", "print(12 + 7)", "They both look the same", "Neither is wrong"],
+      "answer": 0,
+      "explanation": "Picking MORE means add. print(12 - 7) subtracts, which is the wrong operation here."
+    },
+    {
+      "id": "u10l08e10",
+      "type": "fillBlank",
+      "prompt": "You have 30 candies to share equally among 5 kids. Fill the sign so print(30 ____ 5) finds how many each:",
+      "answer": "/",
+      "acceptable": ["/"],
+      "explanation": "Shared equally means divide: 30 / 5 is 6.0."
+    }
+  ]
+}

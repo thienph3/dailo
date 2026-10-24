@@ -1,0 +1,128 @@
+{
+  "unitId": "u77",
+  "lessonId": "u77l02",
+  "title": "Inside stays in, return comes out",
+  "idea": "TOOL. Predict what a function shares (return) versus what stays private (inside variables). Reinforces scope with visible output.",
+  "exercises": [
+    {
+      "type": "multipleChoice",
+      "prompt": "Read:\n\ndef score():\n    points = 10\n    return points\n\nprint(score())",
+      "options": [
+        "10",
+        "points",
+        "0",
+        "error"
+      ],
+      "answer": 0,
+      "explanation": "score makes points = 10 and returns it. The returned 10 is printed.",
+      "id": "u77l02e01"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Read:\n\ndef score():\n    points = 10\n\nprint(score())",
+      "options": [
+        "None — score returns nothing",
+        "10",
+        "points",
+        "error"
+      ],
+      "answer": 0,
+      "explanation": "With no return, score hands back None. The private points is never shared, so print shows None.",
+      "id": "u77l02e02"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Which line will cause an error?\n\ndef f():\n    x = 5\n    return x\n\nprint(f())\nprint(x)",
+      "options": [
+        "print(x) — x is private to f",
+        "print(f())",
+        "return x",
+        "x = 5"
+      ],
+      "answer": 0,
+      "explanation": "f() works and returns 5. But print(x) outside fails: x only exists inside f.",
+      "id": "u77l02e03"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Two functions can each have their own variable called total without interfering.",
+      "answer": true,
+      "explanation": "Yes — each function's total is private. That is exactly why scope is useful.",
+      "id": "u77l02e04"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Predict:\n\ndef a():\n    n = 1\n    return n\n\ndef b():\n    n = 100\n    return n\n\nprint(a() + b())",
+      "options": [
+        "101",
+        "2",
+        "200",
+        "error"
+      ],
+      "answer": 0,
+      "explanation": "a()'s n is 1, b()'s n is 100 — separate private notes. 1 + 100 = 101.",
+      "id": "u77l02e05"
+    },
+    {
+      "type": "orderBlocks",
+      "prompt": "Arrange a correct program: define double, return its result, then print the call.",
+      "blocks": [
+        "def double(n):",
+        "    result = n * 2",
+        "    return result",
+        "print(double(6))"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "Make a private result, return it, print the returned value: 12.",
+      "id": "u77l02e06"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Why can't you write print(result) after calling double(6)?",
+      "options": [
+        "result is private to double",
+        "result is too big",
+        "print is broken",
+        "you can, it shows 12"
+      ],
+      "answer": 0,
+      "explanation": "result lives only inside double. Outside, the name is unknown.",
+      "id": "u77l02e07"
+    },
+    {
+      "type": "fillBlank",
+      "prompt": "Hand the private total back out of the function:\n\ndef sum_two(a, b):\n    total = a + b\n    ____ total",
+      "answer": "return",
+      "acceptable": [
+        "return"
+      ],
+      "explanation": "return total shares the value. Without it, total stays trapped inside.",
+      "id": "u77l02e08"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "A function printed the right answer but you can't use it later. Likely fix?",
+      "options": [
+        "Return the value instead of (or as well as) printing it",
+        "Print it twice",
+        "Rename the function",
+        "Delete the variable"
+      ],
+      "answer": 0,
+      "explanation": "print only shows it on screen; return hands it back so other code can use it.",
+      "id": "u77l02e09"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Reaching into a function's private variable from outside is a common beginner mistake.",
+      "answer": true,
+      "explanation": "Very common — the fix is always to return the value you want to use.",
+      "id": "u77l02e10"
+    }
+  ]
+}

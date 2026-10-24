@@ -1,0 +1,132 @@
+{
+  "unitId": "u59",
+  "lessonId": "u59l01",
+  "title": "Keeping the best so far",
+  "idea": "Opener: finding the biggest means remembering ONE 'best so far' and replacing it whenever you meet something bigger. Thinking first.",
+  "exercises": [
+    {
+      "id": "u59l01e01",
+      "type": "multipleChoice",
+      "prompt": "You flip through a stack of photos looking for the tallest building. You keep one 'tallest I've seen so far' in mind. What do you do when a new photo is taller?",
+      "options": [
+        "Replace your 'tallest so far' with the new one",
+        "Ignore it",
+        "Add the two heights together",
+        "Start the whole stack over"
+      ],
+      "answer": 0,
+      "explanation": "You keep ONE best-so-far and swap it out whenever you meet something bigger. That is the whole idea of finding the max."
+    },
+    {
+      "id": "u59l01e02",
+      "type": "trueFalse",
+      "prompt": "To find the biggest value, you keep a single 'best so far' and update it as you go.",
+      "answer": true,
+      "explanation": "One result variable, replaced whenever a bigger value shows up. Same one-result shape as a running total, but you replace instead of add."
+    },
+    {
+      "id": "u59l01e03",
+      "type": "multipleChoice",
+      "prompt": "How is finding the BIGGEST different from TOTALLING a list?",
+      "options": [
+        "Max replaces the best-so-far; a total adds each value in",
+        "They are exactly the same",
+        "Max multiplies the values",
+        "Max counts the items"
+      ],
+      "answer": 0,
+      "explanation": "A total adds every value together. Max keeps just one value — the best so far — and replaces it. Different update, same 'one result while walking' shape."
+    },
+    {
+      "id": "u59l01e04",
+      "type": "multipleChoice",
+      "prompt": "Before you look at any value, what is a safe 'best so far' to start with?",
+      "options": [
+        "The first value in the list",
+        "0 always",
+        "The length of the list",
+        "The last value"
+      ],
+      "answer": 0,
+      "explanation": "Start with the first value as your best-so-far, then compare the rest against it. (Starting at 0 would be wrong if every value were negative.)"
+    },
+    {
+      "id": "u59l01e05",
+      "type": "orderBlocks",
+      "prompt": "Find the biggest of [4, 9, 2] by hand. Put the 'best so far' after each step in order (start with the first value, 4).",
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "blocks": [
+        "Best so far = 4 (the first value)",
+        "9 is bigger than 4, best so far = 9",
+        "2 is not bigger than 9, best so far stays 9"
+      ],
+      "explanation": "Start at 4, see 9 (bigger -> 9), see 2 (not bigger -> stays 9). The biggest is 9."
+    },
+    {
+      "id": "u59l01e06",
+      "type": "multipleChoice",
+      "prompt": "The biggest value in [4, 9, 2] is...",
+      "options": [
+        "9",
+        "4",
+        "2",
+        "15"
+      ],
+      "answer": 0,
+      "explanation": "9 beat 4 and 2 never beat 9, so the best-so-far ends at 9."
+    },
+    {
+      "id": "u59l01e07",
+      "type": "multiSelect",
+      "prompt": "Which real questions are 'find the biggest'? (pick all)",
+      "options": [
+        "What was the hottest day this week?",
+        "Who scored the most points?",
+        "What is the total of all scores?",
+        "How many days were sunny?"
+      ],
+      "answer": [
+        0,
+        1
+      ],
+      "explanation": "Hottest day and highest score both ask for the single biggest value. Total is a sum; 'how many' is a count."
+    },
+    {
+      "id": "u59l01e08",
+      "type": "trueFalse",
+      "prompt": "When you meet a value that is NOT bigger than your best so far, you leave the best so far unchanged.",
+      "answer": true,
+      "explanation": "You only replace when the new value wins. Smaller or equal values are ignored, so the best so far holds."
+    },
+    {
+      "id": "u59l01e09",
+      "type": "multipleChoice",
+      "prompt": "You walk [6, 1, 8, 3] keeping the best so far. How many times does the best so far actually CHANGE after the start?",
+      "options": [
+        "Once — only when 8 beats 6",
+        "Never",
+        "Every step",
+        "Twice"
+      ],
+      "answer": 0,
+      "explanation": "Start 6; 1 loses, 8 wins (change!), 3 loses. Only one replacement happens. The best so far ends at 8."
+    },
+    {
+      "id": "u59l01e10",
+      "type": "multipleChoice",
+      "prompt": "This unit's tool is...",
+      "options": [
+        "Track the best-so-far to find the biggest value in a list",
+        "Add up a list",
+        "Count matching items",
+        "Sort the list"
+      ],
+      "answer": 0,
+      "explanation": "Next you'll write the loop that keeps a best-so-far and replaces it with anything bigger."
+    }
+  ]
+}

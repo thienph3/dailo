@@ -1,0 +1,128 @@
+{
+  "unitId": "u46",
+  "lessonId": "u46l04",
+  "title": "continue: skip just this pass",
+  "idea": "Introduce continue: it skips the REST of the current pass and jumps to the next one. Show predictable output.",
+  "exercises": [
+    {
+      "id": "u46l04e01",
+      "type": "multipleChoice",
+      "prompt": "What prints?\n\nfor i in range(1, 6):\n    if i == 3:\n        continue\n    print(i)",
+      "explanation": "On i == 3, continue skips the print and moves on. So it prints 1, 2, 4, 5 - skipping 3.",
+      "options": [
+        "1\n2\n4\n5",
+        "1\n2\n3\n4\n5",
+        "1\n2",
+        "3"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u46l04e02",
+      "type": "multipleChoice",
+      "prompt": "When continue runs, what happens?",
+      "explanation": "It skips the rest of the current pass and goes straight to the next pass of the loop.",
+      "options": [
+        "It skips to the next pass",
+        "It ends the loop",
+        "It restarts the loop",
+        "It prints twice"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u46l04e03",
+      "type": "trueFalse",
+      "prompt": "Unlike break, continue does NOT end the loop - it only skips the remainder of the current pass.",
+      "explanation": "True - the loop keeps going; continue just abandons the current pass early.",
+      "answer": true
+    },
+    {
+      "id": "u46l04e04",
+      "type": "fillBlank",
+      "prompt": "Complete the keyword that skips the current pass:\n\nfor i in range(1, 6):\n    if i == 3:\n        ____\n    print(i)",
+      "explanation": "continue skips the print on the i == 3 pass and moves to the next value.",
+      "answer": "continue",
+      "acceptable": [
+        "continue"
+      ]
+    },
+    {
+      "id": "u46l04e05",
+      "type": "multipleChoice",
+      "prompt": "What prints? (skip even numbers)\n\nfor i in range(1, 7):\n    if i % 2 == 0:\n        continue\n    print(i)",
+      "explanation": "Even numbers 2,4,6 trigger continue and are skipped; the odds 1, 3, 5 print.",
+      "options": [
+        "1\n3\n5",
+        "2\n4\n6",
+        "1\n2\n3\n4\n5\n6",
+        "nothing"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u46l04e06",
+      "type": "multipleChoice",
+      "prompt": "After continue skips a pass, does the loop variable still advance to the next value?",
+      "explanation": "Yes - continue just ends the current pass; the loop moves on to the next value as usual.",
+      "options": [
+        "Yes - the next pass starts normally",
+        "No - the loop freezes",
+        "No - it ends",
+        "Only for even numbers"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u46l04e07",
+      "type": "orderBlocks",
+      "prompt": "Arrange a loop that prints 1..5 but skips 4.",
+      "explanation": "Loop 1..5, if i == 4 continue, else print i. The continue skips only the i == 4 pass.",
+      "blocks": [
+        "    if i == 4:",
+        "for i in range(1, 6):",
+        "        continue",
+        "    print(i)"
+      ],
+      "answer": [
+        1,
+        0,
+        2,
+        3
+      ]
+    },
+    {
+      "id": "u46l04e08",
+      "type": "multipleChoice",
+      "prompt": "How many numbers does this print?\n\nfor i in range(1, 11):\n    if i % 3 == 0:\n        continue\n    print(i)",
+      "explanation": "Multiples of 3 (3,6,9) are skipped; 10 numbers minus 3 skipped = 7 printed.",
+      "options": [
+        "7",
+        "10",
+        "3",
+        "9"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u46l04e09",
+      "type": "trueFalse",
+      "prompt": "continue is a clean way to express 'skip the ones that ...' without deeply nested ifs.",
+      "explanation": "True - continue skips the unwanted passes up front, keeping the rest of the body simple.",
+      "answer": true
+    },
+    {
+      "id": "u46l04e10",
+      "type": "multipleChoice",
+      "prompt": "In one line, what does continue do?",
+      "explanation": "Skips the rest of the current pass and goes to the next one - the loop carries on.",
+      "options": [
+        "Skip the rest of this pass; go to the next",
+        "End the loop",
+        "Restart from the top value",
+        "Print the current value twice"
+      ],
+      "answer": 0
+    }
+  ]
+}

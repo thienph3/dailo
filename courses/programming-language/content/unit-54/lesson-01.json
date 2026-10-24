@@ -1,0 +1,124 @@
+{
+  "unitId": "u54",
+  "lessonId": "u54l01",
+  "title": "Lists can change",
+  "idea": "Opener for the append/assignment unit: unlike a fixed number, a list can grow and its items can be swapped. Thinking first.",
+  "exercises": [
+    {
+      "id": "u54l01e01",
+      "type": "multipleChoice",
+      "prompt": "A shopping list in real life isn't fixed — you add things and cross things off. Which of these is 'adding to the list'?",
+      "options": [
+        "Writing 'milk' at the bottom",
+        "Reading the list aloud",
+        "Counting the items",
+        "Throwing the list away"
+      ],
+      "answer": 0,
+      "explanation": "Adding a new item makes the list longer. That 'grow the list' action is one of the two new powers in this unit."
+    },
+    {
+      "id": "u54l01e02",
+      "type": "multipleChoice",
+      "prompt": "Which of these is 'changing an item already on the list'?",
+      "options": [
+        "Crossing out 'apples' and writing 'pears' in the same spot",
+        "Adding a brand-new line at the end",
+        "Counting the items",
+        "Printing the list"
+      ],
+      "answer": 0,
+      "explanation": "Replacing what's in a spot changes an existing item. That's the second new power: item assignment."
+    },
+    {
+      "id": "u54l01e03",
+      "type": "trueFalse",
+      "prompt": "So far our lists have stayed the same size once written. This unit lets them grow.",
+      "answer": true,
+      "explanation": "Until now, a list was whatever you wrote. Now you'll add items to make it longer, and swap items in place."
+    },
+    {
+      "id": "u54l01e04",
+      "type": "multiSelect",
+      "prompt": "Which real tasks involve GROWING a list (pick all)?",
+      "options": [
+        "Recording each new score as players finish",
+        "Adding a guest to the invite list",
+        "Checking how many items there are",
+        "Reading the first item"
+      ],
+      "answer": [0, 1],
+      "explanation": "Recording each new score and adding a guest both make the list longer. Counting and reading don't change the list."
+    },
+    {
+      "id": "u54l01e05",
+      "type": "multipleChoice",
+      "prompt": "A list starts empty and you collect results one at a time. Why start empty?",
+      "options": [
+        "You don't know the values yet — you'll add them as they arrive",
+        "Empty lists are faster",
+        "Lists must start empty",
+        "You can never add to a non-empty list"
+      ],
+      "answer": 0,
+      "explanation": "Starting empty and adding as you go is a very common pattern — like a scoreboard that fills up during a game."
+    },
+    {
+      "id": "u54l01e06",
+      "type": "matchPairs",
+      "prompt": "Match each action to what it does to a list.",
+      "pairs": [
+        { "left": "Add a new item at the end", "right": "list gets longer" },
+        { "left": "Replace the item at a spot", "right": "same length, one value changed" },
+        { "left": "Count the items", "right": "list unchanged" }
+      ],
+      "explanation": "Adding grows the list; replacing keeps its size but swaps one value; counting leaves it untouched."
+    },
+    {
+      "id": "u54l01e07",
+      "type": "trueFalse",
+      "prompt": "Replacing an item at a position does NOT change how many items the list has.",
+      "answer": true,
+      "explanation": "Swapping a value in an existing spot keeps the count the same — you changed WHAT is there, not HOW MANY."
+    },
+    {
+      "id": "u54l01e08",
+      "type": "multipleChoice",
+      "prompt": "A scoreboard shows [10, 20]. A new player scores 15. After adding, what should it show?",
+      "options": [
+        "[10, 20, 15]",
+        "[10, 20]",
+        "[15, 10, 20]",
+        "[45]"
+      ],
+      "answer": 0,
+      "explanation": "Adding puts the new score at the end: [10, 20, 15]. The list grew from two items to three."
+    },
+    {
+      "id": "u54l01e09",
+      "type": "multipleChoice",
+      "prompt": "A list shows [10, 20, 30]. You fix a typo: the middle value should be 25, not 20. After changing, what shows?",
+      "options": [
+        "[10, 25, 30]",
+        "[10, 20, 30, 25]",
+        "[25, 20, 30]",
+        "[10, 20, 25, 30]"
+      ],
+      "answer": 0,
+      "explanation": "You replace the item at the middle spot: [10, 25, 30]. Same three items, one value corrected."
+    },
+    {
+      "id": "u54l01e10",
+      "type": "multipleChoice",
+      "prompt": "This unit teaches two new powers. What are they?",
+      "options": [
+        "Adding an item, and changing an item at a position",
+        "Counting and sorting",
+        "Printing and deleting",
+        "Looping and comparing"
+      ],
+      "answer": 0,
+      "explanation": "Next you'll meet append (to add) and item assignment (to change a spot). Two tools for shaping a list."
+    }
+  ]
+}

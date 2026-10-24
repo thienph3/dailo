@@ -1,0 +1,137 @@
+{
+  "unitId": "u77",
+  "lessonId": "u77l10",
+  "title": "Scope, pulled together",
+  "idea": "TOOL, review-heavy. Pull scope together: private insides, return to share, and why composing depends on it.",
+  "exercises": [
+    {
+      "type": "multipleChoice",
+      "prompt": "The one-sentence rule of this unit:",
+      "options": [
+        "A variable made inside a function is private; share results with return",
+        "All variables are global",
+        "Functions can't hold variables",
+        "print shares values out"
+      ],
+      "answer": 0,
+      "explanation": "Private insides, return to share — that's scope, gently.",
+      "id": "u77l10e01"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Predict:\n\ndef f():\n    a = 3\n    b = 7\n    return a + b\n\nprint(f())",
+      "options": [
+        "10",
+        "3",
+        "7",
+        "error"
+      ],
+      "answer": 0,
+      "explanation": "a and b are private; f returns 10.",
+      "id": "u77l10e02"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "After that, print(b) would...",
+      "options": [
+        "error — b is private",
+        "print 7",
+        "print 10",
+        "print b"
+      ],
+      "answer": 0,
+      "explanation": "b lives only inside f.",
+      "id": "u77l10e03"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "return is the proper doorway for a value to leave a function.",
+      "answer": true,
+      "explanation": "Yes — the one reliable way out.",
+      "id": "u77l10e04"
+    },
+    {
+      "type": "orderBlocks",
+      "prompt": "Arrange a correct, self-contained helper and its use.",
+      "blocks": [
+        "def area(w, h):",
+        "    a = w * h",
+        "    return a",
+        "print(area(4, 5))"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "area(4,5) returns 20.",
+      "id": "u77l10e05"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Spot the mistake:\n\ndef f():\n    x = 1\n\nprint(f())",
+      "options": [
+        "prints None — f returns nothing",
+        "prints 1",
+        "error",
+        "prints x"
+      ],
+      "answer": 0,
+      "explanation": "No return means None comes back.",
+      "id": "u77l10e06"
+    },
+    {
+      "type": "fillBlank",
+      "prompt": "Fix it:\n\ndef f():\n    x = 1\n    ____ x",
+      "answer": "return",
+      "acceptable": [
+        "return"
+      ],
+      "explanation": "return x makes f() equal 1.",
+      "id": "u77l10e07"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "REVIEW (composing): why does composing rely on return?",
+      "options": [
+        "Only returned values can be fed into other calls",
+        "print is faster",
+        "it doesn't",
+        "return is decoration"
+      ],
+      "answer": 0,
+      "explanation": "Composing passes RETURNED values along.",
+      "id": "u77l10e08"
+    },
+    {
+      "type": "multiSelect",
+      "prompt": "Safe ways to use a function's computed value? (choose all)",
+      "options": [
+        "Return it and store the result",
+        "Return it and compose it",
+        "Read its private variable from outside",
+        "Print the function name"
+      ],
+      "answer": [
+        0,
+        1
+      ],
+      "explanation": "Return then store/compose — never read private insides.",
+      "id": "u77l10e09"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "You now understand scope. Next unit uses functions INSIDE loops — and each call keeps its own private notes, so...",
+      "options": [
+        "running a helper many times is safe — no leftovers between calls",
+        "the helper remembers old values",
+        "variables leak between calls",
+        "loops break functions"
+      ],
+      "answer": 0,
+      "explanation": "Each call is fresh and private — perfect for running a helper on every item.",
+      "id": "u77l10e10"
+    }
+  ]
+}

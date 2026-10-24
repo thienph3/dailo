@@ -1,0 +1,149 @@
+{
+  "unitId": "u40",
+  "lessonId": "u40l09",
+  "title": "Choosing what the counter counts",
+  "idea": "Decide the condition a counter should check to answer a 'how many' question.",
+  "exercises": [
+    {
+      "id": "u40l09e01",
+      "type": "multipleChoice",
+      "prompt": "Question: 'How many scores from 1 to 10 are at least 7?' Which condition counts them?",
+      "options": [
+        "if i >= 7",
+        "if i > 10",
+        "if i == 7",
+        "if i < 7"
+      ],
+      "answer": 0,
+      "explanation": "At least 7 means 7 or more: i >= 7. That matches 7, 8, 9, 10."
+    },
+    {
+      "id": "u40l09e02",
+      "type": "multipleChoice",
+      "prompt": "How many numbers from 1 to 10 are at least 7?",
+      "options": [
+        "4",
+        "3",
+        "7",
+        "10"
+      ],
+      "answer": 0,
+      "explanation": "7, 8, 9, 10 — four of them."
+    },
+    {
+      "id": "u40l09e03",
+      "type": "multipleChoice",
+      "prompt": "Question: 'How many numbers from 1 to 10 are NOT equal to 5?' Which condition?",
+      "options": [
+        "if i != 5",
+        "if i == 5",
+        "if i > 5",
+        "if i < 5"
+      ],
+      "answer": 0,
+      "explanation": "Not equal uses !=. Every number except 5 matches, so nine of them."
+    },
+    {
+      "id": "u40l09e04",
+      "type": "multipleChoice",
+      "prompt": "How many numbers from 1 to 10 are not equal to 5?",
+      "options": [
+        "9",
+        "10",
+        "1",
+        "5"
+      ],
+      "answer": 0,
+      "explanation": "All ten except the single 5 — that is nine."
+    },
+    {
+      "id": "u40l09e05",
+      "type": "matchPairs",
+      "prompt": "Match each 'how many' question to its condition.",
+      "pairs": [
+        {
+          "left": "how many are even",
+          "right": "if i % 2 == 0"
+        },
+        {
+          "left": "how many are over 5",
+          "right": "if i > 5"
+        },
+        {
+          "left": "how many equal 3",
+          "right": "if i == 3"
+        }
+      ],
+      "explanation": "Pick the comparison that exactly describes the group you want to count."
+    },
+    {
+      "id": "u40l09e06",
+      "type": "fillBlank",
+      "prompt": "Fill the condition to count numbers 1..10 that are 3 or less:\n\nif i ____ 3:\n    count += 1",
+      "answer": "<=",
+      "acceptable": [
+        "<="
+      ],
+      "explanation": "3 or less is <=. That matches 1, 2, 3 — three numbers."
+    },
+    {
+      "id": "u40l09e07",
+      "type": "multipleChoice",
+      "prompt": "How many numbers from 1 to 10 are 3 or less?",
+      "options": [
+        "3",
+        "2",
+        "4",
+        "7"
+      ],
+      "answer": 0,
+      "explanation": "1, 2, 3 — three numbers match i <= 3."
+    },
+    {
+      "id": "u40l09e08",
+      "type": "orderBlocks",
+      "prompt": "Arrange a loop that counts numbers 1..10 that are over 6.",
+      "blocks": [
+        "        count += 1",
+        "count = 0",
+        "    if i > 6:",
+        "print(count)",
+        "for i in range(1, 11):"
+      ],
+      "answer": [
+        1,
+        4,
+        2,
+        0,
+        3
+      ],
+      "explanation": "Start the counter, loop, if i > 6 add 1, then print."
+    },
+    {
+      "id": "u40l09e09",
+      "type": "multipleChoice",
+      "prompt": "For that 'over 6' loop over 1..10, what is the final count?",
+      "options": [
+        "4",
+        "6",
+        "3",
+        "10"
+      ],
+      "answer": 0,
+      "explanation": "7, 8, 9, 10 are over 6 — four matches."
+    },
+    {
+      "id": "u40l09e10",
+      "type": "multipleChoice",
+      "prompt": "Why does choosing the RIGHT condition matter for a counter?",
+      "options": [
+        "It decides exactly which passes get counted",
+        "It makes the loop faster",
+        "It changes the range",
+        "It has no effect"
+      ],
+      "answer": 0,
+      "explanation": "The condition defines what you count; a wrong one counts the wrong group and gives a wrong answer."
+    }
+  ]
+}

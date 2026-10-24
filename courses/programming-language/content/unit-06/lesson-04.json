@@ -1,0 +1,109 @@
+{
+  "unitId": "u06",
+  "lessonId": "u06l04",
+  "title": "The example is your target",
+  "idea": "Loop back over Unit 4: write the concrete expected output by hand before coding, and use it as the target to aim at.",
+  "exercises": [
+    {
+      "id": "u06l04e01",
+      "type": "multipleChoice",
+      "prompt": "TASK: Show a tiny menu — Coffee, then Tea. What is the by-hand example (expected output)?",
+      "options": [
+        "Coffee on one line, Tea on the next",
+        "CoffeeTea on one line",
+        "Tea, then Coffee",
+        "A number"
+      ],
+      "answer": 0,
+      "explanation": "Write out exactly what you expect: Coffee, then Tea, two lines. This is your target."
+    },
+    {
+      "id": "u06l04e02",
+      "type": "trueFalse",
+      "prompt": "Working the expected output by hand before coding gives you something to check against later.",
+      "answer": true,
+      "explanation": "Yes — the hand example is the target. Without it, checking has nothing to compare to."
+    },
+    {
+      "id": "u06l04e03",
+      "type": "multipleChoice",
+      "prompt": "A friend writes the example as 'cofee, tea' (misspelled, lowercase). Is that a good target?",
+      "options": [
+        "No — it must match the task exactly: Coffee, Tea",
+        "Yes, close enough",
+        "Yes, spelling never matters",
+        "It doesn't matter what the example says"
+      ],
+      "answer": 0,
+      "explanation": "The example must be exact. A sloppy target means you'd check against the wrong thing."
+    },
+    {
+      "id": "u06l04e04",
+      "type": "orderBlocks",
+      "prompt": "Code step: arrange prints to match the example Coffee then Tea.",
+      "blocks": [
+        "print(\"Coffee\")",
+        "print(\"Tea\")"
+      ],
+      "answer": [0, 1],
+      "explanation": "Coffee first, Tea second — the code order matches the example order."
+    },
+    {
+      "id": "u06l04e05",
+      "type": "multipleChoice",
+      "prompt": "Check: output is Coffee then Tea. Example was Coffee then Tea. Result?",
+      "options": ["Pass", "Fail", "Unknown", "Rewrite the example"],
+      "answer": 0,
+      "explanation": "Output equals the example, so it passes."
+    },
+    {
+      "id": "u06l04e06",
+      "type": "trueFalse",
+      "prompt": "If the code's output and your hand example disagree, you should look for a mistake.",
+      "answer": true,
+      "explanation": "A mismatch is a signal: either the code or the example is wrong. Checking tells you to look closer."
+    },
+    {
+      "id": "u06l04e07",
+      "type": "multipleChoice",
+      "prompt": "Why write the example BEFORE the code, not after?",
+      "options": [
+        "So the example isn't just copied from whatever the code happened to do",
+        "Because examples are illegal after coding",
+        "To make the lesson longer",
+        "There is no reason"
+      ],
+      "answer": 0,
+      "explanation": "If you write the example after seeing the output, you'll just agree with the code — even when it's wrong. Example first keeps you honest."
+    },
+    {
+      "id": "u06l04e08",
+      "type": "tapTokens",
+      "prompt": "Build the first menu line that shows Coffee.",
+      "tokens": ["print", "(", "\"Coffee\"", ")"],
+      "answer": ["print", "(", "\"Coffee\"", ")"],
+      "explanation": "print(\"Coffee\") — the word in quotes inside the brackets."
+    },
+    {
+      "id": "u06l04e09",
+      "type": "multipleChoice",
+      "prompt": "TASK: show the single word Done. The by-hand example is just:",
+      "options": ["Done", "print(Done)", "the code", "Done!"],
+      "answer": 0,
+      "explanation": "The expected output is simply the word Done — nothing extra, no exclamation mark."
+    },
+    {
+      "id": "u06l04e10",
+      "type": "multipleChoice",
+      "prompt": "The example step answers which question?",
+      "options": [
+        "What should the output look like, exactly?",
+        "How fast does it run?",
+        "Who wrote the code?",
+        "What color is the screen?"
+      ],
+      "answer": 0,
+      "explanation": "The example pins down exactly what the output should be — your target for checking."
+    }
+  ]
+}

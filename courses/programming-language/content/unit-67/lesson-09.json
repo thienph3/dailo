@@ -1,0 +1,147 @@
+{
+  "unitId": "u67",
+  "lessonId": "u67l09",
+  "title": "Fix it: counting when it should be adding",
+  "idea": "GUIDED BUG-FIX (wrong accumulate step). Code meant to SUM instead adds 1 each pass (counts). Fix the accumulate line.",
+  "problem": "This code should print the TOTAL of [10, 20, 30], which is 60. Instead it prints 3. Find and fix the bug.",
+  "exercises": [
+    {
+      "id": "u67l09e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "BROKEN CODE:\n\nnums = [10, 20, 30]\ntotal = 0\nfor n in nums:\n    total = total + 1\nprint(total)\n\nUnderstand. What should the OUTPUT be?",
+      "options": [
+        "The total (sum) of the numbers",
+        "How many numbers there are",
+        "The biggest number",
+        "The list"
+      ],
+      "answer": 0,
+      "explanation": "The goal is the SUM of the values. That means each pass should add the item's VALUE, not just 1."
+    },
+    {
+      "id": "u67l09e02",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example. By hand, what is 10 + 20 + 30?",
+      "options": [
+        "60",
+        "3",
+        "30",
+        "600"
+      ],
+      "answer": 0,
+      "explanation": "10 + 20 + 30 = 60. The code's answer of 3 is the COUNT of items, not their total — a big clue."
+    },
+    {
+      "id": "u67l09e03",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "The code printed 3, which is just how many items there are. What is 'total = total + 1' actually doing each pass?",
+      "options": [
+        "adding 1, so it COUNTS items instead of summing values",
+        "adding the item's value",
+        "nothing",
+        "printing"
+      ],
+      "answer": 0,
+      "explanation": "Adding 1 per pass counts the items (3). To sum, you must add the item n itself, not the number 1."
+    },
+    {
+      "id": "u67l09e04",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "So the bug is the WRONG accumulate step. For a SUM, each pass should add...",
+      "options": [
+        "n (the current item's value)",
+        "1",
+        "total",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "A sum grows by the item's value, so 'total = total + n'. Adding 1 is for counting, a different task."
+    },
+    {
+      "id": "u67l09e05",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Plan the fix. The starting value total = 0 is correct for a sum. Which single line changes?",
+      "options": [
+        "'total = total + 1' becomes 'total = total + n'",
+        "'total = 0' becomes 'total = 1'",
+        "the print line",
+        "the for line"
+      ],
+      "answer": 0,
+      "explanation": "Only the accumulate step is wrong. Change '+ 1' to '+ n' and the loop sums the values."
+    },
+    {
+      "id": "u67l09e06",
+      "type": "trueFalse",
+      "uepcc": "P",
+      "prompt": "Summing and counting share the same shape (start at 0, loop, accumulate); they differ only in WHAT you add each pass.",
+      "answer": true,
+      "explanation": "Exactly. Count adds 1; sum adds the value n. Mixing them up is why this bug is so easy to make — and so easy to fix."
+    },
+    {
+      "id": "u67l09e07",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Fix the accumulate step so it SUMS the values:\n\ntotal = 0\nfor n in nums:\n    total = total + ____\nprint(total)",
+      "answer": "n",
+      "acceptable": [
+        "n"
+      ],
+      "explanation": "Add n (the current value) each pass. Now total goes 0, 10, 30, 60 — the real sum."
+    },
+    {
+      "id": "u67l09e08",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Arrange the FIXED summing loop.",
+      "blocks": [
+        "nums = [10, 20, 30]",
+        "total = 0",
+        "for n in nums:",
+        "    total = total + n",
+        "print(total)"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "explanation": "Store nums, start total = 0, add each n inside the loop, print after. total correctly reaches 60."
+    },
+    {
+      "id": "u67l09e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check. The fixed code prints 60. Your hand answer was 60. So...",
+      "options": [
+        "It passes — it sums the values now",
+        "It still prints 3",
+        "You can't tell",
+        "The example was wrong"
+      ],
+      "answer": 0,
+      "explanation": "Output 60 matches the hand total. Changing '+ 1' to '+ n' turned a counter back into a summer."
+    },
+    {
+      "id": "u67l09e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Re-check with new inputs: nums = [5, 5], total = 0, step 'total = total + n'. What prints?",
+      "options": [
+        "10",
+        "2",
+        "5",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "5 + 5 = 10 (a sum), not 2 (a count). The fix generalizes: it adds values, whatever the list."
+    }
+  ]
+}

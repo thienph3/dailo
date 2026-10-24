@@ -1,0 +1,132 @@
+{
+  "unitId": "u20",
+  "lessonId": "u20l09",
+  "title": "Comparing with a calculation",
+  "idea": "The sides of a comparison can be calculations. Python works out each side first, then compares. This reviews arithmetic from earlier units.",
+  "exercises": [
+    {
+      "id": "u20l09e01",
+      "type": "multipleChoice",
+      "prompt": "What does this print?\n\nprint(2 + 3 > 4)",
+      "options": [
+        "True",
+        "False",
+        "5",
+        "4"
+      ],
+      "answer": 0,
+      "explanation": "Python computes 2 + 3 = 5 first, then checks 5 > 4, which is True."
+    },
+    {
+      "id": "u20l09e02",
+      "type": "multipleChoice",
+      "prompt": "What does this print?\n\nprint(10 == 2 * 5)",
+      "options": [
+        "True",
+        "False",
+        "10",
+        "50"
+      ],
+      "answer": 0,
+      "explanation": "2 * 5 is 10, and 10 == 10 is True. The math happens before the compare."
+    },
+    {
+      "id": "u20l09e03",
+      "type": "trueFalse",
+      "prompt": "Python finishes the arithmetic on each side before it compares.",
+      "answer": true,
+      "explanation": "Yes - calculations run first, then the comparison uses the results."
+    },
+    {
+      "id": "u20l09e04",
+      "type": "multipleChoice",
+      "prompt": "What does this print?\n\nprint(12 // 2 >= 6)",
+      "options": [
+        "True",
+        "False",
+        "6",
+        "12"
+      ],
+      "answer": 0,
+      "explanation": "12 // 2 is 6, and 6 >= 6 is True. (// is whole-number division from an earlier unit.)"
+    },
+    {
+      "id": "u20l09e05",
+      "type": "fillBlank",
+      "prompt": "Check if the total of two prices is over 10:\n\npen = 4\nbook = 9\nprint(pen + book ____ 10)   # shows: True",
+      "answer": ">",
+      "acceptable": [
+        ">"
+      ],
+      "explanation": "pen + book is 13, and 13 > 10 is True. The sum is computed before comparing."
+    },
+    {
+      "id": "u20l09e06",
+      "type": "multipleChoice",
+      "prompt": "What does this print?\n\nprint(7 - 7 == 0)",
+      "options": [
+        "True",
+        "False",
+        "7",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "7 - 7 is 0, and 0 == 0 is True."
+    },
+    {
+      "id": "u20l09e07",
+      "type": "multipleChoice",
+      "prompt": "What does this print?\n\nprint(3 * 3 < 8)",
+      "options": [
+        "False",
+        "True",
+        "9",
+        "8"
+      ],
+      "answer": 0,
+      "explanation": "3 * 3 is 9, and 9 < 8 is False."
+    },
+    {
+      "id": "u20l09e08",
+      "type": "orderBlocks",
+      "prompt": "Arrange: store two counts, then show whether their total reaches 5 or more.",
+      "blocks": [
+        "print(apples + oranges >= 5)",
+        "oranges = 3",
+        "apples = 2"
+      ],
+      "answer": [
+        2,
+        1,
+        0
+      ],
+      "explanation": "Store apples, store oranges, then compare their sum. 2 + 3 = 5, and 5 >= 5 is True."
+    },
+    {
+      "id": "u20l09e09",
+      "type": "multipleChoice",
+      "prompt": "What does this print?\n\nleft = 10\nright = 2 * 5\nprint(left == right)",
+      "options": [
+        "True",
+        "False",
+        "10",
+        "20"
+      ],
+      "answer": 0,
+      "explanation": "right is 2 * 5 = 10, and left is 10, so left == right is True."
+    },
+    {
+      "id": "u20l09e10",
+      "type": "multipleChoice",
+      "prompt": "Why is it useful to compare the result of a calculation?",
+      "options": [
+        "Many real yes/no facts come from doing math first (like a total vs a limit)",
+        "Because math is never needed",
+        "Because comparisons replace math",
+        "It is not useful"
+      ],
+      "answer": 0,
+      "explanation": "'Is the bill over the limit?' needs a sum, then a compare. Combining the two is very common in real problems."
+    }
+  ]
+}

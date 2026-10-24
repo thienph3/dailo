@@ -1,0 +1,129 @@
+{
+  "unitId": "u14",
+  "lessonId": "u14l07",
+  "title": "Solve it: split a bill after a voucher",
+  "idea": "GUIDED PROBLEM. Multi-step money problem: subtract a voucher, then split per person. Uses parentheses to group the subtraction before dividing. Reviews + - and variables. Every value named.",
+  "problem": "A meal bill is 90. You have a voucher worth 30 off, and 4 people split what's left equally. Show each person's share.",
+  "exercises": [
+    {
+      "id": "u14l07e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: bill 90, voucher 30 off, 4 people split the rest. Show each person's SHARE.\n\nUnderstand — what is the OUTPUT?",
+      "options": [
+        "Each person's share of the discounted bill",
+        "The full bill",
+        "The voucher amount",
+        "The number of people"
+      ],
+      "answer": 0,
+      "explanation": "Output = one person's share after the voucher. Name it first."
+    },
+    {
+      "id": "u14l07e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "What are the INPUTS?",
+      "options": [
+        "The bill (90), the voucher (30), and the number of people (4)",
+        "Only the number 15",
+        "The word 'share'",
+        "None"
+      ],
+      "answer": 0,
+      "explanation": "Three inputs, all named: bill 90, voucher 30, people 4. None gets dropped."
+    },
+    {
+      "id": "u14l07e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example by hand: 90 bill, 30 off, split by 4. Each share?",
+      "options": ["15", "22", "60", "30"],
+      "answer": 0,
+      "explanation": "90 - 30 = 60 after the voucher; 60 / 4 = 15 each. Check value: 15. Subtract FIRST, then divide."
+    },
+    {
+      "id": "u14l07e04",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Plan. Without brackets, share = bill - voucher / people does the / first. What does that give?",
+      "options": [
+        "90 - (30/4) = 90 - 7.5 = 82.5 — wrong!",
+        "15 — the answer we want",
+        "An error",
+        "60"
+      ],
+      "answer": 0,
+      "explanation": "Division runs before subtraction, so 30 / 4 = 7.5 happens first. That's not our plan — we must subtract first."
+    },
+    {
+      "id": "u14l07e05",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Put the plan in order.",
+      "blocks": [
+        "Divide the discounted bill by the number of people",
+        "Remember bill, voucher, and people",
+        "Subtract the voucher from the bill",
+        "Show each person's share"
+      ],
+      "answer": [1, 2, 0, 3],
+      "explanation": "Remember inputs, subtract the voucher, divide by people, show the share. Two compute steps then output."
+    },
+    {
+      "id": "u14l07e06",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Group the subtraction so it happens first:\n\nbill = 90\nvoucher = 30\npeople = 4\nshare = (bill - voucher) ____ people",
+      "answer": "/",
+      "acceptable": ["/"],
+      "explanation": "Brackets force the subtract first, then divide: (90 - 30) / 4 = 15."
+    },
+    {
+      "id": "u14l07e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Arrange the full solution.",
+      "blocks": [
+        "bill = 90",
+        "voucher = 30",
+        "people = 4",
+        "share = (bill - voucher) / people",
+        "print(share)"
+      ],
+      "answer": [0, 1, 2, 3, 4],
+      "explanation": "Store all three values, group the subtraction then divide, print. Every number from the problem is named."
+    },
+    {
+      "id": "u14l07e08",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "The code prints 15.0. Hand example said 15. Verdict?",
+      "options": [
+        "Passes — 15.0 is the same value as 15",
+        "Fails — 15.0 is a different number",
+        "Unknown",
+        "Rewrite the example"
+      ],
+      "answer": 0,
+      "explanation": "Normal / gives a decimal, so you see 15.0. That's the same amount as 15, so it passes."
+    },
+    {
+      "id": "u14l07e09",
+      "type": "trueFalse",
+      "uepcc": "Check",
+      "prompt": "Sanity check: share times people, plus the voucher, should equal the original bill (90).",
+      "answer": true,
+      "explanation": "Yes! 15 x 4 + 30 = 90. Rebuilding the bill confirms the steps are right."
+    },
+    {
+      "id": "u14l07e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "New bill: 100, voucher 20, 5 people. Same code share = (bill - voucher) / people. What shows?",
+      "options": ["16.0", "16", "80.0", "4.0"],
+      "answer": 0,
+      "explanation": "(100 - 20) / 5 = 80 / 5 = 16.0. The grouped plan handles new numbers."
+    }
+  ]
+}

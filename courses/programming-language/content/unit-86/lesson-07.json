@@ -1,0 +1,139 @@
+{
+  "unitId": "u86",
+  "lessonId": "u86l07",
+  "title": "Spotting a bad split",
+  "idea": "MEET: not every split is good — a split can miss a sub-problem, duplicate work, or put steps in an impossible order. Learn to spot the flaw.",
+  "exercises": [
+    {
+      "type": "multipleChoice",
+      "prompt": "PROBLEM: 'Show the total and the average.' A split lists only 'total the list'. What's wrong?",
+      "options": [
+        "It's MISSING a sub-problem — the average was dropped",
+        "Nothing, it's complete",
+        "It has too many steps",
+        "The order is wrong"
+      ],
+      "answer": 0,
+      "explanation": "Two outputs were asked for; the split covers only one. A missing sub-problem means a missing output.",
+      "id": "u86l07e01"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "A split for 'average the scores' lists: 'divide to get the average' THEN 'total the scores'. The flaw is...",
+      "options": [
+        "Order — you can't divide before you have the total",
+        "It's missing a step",
+        "It duplicates work",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "The divide needs the total, so totalling must come first. This split has the steps in an impossible order.",
+      "id": "u86l07e02"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "A split that walks the list twice to do the total, when one walk could do everything, wastes work.",
+      "answer": true,
+      "explanation": "Yes — if independent jobs can share one pass, doing separate passes is wasteful. Not wrong, but not clean.",
+      "id": "u86l07e03"
+    },
+    {
+      "type": "multiSelect",
+      "prompt": "Select the SPLITS that are flawed.",
+      "options": [
+        "'total and average' -> only 'total the list'",
+        "'subtotal then fee' -> 'add fee' before 'subtotal'",
+        "'total and count' -> 'total the list'; 'count over 10'",
+        "'biggest and smallest' -> 'track biggest'; 'track smallest'"
+      ],
+      "answer": [
+        0,
+        1
+      ],
+      "explanation": "First drops the average (missing); second orders fee before subtotal (impossible). The last two are correct splits.",
+      "id": "u86l07e04"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "How do you CHECK a split before coding it?",
+      "options": [
+        "Make sure every output has a sub-problem, and every step's inputs come first",
+        "Run it and hope",
+        "Count the words",
+        "Trust it blindly"
+      ],
+      "answer": 0,
+      "explanation": "Two checks: coverage (every output has a job) and order (every step's inputs are ready). Both must hold.",
+      "id": "u86l07e05"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "A split can look reasonable and still be missing a sub-problem.",
+      "answer": true,
+      "explanation": "Yes — the sneaky flaw. A tidy-looking list can quietly drop an output. Compare against the outputs list to catch it.",
+      "id": "u86l07e06"
+    },
+    {
+      "type": "matchPairs",
+      "prompt": "Match each flawed split to its flaw.",
+      "pairs": [
+        {
+          "left": "drops one of two outputs",
+          "right": "missing sub-problem"
+        },
+        {
+          "left": "divide before total",
+          "right": "impossible order"
+        },
+        {
+          "left": "two passes where one would do",
+          "right": "wasted work"
+        }
+      ],
+      "explanation": "Three classic flaws: missing, mis-ordered, wasteful. Knowing the names helps you spot them fast.",
+      "id": "u86l07e07"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "A split for 'average the passing scores' forgets to filter first. What happens?",
+      "options": [
+        "It averages ALL scores, not just the passing ones — wrong answer",
+        "Nothing changes",
+        "It runs faster and correctly",
+        "It crashes immediately"
+      ],
+      "answer": 0,
+      "explanation": "Skipping the filter means the wrong set of numbers goes into the average. A missing step gives a wrong result.",
+      "id": "u86l07e08"
+    },
+    {
+      "type": "orderBlocks",
+      "prompt": "Order the habit for checking a split.",
+      "blocks": [
+        "List the outputs the problem asked for",
+        "Check each output has a matching sub-problem",
+        "Check each step's inputs are produced by an earlier step"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Coverage then order. A split that passes both checks is ready to code.",
+      "id": "u86l07e09"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "The big idea:",
+      "options": [
+        "Check a split for missing steps, impossible order, and wasted work before coding",
+        "Every split is automatically correct",
+        "Only the computer can check a split",
+        "Splits never have flaws"
+      ],
+      "answer": 0,
+      "explanation": "A split is a plan, and plans can be wrong. Checking coverage and order catches the flaw before it becomes a bug.",
+      "id": "u86l07e10"
+    }
+  ]
+}

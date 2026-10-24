@@ -1,0 +1,137 @@
+{
+  "unitId": "u64",
+  "lessonId": "u64l07",
+  "title": "Search vs filter: choose the tool",
+  "idea": "TOOL: contrast — search answers yes/no (or where); filter collects every match. Pick the right one.",
+  "exercises": [
+    {
+      "type": "multipleChoice",
+      "prompt": "The question is 'is 50 one of the scores?'. Which tool fits?",
+      "options": [
+        "a search (found flag) — it wants a yes/no",
+        "a filter — collect every 50",
+        "a sum",
+        "the average"
+      ],
+      "answer": 0,
+      "explanation": "'Is it one of...' is a yes/no, so a search is the right, smallest tool.",
+      "id": "u64l07e01"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "The question is 'give me all the scores over 50'. Which tool fits?",
+      "options": [
+        "a filter — collect every match into a list",
+        "a search — just yes/no",
+        "the max",
+        "a counter"
+      ],
+      "answer": 0,
+      "explanation": "You need the actual items, so you filter them into a list. A yes/no would not list them.",
+      "id": "u64l07e02"
+    },
+    {
+      "type": "matchPairs",
+      "prompt": "Match each question to its tool.",
+      "pairs": [
+        {
+          "left": "Is 9 in the list?",
+          "right": "search (yes/no)"
+        },
+        {
+          "left": "Where is 9 in the list?",
+          "right": "search for a position"
+        },
+        {
+          "left": "Which items are over 9?",
+          "right": "filter (collect matches)"
+        }
+      ],
+      "explanation": "Yes/no and 'where' are searches; 'which items' collects a list, so it is a filter.",
+      "id": "u64l07e03"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nnums = [3, 7, 7]\ntarget = 7\nfound = False\nfor n in nums:\n    if n == target:\n        found = True\nprint(found)",
+      "options": [
+        "True",
+        "False",
+        "2",
+        "[7, 7]"
+      ],
+      "answer": 0,
+      "explanation": "This is a search: 7 is present, so found is True. It reports presence, not how many.",
+      "id": "u64l07e04"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nnums = [3, 7, 7]\nresult = []\nfor n in nums:\n    if n == 7:\n        result.append(n)\nprint(result)",
+      "options": [
+        "[7, 7]",
+        "True",
+        "2",
+        "[3]"
+      ],
+      "answer": 0,
+      "explanation": "This is a filter: it collects every 7, giving [7, 7]. Same data, but it keeps the matches.",
+      "id": "u64l07e05"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Search and filter both loop and test items — they differ in what they collect (a flag vs a list).",
+      "answer": true,
+      "explanation": "The loop-and-test skeleton is shared. Search keeps a boolean; filter keeps a list of matches.",
+      "id": "u64l07e06"
+    },
+    {
+      "type": "multiSelect",
+      "prompt": "Which questions are SEARCHES (yes/no or where)? (pick all)",
+      "options": [
+        "Is the word 'red' in the list?",
+        "Does any score equal 100?",
+        "List all scores over 90",
+        "At what position is the first 5?"
+      ],
+      "answer": [
+        0,
+        1,
+        3
+      ],
+      "explanation": "Yes/no and 'at what position' are searches. 'List all scores over 90' collects matches — that is a filter.",
+      "id": "u64l07e07"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "You want to know BOTH whether 5 is present and where it first appears. Use...",
+      "options": [
+        "a position search starting where = -1 (−1 means absent)",
+        "a sum",
+        "the average",
+        "max then min"
+      ],
+      "answer": 0,
+      "explanation": "A position search covers both: where = -1 at the end means absent; any other value is the first position.",
+      "id": "u64l07e08"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "If you only need a yes/no and nothing else, the SIMPLEST tool is...",
+      "options": [
+        "a found flag",
+        "a filtered list then len",
+        "a position search",
+        "the average"
+      ],
+      "answer": 0,
+      "explanation": "A found flag is the least work for a plain yes/no. The others compute more than the question asks.",
+      "id": "u64l07e09"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "'How many 7s are there?' is a counting question, not a plain search.",
+      "answer": true,
+      "explanation": "A plain search just says present/absent. Counting the 7s needs a counter (or filter then len).",
+      "id": "u64l07e10"
+    }
+  ]
+}

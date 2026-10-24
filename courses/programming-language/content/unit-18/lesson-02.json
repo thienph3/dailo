@@ -1,0 +1,128 @@
+{
+  "unitId": "u18",
+  "lessonId": "u18l02",
+  "title": "Loop back: change at the counter",
+  "idea": "REVIEW. Store->compute->report with subtraction and an f-string sentence. Interleaves variables (Lap 0) with - and f-strings (Lap 1).",
+  "problem": "You buy a toy for 13 and pay with 20. Report the change in a friendly sentence.",
+  "exercises": [
+    {
+      "id": "u18l02e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: You buy a toy for 13 and pay with 20. Report the change in a sentence.\n\nWhat is the OUTPUT?",
+      "options": [
+        "A sentence showing the change",
+        "The price, 13",
+        "The payment, 20",
+        "The toy's name"
+      ],
+      "answer": 0,
+      "explanation": "Output = a sentence reporting the change. Name it first."
+    },
+    {
+      "id": "u18l02e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "What are the INPUTS?",
+      "options": [
+        "The price (13) and the payment (20)",
+        "Only the number 7",
+        "The word change",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "You start with the price and the payment. Both are inputs you must store."
+    },
+    {
+      "id": "u18l02e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example by hand. Pay 20 for a 13 toy. The change is?",
+      "options": ["7", "33", "13", "20"],
+      "answer": 0,
+      "explanation": "20 - 13 = 7. That is your check value for later."
+    },
+    {
+      "id": "u18l02e04",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Plan. To get change, what do you do with the two numbers?",
+      "options": [
+        "Subtract the price from the payment",
+        "Add them",
+        "Multiply them",
+        "Divide them"
+      ],
+      "answer": 0,
+      "explanation": "change = payment - price. The plan chooses subtraction before you code."
+    },
+    {
+      "id": "u18l02e05",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Which descriptive names echo this problem best?",
+      "options": [
+        "toy_price and paid",
+        "a and b",
+        "n1 and n2",
+        "price (reused for both)"
+      ],
+      "answer": 0,
+      "explanation": "toy_price and paid read like the problem. Vague or reused names make code hard to follow."
+    },
+    {
+      "id": "u18l02e06",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code it. Arrange the lines (store, compute, report).",
+      "blocks": [
+        "change = paid - toy_price",
+        "toy_price = 13",
+        "paid = 20",
+        "print(f\"Your change is {change}\")"
+      ],
+      "answer": [2, 1, 0, 3],
+      "explanation": "Store paid, store toy_price, compute change, then report it with an f-string."
+    },
+    {
+      "id": "u18l02e07",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Complete the compute step:\n\npaid = 20\ntoy_price = 13\nchange = paid ____ toy_price\nprint(f\"Your change is {change}\")",
+      "answer": "-",
+      "acceptable": ["-"],
+      "explanation": "Subtract with -. Now change holds 7."
+    },
+    {
+      "id": "u18l02e08",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "It prints 'Your change is 7'. Your example said 7. Verdict?",
+      "options": ["Passes", "Fails", "Can't tell", "Rewrite the example"],
+      "answer": 0,
+      "explanation": "Output matches the hand example — correct."
+    },
+    {
+      "id": "u18l02e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "New inputs: paid = 50, toy_price = 35. What does it print?",
+      "options": [
+        "Your change is 15",
+        "Your change is 85",
+        "Your change is 7",
+        "Your change is 35"
+      ],
+      "answer": 0,
+      "explanation": "50 - 35 = 15. The solution generalizes to new numbers."
+    },
+    {
+      "id": "u18l02e10",
+      "type": "trueFalse",
+      "uepcc": "Check",
+      "prompt": "If the computed change did NOT match your hand example, the right move is to fix the code, not change the example.",
+      "answer": true,
+      "explanation": "The hand example is your trusted truth. A mismatch means the code is wrong — fix the code."
+    }
+  ]
+}

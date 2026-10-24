@@ -1,0 +1,158 @@
+{
+  "unitId": "u91",
+  "lessonId": "u91l03",
+  "title": "Solve it: a valid quantity, then the bill",
+  "idea": "GUIDED PROBLEM. Validate an input (this lap's validation loop), then compute - choosing validate-then-compute.",
+  "problem": "Ask for a quantity (must be at least 1). Each item costs 4. Show the bill.",
+  "exercises": [
+    {
+      "id": "u91l03e01",
+      "uepcc": "U",
+      "type": "multipleChoice",
+      "prompt": "PROBLEM: ask for a quantity (at least 1), price is 4 each, show the bill.\n\nWhat is the OUTPUT?",
+      "options": [
+        "The bill (quantity times price)",
+        "The price only",
+        "The quantity only",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "Output = the bill. It depends on a quantity the user types and a fixed price of 4."
+    },
+    {
+      "id": "u91l03e02",
+      "uepcc": "U",
+      "type": "multipleChoice",
+      "prompt": "What must be TRUE about the quantity before you trust it?",
+      "options": [
+        "It must be at least 1",
+        "It can be anything",
+        "It must be even",
+        "It must be 4"
+      ],
+      "answer": 0,
+      "explanation": "The rule is quantity >= 1. Anything less is invalid and must be rejected - a job for a validation loop."
+    },
+    {
+      "id": "u91l03e03",
+      "uepcc": "E",
+      "type": "multipleChoice",
+      "prompt": "By hand: if a valid quantity is 3 and price is 4, what is the bill?",
+      "options": [
+        "12",
+        "7",
+        "1",
+        "34"
+      ],
+      "answer": 0,
+      "explanation": "3 * 4 = 12. That hand answer is your check once the code runs with quantity 3."
+    },
+    {
+      "id": "u91l03e04",
+      "uepcc": "E",
+      "type": "multipleChoice",
+      "prompt": "The user first types 0, then 3. Which value should the bill be based on?",
+      "options": [
+        "3 - the 0 is invalid and gets rejected",
+        "0",
+        "Both added",
+        "The average"
+      ],
+      "answer": 0,
+      "explanation": "0 is below 1, so validation rejects it and re-asks. Only the valid 3 reaches the calculation."
+    },
+    {
+      "id": "u91l03e05",
+      "uepcc": "P",
+      "type": "orderBlocks",
+      "prompt": "Plan the steps.",
+      "blocks": [
+        "Read a quantity and re-ask until it is at least 1",
+        "Multiply the valid quantity by the price",
+        "Show the bill"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Validate first, then compute, then show. The order protects the calculation from bad input."
+    },
+    {
+      "id": "u91l03e06",
+      "uepcc": "P",
+      "type": "multipleChoice",
+      "prompt": "Which technique fits 'keep asking until the quantity is at least 1'?",
+      "options": [
+        "A validation while loop",
+        "A for loop over a range",
+        "A single if with no loop",
+        "A list"
+      ],
+      "answer": 0,
+      "explanation": "Re-asking until valid is a validation loop (this lap). The plan names the tool before coding."
+    },
+    {
+      "id": "u91l03e07",
+      "uepcc": "C",
+      "type": "orderBlocks",
+      "prompt": "Code the plan.",
+      "blocks": [
+        "quantity = int(input())",
+        "while quantity < 1:",
+        "    quantity = int(input())",
+        "price = 4",
+        "bill = quantity * price",
+        "print(bill)"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "explanation": "Read and validate the quantity, set the price, compute the bill, print. Both numbers (price 4, the typed quantity) are named variables."
+    },
+    {
+      "id": "u91l03e08",
+      "uepcc": "C",
+      "type": "fillBlank",
+      "prompt": "Complete the validation condition (invalid when below 1):\n\nquantity = int(input())\nwhile quantity ____ 1:\n    quantity = int(input())",
+      "answer": "<",
+      "acceptable": [
+        "<"
+      ],
+      "explanation": "Loop WHILE invalid: quantity < 1. Once it is 1 or more, the loop stops."
+    },
+    {
+      "id": "u91l03e09",
+      "uepcc": "Check",
+      "type": "multipleChoice",
+      "prompt": "Check: user types 0 then 3; code prints 12. Hand answer for quantity 3 was 12. Verdict?",
+      "options": [
+        "Passes - the bad 0 was rejected and 3 * 4 = 12",
+        "Fails",
+        "Unknown",
+        "The 0 should have been used"
+      ],
+      "answer": 0,
+      "explanation": "Validation discarded the 0, and the bill used the clean 3. Matches the hand example - correct."
+    },
+    {
+      "id": "u91l03e10",
+      "uepcc": "Check",
+      "type": "multipleChoice",
+      "prompt": "New run: user types 5 straight away. What is the bill, and how many times did the loop body run?",
+      "options": [
+        "20, and the loop body ran 0 times",
+        "20, ran once",
+        "5, ran once",
+        "9, ran twice"
+      ],
+      "answer": 0,
+      "explanation": "5 is valid on the first try, so the while body is skipped. bill = 5 * 4 = 20. Valid-first input needs no retries."
+    }
+  ]
+}

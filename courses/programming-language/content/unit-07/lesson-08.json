@@ -1,0 +1,121 @@
+{
+  "unitId": "u07",
+  "lessonId": "u07l08",
+  "title": "Plans that make multi-line output",
+  "idea": "A multi-step plan produces multi-line output. Match each plan step to the line it prints.",
+  "exercises": [
+    {
+      "id": "u07l08e01",
+      "type": "multipleChoice",
+      "prompt": "A plan has 3 show-steps. How many lines will appear on screen?",
+      "options": [
+        "3 lines",
+        "1 line",
+        "0 lines",
+        "6 lines"
+      ],
+      "answer": 0,
+      "explanation": "Each print line shows its text on its own line. Three steps make three lines of output."
+    },
+    {
+      "id": "u07l08e02",
+      "type": "multipleChoice",
+      "prompt": "Code:\nprint(\"Line one\")\nprint(\"Line two\")\nWhat appears on screen?",
+      "options": [
+        "Line one on the first line, Line two on the second",
+        "Line one Line two together",
+        "Only Line two",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "Each print starts a new line. So you get two separate lines of output."
+    },
+    {
+      "id": "u07l08e03",
+      "type": "trueFalse",
+      "prompt": "Each separate print line shows its text on its own line.",
+      "answer": true,
+      "explanation": "Yes. That's why a 3-step plan gives tidy, 3-line output — one line per step."
+    },
+    {
+      "id": "u07l08e04",
+      "type": "orderBlocks",
+      "prompt": "You want output:\nHello\nWorld\nOrder the code lines.",
+      "blocks": [
+        "print(\"Hello\")",
+        "print(\"World\")"
+      ],
+      "answer": [0, 1],
+      "explanation": "Hello line first, World line second — the output appears in the order the code runs."
+    },
+    {
+      "id": "u07l08e05",
+      "type": "multipleChoice",
+      "prompt": "Plan: show a name, then an age, each on its own line. How many print lines?",
+      "options": [
+        "2 print lines",
+        "1 print line",
+        "4 print lines",
+        "0 print lines"
+      ],
+      "answer": 0,
+      "explanation": "Two things, each on its own line, means two print lines."
+    },
+    {
+      "id": "u07l08e06",
+      "type": "matchPairs",
+      "prompt": "Match each plan step to the line it prints.",
+      "pairs": [
+        { "left": "Step 1: show Good", "right": "print(\"Good\")" },
+        { "left": "Step 2: show Morning", "right": "print(\"Morning\")" },
+        { "left": "Step 3: show Everyone", "right": "print(\"Everyone\")" }
+      ],
+      "explanation": "Each plan step maps to one print line. Together they make three lines of output."
+    },
+    {
+      "id": "u07l08e07",
+      "type": "multipleChoice",
+      "prompt": "Output on screen:\nStart\nMiddle\nEnd\nHow many print lines made this?",
+      "options": [
+        "3 print lines",
+        "1 print line",
+        "2 print lines",
+        "It can't be done with print"
+      ],
+      "answer": 0,
+      "explanation": "Three lines of output come from three print lines, one per line."
+    },
+    {
+      "id": "u07l08e08",
+      "type": "orderBlocks",
+      "prompt": "Task: show a menu. Output should read Starter, Main, Dessert. Order the code.",
+      "blocks": [
+        "print(\"Starter\")",
+        "print(\"Main\")",
+        "print(\"Dessert\")"
+      ],
+      "answer": [0, 1, 2],
+      "explanation": "Starter, Main, Dessert — the plan's order becomes the output's order."
+    },
+    {
+      "id": "u07l08e09",
+      "type": "trueFalse",
+      "prompt": "Swapping two print lines swaps which line appears first on screen.",
+      "answer": true,
+      "explanation": "Yes. The code runs top to bottom, so line order decides output order."
+    },
+    {
+      "id": "u07l08e10",
+      "type": "multipleChoice",
+      "prompt": "Plan: show Welcome, then show the date, then show Enjoy. What will the output look like?",
+      "options": [
+        "Three lines: Welcome, the date, Enjoy",
+        "One long line",
+        "Only Welcome",
+        "Nothing shows"
+      ],
+      "answer": 0,
+      "explanation": "Three steps, three print lines, three lines of output in order. You can picture output before running it!"
+    }
+  ]
+}

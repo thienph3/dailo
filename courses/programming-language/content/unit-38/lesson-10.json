@@ -1,0 +1,139 @@
+{
+  "unitId": "u38",
+  "lessonId": "u38l10",
+  "title": "Loop variable and range variants: pulling it together",
+  "idea": "Wrap-up of Unit 38: i changes each pass; range(start, stop, step) controls start, end, and jump; print 1..N, count down, count by steps. Review-leaning.",
+  "exercises": [
+    {
+      "id": "u38l10e01",
+      "type": "multipleChoice",
+      "prompt": "What shows?\n\nfor i in range(1, 4):\n    print(i)",
+      "options": [
+        "1\n2\n3",
+        "0\n1\n2",
+        "1\n2\n3\n4",
+        "3"
+      ],
+      "answer": 0,
+      "explanation": "range(1, 4) gives 1, 2, 3, and print(i) shows each. The loop variable carries the current number."
+    },
+    {
+      "id": "u38l10e02",
+      "type": "multipleChoice",
+      "prompt": "range(0, 10, 2) gives which values?",
+      "options": [
+        "0, 2, 4, 6, 8",
+        "0, 1, 2, ..., 10",
+        "2, 4, 6, 8, 10",
+        "0, 2, 4, 6, 8, 10"
+      ],
+      "answer": 0,
+      "explanation": "Start 0, step 2, stop before 10: 0, 2, 4, 6, 8. The step sets the jump."
+    },
+    {
+      "id": "u38l10e03",
+      "type": "trueFalse",
+      "prompt": "In range(start, stop, step), the stop value is excluded.",
+      "answer": true,
+      "explanation": "Always excluded, counting up or down. To include a final value, set stop one step past it."
+    },
+    {
+      "id": "u38l10e04",
+      "type": "multipleChoice",
+      "prompt": "To print 1 to 5, which range?",
+      "options": [
+        "range(1, 6)",
+        "range(1, 5)",
+        "range(5)",
+        "range(0, 5)"
+      ],
+      "answer": 0,
+      "explanation": "Stop at 6 so 5 is included: range(1, 6) is 1, 2, 3, 4, 5. The classic off-by-one to watch."
+    },
+    {
+      "id": "u38l10e05",
+      "type": "multipleChoice",
+      "prompt": "What shows?\n\nfor i in range(3, 0, -1):\n    print(i)",
+      "options": [
+        "3\n2\n1",
+        "3\n2\n1\n0",
+        "1\n2\n3",
+        "0\n1\n2\n3"
+      ],
+      "answer": 0,
+      "explanation": "Negative step counts down: 3, 2, 1. Stop 0 is excluded."
+    },
+    {
+      "id": "u38l10e06",
+      "type": "multipleChoice",
+      "prompt": "Review: with name = \"Mai\", what does print(f\"Hi {name}\") show?",
+      "options": [
+        "Hi Mai",
+        "Hi {name}",
+        "Hi name",
+        "Mai"
+      ],
+      "answer": 0,
+      "explanation": "An f-string inserts the value: Hi Mai. f-strings pair perfectly with the loop variable, like f\"Day {i}\"."
+    },
+    {
+      "id": "u38l10e07",
+      "type": "matchPairs",
+      "prompt": "Match each range to its values.",
+      "pairs": [
+        {
+          "left": "range(1, 4)",
+          "right": "1, 2, 3"
+        },
+        {
+          "left": "range(0, 9, 3)",
+          "right": "0, 3, 6"
+        },
+        {
+          "left": "range(4, 0, -1)",
+          "right": "4, 3, 2, 1"
+        }
+      ],
+      "explanation": "Start included, stop excluded, step sets size and direction. Trace each to be sure."
+    },
+    {
+      "id": "u38l10e08",
+      "type": "multipleChoice",
+      "prompt": "Review: for i in range(4) with print(i) shows what?",
+      "options": [
+        "0\n1\n2\n3",
+        "1\n2\n3\n4",
+        "0\n1\n2\n3\n4",
+        "4\n4\n4\n4"
+      ],
+      "answer": 0,
+      "explanation": "Plain range(4) starts at 0: 0, 1, 2, 3. Remember the default start is 0 — from lesson 1."
+    },
+    {
+      "id": "u38l10e09",
+      "type": "multipleChoice",
+      "prompt": "What shows?\n\nfor i in range(1, 4):\n    print(i * 2)",
+      "options": [
+        "2\n4\n6",
+        "1\n2\n3",
+        "2\n4\n6\n8",
+        "6"
+      ],
+      "answer": 0,
+      "explanation": "i is 1, 2, 3; i * 2 is 2, 4, 6. The loop variable is a real number you can compute with."
+    },
+    {
+      "id": "u38l10e10",
+      "type": "multipleChoice",
+      "prompt": "You've finished the loop variable and range variants. What can you now do?",
+      "options": [
+        "Repeat N times AND use the current count each pass — print 1..N, count down, step by any amount",
+        "Only repeat the exact same line",
+        "Only make decisions",
+        "Nothing new"
+      ],
+      "answer": 0,
+      "explanation": "You can vary each pass with i and shape the counting with start, stop, and step. That's a huge jump in what your loops can do."
+    }
+  ]
+}

@@ -1,0 +1,160 @@
+{
+  "unitId": "u65",
+  "lessonId": "u65l03",
+  "title": "Solve it: keep the items you can afford",
+  "idea": "GUIDED PROBLEM (filter). A keep-only problem with a 'less than or equal' test: build a list of prices within a budget. Reinforces the empty-list + append + if pattern and choosing the right comparison.",
+  "problem": "A menu has these prices: [8, 15, 6, 20, 12]. Your budget per item is 12. Build a list of the prices you can afford.",
+  "exercises": [
+    {
+      "id": "u65l03e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: prices are [8, 15, 6, 20, 12], budget per item is 12. Build a list of the prices you can afford.\n\nOUTPUT?",
+      "options": [
+        "A new list of the prices that are 12 or less",
+        "The cheapest price only",
+        "The total of all prices",
+        "How many items cost more than 12"
+      ],
+      "answer": 0,
+      "explanation": "'Can afford' means within budget, so the output is a new list of the prices that are 12 or less \u2014 a filter."
+    },
+    {
+      "id": "u65l03e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "INPUTS?",
+      "options": [
+        "The list of prices and the budget (12)",
+        "Only the list of prices",
+        "Only the budget",
+        "The word 'afford'"
+      ],
+      "answer": 0,
+      "explanation": "Both the prices and the budget are inputs. The budget becomes a named variable so nothing is hardcoded."
+    },
+    {
+      "id": "u65l03e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example. By hand, keep prices 12-or-less from [8, 15, 6, 20, 12]. Which stay?",
+      "options": [
+        "8, 6, 12",
+        "15, 20",
+        "8, 6",
+        "all five"
+      ],
+      "answer": 0,
+      "explanation": "8 yes, 15 no, 6 yes, 20 no, 12 yes (exactly the budget). Kept list is [8, 6, 12] \u2014 your check value."
+    },
+    {
+      "id": "u65l03e04",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "The price 12 is exactly the budget. Should it be kept?",
+      "options": [
+        "Yes \u2014 'budget 12' means 12 is affordable",
+        "No \u2014 only prices under 12",
+        "Only if it is the last item",
+        "Only if it appears twice"
+      ],
+      "answer": 0,
+      "explanation": "A budget of 12 means you can spend up to and including 12. So the test is <= budget, and 12 stays."
+    },
+    {
+      "id": "u65l03e05",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Plan. Put the filter steps in order.",
+      "blocks": [
+        "For each price, if it is within budget, add it to the affordable list",
+        "Start with an empty 'affordable' list",
+        "Show the affordable list"
+      ],
+      "answer": [
+        1,
+        0,
+        2
+      ],
+      "explanation": "Same filter recipe as before: start empty, test each item and append matches, then show it."
+    },
+    {
+      "id": "u65l03e06",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Which comparison means 'within budget' (keep it)?",
+      "options": [
+        "price <= budget",
+        "price > budget",
+        "price == budget",
+        "price != budget"
+      ],
+      "answer": 0,
+      "explanation": "Affordable means the price is less than OR equal to the budget: price <= budget."
+    },
+    {
+      "id": "u65l03e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code it. Arrange the lines (empty list, loop + test + append, show).",
+      "blocks": [
+        "affordable = []",
+        "prices = [8, 15, 6, 20, 12]",
+        "budget = 12",
+        "for price in prices:",
+        "    if price <= budget:",
+        "        affordable.append(price)",
+        "print(affordable)"
+      ],
+      "answer": [
+        1,
+        2,
+        0,
+        3,
+        4,
+        5,
+        6
+      ],
+      "explanation": "Store prices and budget, start affordable empty, keep each price <= budget, then print. Every value in the problem is a named variable."
+    },
+    {
+      "id": "u65l03e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Complete the append so matches are collected:\n\nfor price in prices:\n    if price <= budget:\n        affordable.____(price)",
+      "answer": "append",
+      "acceptable": [
+        "append"
+      ],
+      "explanation": "append() adds the matching price onto the end of the affordable list \u2014 that is how a filter grows its result."
+    },
+    {
+      "id": "u65l03e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check. The code prints [8, 6, 12]. Your hand example was [8, 6, 12]. Verdict?",
+      "options": [
+        "Passes",
+        "Fails",
+        "Unknown",
+        "Rewrite the example"
+      ],
+      "answer": 0,
+      "explanation": "Output matches the by-hand list, so the filter is correct \u2014 including the exactly-12 edge."
+    },
+    {
+      "id": "u65l03e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Same plan, new inputs: prices = [5, 30, 10], budget = 10. What prints?",
+      "options": [
+        "[5, 10]",
+        "[5]",
+        "[30]",
+        "[5, 30, 10]"
+      ],
+      "answer": 0,
+      "explanation": "5 and 10 are within budget, 30 is not, so [5, 10]. The <= test keeps the exactly-10 item, as intended."
+    }
+  ]
+}

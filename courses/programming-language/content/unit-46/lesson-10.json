@@ -1,0 +1,125 @@
+{
+  "unitId": "u46",
+  "lessonId": "u46l10",
+  "title": "Loop back: stop, skip, and everything before",
+  "idea": "Review lesson: choose break or continue for a problem, and revisit while, for, counters, accumulators, and if-in-loop together.",
+  "exercises": [
+    {
+      "id": "u46l10e01",
+      "type": "matchPairs",
+      "prompt": "Match each goal to the right tool.",
+      "pairs": [
+        {"left": "stop at the first match", "right": "break"},
+        {"left": "skip the ones that match, keep going", "right": "continue"},
+        {"left": "repeat a known number of times", "right": "for over range"},
+        {"left": "repeat until a condition changes", "right": "while"}
+      ],
+      "explanation": "break stops; continue skips; for counts a known number; while repeats on a condition. Matching tool to goal is the whole skill."
+    },
+    {
+      "id": "u46l10e02",
+      "type": "multipleChoice",
+      "prompt": "What shows? (review: for + if + continue)\n\nfor i in range(1, 7):\n    if i % 2 == 0:\n        continue\n    print(i)",
+      "options": [
+        "1\n3\n5",
+        "2\n4\n6",
+        "1\n2\n3\n4\n5\n6",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "Evens are skipped by continue, so the odds 1, 3, 5 print."
+    },
+    {
+      "id": "u46l10e03",
+      "type": "multipleChoice",
+      "prompt": "What shows? (review: while + break)\n\nn = 1\nwhile n <= 100:\n    if n == 4:\n        break\n    print(n)\n    n = n + 1",
+      "options": [
+        "1\n2\n3",
+        "1\n2\n3\n4",
+        "4",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "Prints 1, 2, 3; at n = 4 break ends the loop before printing. The condition was still true but break stopped it."
+    },
+    {
+      "id": "u46l10e04",
+      "type": "multipleChoice",
+      "prompt": "What does total hold? (review: accumulator + continue)\n\ntotal = 0\nfor i in range(1, 6):\n    if i == 2:\n        continue\n    total = total + i\nprint(total)",
+      "options": [
+        "13 (1 + 3 + 4 + 5)",
+        "15",
+        "2",
+        "11"
+      ],
+      "answer": 0,
+      "explanation": "continue skips adding 2, so total is 1 + 3 + 4 + 5 = 13."
+    },
+    {
+      "id": "u46l10e05",
+      "type": "multipleChoice",
+      "prompt": "What does count hold? (review: counter + if-in-loop)\n\ncount = 0\nfor i in range(1, 11):\n    if i > 6:\n        count = count + 1\nprint(count)",
+      "options": [
+        "4 (7, 8, 9, 10)",
+        "6",
+        "10",
+        "5"
+      ],
+      "answer": 0,
+      "explanation": "Values over 6 are 7, 8, 9, 10 — count is 4. No break or continue needed here; just an if inside the loop."
+    },
+    {
+      "id": "u46l10e06",
+      "type": "trueFalse",
+      "prompt": "Not every loop needs break or continue — a plain if inside the loop often does the job.",
+      "answer": true,
+      "explanation": "Yes. break and continue are for 'stop' and 'skip'; many problems just need an if to decide an action. Use the simplest tool."
+    },
+    {
+      "id": "u46l10e07",
+      "type": "multipleChoice",
+      "prompt": "Goal: print 1..10 but stop as soon as you reach a multiple of 7. Which is correct?",
+      "options": [
+        "for i in range(1, 11):\n    if i % 7 == 0:\n        break\n    print(i)",
+        "for i in range(1, 11):\n    if i % 7 == 0:\n        continue\n    print(i)",
+        "for i in range(1, 11):\n    print(i)\n    break",
+        "for i in range(1, 11):\n    print(i)"
+      ],
+      "answer": 0,
+      "explanation": "'Stop as soon as' is break: it prints 1..6, then ends at 7. continue would only skip 7 and keep going."
+    },
+    {
+      "id": "u46l10e08",
+      "type": "multipleChoice",
+      "prompt": "Goal: print 1..10 but skip every multiple of 7. Which is correct?",
+      "options": [
+        "for i in range(1, 11):\n    if i % 7 == 0:\n        continue\n    print(i)",
+        "for i in range(1, 11):\n    if i % 7 == 0:\n        break\n    print(i)",
+        "for i in range(1, 11):\n    break\n    print(i)",
+        "for i in range(1, 11):\n    continue"
+      ],
+      "answer": 0,
+      "explanation": "'Skip every' is continue: it prints all of 1..10 except 7. break would stop at 7 instead."
+    },
+    {
+      "id": "u46l10e09",
+      "type": "multipleChoice",
+      "prompt": "Which single question picks between break and continue every time?",
+      "options": [
+        "'Do I want to end the loop, or just skip this one pass?'",
+        "'Is the number even?'",
+        "'Is the loop a for or a while?'",
+        "'Is there a print?'"
+      ],
+      "answer": 0,
+      "explanation": "End the loop -> break. Skip this pass -> continue. That one question is all you need."
+    },
+    {
+      "id": "u46l10e10",
+      "type": "trueFalse",
+      "prompt": "You now have the full loop toolkit: for, while, counters, accumulators, if-in-loop, and break/continue to stop or skip.",
+      "answer": true,
+      "explanation": "Yes! You can repeat a known number of times or until a condition changes, make sure it stops, and stop or skip mid-loop. That is the whole repetition toolkit — well done!"
+    }
+  ]
+}

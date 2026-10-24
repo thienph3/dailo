@@ -1,0 +1,131 @@
+{
+  "unitId": "u36",
+  "lessonId": "u36l03",
+  "title": "Predict the output of a 'for each' loop",
+  "idea": "Practice reading a simple 'for each' loop and predicting exactly what it prints, line by line. Prediction is the Check skill for loops.",
+  "exercises": [
+    {
+      "id": "u36l03e01",
+      "type": "multipleChoice",
+      "prompt": "What shows?\n\nfor each of 3 rounds:\n    print(\"Go\")",
+      "options": [
+        "Go\nGo\nGo",
+        "Go",
+        "3",
+        "rounds"
+      ],
+      "answer": 0,
+      "explanation": "Body 'print Go' runs once per round, three rounds — three Go lines."
+    },
+    {
+      "id": "u36l03e02",
+      "type": "multipleChoice",
+      "prompt": "What shows?\n\nfor each of 2 steps:\n    print(\"Up\")\n    print(\"Down\")",
+      "options": [
+        "Up\nDown\nUp\nDown",
+        "Up\nDown",
+        "Up\nUp\nDown\nDown",
+        "Up"
+      ],
+      "answer": 0,
+      "explanation": "Both indented lines are the body, so each pass prints Up then Down. Two passes: Up, Down, Up, Down."
+    },
+    {
+      "id": "u36l03e03",
+      "type": "trueFalse",
+      "prompt": "A loop body can have more than one indented line, and all of them repeat each pass.",
+      "answer": true,
+      "explanation": "Every indented line under the header is part of the body and repeats together each pass."
+    },
+    {
+      "id": "u36l03e04",
+      "type": "multipleChoice",
+      "prompt": "What shows?\n\nfor each of 3 times:\n    print(\"Hi\")\nprint(\"Bye\")",
+      "options": [
+        "Hi\nHi\nHi\nBye",
+        "Hi\nBye\nHi\nBye\nHi\nBye",
+        "Hi\nBye",
+        "Bye\nHi\nHi\nHi"
+      ],
+      "answer": 0,
+      "explanation": "Hi repeats 3 times (indented), then Bye runs once (not indented, after the loop). Hi, Hi, Hi, Bye."
+    },
+    {
+      "id": "u36l03e05",
+      "type": "multipleChoice",
+      "prompt": "How many total lines of output?\n\nfor each of 4 tickets:\n    print(\"Thanks\")",
+      "options": [
+        "4",
+        "1",
+        "8",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "One Thanks per ticket, four tickets — four lines."
+    },
+    {
+      "id": "u36l03e06",
+      "type": "orderBlocks",
+      "prompt": "Put the output in order for:\n\nfor each of 2 passes:\n    print(\"A\")\n    print(\"B\")",
+      "blocks": [
+        "A (pass 1)",
+        "B (pass 1)",
+        "A (pass 2)",
+        "B (pass 2)"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "Each pass runs the whole body top to bottom: A then B. Pass 1 gives A, B; pass 2 gives A, B again."
+    },
+    {
+      "id": "u36l03e07",
+      "type": "multipleChoice",
+      "prompt": "What shows?\n\nfor each of 1 time:\n    print(\"Only once\")",
+      "options": [
+        "Only once",
+        "Only once\nOnly once",
+        "1",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "A loop over a single thing runs the body once. A loop of 1 is fine — it just doesn't repeat."
+    },
+    {
+      "id": "u36l03e08",
+      "type": "trueFalse",
+      "prompt": "Reading a loop and writing down its output by hand is a good way to check it.",
+      "answer": true,
+      "explanation": "Predicting output line by line is exactly how you confirm a loop does what you meant — the Check step."
+    },
+    {
+      "id": "u36l03e09",
+      "type": "multipleChoice",
+      "prompt": "What shows?\n\nprint(\"Start\")\nfor each of 2 rounds:\n    print(\"Go\")",
+      "options": [
+        "Start\nGo\nGo",
+        "Go\nGo\nStart",
+        "Start\nGo",
+        "Start"
+      ],
+      "answer": 0,
+      "explanation": "Start runs once before the loop, then Go repeats twice. Lines before the loop run first, once."
+    },
+    {
+      "id": "u36l03e10",
+      "type": "multipleChoice",
+      "prompt": "A loop was meant to print Hi 5 times but your trace shows 4 Hi lines. What now?",
+      "options": [
+        "Recheck the count — expected 5, got 4",
+        "Leave it, 4 is close enough",
+        "Change Hi to Bye",
+        "Delete the program"
+      ],
+      "answer": 0,
+      "explanation": "Trace caught a mismatch between goal (5) and output (4). That's the whole point of predicting output."
+    }
+  ]
+}

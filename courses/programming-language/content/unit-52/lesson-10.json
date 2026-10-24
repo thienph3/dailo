@@ -1,0 +1,132 @@
+{
+  "unitId": "u52",
+  "lessonId": "u52l10",
+  "title": "Put it together: pick values by position",
+  "idea": "Wrap up Unit 52: first/third/last by index, safe vs out-of-range, index with a variable, and using picked values. Review-heavy.",
+  "exercises": [
+    {
+      "id": "u52l10e01",
+      "type": "multipleChoice",
+      "prompt": "nums = [3, 7, 2, 9]. Which line gives the FIRST value?",
+      "options": [
+        "nums[0]",
+        "nums[1]",
+        "nums[-1]",
+        "nums[4]"
+      ],
+      "answer": 0,
+      "explanation": "The first value is always index 0, which is 3 here. Counting starts at zero."
+    },
+    {
+      "id": "u52l10e02",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nnums = [3, 7, 2, 9]\nprint(nums[2])",
+      "options": [
+        "2",
+        "7",
+        "9",
+        "3"
+      ],
+      "answer": 0,
+      "explanation": "Positions: 3 at 0, 7 at 1, 2 at 2, 9 at 3. So nums[2] gives the third value, 2."
+    },
+    {
+      "id": "u52l10e03",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nnums = [3, 7, 2, 9]\nprint(nums[-1])",
+      "options": [
+        "9",
+        "3",
+        "2",
+        "-1"
+      ],
+      "answer": 0,
+      "explanation": "-1 is the end shortcut for the last value, which is 9. No need to count how long the list is."
+    },
+    {
+      "id": "u52l10e04",
+      "type": "trueFalse",
+      "prompt": "For a 4-value list, index 4 is out of range.",
+      "answer": true,
+      "explanation": "Yes. Four values fill 0, 1, 2, 3. Index 4 points past the end, so it errors. The last valid index is one less than the count."
+    },
+    {
+      "id": "u52l10e05",
+      "type": "matchPairs",
+      "prompt": "For vals = [50, 60, 70], match each index to its value.",
+      "pairs": [
+        {
+          "left": "vals[0]",
+          "right": "50"
+        },
+        {
+          "left": "vals[1]",
+          "right": "60"
+        },
+        {
+          "left": "vals[-1]",
+          "right": "70"
+        }
+      ],
+      "explanation": "0 is the first (50), 1 is the second (60), and -1 is the last (70). Front counts up, back counts with negatives."
+    },
+    {
+      "id": "u52l10e06",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nnums = [4, 5, 6]\nprint(nums[0] + nums[-1])",
+      "options": [
+        "10",
+        "9",
+        "11",
+        "46"
+      ],
+      "answer": 0,
+      "explanation": "nums[0] is 4 and nums[-1] is 6. 4 + 6 = 10. Indexed values are just numbers you can add."
+    },
+    {
+      "id": "u52l10e07",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nnums = [2, 4, 6]\nfor i in range(3):\n    print(nums[i])",
+      "options": [
+        "2\n4\n6",
+        "0\n1\n2",
+        "[2, 4, 6]",
+        "6\n4\n2"
+      ],
+      "answer": 0,
+      "explanation": "i takes 0, 1, 2, so nums[i] gives 2, 4, 6 — one per line. A loop variable makes a fine index."
+    },
+    {
+      "id": "u52l10e08",
+      "type": "multipleChoice",
+      "prompt": "names = [\"Ana\", \"Ben\", \"Cal\"]. Which line greets the first person?",
+      "options": [
+        "print(\"Hi \" + names[0])",
+        "print(\"Hi \" + names[1])",
+        "print(\"Hi \" + names)",
+        "print(names[3])"
+      ],
+      "answer": 0,
+      "explanation": "names[0] is \"Ana\", so joining gives \"Hi Ana\". Index 0 is the first; the whole list would print with brackets."
+    },
+    {
+      "id": "u52l10e09",
+      "type": "orderBlocks",
+      "prompt": "Arrange these steps to print the last value of a list using the end shortcut.",
+      "blocks": [
+        "nums = [8, 3, 5]",
+        "last = nums[-1]",
+        "print(last)"
+      ],
+      "answer": [0, 1, 2],
+      "explanation": "Make the list, grab the last value with -1 into last, then print it (5). Clear steps, clear result."
+    },
+    {
+      "id": "u52l10e10",
+      "type": "trueFalse",
+      "prompt": "You can now pull the first, a middle, or the last value out of a list by its position.",
+      "answer": true,
+      "explanation": "You can! Index 0 for the first, a counting number for the middle, and -1 for the last. Next, you'll learn how to ask how MANY values a list holds."
+    }
+  ]
+}

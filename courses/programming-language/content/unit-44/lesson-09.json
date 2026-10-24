@@ -1,0 +1,143 @@
+{
+  "unitId": "u44",
+  "lessonId": "u44l09",
+  "title": "Build a while loop step by step",
+  "idea": "Assemble setup, condition, body, and update into a working while loop.",
+  "exercises": [
+    {
+      "type": "multipleChoice",
+      "prompt": "To build a while loop, you need four things. Which set is right?",
+      "options": [
+        "Setup the control value, a condition, a body, an update",
+        "A count, a print, a guess, a stop",
+        "Only a condition",
+        "Only a print"
+      ],
+      "answer": 0,
+      "explanation": "Setup before, a condition to test, a body to repeat, and an update to make progress. All four make it work.",
+      "id": "u44l09e01"
+    },
+    {
+      "type": "orderBlocks",
+      "prompt": "Arrange these into a loop that prints 1, 2, 3, 4, 5.",
+      "blocks": [
+        "i = 1",
+        "while i <= 5:",
+        "    print(i)",
+        "    i = i + 1"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "Setup i = 1, condition while i <= 5, body print(i), update i = i + 1. That prints 1 through 5.",
+      "id": "u44l09e02"
+    },
+    {
+      "type": "fillBlank",
+      "prompt": "You have setup, condition, and body. Add the missing update:\n\ni = 1\nwhile i <= 5:\n    print(i)\n    ____",
+      "answer": "i = i + 1",
+      "acceptable": [
+        "i = i + 1",
+        "i=i+1",
+        "i += 1"
+      ],
+      "explanation": "Without the update, i stays 1 forever. i = i + 1 moves it toward 6 and lets the loop stop.",
+      "id": "u44l09e03"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Which condition prints the numbers 1 through 7 (starting at i = 1)?",
+      "options": [
+        "while i <= 7",
+        "while i < 7",
+        "while i <= 6",
+        "while i > 7"
+      ],
+      "answer": 0,
+      "explanation": "Starting at 1, i <= 7 includes 7, giving seven numbers. i < 7 would stop at 6.",
+      "id": "u44l09e04"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "What shows?\n\ni = 1\nwhile i <= 5:\n    print(i * i)\n    i = i + 1",
+      "options": [
+        "1\n4\n9\n16\n25",
+        "1\n2\n3\n4\n5",
+        "2\n4\n6\n8\n10",
+        "forever"
+      ],
+      "answer": 0,
+      "explanation": "It prints i*i for i = 1..5: 1, 4, 9, 16, 25. The body can be any work, not just printing i.",
+      "id": "u44l09e05"
+    },
+    {
+      "type": "multiSelect",
+      "prompt": "Which lines belong INSIDE the loop body (indented)?\n\ni = 1\nwhile i <= 3:\n    print(i)\n    i = i + 1",
+      "options": [
+        "print(i)",
+        "i = i + 1",
+        "i = 1",
+        "while i <= 3:"
+      ],
+      "answer": [
+        0,
+        1
+      ],
+      "explanation": "The body is print(i) and the update i = i + 1. The setup and the header are not indented under the loop.",
+      "id": "u44l09e06"
+    },
+    {
+      "type": "orderBlocks",
+      "prompt": "Build a countdown that prints 5,4,3,2,1.",
+      "blocks": [
+        "n = 5",
+        "while n >= 1:",
+        "    print(n)",
+        "    n = n - 1"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "Setup n = 5, condition n >= 1, print n, update n = n - 1. It counts down to 1 and stops at 0.",
+      "id": "u44l09e07"
+    },
+    {
+      "type": "fillBlank",
+      "prompt": "Fill the condition so this prints 2, 4, 6, 8, 10:\n\ni = 2\nwhile i ____ 10:\n    print(i)\n    i = i + 2",
+      "answer": "<=",
+      "acceptable": [
+        "<=",
+        "< =",
+        "&lt;="
+      ],
+      "explanation": "i <= 10 includes 10, so it prints 2,4,6,8,10. i < 10 would stop at 8.",
+      "id": "u44l09e08"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "A while loop's body can contain an if, just like a for-loop's body can.",
+      "answer": true,
+      "explanation": "True. You can nest an if inside a while to act on only some passes -- the same pattern you learned with for.",
+      "id": "u44l09e09"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "After writing a while loop, the first thing to check is...",
+      "options": [
+        "That the update makes progress so the loop will stop",
+        "That it's short",
+        "That it uses range",
+        "That it prints twice"
+      ],
+      "answer": 0,
+      "explanation": "Confirm the control value moves toward the stop. A while loop without progress never ends.",
+      "id": "u44l09e10"
+    }
+  ]
+}

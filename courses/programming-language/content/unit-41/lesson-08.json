@@ -1,0 +1,147 @@
+{
+  "unitId": "u41",
+  "lessonId": "u41l08",
+  "title": "Counter or accumulator?",
+  "idea": "Tell a counter (adds 1, 'how many') from an accumulator (adds a value, 'what total').",
+  "exercises": [
+    {
+      "id": "u41l08e01",
+      "type": "multipleChoice",
+      "prompt": "'How many numbers are there?' needs which tool?",
+      "options": [
+        "A counter (+= 1)",
+        "An accumulator (+= value)",
+        "Neither",
+        "Both at once"
+      ],
+      "answer": 0,
+      "explanation": "'How many' is a counter — it adds 1 per matching pass."
+    },
+    {
+      "id": "u41l08e02",
+      "type": "multipleChoice",
+      "prompt": "'What is the total of the numbers?' needs which tool?",
+      "options": [
+        "An accumulator (+= value)",
+        "A counter (+= 1)",
+        "Neither",
+        "A print only"
+      ],
+      "answer": 0,
+      "explanation": "'Total' is an accumulator — it adds each value onto a running sum."
+    },
+    {
+      "id": "u41l08e03",
+      "type": "matchPairs",
+      "prompt": "Match each question to the right tool.",
+      "pairs": [
+        {
+          "left": "how many passed",
+          "right": "counter (+= 1)"
+        },
+        {
+          "left": "sum of the scores",
+          "right": "accumulator (+= score)"
+        },
+        {
+          "left": "number of items",
+          "right": "counter (+= 1)"
+        }
+      ],
+      "explanation": "Counters add 1 and answer 'how many'; accumulators add values and answer 'what total'."
+    },
+    {
+      "id": "u41l08e04",
+      "type": "multipleChoice",
+      "prompt": "What shows?\n\ncount = 0\ntotal = 0\nfor i in range(1, 4):\n    count += 1\n    total += i\nprint(count)\nprint(total)",
+      "options": [
+        "3 then 6",
+        "6 then 3",
+        "3 then 3",
+        "6 then 6"
+      ],
+      "answer": 0,
+      "explanation": "count adds 1 three times (3); total adds 1, 2, 3 (6). It prints 3 then 6."
+    },
+    {
+      "id": "u41l08e05",
+      "type": "trueFalse",
+      "prompt": "A counter and an accumulator both start at 0 before the loop.",
+      "answer": true,
+      "explanation": "True. Both begin at 0 so the first add is clean; they differ only in what they add each pass."
+    },
+    {
+      "id": "u41l08e06",
+      "type": "multipleChoice",
+      "prompt": "The only real difference between count += 1 and total += i is...",
+      "options": [
+        "what gets added each pass (1 vs a value)",
+        "where they start",
+        "the colon",
+        "the print"
+      ],
+      "answer": 0,
+      "explanation": "A counter always adds the fixed 1; an accumulator adds a value (here i) that can change each pass."
+    },
+    {
+      "id": "u41l08e07",
+      "type": "fillBlank",
+      "prompt": "Fill the line that turns this counter into an accumulator of i:\n\ntotal = 0\nfor i in range(1, 4):\n    total += ____\nprint(total)",
+      "answer": "i",
+      "acceptable": [
+        "i"
+      ],
+      "explanation": "Adding i (not 1) makes it a running total: 1 + 2 + 3 = 6."
+    },
+    {
+      "id": "u41l08e08",
+      "type": "multipleChoice",
+      "prompt": "'How many scores are above 5, and what do those scores add up to?' needs...",
+      "options": [
+        "Both a counter and an accumulator",
+        "Only a counter",
+        "Only an accumulator",
+        "Neither"
+      ],
+      "answer": 0,
+      "explanation": "You need both: a counter for 'how many above 5' and an accumulator for 'their total'."
+    },
+    {
+      "id": "u41l08e09",
+      "type": "orderBlocks",
+      "prompt": "Arrange a loop that keeps BOTH a count and a total of 1..3.",
+      "blocks": [
+        "    count += 1",
+        "count = 0",
+        "    total += i",
+        "total = 0",
+        "print(count)",
+        "print(total)",
+        "for i in range(1, 4):"
+      ],
+      "answer": [
+        1,
+        3,
+        6,
+        0,
+        2,
+        4,
+        5
+      ],
+      "explanation": "Start both at 0, loop adding 1 to count and i to total, then print each."
+    },
+    {
+      "id": "u41l08e10",
+      "type": "multipleChoice",
+      "prompt": "Why does it help to name the question ('how many' vs 'what total') before coding?",
+      "options": [
+        "It tells you which tool to use",
+        "It makes code faster",
+        "It avoids loops",
+        "It has no effect"
+      ],
+      "answer": 0,
+      "explanation": "The question tells you which tool to reach for — a counter, an accumulator, or both."
+    }
+  ]
+}

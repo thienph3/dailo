@@ -1,0 +1,142 @@
+{
+  "unitId": "u39",
+  "lessonId": "u39l02",
+  "title": "Solve it together: say hello 4 times",
+  "idea": "GUIDED PROBLEM. Repeat a fixed action a known number of times, walked through UEPCC.",
+  "problem": "Print the message 'Hello!' exactly 4 times.",
+  "exercises": [
+    {
+      "id": "u39l02e01",
+      "type": "multipleChoice",
+      "prompt": "PROBLEM: Print 'Hello!' exactly 4 times.\n\nUnderstand. What is the OUTPUT?",
+      "uepcc": "U",
+      "options": [
+        "'Hello!' printed four times",
+        "The number 4",
+        "'Hello!' printed once",
+        "The word Hello counted"
+      ],
+      "answer": 0,
+      "explanation": "The output is the same line, 'Hello!', shown four times."
+    },
+    {
+      "id": "u39l02e02",
+      "type": "trueFalse",
+      "prompt": "Understand: here the printed line is the SAME every pass — only the number of passes matters.",
+      "uepcc": "U",
+      "answer": true,
+      "explanation": "Right. Each pass prints the identical message; we just need four passes."
+    },
+    {
+      "id": "u39l02e03",
+      "type": "multipleChoice",
+      "prompt": "Example. By hand, what does the finished output look like?",
+      "uepcc": "E",
+      "options": [
+        "Hello!\nHello!\nHello!\nHello!",
+        "Hello! Hello! Hello! Hello!",
+        "Hello!\nHello!\nHello!",
+        "1\n2\n3\n4"
+      ],
+      "answer": 0,
+      "explanation": "Four identical lines of 'Hello!'. That is the target to check against."
+    },
+    {
+      "id": "u39l02e04",
+      "type": "multipleChoice",
+      "prompt": "Example: how many lines should the hand answer have?",
+      "uepcc": "E",
+      "options": [
+        "4",
+        "1",
+        "3",
+        "40"
+      ],
+      "answer": 0,
+      "explanation": "Four passes means four lines. Counting the example lines confirms the loop count."
+    },
+    {
+      "id": "u39l02e05",
+      "type": "orderBlocks",
+      "prompt": "Plan. Order these plain-English steps.",
+      "uepcc": "P",
+      "blocks": [
+        "Each pass, print 'Hello!'",
+        "Repeat 4 times"
+      ],
+      "answer": [
+        1,
+        0
+      ],
+      "explanation": "Decide to repeat four times, and each pass print the message."
+    },
+    {
+      "id": "u39l02e06",
+      "type": "multipleChoice",
+      "prompt": "Plan: we repeat 4 times and do NOT need the step number. Which range is simplest?",
+      "uepcc": "P",
+      "options": [
+        "range(4)",
+        "range(1, 4)",
+        "range(0, 3)",
+        "range(4, 1)"
+      ],
+      "answer": 0,
+      "explanation": "When you only need a count of passes, range(4) is enough — it runs the body four times."
+    },
+    {
+      "id": "u39l02e07",
+      "type": "orderBlocks",
+      "prompt": "Code. Arrange the two lines.",
+      "uepcc": "C",
+      "blocks": [
+        "    print(\"Hello!\")",
+        "for i in range(4):"
+      ],
+      "answer": [
+        1,
+        0
+      ],
+      "explanation": "The for header starts the repeat; the indented print runs each pass."
+    },
+    {
+      "id": "u39l02e08",
+      "type": "multipleChoice",
+      "prompt": "Code: why is print indented under the for line?",
+      "uepcc": "C",
+      "options": [
+        "Indentation tells Python this line is inside the loop",
+        "It makes it faster",
+        "It is only for looks",
+        "To skip the first pass"
+      ],
+      "answer": 0,
+      "explanation": "Indentation marks what belongs to the loop. The indented print repeats each pass."
+    },
+    {
+      "id": "u39l02e09",
+      "type": "multipleChoice",
+      "prompt": "Check. You run it and 'Hello!' appears 4 times. Hand example said 4 lines. So...",
+      "uepcc": "Check",
+      "options": [
+        "It passes",
+        "It fails",
+        "Can't tell",
+        "Rewrite the example"
+      ],
+      "answer": 0,
+      "explanation": "Output count matches the example, so it passes."
+    },
+    {
+      "id": "u39l02e10",
+      "type": "fillBlank",
+      "prompt": "Check with new numbers: to print 'Hello!' 7 times, what goes in range?\n\nfor i in range(____):\n    print(\"Hello!\")",
+      "uepcc": "Check",
+      "answer": "7",
+      "acceptable": [
+        "7"
+      ],
+      "explanation": "Seven passes means range(7). The solution generalizes just by changing the count."
+    }
+  ]
+}

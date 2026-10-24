@@ -1,0 +1,130 @@
+{
+  "unitId": "u92",
+  "lessonId": "u92l03",
+  "title": "A choice on every turn",
+  "idea": "TOOL: weave a decision into a loop - branch per item to count, total, or skip.",
+  "exercises": [
+    {
+      "type": "multipleChoice",
+      "prompt": "You loop over items and want to treat some differently from others. What thread adds that?",
+      "options": [
+        "A decision (if/else) inside the loop",
+        "Another loop",
+        "A print only",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "An if inside the loop makes a per-item choice - include it, skip it, or handle it differently. Choice woven into a repeat.",
+      "id": "u92l03e01"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nkept = 0\nfor n in [3, 8, 5, 10]:\n    if n > 4:\n        kept = kept + 1\nprint(kept)",
+      "options": [
+        "3",
+        "2",
+        "4",
+        "1"
+      ],
+      "answer": 0,
+      "explanation": "8, 5, and 10 are > 4, so kept rises to 3. The if chooses which items to count each turn.",
+      "id": "u92l03e02"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "The if inside a loop runs once per item, deciding that item's fate.",
+      "answer": true,
+      "explanation": "True. Each turn, the condition is tested on the current item, and the matching branch runs. A choice per repeat.",
+      "id": "u92l03e03"
+    },
+    {
+      "type": "fillBlank",
+      "prompt": "Complete the per-turn choice (count items below 10):\n\nkept = 0\nfor n in [12, 4, 9]:\n    if n ____ 10:\n        kept = kept + 1\nprint(kept)",
+      "answer": "<",
+      "acceptable": [
+        "<"
+      ],
+      "explanation": "Count items LESS than 10: n < 10. That's 4 and 9, so kept = 2.",
+      "id": "u92l03e04"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nhits = 0\nmisses = 0\nfor shot in [1, 0, 1, 1]:\n    if shot == 1:\n        hits = hits + 1\n    else:\n        misses = misses + 1\nprint(hits, misses)",
+      "options": [
+        "3 1",
+        "1 3",
+        "4 0",
+        "2 2"
+      ],
+      "answer": 0,
+      "explanation": "Three 1s (hits) and one 0 (miss). if/else routes each shot to one counter - a choice plus multiple state.",
+      "id": "u92l03e05"
+    },
+    {
+      "type": "orderBlocks",
+      "prompt": "Arrange a loop that counts even numbers (n % 2 == 0).",
+      "blocks": [
+        "evens = 0",
+        "for n in [4, 7, 10]:",
+        "    if n % 2 == 0:",
+        "        evens = evens + 1",
+        "print(evens)"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "explanation": "Start the counter, loop, test each n for evenness, count it, print. 4 and 10 are even, so evens = 2.",
+      "id": "u92l03e06"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "In a loop, what's the difference between putting an update INSIDE vs OUTSIDE the if?",
+      "options": [
+        "Inside runs only for matching items; outside runs for every item",
+        "No difference",
+        "Inside is faster",
+        "Outside is a syntax error"
+      ],
+      "answer": 0,
+      "explanation": "Placement decides scope. Inside the if = conditional (some items); outside = unconditional (all items). Choose on purpose.",
+      "id": "u92l03e07"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Weaving a decision into a loop lets you count, total, or skip items selectively.",
+      "answer": true,
+      "explanation": "True. The if picks which items affect your running values. Filter, grouped counts, and conditional totals all come from this weave.",
+      "id": "u92l03e08"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nkept = 0\nfor n in [1, 2, 3]:\n    if n > 100:\n        kept = kept + 1\nprint(kept)",
+      "options": [
+        "0 - none are over 100",
+        "3",
+        "1",
+        "100"
+      ],
+      "answer": 0,
+      "explanation": "No item passes the test, so the body never runs and kept stays 0. The choice correctly excludes everything.",
+      "id": "u92l03e09"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "The weave here:",
+      "options": [
+        "A decision inside a loop makes a per-item choice",
+        "A loop replaces all ifs",
+        "Choices can't go in loops",
+        "You must use a function"
+      ],
+      "answer": 0,
+      "explanation": "Choice-in-a-repeat is one of the most common integrations - the heart of filtering and grouping.",
+      "id": "u92l03e10"
+    }
+  ]
+}

@@ -1,0 +1,133 @@
+{
+  "unitId": "u52",
+  "lessonId": "u52l05",
+  "title": "Asking for a position that isn't there",
+  "idea": "If you index past the end of a list, Python raises an error. Learn which indexes are safe and which go too far — without using len() yet.",
+  "exercises": [
+    {
+      "id": "u52l05e01",
+      "type": "multipleChoice",
+      "prompt": "A list has 3 values: nums = [3, 7, 2]. What are the valid positive indexes?",
+      "options": [
+        "0, 1, and 2",
+        "1, 2, and 3",
+        "0, 1, 2, and 3",
+        "Only 0"
+      ],
+      "answer": 0,
+      "explanation": "Three values fill positions 0, 1, 2. There is no position 3 — the count starts at 0, so the last index is one less than the number of values."
+    },
+    {
+      "id": "u52l05e02",
+      "type": "multipleChoice",
+      "prompt": "nums = [3, 7, 2] has three values. What happens with  print(nums[3])?",
+      "options": [
+        "An error — there is no value at index 3",
+        "It prints 2",
+        "It prints 0",
+        "It prints the whole list"
+      ],
+      "answer": 0,
+      "explanation": "The valid indexes are 0, 1, 2. Index 3 is past the end, so Python raises an 'index out of range' error."
+    },
+    {
+      "id": "u52l05e03",
+      "type": "trueFalse",
+      "prompt": "For a list of 4 values, index 4 is one step too far.",
+      "answer": true,
+      "explanation": "Yes. Four values fill 0, 1, 2, 3. Index 4 does not exist, so asking for it is an error. The last valid index is one less than the count."
+    },
+    {
+      "id": "u52l05e04",
+      "type": "multipleChoice",
+      "prompt": "nums = [10, 20] has two values. Which index is SAFE?",
+      "options": [
+        "nums[1]",
+        "nums[2]",
+        "nums[5]",
+        "nums[10]"
+      ],
+      "answer": 0,
+      "explanation": "Two values live at 0 and 1. nums[1] is 20, which is fine. Anything from 2 upward is out of range."
+    },
+    {
+      "id": "u52l05e05",
+      "type": "matchPairs",
+      "prompt": "For nums = [5, 6, 7] (three values), match each index to safe or error.",
+      "pairs": [
+        {
+          "left": "nums[0]",
+          "right": "Safe"
+        },
+        {
+          "left": "nums[2]",
+          "right": "Safe"
+        },
+        {
+          "left": "nums[3]",
+          "right": "Error (out of range)"
+        }
+      ],
+      "explanation": "Valid indexes are 0, 1, 2. Index 3 goes past the end of a three-value list and causes an error."
+    },
+    {
+      "id": "u52l05e06",
+      "type": "multipleChoice",
+      "prompt": "Why is asking for a position past the end an ERROR, not just an empty answer?",
+      "options": [
+        "There is genuinely no value there, so Python stops and tells you",
+        "Python is being strict for no reason",
+        "The list secretly has more values",
+        "It prints 0 instead"
+      ],
+      "answer": 0,
+      "explanation": "An out-of-range index points at nothing real. Rather than guess, Python stops and reports the mistake clearly so you can fix it."
+    },
+    {
+      "id": "u52l05e07",
+      "type": "multipleChoice",
+      "prompt": "An EMPTY list is empty = []. What happens with  print(empty[0])?",
+      "options": [
+        "An error — there is no value at index 0",
+        "It prints 0",
+        "It prints []",
+        "It prints nothing, no error"
+      ],
+      "answer": 0,
+      "explanation": "An empty list has no values at all, so even index 0 points at nothing. Indexing it is an out-of-range error."
+    },
+    {
+      "id": "u52l05e08",
+      "type": "trueFalse",
+      "prompt": "The largest valid index of a list is one less than the number of values.",
+      "answer": true,
+      "explanation": "Yes. Five values fill 0 to 4; the biggest index is 4, one less than 5. That is the direct result of starting at 0."
+    },
+    {
+      "id": "u52l05e09",
+      "type": "multipleChoice",
+      "prompt": "nums = [1, 2, 3, 4, 5]. Which line would cause an out-of-range ERROR?",
+      "options": [
+        "print(nums[5])",
+        "print(nums[4])",
+        "print(nums[0])",
+        "print(nums[-1])"
+      ],
+      "answer": 0,
+      "explanation": "Five values fill 0 to 4, so nums[5] is past the end. nums[4] is the last valid one (value 5), and -1 safely means the last value too."
+    },
+    {
+      "id": "u52l05e10",
+      "type": "multipleChoice",
+      "prompt": "You want the third value of nums = [8, 9] but there are only two values. What should you expect?",
+      "options": [
+        "An error — there is no third value to get",
+        "It returns the second value instead",
+        "It returns 0",
+        "It adds a third value for you"
+      ],
+      "answer": 0,
+      "explanation": "The list only has positions 0 and 1. Asking for index 2 (the third value) is out of range, so Python raises an error."
+    }
+  ]
+}

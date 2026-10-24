@@ -1,0 +1,146 @@
+{
+  "unitId": "u83",
+  "lessonId": "u83l08",
+  "title": "Fix it together: the root helper that was 10x off",
+  "idea": "GUIDED (UEPCC), bug-focused. to_cents multiplies by 10 not 100, so every total built on it is 10x too small. Trace back to the root and fix it once.",
+  "problem": "to_cents(dollars) should return dollars * 100, but returns dollars * 10. The grand total built from it prints 30 when it should be 300. Fix the root cause.",
+  "exercises": [
+    {
+      "id": "u83l08e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: the grand total prints 30 but should be 300 — exactly 10x too small. Where does a 10x error most likely START?",
+      "options": [
+        "In a helper using the wrong factor (10 instead of 100)",
+        "In the print statement",
+        "In the loop counter",
+        "Nowhere — 30 is fine"
+      ],
+      "answer": 0,
+      "explanation": "A clean 10x gap points to one wrong factor. to_cents multiplies by 10, not 100 — the root of the whole error."
+    },
+    {
+      "id": "u83l08e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "Understand — why is EVERY later total wrong, not just one?",
+      "options": [
+        "The wrong early value cascades — later steps built on it inherit the error",
+        "Only the first total is wrong",
+        "Later totals fix themselves",
+        "Totals are random"
+      ],
+      "answer": 0,
+      "explanation": "A wrong sub-result flows downstream: everything computed from to_cents is 10x off. Fixing the root heals them all."
+    },
+    {
+      "id": "u83l08e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example — by hand. 3 dollars in cents should be...",
+      "options": [
+        "300",
+        "30",
+        "3",
+        "103"
+      ],
+      "answer": 0,
+      "explanation": "3 * 100 = 300 cents. The buggy helper gives 3 * 10 = 30. Hand answer = 300, exposing the 10x gap."
+    },
+    {
+      "id": "u83l08e04",
+      "type": "trueFalse",
+      "uepcc": "E",
+      "prompt": "Multiplying the FINAL total by 10 would 'fix' the number but leave the root helper broken.",
+      "answer": true,
+      "explanation": "Yes — that's a symptom patch. It breaks the moment inputs change. Fixing to_cents is the real repair."
+    },
+    {
+      "id": "u83l08e05",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Plan the fix. The cleanest repair is to...",
+      "options": [
+        "Change * 10 to * 100 in to_cents (the root)",
+        "Multiply the final total by 10",
+        "Add a new helper on top",
+        "Change the print"
+      ],
+      "answer": 0,
+      "explanation": "Fix the root factor once and every downstream total becomes correct. Root fixes beat symptom patches."
+    },
+    {
+      "id": "u83l08e06",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Order the trace-back fix.",
+      "blocks": [
+        "Start from the wrong total (30 vs 300)",
+        "Trace back to to_cents returning 10x too little",
+        "Change * 10 to * 100",
+        "Re-check: the total is now 300"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "From the wrong result, trace upstream to the earliest wrong value, fix the root, re-check downstream."
+    },
+    {
+      "id": "u83l08e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code the fixed root helper.",
+      "blocks": [
+        "def to_cents(dollars):",
+        "    return dollars * 100"
+      ],
+      "answer": [
+        0,
+        1
+      ],
+      "explanation": "The repaired helper uses the right factor: dollars * 100. to_cents(3) = 300 now."
+    },
+    {
+      "id": "u83l08e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Repair the factor so dollars convert to cents:\n\ndef to_cents(dollars):\n    return dollars * ____",
+      "answer": "100",
+      "acceptable": [
+        "100"
+      ],
+      "explanation": "There are 100 cents in a dollar, so multiply by 100. to_cents(3) = 300."
+    },
+    {
+      "id": "u83l08e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check — after fixing the root, the grand total prints 300; hand example was 300. Verdict?",
+      "options": [
+        "Passes — the root fix healed the whole chain",
+        "Fails",
+        "Unknown",
+        "Rewrite example"
+      ],
+      "answer": 0,
+      "explanation": "Output (300) matches the hand example. One root fix corrected every total built on to_cents."
+    },
+    {
+      "id": "u83l08e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Re-check: to_cents(7) with the fixed helper gives...",
+      "options": [
+        "700",
+        "70",
+        "7",
+        "107"
+      ],
+      "answer": 0,
+      "explanation": "7 * 100 = 700. The fixed root works for any input, so downstream totals stay correct. You fixed a cascading bug!"
+    }
+  ]
+}

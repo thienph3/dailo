@@ -1,0 +1,125 @@
+{
+  "unitId": "u54",
+  "lessonId": "u54l09",
+  "title": "Spot the add-or-change mistake",
+  "idea": "Debug common slips: using assignment to add past the end, append when a change was meant, wrong append syntax, forgetting to create the list. Thinking-heavy.",
+  "exercises": [
+    {
+      "id": "u54l09e01",
+      "type": "multipleChoice",
+      "prompt": "A learner wants to add a 4th item to n = [1, 2, 3] and writes n[3] = 4. What goes wrong?",
+      "options": [
+        "Position 3 doesn't exist yet — to add, use n.append(4)",
+        "n[3] is the third item",
+        "You can't store 4 in a list",
+        "Nothing goes wrong"
+      ],
+      "answer": 0,
+      "explanation": "Assignment only replaces an EXISTING spot. Positions are 0, 1, 2, so there's no spot 3 to assign. append(4) adds the new item."
+    },
+    {
+      "id": "u54l09e02",
+      "type": "multipleChoice",
+      "prompt": "A learner wants to FIX the first item of n = [8, 2, 3] to 9 and writes n.append(9). What's the slip?",
+      "options": [
+        "append adds a new item; to change spot 0, use n[0] = 9",
+        "append is spelled wrong",
+        "You can't append 9",
+        "Nothing is wrong"
+      ],
+      "answer": 0,
+      "explanation": "append would give [8, 2, 3, 9] — a new item, not a fix. Changing an existing spot needs assignment: n[0] = 9."
+    },
+    {
+      "id": "u54l09e03",
+      "type": "multipleChoice",
+      "prompt": "A learner writes n.append = 5 to add 5. Fix it.",
+      "options": [
+        "Use round brackets: n.append(5)",
+        "Use n.append[5]",
+        "Use append.n(5)",
+        "It's already correct"
+      ],
+      "answer": 0,
+      "explanation": "append is called with round brackets around the value: n.append(5). Writing append = 5 doesn't add anything."
+    },
+    {
+      "id": "u54l09e04",
+      "type": "trueFalse",
+      "prompt": "A learner uses n.append(2, 3) to add two numbers at once. This is a mistake.",
+      "answer": true,
+      "explanation": "append takes exactly one value. To add two items, call it twice: n.append(2) then n.append(3)."
+    },
+    {
+      "id": "u54l09e05",
+      "type": "multipleChoice",
+      "prompt": "A learner writes this and gets an error:\n\nfor i in range(3):\n    out.append(i)\n\nWhat's missing before the loop?",
+      "options": [
+        "out = []  (the list must exist first)",
+        "A print statement",
+        "More items in range",
+        "Nothing is missing"
+      ],
+      "answer": 0,
+      "explanation": "You can't append to a list that was never created. Add out = [] before the loop so there's something to grow."
+    },
+    {
+      "id": "u54l09e06",
+      "type": "multipleChoice",
+      "prompt": "Predict what this buggy attempt does, meant to change the last item of n = [1, 2, 3] to 0:\n\nn[len(n)] = 0",
+      "options": [
+        "It fails — len(n) is 3, one past the last spot; use n[len(n) - 1] or n[-1]",
+        "It changes the last item to 0",
+        "It adds 0 at the end",
+        "It changes the first item"
+      ],
+      "answer": 0,
+      "explanation": "len(n) is 3, but the last position is 2. n[3] doesn't exist. Use n[len(n) - 1] = 0 or n[-1] = 0."
+    },
+    {
+      "id": "u54l09e07",
+      "type": "multipleChoice",
+      "prompt": "Which correctly ADDS an item, and which correctly CHANGES one?",
+      "options": [
+        "n.append(x) adds; n[i] = x changes",
+        "n[i] = x adds; n.append(x) changes",
+        "Both add",
+        "Both change"
+      ],
+      "answer": 0,
+      "explanation": "append grows the list by one; n[i] = x swaps an existing item. Picking the right one is half of avoiding these bugs."
+    },
+    {
+      "id": "u54l09e08",
+      "type": "trueFalse",
+      "prompt": "n = [5]; n = 6 is a correct way to add 6 to the list.",
+      "answer": false,
+      "explanation": "n = 6 throws away the list and makes n a plain number. To add 6, use n.append(6), giving [5, 6]."
+    },
+    {
+      "id": "u54l09e09",
+      "type": "orderBlocks",
+      "prompt": "Goal: start [1, 2], add 3 at the end, then fix the first item to 0. Arrange the CORRECT lines.",
+      "blocks": [
+        "n = [1, 2]",
+        "n.append(3)",
+        "n[0] = 0"
+      ],
+      "answer": [0, 1, 2],
+      "explanation": "Append grows it to [1, 2, 3]; then n[0] = 0 changes the first spot: [0, 2, 3]. Right tool for each step."
+    },
+    {
+      "id": "u54l09e10",
+      "type": "multipleChoice",
+      "prompt": "Best rule to avoid add/change bugs?",
+      "options": [
+        "Adding a NEW item -> append; changing an EXISTING spot -> list[i] = value",
+        "Always use append",
+        "Always use assignment",
+        "Use n = value for both"
+      ],
+      "answer": 0,
+      "explanation": "Ask: am I adding something new (append) or changing something already there (assignment)? That one question prevents most of these mistakes."
+    }
+  ]
+}

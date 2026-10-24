@@ -1,0 +1,118 @@
+{
+  "unitId": "u11",
+  "lessonId": "u11l09",
+  "title": "Solve it: a shopping trip with two kinds of item",
+  "idea": "GUIDED PROBLEM. Two-step (two multiplies, then add) using separate variables — no parentheses needed, so it stays in scope (precedence/parentheses arrive in Unit 13). Every value in the problem maps to a variable in the code.",
+  "problem": "A meal costs 12 and a drink costs 3. Buy 2 meals and 3 drinks. Show the total.",
+  "exercises": [
+    {
+      "id": "u11l09e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: A meal is 12, a drink is 3. Buy 2 meals and 3 drinks. Show the total.\n\nOUTPUT?",
+      "options": ["The total cost of everything bought", "The meal price only", "The number of items", "The cheaper item"],
+      "answer": 0,
+      "explanation": "Output = the total spent on 2 meals and 3 drinks."
+    },
+    {
+      "id": "u11l09e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "INPUTS?",
+      "options": [
+        "Meal price (12), drink price (3), and how many of each (2 and 3)",
+        "Only the number 42",
+        "The word total",
+        "None"
+      ],
+      "answer": 0,
+      "explanation": "Four values: two prices and two counts. Each one will appear in the code."
+    },
+    {
+      "id": "u11l09e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "By hand: 2 meals at 12, plus 3 drinks at 3. Total?",
+      "options": ["33", "27", "24", "15"],
+      "answer": 0,
+      "explanation": "2 x 12 = 24 for meals, 3 x 3 = 9 for drinks, 24 + 9 = 33. Check value: 33."
+    },
+    {
+      "id": "u11l09e04",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "This needs more than one step. What's the FIRST sub-step?",
+      "options": ["Work out the meals' cost (2 * 12)", "Add everything at once", "Divide by 3", "Show the answer"],
+      "answer": 0,
+      "explanation": "Break it up: the meals' cost first (count times price)."
+    },
+    {
+      "id": "u11l09e05",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "What's the SECOND sub-step?",
+      "options": ["Work out the drinks' cost (3 * 3)", "Subtract the drinks", "Divide by 2", "Show the answer"],
+      "answer": 0,
+      "explanation": "The drinks' cost, the same way: count times price = 3 x 3 = 9."
+    },
+    {
+      "id": "u11l09e06",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Put the plain-English plan in order.",
+      "blocks": [
+        "Add the two costs to get the total",
+        "Work out the meals' cost (count times price)",
+        "Work out the drinks' cost (count times price)",
+        "Show the total"
+      ],
+      "answer": [1, 2, 0, 3],
+      "explanation": "Meals' cost, drinks' cost, add them, show. Three compute steps then output."
+    },
+    {
+      "id": "u11l09e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code it. Each value in the problem is its own variable — no brackets needed.",
+      "blocks": [
+        "meal_count = 2",
+        "meal_price = 12",
+        "drink_count = 3",
+        "drink_price = 3",
+        "meals_cost = meal_count * meal_price",
+        "drinks_cost = drink_count * drink_price",
+        "total = meals_cost + drinks_cost",
+        "print(total)"
+      ],
+      "answer": [0, 1, 2, 3, 4, 5, 6, 7],
+      "explanation": "Store all four values, compute each cost with count * price, add the two costs, print. Notice every number from the problem (2, 12, 3, 3) is a named variable — nothing is hardcoded or dropped."
+    },
+    {
+      "id": "u11l09e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Complete the drinks' cost step:\n\ndrink_count = 3\ndrink_price = 3\ndrinks_cost = drink_count ____ drink_price",
+      "answer": "*",
+      "acceptable": ["*"],
+      "explanation": "Multiply count by price: drinks_cost = 9."
+    },
+    {
+      "id": "u11l09e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "The code prints 33; your hand example was 33. Verdict?",
+      "options": ["Passes", "Fails", "Unknown", "Rewrite example"],
+      "answer": 0,
+      "explanation": "Matches — the two-step solution is correct, and every value is accounted for."
+    },
+    {
+      "id": "u11l09e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "New trip: 4 meals at 10, 2 drinks at 5. Same plan (meals_cost = meal_count * meal_price, drinks_cost = drink_count * drink_price, total = meals_cost + drinks_cost). Total?",
+      "options": ["50", "40", "10", "21"],
+      "answer": 0,
+      "explanation": "4*10 = 40, 2*5 = 10, 40 + 10 = 50. The same consistent plan handles new numbers."
+    }
+  ]
+}

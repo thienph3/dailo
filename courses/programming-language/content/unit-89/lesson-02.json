@@ -1,0 +1,132 @@
+{
+  "unitId": "u89",
+  "lessonId": "u89l02",
+  "title": "A total and a count, side by side",
+  "idea": "TOOL: the classic pair - accumulate a total and a count in the same loop, the groundwork for an average later.",
+  "exercises": [
+    {
+      "type": "multipleChoice",
+      "prompt": "You want BOTH the total of a list and how many numbers it has. How many running variables do you need?",
+      "options": [
+        "Two - one for the total, one for the count",
+        "One is enough for both",
+        "Three",
+        "None"
+      ],
+      "answer": 0,
+      "explanation": "One variable per running value: total and count. Each tracks a different fact about the same walk.",
+      "id": "u89l02e01"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\ntotal = 0\ncount = 0\nfor n in [2, 3, 5]:\n    total = total + n\n    count = count + 1\nprint(total)\nprint(count)",
+      "options": [
+        "10 then 3",
+        "3 then 10",
+        "10 then 10",
+        "3 then 3"
+      ],
+      "answer": 0,
+      "explanation": "total = 2+3+5 = 10; count went up three times = 3. First print shows 10, second shows 3.",
+      "id": "u89l02e02"
+    },
+    {
+      "type": "fillBlank",
+      "prompt": "Complete the count step:\n\ntotal = 0\ncount = 0\nfor n in [7, 1, 2]:\n    total = total + n\n    count = count ____ 1\nprint(total, count)",
+      "answer": "+",
+      "acceptable": [
+        "+"
+      ],
+      "explanation": "count = count + 1 adds one each turn, so count ends at 3 while total ends at 10.",
+      "id": "u89l02e03"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "If you forget 'count = count + 1' inside the loop, count stays 0 no matter how many items there are.",
+      "answer": true,
+      "explanation": "True. A running value only changes if you update it each turn. No update means it never moves from its start.",
+      "id": "u89l02e04"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Which line updates the TOTAL (not the count)?",
+      "options": [
+        "total = total + n",
+        "count = count + 1",
+        "total = count",
+        "print(total)"
+      ],
+      "answer": 0,
+      "explanation": "total = total + n adds the current item's value. count = count + 1 only adds one, ignoring the value.",
+      "id": "u89l02e05"
+    },
+    {
+      "type": "orderBlocks",
+      "prompt": "Arrange a loop that finds the total and the count of [4, 8].",
+      "blocks": [
+        "total = 0",
+        "count = 0",
+        "for n in [4, 8]:",
+        "    total = total + n",
+        "    count = count + 1",
+        "print(total, count)"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "explanation": "Start total and count at 0, walk the list updating both, then print. Output: 12 2.",
+      "id": "u89l02e06"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Having BOTH total and count ready sets you up to compute what next?",
+      "options": [
+        "The average - total divided by count",
+        "Nothing useful",
+        "A bigger total",
+        "The list length only"
+      ],
+      "answer": 0,
+      "explanation": "Average = total / count. Keeping both running values in one pass is exactly what the average needs.",
+      "id": "u89l02e07"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\ntotal = 0\ncount = 0\nfor n in [10]:\n    total = total + n\n    count = count + 1\nprint(total, count)",
+      "options": [
+        "10 1",
+        "10 0",
+        "0 1",
+        "1 10"
+      ],
+      "answer": 0,
+      "explanation": "One item: total becomes 10, count becomes 1. Even a single-item list updates both running values once.",
+      "id": "u89l02e08"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "total and count can be updated in any order within the same turn, and the final answers are the same.",
+      "answer": true,
+      "explanation": "True here - adding to total and bumping count don't depend on each other, so either order gives total 10, count 3.",
+      "id": "u89l02e09"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "The habit this lesson builds:",
+      "options": [
+        "Track the total AND the count together, ready for an average",
+        "Only ever track one value",
+        "Avoid loops",
+        "Print inside every loop"
+      ],
+      "answer": 0,
+      "explanation": "Total-and-count is the most common pair of running values. You'll reuse it constantly.",
+      "id": "u89l02e10"
+    }
+  ]
+}

@@ -1,0 +1,151 @@
+{
+  "unitId": "u27",
+  "lessonId": "u27l01",
+  "title": "Solve it: discount by both age and membership",
+  "idea": "GUIDED. One problem through UEPCC using 'and': a discount needs TWO conditions true at once.",
+  "problem": "A cinema gives a discount only to members who are also 60 or older. Given is_member and age, print 'Discount' or 'Full price'.",
+  "exercises": [
+    {
+      "id": "u27l01e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: Discount only for members who are also 60+. Print 'Discount' or 'Full price'.\n\nUnderstand first: what is the OUTPUT?",
+      "options": [
+        "One label: 'Discount' or 'Full price'",
+        "The person's age",
+        "How many members there are",
+        "The ticket price in dollars"
+      ],
+      "answer": 0,
+      "explanation": "Name the output first. Here it is a single label, so you know exactly what the code must produce."
+    },
+    {
+      "id": "u27l01e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "What are the INPUTS?",
+      "options": [
+        "Whether they are a member, and their age",
+        "Only the age",
+        "Only membership",
+        "The word 'Discount'"
+      ],
+      "answer": 0,
+      "explanation": "Two inputs drive this decision: membership and age. Both are needed because the rule checks both."
+    },
+    {
+      "id": "u27l01e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Work an example by hand: a member aged 65. What is the answer?",
+      "options": [
+        "Discount",
+        "Full price",
+        "65",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "Member AND 65 (which is 60+) - both true, so 'Discount'. This hand answer is your check value later."
+    },
+    {
+      "id": "u27l01e04",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Another by hand: a member aged 40. What is the answer?",
+      "options": [
+        "Full price",
+        "Discount",
+        "40",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "Member but only 40 - the age part fails, so with 'and' the whole rule is false: 'Full price'. Testing a failing side matters."
+    },
+    {
+      "id": "u27l01e05",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Plan: which tool joins 'is a member' and 'is 60 or older' so BOTH must be true?",
+      "options": [
+        "and",
+        "or",
+        "not",
+        "elif"
+      ],
+      "answer": 0,
+      "explanation": "'Both must hold' is the signature of 'and'. If either side is false, the combined condition is false."
+    },
+    {
+      "id": "u27l01e06",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Which comparison expresses '60 or older'?",
+      "options": [
+        "age >= 60",
+        "age > 60",
+        "age == 60",
+        "age <= 60"
+      ],
+      "answer": 0,
+      "explanation": ">= 60 includes 60 itself. Using > would wrongly exclude someone exactly 60."
+    },
+    {
+      "id": "u27l01e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Arrange the code to match the plan.",
+      "blocks": [
+        "if is_member and age >= 60:",
+        "    print(\"Discount\")",
+        "else:",
+        "    print(\"Full price\")"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "One combined condition with 'and', then the else for everyone who misses either part."
+    },
+    {
+      "id": "u27l01e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Complete the joining word:\n\nif is_member ____ age >= 60:\n    print(\"Discount\")\nelse:\n    print(\"Full price\")",
+      "answer": "and",
+      "acceptable": [
+        "and"
+      ],
+      "explanation": "'and' requires both the membership and the age test to be true before 'Discount' prints."
+    },
+    {
+      "id": "u27l01e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check with the first example: is_member True, age 65. What prints?",
+      "options": [
+        "Discount",
+        "Full price",
+        "65",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "True and (65 >= 60 is True) = True, so 'Discount' - matching your hand answer. Correct."
+    },
+    {
+      "id": "u27l01e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Re-check with a fresh case: is_member False, age 70. What prints?",
+      "options": [
+        "Full price",
+        "Discount",
+        "70",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "Not a member, so the first side is False; with 'and' that makes the whole thing False: 'Full price'. Generalizes correctly."
+    }
+  ]
+}

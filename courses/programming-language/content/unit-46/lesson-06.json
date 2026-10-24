@@ -1,0 +1,123 @@
+{
+  "unitId": "u46",
+  "lessonId": "u46l06",
+  "title": "continue with an accumulator: skip some, total the rest",
+  "idea": "Use continue to leave certain values out of a running total, reviewing accumulators and the remainder operator.",
+  "exercises": [
+    {
+      "id": "u46l06e01",
+      "type": "multipleChoice",
+      "prompt": "What does total hold?\n\ntotal = 0\nfor i in range(1, 6):\n    if i == 3:\n        continue\n    total = total + i\nprint(total)",
+      "options": [
+        "12",
+        "15",
+        "3",
+        "9"
+      ],
+      "answer": 0,
+      "explanation": "It adds 1, 2, 4, 5 (skipping 3 with continue): 1 + 2 + 4 + 5 = 12."
+    },
+    {
+      "id": "u46l06e02",
+      "type": "trueFalse",
+      "prompt": "continue placed before the add line means the skipped value never reaches the total.",
+      "answer": true,
+      "explanation": "Yes — continue jumps to the next pass before total = total + i runs, so the skipped value is left out of the sum."
+    },
+    {
+      "id": "u46l06e03",
+      "type": "multipleChoice",
+      "prompt": "What does total hold?\n\ntotal = 0\nfor i in range(1, 7):\n    if i % 2 == 0:\n        continue\n    total = total + i\nprint(total)",
+      "options": [
+        "9 (1 + 3 + 5)",
+        "12 (2 + 4 + 6)",
+        "21",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "continue skips the evens, so only odds are added: 1 + 3 + 5 = 9."
+    },
+    {
+      "id": "u46l06e04",
+      "type": "multipleChoice",
+      "prompt": "That loop totalled only the odds. How else could you write it WITHOUT continue?",
+      "options": [
+        "if i % 2 == 1: total = total + i",
+        "Use break on evens",
+        "Remove the if",
+        "Start total at 1"
+      ],
+      "answer": 0,
+      "explanation": "Adding only when odd gives the same total. continue-to-skip and a flipped if are two ways to the same result."
+    },
+    {
+      "id": "u46l06e05",
+      "type": "orderBlocks",
+      "prompt": "Arrange a loop that totals 1..5 but skips multiples of... just skips the value 4.",
+      "blocks": [
+        "total = 0",
+        "for i in range(1, 6):",
+        "    if i == 4:",
+        "        continue",
+        "    total = total + i",
+        "print(total)"
+      ],
+      "answer": [0, 1, 2, 3, 4, 5],
+      "explanation": "Start total at 0, loop, skip 4 with continue, add the rest, print. Total is 1 + 2 + 3 + 5 = 11."
+    },
+    {
+      "id": "u46l06e06",
+      "type": "fillBlank",
+      "prompt": "Fill the keyword so negatives-like skips happen (here: skip the value 2):\n\ntotal = 0\nfor i in range(1, 6):\n    if i == 2:\n        ____\n    total = total + i\nprint(total)",
+      "answer": "continue",
+      "acceptable": ["continue"],
+      "explanation": "continue skips adding 2, so total is 1 + 3 + 4 + 5 = 13."
+    },
+    {
+      "id": "u46l06e07",
+      "type": "multipleChoice",
+      "prompt": "What does count hold? (continue with a counter)\n\ncount = 0\nfor i in range(1, 8):\n    if i % 3 == 0:\n        continue\n    count = count + 1\nprint(count)",
+      "options": [
+        "5 — it counts all of 1..7 except 3 and 6",
+        "7",
+        "2",
+        "3"
+      ],
+      "answer": 0,
+      "explanation": "continue skips 3 and 6, so count bumps for the other five values: 1, 2, 4, 5, 7 — that is 5."
+    },
+    {
+      "id": "u46l06e08",
+      "type": "multipleChoice",
+      "prompt": "If you move the continue AFTER the add line, what happens?\n\ntotal = 0\nfor i in range(1, 4):\n    total = total + i\n    if i == 2:\n        continue\nprint(total)",
+      "options": [
+        "The skip is pointless — the add already happened, so total is 1 + 2 + 3 = 6",
+        "total is 4",
+        "It errors",
+        "It skips 2 from the total"
+      ],
+      "answer": 0,
+      "explanation": "continue after the add skips nothing useful, since the value was already added. Placement decides whether continue actually leaves a value out."
+    },
+    {
+      "id": "u46l06e09",
+      "type": "trueFalse",
+      "prompt": "For continue to leave a value out of a total, it must come BEFORE the line that adds the value.",
+      "answer": true,
+      "explanation": "Yes — the skip only helps if it happens before the add. Order inside the loop body matters."
+    },
+    {
+      "id": "u46l06e10",
+      "type": "multipleChoice",
+      "prompt": "continue fits which kind of totalling problem?",
+      "options": [
+        "'Add up all of them except the ones that match a rule'",
+        "'Stop adding at the first match'",
+        "'Add exactly once'",
+        "'Print each value'"
+      ],
+      "answer": 0,
+      "explanation": "'All except the ones that ...' is continue: skip the unwanted ones, total the rest, keep looping to the end."
+    }
+  ]
+}

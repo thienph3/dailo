@@ -1,0 +1,154 @@
+{
+  "unitId": "u98",
+  "lessonId": "u98l08",
+  "title": "Capstone: how many scores beat the average",
+  "idea": "GUIDED CAPSTONE. Two passes over one list: first compute the average, then count items above it — composing two patterns you know.",
+  "problem": "In [4, 8, 6, 2], find the average (5) then count how many are above it (2).",
+  "exercises": [
+    {
+      "id": "u98l08e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: how many of [4, 8, 6, 2] beat the average? OUTPUT is...",
+      "options": [
+        "A count of items above the average",
+        "The average only",
+        "The biggest",
+        "The list"
+      ],
+      "answer": 0,
+      "explanation": "Output is a count — but we need the average FIRST to compare against. Two steps, one answer."
+    },
+    {
+      "id": "u98l08e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "Why can't we count 'above average' in a single pass from the start?",
+      "options": [
+        "We don't know the average until we've seen every item",
+        "We can, easily",
+        "Averages are impossible",
+        "Lists are too short"
+      ],
+      "answer": 0,
+      "explanation": "The average needs the whole list, so we compute it first (pass 1), then count above it (pass 2)."
+    },
+    {
+      "id": "u98l08e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example by hand: total of 4+8+6+2 and count 4 -> average is?",
+      "options": [
+        "5",
+        "20",
+        "4",
+        "6"
+      ],
+      "answer": 0,
+      "explanation": "20 / 4 = 5. This average is the threshold for pass 2."
+    },
+    {
+      "id": "u98l08e04",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Now count items strictly above 5: which qualify?",
+      "options": [
+        "8 and 6 -> count 2",
+        "4 and 2 -> count 2",
+        "8 only -> count 1",
+        "all four"
+      ],
+      "answer": 0,
+      "explanation": "8 and 6 are above 5; 4 and 2 are not. Count is 2. That's our check."
+    },
+    {
+      "id": "u98l08e05",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Plan the two passes. Order the steps.",
+      "blocks": [
+        "Pass 2: count items above the average",
+        "Pass 1: build total, then average = total / count",
+        "Show the above-average count"
+      ],
+      "answer": [
+        1,
+        0,
+        2
+      ],
+      "explanation": "Average first (needs the whole list), then a second scan comparing each item to it. Composition of patterns."
+    },
+    {
+      "id": "u98l08e06",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "In pass 2, which test means 'above the average'?",
+      "options": [
+        "item > average",
+        "item < average",
+        "item == average",
+        "item >= average"
+      ],
+      "answer": 0,
+      "explanation": "> means strictly above. (>= would wrongly count an item equal to the average.)"
+    },
+    {
+      "id": "u98l08e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code pass 2 (the average is already computed). Arrange the lines.",
+      "blocks": [
+        "    if item > average:",
+        "above = 0",
+        "        above = above + 1",
+        "for item in numbers:"
+      ],
+      "answer": [
+        1,
+        3,
+        0,
+        2
+      ],
+      "explanation": "Counter at 0, scan, bump when item beats the average. Standard count-with-condition, threshold = average."
+    },
+    {
+      "id": "u98l08e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Complete the above-average test:\n\n# average = 5 already computed\nabove = 0\nfor item in numbers:\n    if item ____ average:\n        above = above + 1\nprint(above)",
+      "answer": ">",
+      "acceptable": [
+        ">"
+      ],
+      "explanation": "Use > for 'strictly above'. Items 8 and 6 pass, so above becomes 2."
+    },
+    {
+      "id": "u98l08e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Run it: prints 2. Hand said 2. Verdict?",
+      "options": [
+        "Passes",
+        "Fails",
+        "Unknown",
+        "Rewrite example"
+      ],
+      "answer": 0,
+      "explanation": "Matches. You chained two patterns — average, then count — into one solution."
+    },
+    {
+      "id": "u98l08e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Re-run on [10, 10, 10]. Average is 10; how many are ABOVE it?",
+      "options": [
+        "0 — none beat the average",
+        "3",
+        "1",
+        "10"
+      ],
+      "answer": 0,
+      "explanation": "All equal the average, none exceed it, so 0. A subtle but correct edge case thanks to using > not >=."
+    }
+  ]
+}

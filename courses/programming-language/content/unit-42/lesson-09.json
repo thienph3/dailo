@@ -1,0 +1,145 @@
+{
+  "unitId": "u42",
+  "lessonId": "u42l09",
+  "title": "Choosing the 'only when' condition",
+  "idea": "Pick the condition that selects exactly the passes a problem wants to act on.",
+  "exercises": [
+    {
+      "id": "u42l09e01",
+      "type": "multipleChoice",
+      "prompt": "'For each number 1 to 20, print it only when it is a multiple of 10.' Which condition?",
+      "options": [
+        "if i % 10 == 0",
+        "if i == 10",
+        "if i > 10",
+        "if i % 2 == 0"
+      ],
+      "answer": 0,
+      "explanation": "A multiple of 10 has remainder 0: i % 10 == 0. That matches 10 and 20."
+    },
+    {
+      "id": "u42l09e02",
+      "type": "multipleChoice",
+      "prompt": "Which numbers print for that multiple-of-10 loop over 1..20?",
+      "options": [
+        "10, 20",
+        "10",
+        "0, 10, 20",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "10 and 20 are the multiples of 10 up to 20."
+    },
+    {
+      "id": "u42l09e03",
+      "type": "multipleChoice",
+      "prompt": "'Add up only the numbers from 1 to 10 that are 5 or more.' Which condition?",
+      "options": [
+        "if i >= 5",
+        "if i > 5",
+        "if i == 5",
+        "if i < 5"
+      ],
+      "answer": 0,
+      "explanation": "5 or more is i >= 5, matching 5, 6, 7, 8, 9, 10."
+    },
+    {
+      "id": "u42l09e04",
+      "type": "multipleChoice",
+      "prompt": "What is that total (numbers 5..10 from the 1..10 loop)?",
+      "options": [
+        "45",
+        "40",
+        "30",
+        "15"
+      ],
+      "answer": 0,
+      "explanation": "5 + 6 + 7 + 8 + 9 + 10 = 45."
+    },
+    {
+      "id": "u42l09e05",
+      "type": "matchPairs",
+      "prompt": "Match each 'only when' phrase to its condition.",
+      "pairs": [
+        {
+          "left": "only when even",
+          "right": "if i % 2 == 0"
+        },
+        {
+          "left": "only when over 5",
+          "right": "if i > 5"
+        },
+        {
+          "left": "only when not 7",
+          "right": "if i != 7"
+        }
+      ],
+      "explanation": "Translate the plain-English rule into the comparison that selects exactly those passes."
+    },
+    {
+      "id": "u42l09e06",
+      "type": "fillBlank",
+      "prompt": "Fill the condition to act only on numbers 1..10 that are below 4:\n\nfor i in range(1, 11):\n    if i ____ 4:\n        print(i)",
+      "answer": "<",
+      "acceptable": [
+        "<"
+      ],
+      "explanation": "Below 4 is <. That selects 1, 2, 3."
+    },
+    {
+      "id": "u42l09e07",
+      "type": "multipleChoice",
+      "prompt": "Which numbers print for that 'below 4' loop over 1..10?",
+      "options": [
+        "1, 2, 3",
+        "1, 2, 3, 4",
+        "4, 5, 6",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "1, 2, 3 are below 4."
+    },
+    {
+      "id": "u42l09e08",
+      "type": "orderBlocks",
+      "prompt": "Arrange a loop that prints only numbers 1..10 that are NOT equal to 5.",
+      "blocks": [
+        "        print(i)",
+        "for i in range(1, 11):",
+        "    if i != 5:"
+      ],
+      "answer": [
+        1,
+        2,
+        0
+      ],
+      "explanation": "for header, the if with !=, then the indented print."
+    },
+    {
+      "id": "u42l09e09",
+      "type": "multipleChoice",
+      "prompt": "How many numbers print for that 'not equal to 5' loop over 1..10?",
+      "options": [
+        "9",
+        "10",
+        "1",
+        "5"
+      ],
+      "answer": 0,
+      "explanation": "All ten except 5 — that is nine numbers."
+    },
+    {
+      "id": "u42l09e10",
+      "type": "multipleChoice",
+      "prompt": "Why is choosing the RIGHT condition the heart of an 'only when' problem?",
+      "options": [
+        "It selects exactly which passes act",
+        "It makes loops faster",
+        "It changes the range",
+        "It has no effect"
+      ],
+      "answer": 0,
+      "explanation": "The condition decides exactly which passes act; a wrong one acts on the wrong passes and gives a wrong result."
+    }
+  ]
+}

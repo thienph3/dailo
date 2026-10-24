@@ -1,0 +1,136 @@
+{
+  "unitId": "u47",
+  "lessonId": "u47l03",
+  "title": "When you stop on a condition: while",
+  "idea": "MEET. Recognising condition-controlled problems: you stop when something changes, not after a set count, so a while loop fits. Reading only.",
+  "exercises": [
+    {
+      "id": "u47l03e01",
+      "type": "multipleChoice",
+      "prompt": "A CONDITION-CONTROLLED problem stops when something changes, not after a set count. Which is condition-controlled?",
+      "options": [
+        "Keep withdrawing until the balance hits 0",
+        "Print 'go' 5 times",
+        "Greet all 3 guests",
+        "Count 1 to 20"
+      ],
+      "answer": 0,
+      "explanation": "You do not know how many withdrawals in advance — you stop when the balance reaches 0. That is a condition (while)."
+    },
+    {
+      "id": "u47l03e02",
+      "type": "multipleChoice",
+      "prompt": "A while loop keeps repeating as long as its condition is...",
+      "options": [
+        "True",
+        "False",
+        "zero",
+        "even"
+      ],
+      "answer": 0,
+      "explanation": "A while loop runs its body again and again while the condition stays True, and stops the moment it becomes False."
+    },
+    {
+      "id": "u47l03e03",
+      "type": "trueFalse",
+      "prompt": "'Keep asking for a number until the user enters 0' is condition-controlled.",
+      "answer": true,
+      "explanation": "True. There is no fixed number of asks — you stop when they type 0. That changing condition suits a while loop."
+    },
+    {
+      "id": "u47l03e04",
+      "type": "multipleChoice",
+      "prompt": "Which word most often signals a condition-controlled loop?",
+      "options": [
+        "'until'",
+        "'times'",
+        "'each of the 5'",
+        "'exactly 3'"
+      ],
+      "answer": 0,
+      "explanation": "'until' points to a stopping condition. 'times', 'each of the 5', 'exactly 3' name fixed counts (for)."
+    },
+    {
+      "id": "u47l03e05",
+      "type": "matchPairs",
+      "prompt": "Match each problem to its loop shape.",
+      "pairs": [
+        {
+          "left": "Keep doubling until over 100",
+          "right": "while"
+        },
+        {
+          "left": "Print 7 stars",
+          "right": "for"
+        },
+        {
+          "left": "Ask until they type 'yes'",
+          "right": "while"
+        }
+      ],
+      "explanation": "The 'until ...' problems stop on a condition (while). Printing 7 stars is a fixed count (for)."
+    },
+    {
+      "id": "u47l03e06",
+      "type": "multipleChoice",
+      "prompt": "'Keep boiling until the water is gone.' Which shape, and why?",
+      "options": [
+        "while — it stops on a condition, not a count",
+        "for — the count is 1",
+        "No loop",
+        "for — it runs 100 times"
+      ],
+      "answer": 0,
+      "explanation": "You boil for as long as water remains; you cannot count it in advance. That changing condition means while."
+    },
+    {
+      "id": "u47l03e07",
+      "type": "trueFalse",
+      "prompt": "A condition-controlled loop could run zero times if its condition is False right away.",
+      "answer": true,
+      "explanation": "True. A while checks its condition first — if it is already False, the body never runs. That is a real edge case."
+    },
+    {
+      "id": "u47l03e08",
+      "type": "orderBlocks",
+      "prompt": "Order the thinking for a condition-controlled problem.",
+      "blocks": [
+        "Find what makes the repeating STOP",
+        "Write that stopping idea as a condition",
+        "Pick a while loop that runs while the condition holds"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Find the stop idea, turn it into a condition, then use a while loop that runs while the condition is true."
+    },
+    {
+      "id": "u47l03e09",
+      "type": "multipleChoice",
+      "prompt": "Which is condition-controlled?",
+      "options": [
+        "Keep adding coins until you reach 100",
+        "Ring the bell twice",
+        "Print each of the 4 names",
+        "Count 1 to 9"
+      ],
+      "answer": 0,
+      "explanation": "You stop when the total reaches 100, not after a set number of coins — a condition, so while."
+    },
+    {
+      "id": "u47l03e10",
+      "type": "multipleChoice",
+      "prompt": "You decided a problem is condition-controlled. What tool fits?",
+      "options": [
+        "A while loop",
+        "A for loop with a fixed range",
+        "A single if",
+        "Only print"
+      ],
+      "answer": 0,
+      "explanation": "Condition-controlled means 'repeat until a condition flips' — that is exactly what a while loop does."
+    }
+  ]
+}

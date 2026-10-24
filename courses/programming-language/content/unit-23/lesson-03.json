@@ -1,0 +1,154 @@
+{
+  "unitId": "u23",
+  "lessonId": "u23l03",
+  "title": "Solve it: even or odd",
+  "idea": "GUIDED. Decide if a number is even or odd using the remainder operator and if/else.",
+  "problem": "Given a whole number, show 'Even' if it divides by 2 with no remainder, otherwise 'Odd'.",
+  "exercises": [
+    {
+      "id": "u23l03e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: show Even or Odd for a number. What is the OUTPUT?",
+      "options": [
+        "The word Even or Odd",
+        "The number halved",
+        "The remainder",
+        "A count"
+      ],
+      "answer": 0,
+      "explanation": "Output is one label, Even or Odd."
+    },
+    {
+      "id": "u23l03e02",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "By hand: is 6 even or odd?",
+      "options": [
+        "Even",
+        "Odd",
+        "6",
+        "neither"
+      ],
+      "answer": 0,
+      "explanation": "6 divides by 2 evenly (remainder 0), so Even."
+    },
+    {
+      "id": "u23l03e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "By hand: is 7 even or odd?",
+      "options": [
+        "Odd",
+        "Even",
+        "7",
+        "neither"
+      ],
+      "answer": 0,
+      "explanation": "7 divided by 2 leaves remainder 1, so Odd. These two examples cover both branches."
+    },
+    {
+      "id": "u23l03e04",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Which tool gives the remainder after dividing?",
+      "options": [
+        "% (the remainder operator)",
+        "//",
+        "+",
+        "=="
+      ],
+      "answer": 0,
+      "explanation": "% gives the remainder. 6 % 2 is 0; 7 % 2 is 1. You met % in an earlier unit."
+    },
+    {
+      "id": "u23l03e05",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Which test means 'even'?",
+      "options": [
+        "n % 2 == 0",
+        "n % 2 == 1",
+        "n // 2 == 0",
+        "n > 2"
+      ],
+      "answer": 0,
+      "explanation": "Even means the remainder when divided by 2 is 0, so n % 2 == 0."
+    },
+    {
+      "id": "u23l03e06",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Plan the steps.",
+      "blocks": [
+        "Find the remainder of n divided by 2",
+        "If the remainder is 0, show Even",
+        "Otherwise show Odd"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Compute n % 2, then branch on whether it is 0."
+    },
+    {
+      "id": "u23l03e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Arrange the code.",
+      "blocks": [
+        "if n % 2 == 0:",
+        "    print(\"Even\")",
+        "else:",
+        "    print(\"Odd\")"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "The condition n % 2 == 0 is True for even numbers; the else covers odd."
+    },
+    {
+      "id": "u23l03e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Complete the condition:\n\nif n % 2 __ 0:\n    print(\"Even\")\nelse:\n    print(\"Odd\")",
+      "answer": "==",
+      "acceptable": [
+        "=="
+      ],
+      "explanation": "Compare the remainder to 0 with ==. A single = would be an assignment, not a test."
+    },
+    {
+      "id": "u23l03e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Run with n = 6. What prints?",
+      "options": [
+        "Even",
+        "Odd",
+        "0",
+        "6"
+      ],
+      "answer": 0,
+      "explanation": "6 % 2 is 0, and 0 == 0 is True, so Even - matches the hand example."
+    },
+    {
+      "id": "u23l03e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Re-check with n = 7. What prints?",
+      "options": [
+        "Odd",
+        "Even",
+        "1",
+        "7"
+      ],
+      "answer": 0,
+      "explanation": "7 % 2 is 1, and 1 == 0 is False, so the else runs: Odd. Both branches confirmed."
+    }
+  ]
+}

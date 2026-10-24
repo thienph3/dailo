@@ -1,0 +1,129 @@
+{
+  "unitId": "u32",
+  "lessonId": "u32l06",
+  "title": "and where you meant or",
+  "idea": "Joining conditions with the wrong word flips the logic. 'and' needs both true; 'or' needs either.",
+  "exercises": [
+    {
+      "id": "u32l06e01",
+      "type": "multipleChoice",
+      "prompt": "Rule: weekend if day is Saturday OR Sunday. Code: if day == 'Saturday' and day == 'Sunday'. What is wrong?",
+      "options": [
+        "'and' can never be true here; it needs 'or'",
+        "Saturday is not a word",
+        "== should be =",
+        "The days are swapped"
+      ],
+      "answer": 0,
+      "explanation": "A day cannot be both at once, so 'and' is never True. It should be 'or' — either day counts."
+    },
+    {
+      "id": "u32l06e02",
+      "type": "multipleChoice",
+      "prompt": "With the buggy 'and' version, how many days print 'Weekend'?",
+      "options": [
+        "Zero days",
+        "Both weekend days",
+        "Every day",
+        "Only Saturday"
+      ],
+      "answer": 0,
+      "explanation": "Zero — no single day equals both names, so the condition is always False."
+    },
+    {
+      "id": "u32l06e03",
+      "type": "trueFalse",
+      "prompt": "'and' is true only when BOTH sides are true.",
+      "answer": true,
+      "explanation": "True. If either side is false, 'and' is false. That is why two different equality tests can never both hold."
+    },
+    {
+      "id": "u32l06e04",
+      "type": "trueFalse",
+      "prompt": "'or' is true when AT LEAST ONE side is true.",
+      "answer": true,
+      "explanation": "True. 'or' needs only one side to hold, which fits 'Saturday or Sunday'."
+    },
+    {
+      "id": "u32l06e05",
+      "type": "multipleChoice",
+      "prompt": "Opposite bug: 'discount only if member AND age 60+.' Code uses 'or'. What goes wrong?",
+      "options": [
+        "Non-members who are 60+ wrongly get the discount",
+        "Nobody gets a discount",
+        "It crashes",
+        "Members under 60 are blocked correctly"
+      ],
+      "answer": 0,
+      "explanation": "'or' lets a young member OR any 60-year-old get the discount, which is too generous. It needs 'and'."
+    },
+    {
+      "id": "u32l06e06",
+      "type": "multipleChoice",
+      "prompt": "Which word means 'both conditions must hold'?",
+      "options": [
+        "and",
+        "or",
+        "not",
+        "elif"
+      ],
+      "answer": 0,
+      "explanation": "'and' requires both sides true at once — the right choice for 'member AND 60+'."
+    },
+    {
+      "id": "u32l06e07",
+      "type": "multipleChoice",
+      "prompt": "Which word means 'either condition is enough'?",
+      "options": [
+        "or",
+        "and",
+        "not",
+        "if"
+      ],
+      "answer": 0,
+      "explanation": "'or' is satisfied by one side, matching 'Saturday or Sunday'."
+    },
+    {
+      "id": "u32l06e08",
+      "type": "matchPairs",
+      "prompt": "Match the everyday phrase to the right joiner.",
+      "pairs": [
+        {
+          "left": "Must be a member AND 60+",
+          "right": "and"
+        },
+        {
+          "left": "Saturday OR Sunday",
+          "right": "or"
+        }
+      ],
+      "explanation": "'both/all' -> and; 'either/any' -> or. Reading the rule in words tells you which to use."
+    },
+    {
+      "id": "u32l06e09",
+      "type": "multipleChoice",
+      "prompt": "Fix the weekend test.",
+      "options": [
+        "if day == 'Saturday' or day == 'Sunday'",
+        "if day == 'Saturday' and day == 'Sunday'",
+        "if day == 'Saturday' == 'Sunday'",
+        "if day = 'Saturday' or 'Sunday'"
+      ],
+      "answer": 0,
+      "explanation": "Use 'or' so either weekend day makes the condition true."
+    },
+    {
+      "id": "u32l06e10",
+      "type": "multipleChoice",
+      "prompt": "How do you catch an and/or bug by reasoning alone?",
+      "options": [
+        "Translate the rule to words and see if 'both' or 'either' is meant",
+        "Count the letters",
+        "Always use and",
+        "Run it a hundred times"
+      ],
+      "answer": 0,
+      "explanation": "Read the rule in plain words: 'both' signals and, 'either' signals or. Then check the code matches."
+    }
+  ]
+}

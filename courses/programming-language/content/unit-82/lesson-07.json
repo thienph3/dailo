@@ -1,0 +1,154 @@
+{
+  "unitId": "u82",
+  "lessonId": "u82l07",
+  "title": "Solve it together: is the code in the list?",
+  "idea": "GUIDED (UEPCC). Decompose a membership check into a helper contains(nums, target) that walks the list and returns True/False. Search pattern with an early stop.",
+  "problem": "Valid ticket numbers are [103, 117, 125, 140]. Show whether 125 is valid, using a contains(nums, target) helper that returns True or False.",
+  "exercises": [
+    {
+      "id": "u82l07e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: valid tickets [103, 117, 125, 140]. Is 125 valid? Use contains(nums, target) returning True/False.\n\nOUTPUT?",
+      "options": [
+        "A yes/no answer: is 125 in the list?",
+        "The position of 125",
+        "The count of tickets",
+        "The biggest ticket"
+      ],
+      "answer": 0,
+      "explanation": "Output = True or False. We're searching for membership, not counting or positioning."
+    },
+    {
+      "id": "u82l07e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "INPUTS?",
+      "options": [
+        "The list of valid tickets and the target 125",
+        "Only 125",
+        "The word valid",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "Inputs are the list and the value we're hunting for, 125."
+    },
+    {
+      "id": "u82l07e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example — by hand. Is 125 in [103, 117, 125, 140]?",
+      "options": [
+        "Yes — 125 is the third item",
+        "No",
+        "Only if sorted",
+        "Can't tell"
+      ],
+      "answer": 0,
+      "explanation": "125 is right there in the list, so the answer is True. Hand answer = True."
+    },
+    {
+      "id": "u82l07e04",
+      "type": "trueFalse",
+      "uepcc": "E",
+      "prompt": "contains(nums, target) should return True as soon as it finds the target, and False if it reaches the end without finding it.",
+      "answer": true,
+      "explanation": "Yes — the search pattern: return True on a match, and if the loop finishes with no match, return False."
+    },
+    {
+      "id": "u82l07e05",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Plan — which pattern checks if a value is present?",
+      "options": [
+        "Search / membership (walk until found)",
+        "Running total",
+        "Track the biggest",
+        "Average"
+      ],
+      "answer": 0,
+      "explanation": "Search/membership walks the list looking for the target, stopping early when it's found."
+    },
+    {
+      "id": "u82l07e06",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Order the helper's plan.",
+      "blocks": [
+        "Look at each item in the list",
+        "If an item equals the target, return True",
+        "If the loop ends with no match, return False"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Walk, return True on a hit, and only after the whole walk return False. Order matters: the False is last."
+    },
+    {
+      "id": "u82l07e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code the helper and use it.",
+      "blocks": [
+        "def contains(nums, target):",
+        "    for n in nums:",
+        "        if n == target:",
+        "            return True",
+        "    return False",
+        "tickets = [103, 117, 125, 140]",
+        "print(contains(tickets, 125))"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "explanation": "Loop, return True on a match, return False after the loop. The final return False sits OUTSIDE the loop — a common wiring detail."
+    },
+    {
+      "id": "u82l07e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Complete the match test:\n\nfor n in nums:\n    if n ____ target:\n        return True",
+      "answer": "==",
+      "acceptable": [
+        "=="
+      ],
+      "explanation": "We compare each item to the target for equality, so ==. (= would assign, not compare.)"
+    },
+    {
+      "id": "u82l07e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check — the code prints True; hand answer was True. Verdict?",
+      "options": [
+        "Passes",
+        "Fails",
+        "Unknown",
+        "Rewrite example"
+      ],
+      "answer": 0,
+      "explanation": "Output (True) matches the hand answer. The search helper is correct."
+    },
+    {
+      "id": "u82l07e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Re-check with a value NOT present: contains(tickets, 200). What does it return?",
+      "options": [
+        "False — the loop ends without a match",
+        "True",
+        "It crashes",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "200 isn't in the list, so no match is found and the helper returns False after the loop. Both outcomes work."
+    }
+  ]
+}

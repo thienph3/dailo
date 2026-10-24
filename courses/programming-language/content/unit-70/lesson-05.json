@@ -1,0 +1,140 @@
+{
+  "unitId": "u70",
+  "lessonId": "u70l05",
+  "title": "Two names, two jobs",
+  "idea": "MEET: a plan can have several named sub-plans, each doing its own job. No code.",
+  "exercises": [
+    {
+      "id": "u70l05e01",
+      "type": "multipleChoice",
+      "prompt": "A plan defines 'greet' (shows 'Hello') and 'farewell' (shows 'Bye'). These are...",
+      "options": [
+        "two separate named jobs",
+        "the same job twice",
+        "one job with two names",
+        "not jobs at all"
+      ],
+      "answer": 0,
+      "explanation": "Two names, two different jobs. A plan can define as many named sub-plans as it needs."
+    },
+    {
+      "id": "u70l05e02",
+      "type": "multipleChoice",
+      "prompt": "Plan: use greet, then use farewell. What appears?",
+      "options": [
+        "Hello, then Bye",
+        "Bye, then Hello",
+        "only Hello",
+        "only Bye"
+      ],
+      "answer": 0,
+      "explanation": "greet runs first (Hello), then farewell (Bye). Each named job does its own thing, in use order."
+    },
+    {
+      "id": "u70l05e03",
+      "type": "multiSelect",
+      "prompt": "A quiz plan might define which named jobs? (Pick all sensible ones.)",
+      "options": [
+        "ask_questions",
+        "show_score",
+        "print_border",
+        "paint_the_fence"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "A quiz could reasonably have ask_questions, show_score, and a print_border. Painting a fence is unrelated."
+    },
+    {
+      "id": "u70l05e04",
+      "type": "orderBlocks",
+      "prompt": "Order the uses so a scoreboard shows a border, then the score, then a border.",
+      "blocks": [
+        "use print_border (bottom)",
+        "use print_border (top)",
+        "use show_score"
+      ],
+      "answer": [
+        1,
+        2,
+        0
+      ],
+      "explanation": "Border, score, border - one border job used twice, the score job once. Each job has its own name."
+    },
+    {
+      "id": "u70l05e05",
+      "type": "trueFalse",
+      "prompt": "Different jobs should get different names so you can tell them apart.",
+      "answer": true,
+      "explanation": "Yes. Distinct jobs need distinct, descriptive names. Two jobs sharing one name would be confusing."
+    },
+    {
+      "id": "u70l05e06",
+      "type": "matchPairs",
+      "prompt": "Match each named job to what it shows.",
+      "pairs": [
+        {
+          "left": "greet",
+          "right": "a hello message"
+        },
+        {
+          "left": "farewell",
+          "right": "a goodbye message"
+        },
+        {
+          "left": "print_border",
+          "right": "a line of stars"
+        }
+      ],
+      "explanation": "Each name is tied to one clear job. The name tells you what using it will do."
+    },
+    {
+      "id": "u70l05e07",
+      "type": "multipleChoice",
+      "prompt": "You use greet twice and farewell once. How many messages appear in total?",
+      "options": [
+        "Three",
+        "Two",
+        "One",
+        "Zero"
+      ],
+      "answer": 0,
+      "explanation": "greet runs twice (two Hellos) and farewell once (one Bye): three messages. Count each use."
+    },
+    {
+      "id": "u70l05e08",
+      "type": "multipleChoice",
+      "prompt": "Why split a plan into several named jobs instead of one big unnamed block?",
+      "options": [
+        "Each job is clear, reusable, and easy to fix on its own",
+        "To make it longer",
+        "To hide the jobs",
+        "Blocks are always better"
+      ],
+      "answer": 0,
+      "explanation": "Several clear named jobs beat one tangle: each is readable, reusable, and independently fixable."
+    },
+    {
+      "id": "u70l05e09",
+      "type": "trueFalse",
+      "prompt": "A single plan can define many named jobs and use each a different number of times.",
+      "answer": true,
+      "explanation": "Yes. Define as many as you need, and use each as often as the plan requires - even zero times."
+    },
+    {
+      "id": "u70l05e10",
+      "type": "multipleChoice",
+      "prompt": "The idea here:",
+      "options": [
+        "a plan can hold several named jobs, each with its own name and purpose",
+        "only one job per plan",
+        "all jobs share one name",
+        "jobs cannot be separated"
+      ],
+      "answer": 0,
+      "explanation": "Many named jobs, each clear and reusable. Soon you'll write several real functions in one program."
+    }
+  ]
+}

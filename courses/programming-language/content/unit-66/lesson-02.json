@@ -1,0 +1,135 @@
+{
+  "unitId": "u66",
+  "lessonId": "u66l02",
+  "title": "Tracing a loop by hand",
+  "idea": "To find a bug, walk the loop one step at a time on paper, tracking each variable. Thinking, predicting values.",
+  "exercises": [
+    {
+      "id": "u66l02e01",
+      "type": "multipleChoice",
+      "prompt": "To understand what a loop really does, the best move is to...",
+      "options": [
+        "trace it by hand, writing down each variable after every pass",
+        "read it once quickly",
+        "run it and ignore the steps",
+        "rewrite it from scratch"
+      ],
+      "answer": 0,
+      "explanation": "Tracing (writing the value of each variable after every loop pass) shows you exactly where things go wrong."
+    },
+    {
+      "id": "u66l02e02",
+      "type": "multipleChoice",
+      "prompt": "Trace it:\n\ntotal = 0\nfor n in [1, 2, 3]:\n    total = total + n\n\nAfter the FIRST pass (n = 1), what is total?",
+      "options": [
+        "1",
+        "0",
+        "3",
+        "6"
+      ],
+      "answer": 0,
+      "explanation": "Start total = 0, then total = 0 + 1 = 1. Tracking total pass by pass is how you check the loop is building correctly."
+    },
+    {
+      "id": "u66l02e03",
+      "type": "multipleChoice",
+      "prompt": "Same loop. After the SECOND pass (n = 2), what is total?",
+      "options": [
+        "3",
+        "1",
+        "2",
+        "6"
+      ],
+      "answer": 0,
+      "explanation": "total was 1, then 1 + 2 = 3. Each pass adds the next item, giving a running total."
+    },
+    {
+      "id": "u66l02e04",
+      "type": "multipleChoice",
+      "prompt": "Same loop. After the loop finishes, what does total hold?",
+      "options": [
+        "6",
+        "3",
+        "5",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "After n = 3: 3 + 3 = 6. Tracing to the end gives the final answer: 1 + 2 + 3 = 6."
+    },
+    {
+      "id": "u66l02e05",
+      "type": "orderBlocks",
+      "prompt": "Put the hand-tracing steps in the order you'd do them.",
+      "blocks": [
+        "Write down the starting value of each variable",
+        "After each loop pass, update the values you wrote",
+        "Read off the final values when the loop ends"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Start, update each pass, read the end. A trace is just a tidy table of how the values change."
+    },
+    {
+      "id": "u66l02e06",
+      "type": "multipleChoice",
+      "prompt": "Trace the counter:\n\ncount = 0\nfor n in [5, 8, 2, 9]:\n    if n > 4:\n        count = count + 1\n\nWhat is count at the end?",
+      "options": [
+        "3",
+        "4",
+        "2",
+        "1"
+      ],
+      "answer": 0,
+      "explanation": "5>4 yes, 8>4 yes, 2>4 no, 9>4 yes — three items pass, so count = 3. Tracing the if-inside-loop catches counting bugs."
+    },
+    {
+      "id": "u66l02e07",
+      "type": "trueFalse",
+      "prompt": "When tracing, you should track EVERY variable the loop changes, not just one.",
+      "answer": true,
+      "explanation": "A loop may change several variables (a total AND a count, say). Miss one and you miss the bug. Track them all."
+    },
+    {
+      "id": "u66l02e08",
+      "type": "multipleChoice",
+      "prompt": "REVIEW: in 'for n in [5, 8, 2]', what is n on the very first pass?",
+      "options": [
+        "5",
+        "0",
+        "8",
+        "2"
+      ],
+      "answer": 0,
+      "explanation": "'for n in list' hands you the items in order, so n is 5 first. Knowing this is key to tracing correctly."
+    },
+    {
+      "id": "u66l02e09",
+      "type": "multipleChoice",
+      "prompt": "Why trace by hand instead of just trusting the code?",
+      "options": [
+        "It shows the exact pass where a value becomes wrong",
+        "It makes the code run faster",
+        "It changes the list",
+        "Tracing is never needed"
+      ],
+      "answer": 0,
+      "explanation": "A trace pinpoints the step where expected and actual diverge, and that step holds the bug."
+    },
+    {
+      "id": "u66l02e10",
+      "type": "multipleChoice",
+      "prompt": "A trace of a summing loop shows total jumps 0, 1, 3, 6. What does each number represent?",
+      "options": [
+        "total after each pass through the loop",
+        "the list items",
+        "the index values",
+        "random numbers"
+      ],
+      "answer": 0,
+      "explanation": "0 is the start, then total after each pass: 0 to 1 to 3 to 6. A clean trace reads like the loop's story."
+    }
+  ]
+}

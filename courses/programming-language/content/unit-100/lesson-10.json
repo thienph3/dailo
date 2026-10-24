@@ -1,0 +1,143 @@
+{
+  "unitId": "u100",
+  "lessonId": "u100l10",
+  "title": "You did it: from first print to real problem-solver",
+  "idea": "GUIDED FINALE & CELEBRATION. Reflect on the whole journey, confirm the solving method you now own, and take the next step: writing real code in a real editor.",
+  "problem": "The final 'problem': recognize everything you can now do, and plan your next move as a real programmer.",
+  "exercises": [
+    {
+      "id": "u100l10e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "This is the very last lesson. First, Understand how far you've come. What can you now do that you couldn't at lesson one?",
+      "options": [
+        "Read a problem, plan it, write code, and check it myself",
+        "Only copy examples",
+        "Nothing new",
+        "Just print text"
+      ],
+      "answer": 0,
+      "explanation": "You started with print() and now you solve unseen problems end to end. That's the leap from typing to THINKING like a programmer."
+    },
+    {
+      "id": "u100l10e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "What is the method you'll carry into every future problem?",
+      "options": [
+        "Understand, Example, Plan, Code, Check (UEPCC)",
+        "Guess until it works",
+        "Memorize answers",
+        "Avoid hard problems"
+      ],
+      "answer": 0,
+      "explanation": "UEPCC is yours now. Name the I/O, work an example, plan the steps, write code, check against the example. It works on any problem."
+    },
+    {
+      "id": "u100l10e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example — your toolkit. Which of these have you actually used in these capstones?",
+      "options": [
+        "Variables, if/else, loops, lists, and functions",
+        "Only variables",
+        "Only loops",
+        "None of them"
+      ],
+      "answer": 0,
+      "explanation": "All of them, woven together. FizzBuzz, digit sums, filters, stats reports, your own functions — real programs."
+    },
+    {
+      "id": "u100l10e04",
+      "type": "trueFalse",
+      "uepcc": "E",
+      "prompt": "You can now solve a problem you've never seen before by breaking it into small, known steps.",
+      "answer": true,
+      "explanation": "Yes! That's the whole skill. New problems aren't scary when you decompose them into pieces you already know."
+    },
+    {
+      "id": "u100l10e05",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Plan your next step beyond this course. Order a sensible path.",
+      "blocks": [
+        "Install Python and open a real code editor",
+        "Type a small program you plan with UEPCC",
+        "Run it, see real output, and iterate"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Move from these guided exercises to a real editor. Set up Python, write a planned program, run it, and improve it. That's real coding."
+    },
+    {
+      "id": "u100l10e06",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "When you face your first real-editor program, what's the wise first move?",
+      "options": [
+        "Plan it with UEPCC before typing",
+        "Type random code and hope",
+        "Copy a huge program you don't understand",
+        "Give up if it's unfamiliar"
+      ],
+      "answer": 0,
+      "explanation": "Plan first, always. The method that carried you through these capstones is exactly what professionals use on new problems."
+    },
+    {
+      "id": "u100l10e07",
+      "type": "multipleChoice",
+      "uepcc": "C",
+      "prompt": "You're ready to write real code. In an editor, which line prints a greeting — the very first thing you ever learned?",
+      "options": [
+        "print(\"Hello, world!\")",
+        "Hello world",
+        "echo Hello",
+        "say hello"
+      ],
+      "answer": 0,
+      "explanation": "print(\"Hello, world!\") — where you began, and now just one small tool among many you command. Full circle!"
+    },
+    {
+      "id": "u100l10e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Write that classic first line of a real program:\n\n____(\"Hello, world!\")",
+      "answer": "print",
+      "acceptable": [
+        "print"
+      ],
+      "explanation": "print — your first tool and still a trusty one. The difference now: you know what to put AROUND it to solve real problems."
+    },
+    {
+      "id": "u100l10e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check your readiness: a friend asks you to count how many numbers in a list are even. Can you solve it?",
+      "options": [
+        "Yes — loop the list, test item % 2 == 0, count the matches",
+        "No, that's impossible",
+        "Only if someone shows me",
+        "I'd need a builtin"
+      ],
+      "answer": 0,
+      "explanation": "You've got this — count-with-condition, built by hand. You can genuinely solve problems now. That's real."
+    },
+    {
+      "id": "u100l10e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Final check of the whole journey: you went from print() to planning, looping, listing, and writing functions. What's true?",
+      "options": [
+        "I'm a beginning programmer now, ready to write real code",
+        "I only memorized tricks",
+        "I learned nothing reusable",
+        "I can't solve new problems"
+      ],
+      "answer": 0,
+      "explanation": "Congratulations! You can read a problem, plan it, code it, and check it. Open a real editor and build something. This is the beginning, not the end. Well done!"
+    }
+  ]
+}

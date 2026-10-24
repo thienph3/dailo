@@ -1,0 +1,118 @@
+{
+  "unitId": "u04",
+  "lessonId": "u04l04",
+  "title": "Finding the input of a tiny task",
+  "idea": "The input is what the task gives you to work with. Naming it helps you build the right example.",
+  "exercises": [
+    {
+      "id": "u04l04e01",
+      "type": "multipleChoice",
+      "prompt": "What is the 'input' of a task?",
+      "options": [
+        "What the task gives you to start with",
+        "What appears on the screen",
+        "The name of the program",
+        "A kind of error"
+      ],
+      "answer": 0,
+      "explanation": "Input is what you're given. Output is what comes out. An example connects one input to its output."
+    },
+    {
+      "id": "u04l04e02",
+      "type": "multipleChoice",
+      "prompt": "Task: 'show the word Blue'. What is the input you're given?",
+      "options": [
+        "The word Blue",
+        "The screen",
+        "A number",
+        "Nothing at all"
+      ],
+      "answer": 0,
+      "explanation": "You're handed the word Blue to show. That's the input; showing it is the output."
+    },
+    {
+      "id": "u04l04e03",
+      "type": "trueFalse",
+      "prompt": "Some tiny tasks have the input and the output be almost the same thing.",
+      "answer": true,
+      "explanation": "For 'show the word Blue', the input (Blue) becomes the output (Blue). That's fine — simple tasks are like that."
+    },
+    {
+      "id": "u04l04e04",
+      "type": "matchPairs",
+      "prompt": "Match each tiny task to its input.",
+      "pairs": [
+        { "left": "Show the word Sky", "right": "Sky" },
+        { "left": "Show the number 42", "right": "42" },
+        { "left": "Show the word Hello", "right": "Hello" }
+      ],
+      "explanation": "The input is the specific thing the task hands you to display."
+    },
+    {
+      "id": "u04l04e05",
+      "type": "multipleChoice",
+      "prompt": "Task: 'show the number 8'. Name the input and the output.",
+      "options": [
+        "Input: 8, Output: 8",
+        "Input: nothing, Output: 8",
+        "Input: 8, Output: eight",
+        "Input: print, Output: 8"
+      ],
+      "answer": 0,
+      "explanation": "You're given 8 (input) and the screen shows 8 (output). For this task they're the same value."
+    },
+    {
+      "id": "u04l04e06",
+      "type": "multiSelect",
+      "prompt": "Which statements are true about inputs and outputs? (pick all)",
+      "options": [
+        "Input is what you start with",
+        "Output is what you end with on screen",
+        "Every task must have 10 inputs",
+        "An example links an input to its output"
+      ],
+      "answer": [0, 1, 3],
+      "explanation": "Input starts, output ends, an example links them. Tasks do NOT need 10 inputs — many have very few."
+    },
+    {
+      "id": "u04l04e07",
+      "type": "trueFalse",
+      "prompt": "Knowing the input helps you decide the output.",
+      "answer": true,
+      "explanation": "You can't say what should come out until you know what went in. Name the input first."
+    },
+    {
+      "id": "u04l04e08",
+      "type": "orderBlocks",
+      "prompt": "Put the steps of naming an example in order.",
+      "blocks": [
+        "Name the input",
+        "Decide the output",
+        "Write them as one example"
+      ],
+      "answer": [0, 1, 2],
+      "explanation": "First name what you're given, then what should come out, then pair them into an example."
+    },
+    {
+      "id": "u04l04e09",
+      "type": "multipleChoice",
+      "prompt": "Task: 'show the word Win'. Which is a complete example?",
+      "options": [
+        "Input: Win -> Output: Win",
+        "Input: Win -> Output: Lose",
+        "Input: nothing -> Output: nothing",
+        "Output: Win (no input named)"
+      ],
+      "answer": 0,
+      "explanation": "A complete example names both sides: given Win, show Win. The others are wrong or incomplete."
+    },
+    {
+      "id": "u04l04e10",
+      "type": "fillBlank",
+      "prompt": "Task: 'show the word Up'. The input is the word ____.",
+      "answer": "Up",
+      "acceptable": ["Up", "up"],
+      "explanation": "The input is the word Up — the exact thing the task hands you to display."
+    }
+  ]
+}

@@ -1,0 +1,129 @@
+{
+  "unitId": "u48",
+  "lessonId": "u48l01",
+  "title": "Walk a loop by hand",
+  "idea": "MEET. To check a loop, trace it: write down the values each pass BEFORE trusting the output. Reading and predicting only.",
+  "exercises": [
+    {
+      "id": "u48l01e01",
+      "type": "multipleChoice",
+      "prompt": "To predict what a loop does, the safest way is to...",
+      "options": [
+        "trace it pass by pass, noting the values each time",
+        "guess the final answer",
+        "run it and hope",
+        "skip to the last line"
+      ],
+      "answer": 0,
+      "explanation": "Hand-tracing means writing down the values on each pass. It turns a confusing loop into a clear table."
+    },
+    {
+      "id": "u48l01e02",
+      "type": "multipleChoice",
+      "prompt": "In 'for i in range(3): print(i)', what does i hold on the FIRST pass?",
+      "options": [
+        "0",
+        "1",
+        "3",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "range(3) gives 0,1,2. The loop variable i starts at the first value, 0."
+    },
+    {
+      "id": "u48l01e03",
+      "type": "multipleChoice",
+      "prompt": "In that same loop, what are ALL the values i takes, in order?",
+      "options": [
+        "0, 1, 2",
+        "1, 2, 3",
+        "0, 1, 2, 3",
+        "3, 2, 1"
+      ],
+      "answer": 0,
+      "explanation": "range(3) is 0,1,2 — three passes. Tracing them in order is how you predict the output."
+    },
+    {
+      "id": "u48l01e04",
+      "type": "trueFalse",
+      "prompt": "Tracing a loop means writing the value of each variable on every pass.",
+      "answer": true,
+      "explanation": "True. A trace is just a little table of values per pass. It is the Check step for loops."
+    },
+    {
+      "id": "u48l01e05",
+      "type": "orderBlocks",
+      "prompt": "Order the steps of hand-tracing 'for i in range(3): print(i)'.",
+      "blocks": [
+        "Pass 1: i is 0, print 0",
+        "Pass 2: i is 1, print 1",
+        "Pass 3: i is 2, print 2"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Each pass takes the next range value and runs the body. Writing them in order reveals the output."
+    },
+    {
+      "id": "u48l01e06",
+      "type": "multipleChoice",
+      "prompt": "So what does 'for i in range(3): print(i)' print, line by line?",
+      "options": [
+        "0, then 1, then 2",
+        "1, then 2, then 3",
+        "0, then 1, then 2, then 3",
+        "just 3"
+      ],
+      "answer": 0,
+      "explanation": "Each pass prints the current i: 0, 1, 2. The trace matches the output exactly."
+    },
+    {
+      "id": "u48l01e07",
+      "type": "multipleChoice",
+      "prompt": "Why trace BEFORE running?",
+      "options": [
+        "It tells you what to expect, so you catch a wrong output",
+        "it makes the loop faster",
+        "it changes the loop",
+        "it is never useful"
+      ],
+      "answer": 0,
+      "explanation": "A trace gives you an expected answer. If the real output differs, you know there is a bug to find."
+    },
+    {
+      "id": "u48l01e08",
+      "type": "multipleChoice",
+      "prompt": "In 'for i in range(2, 5): print(i)', the values of i are...",
+      "options": [
+        "2, 3, 4",
+        "2, 3, 4, 5",
+        "0, 1, 2",
+        "2, 5"
+      ],
+      "answer": 0,
+      "explanation": "range(2, 5) starts at 2 and stops before 5: 2,3,4."
+    },
+    {
+      "id": "u48l01e09",
+      "type": "trueFalse",
+      "prompt": "A trace of range(2, 5) shows three passes.",
+      "answer": true,
+      "explanation": "True. 2, 3, 4 is three values, so three passes. Count the values to count the passes."
+    },
+    {
+      "id": "u48l01e10",
+      "type": "multipleChoice",
+      "prompt": "What is the main benefit of tracing a loop by hand?",
+      "options": [
+        "You can predict and check the output without guessing",
+        "You avoid writing code forever",
+        "Loops run themselves",
+        "It removes all bugs automatically"
+      ],
+      "answer": 0,
+      "explanation": "Tracing lets you predict the result and compare it to what the loop actually does — the Check step for loops."
+    }
+  ]
+}

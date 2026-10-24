@@ -1,0 +1,116 @@
+{
+  "unitId": "u05",
+  "lessonId": "u05l09",
+  "title": "Checking more than one case",
+  "idea": "One passing case isn't always enough. Checking a few examples gives you more confidence.",
+  "exercises": [
+    {
+      "id": "u05l09e01",
+      "type": "multipleChoice",
+      "prompt": "Why might you check more than one example?",
+      "options": [
+        "To be more sure the program is right, not just lucky once",
+        "To make the program longer",
+        "To slow the computer down",
+        "There's never a reason"
+      ],
+      "answer": 0,
+      "explanation": "Passing once could be luck. A few passing cases give you real confidence the program behaves correctly."
+    },
+    {
+      "id": "u05l09e02",
+      "type": "trueFalse",
+      "prompt": "If you check two different cases and both pass, you can be more confident than after just one.",
+      "answer": true,
+      "explanation": "More passing cases, more confidence. Each case that matches its expected output is more evidence it works."
+    },
+    {
+      "id": "u05l09e03",
+      "type": "multipleChoice",
+      "prompt": "Case 1 passes. Case 2 fails. What is the overall verdict?",
+      "options": [
+        "Fail — a program must pass all its cases",
+        "Pass, one is enough",
+        "Half pass",
+        "Error"
+      ],
+      "answer": 0,
+      "explanation": "If any case fails, the program isn't fully correct yet. It needs to pass every case you check."
+    },
+    {
+      "id": "u05l09e04",
+      "type": "multipleChoice",
+      "prompt": "You have a program that greets a name. You check it with 'Sam' and it passes. What's a good next move?",
+      "options": [
+        "Check it with a different name too",
+        "Stop — one case is proof",
+        "Delete the program",
+        "Run it with 'Sam' again"
+      ],
+      "answer": 0,
+      "explanation": "Trying a second, different example (like 'Mai') checks that it works in general, not just for 'Sam'."
+    },
+    {
+      "id": "u05l09e05",
+      "type": "trueFalse",
+      "prompt": "Re-checking with a fresh example helps prove the program isn't just right by accident.",
+      "answer": true,
+      "explanation": "A fresh example is a new test. If it passes too, your confidence grows that the program is truly correct."
+    },
+    {
+      "id": "u05l09e06",
+      "type": "multiSelect",
+      "prompt": "You ran 3 cases. Case 1: pass. Case 2: pass. Case 3: fail. Which statements are true? (pick all)",
+      "options": [
+        "The overall result is fail",
+        "Case 3 needs a closer look",
+        "All three passed"
+      ],
+      "answer": [0, 1],
+      "explanation": "Case 3 failed, so overall it's a fail, and case 3 is where to look. Not all three passed."
+    },
+    {
+      "id": "u05l09e07",
+      "type": "orderBlocks",
+      "prompt": "Put the multi-case checking steps in order.",
+      "blocks": [
+        "Decide the expected output for each case",
+        "Run each case and read its real output",
+        "Compare each case and judge overall pass or fail"
+      ],
+      "answer": [0, 1, 2],
+      "explanation": "Know each expected output, run each case, then compare them all. Any fail makes the whole thing a fail."
+    },
+    {
+      "id": "u05l09e08",
+      "type": "matchPairs",
+      "prompt": "Match each set of case results to the overall verdict.",
+      "pairs": [
+        { "left": "All cases pass", "right": "Overall pass" },
+        { "left": "One case fails", "right": "Overall fail" },
+        { "left": "No cases checked yet", "right": "Not checked" }
+      ],
+      "explanation": "All pass = pass. Any fail = fail. If you haven't checked, you don't know yet."
+    },
+    {
+      "id": "u05l09e09",
+      "type": "trueFalse",
+      "prompt": "Checking many cases is overkill for every tiny program.",
+      "answer": false,
+      "explanation": "Even small programs benefit from a second case. It catches 'lucky once' bugs with almost no extra effort."
+    },
+    {
+      "id": "u05l09e10",
+      "type": "multipleChoice",
+      "prompt": "What's the real goal of checking several cases?",
+      "options": [
+        "Confidence that the program works in general, not just for one input",
+        "Making the Check feel harder",
+        "Printing more lines",
+        "Finishing faster"
+      ],
+      "answer": 0,
+      "explanation": "The point is confidence. More passing cases means you can trust the program across different inputs."
+    }
+  ]
+}

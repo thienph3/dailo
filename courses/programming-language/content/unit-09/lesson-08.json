@@ -1,0 +1,122 @@
+{
+  "unitId": "u09",
+  "lessonId": "u09l08",
+  "title": "Swapping what a box holds",
+  "idea": "A box can hold any number you put in next — big, small, or back to where it started. Reassignment doesn't care what was there before. (Numbers only — text as data comes later.)",
+  "exercises": [
+    {
+      "id": "u09l08e01",
+      "type": "multipleChoice",
+      "prompt": "What will this show?\n\nslot = 7\nslot = 70\nprint(slot)",
+      "options": [
+        "70",
+        "7",
+        "7 70",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "The box first held 7, then we put 70 in. The newest value, 70, shows."
+    },
+    {
+      "id": "u09l08e02",
+      "type": "trueFalse",
+      "prompt": "A box that held a small number can later hold a big number instead.",
+      "answer": true,
+      "explanation": "Yes. Reassignment doesn't care how big the old number was. Whatever you put next is what it holds."
+    },
+    {
+      "id": "u09l08e03",
+      "type": "multipleChoice",
+      "prompt": "What will this show?\n\nreply = 9\nreply = 1\nprint(reply)",
+      "options": [
+        "1",
+        "9",
+        "9 1",
+        "Error"
+      ],
+      "answer": 0,
+      "explanation": "We replaced 9 with 1. The box now holds 1."
+    },
+    {
+      "id": "u09l08e04",
+      "type": "multipleChoice",
+      "prompt": "What will this show (two lines)?\n\nvalue = 100\nprint(value)\nvalue = 0\nprint(value)",
+      "options": [
+        "100 then 0",
+        "0 then 100",
+        "100 then 100",
+        "0 then 0"
+      ],
+      "answer": 0,
+      "explanation": "First print catches 100. Then we swap in 0, so the second print shows 0."
+    },
+    {
+      "id": "u09l08e05",
+      "type": "fillBlank",
+      "prompt": "Replace the number in the box with 0.\n\nstep = 3\nstep = ____\nprint(step)",
+      "answer": "0",
+      "acceptable": [
+        "0"
+      ],
+      "explanation": "Putting 0 in step replaces the 3. The box happily holds the new number."
+    },
+    {
+      "id": "u09l08e06",
+      "type": "trueFalse",
+      "prompt": "A box can be changed back to a number it held before, like going 5, then 9, then 5 again.",
+      "answer": true,
+      "explanation": "Yes! There's no rule against reusing a value. The box just holds whatever you set it to."
+    },
+    {
+      "id": "u09l08e07",
+      "type": "orderBlocks",
+      "prompt": "Arrange so it shows 0 then 100 (start low, swap to a big number, print each).",
+      "blocks": [
+        "progress = 0",
+        "print(progress)",
+        "progress = 100",
+        "print(progress)"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "Set 0, print it, swap to 100, print again. The box changes which number it holds."
+    },
+    {
+      "id": "u09l08e08",
+      "type": "multipleChoice",
+      "prompt": "What will this show?\n\nx = 1\nx = 2\nx = 3\nprint(x)",
+      "options": [
+        "3",
+        "1",
+        "2",
+        "1 2 3"
+      ],
+      "answer": 0,
+      "explanation": "Three changes in a row, but only the LAST value matters. The box ends holding 3."
+    },
+    {
+      "id": "u09l08e09",
+      "type": "multipleChoice",
+      "prompt": "A friend says: 'Once a box holds a big number, it can never hold a small one.' Are they right?",
+      "options": [
+        "No — a box can switch to any number anytime you reassign it",
+        "Yes, big numbers are permanent",
+        "Yes, but only on weekends",
+        "No — boxes can't hold small numbers at all"
+      ],
+      "answer": 0,
+      "explanation": "Wrong idea! A box holds whatever you put in next, big or small. Reassignment is flexible."
+    },
+    {
+      "id": "u09l08e10",
+      "type": "trueFalse",
+      "prompt": "The box always shows its newest number, whether that number went up or down.",
+      "answer": true,
+      "explanation": "Yes! The current value is king, no matter which way it changed. You're mastering reassignment."
+    }
+  ]
+}

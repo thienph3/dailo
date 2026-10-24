@@ -1,0 +1,140 @@
+{
+  "unitId": "u13",
+  "lessonId": "u13l03",
+  "title": "Parentheses change the order",
+  "idea": "Parentheses ( ) let you force a part to happen first, even plus before times.",
+  "exercises": [
+    {
+      "id": "u13l03e01",
+      "type": "multipleChoice",
+      "prompt": "What do parentheses ( ) do in a calculation?",
+      "options": [
+        "They force the part inside to happen first",
+        "They make numbers bigger",
+        "They are just decoration",
+        "They turn plus into times"
+      ],
+      "answer": 0,
+      "explanation": "Whatever is inside ( ) happens first. That's how you override the times-before-plus rule."
+    },
+    {
+      "id": "u13l03e02",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nprint((2 + 3) * 4)",
+      "options": [
+        "20",
+        "14",
+        "9",
+        "24"
+      ],
+      "answer": 0,
+      "explanation": "The ( ) go first: 2 + 3 is 5. Then 5 * 4 is 20. Parentheses changed 14 into 20."
+    },
+    {
+      "id": "u13l03e03",
+      "type": "multipleChoice",
+      "prompt": "Compare these two. Which pair of outputs is correct?\n\nprint(2 + 3 * 4)\nprint((2 + 3) * 4)",
+      "options": [
+        "14 then 20",
+        "20 then 14",
+        "14 then 14",
+        "20 then 20"
+      ],
+      "answer": 0,
+      "explanation": "Without ( ): times first, 14. With ( ): the plus is forced first, 20. Same numbers, different answers."
+    },
+    {
+      "id": "u13l03e04",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nprint((10 - 2) * 3)",
+      "options": [
+        "24",
+        "4",
+        "30",
+        "26"
+      ],
+      "answer": 0,
+      "explanation": "Inside first: 10 - 2 is 8. Then 8 * 3 is 24."
+    },
+    {
+      "id": "u13l03e05",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nprint(100 / (2 + 3))",
+      "options": [
+        "20.0",
+        "50.0",
+        "53.0",
+        "15.0"
+      ],
+      "answer": 0,
+      "explanation": "Inside first: 2 + 3 is 5. Then 100 / 5 is 20.0. The ( ) made the add happen before the divide."
+    },
+    {
+      "id": "u13l03e06",
+      "type": "trueFalse",
+      "prompt": "Parentheses can make a plus happen before a times.",
+      "answer": true,
+      "explanation": "Exactly. (2 + 3) * 4 does the plus first. That's the whole point of using them."
+    },
+    {
+      "id": "u13l03e07",
+      "type": "fillBlank",
+      "prompt": "Fill in the result:\n\nprint((4 + 4) * 2)\n\nOutput: ____",
+      "answer": "16",
+      "acceptable": [
+        "16"
+      ],
+      "explanation": "Inside first: 4 + 4 is 8. Then 8 * 2 is 16."
+    },
+    {
+      "id": "u13l03e08",
+      "type": "multipleChoice",
+      "prompt": "You want to add 2 and 3 FIRST, then multiply by 4. Which is correct?",
+      "options": [
+        "print((2 + 3) * 4)",
+        "print(2 + 3 * 4)",
+        "print(2 + (3 * 4))",
+        "print(2 * 3 + 4)"
+      ],
+      "answer": 0,
+      "explanation": "Wrap the part you want first in ( ). Only (2 + 3) * 4 forces the add before the multiply."
+    },
+    {
+      "id": "u13l03e09",
+      "type": "tapTokens",
+      "prompt": "Build an expression that adds 5 and 1 first, then multiplies by 3. Tap the tokens in order.",
+      "tokens": [
+        "(",
+        "5",
+        "+",
+        "1",
+        ")",
+        "*",
+        "3"
+      ],
+      "answer": [
+        "(",
+        "5",
+        "+",
+        "1",
+        ")",
+        "*",
+        "3"
+      ],
+      "explanation": "(5 + 1) * 3 — the parentheses force 5 + 1 = 6 first, then 6 * 3 = 18."
+    },
+    {
+      "id": "u13l03e10",
+      "type": "multipleChoice",
+      "prompt": "Review: store and show. What does this print?\n\nresult = (3 + 1) * 5\nprint(result)",
+      "options": [
+        "20",
+        "8",
+        "16",
+        "result"
+      ],
+      "answer": 0,
+      "explanation": "Inside first: 3 + 1 is 4. Then 4 * 5 is 20. The variable just holds the result."
+    }
+  ]
+}

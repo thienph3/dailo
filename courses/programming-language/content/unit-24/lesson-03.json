@@ -1,0 +1,134 @@
+{
+  "unitId": "u24",
+  "lessonId": "u24l03",
+  "title": "Guarding the zero case",
+  "idea": "A guard is a simple if that handles the edge case first, so the normal code only runs when it is safe. Read guards and predict them.",
+  "exercises": [
+    {
+      "id": "u24l03e01",
+      "type": "multipleChoice",
+      "prompt": "A 'guard' in a program is...",
+      "options": [
+        "an if that handles the edge case before the normal code",
+        "a kind of loop",
+        "a new variable",
+        "a print statement"
+      ],
+      "answer": 0,
+      "explanation": "A guard is an if that checks for the dangerous or empty case first, keeping the normal path safe."
+    },
+    {
+      "id": "u24l03e02",
+      "type": "multipleChoice",
+      "prompt": "What prints?\n\ncount = 0\nif count == 0:\n    print(\"No items\")\nelse:\n    print(\"We have items\")",
+      "options": [
+        "No items",
+        "We have items",
+        "0",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "count is 0, so the guard's condition is True: it prints No items and skips the normal branch."
+    },
+    {
+      "id": "u24l03e03",
+      "type": "multipleChoice",
+      "prompt": "What prints?\n\ncount = 4\nif count == 0:\n    print(\"No items\")\nelse:\n    print(\"We have items\")",
+      "options": [
+        "We have items",
+        "No items",
+        "4",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "count is 4, so count == 0 is False; the else (normal case) runs: We have items."
+    },
+    {
+      "id": "u24l03e04",
+      "type": "trueFalse",
+      "prompt": "A guard lets the normal code run only when the edge case did NOT happen.",
+      "answer": true,
+      "explanation": "Right. The guard catches the edge case; the else (or the code after) handles the safe, normal case."
+    },
+    {
+      "id": "u24l03e05",
+      "type": "multipleChoice",
+      "prompt": "Which condition guards against dividing by zero in total / count?",
+      "options": [
+        "if count == 0:",
+        "if total == 0:",
+        "if count > 100:",
+        "if total > count:"
+      ],
+      "answer": 0,
+      "explanation": "You guard the divisor: check if count == 0 first, so you only divide when count is not zero."
+    },
+    {
+      "id": "u24l03e06",
+      "type": "orderBlocks",
+      "prompt": "Order a safe plan for 'average = total / count'.",
+      "blocks": [
+        "Check if count is zero",
+        "If zero, say there is no average",
+        "Otherwise divide total by count",
+        "Show the result"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "Guard the zero first, then divide only in the safe case. The edge case never reaches the division."
+    },
+    {
+      "id": "u24l03e07",
+      "type": "multipleChoice",
+      "prompt": "What prints?\n\npeople = 0\nif people == 0:\n    print(\"No one to share with\")\nelse:\n    print(\"Sharing\")",
+      "options": [
+        "No one to share with",
+        "Sharing",
+        "0",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "people is 0, so the guard fires: No one to share with. The division in the else is safely skipped."
+    },
+    {
+      "id": "u24l03e08",
+      "type": "fillBlank",
+      "prompt": "Complete the guard condition for a zero count:\n\nif count __ 0:\n    print(\"Nothing here\")",
+      "answer": "==",
+      "acceptable": [
+        "=="
+      ],
+      "explanation": "Use == to test if count equals 0. The guard then catches the empty case."
+    },
+    {
+      "id": "u24l03e09",
+      "type": "multipleChoice",
+      "prompt": "Why put the guard FIRST, before the division?",
+      "options": [
+        "So the unsafe division never runs when count is zero",
+        "So the code is shorter",
+        "Because else must come first",
+        "It makes no difference"
+      ],
+      "answer": 0,
+      "explanation": "Checking the edge case first means the risky code only runs when it is safe. Order protects the program."
+    },
+    {
+      "id": "u24l03e10",
+      "type": "multipleChoice",
+      "prompt": "A guard is really just...",
+      "options": [
+        "an if/else used to handle the edge case",
+        "a brand-new tool",
+        "a loop in disguise",
+        "a way to print faster"
+      ],
+      "answer": 0,
+      "explanation": "A guard is the same if/else you already know, aimed at the edge case. No new syntax - just a smart use of it."
+    }
+  ]
+}

@@ -1,0 +1,147 @@
+{
+  "unitId": "u45",
+  "lessonId": "u45l03",
+  "title": "The three parts of a safe while",
+  "idea": "A safe while loop sets up a value, checks a condition, and updates the value each pass.",
+  "exercises": [
+    {
+      "type": "multipleChoice",
+      "prompt": "A safe while loop has three parts. Which three?",
+      "options": [
+        "Set up a starting value, check a condition, update the value each pass",
+        "Print, add, repeat",
+        "Input, output, error",
+        "Start, forever, never"
+      ],
+      "answer": 0,
+      "explanation": "Setup before the loop, a condition to test, and an update inside that makes progress. Miss the update and it runs forever.",
+      "id": "u45l03e01"
+    },
+    {
+      "type": "matchPairs",
+      "prompt": "Match each part of a safe while loop to its job.",
+      "pairs": [
+        {
+          "left": "Setup",
+          "right": "Give the control value a starting number"
+        },
+        {
+          "left": "Condition",
+          "right": "Decide whether to keep looping"
+        },
+        {
+          "left": "Update",
+          "right": "Move the value toward the stop each pass"
+        }
+      ],
+      "explanation": "Setup starts it, condition tests it, update moves it. All three are needed for a loop that stops.",
+      "id": "u45l03e02"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "In this loop, which line is the UPDATE?\n\ni = 0\nwhile i < 4:\n    print(i)\n    i = i + 1",
+      "options": [
+        "i = i + 1",
+        "i = 0",
+        "while i < 4:",
+        "print(i)"
+      ],
+      "answer": 0,
+      "explanation": "i = i + 1 is the update -- it changes i each pass so the condition will eventually be false.",
+      "id": "u45l03e03"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "In the same loop, which line is the SETUP?\n\ni = 0\nwhile i < 4:\n    print(i)\n    i = i + 1",
+      "options": [
+        "i = 0",
+        "i = i + 1",
+        "while i < 4:",
+        "print(i)"
+      ],
+      "answer": 0,
+      "explanation": "i = 0 is the setup: it gives i a starting value before the loop checks the condition.",
+      "id": "u45l03e04"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "If a while loop has setup and a condition but no update, it will usually run forever.",
+      "answer": true,
+      "explanation": "True. With nothing moving the value, the condition never changes, so the loop can't reach its stop.",
+      "id": "u45l03e05"
+    },
+    {
+      "type": "orderBlocks",
+      "prompt": "Arrange the three parts into a working loop that prints 0, 1, 2.",
+      "blocks": [
+        "    i = i + 1",
+        "i = 0",
+        "    print(i)",
+        "while i < 3:"
+      ],
+      "answer": [
+        1,
+        3,
+        2,
+        0
+      ],
+      "explanation": "Setup (i = 0), condition (while i < 3), body (print i), update (i = i + 1). That order keeps it safe.",
+      "id": "u45l03e06"
+    },
+    {
+      "type": "fillBlank",
+      "prompt": "This loop is missing its update. Add the line that makes progress:\n\ni = 1\nwhile i <= 3:\n    print(i)\n    ____",
+      "answer": "i = i + 1",
+      "acceptable": [
+        "i = i + 1",
+        "i=i+1",
+        "i += 1"
+      ],
+      "explanation": "Without the update, i stays 1 forever. Adding i = i + 1 lets i reach 4 and stop the loop.",
+      "id": "u45l03e07"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "What shows?\n\ni = 2\nwhile i < 6:\n    print(i)\n    i = i + 2",
+      "options": [
+        "2\n4",
+        "2\n4\n6",
+        "2\n3\n4\n5",
+        "forever"
+      ],
+      "answer": 0,
+      "explanation": "i goes 2, 4, then 6. At i = 6 the condition 6 < 6 is false, so it stops. The update adds 2 each pass.",
+      "id": "u45l03e08"
+    },
+    {
+      "type": "multiSelect",
+      "prompt": "Which of these are required for a while loop that stops?",
+      "options": [
+        "A starting value for the control value",
+        "A condition that can become false",
+        "An update that moves toward the stop",
+        "A print statement"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Setup, a condition that can turn false, and an update toward it. A print is optional -- not every loop prints.",
+      "id": "u45l03e09"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Why is naming the three parts a useful habit?",
+      "options": [
+        "It helps you spot a missing update that would cause an infinite loop",
+        "It makes the code longer",
+        "It replaces the condition",
+        "It removes the need to test"
+      ],
+      "answer": 0,
+      "explanation": "Checking for setup, condition, AND update catches the most common loop bug before you ever run it.",
+      "id": "u45l03e10"
+    }
+  ]
+}

@@ -1,0 +1,121 @@
+{
+  "unitId": "u09",
+  "lessonId": "u09l07",
+  "title": "Spot the reassignment mistake",
+  "idea": "Common slip-ups: expecting an old number to still be there, or putting the print in the wrong place. (Numbers only — text as data comes later.)",
+  "exercises": [
+    {
+      "id": "u09l07e01",
+      "type": "multipleChoice",
+      "prompt": "A learner wanted this to show 5 but it shows 8. Why?\n\nscore = 5\nscore = 8\nprint(score)",
+      "options": [
+        "score was reassigned to 8 before the print",
+        "print is broken",
+        "The computer picked 8 at random",
+        "5 comes after 8"
+      ],
+      "answer": 0,
+      "explanation": "The second line overwrote 5 with 8. To show 5, don't reassign it, or print before the change."
+    },
+    {
+      "id": "u09l07e02",
+      "type": "multipleChoice",
+      "prompt": "How do you FIX this so it shows 5?\n\nscore = 5\nscore = 8\nprint(score)",
+      "options": [
+        "Move the print up, before score = 8",
+        "Add more print lines",
+        "Change print to shout",
+        "Remove the first line"
+      ],
+      "answer": 0,
+      "explanation": "If you print before the reassignment, score is still 5 at that moment."
+    },
+    {
+      "id": "u09l07e03",
+      "type": "trueFalse",
+      "prompt": "This mistake is common: thinking the old number is still there after you reassign.",
+      "answer": true,
+      "explanation": "Yes. Once you reassign, the old number is gone. The box only holds the newest one."
+    },
+    {
+      "id": "u09l07e04",
+      "type": "multipleChoice",
+      "prompt": "A learner expected 1 but got 0. What went wrong?\n\ngate = 1\ngate = 0\nprint(gate)",
+      "options": [
+        "The reassignment to 0 happened before the print",
+        "The number 1 is too small",
+        "print needs two numbers",
+        "Nothing is wrong"
+      ],
+      "answer": 0,
+      "explanation": "gate was changed to 0 on line 2. The print then shows the current value, 0."
+    },
+    {
+      "id": "u09l07e05",
+      "type": "multipleChoice",
+      "prompt": "Which version correctly shows BOTH 1 and 2?",
+      "options": [
+        "race = 1\nprint(race)\nrace = 2\nprint(race)",
+        "race = 1\nrace = 2\nprint(race)",
+        "race = 1\nrace = 2\nprint(start)",
+        "print(race)\nrace = 1"
+      ],
+      "answer": 0,
+      "explanation": "To see both values, print once before the change and once after. The others miss the 1 or use a wrong name."
+    },
+    {
+      "id": "u09l07e06",
+      "type": "trueFalse",
+      "prompt": "This code has a mistake — you can't print a value you never stored:\n\nprint(temp)\ntemp = 20",
+      "answer": true,
+      "explanation": "Right. The box temp doesn't exist yet when print runs. Create it first, then print."
+    },
+    {
+      "id": "u09l07e07",
+      "type": "multipleChoice",
+      "prompt": "What's the fix for this code?\n\nprint(temp)\ntemp = 20",
+      "options": [
+        "Swap the lines: set temp = 20 first, then print it",
+        "Print twice",
+        "Rename temp to temperature",
+        "Nothing — it's fine"
+      ],
+      "answer": 0,
+      "explanation": "You must create the box before printing it. Put temp = 20 above the print."
+    },
+    {
+      "id": "u09l07e08",
+      "type": "multipleChoice",
+      "prompt": "A learner wrote this to show 5, but it shows 8. Spot the problem.\n\nn = 5\nn = 8\nprint(n)",
+      "options": [
+        "Line 2 reassigned n to 8, overwriting the 5",
+        "print adds the numbers",
+        "5 and 8 make 8 automatically",
+        "n can't hold numbers"
+      ],
+      "answer": 0,
+      "explanation": "The second line changed n to 8. Remove it (or print before it) to keep 5."
+    },
+    {
+      "id": "u09l07e09",
+      "type": "orderBlocks",
+      "prompt": "Fix the order so it shows the current value correctly: create the box, then print it.",
+      "blocks": [
+        "level = 1",
+        "print(level)"
+      ],
+      "answer": [
+        0,
+        1
+      ],
+      "explanation": "Create level first, then print. Printing before the box exists would be a mistake."
+    },
+    {
+      "id": "u09l07e10",
+      "type": "trueFalse",
+      "prompt": "To debug a surprising output, trace the value line by line until the print.",
+      "answer": true,
+      "explanation": "Exactly the skill! Follow the box's value down the lines. The value at the print is what shows. Great debugging."
+    }
+  ]
+}

@@ -1,0 +1,123 @@
+{
+  "unitId": "u51",
+  "lessonId": "u51l05",
+  "title": "One name for the whole group",
+  "idea": "A list gives many values a single name, replacing a pile of separate variables. Why that matters. Thinking-led.",
+  "exercises": [
+    {
+      "id": "u51l05e01",
+      "type": "multipleChoice",
+      "prompt": "Compare these two ways to keep three scores:\n\nA)  s1 = 8\n     s2 = 5\n     s3 = 9\n\nB)  scores = [8, 5, 9]\n\nWhat's the main advantage of B?",
+      "options": [
+        "All three values share one name, as a group",
+        "B can only hold one value",
+        "B is slower",
+        "B loses the order"
+      ],
+      "answer": 0,
+      "explanation": "In B, one name (scores) holds the whole group. That scales: three scores or three hundred, it's still one name."
+    },
+    {
+      "id": "u51l05e02",
+      "type": "trueFalse",
+      "prompt": "Using a list means you don't need a brand-new variable name for every single value.",
+      "answer": true,
+      "explanation": "That's the whole point. One list name stands in for the entire group, however big it is."
+    },
+    {
+      "id": "u51l05e03",
+      "type": "multipleChoice",
+      "prompt": "You need to store the heights of 50 people. Which plan is sensible?",
+      "options": [
+        "One list named heights holding all 50",
+        "50 separate variables h1, h2, ... h50",
+        "One number that is the sum",
+        "Don't store them"
+      ],
+      "answer": 0,
+      "explanation": "Fifty variables would be a nightmare to manage. A single list named heights holds them all under one name."
+    },
+    {
+      "id": "u51l05e04",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nheights = [150, 162, 158]\nprint(heights)",
+      "options": [
+        "[150, 162, 158]",
+        "470",
+        "3",
+        "heights"
+      ],
+      "answer": 0,
+      "explanation": "The list prints as the whole group: [150, 162, 158]. One name, three values shown together."
+    },
+    {
+      "id": "u51l05e05",
+      "type": "matchPairs",
+      "prompt": "Match each description to whether a single variable or a list fits best.",
+      "pairs": [
+        { "left": "Your current score", "right": "single variable" },
+        { "left": "Everyone's scores", "right": "a list" },
+        { "left": "Today's temperature", "right": "single variable" }
+      ],
+      "explanation": "One value -> one variable. Many values of the same kind -> one list. Matching the tool to the shape of the data is a key skill."
+    },
+    {
+      "id": "u51l05e06",
+      "type": "trueFalse",
+      "prompt": "A list counts as a single value you can store in one variable, even though it holds many items inside.",
+      "answer": true,
+      "explanation": "Yes — the list is one thing (one box) that happens to hold many items. You store the box under one name."
+    },
+    {
+      "id": "u51l05e07",
+      "type": "multipleChoice",
+      "prompt": "A problem says 'the rainfall for each of the 12 months.' What's the natural way to store it?",
+      "options": [
+        "A list of 12 numbers",
+        "12 unrelated programs",
+        "One number",
+        "A yes/no value"
+      ],
+      "answer": 0,
+      "explanation": "'Each of the 12 months' is a group of 12 values — a perfect fit for one list of 12 numbers."
+    },
+    {
+      "id": "u51l05e08",
+      "type": "multipleChoice",
+      "prompt": "Which phrase in a problem most strongly suggests you should use a list?",
+      "options": [
+        "'the scores of all the players'",
+        "'the single winner'",
+        "'one lucky number'",
+        "'today only'"
+      ],
+      "answer": 0,
+      "explanation": "'All the players' is a whole group of values — that's a list. The others describe a single value."
+    },
+    {
+      "id": "u51l05e09",
+      "type": "orderBlocks",
+      "prompt": "Arrange these thinking steps for deciding how to store some data.",
+      "blocks": [
+        "Read the problem and notice how many values it's about",
+        "If it's many values of the same kind, choose a list",
+        "Write the values into the list in order"
+      ],
+      "answer": [0, 1, 2],
+      "explanation": "First notice the shape (one value or many), then pick the tool (variable or list), then write it down."
+    },
+    {
+      "id": "u51l05e10",
+      "type": "multipleChoice",
+      "prompt": "You've learned WHY lists exist. What haven't we done yet with a list?",
+      "options": [
+        "Reached in to grab one item by its position",
+        "Written a list in square brackets",
+        "Stored a list in a variable",
+        "Printed a whole list"
+      ],
+      "answer": 0,
+      "explanation": "We can make and print a list, but we can't yet pull out a single item. That's the very next unit."
+    }
+  ]
+}

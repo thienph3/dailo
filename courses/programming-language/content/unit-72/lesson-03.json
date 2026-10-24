@@ -1,0 +1,136 @@
+{
+  "unitId": "u72",
+  "lessonId": "u72l03",
+  "title": "The value flows into the slot",
+  "idea": "TOOL: trace how the call's argument becomes the parameter's value inside the body.",
+  "exercises": [
+    {
+      "id": "u72l03e01",
+      "type": "multipleChoice",
+      "prompt": "def show(n): print(n). When you call show(5), what is n inside the body?",
+      "options": [
+        "5",
+        "n",
+        "0",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "The argument 5 flows into the parameter n. Inside the body, n is 5, so print(n) shows 5."
+    },
+    {
+      "id": "u72l03e02",
+      "type": "multipleChoice",
+      "prompt": "The name inside the () of the DEFINITION (like n) is the ___; the value inside the () of the CALL (like 5) is the ___.",
+      "options": [
+        "parameter; argument",
+        "argument; parameter",
+        "call; def",
+        "body; name"
+      ],
+      "answer": 0,
+      "explanation": "Definition slot = parameter (n). Call value = argument (5). The argument fills the parameter."
+    },
+    {
+      "id": "u72l03e03",
+      "type": "trueFalse",
+      "prompt": "The parameter name in the def and the value in the call are the same kind of thing.",
+      "answer": false,
+      "explanation": "No. The parameter is a named slot in the definition; the argument is the actual value you pass in the call."
+    },
+    {
+      "id": "u72l03e04",
+      "type": "orderBlocks",
+      "prompt": "Order what HAPPENS for:\n\ndef show(n):\n    print(n)\nshow(7)",
+      "blocks": [
+        "print(n) runs, showing 7",
+        "show(7) is called, so 7 flows into n",
+        "n now holds 7 inside the body"
+      ],
+      "answer": [
+        1,
+        2,
+        0
+      ],
+      "explanation": "The call passes 7 into n, n holds 7, then print(n) shows 7. The argument fills the slot, then the body runs."
+    },
+    {
+      "id": "u72l03e05",
+      "type": "multipleChoice",
+      "prompt": "def greet_times(n): print(n). Does calling greet_times(4) change n for a later call greet_times(9)?",
+      "options": [
+        "No - each call fills n fresh with its own value",
+        "Yes - n stays 4 forever",
+        "Yes - n becomes 13",
+        "It errors"
+      ],
+      "answer": 0,
+      "explanation": "Each call sets n from its own argument. greet_times(4) uses 4; greet_times(9) uses 9. Calls don't leak into each other."
+    },
+    {
+      "id": "u72l03e06",
+      "type": "multipleChoice",
+      "prompt": "Program:\n\ndef show(n):\n    print(n)\n    print(n)\nshow(2)\n\nWhat prints?",
+      "options": [
+        "2\n2",
+        "2",
+        "n\nn",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "n is 2 for the whole call. The body prints n twice, so '2' appears on two lines."
+    },
+    {
+      "id": "u72l03e07",
+      "type": "matchPairs",
+      "prompt": "Match each term to its example in show(5) for def show(n): print(n).",
+      "pairs": [
+        {
+          "left": "parameter",
+          "right": "n"
+        },
+        {
+          "left": "argument",
+          "right": "5"
+        },
+        {
+          "left": "output",
+          "right": "5"
+        }
+      ],
+      "explanation": "n is the parameter (the slot), 5 is the argument (the value), and the body prints 5. Value flows slot-ward."
+    },
+    {
+      "id": "u72l03e08",
+      "type": "trueFalse",
+      "prompt": "You can name the parameter anything sensible; the call still just supplies a value.",
+      "answer": true,
+      "explanation": "Yes. def show(points) or def show(score) both work - the call supplies a value that fills that name."
+    },
+    {
+      "id": "u72l03e09",
+      "type": "multipleChoice",
+      "prompt": "def add_five(n): print(n + 5). What does add_five(10) print?",
+      "options": [
+        "15",
+        "10",
+        "5",
+        "n + 5"
+      ],
+      "answer": 0,
+      "explanation": "n is 10, so n + 5 is 15. The body computes with the parameter and prints the result."
+    },
+    {
+      "id": "u72l03e10",
+      "type": "multipleChoice",
+      "prompt": "The mental model for a parameter:",
+      "options": [
+        "a named slot the call fills with a value, usable in the body",
+        "a print statement",
+        "a loop",
+        "a border line"
+      ],
+      "answer": 0,
+      "explanation": "Think of the parameter as a slot. The argument drops a value in; the body uses it. Clean and reusable."
+    }
+  ]
+}

@@ -1,0 +1,127 @@
+{
+  "unitId": "u14",
+  "lessonId": "u14l04",
+  "title": "Solve it: parentheses change the answer",
+  "idea": "GUIDED PROBLEM. A problem that NEEDS parentheses: add first, then multiply. Shows why grouping matters because * runs before + without brackets. Every value named.",
+  "problem": "A party pack has 2 sandwiches and 3 cookies. You buy 4 packs. Show the total number of items.",
+  "exercises": [
+    {
+      "id": "u14l04e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: each pack has 2 sandwiches and 3 cookies. You buy 4 packs. Show the TOTAL items.\n\nUnderstand — what is the OUTPUT?",
+      "options": [
+        "The total number of items across all packs",
+        "The number of packs",
+        "The cookies only",
+        "The cheaper item"
+      ],
+      "answer": 0,
+      "explanation": "Output = total items in all 4 packs. Name it before planning."
+    },
+    {
+      "id": "u14l04e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "What are the INPUTS?",
+      "options": [
+        "Sandwiches per pack (2), cookies per pack (3), and number of packs (4)",
+        "Only the number 20",
+        "The word 'total'",
+        "None"
+      ],
+      "answer": 0,
+      "explanation": "Three inputs. All three will be named variables so nothing gets dropped."
+    },
+    {
+      "id": "u14l04e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example by hand: each pack has 2 + 3 = 5 items. 4 packs. Total items?",
+      "options": ["20", "11", "14", "9"],
+      "answer": 0,
+      "explanation": "5 items per pack x 4 packs = 20. Check value: 20. Notice you add FIRST, then multiply."
+    },
+    {
+      "id": "u14l04e04",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Plan. Without brackets, Python does * before +. So what would sandwiches + cookies * packs = 2 + 3 * 4 give?",
+      "options": [
+        "14 — it multiplies 3 * 4 first, then adds 2. Wrong for us!",
+        "20 — the answer we want",
+        "An error",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "3 * 4 = 12, then + 2 = 14. That's NOT our answer. * runs before +, so we must force the add first."
+    },
+    {
+      "id": "u14l04e05",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "How do we force the addition to happen FIRST?",
+      "options": [
+        "Put parentheses around the add: (sandwiches + cookies) * packs",
+        "Remove the multiply",
+        "Use % instead",
+        "Swap the numbers around"
+      ],
+      "answer": 0,
+      "explanation": "Parentheses run first. (2 + 3) * 4 = 5 * 4 = 20. Brackets let you override the default order."
+    },
+    {
+      "id": "u14l04e06",
+      "type": "matchPairs",
+      "uepcc": "P",
+      "prompt": "Match each expression to what it computes (sandwiches=2, cookies=3, packs=4).",
+      "pairs": [
+        { "left": "sandwiches + cookies * packs", "right": "14 (multiply first)" },
+        { "left": "(sandwiches + cookies) * packs", "right": "20 (add first)" }
+      ],
+      "explanation": "Same numbers, same operators — only the brackets differ, and they change the answer. That's why grouping matters."
+    },
+    {
+      "id": "u14l04e07",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Add the brackets so the add happens first:\n\nsandwiches = 2\ncookies = 3\npacks = 4\ntotal = ____sandwiches + cookies) * packs",
+      "answer": "(",
+      "acceptable": ["("],
+      "explanation": "The opening bracket goes before sandwiches: (sandwiches + cookies) * packs = 20."
+    },
+    {
+      "id": "u14l04e08",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Arrange the full solution.",
+      "blocks": [
+        "sandwiches = 2",
+        "cookies = 3",
+        "packs = 4",
+        "total = (sandwiches + cookies) * packs",
+        "print(total)"
+      ],
+      "answer": [0, 1, 2, 3, 4],
+      "explanation": "Store all three values, group the add with brackets then multiply by packs, print. Every number is named."
+    },
+    {
+      "id": "u14l04e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "The code prints 20. Hand example said 20. Verdict?",
+      "options": ["Passes", "Fails", "Unknown", "Rewrite example"],
+      "answer": 0,
+      "explanation": "Output matches the hand example. The brackets made the order right."
+    },
+    {
+      "id": "u14l04e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "New pack: 5 sandwiches, 1 cookie, 3 packs. Same code total = (sandwiches + cookies) * packs. What shows?",
+      "options": ["18", "8", "16", "15"],
+      "answer": 0,
+      "explanation": "(5 + 1) * 3 = 6 * 3 = 18. The grouped plan handles new numbers correctly."
+    }
+  ]
+}

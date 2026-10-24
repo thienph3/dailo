@@ -1,0 +1,143 @@
+{
+  "unitId": "u60",
+  "lessonId": "u60l06",
+  "title": "Biggest and smallest together",
+  "idea": "TOOL: compare max and min directly; pick the right one from the wording. ~30% review of max.",
+  "exercises": [
+    {
+      "id": "u60l06e01",
+      "type": "multipleChoice",
+      "prompt": "'What was the lowest price?' Which tool?",
+      "options": [
+        "Find the smallest (min)",
+        "Find the biggest (max)",
+        "Add them up",
+        "Count the items"
+      ],
+      "answer": 0,
+      "explanation": "'Lowest' points to the single smallest value — min."
+    },
+    {
+      "id": "u60l06e02",
+      "type": "multipleChoice",
+      "prompt": "'What was the highest price?' Which tool?",
+      "options": [
+        "Find the biggest (max)",
+        "Find the smallest (min)",
+        "Add them up",
+        "Count the items"
+      ],
+      "answer": 0,
+      "explanation": "'Highest' points to the single biggest value — max. Same pattern, flipped comparison."
+    },
+    {
+      "id": "u60l06e03",
+      "type": "matchPairs",
+      "prompt": "Match each goal to its comparison sign.",
+      "pairs": [
+        {
+          "left": "Find the biggest (max)",
+          "right": "if n > best"
+        },
+        {
+          "left": "Find the smallest (min)",
+          "right": "if n < best"
+        },
+        {
+          "left": "Safe starting value for both",
+          "right": "best = nums[0]"
+        }
+      ],
+      "explanation": "Max uses >, min uses <, and both start best at the first value. One pattern, two jobs."
+    },
+    {
+      "id": "u60l06e04",
+      "type": "multipleChoice",
+      "prompt": "Predict:\n\nnums = [6, 2, 9, 4]\nbig = nums[0]\nlow = nums[0]\nfor n in nums:\n    if n > big:\n        big = n\n    if n < low:\n        low = n\nprint(big, low)",
+      "options": [
+        "9 2",
+        "2 9",
+        "6 6",
+        "21 4"
+      ],
+      "answer": 0,
+      "explanation": "Two best-so-far trackers in one loop: big climbs to 9, low drops to 2. You can find both at once."
+    },
+    {
+      "id": "u60l06e05",
+      "type": "trueFalse",
+      "prompt": "You can track the biggest and the smallest in the same loop using two best-so-far variables.",
+      "answer": true,
+      "explanation": "Each has its own variable and its own if. One pass, two answers — because both are the same pattern."
+    },
+    {
+      "id": "u60l06e06",
+      "type": "multiSelect",
+      "prompt": "Which statements about the max/min pair are true? (pick all)",
+      "options": [
+        "They share the best-so-far pattern",
+        "Only the comparison sign differs",
+        "Both start best at the first value",
+        "Min needs a completely different loop"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Min and max are the same loop; only > vs < differs; both start at the first value. They are not different loops."
+    },
+    {
+      "id": "u60l06e07",
+      "type": "multipleChoice",
+      "prompt": "REVIEW (max): biggest of [15, 42, 8, 23]?",
+      "options": [
+        "42",
+        "8",
+        "88",
+        "15"
+      ],
+      "answer": 0,
+      "explanation": "42 is the biggest — the max loop from last unit."
+    },
+    {
+      "id": "u60l06e08",
+      "type": "multipleChoice",
+      "prompt": "Smallest of [15, 42, 8, 23]?",
+      "options": [
+        "8",
+        "42",
+        "88",
+        "15"
+      ],
+      "answer": 0,
+      "explanation": "8 is the smallest — same list, flipped comparison."
+    },
+    {
+      "id": "u60l06e09",
+      "type": "multipleChoice",
+      "prompt": "'The range is biggest minus smallest.' How many best-so-far loops answer 'what is the range?'",
+      "options": [
+        "Two kinds of tracking — a max and a min",
+        "One max only",
+        "One min only",
+        "None"
+      ],
+      "answer": 0,
+      "explanation": "Range needs both the biggest and the smallest, so you track both (one loop with two variables works)."
+    },
+    {
+      "id": "u60l06e10",
+      "type": "multipleChoice",
+      "prompt": "Why is learning min easy right after max?",
+      "options": [
+        "It is the same pattern with the comparison flipped — you transfer what you already know",
+        "It is a totally new idea",
+        "It needs new tools",
+        "max and min are unrelated"
+      ],
+      "answer": 0,
+      "explanation": "Pattern transfer: once you own the best-so-far loop, flipping > to < gives you min for free."
+    }
+  ]
+}

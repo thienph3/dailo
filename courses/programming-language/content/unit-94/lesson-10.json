@@ -1,0 +1,137 @@
+{
+  "unitId": "u94",
+  "lessonId": "u94l10",
+  "title": "The whole-solution check, start to finish",
+  "idea": "REVIEW / interleave. Pull together every checking idea across a full solution, recalling patterns and rules from Laps 0-6. Proves transfer.",
+  "exercises": [
+    {
+      "id": "u94l10e01",
+      "type": "multipleChoice",
+      "prompt": "You finished a solution that counts passes AND totals scores. First checking move?",
+      "explanation": "Hand-work the expected answers for BOTH outputs on a small example before touching the output. Expectations first.",
+      "options": [
+        "Work out both expected answers by hand on a small example",
+        "Assume it's right",
+        "Add more features",
+        "Delete a line"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u94l10e02",
+      "type": "multipleChoice",
+      "prompt": "Recall from Lap 0: to show two results you use...",
+      "explanation": "Two print() calls, one per result — a Lap 0 idea reused. Checking relies on seeing each output clearly.",
+      "options": [
+        "Two print() calls, one per result",
+        "One print of a list only",
+        "No prints",
+        "input()"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u94l10e03",
+      "type": "multipleChoice",
+      "prompt": "Trace and check:\n\ncount = 0\nfor n in [50, 40, 60]:\n    if n >= 50:\n        count = count + 1\nprint(count)\n\nExpected by hand?",
+      "explanation": "50 and 60 are >= 50, 40 is not, so count = 2. Hand-tracing gives the expected value to compare.",
+      "options": [
+        "2",
+        "3",
+        "1",
+        "0"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u94l10e04",
+      "type": "multipleChoice",
+      "prompt": "That code is run and prints 2. Verdict?",
+      "explanation": "Actual (2) equals the hand answer (2), so this case passes.",
+      "options": [
+        "Pass",
+        "Fail",
+        "Unknown",
+        "Rewrite the example"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u94l10e05",
+      "type": "multipleChoice",
+      "prompt": "Which edge case should you ALSO run for that counter?",
+      "explanation": "The empty list proves the counter starts at 0 and the loop simply doesn't run — a key corner to confirm.",
+      "options": [
+        "The empty list [] → expect 0",
+        "A list of 1000 items",
+        "Only [50]",
+        "No edge case needed"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u94l10e06",
+      "type": "trueFalse",
+      "prompt": "Recall: a variable (like count) remembers its value between turns of the loop.",
+      "explanation": "Yes — that Lap-1 idea is why an accumulator works. Checking an accumulator means tracing that memory each turn.",
+      "answer": true
+    },
+    {
+      "id": "u94l10e07",
+      "type": "multipleChoice",
+      "prompt": "The rule was 'at least 50'. Which boundary test confirms the comparison?",
+      "explanation": "Testing exactly 50 confirms 'at least' includes the boundary (>=). It's the one value where >= and > differ.",
+      "options": [
+        "Run a score of exactly 50 and expect it to count",
+        "Run only 100",
+        "Run only 0",
+        "Skip the boundary"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u94l10e08",
+      "type": "orderBlocks",
+      "prompt": "Order the full Check step for a finished solution.",
+      "explanation": "Hand-work expected answers, run normal + edge + boundary cases, compare each, then give the overall verdict. That's a complete check.",
+      "blocks": [
+        "Hand-work expected answers for your cases",
+        "Run the normal, empty, and boundary cases",
+        "Compare each output to its expected answer",
+        "Give the overall pass/fail verdict"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "id": "u94l10e09",
+      "type": "multipleChoice",
+      "prompt": "All normal, empty, and boundary cases match. The honest verdict is...",
+      "explanation": "Strong evidence the solution is correct for the cases covered — that's what a thorough check earns you.",
+      "options": [
+        "Pass — strong evidence it works across the cases covered",
+        "It can never fail now",
+        "Only the normal case matters",
+        "Unknown"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u94l10e10",
+      "type": "multipleChoice",
+      "prompt": "You've finished Unit 94. What can you now do?",
+      "explanation": "You can take a full multi-part solution and prove it works — choosing normal, empty, and boundary cases, tracing, comparing, and judging pass/fail.",
+      "options": [
+        "Prove a whole solution works with normal, empty, and boundary cases, and read mismatches as clues",
+        "Only write code faster",
+        "Only add two numbers",
+        "Nothing new"
+      ],
+      "answer": 0
+    }
+  ]
+}

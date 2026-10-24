@@ -1,0 +1,136 @@
+{
+  "unitId": "u24",
+  "lessonId": "u24l06",
+  "title": "Handle the edge case first",
+  "idea": "The guard goes at the top: check the edge case before the normal work, so the risky step never runs on bad input. Reading and ordering.",
+  "exercises": [
+    {
+      "id": "u24l06e01",
+      "type": "multipleChoice",
+      "prompt": "Where should the edge-case guard go in a plan?",
+      "options": [
+        "At the very start, before the normal work",
+        "At the very end",
+        "In the middle",
+        "It does not matter"
+      ],
+      "answer": 0,
+      "explanation": "Check the edge case first. Then the normal code only runs when the input is safe."
+    },
+    {
+      "id": "u24l06e02",
+      "type": "orderBlocks",
+      "prompt": "Order a safe plan for 'share the bill among diners'.",
+      "blocks": [
+        "Check if diners is zero",
+        "If zero, say no one to share with",
+        "Otherwise divide the bill by diners",
+        "Show each share"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "Guard the zero divisor first, then divide only when it is safe."
+    },
+    {
+      "id": "u24l06e03",
+      "type": "trueFalse",
+      "prompt": "If you divide first and check for zero afterward, the program may already have crashed.",
+      "answer": true,
+      "explanation": "Yes - the crash happens at the division. The guard must come BEFORE the risky step to help."
+    },
+    {
+      "id": "u24l06e04",
+      "type": "multipleChoice",
+      "prompt": "What prints?\n\ndiners = 0\nif diners == 0:\n    print(\"No one to share with\")\nelse:\n    print(\"Dividing the bill\")",
+      "options": [
+        "No one to share with",
+        "Dividing the bill",
+        "0",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "diners is 0, so the guard fires first and the unsafe division (in the else) is skipped."
+    },
+    {
+      "id": "u24l06e05",
+      "type": "multipleChoice",
+      "prompt": "What prints?\n\ndiners = 3\nif diners == 0:\n    print(\"No one to share with\")\nelse:\n    print(\"Dividing the bill\")",
+      "options": [
+        "Dividing the bill",
+        "No one to share with",
+        "3",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "diners is 3, so the guard's condition is False and the normal branch runs safely."
+    },
+    {
+      "id": "u24l06e06",
+      "type": "orderBlocks",
+      "prompt": "Order a safe plan for 'average = total / count'.",
+      "blocks": [
+        "Check if count is zero",
+        "If zero, say there is no average",
+        "Otherwise compute total / count",
+        "Show the average"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "The zero guard protects the division. This is the same shape every edge-case plan uses."
+    },
+    {
+      "id": "u24l06e07",
+      "type": "multipleChoice",
+      "prompt": "Why does the guard being first actually protect the program?",
+      "options": [
+        "The risky step is skipped whenever the edge case is true",
+        "It makes the code shorter",
+        "Guards run twice",
+        "It prints faster"
+      ],
+      "answer": 0,
+      "explanation": "When the guard is true, its branch runs and the risky branch is skipped entirely. Order is the protection."
+    },
+    {
+      "id": "u24l06e08",
+      "type": "trueFalse",
+      "prompt": "A guard-first plan means the normal division only runs when the divisor is safe.",
+      "answer": true,
+      "explanation": "Exactly. The else (normal) branch is reached only when the guard found no problem."
+    },
+    {
+      "id": "u24l06e09",
+      "type": "multipleChoice",
+      "prompt": "A problem has an empty case AND a normal case. The clean shape is...",
+      "options": [
+        "if (edge case): handle it; else: do the normal work",
+        "do the work, then maybe check",
+        "only the normal work",
+        "only the edge case"
+      ],
+      "answer": 0,
+      "explanation": "Guard the edge case in the if, do the normal work in the else. One tidy if/else handles both."
+    },
+    {
+      "id": "u24l06e10",
+      "type": "multipleChoice",
+      "prompt": "The rule of thumb for edge cases:",
+      "options": [
+        "Check the edge case first, then do the normal work safely",
+        "Always do the work first",
+        "Edge cases go last",
+        "Skip the guard to save time"
+      ],
+      "answer": 0,
+      "explanation": "Edge case first, normal work second. That ordering keeps the risky step from ever running on bad input."
+    }
+  ]
+}

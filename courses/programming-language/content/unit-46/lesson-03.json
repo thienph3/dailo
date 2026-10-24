@@ -1,0 +1,128 @@
+{
+  "unitId": "u46",
+  "lessonId": "u46l03",
+  "title": "Stop at the first match",
+  "idea": "Use break to find the first value meeting a rule and stop - the classic break use case.",
+  "exercises": [
+    {
+      "id": "u46l03e01",
+      "type": "multipleChoice",
+      "prompt": "This finds the first multiple of 4 and stops. What prints?\n\nfor n in range(1, 20):\n    if n % 4 == 0:\n        print(n)\n        break",
+      "explanation": "The first multiple of 4 in 1..19 is 4; it prints 4 then breaks, so only 4 appears.",
+      "options": [
+        "4",
+        "4\n8\n12\n16",
+        "8",
+        "nothing"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u46l03e02",
+      "type": "multipleChoice",
+      "prompt": "Why does this loop print only ONE number even though many multiples of 4 exist in the range?",
+      "explanation": "break exits right after the first match, so later multiples are never reached.",
+      "options": [
+        "break stops the loop after the first match",
+        "range only has one multiple",
+        "print only runs once ever",
+        "4 is special"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u46l03e03",
+      "type": "trueFalse",
+      "prompt": "For a 'find the first ...' task, break lets you stop as soon as you succeed instead of scanning the rest.",
+      "explanation": "True - that early exit is the whole point of using break here.",
+      "answer": true
+    },
+    {
+      "id": "u46l03e04",
+      "type": "orderBlocks",
+      "prompt": "Arrange a loop that prints the first number over 10 in 1..20 and stops.",
+      "explanation": "Loop the range, if n > 10 print it and break; the break ends the search at the first hit.",
+      "blocks": [
+        "    if n > 10:",
+        "for n in range(1, 21):",
+        "        print(n)",
+        "        break"
+      ],
+      "answer": [
+        1,
+        0,
+        2,
+        3
+      ]
+    },
+    {
+      "id": "u46l03e05",
+      "type": "multipleChoice",
+      "prompt": "First number over 10 in 1..20 is?",
+      "explanation": "11 is the first value greater than 10, so the loop prints 11 and breaks.",
+      "options": [
+        "11",
+        "10",
+        "12",
+        "20"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u46l03e06",
+      "type": "fillBlank",
+      "prompt": "Complete the exit so the loop stops after printing the first match:\n\nfor n in range(1, 21):\n    if n > 10:\n        print(n)\n        ____",
+      "explanation": "break ends the loop once the first match is printed.",
+      "answer": "break",
+      "acceptable": [
+        "break"
+      ]
+    },
+    {
+      "id": "u46l03e07",
+      "type": "multipleChoice",
+      "prompt": "What prints if NO number in the range matches (e.g. looking for > 100 in 1..20)?",
+      "explanation": "The if is never true, break never runs, and nothing is printed - the loop just ends normally.",
+      "options": [
+        "Nothing",
+        "The last number",
+        "100",
+        "An error"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u46l03e08",
+      "type": "trueFalse",
+      "prompt": "With break, the order you visit values matters: you get the FIRST match in the order the loop runs.",
+      "explanation": "True - break stops at the first success, so the visiting order decides which match you get.",
+      "answer": true
+    },
+    {
+      "id": "u46l03e09",
+      "type": "multipleChoice",
+      "prompt": "A while version keeps asking for input until a number over 50 is entered, then breaks. Why use break?",
+      "explanation": "It cleanly exits the moment the goal (a number over 50) is reached, without a separate flag.",
+      "options": [
+        "It exits as soon as the goal is reached",
+        "while cannot use conditions",
+        "break reads input",
+        "it prints faster"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u46l03e10",
+      "type": "multipleChoice",
+      "prompt": "Summarise the 'first match' pattern.",
+      "explanation": "Loop, test each value, and break on the first one that matches - then you have your answer.",
+      "options": [
+        "Loop, test, break on the first match",
+        "Loop forever",
+        "Print everything then stop",
+        "Skip all matches"
+      ],
+      "answer": 0
+    }
+  ]
+}

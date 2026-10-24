@@ -1,0 +1,138 @@
+{
+  "unitId": "u59",
+  "lessonId": "u59l06",
+  "title": "Total, count, or biggest?",
+  "idea": "Choosing the right walk-the-list tool: sum (u57) vs count (u58) vs max (this unit). ~30% review.",
+  "exercises": [
+    {
+      "id": "u59l06e01",
+      "type": "multipleChoice",
+      "prompt": "'What was the highest price?' Which tool?",
+      "options": [
+        "Find the biggest (max)",
+        "Add them up (total)",
+        "Count the items",
+        "Print each price"
+      ],
+      "answer": 0,
+      "explanation": "Highest price = the single biggest value = max."
+    },
+    {
+      "id": "u59l06e02",
+      "type": "multipleChoice",
+      "prompt": "'What did everything cost together?' Which tool?",
+      "options": [
+        "Add them up (total)",
+        "Find the biggest",
+        "Count the items",
+        "Find the smallest"
+      ],
+      "answer": 0,
+      "explanation": "'Together' means a running total — the sum pattern from Unit 57."
+    },
+    {
+      "id": "u59l06e03",
+      "type": "multipleChoice",
+      "prompt": "'How many items cost more than 10?' Which tool?",
+      "options": [
+        "Count with a condition",
+        "Find the biggest",
+        "Add them up",
+        "Print each"
+      ],
+      "answer": 0,
+      "explanation": "'How many fit a rule' is the conditional count from Unit 58 — a counter guarded by an if."
+    },
+    {
+      "id": "u59l06e04",
+      "type": "multiSelect",
+      "prompt": "Which of these describe the MAX pattern (not sum or count)? (pick all)",
+      "options": [
+        "keep one best-so-far",
+        "replace when you meet something bigger",
+        "add each value into a running total",
+        "add 1 for each match"
+      ],
+      "answer": [
+        0,
+        1
+      ],
+      "explanation": "Max keeps and replaces a best-so-far. Adding into a total is sum; adding 1 per match is count."
+    },
+    {
+      "id": "u59l06e05",
+      "type": "orderBlocks",
+      "prompt": "REVIEW (sum): total [3, 5, 2] by hand. Put the running total after each step in order (start 0).",
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "blocks": [
+        "0 + 3 = 3",
+        "3 + 5 = 8",
+        "8 + 2 = 10"
+      ],
+      "explanation": "Sum adds each value in: 0->3->8->10. Compare this to max, which replaces instead of adds."
+    },
+    {
+      "id": "u59l06e06",
+      "type": "multipleChoice",
+      "prompt": "The three tools share one shape. What is it?",
+      "options": [
+        "One result variable, updated once per value as you walk the list",
+        "They all sort the list",
+        "They all need two loops",
+        "They all print every item"
+      ],
+      "answer": 0,
+      "explanation": "Sum, count, and max all keep ONE result and update it each pass. Only the update rule differs (add value / add 1 / replace if bigger)."
+    },
+    {
+      "id": "u59l06e07",
+      "type": "multipleChoice",
+      "prompt": "REVIEW (count): how many of [12, 4, 20, 7] are greater than 10?",
+      "options": [
+        "2",
+        "1",
+        "3",
+        "4"
+      ],
+      "answer": 0,
+      "explanation": "12 and 20 beat 10 — a conditional count of 2."
+    },
+    {
+      "id": "u59l06e08",
+      "type": "multipleChoice",
+      "prompt": "Max update rule vs sum update rule — what is different?",
+      "options": [
+        "Max REPLACES best when bigger; sum ADDS every value",
+        "They are the same",
+        "Max adds 1 each time",
+        "Sum replaces the total"
+      ],
+      "answer": 0,
+      "explanation": "Max swaps in a new best only on a bigger value. Sum adds every value no matter what."
+    },
+    {
+      "id": "u59l06e09",
+      "type": "trueFalse",
+      "prompt": "You pick the tool from the QUESTION's wording: 'biggest/highest/most' points to max.",
+      "answer": true,
+      "explanation": "Reading what the problem asks for tells you the pattern. 'Biggest', 'highest', 'top', 'most' all mean max."
+    },
+    {
+      "id": "u59l06e10",
+      "type": "multipleChoice",
+      "prompt": "'Which player scored the most, and what was the total of all scores?' How many tools do you need?",
+      "options": [
+        "Two — a max for the most, and a sum for the total",
+        "One — max does both",
+        "One — sum does both",
+        "None"
+      ],
+      "answer": 0,
+      "explanation": "Two different questions need two tools: max for the single highest, sum for the combined total."
+    }
+  ]
+}

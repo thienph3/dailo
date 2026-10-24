@@ -1,0 +1,152 @@
+{
+  "unitId": "u84",
+  "lessonId": "u84l10",
+  "title": "Loop back: everything you can do now",
+  "idea": "LOOP (review), capstone. A broad sweep across Laps 0-5 and the decomposition/debugging habits, closing the lap before combining techniques.",
+  "exercises": [
+    {
+      "id": "u84l10e01",
+      "type": "matchPairs",
+      "prompt": "Match each lap to a core thing it gave you.",
+      "pairs": [
+        {
+          "left": "Lap 0",
+          "right": "Show output and do arithmetic"
+        },
+        {
+          "left": "Lap 1",
+          "right": "Remember values and compute a result"
+        },
+        {
+          "left": "Lap 2",
+          "right": "Make choices with conditions"
+        },
+        {
+          "left": "Lap 3",
+          "right": "Repeat work with loops"
+        },
+        {
+          "left": "Lap 4",
+          "right": "Work with lists of values"
+        },
+        {
+          "left": "Lap 5",
+          "right": "Write and compose helpers"
+        }
+      ],
+      "explanation": "Six laps, six capabilities. Together they are the toolkit you now break big problems down with."
+    },
+    {
+      "id": "u84l10e02",
+      "type": "multipleChoice",
+      "prompt": "What is the first step whenever you face a bigger problem?",
+      "options": [
+        "Understand it: name the inputs and the output",
+        "Start typing code immediately",
+        "Pick a random pattern",
+        "Guess the answer"
+      ],
+      "answer": 0,
+      "explanation": "Understand first — inputs and output — then example, plan, code, check. The flow that steadies every solve."
+    },
+    {
+      "id": "u84l10e03",
+      "type": "trueFalse",
+      "prompt": "Working one example by hand gives you the answer to check your code against later.",
+      "answer": true,
+      "explanation": "Yes. The hand example is your measuring stick — it is how Check knows whether the code is right."
+    },
+    {
+      "id": "u84l10e04",
+      "type": "multipleChoice",
+      "prompt": "You split a problem into helpers and the answer is wrong. What do you do?",
+      "options": [
+        "Test each helper against a known value to localize the bug, then check the wiring",
+        "Rewrite the whole thing",
+        "Assume the computer is broken",
+        "Give up"
+      ],
+      "answer": 0,
+      "explanation": "Localize: clear the good parts, corner the bad one; if all parts are right, suspect the wiring. The debugging habit from Unit 81."
+    },
+    {
+      "id": "u84l10e05",
+      "type": "multipleChoice",
+      "prompt": "Which builtins does this course deliberately avoid, computing them by hand instead?",
+      "options": [
+        "sum, max, min, sorted",
+        "print and len",
+        "if and else",
+        "for and while"
+      ],
+      "answer": 0,
+      "explanation": "We build totals, biggests, and smallests by hand with loops. (len is allowed, for the size of a list.)"
+    },
+    {
+      "id": "u84l10e06",
+      "type": "multipleChoice",
+      "prompt": "A helper that averages a list must guard which input?",
+      "options": [
+        "The empty list, to avoid dividing by zero",
+        "A list of three items",
+        "A list of positives",
+        "No input needs guarding"
+      ],
+      "answer": 0,
+      "explanation": "Dividing by the count breaks on an empty list. The edge-case habit says: enumerate it, then guard it."
+    },
+    {
+      "id": "u84l10e07",
+      "type": "orderBlocks",
+      "prompt": "Order the UEPCC flow you have used all lap.",
+      "blocks": [
+        "Understand the inputs and output",
+        "Work one example by hand",
+        "Plan the ordered steps and pick patterns",
+        "Write the code for the plan",
+        "Check the output against the example, then re-run with new inputs"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "explanation": "Understand, Example, Plan, Code, Check. This is the backbone of every guided solve in the course."
+    },
+    {
+      "id": "u84l10e08",
+      "type": "multipleChoice",
+      "prompt": "Why break a big problem into small helpers at all?",
+      "options": [
+        "Each part is easy to write, easy to test, and easy to fix on its own",
+        "It makes the program longer for no reason",
+        "The computer requires it",
+        "To hide mistakes"
+      ],
+      "answer": 0,
+      "explanation": "Small parts are understandable and checkable. Decomposition turns a scary problem into a handful of simple ones."
+    },
+    {
+      "id": "u84l10e09",
+      "type": "trueFalse",
+      "prompt": "Re-running a finished solution with fresh inputs helps prove it works for more than the first example.",
+      "answer": true,
+      "explanation": "Yes — the Check habit. A solution that only works on one example may hide a bug; new inputs build confidence."
+    },
+    {
+      "id": "u84l10e10",
+      "type": "multipleChoice",
+      "prompt": "You are about to start Lap 6 (combining techniques). What have Laps 0-5 prepared you to do?",
+      "options": [
+        "Break a bigger problem into parts, solve each with a known pattern, compose and debug the result",
+        "Only print messages",
+        "Nothing useful yet",
+        "Memorize code to retype"
+      ],
+      "answer": 0,
+      "explanation": "You can decompose, pick patterns, compose helpers, handle edges, and debug a split solution. Next: combining several patterns in one problem."
+    }
+  ]
+}

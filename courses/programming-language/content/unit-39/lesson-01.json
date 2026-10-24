@@ -1,0 +1,142 @@
+{
+  "unitId": "u39",
+  "lessonId": "u39l01",
+  "title": "Solve it together: print the numbers 1 to 5",
+  "idea": "GUIDED PROBLEM. A counting-loop problem walked through UEPCC. Use for + range to show 1..5.",
+  "problem": "Show the numbers 1, 2, 3, 4, 5, each on its own line.",
+  "exercises": [
+    {
+      "id": "u39l01e01",
+      "type": "multipleChoice",
+      "prompt": "PROBLEM: Show the numbers 1 to 5, each on its own line.\n\nFirst — Understand. What is the OUTPUT this problem wants?",
+      "uepcc": "U",
+      "options": [
+        "Five lines showing 1, 2, 3, 4, 5",
+        "The total of 1 to 5",
+        "Just the number 5",
+        "How many numbers there are"
+      ],
+      "answer": 0,
+      "explanation": "Naming the output first keeps you aimed at the right result: five lines, 1 through 5."
+    },
+    {
+      "id": "u39l01e02",
+      "type": "multipleChoice",
+      "prompt": "Still understanding. How many lines of output should appear?",
+      "uepcc": "U",
+      "options": [
+        "5",
+        "1",
+        "4",
+        "6"
+      ],
+      "answer": 0,
+      "explanation": "One line per number, 1 through 5, so five lines. Knowing the count guides the loop."
+    },
+    {
+      "id": "u39l01e03",
+      "type": "multipleChoice",
+      "prompt": "Next — Example. Work it by hand: write out what the five lines look like.",
+      "uepcc": "E",
+      "options": [
+        "1\n2\n3\n4\n5",
+        "5\n4\n3\n2\n1",
+        "1 2 3 4 5",
+        "0\n1\n2\n3\n4"
+      ],
+      "answer": 0,
+      "explanation": "By hand the answer is 1, 2, 3, 4, 5 on separate lines. This becomes the result you check against."
+    },
+    {
+      "id": "u39l01e04",
+      "type": "trueFalse",
+      "prompt": "Doing the example by hand first gives you a result to check your code against later.",
+      "uepcc": "E",
+      "answer": true,
+      "explanation": "Exactly. The hand-worked lines (1..5) are your target when you run the code."
+    },
+    {
+      "id": "u39l01e05",
+      "type": "orderBlocks",
+      "prompt": "Now — Plan. Put these plain-English steps in order.",
+      "uepcc": "P",
+      "blocks": [
+        "Each pass, print the current number",
+        "Repeat once for each number 1 to 5"
+      ],
+      "answer": [
+        1,
+        0
+      ],
+      "explanation": "Plan in words first: decide to repeat for each number, then print the current number each pass."
+    },
+    {
+      "id": "u39l01e06",
+      "type": "multipleChoice",
+      "prompt": "Your plan repeats for the numbers 1 to 5. Which range gives the loop variable the values 1, 2, 3, 4, 5?",
+      "uepcc": "P",
+      "options": [
+        "range(1, 6)",
+        "range(1, 5)",
+        "range(5)",
+        "range(0, 5)"
+      ],
+      "answer": 0,
+      "explanation": "To include 5 the stop must be 6 (one past). range(1, 6) gives 1, 2, 3, 4, 5."
+    },
+    {
+      "id": "u39l01e07",
+      "type": "orderBlocks",
+      "prompt": "Now — Code. Arrange these lines so the loop prints each number.",
+      "uepcc": "C",
+      "blocks": [
+        "    print(i)",
+        "for i in range(1, 6):"
+      ],
+      "answer": [
+        1,
+        0
+      ],
+      "explanation": "The for line sets up the repeat; the indented print shows the current value each pass."
+    },
+    {
+      "id": "u39l01e08",
+      "type": "fillBlank",
+      "prompt": "Complete the stop value so it prints 1 through 5:\n\nfor i in range(1, ____):\n    print(i)",
+      "uepcc": "C",
+      "answer": "6",
+      "acceptable": [
+        "6"
+      ],
+      "explanation": "Stop is one past the last number. To end at 5, stop is 6."
+    },
+    {
+      "id": "u39l01e09",
+      "type": "multipleChoice",
+      "prompt": "Finally — Check. You run it and see 1, 2, 3, 4, 5. Your hand example said the same. So...",
+      "uepcc": "Check",
+      "options": [
+        "It passes — output matches the example",
+        "It fails",
+        "You can't tell",
+        "Change the example to match"
+      ],
+      "answer": 0,
+      "explanation": "The output matches the example you worked by hand, so the solution is correct."
+    },
+    {
+      "id": "u39l01e10",
+      "type": "multipleChoice",
+      "prompt": "Same idea, new target: print 1 to 3. What range makes the loop variable 1, 2, 3?",
+      "uepcc": "Check",
+      "options": [
+        "range(1, 4)",
+        "range(1, 3)",
+        "range(3)",
+        "range(1, 5)"
+      ],
+      "answer": 0,
+      "explanation": "Stop one past 3 is 4: range(1, 4) gives 1, 2, 3. A good solution adapts to new numbers."
+    }
+  ]
+}

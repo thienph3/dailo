@@ -1,0 +1,130 @@
+{
+  "unitId": "u32",
+  "lessonId": "u32l09",
+  "title": "Spot the flaw, not the typo",
+  "idea": "Practice telling a reasoning bug (wrong logic) apart from a mere typo — this unit is about the thinking.",
+  "exercises": [
+    {
+      "id": "u32l09e01",
+      "type": "multipleChoice",
+      "prompt": "Which of these is a REASONING bug, not a typo?",
+      "options": [
+        "Using > when the rule means 'or more'",
+        "Writing 'pirnt' instead of 'print'",
+        "Forgetting a closing quote",
+        "Mis-indenting by one space accidentally"
+      ],
+      "answer": 0,
+      "explanation": "Using > where the rule says 'or more' is flawed logic. 'pirnt' is just a spelling slip."
+    },
+    {
+      "id": "u32l09e02",
+      "type": "multipleChoice",
+      "prompt": "A chain gives the wrong label but every keyword is spelled correctly and it runs. The bug is probably…",
+      "options": [
+        "In the reasoning (comparisons, order, or a missed case)",
+        "A spelling mistake",
+        "A missing file",
+        "The keyboard"
+      ],
+      "answer": 0,
+      "explanation": "If it runs and spelling is fine, suspect the logic: comparisons, order, joiners, or a missed case."
+    },
+    {
+      "id": "u32l09e03",
+      "type": "trueFalse",
+      "prompt": "A program can be perfectly spelled and still give wrong answers.",
+      "answer": true,
+      "explanation": "True. Correct spelling only means it runs; correct reasoning is what makes the answer right."
+    },
+    {
+      "id": "u32l09e04",
+      "type": "multipleChoice",
+      "prompt": "Rule: 'adult is 18 or older.' Code: if age > 18. This is which kind of bug?",
+      "options": [
+        "A reasoning bug — wrong boundary",
+        "A typo",
+        "A missing import",
+        "No bug at all"
+      ],
+      "answer": 0,
+      "explanation": "The logic excludes exactly 18; that is a reasoning/edge-case bug, not a typo."
+    },
+    {
+      "id": "u32l09e05",
+      "type": "multipleChoice",
+      "prompt": "Rule: weekend if Saturday or Sunday. Code uses 'and'. Which kind of bug?",
+      "options": [
+        "A reasoning bug — wrong logical joiner",
+        "A typo",
+        "A number-format bug",
+        "No bug"
+      ],
+      "answer": 0,
+      "explanation": "The wrong joiner flips the meaning — a reasoning bug, even though every word is spelled right."
+    },
+    {
+      "id": "u32l09e06",
+      "type": "multipleChoice",
+      "prompt": "Which of these WOULD stop the program from running (so it is not our focus this unit)?",
+      "options": [
+        "Writing 'eles' instead of 'else'",
+        "Using > instead of >=",
+        "Putting the broad branch first",
+        "Using and instead of or"
+      ],
+      "answer": 0,
+      "explanation": "A misspelled keyword like 'eles' is a syntax/typo error that stops the run; our unit targets logic that runs but is wrong."
+    },
+    {
+      "id": "u32l09e07",
+      "type": "multipleChoice",
+      "prompt": "Best question to decide 'reasoning bug or typo?'",
+      "options": [
+        "Did it run but give a wrong answer? Then it's reasoning",
+        "Is the file big?",
+        "Is it Monday?",
+        "How fast did it run?"
+      ],
+      "answer": 0,
+      "explanation": "Ask: did it run? If yes but the answer is wrong, it is reasoning. If it refused to run, it is likely a typo/syntax issue."
+    },
+    {
+      "id": "u32l09e08",
+      "type": "multiSelect",
+      "prompt": "Select ALL that are reasoning (logic) bugs.",
+      "options": [
+        "> used for 'or more'",
+        "Broad band placed before specific band",
+        "'and' used for an 'either' rule",
+        "'prnit' instead of 'print'"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Wrong boundary, wrong order, and wrong joiner are all reasoning bugs. A misspelled keyword is a typo."
+    },
+    {
+      "id": "u32l09e09",
+      "type": "multipleChoice",
+      "prompt": "You fixed a typo and it now runs, but still prints the wrong grade. What next?",
+      "options": [
+        "Debug the reasoning: trace values and check the logic",
+        "Declare it done",
+        "Add another typo",
+        "Delete the program"
+      ],
+      "answer": 0,
+      "explanation": "Running is step one; now hunt the reasoning — trace values, check boundaries, order, and joiners."
+    },
+    {
+      "id": "u32l09e10",
+      "type": "trueFalse",
+      "prompt": "This unit's job is the thinking: wrong comparisons, wrong order, wrong joiners, and missed cases.",
+      "answer": true,
+      "explanation": "Yes. We spot flawed reasoning. Typos matter too, but they are a different (syntax) kind of problem."
+    }
+  ]
+}

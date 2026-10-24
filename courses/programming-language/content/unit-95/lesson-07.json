@@ -1,0 +1,131 @@
+{
+  "unitId": "u95",
+  "lessonId": "u95l07",
+  "title": "Naming the mystery numbers",
+  "idea": "MEET (thinking): a bare number in the middle of code ('magic number') hides its meaning. Give it a named variable - the code explains itself.",
+  "exercises": [
+    {
+      "id": "u95l07e01",
+      "type": "multipleChoice",
+      "prompt": "You read:\n\ntotal = price * 1.08\n\nWhat is 1.08 and why is it unclear?",
+      "options": [
+        "It's probably a tax rate, but the bare number doesn't SAY so",
+        "It's a typo",
+        "It's a variable name",
+        "It means 'print'"
+      ],
+      "answer": 0,
+      "explanation": "1.08 is a 'magic number' - meaningful to the author, mysterious to the reader. A name like tax_multiplier would explain it."
+    },
+    {
+      "id": "u95l07e02",
+      "type": "orderBlocks",
+      "prompt": "Refactor to name the magic number. Arrange the clearer version.",
+      "blocks": [
+        "tax_multiplier = 1.08",
+        "total = price * tax_multiplier"
+      ],
+      "answer": [0, 1],
+      "explanation": "Name it once, use the name. Now 'price * tax_multiplier' reads like a sentence and the 1.08 has an explanation."
+    },
+    {
+      "id": "u95l07e03",
+      "type": "trueFalse",
+      "prompt": "Replacing 1.08 with a variable named tax_multiplier (set to 1.08) changes the total.",
+      "answer": false,
+      "explanation": "No. tax_multiplier IS 1.08, so the math is identical. You only made the meaning visible - a pure clarity refactor."
+    },
+    {
+      "id": "u95l07e04",
+      "type": "multipleChoice",
+      "prompt": "The same number appears in three places:\n\na = x * 60\nb = y * 60\nc = z * 60\n\nBest refactor if all three 60s mean 'seconds per minute'?",
+      "options": [
+        "seconds_per_minute = 60, then use that name in all three lines",
+        "Change one 60 to 60.0",
+        "Leave them - three is fine",
+        "Delete two of the lines"
+      ],
+      "answer": 0,
+      "explanation": "One named constant replaces all three magic 60s. The meaning is clear everywhere, and a future change happens in a single spot."
+    },
+    {
+      "id": "u95l07e05",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\ndays = 3\nhours_per_day = 24\nprint(days * hours_per_day)",
+      "options": [
+        "72",
+        "324",
+        "27",
+        "An error"
+      ],
+      "answer": 0,
+      "explanation": "3 * 24 = 72. And 'days * hours_per_day' tells you WHY - far clearer than a bare 'days * 24'."
+    },
+    {
+      "id": "u95l07e06",
+      "type": "multiSelect",
+      "prompt": "Which numbers are fine to leave bare (not every number is 'magic')? Pick ALL that are usually clear on their own.",
+      "options": [
+        "count + 1 (stepping a counter by one)",
+        "total / 2 when the problem literally says 'split in half'",
+        "price * 1.08 (an unexplained rate)",
+        "angle * 0.01745 (an unexplained conversion)"
+      ],
+      "answer": [0, 1],
+      "explanation": "+1 and /2 are self-explanatory in context. 1.08 and 0.01745 are mysterious - those deserve names like tax_multiplier or radians_per_degree."
+    },
+    {
+      "id": "u95l07e07",
+      "type": "matchPairs",
+      "prompt": "Match each magic number to a name that would explain it.",
+      "pairs": [
+        {
+          "left": "7",
+          "right": "days_per_week"
+        },
+        {
+          "left": "100",
+          "right": "percent_whole"
+        },
+        {
+          "left": "12",
+          "right": "months_per_year"
+        }
+      ],
+      "explanation": "A good name turns a mystery digit into documentation. The reader no longer has to guess what the number stands for."
+    },
+    {
+      "id": "u95l07e08",
+      "type": "trueFalse",
+      "prompt": "Naming a constant also makes future changes safer, because you edit ONE line instead of hunting for every copy.",
+      "answer": true,
+      "explanation": "True. If the tax rate changes, you update tax_multiplier once. Scattered bare numbers would each need finding - and one always hides."
+    },
+    {
+      "id": "u95l07e09",
+      "type": "multipleChoice",
+      "prompt": "Someone 'names' a constant like this:\n\nrate = 1.08\ntotal = price * 1.08\n\nWhat's still wrong?",
+      "options": [
+        "They made the name but didn't USE it - 1.08 is still magic in the formula",
+        "rate is a bad name",
+        "You can't store 1.08",
+        "Nothing is wrong"
+      ],
+      "answer": 0,
+      "explanation": "Naming helps only if you actually use the name. The formula should say 'price * rate' so the magic number disappears from the logic."
+    },
+    {
+      "id": "u95l07e10",
+      "type": "multipleChoice",
+      "prompt": "The point of naming constants is to...",
+      "options": [
+        "Make the code explain its own numbers, with no change to the answers",
+        "Make the program run faster",
+        "Use up more lines",
+        "Change the results to be rounder"
+      ],
+      "answer": 0,
+      "explanation": "Self-explaining code, identical answers. A named constant is a tiny refactor with a big readability payoff."
+    }
+  ]
+}

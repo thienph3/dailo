@@ -1,0 +1,128 @@
+{
+  "unitId": "u55",
+  "lessonId": "u55l04",
+  "title": "A choice for each value",
+  "idea": "Combine for-item-in-list with an if inside the body, so the action depends on each value. Reviews if inside a loop.",
+  "exercises": [
+    {
+      "id": "u55l04e01",
+      "type": "multipleChoice",
+      "prompt": "scores = [40, 80, 55]\nfor score in scores:\n    if score >= 50:\n        print(\"pass\")\n\nHow many times is 'pass' printed?",
+      "options": [
+        "Twice — for 80 and 55",
+        "Three times",
+        "Once",
+        "Never"
+      ],
+      "answer": 0,
+      "explanation": "The if runs each pass. 80 and 55 are >= 50 so 'pass' prints twice; 40 is below, so it's skipped."
+    },
+    {
+      "id": "u55l04e02",
+      "type": "trueFalse",
+      "prompt": "Putting an if inside a for-each loop lets the action depend on the current value.",
+      "answer": true,
+      "explanation": "Each pass the if checks the current value and decides whether to do the action. Same if you learned earlier, now per item."
+    },
+    {
+      "id": "u55l04e03",
+      "type": "multipleChoice",
+      "prompt": "nums = [3, 8, 1, 10]\nfor n in nums:\n    if n > 5:\n        print(n)\n\nWhat is printed?",
+      "options": [
+        "8, then 10",
+        "3, 1",
+        "3, 8, 1, 10",
+        "22"
+      ],
+      "answer": 0,
+      "explanation": "Only values greater than 5 are printed: 8 and 10 qualify; 3 and 1 don't."
+    },
+    {
+      "id": "u55l04e04",
+      "type": "orderBlocks",
+      "prompt": "Arrange the code: for each temperature, print 'hot' only if it is above 30.",
+      "blocks": [
+        "        print(\"hot\")",
+        "    if temp > 30:",
+        "for temp in temps:",
+        "temps = [25, 35]"
+      ],
+      "answer": [
+        3,
+        2,
+        1,
+        0
+      ],
+      "explanation": "List, then loop header, then the if (indented once), then its body (indented twice). 35 prints 'hot'; 25 doesn't."
+    },
+    {
+      "id": "u55l04e05",
+      "type": "fillBlank",
+      "prompt": "Only print even numbers from the list. Fill the blank:\n\nfor n in nums:\n    if n % 2 ____ 0:\n        print(n)",
+      "answer": "==",
+      "acceptable": [
+        "=="
+      ],
+      "explanation": "An even number has remainder 0 when divided by 2, so the test is n % 2 == 0."
+    },
+    {
+      "id": "u55l04e06",
+      "type": "multipleChoice",
+      "prompt": "ages = [12, 20, 16, 40]\nfor age in ages:\n    if age >= 18:\n        print(\"adult\")\n    else:\n        print(\"minor\")\n\nHow many lines print in total?",
+      "options": [
+        "Four — one per item (adult or minor)",
+        "Two",
+        "One",
+        "Eight"
+      ],
+      "answer": 0,
+      "explanation": "With if/else, every pass prints exactly one line. Four items means four lines: minor, adult, minor, adult."
+    },
+    {
+      "id": "u55l04e07",
+      "type": "multipleChoice",
+      "prompt": "Why is the print indented TWICE in:\n\nfor n in nums:\n    if n > 0:\n        print(n)",
+      "options": [
+        "Once to be inside the loop, again to be inside the if",
+        "By accident",
+        "To run it twice",
+        "Python needs eight spaces"
+      ],
+      "answer": 0,
+      "explanation": "Each level of 'inside' adds indentation: inside the loop, then inside the if. The print belongs to both."
+    },
+    {
+      "id": "u55l04e08",
+      "type": "trueFalse",
+      "prompt": "The if is checked fresh on every pass, using whatever value the loop variable holds that time.",
+      "answer": true,
+      "explanation": "Yes — the condition is re-evaluated each pass with the current value, so different items can take different branches."
+    },
+    {
+      "id": "u55l04e09",
+      "type": "multipleChoice",
+      "prompt": "prices = [10, 50, 30]\nfor price in prices:\n    if price > 40:\n        print(f\"{price} is pricey\")\n\nWhat prints?",
+      "options": [
+        "50 is pricey",
+        "10 is pricey",
+        "30 is pricey",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "Only 50 is above 40, so only its labelled line prints."
+    },
+    {
+      "id": "u55l04e10",
+      "type": "multipleChoice",
+      "prompt": "You want to print only the items in [7, 2, 9, 4] that are below 5. Which test goes in the if?",
+      "options": [
+        "item < 5",
+        "item > 5",
+        "item == 5",
+        "item <= 9"
+      ],
+      "answer": 0,
+      "explanation": "'Below 5' is item < 5. That picks 2 and 4."
+    }
+  ]
+}

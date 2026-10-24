@@ -1,0 +1,124 @@
+{
+  "unitId": "u22",
+  "lessonId": "u22l08",
+  "title": "Solve one together: pass or fail message",
+  "idea": "Walk a two-outcome problem end to end: understand it, work both example cases, plan, write the if/else, and check.",
+  "exercises": [
+    {
+      "id": "u22l08e01",
+      "type": "multipleChoice",
+      "prompt": "PROBLEM: 'Show Pass if the grade is at least 50, otherwise show Fail.' First — how many outcomes are there?",
+      "options": [
+        "Two — Pass and Fail",
+        "One — Pass only",
+        "Three",
+        "None"
+      ],
+      "answer": 0,
+      "explanation": "Two outcomes means this is an if/else. Naming them first frames the whole solution."
+    },
+    {
+      "id": "u22l08e02",
+      "type": "multipleChoice",
+      "prompt": "What is the yes/no fact that decides the outcome?",
+      "options": [
+        "Whether the grade is at least 50",
+        "The student's name",
+        "How long the test took",
+        "The exact grade only"
+      ],
+      "answer": 0,
+      "explanation": "The deciding fact is 'is the grade at least 50?'. Pass happens when true, Fail when false."
+    },
+    {
+      "id": "u22l08e03",
+      "type": "multipleChoice",
+      "prompt": "Work an example by hand. If the grade is 72, which outcome?",
+      "options": [
+        "Pass — 72 is at least 50",
+        "Fail — 72 is below 50",
+        "Both",
+        "We cannot tell"
+      ],
+      "answer": 0,
+      "explanation": "72 is at least 50, so Pass. This hand result is what we will check the code against."
+    },
+    {
+      "id": "u22l08e04",
+      "type": "multipleChoice",
+      "prompt": "Another example. If the grade is 30, which outcome?",
+      "options": [
+        "Fail — 30 is below 50",
+        "Pass — 30 is at least 50",
+        "Both",
+        "We cannot tell"
+      ],
+      "answer": 0,
+      "explanation": "30 is below 50, so Fail. Having one true case and one false case checks both branches."
+    },
+    {
+      "id": "u22l08e05",
+      "type": "multipleChoice",
+      "prompt": "Plan: which comparison matches 'at least 50'?",
+      "options": [
+        "grade >= 50",
+        "grade > 50",
+        "grade < 50",
+        "grade == 50"
+      ],
+      "answer": 0,
+      "explanation": "'At least 50' includes exactly 50, so >= . A grade of exactly 50 should pass."
+    },
+    {
+      "id": "u22l08e06",
+      "type": "orderBlocks",
+      "prompt": "Arrange the code: store the grade, then show Pass or Fail.",
+      "blocks": [
+        "    print(\"Pass\")",
+        "else:",
+        "grade = 72",
+        "if grade >= 50:",
+        "    print(\"Fail\")"
+      ],
+      "answer": [2, 3, 0, 1, 4],
+      "explanation": "Store the grade, if header, indented Pass, else:, indented Fail. The true outcome under if, the other under else."
+    },
+    {
+      "id": "u22l08e07",
+      "type": "fillBlank",
+      "prompt": "Complete the condition (check, don't store):\n\ngrade = 72\nif grade ____ 50:\n    print(\"Pass\")\nelse:\n    print(\"Fail\")",
+      "answer": ">=",
+      "acceptable": [">="],
+      "explanation": "'At least 50' is >= , and a condition checks, so the comparison is correct — no single =."
+    },
+    {
+      "id": "u22l08e08",
+      "type": "multipleChoice",
+      "prompt": "Check: run with grade = 72. What shows?\n\ngrade = 72\nif grade >= 50:\n    print(\"Pass\")\nelse:\n    print(\"Fail\")",
+      "options": ["Pass", "Fail", "Both", "Nothing"],
+      "answer": 0,
+      "explanation": "72 >= 50 is True, so Pass prints — matching our hand example. The code is correct for this case."
+    },
+    {
+      "id": "u22l08e09",
+      "type": "multipleChoice",
+      "prompt": "Check again with grade = 30. What shows?\n\ngrade = 30\nif grade >= 50:\n    print(\"Pass\")\nelse:\n    print(\"Fail\")",
+      "options": ["Fail", "Pass", "Both", "Nothing"],
+      "answer": 0,
+      "explanation": "30 >= 50 is False, so the else branch runs: Fail — matching our second hand example. The solution works for both cases."
+    },
+    {
+      "id": "u22l08e10",
+      "type": "multipleChoice",
+      "prompt": "What did walking this problem teach about if/else?",
+      "options": [
+        "Name both outcomes, work a true and a false example, pick the comparison, write if/else, then check both",
+        "Always print Pass",
+        "Skip the false example",
+        "Use = inside the if"
+      ],
+      "answer": 0,
+      "explanation": "Checking both a true and a false case proves the two branches both work. That habit makes your if/else reliable."
+    }
+  ]
+}

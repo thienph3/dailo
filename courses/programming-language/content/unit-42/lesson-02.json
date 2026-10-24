@@ -1,0 +1,144 @@
+{
+  "unitId": "u42",
+  "lessonId": "u42l02",
+  "title": "Reading the indentation: what runs when",
+  "idea": "Indentation shows what is inside the loop vs inside the if vs after the loop.",
+  "exercises": [
+    {
+      "id": "u42l02e01",
+      "type": "multipleChoice",
+      "prompt": "A line indented under the if runs...",
+      "options": [
+        "only when the if is true",
+        "every pass",
+        "once after the loop",
+        "never"
+      ],
+      "answer": 0,
+      "explanation": "Only when the if's condition is true, on the passes that match."
+    },
+    {
+      "id": "u42l02e02",
+      "type": "multipleChoice",
+      "prompt": "A line indented under the for but NOT under the if runs...",
+      "options": [
+        "every pass of the loop",
+        "only when the if is true",
+        "once after the loop",
+        "never"
+      ],
+      "answer": 0,
+      "explanation": "Every pass of the loop — it is inside the loop but outside the if."
+    },
+    {
+      "id": "u42l02e03",
+      "type": "multipleChoice",
+      "prompt": "What shows?\n\nfor i in range(1, 4):\n    print(\"pass\")\n    if i == 2:\n        print(\"two!\")",
+      "options": [
+        "pass / pass / two! / pass",
+        "pass / pass / pass",
+        "two! only",
+        "pass / two! / pass"
+      ],
+      "answer": 0,
+      "explanation": "'pass' prints every pass (3 times); 'two!' prints only when i is 2. So pass, pass+two!, pass."
+    },
+    {
+      "id": "u42l02e04",
+      "type": "multipleChoice",
+      "prompt": "A line with NO indentation after the loop runs...",
+      "options": [
+        "once, after the loop ends",
+        "every pass",
+        "only when the if is true",
+        "never"
+      ],
+      "answer": 0,
+      "explanation": "Once, after the whole loop finishes — it is outside the loop entirely."
+    },
+    {
+      "id": "u42l02e05",
+      "type": "trueFalse",
+      "prompt": "Deeper indentation means 'more inside' — inside the if, inside the loop.",
+      "answer": true,
+      "explanation": "True. Each indent level nests one layer deeper: loop, then if within it."
+    },
+    {
+      "id": "u42l02e06",
+      "type": "matchPairs",
+      "prompt": "Match each indentation level to when its line runs.",
+      "pairs": [
+        {
+          "left": "under for only",
+          "right": "every pass"
+        },
+        {
+          "left": "under the if",
+          "right": "only when condition is true"
+        },
+        {
+          "left": "no indent, after loop",
+          "right": "once at the end"
+        }
+      ],
+      "explanation": "Indent under for = every pass; indent under if = only when true; no indent after = once at the end."
+    },
+    {
+      "id": "u42l02e07",
+      "type": "orderBlocks",
+      "prompt": "Arrange: each pass print 'go', and when i is 3 also print 'hit'.",
+      "blocks": [
+        "    print(\"go\")",
+        "for i in range(1, 5):",
+        "        print(\"hit\")",
+        "    if i == 3:"
+      ],
+      "answer": [
+        1,
+        0,
+        3,
+        2
+      ],
+      "explanation": "for header, then the every-pass print, then the if, then the if's print."
+    },
+    {
+      "id": "u42l02e08",
+      "type": "multipleChoice",
+      "prompt": "How many times does 'go' print?\n\nfor i in range(1, 5):\n    print(\"go\")\n    if i == 3:\n        print(\"hit\")",
+      "options": [
+        "4",
+        "1",
+        "3",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "'go' is inside the loop but outside the if, so it prints every pass — four times."
+    },
+    {
+      "id": "u42l02e09",
+      "type": "multipleChoice",
+      "prompt": "How many times does 'hit' print in that same code?",
+      "options": [
+        "1",
+        "4",
+        "3",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "'hit' is under the if i == 3, true on only one pass, so it prints once."
+    },
+    {
+      "id": "u42l02e10",
+      "type": "multipleChoice",
+      "prompt": "Why does indentation matter so much here?",
+      "options": [
+        "It decides what runs every pass vs only on matches",
+        "It is only decoration",
+        "It makes code faster",
+        "It changes the range"
+      ],
+      "answer": 0,
+      "explanation": "Indentation alone decides whether a line runs every pass, only on matches, or once at the end."
+    }
+  ]
+}

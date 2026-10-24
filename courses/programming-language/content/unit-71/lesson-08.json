@@ -1,0 +1,133 @@
+{
+  "unitId": "u71",
+  "lessonId": "u71l08",
+  "title": "Predict before you run",
+  "idea": "TOOL: predict a program's output, then catch the version that's wrong. Mostly thinking.",
+  "exercises": [
+    {
+      "id": "u71l08e01",
+      "type": "multipleChoice",
+      "prompt": "Predict:\n\ndef greet():\n    print(\"Hi\")\ngreet()\ngreet()\n\nWhat prints?",
+      "options": [
+        "Hi\nHi",
+        "Hi",
+        "Nothing",
+        "Hi\nHi\nHi"
+      ],
+      "answer": 0,
+      "explanation": "Two calls, so 'Hi' twice. Predicting output before running is how you check your understanding."
+    },
+    {
+      "id": "u71l08e02",
+      "type": "multipleChoice",
+      "prompt": "A friend predicts the program above prints 'Hi' once. Why are they wrong?",
+      "options": [
+        "greet() is called twice, so it prints twice",
+        "greet is defined twice",
+        "print is broken",
+        "they're actually right"
+      ],
+      "answer": 0,
+      "explanation": "They counted the def, not the calls. Two calls = two runs of the body = 'Hi' twice."
+    },
+    {
+      "id": "u71l08e03",
+      "type": "multipleChoice",
+      "prompt": "Predict:\n\ndef greet():\n    print(\"Hi\")\nprint(\"Bye\")\n\nWhat prints?",
+      "options": [
+        "Bye",
+        "Hi\nBye",
+        "Hi",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "greet is never called, so 'Hi' never shows. Only the un-indented print(\"Bye\") runs: 'Bye'."
+    },
+    {
+      "id": "u71l08e04",
+      "type": "multipleChoice",
+      "prompt": "Someone claims the program above prints 'Hi' then 'Bye'. The mistake in their thinking is...",
+      "options": [
+        "they assumed defining greet runs it",
+        "they forgot print exists",
+        "they added a call",
+        "they're correct"
+      ],
+      "answer": 0,
+      "explanation": "They treated the def as if it ran. But define is not run - without a call, greet's 'Hi' never prints."
+    },
+    {
+      "id": "u71l08e05",
+      "type": "trueFalse",
+      "prompt": "A reliable way to predict output is to skip the def bodies until a call reaches them.",
+      "answer": true,
+      "explanation": "Yes. Read top to bottom; a def just registers. When a call fires, THEN run its body. Great tracing habit."
+    },
+    {
+      "id": "u71l08e06",
+      "type": "multipleChoice",
+      "prompt": "Predict:\n\ndef two():\n    print(\"1\")\n    print(\"2\")\ntwo()\n\nWhat prints?",
+      "options": [
+        "1\n2",
+        "2\n1",
+        "1",
+        "12 on one line"
+      ],
+      "answer": 0,
+      "explanation": "The call runs the whole body in order: print 1, then print 2. Both indented lines belong to two()."
+    },
+    {
+      "id": "u71l08e07",
+      "type": "multipleChoice",
+      "prompt": "Which program prints 'Hi' exactly THREE times?",
+      "options": [
+        "def g(): print(\"Hi\")  then  g() g() g()",
+        "def g(): print(\"Hi\")  then  g()",
+        "def g(): print(\"Hi\")  (no calls)",
+        "print(\"Hi\")"
+      ],
+      "answer": 0,
+      "explanation": "Three calls to g() run the body three times. One call prints once; no calls print nothing."
+    },
+    {
+      "id": "u71l08e08",
+      "type": "matchPairs",
+      "prompt": "Match each program to its output count (greet prints one line).",
+      "pairs": [
+        {
+          "left": "greet() once",
+          "right": "1 line"
+        },
+        {
+          "left": "greet defined, never called",
+          "right": "0 lines"
+        },
+        {
+          "left": "greet() twice",
+          "right": "2 lines"
+        }
+      ],
+      "explanation": "Output lines equal the number of CALLS, not defs. A never-called sub-plan prints nothing."
+    },
+    {
+      "id": "u71l08e09",
+      "type": "trueFalse",
+      "prompt": "If a prediction and the real output disagree, re-check which lines are CALLS.",
+      "answer": true,
+      "explanation": "Yes. Most output surprises come from miscounting calls or thinking a def runs. Re-check the calls first."
+    },
+    {
+      "id": "u71l08e10",
+      "type": "multipleChoice",
+      "prompt": "The skill this lesson sharpens:",
+      "options": [
+        "predict output by counting and ordering the calls",
+        "memorize answers",
+        "avoid defs",
+        "guess randomly"
+      ],
+      "answer": 0,
+      "explanation": "Predicting output - counting calls, ordering them, remembering defs are quiet - is how you read sub-plan code."
+    }
+  ]
+}

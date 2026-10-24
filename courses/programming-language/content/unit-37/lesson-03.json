@@ -1,0 +1,131 @@
+{
+  "unitId": "u37",
+  "lessonId": "u37l03",
+  "title": "Predict a for/range loop's output",
+  "idea": "Trace for/range loops line by line, including bodies with several lines and steps before or after the loop.",
+  "exercises": [
+    {
+      "id": "u37l03e01",
+      "type": "multipleChoice",
+      "prompt": "What shows?\n\nfor i in range(3):\n    print(\"Go\")",
+      "options": [
+        "Go\nGo\nGo",
+        "Go",
+        "3",
+        "i\ni\ni"
+      ],
+      "answer": 0,
+      "explanation": "range(3) repeats the body three times — three Go lines."
+    },
+    {
+      "id": "u37l03e02",
+      "type": "multipleChoice",
+      "prompt": "What shows?\n\nprint(\"Start\")\nfor i in range(2):\n    print(\"Go\")",
+      "options": [
+        "Start\nGo\nGo",
+        "Go\nGo\nStart",
+        "Start\nGo",
+        "Start"
+      ],
+      "answer": 0,
+      "explanation": "Start runs once before the loop, then Go repeats twice. Lines before the loop run first."
+    },
+    {
+      "id": "u37l03e03",
+      "type": "multipleChoice",
+      "prompt": "What shows?\n\nfor i in range(2):\n    print(\"Hi\")\nprint(\"Bye\")",
+      "options": [
+        "Hi\nHi\nBye",
+        "Hi\nBye\nHi\nBye",
+        "Hi\nBye",
+        "Bye\nHi\nHi"
+      ],
+      "answer": 0,
+      "explanation": "Hi repeats twice (indented), then Bye runs once after the loop (not indented)."
+    },
+    {
+      "id": "u37l03e04",
+      "type": "multipleChoice",
+      "prompt": "How many total lines?\n\nfor i in range(3):\n    print(\"A\")\n    print(\"B\")",
+      "options": [
+        "6",
+        "3",
+        "2",
+        "5"
+      ],
+      "answer": 0,
+      "explanation": "Each pass prints A then B (2 lines), three passes — 2 x 3 = 6 lines."
+    },
+    {
+      "id": "u37l03e05",
+      "type": "orderBlocks",
+      "prompt": "Put the output in order for:\n\nfor i in range(2):\n    print(\"A\")\n    print(\"B\")",
+      "blocks": [
+        "A (pass 1)",
+        "B (pass 1)",
+        "A (pass 2)",
+        "B (pass 2)"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "Each pass runs the body top to bottom: A then B. Pass 1 then pass 2."
+    },
+    {
+      "id": "u37l03e06",
+      "type": "trueFalse",
+      "prompt": "A line that comes before the for loop runs before any of the repeats.",
+      "answer": true,
+      "explanation": "Code runs top to bottom. Anything above the loop runs first, once, then the loop begins."
+    },
+    {
+      "id": "u37l03e07",
+      "type": "multipleChoice",
+      "prompt": "What shows?\n\nfor i in range(0):\n    print(\"Hi\")\nprint(\"Done\")",
+      "options": [
+        "Done",
+        "Hi\nDone",
+        "Done\nDone",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "range(0) runs the body zero times, so no Hi. Done still runs once after the loop."
+    },
+    {
+      "id": "u37l03e08",
+      "type": "multipleChoice",
+      "prompt": "What shows?\n\nprint(\"Top\")\nfor i in range(3):\n    print(\"Mid\")\nprint(\"Bottom\")",
+      "options": [
+        "Top\nMid\nMid\nMid\nBottom",
+        "Top\nMid\nBottom",
+        "Mid\nMid\nMid",
+        "Top\nBottom"
+      ],
+      "answer": 0,
+      "explanation": "Top once, Mid three times (the loop body), Bottom once. Outside-once, inside-per-pass, outside-once."
+    },
+    {
+      "id": "u37l03e09",
+      "type": "trueFalse",
+      "prompt": "Predicting the output by hand is a reliable way to check a for/range loop.",
+      "answer": true,
+      "explanation": "Trace the lines, compare to the goal. That's the Check step and it catches wrong counts or indents."
+    },
+    {
+      "id": "u37l03e10",
+      "type": "multipleChoice",
+      "prompt": "You traced range(4) with one print and expected 4 lines, but only predicted 3. What likely slipped?",
+      "options": [
+        "A miscount — range(4) is 4 passes, so 4 lines",
+        "The word was wrong",
+        "range caps at 3",
+        "Loops skip the last pass"
+      ],
+      "answer": 0,
+      "explanation": "range(4) is exactly four passes. Careful counting — range(n) gives n lines with a single-print body."
+    }
+  ]
+}

@@ -1,0 +1,128 @@
+{
+  "unitId": "u90",
+  "lessonId": "u90l03",
+  "title": "Range checks: too low or too high",
+  "idea": "TOOL: validate against BOTH ends of a range using and/or inside the loop condition.",
+  "exercises": [
+    {
+      "type": "multipleChoice",
+      "prompt": "You need a score from 0 to 100. The input is invalid if it is below 0 OR above 100. Which condition catches BOTH?",
+      "options": [
+        "score < 0 or score > 100",
+        "score < 0 and score > 100",
+        "score == 0",
+        "score > 100"
+      ],
+      "answer": 0,
+      "explanation": "'Below 0 OR above 100' uses or. (It can't be both at once, so 'and' would never be true - a classic mistake.)",
+      "id": "u90l03e01"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Predict: user types 150, then 40, for a 0-100 score.\n\nscore = int(input())\nwhile score < 0 or score > 100:\n    score = int(input())\nprint(score)",
+      "options": [
+        "40",
+        "150",
+        "nothing",
+        "100"
+      ],
+      "answer": 0,
+      "explanation": "150 > 100 is invalid, so it re-asks. 40 is in range (not <0, not >100), so the loop stops and prints 40.",
+      "id": "u90l03e02"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Using 'and' instead of 'or' here (score < 0 and score > 100) would be a bug.",
+      "answer": true,
+      "explanation": "True. No single number is both below 0 AND above 100, so that condition is never true - the loop never catches bad input. Use or.",
+      "id": "u90l03e03"
+    },
+    {
+      "type": "fillBlank",
+      "prompt": "Complete the two-sided check (invalid below 1 or above 5):\n\nchoice = int(input())\nwhile choice < 1 ____ choice > 5:\n    choice = int(input())\nprint(choice)",
+      "answer": "or",
+      "acceptable": [
+        "or"
+      ],
+      "explanation": "Invalid if too low OR too high, so join the two tests with or.",
+      "id": "u90l03e04"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "For 'a score 0 to 100', which inputs would the loop REJECT?",
+      "options": [
+        "-1 and 101",
+        "0 and 100",
+        "50 only",
+        "None of them"
+      ],
+      "answer": 0,
+      "explanation": "-1 is below 0 and 101 is above 100, so both are rejected. 0 and 100 are the valid edges - edge cases matter.",
+      "id": "u90l03e05"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Should 0 and 100 be ACCEPTED for a '0 to 100' score?",
+      "options": [
+        "Yes - 'to' usually includes both ends",
+        "No, only 1 to 99",
+        "Only 0",
+        "Only 100"
+      ],
+      "answer": 0,
+      "explanation": "'0 to 100' normally includes 0 and 100. Using < and > (not <= and >=) in the invalid-check keeps the endpoints valid. Think about the edges.",
+      "id": "u90l03e06"
+    },
+    {
+      "type": "orderBlocks",
+      "prompt": "Arrange a loop validating a 1-to-5 rating.",
+      "blocks": [
+        "rating = int(input())",
+        "while rating < 1 or rating > 5:",
+        "    rating = int(input())",
+        "print(rating)"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "Read, loop while out of range, re-read, then use. Two-sided validation.",
+      "id": "u90l03e07"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Predict: user types -5, 200, 3 for a 1-to-5 rating. How many re-asks happen?",
+      "options": [
+        "Two (-5 too low, 200 too high), then 3 is accepted",
+        "Three",
+        "One",
+        "Zero"
+      ],
+      "answer": 0,
+      "explanation": "-5 < 1 and 200 > 5 are both invalid, causing two re-asks; 3 is in range and ends the loop.",
+      "id": "u90l03e08"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "A range check protects against both ends at once by combining two comparisons with or.",
+      "answer": true,
+      "explanation": "True. 'too low OR too high' is the whole range check. One or joins the two guards.",
+      "id": "u90l03e09"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "The lesson:",
+      "options": [
+        "Validate both ends of a range with 'low-test or high-test' and mind the edges",
+        "Only check the low end",
+        "Use and for ranges",
+        "Edges never matter"
+      ],
+      "answer": 0,
+      "explanation": "Ranges have two ends; or catches either violation, and <= vs < decides whether the edges count.",
+      "id": "u90l03e10"
+    }
+  ]
+}

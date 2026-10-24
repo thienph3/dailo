@@ -1,0 +1,134 @@
+{
+  "unitId": "u25",
+  "lessonId": "u25l02",
+  "title": "Order matters in an elif chain",
+  "idea": "Python checks branches top to bottom and stops at the first True. Put the stricter test first, or a looser one steals the match. Thinking-heavy.",
+  "exercises": [
+    {
+      "id": "u25l02e01",
+      "type": "multipleChoice",
+      "prompt": "Python reads an if / elif / else chain...",
+      "options": [
+        "top to bottom, stopping at the first True",
+        "bottom to top",
+        "all at once",
+        "in a random order"
+      ],
+      "answer": 0,
+      "explanation": "It checks each test in order and runs the first one that is True, then skips the rest."
+    },
+    {
+      "id": "u25l02e02",
+      "type": "multipleChoice",
+      "prompt": "What does this print?\n\nscore = 95\nif score >= 50:\n    print(\"Pass\")\nelif score >= 90:\n    print(\"Top\")\nelse:\n    print(\"Fail\")",
+      "options": [
+        "Pass",
+        "Top",
+        "Fail",
+        "Pass then Top"
+      ],
+      "answer": 0,
+      "explanation": "95 >= 50 is True, so 'Pass' wins first - the 'Top' branch never gets a turn. The loose test stole the match."
+    },
+    {
+      "id": "u25l02e03",
+      "type": "multipleChoice",
+      "prompt": "In the chain above, why does 'Top' never print, even for a 95?",
+      "options": [
+        "The looser test (>= 50) comes first and matches everything 50+",
+        "90 is not a real number",
+        "elif is broken",
+        "95 is below 90"
+      ],
+      "answer": 0,
+      "explanation": "Because >= 50 is checked first and 95 passes it, the chain stops there. Order decided the outcome."
+    },
+    {
+      "id": "u25l02e04",
+      "type": "orderBlocks",
+      "prompt": "Fix the ordering: arrange these tests from STRICTEST to loosest for a grade chain.",
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "blocks": [
+        "if score >= 90:",
+        "elif score >= 80:",
+        "elif score >= 50:",
+        "else:"
+      ],
+      "explanation": "Strictest first (>= 90), then >= 80, then >= 50, then else. Each branch only catches what the stricter ones above did not."
+    },
+    {
+      "id": "u25l02e05",
+      "type": "multipleChoice",
+      "prompt": "With the corrected order, what does score = 95 print?\n\nif score >= 90:\n    print(\"Top\")\nelif score >= 50:\n    print(\"Pass\")\nelse:\n    print(\"Fail\")",
+      "options": [
+        "Top",
+        "Pass",
+        "Fail",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "Now >= 90 is checked first, so 95 correctly lands in 'Top'. Strict-first ordering fixed the bug."
+    },
+    {
+      "id": "u25l02e06",
+      "type": "trueFalse",
+      "prompt": "For number ranges, putting the strictest (highest) test first usually gives the right buckets.",
+      "answer": true,
+      "explanation": "Yes - check the highest band first so lower, looser tests cannot grab a value that belongs higher up."
+    },
+    {
+      "id": "u25l02e07",
+      "type": "multipleChoice",
+      "prompt": "What does this print?\n\ntemp = 5\nif temp >= 30:\n    print(\"Hot\")\nelif temp >= 10:\n    print(\"Mild\")\nelse:\n    print(\"Cold\")",
+      "options": [
+        "Cold",
+        "Hot",
+        "Mild",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "5 fails >= 30 and >= 10, so the else runs: 'Cold'. The chain fell through to the catch-all."
+    },
+    {
+      "id": "u25l02e08",
+      "type": "multipleChoice",
+      "prompt": "A bug: a program classifies everyone as 'Child' even adults. Likely cause?",
+      "options": [
+        "A loose test like 'age >= 0' is placed before the stricter age tests",
+        "The computer dislikes adults",
+        "elif cannot hold ages",
+        "age is always 0"
+      ],
+      "answer": 0,
+      "explanation": "If a branch that matches almost everything comes first, it steals every match. Reorder so stricter tests come first."
+    },
+    {
+      "id": "u25l02e09",
+      "type": "fillBlank",
+      "prompt": "Complete the strictest-first chain's top test for grades out of 100:\n\nif score ____ 90:\n    print(\"A\")\nelif score >= 80:\n    print(\"B\")\nelse:\n    print(\"C\")",
+      "answer": ">=",
+      "acceptable": [
+        ">="
+      ],
+      "explanation": ">= 90 is the strictest band and must come first so an 80-something cannot grab an A-level score."
+    },
+    {
+      "id": "u25l02e10",
+      "type": "multipleChoice",
+      "prompt": "The key lesson about elif order is...",
+      "options": [
+        "the first True wins, so arrange tests so the right one is reached first",
+        "order never matters",
+        "always put else first",
+        "elif ignores order"
+      ],
+      "answer": 0,
+      "explanation": "First True wins. Thoughtful ordering - usually strictest first for ranges - is what makes the buckets correct."
+    }
+  ]
+}

@@ -1,0 +1,136 @@
+{
+  "unitId": "u60",
+  "lessonId": "u60l02",
+  "title": "The smallest-so-far loop",
+  "idea": "TOOL: the min loop IS the max loop with < instead of >. Shown side by side with predictable output.",
+  "exercises": [
+    {
+      "id": "u60l02e01",
+      "type": "multipleChoice",
+      "prompt": "Read this and predict the output:\n\nscores = [4, 9, 2]\nbest = scores[0]\nfor s in scores:\n    if s < best:\n        best = s\nprint(best)",
+      "options": [
+        "2",
+        "9",
+        "4",
+        "15"
+      ],
+      "answer": 0,
+      "explanation": "best starts at 4, 9 does not beat it, 2 is smaller -> 2. The only difference from the max loop is the < sign."
+    },
+    {
+      "id": "u60l02e02",
+      "type": "multipleChoice",
+      "prompt": "Here are two loops. MAX: 'if n > best'. MIN: 'if n < best'. What is the ONLY difference?",
+      "options": [
+        "The comparison sign: > for biggest, < for smallest",
+        "The whole structure is different",
+        "Min needs two loops",
+        "Min adds the values"
+      ],
+      "answer": 0,
+      "explanation": "Everything else — the start, the loop, the replace, the print — is identical. Flipping one sign flips the job from max to min."
+    },
+    {
+      "id": "u60l02e03",
+      "type": "fillBlank",
+      "prompt": "Fill in the comparison so this keeps the SMALLEST:\n\nbest = nums[0]\nfor n in nums:\n    if n ____ best:\n        best = n",
+      "answer": "<",
+      "acceptable": [
+        "<"
+      ],
+      "explanation": "You replace best only when n is smaller, so the sign is <. Flip it to > and the same loop finds the biggest."
+    },
+    {
+      "id": "u60l02e04",
+      "type": "orderBlocks",
+      "prompt": "Arrange the lines to find the smallest value in temps.",
+      "answer": [
+        1,
+        3,
+        0,
+        2,
+        4
+      ],
+      "blocks": [
+        "    if t < best:",
+        "best = temps[0]",
+        "        best = t",
+        "for t in temps:",
+        "print(best)"
+      ],
+      "explanation": "Same shape as max: start best at the first value, loop, replace when smaller (<), then print."
+    },
+    {
+      "id": "u60l02e05",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nnums = [7, 7, 7]\nbest = nums[0]\nfor n in nums:\n    if n < best:\n        best = n\nprint(best)",
+      "options": [
+        "7",
+        "21",
+        "0",
+        "3"
+      ],
+      "answer": 0,
+      "explanation": "All equal, so n < best is never true and best stays 7. Same all-equal behaviour as max, just flipped."
+    },
+    {
+      "id": "u60l02e06",
+      "type": "trueFalse",
+      "prompt": "If you took your working MAX loop and changed only the > to a <, it would correctly find the smallest.",
+      "answer": true,
+      "explanation": "That is exactly the transfer this unit teaches. One character turns a max into a min."
+    },
+    {
+      "id": "u60l02e07",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nheights = [3, 1, 5, 1, 2]\nbest = heights[0]\nfor h in heights:\n    if h < best:\n        best = h\nprint(best)",
+      "options": [
+        "1",
+        "3",
+        "5",
+        "12"
+      ],
+      "answer": 0,
+      "explanation": "best drops 3 -> 1 and the second 1 is not smaller than 1. The smallest value is 1."
+    },
+    {
+      "id": "u60l02e08",
+      "type": "multipleChoice",
+      "prompt": "A friend wrote 'if s < best: s = best' for the smallest. What goes wrong?",
+      "options": [
+        "The assignment is backwards — the smaller value is lost; it should be best = s",
+        "Nothing, it is the same",
+        "It prints twice",
+        "It finds the biggest"
+      ],
+      "answer": 0,
+      "explanation": "Same bug as in max: 's = best' throws away the winner. Save the smaller value INTO best: 'best = s'."
+    },
+    {
+      "id": "u60l02e09",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nnums = [-4, -9, -2]\nbest = nums[0]\nfor n in nums:\n    if n < best:\n        best = n\nprint(best)",
+      "options": [
+        "-9",
+        "-2",
+        "-4",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "Among negatives, -9 is the smallest (furthest below zero). Starting at a real value (-4) lets it find -9 correctly."
+    },
+    {
+      "id": "u60l02e10",
+      "type": "multipleChoice",
+      "prompt": "In the min loop, what does the variable best hold while the loop runs?",
+      "options": [
+        "The smallest value seen so far",
+        "The biggest value so far",
+        "The running total",
+        "The count of items"
+      ],
+      "answer": 0,
+      "explanation": "Despite the name 'best', here it tracks the smallest-so-far. By the end it holds the overall minimum."
+    }
+  ]
+}

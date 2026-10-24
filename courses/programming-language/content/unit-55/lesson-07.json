@@ -1,0 +1,126 @@
+{
+  "unitId": "u55",
+  "lessonId": "u55l07",
+  "title": "Spot the loop mistake",
+  "idea": "Recognise common errors: missing colon, wrong indentation, looping the variable not the list, printing the list instead of items.",
+  "exercises": [
+    {
+      "id": "u55l07e01",
+      "type": "multipleChoice",
+      "prompt": "What is wrong here?\n\nfor n in nums\n    print(n)",
+      "options": [
+        "The header is missing the colon ':'",
+        "Nothing is wrong",
+        "print should be printn",
+        "nums needs quotes"
+      ],
+      "answer": 0,
+      "explanation": "Every for-header ends with a colon: 'for n in nums:'. Without it, the line is incomplete."
+    },
+    {
+      "id": "u55l07e02",
+      "type": "multipleChoice",
+      "prompt": "The body never runs on its own line. What's wrong?\n\nfor n in nums:\nprint(n)",
+      "options": [
+        "The print must be indented to be inside the loop",
+        "nums is empty",
+        "print is misspelled",
+        "You need two colons"
+      ],
+      "answer": 0,
+      "explanation": "The body line must be indented. As written, print(n) looks like it's OUTSIDE the loop."
+    },
+    {
+      "id": "u55l07e03",
+      "type": "multipleChoice",
+      "prompt": "This loops the wrong thing:\n\nfor nums in n:\n    print(nums)\n\nWhat should it be if the list is called nums?",
+      "options": [
+        "for n in nums:",
+        "for nums in nums:",
+        "for in nums:",
+        "for nums n:"
+      ],
+      "answer": 0,
+      "explanation": "The shape is 'for <loop-variable> in <list>:'. The LIST goes after 'in'. Here the list is nums, so: for n in nums:."
+    },
+    {
+      "id": "u55l07e04",
+      "type": "trueFalse",
+      "prompt": "Writing 'print(nums)' instead of 'print(n)' inside the loop prints the whole list each pass, not each item.",
+      "answer": true,
+      "explanation": "'nums' is the whole list; 'n' is the current item. Mixing them up is a very common slip."
+    },
+    {
+      "id": "u55l07e05",
+      "type": "multipleChoice",
+      "prompt": "nums = [1, 2, 3]\nfor n in nums:\n    print(nums)\n\nWhat does this (buggy) code print?",
+      "options": [
+        "the whole list, three times",
+        "1, 2, 3",
+        "the whole list once",
+        "An error"
+      ],
+      "answer": 0,
+      "explanation": "It prints the whole list once per pass — three times. To print each item, use print(n)."
+    },
+    {
+      "id": "u55l07e06",
+      "type": "multipleChoice",
+      "prompt": "Which header correctly visits each score in a list named scores?",
+      "options": [
+        "for score in scores:",
+        "for scores in score:",
+        "for score in scores",
+        "in scores for score:"
+      ],
+      "answer": 0,
+      "explanation": "Loop variable first, 'in', list, colon: for score in scores:. (The option without a colon is also broken.)"
+    },
+    {
+      "id": "u55l07e07",
+      "type": "multipleChoice",
+      "prompt": "The if below never triggers the way the writer wanted. What's the likely bug?\n\nfor n in nums:\n    if n = 5:\n        print(\"five\")",
+      "options": [
+        "'=' assigns; comparing needs '=='",
+        "Nothing is wrong",
+        "print needs quotes",
+        "nums should be a number"
+      ],
+      "answer": 0,
+      "explanation": "One '=' means assign. To compare the value to 5 you need '==': if n == 5:."
+    },
+    {
+      "id": "u55l07e08",
+      "type": "trueFalse",
+      "prompt": "Indentation level matters: a line indented once is in the loop; indented twice could be inside an if within the loop.",
+      "answer": true,
+      "explanation": "Each indent level marks a deeper 'inside'. Getting it wrong changes which lines run when."
+    },
+    {
+      "id": "u55l07e09",
+      "type": "multipleChoice",
+      "prompt": "Goal: print each item doubled. Which body line is correct?",
+      "options": [
+        "print(item * 2)",
+        "print(items * 2)",
+        "print(item) * 2",
+        "double(item)"
+      ],
+      "answer": 0,
+      "explanation": "Use the loop variable 'item', not the list 'items'. 'double' isn't a tool you have."
+    },
+    {
+      "id": "u55l07e10",
+      "type": "multipleChoice",
+      "prompt": "A learner writes 'for item in [10, 20, 30]:' with no list variable. Is that allowed?",
+      "options": [
+        "Yes — you can loop a list written directly, too",
+        "No, the list must be in a variable",
+        "No, lists can't appear after 'in'",
+        "Only for one item"
+      ],
+      "answer": 0,
+      "explanation": "You can put the list directly after 'in'. Using a named variable is just clearer when the list is reused."
+    }
+  ]
+}

@@ -1,0 +1,156 @@
+{
+  "unitId": "u83",
+  "lessonId": "u83l02",
+  "title": "Finish it together: the average that forgot the empty list",
+  "idea": "GUIDED (UEPCC), bug-focused. An average helper divides by count but has no empty guard, so it crashes on []. Finish the solution by adding the missing case.",
+  "problem": "average(nums) returns total / len(nums). It works on [4, 8, 6] but crashes on []. Finish it so an empty list gives 0.",
+  "exercises": [
+    {
+      "id": "u83l02e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: average(nums) = total / len(nums). It crashes on []. What's MISSING?",
+      "options": [
+        "A guard for the empty list (divide-by-zero)",
+        "The total step",
+        "The print",
+        "The list itself"
+      ],
+      "answer": 0,
+      "explanation": "The normal path is fine; the empty case was never handled. That missing case causes the crash."
+    },
+    {
+      "id": "u83l02e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "Understand — why exactly does [] crash?",
+      "options": [
+        "len([]) is 0, and dividing by 0 is illegal",
+        "Empty lists can't be stored",
+        "total can't start at 0",
+        "print breaks"
+      ],
+      "answer": 0,
+      "explanation": "An empty list has length 0, so total / 0 is a divide-by-zero. That's the exact trigger."
+    },
+    {
+      "id": "u83l02e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example — by hand. For [4, 8, 6]: total 18 over 3. Average?",
+      "options": [
+        "6",
+        "18",
+        "3",
+        "9"
+      ],
+      "answer": 0,
+      "explanation": "18 / 3 = 6. The normal case is correct; only the empty case needs finishing."
+    },
+    {
+      "id": "u83l02e04",
+      "type": "trueFalse",
+      "uepcc": "E",
+      "prompt": "Our chosen answer for the empty list is 0 — a clear value instead of a crash.",
+      "answer": true,
+      "explanation": "Yes — we decide on purpose that empty averages to 0. A clear value beats a crash or hidden failure."
+    },
+    {
+      "id": "u83l02e05",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Plan — where does the empty guard go?",
+      "options": [
+        "BEFORE the division, so it catches empty first",
+        "After the division",
+        "Inside the print only",
+        "It isn't needed"
+      ],
+      "answer": 0,
+      "explanation": "The guard must run before the risky division, so the empty case never reaches the divide."
+    },
+    {
+      "id": "u83l02e06",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Order the finished plan.",
+      "blocks": [
+        "If the list is empty, return 0",
+        "Otherwise, compute the total",
+        "Divide the total by len(nums)",
+        "Return the average"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "Guard empty first, then total, then divide, then return. The edge case leads the plan."
+    },
+    {
+      "id": "u83l02e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code the finished helper.",
+      "blocks": [
+        "def average(nums):",
+        "    if len(nums) == 0:",
+        "        return 0",
+        "    total = 0",
+        "    for n in nums:",
+        "        total = total + n",
+        "    return total / len(nums)"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "explanation": "The guard returns 0 for empty; otherwise accumulate the total and divide. The missing case is now handled on purpose."
+    },
+    {
+      "id": "u83l02e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Complete the guard that catches the empty list:\n\nif len(nums) == 0:\n    return ____",
+      "answer": "0",
+      "acceptable": [
+        "0"
+      ],
+      "explanation": "By our rule, an empty list averages to 0, so we return 0 to avoid the divide-by-zero."
+    },
+    {
+      "id": "u83l02e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check the normal case — average([4, 8, 6]) still gives 6. Verdict?",
+      "options": [
+        "Passes — the fix didn't break the normal path",
+        "Fails",
+        "Unknown",
+        "Rewrite example"
+      ],
+      "answer": 0,
+      "explanation": "6.0 matches the hand example. Good — adding the guard didn't disturb the working case."
+    },
+    {
+      "id": "u83l02e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check the edge — average([]) now returns...",
+      "options": [
+        "0 — the guard handles empty, no crash",
+        "It still crashes",
+        "6",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "The guard returns 0 for the empty list. The crash is gone and the solution is finished."
+    }
+  ]
+}

@@ -1,0 +1,160 @@
+{
+  "unitId": "u31",
+  "lessonId": "u31l07",
+  "title": "Solve it: free shipping over a threshold",
+  "idea": "GUIDED. UEPCC combining a typed total with a boundary and a final amount.",
+  "problem": "Orders of 50 or more get free shipping; otherwise shipping is 5. Ask for the order total and print the final amount to pay.",
+  "exercises": [
+    {
+      "id": "u31l07e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: 50+ ships free, else shipping is 5. Read the total, print the final amount.\n\nWhat is the OUTPUT?",
+      "options": [
+        "The final amount to pay",
+        "Whether shipping is free (yes/no)",
+        "The shipping cost only",
+        "The threshold 50"
+      ],
+      "answer": 0,
+      "explanation": "The output is the final amount to pay (total plus any shipping). Name it before coding."
+    },
+    {
+      "id": "u31l07e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "What value does the user supply?",
+      "options": [
+        "The order total",
+        "The shipping fee",
+        "The word 'free'",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "The order total is the one input, converted with int() so we can compare and add."
+    },
+    {
+      "id": "u31l07e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Work it by hand: total 60. What is the final amount?",
+      "options": [
+        "60",
+        "65",
+        "5",
+        "55"
+      ],
+      "answer": 0,
+      "explanation": "60 is 50 or more, so shipping is free: final is 60. Check value for the free case."
+    },
+    {
+      "id": "u31l07e04",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Another by hand: total 40. What is the final amount?",
+      "options": [
+        "45",
+        "40",
+        "5",
+        "50"
+      ],
+      "answer": 0,
+      "explanation": "40 is under 50, so add 5 shipping: 45. The paid-shipping case."
+    },
+    {
+      "id": "u31l07e05",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Plan the steps in order.",
+      "blocks": [
+        "Decide shipping: 0 if total >= 50, else 5",
+        "Add shipping to the total",
+        "Print the final amount"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Decide the shipping based on the total, then add it, then report the final amount."
+    },
+    {
+      "id": "u31l07e06",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Which comparison matches '50 or more gets free shipping'?",
+      "options": [
+        "total >= 50",
+        "total > 50",
+        "total == 50",
+        "total <= 50"
+      ],
+      "answer": 0,
+      "explanation": ">= 50 includes exactly 50, matching 'or more'. Both inputs and boundary must line up."
+    },
+    {
+      "id": "u31l07e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Arrange the code to match the plan.",
+      "blocks": [
+        "total = int(input(\"Order total: \"))",
+        "if total >= 50:",
+        "    shipping = 0",
+        "else:",
+        "    shipping = 5",
+        "final = total + shipping",
+        "print(final)"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "explanation": "Read the total, set shipping in the branch, add, then print the final amount."
+    },
+    {
+      "id": "u31l07e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Complete the line that computes the amount to pay:\n\nif total >= 50:\n    shipping = 0\nelse:\n    shipping = 5\nfinal = total ____ shipping\nprint(final)",
+      "answer": "+",
+      "acceptable": [
+        "+"
+      ],
+      "explanation": "Add shipping to the total to get the final amount, so the operator is +."
+    },
+    {
+      "id": "u31l07e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check with the first example: total 60. What prints?",
+      "options": [
+        "60",
+        "65",
+        "55",
+        "5"
+      ],
+      "answer": 0,
+      "explanation": "60 >= 50, so shipping = 0; final = 60 + 0 = 60 — matching your hand answer."
+    },
+    {
+      "id": "u31l07e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Re-check with a fresh input: total 40. What prints?",
+      "options": [
+        "45",
+        "40",
+        "50",
+        "5"
+      ],
+      "answer": 0,
+      "explanation": "40 < 50, so shipping = 5; final = 40 + 5 = 45. It generalizes to the paid case."
+    }
+  ]
+}

@@ -1,0 +1,147 @@
+{
+  "unitId": "u26",
+  "lessonId": "u26l05",
+  "title": "Reading 'either' as or",
+  "idea": "Translate 'either ... or ...' wording into an 'or' condition. Thinking-heavy word-to-code mapping.",
+  "exercises": [
+    {
+      "id": "u26l05e01",
+      "type": "multipleChoice",
+      "prompt": "'Free entry if you are a member OR under 12.' Which operator joins the conditions?",
+      "options": [
+        "or",
+        "and",
+        "not",
+        "none"
+      ],
+      "answer": 0,
+      "explanation": "'Either qualifies' maps straight to 'or'."
+    },
+    {
+      "id": "u26l05e02",
+      "type": "multipleChoice",
+      "prompt": "Example by hand: is_member = False, age = 10. Free under 'is_member or age < 12'?",
+      "options": [
+        "Yes - age < 12 is True, so 'or' is True",
+        "No",
+        "Only if a member too",
+        "Cannot tell"
+      ],
+      "answer": 0,
+      "explanation": "age < 12 is True, and 'or' needs only one True side, so entry is free."
+    },
+    {
+      "id": "u26l05e03",
+      "type": "multipleChoice",
+      "prompt": "Now is_member = False, age = 30. Free?",
+      "options": [
+        "No - both sides are False",
+        "Yes",
+        "Only on weekends",
+        "Cannot tell"
+      ],
+      "answer": 0,
+      "explanation": "Not a member and not under 12 - both False, so 'or' is False. Not free."
+    },
+    {
+      "id": "u26l05e04",
+      "type": "orderBlocks",
+      "prompt": "Plan the 'either' rule.",
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "blocks": [
+        "Remember whether they are a member and their age",
+        "Check is_member OR age < 12",
+        "Print 'Free' if either holds, else 'Pay'"
+      ],
+      "explanation": "Remember the inputs, join with 'or', then choose the message."
+    },
+    {
+      "id": "u26l05e05",
+      "type": "multipleChoice",
+      "prompt": "Which code matches 'member OR under 12'?",
+      "options": [
+        "if is_member or age < 12:",
+        "if is_member and age < 12:",
+        "if not is_member:",
+        "if age < 12:"
+      ],
+      "answer": 0,
+      "explanation": "'or age < 12' adds the alternative path. Either being a member or being under 12 is enough."
+    },
+    {
+      "id": "u26l05e06",
+      "type": "orderBlocks",
+      "prompt": "Code the 'either' rule.",
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "blocks": [
+        "is_member = False",
+        "age = 10",
+        "if is_member or age < 12:",
+        "    print(\"Free\")",
+        "else:",
+        "    print(\"Pay\")"
+      ],
+      "explanation": "Name both inputs, join with 'or', and print the result on each path."
+    },
+    {
+      "id": "u26l05e07",
+      "type": "fillBlank",
+      "prompt": "Complete the 'either' condition:\n\nif is_member ____ age < 12:\n    print(\"Free\")\nelse:\n    print(\"Pay\")",
+      "answer": "or",
+      "acceptable": [
+        "or"
+      ],
+      "explanation": "'or' makes either qualifier enough to earn free entry."
+    },
+    {
+      "id": "u26l05e08",
+      "type": "multipleChoice",
+      "prompt": "Check. is_member = False, age = 10 prints 'Free'. Hand answer: 'Free'. Verdict?",
+      "options": [
+        "Pass - matches",
+        "Fail",
+        "Cannot tell",
+        "Change the example"
+      ],
+      "answer": 0,
+      "explanation": "One side (age < 12) was True, so 'or' is True and 'Free' prints."
+    },
+    {
+      "id": "u26l05e09",
+      "type": "multipleChoice",
+      "prompt": "Re-check: is_member = True, age = 40. What prints?",
+      "options": [
+        "Free",
+        "Pay",
+        "40",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "is_member is True, so 'or' is True regardless of age: 'Free'."
+    },
+    {
+      "id": "u26l05e10",
+      "type": "multipleChoice",
+      "prompt": "Word-to-code tip: the word 'either' usually means...",
+      "options": [
+        "join the conditions with 'or'",
+        "use 'and'",
+        "use 'not'",
+        "use elif"
+      ],
+      "answer": 0,
+      "explanation": "'either ... or ...' is the clearest signal to reach for the 'or' operator."
+    }
+  ]
+}

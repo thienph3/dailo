@@ -1,0 +1,97 @@
+{
+  "unitId": "u10",
+  "lessonId": "u10l05",
+  "title": "Combining the numbers in variables",
+  "idea": "Variables hold numbers, and you can combine the variables with + - * / instead of the raw numbers.",
+  "exercises": [
+    {
+      "id": "u10l05e01",
+      "type": "multipleChoice",
+      "prompt": "What will this show?\n\napples = 3\nbananas = 4\nprint(apples + bananas)",
+      "options": ["7", "apples + bananas", "34", "3 4"],
+      "answer": 0,
+      "explanation": "The variables hold 3 and 4. The computer adds their values and shows 7."
+    },
+    {
+      "id": "u10l05e02",
+      "type": "multipleChoice",
+      "prompt": "What will this show?\n\nwidth = 5\nheight = 2\nprint(width * height)",
+      "options": ["10", "52", "7", "width * height"],
+      "answer": 0,
+      "explanation": "width is 5 and height is 2. The computer multiplies their values: 10."
+    },
+    {
+      "id": "u10l05e03",
+      "type": "trueFalse",
+      "prompt": "You can combine two variables with + the same way you combine two numbers.",
+      "answer": true,
+      "explanation": "A variable stands for its value. apples + bananas uses the numbers inside them."
+    },
+    {
+      "id": "u10l05e04",
+      "type": "multipleChoice",
+      "prompt": "What will this show?\n\nstart = 20\nspent = 8\nprint(start - spent)",
+      "options": ["12", "28", "208", "start - spent"],
+      "answer": 0,
+      "explanation": "start is 20, spent is 8. 20 - 8 is 12."
+    },
+    {
+      "id": "u10l05e05",
+      "type": "fillBlank",
+      "prompt": "The variables hold 10 and 2. Fill the blank so the screen shows 12:\n\nbig = 10\nsmall = 2\nprint(big ____ small)",
+      "answer": "+",
+      "acceptable": ["+"],
+      "explanation": "10 + 2 is 12. We add the two variables' values."
+    },
+    {
+      "id": "u10l05e06",
+      "type": "tapTokens",
+      "prompt": "The variables price and tax already exist. Build an instruction that adds them and shows the result.",
+      "tokens": ["print", "(", "price", "+", "tax", ")"],
+      "answer": ["print", "(", "price", "+", "tax", ")"],
+      "explanation": "print(price + tax) adds the two values the variables hold."
+    },
+    {
+      "id": "u10l05e07",
+      "type": "multipleChoice",
+      "prompt": "What will this show?\n\npacks = 4\nper_pack = 6\nprint(packs * per_pack)",
+      "options": ["24", "46", "10", "packs * per_pack"],
+      "answer": 0,
+      "explanation": "4 packs with 6 in each: 4 * 6 is 24."
+    },
+    {
+      "id": "u10l05e08",
+      "type": "multipleChoice",
+      "prompt": "Why combine variables instead of just the numbers 3 + 4?",
+      "options": [
+        "If the numbers change, you only update the variables once",
+        "It makes the computer slower",
+        "Variables can't do math",
+        "There is no reason"
+      ],
+      "answer": 0,
+      "explanation": "Variables name the values. Change the value in one place and every line that uses it updates too."
+    },
+    {
+      "id": "u10l05e09",
+      "type": "multipleChoice",
+      "prompt": "Spot the mistake.\n\ncost = 5\nprint(cost + price)",
+      "options": [
+        "price was never given a value",
+        "cost is spelled wrong",
+        "print needs quotes",
+        "Nothing is wrong"
+      ],
+      "answer": 0,
+      "explanation": "You can only use a variable after you give it a value. price has no value, so the computer can't combine it."
+    },
+    {
+      "id": "u10l05e10",
+      "type": "fillBlank",
+      "prompt": "The variables total and parts exist. Write a full instruction that divides total by parts and shows the result.",
+      "answer": "print(total / parts)",
+      "acceptable": ["print(total / parts)", "print(total/parts)"],
+      "explanation": "print(total / parts) divides the two values the variables hold."
+    }
+  ]
+}

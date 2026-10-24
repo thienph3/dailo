@@ -1,0 +1,134 @@
+{
+  "unitId": "u14",
+  "lessonId": "u14l08",
+  "title": "Solve it: change into notes and coins",
+  "idea": "GUIDED PROBLEM. A richer multi-step: change left, then how many 10-notes (//) and the coins left (%). Combines subtraction, //, and % with reassignment. Every value named.",
+  "problem": "An item costs 37 and you pay with 100. Show the change, then how many whole 10-notes fit in the change and how many single coins are left.",
+  "exercises": [
+    {
+      "id": "u14l08e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: item 37, pay 100. Show change, then whole 10-notes in the change and the leftover coins.\n\nUnderstand — how many OUTPUTS?",
+      "options": [
+        "Three: the change, the number of 10-notes, and the leftover coins",
+        "One: just the change",
+        "Two: notes and coins only",
+        "None"
+      ],
+      "answer": 0,
+      "explanation": "Three outputs. The change feeds the other two. Name them all up front."
+    },
+    {
+      "id": "u14l08e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "What are the INPUTS?",
+      "options": [
+        "The price (37), the amount paid (100), and the note size (10)",
+        "Only the number 6",
+        "The word 'change'",
+        "None"
+      ],
+      "answer": 0,
+      "explanation": "Three inputs: price 37, paid 100, note size 10. All become named variables."
+    },
+    {
+      "id": "u14l08e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example by hand: pay 100 for a 37 item. Change, then 10-notes and leftover coins in that change?",
+      "options": [
+        "Change 63; 6 ten-notes; 3 coins left",
+        "Change 63; 7 ten-notes; 0 coins left",
+        "Change 37; 3 ten-notes; 7 coins left",
+        "Change 137; 13 notes; 7 coins"
+      ],
+      "answer": 0,
+      "explanation": "100 - 37 = 63 change. 63 // 10 = 6 notes, 63 % 10 = 3 coins. Check values: 63, 6, 3."
+    },
+    {
+      "id": "u14l08e04",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Put the plan in order.",
+      "blocks": [
+        "Work out whole 10-notes in the change with //",
+        "Work out the change (paid minus price)",
+        "Remember price, paid, and note size",
+        "Work out leftover coins with %",
+        "Show all three results"
+      ],
+      "answer": [2, 1, 0, 3, 4],
+      "explanation": "Remember inputs, find the change first, then split it: // for notes, % for coins, then show all three."
+    },
+    {
+      "id": "u14l08e05",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "The notes and coins steps both work on which value?",
+      "options": [
+        "The change (63), not the original price or paid amount",
+        "The price (37)",
+        "The paid amount (100)",
+        "The note size (10)"
+      ],
+      "answer": 0,
+      "explanation": "You split the CHANGE into notes and coins. Using the right value in later steps is a key planning habit."
+    },
+    {
+      "id": "u14l08e06",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Complete the change step:\n\nprice = 37\npaid = 100\nnote_size = 10\nchange = paid ____ price",
+      "answer": "-",
+      "acceptable": ["-"],
+      "explanation": "Change is what's left after paying: paid - price = 100 - 37 = 63. Order matters: paid first."
+    },
+    {
+      "id": "u14l08e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Arrange the full solution.",
+      "blocks": [
+        "price = 37",
+        "paid = 100",
+        "note_size = 10",
+        "change = paid - price",
+        "notes = change // note_size",
+        "coins = change % note_size",
+        "print(change)",
+        "print(notes)",
+        "print(coins)"
+      ],
+      "answer": [0, 1, 2, 3, 4, 5, 6, 7, 8],
+      "explanation": "Store inputs, compute change, then split change with // and %, print all three. Every number is named and used."
+    },
+    {
+      "id": "u14l08e08",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "The code prints 63, 6, 3. Hand example said 63, 6, 3. Verdict?",
+      "options": ["Passes — all three match", "Fails", "Only change is right", "Unknown"],
+      "answer": 0,
+      "explanation": "All three outputs match the example, so the solution is correct."
+    },
+    {
+      "id": "u14l08e09",
+      "type": "trueFalse",
+      "uepcc": "Check",
+      "prompt": "Sanity check: notes * note_size + coins should equal the change (63).",
+      "answer": true,
+      "explanation": "Yes! 6 x 10 + 3 = 63. Rebuilding the change confirms // and % are right."
+    },
+    {
+      "id": "u14l08e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "New sale: item 48, pay 100, note size 10. Same code. What do the three prints show?",
+      "options": ["52, 5, 2", "52, 4, 12", "48, 4, 8", "52, 6, 2"],
+      "answer": 0,
+      "explanation": "Change 100 - 48 = 52; 52 // 10 = 5 notes; 52 % 10 = 2 coins. And 5 x 10 + 2 = 52. The plan generalizes."
+    }
+  ]
+}

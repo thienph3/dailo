@@ -1,0 +1,142 @@
+{
+  "unitId": "u92",
+  "lessonId": "u92l10",
+  "title": "The whole toolkit, woven",
+  "idea": "Review of the unit (lean review-heavy): recap the three threads and the clean weaves, mixing in earlier laps - no new syntax.",
+  "exercises": [
+    {
+      "type": "multipleChoice",
+      "prompt": "In ONE sentence, what is 'integration' in this unit?",
+      "options": [
+        "Weaving functions, loops, and decisions into one coherent solution",
+        "Learning a new loop",
+        "A new kind of list",
+        "A faster print"
+      ],
+      "answer": 0,
+      "explanation": "Combining the three threads cleanly, with no new syntax. That's the unit.",
+      "id": "u92l10e01"
+    },
+    {
+      "type": "matchPairs",
+      "prompt": "Review: match each thread to what it contributes.",
+      "pairs": [
+        {
+          "left": "Function",
+          "right": "A reusable named sub-plan"
+        },
+        {
+          "left": "Loop",
+          "right": "A repeated action"
+        },
+        {
+          "left": "Decision",
+          "right": "A choice between paths"
+        }
+      ],
+      "explanation": "Sub-plan, repeat, choice. Knowing which thread does what is the heart of integration.",
+      "id": "u92l10e02"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Predict the output (review of helper-in-a-loop):\n\ndef double(n):\n    return n * 2\n\ntotal = 0\nfor x in [3, 4]:\n    total = total + double(x)\nprint(total)",
+      "options": [
+        "14",
+        "7",
+        "6",
+        "8"
+      ],
+      "answer": 0,
+      "explanation": "double gives 6 and 8, total = 14. A function called each turn, accumulating - the core weave.",
+      "id": "u92l10e03"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Review: a helper used in a loop should RETURN its result so the loop can use it.",
+      "answer": true,
+      "explanation": "True. No return means nothing comes back. Return-then-use is the backbone of the weave.",
+      "id": "u92l10e04"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Review (decision in a loop): predict the output.\n\nkept = 0\nfor n in [2, 8, 5]:\n    if n > 4:\n        kept = kept + 1\nprint(kept)",
+      "options": [
+        "2",
+        "3",
+        "1",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "8 and 5 are > 4, so kept = 2. A choice made on every turn - filtering by counting.",
+      "id": "u92l10e05"
+    },
+    {
+      "type": "orderBlocks",
+      "prompt": "Order the integration habit.",
+      "blocks": [
+        "Name the parts of the problem",
+        "Match each to a loop, decision, or function",
+        "Weave them in order and trace one item to check"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Decompose, map to threads, assemble and verify. The same plan that ran through this whole unit.",
+      "id": "u92l10e06"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Review (earlier lap - validation): which still guards bad input inside a bigger woven program?",
+      "options": [
+        "A validation while loop that re-asks until valid",
+        "A single print",
+        "A fixed range",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "Validation loops (last lap) slot into integrated programs wherever untrusted input enters. All laps combine.",
+      "id": "u92l10e07"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Predict the output (review of a loop in a function):\n\ndef total_of(nums):\n    total = 0\n    for n in nums:\n        total = total + n\n    return total\n\nprint(total_of([1, 2, 3, 4]))",
+      "options": [
+        "10",
+        "9",
+        "4",
+        "1"
+      ],
+      "answer": 0,
+      "explanation": "The wrapped loop sums 1+2+3+4 = 10 and returns it. A whole repeat as one reusable sub-plan.",
+      "id": "u92l10e08"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Which problem most clearly needs ALL THREE threads?",
+      "options": [
+        "For each order, if it qualifies by a shared rule, add it to a running total",
+        "Add two numbers",
+        "Print one word",
+        "Store a value"
+      ],
+      "answer": 0,
+      "explanation": "'For each' (loop), 'if it qualifies' (decision), 'shared rule' (function), 'running total' (accumulator). A full weave.",
+      "id": "u92l10e09"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "You've finished Unit 92. What can you now do?",
+      "options": [
+        "Braid functions, loops, and decisions into coherent solutions - the whole toolkit working as one",
+        "Only use one tool at a time",
+        "Avoid combining tools",
+        "Only write single lines"
+      ],
+      "answer": 0,
+      "explanation": "You can integrate everything you've learned into real solutions. That's the capstone skill of this lap - and no new syntax was needed.",
+      "id": "u92l10e10"
+    }
+  ]
+}

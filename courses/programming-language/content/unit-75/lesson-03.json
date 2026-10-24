@@ -1,0 +1,150 @@
+{
+  "unitId": "u75",
+  "lessonId": "u75l03",
+  "title": "Solve it: a sub-plan that returns change",
+  "idea": "GUIDED PROBLEM (UEPCC). A two-parameter sub-plan returns the change (paid minus cost). Practices subtraction inside a returning sub-plan.",
+  "problem": "Write change(paid, cost) that hands back paid minus cost. Use it to show the change when you pay 20 for a 13 lunch.",
+  "exercises": [
+    {
+      "id": "u75l03e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: change(paid, cost) hands back paid - cost; show the change for paying 20 for a 13 lunch.\n\nWhat is the OUTPUT?",
+      "options": [
+        "The change: paid minus cost",
+        "The cost only",
+        "The amount paid only",
+        "The lunch name"
+      ],
+      "answer": 0,
+      "explanation": "The output is the change, handed back with return. Name the output before anything else."
+    },
+    {
+      "id": "u75l03e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "What are the two INPUTS (and therefore the two parameters)?",
+      "options": [
+        "paid and cost",
+        "only paid",
+        "only cost",
+        "the change"
+      ],
+      "answer": 0,
+      "explanation": "The inputs are paid and cost. They become the two parameters; the change is computed from them."
+    },
+    {
+      "id": "u75l03e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example by hand — pay 20 for a 13 lunch. The change is...",
+      "options": [
+        "7",
+        "33",
+        "13",
+        "20"
+      ],
+      "answer": 0,
+      "explanation": "20 - 13 = 7. This is the value you'll check the returned result against."
+    },
+    {
+      "id": "u75l03e04",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Order matters in subtraction. Which is correct for change?",
+      "options": [
+        "paid - cost",
+        "cost - paid",
+        "paid + cost",
+        "cost / paid"
+      ],
+      "answer": 0,
+      "explanation": "Change is what's left after paying: paid - cost. 20 - 13 = 7. Swapping the order (13 - 20) would be wrong."
+    },
+    {
+      "id": "u75l03e05",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Plan the sub-plan in plain English.",
+      "blocks": [
+        "Name the sub-plan change with inputs paid and cost",
+        "Subtract cost from paid",
+        "Hand the change back"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Define with its inputs, subtract cost from paid, return the result. Plan in words first."
+    },
+    {
+      "id": "u75l03e06",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Which tool hands the change back so the main plan can use it?",
+      "options": [
+        "return",
+        "print",
+        "input",
+        "a loop"
+      ],
+      "answer": 0,
+      "explanation": "return hands the value back. If the main plan also wants to show it, it prints the returned value."
+    },
+    {
+      "id": "u75l03e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code it: define change, return paid - cost, then print change(20, 13).",
+      "blocks": [
+        "def change(paid, cost):",
+        "    return paid - cost",
+        "print(change(20, 13))"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Define with both parameters, return paid - cost, call with 20 and 13 inside print."
+    },
+    {
+      "id": "u75l03e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Complete the body:\n\ndef change(paid, cost):\n    return paid ____ cost",
+      "answer": "-",
+      "acceptable": ["-"],
+      "explanation": "Subtract: paid - cost. For 20 and 13 that's 7."
+    },
+    {
+      "id": "u75l03e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check — it prints 7 and your hand example was 7. Verdict?",
+      "options": [
+        "Passes",
+        "Fails",
+        "Unknown",
+        "Rewrite the example"
+      ],
+      "answer": 0,
+      "explanation": "Output (7) matches the hand example (7). Correct."
+    },
+    {
+      "id": "u75l03e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Re-check: change(50, 35). What comes back?",
+      "options": [
+        "15",
+        "7",
+        "85",
+        "35"
+      ],
+      "answer": 0,
+      "explanation": "50 - 35 = 15. New inputs, correct new answer — the sub-plan generalizes."
+    }
+  ]
+}

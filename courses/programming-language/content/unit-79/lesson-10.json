@@ -1,0 +1,150 @@
+{
+  "unitId": "u79",
+  "lessonId": "u79l10",
+  "title": "Solve it together: average taxed price (review)",
+  "idea": "GUIDED PROBLEM (UEPCC), review-heavy. Compose everything: a tax helper, a loop that totals taxed prices, then divide by the count for the average.",
+  "problem": "Add 10% tax to each of [100, 200, 300], then show the AVERAGE taxed price.",
+  "exercises": [
+    {
+      "id": "u79l10e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: tax each of [100, 200, 300] by 10%, then show the AVERAGE taxed price.\n\nWhat is the OUTPUT?",
+      "options": [
+        "One number — the average of the taxed prices",
+        "The total taxed price",
+        "The count of prices",
+        "The biggest taxed price"
+      ],
+      "answer": 0,
+      "explanation": "The output is one number: the average (total of taxed prices divided by how many)."
+    },
+    {
+      "id": "u79l10e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "This has two parts. What are they?",
+      "options": [
+        "Tax each price, then average the taxed prices",
+        "Count then sort",
+        "Only tax",
+        "Only average"
+      ],
+      "answer": 0,
+      "explanation": "Part 1: tax each price (a helper in a loop). Part 2: average those taxed values (total / count)."
+    },
+    {
+      "id": "u79l10e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example — by hand. Taxed: 110, 220, 330. Total 660, count 3. Average is...",
+      "options": [
+        "220.0",
+        "660",
+        "3",
+        "110.0"
+      ],
+      "answer": 0,
+      "explanation": "660 / 3 = 220.0 — our check value. Hand-work both parts before coding."
+    },
+    {
+      "id": "u79l10e04",
+      "type": "trueFalse",
+      "uepcc": "E",
+      "prompt": "We average the TAXED prices (110, 220, 330), not the original prices.",
+      "answer": true,
+      "explanation": "Yes. Tax comes first, then we average the taxed values. Mixing this up would give the wrong answer."
+    },
+    {
+      "id": "u79l10e05",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Plan — REVIEW. Which helper from earlier lessons do we reuse?",
+      "options": [
+        "add_tax(price) returns price + price * 0.1",
+        "is_even(n)",
+        "bigger(a, b)",
+        "discount(price)"
+      ],
+      "answer": 0,
+      "explanation": "Reuse add_tax from lesson 1. Small, single-job helpers pay off — we compose the one we already trust."
+    },
+    {
+      "id": "u79l10e06",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Plan the full solution.",
+      "blocks": [
+        "Start total at 0",
+        "For each price, add its taxed value to total",
+        "Divide total by how many prices there are",
+        "Show the average"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "Total the taxed prices with a loop, then divide by the count (len) for the average, then show it."
+    },
+    {
+      "id": "u79l10e07",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "REVIEW: code the count part using the size of the list:\n\naverage = total / ____(prices)",
+      "answer": "len",
+      "acceptable": ["len"],
+      "explanation": "len(prices) is how many prices there are — 3 here. total / len(prices) is the average."
+    },
+    {
+      "id": "u79l10e08",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code the full solution (add_tax is already defined). Arrange the lines.",
+      "blocks": [
+        "prices = [100, 200, 300]",
+        "total = 0",
+        "for price in prices:",
+        "    total = total + add_tax(price)",
+        "print(total / len(prices))"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "explanation": "Total the taxed prices (660.0), then divide by len (3) to print 220.0."
+    },
+    {
+      "id": "u79l10e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check — the code prints 220.0, matching your hand example. So...",
+      "options": [
+        "It passes — both parts are correct",
+        "It fails",
+        "You can't tell",
+        "Change the example"
+      ],
+      "answer": 0,
+      "explanation": "220.0 matches the hand-worked average. Tax-then-average, composed correctly."
+    },
+    {
+      "id": "u79l10e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Re-check with [100, 100]. Taxed: 110, 110. Average?",
+      "options": [
+        "110.0",
+        "220.0",
+        "100.0",
+        "2"
+      ],
+      "answer": 0,
+      "explanation": "Total 220.0, count 2, average 110.0. Fresh inputs confirm it. You composed helpers and patterns with UEPCC — great work!"
+    }
+  ]
+}

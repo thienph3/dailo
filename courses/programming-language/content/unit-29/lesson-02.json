@@ -1,0 +1,121 @@
+{
+  "unitId": "u29",
+  "lessonId": "u29l02",
+  "title": "Capital letters count",
+  "idea": "String comparison is case-sensitive: \"Red\" and \"red\" are NOT equal. Predict matches that differ only by capitalization.",
+  "exercises": [
+    {
+      "id": "u29l02e01",
+      "type": "multipleChoice",
+      "prompt": "What is the value of this?\n\n\"Red\" == \"red\"",
+      "options": [
+        "False",
+        "True",
+        "an error",
+        "Red"
+      ],
+      "answer": 0,
+      "explanation": "A capital R and a lowercase r are different characters, so the words are not an exact match - False."
+    },
+    {
+      "id": "u29l02e02",
+      "type": "trueFalse",
+      "prompt": "String comparison treats \"YES\" and \"yes\" as the same word.",
+      "answer": false,
+      "explanation": "No - comparison is case-sensitive. Different capitalization means a different word to the computer."
+    },
+    {
+      "id": "u29l02e03",
+      "type": "multipleChoice",
+      "prompt": "What does this print?\n\nanswer = \"Yes\"\nif answer == \"yes\":\n    print(\"Confirmed\")\nelse:\n    print(\"Not confirmed\")",
+      "options": [
+        "Not confirmed",
+        "Confirmed",
+        "Yes",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "\"Yes\" (capital Y) does not equal \"yes\" (lowercase), so the else runs. Case matters."
+    },
+    {
+      "id": "u29l02e04",
+      "type": "multipleChoice",
+      "prompt": "Which pair IS equal?",
+      "options": [
+        "\"blue\" == \"blue\"",
+        "\"Blue\" == \"blue\"",
+        "\"BLUE\" == \"blue\"",
+        "\"blue\" == \"blues\""
+      ],
+      "answer": 0,
+      "explanation": "Only identical spelling AND identical case gives True. \"blue\" matches \"blue\" exactly."
+    },
+    {
+      "id": "u29l02e05",
+      "type": "multipleChoice",
+      "prompt": "Why might checking only answer == \"yes\" miss some users?",
+      "options": [
+        "Someone might type \"Yes\" or \"YES\", which do not match \"yes\"",
+        "Users never type yes",
+        "yes is not a word",
+        "It always matches everything"
+      ],
+      "answer": 0,
+      "explanation": "People capitalize differently. An exact lowercase check misses \"Yes\" and \"YES\" - a real-world gotcha."
+    },
+    {
+      "id": "u29l02e06",
+      "type": "multipleChoice",
+      "prompt": "A safe way to accept several capitalizations of yes, using tools you know, is...",
+      "options": [
+        "if answer == \"yes\" or answer == \"Yes\" or answer == \"YES\"",
+        "if answer == \"maybe\"",
+        "there is no way",
+        "if answer != \"yes\""
+      ],
+      "answer": 0,
+      "explanation": "Joining the variants with 'or' accepts any of them. (Reviewing 'or' from the boolean unit.)"
+    },
+    {
+      "id": "u29l02e07",
+      "type": "fillBlank",
+      "prompt": "Accept \"yes\" OR \"Yes\":\n\nif answer == \"yes\" ____ answer == \"Yes\":\n    print(\"Confirmed\")",
+      "answer": "or",
+      "acceptable": ["or"],
+      "explanation": "'or' is true when either variant matches, so both spellings are accepted."
+    },
+    {
+      "id": "u29l02e08",
+      "type": "trueFalse",
+      "prompt": "\"go\" == \"go \" (with a trailing space) is True.",
+      "answer": false,
+      "explanation": "No - the extra space makes them different. Exact match counts every character, including spaces."
+    },
+    {
+      "id": "u29l02e09",
+      "type": "multipleChoice",
+      "prompt": "What does this print?\n\ncmd = \"STOP\"\nif cmd == \"stop\":\n    print(\"Halting\")\nelse:\n    print(\"Unknown command\")",
+      "options": [
+        "Unknown command",
+        "Halting",
+        "STOP",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "\"STOP\" does not equal \"stop\" because of case, so the else prints \"Unknown command\"."
+    },
+    {
+      "id": "u29l02e10",
+      "type": "multipleChoice",
+      "prompt": "The main idea here:",
+      "options": [
+        "Word comparison is exact - case and spaces must match too",
+        "Case never matters",
+        "Spaces are ignored",
+        "Only length matters"
+      ],
+      "answer": 0,
+      "explanation": "The computer compares letter by letter, exactly. Plan for the capitalizations users might actually type."
+    }
+  ]
+}

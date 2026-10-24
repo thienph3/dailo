@@ -1,0 +1,140 @@
+{
+  "unitId": "u47",
+  "lessonId": "u47l09",
+  "title": "Stop early, or skip one",
+  "idea": "MEET. Recognising when a loop should STOP early (break) or SKIP one pass (continue). Pattern choice, no code.",
+  "exercises": [
+    {
+      "id": "u47l09e01",
+      "type": "multipleChoice",
+      "prompt": "'Search 1 to 100 for the first number over 50 and stop.' You want to...",
+      "options": [
+        "stop the loop at the first match (break)",
+        "skip that number (continue)",
+        "keep looping to 100",
+        "never loop"
+      ],
+      "answer": 0,
+      "explanation": "Once you find the first match there is no reason to keep going — break stops the loop immediately."
+    },
+    {
+      "id": "u47l09e02",
+      "type": "multipleChoice",
+      "prompt": "'Print 1 to 10 but skip 7.' For the number 7 you want to...",
+      "options": [
+        "skip just that pass and keep going (continue)",
+        "stop the whole loop (break)",
+        "print it anyway",
+        "restart"
+      ],
+      "answer": 0,
+      "explanation": "continue skips the rest of the current pass and moves on, so 7 is skipped but the loop continues."
+    },
+    {
+      "id": "u47l09e03",
+      "type": "matchPairs",
+      "prompt": "Match each need to break or continue.",
+      "pairs": [
+        {
+          "left": "Stop at the first match",
+          "right": "break"
+        },
+        {
+          "left": "Skip this one, keep looping",
+          "right": "continue"
+        },
+        {
+          "left": "End the loop early",
+          "right": "break"
+        },
+        {
+          "left": "Ignore just the even ones",
+          "right": "continue"
+        }
+      ],
+      "explanation": "break leaves the loop entirely; continue only skips the current pass and keeps repeating."
+    },
+    {
+      "id": "u47l09e04",
+      "type": "trueFalse",
+      "prompt": "break and continue both change how a loop repeats, but one ends it and one skips a pass.",
+      "answer": true,
+      "explanation": "True. break ends the loop; continue skips the rest of this pass and goes to the next."
+    },
+    {
+      "id": "u47l09e05",
+      "type": "multipleChoice",
+      "prompt": "Which phrase hints at BREAK?",
+      "options": [
+        "'stop as soon as you find ...'",
+        "'skip the ones that ...'",
+        "'for each and every'",
+        "'count them all'"
+      ],
+      "answer": 0,
+      "explanation": "'Stop as soon as ...' means end at the first success — that is break."
+    },
+    {
+      "id": "u47l09e06",
+      "type": "multipleChoice",
+      "prompt": "Which phrase hints at CONTINUE?",
+      "options": [
+        "'skip the ones that ...'",
+        "'stop at the first ...'",
+        "'exactly 5 times'",
+        "'print everything'"
+      ],
+      "answer": 0,
+      "explanation": "'Skip the ones that ...' means ignore certain passes but keep going — that is continue."
+    },
+    {
+      "id": "u47l09e07",
+      "type": "trueFalse",
+      "prompt": "Without break, 'stop at the first match' would waste work checking numbers after the answer is found.",
+      "answer": true,
+      "explanation": "True. break saves that wasted work by leaving the moment the goal is met."
+    },
+    {
+      "id": "u47l09e08",
+      "type": "orderBlocks",
+      "prompt": "Order what happens when break runs.",
+      "blocks": [
+        "break runs inside the loop",
+        "The loop ends immediately",
+        "The program continues after the loop"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "break stops the loop at once, skipping any remaining passes, and the program carries on after it."
+    },
+    {
+      "id": "u47l09e09",
+      "type": "multipleChoice",
+      "prompt": "'Go through the days and skip weekends, handling only weekdays.' break or continue?",
+      "options": [
+        "continue — skip weekend passes, keep going",
+        "break — stop at the first weekend",
+        "neither",
+        "stop forever"
+      ],
+      "answer": 0,
+      "explanation": "You skip weekend passes but keep handling the rest, so continue fits — not break."
+    },
+    {
+      "id": "u47l09e10",
+      "type": "multipleChoice",
+      "prompt": "'Keep asking for a password; stop the moment it is correct.' break or continue?",
+      "options": [
+        "break — stop at the correct password",
+        "continue — skip the correct one",
+        "neither",
+        "loop forever"
+      ],
+      "answer": 0,
+      "explanation": "You end the loop as soon as it is right — break. continue would skip the correct answer, which is wrong."
+    }
+  ]
+}

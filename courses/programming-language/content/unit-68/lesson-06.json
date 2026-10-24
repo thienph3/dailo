@@ -1,0 +1,136 @@
+{
+  "unitId": "u68",
+  "lessonId": "u68l06",
+  "title": "Solve it: the range of temperatures",
+  "idea": "LOOP: find both max and min in one pass problem. Reuses track-the-best, works with negatives.",
+  "exercises": [
+    {
+      "id": "u68l06e01",
+      "type": "multipleChoice",
+      "prompt": "PROBLEM: temps = [3, -1, 7, 2]. Find the highest and the lowest. Which two tools?",
+      "options": [
+        "max and min",
+        "sum and count",
+        "filter and search",
+        "average twice"
+      ],
+      "answer": 0,
+      "explanation": "Highest is max, lowest is min — both track-the-best patterns, one flipped."
+    },
+    {
+      "id": "u68l06e02",
+      "type": "multipleChoice",
+      "prompt": "By hand, the highest of [3, -1, 7, 2] is...",
+      "options": [
+        "7",
+        "3",
+        "-1",
+        "2"
+      ],
+      "answer": 0,
+      "explanation": "7 is the biggest value. That's the max."
+    },
+    {
+      "id": "u68l06e03",
+      "type": "multipleChoice",
+      "prompt": "By hand, the lowest of [3, -1, 7, 2] is...",
+      "options": [
+        "-1",
+        "2",
+        "3",
+        "7"
+      ],
+      "answer": 0,
+      "explanation": "-1 is the smallest (negatives are lower than positives). That's the min."
+    },
+    {
+      "id": "u68l06e04",
+      "type": "multipleChoice",
+      "prompt": "For max AND min, both 'best' variables should start at...",
+      "options": [
+        "the first item, temps[0]",
+        "0",
+        "100 and -100",
+        "the length"
+      ],
+      "answer": 0,
+      "explanation": "Start both at the first real item so the comparisons work, even with negatives. Starting min at 0 would miss -1."
+    },
+    {
+      "id": "u68l06e05",
+      "type": "fillBlank",
+      "prompt": "Complete the min update:\n\nlowest = temps[0]\nfor t in temps:\n    if t ____ lowest:\n        lowest = t",
+      "answer": "<",
+      "acceptable": [
+        "<"
+      ],
+      "explanation": "Min keeps the SMALLER value, so the test is <. (Max would use >.)"
+    },
+    {
+      "id": "u68l06e06",
+      "type": "orderBlocks",
+      "prompt": "Arrange a loop that finds the highest.",
+      "blocks": [
+        "highest = temps[0]",
+        "for t in temps:",
+        "    if t > highest:",
+        "        highest = t",
+        "print(highest)"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "explanation": "Start highest at the first temp, keep the larger each pass, print. Finds 7."
+    },
+    {
+      "id": "u68l06e07",
+      "type": "multipleChoice",
+      "prompt": "max uses 'if t > best' and min uses 'if t < best'. What else differs between them?",
+      "options": [
+        "nothing else — only the comparison direction flips",
+        "the start value",
+        "the print",
+        "the loop"
+      ],
+      "answer": 0,
+      "explanation": "Same shape, opposite comparison. Learning max gives you min almost for free — that's transfer."
+    },
+    {
+      "id": "u68l06e08",
+      "type": "trueFalse",
+      "prompt": "Starting 'lowest' at 0 would be a bug for a list of all-positive temps like [3, 7, 2].",
+      "answer": true,
+      "explanation": "Yes — no positive is below 0, so lowest would wrongly stay 0 (not in the list). Start at the first item instead."
+    },
+    {
+      "id": "u68l06e09",
+      "type": "multipleChoice",
+      "prompt": "Re-check: temps = [5]. Highest and lowest are both...",
+      "options": [
+        "5 — the only item is both the biggest and smallest",
+        "0",
+        "5 and 0",
+        "undefined"
+      ],
+      "answer": 0,
+      "explanation": "With one item, it's both the max and the min: 5. Starting at the first item handles single-item lists correctly."
+    },
+    {
+      "id": "u68l06e10",
+      "type": "multipleChoice",
+      "prompt": "The 'range' (highest minus lowest) of [3, -1, 7, 2] is...",
+      "options": [
+        "8 (that's 7 minus -1)",
+        "6",
+        "5",
+        "4"
+      ],
+      "answer": 0,
+      "explanation": "7 - (-1) = 8. Combining max and min lets you answer a new question (the spread) from tools you already know."
+    }
+  ]
+}

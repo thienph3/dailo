@@ -1,0 +1,118 @@
+{
+  "unitId": "u05",
+  "lessonId": "u05l01",
+  "title": "What 'the Check' means",
+  "idea": "After you run a program, you look: did the real output match what you expected? That look is the Check.",
+  "exercises": [
+    {
+      "id": "u05l01e01",
+      "type": "multipleChoice",
+      "prompt": "What is 'the Check'?",
+      "options": [
+        "Comparing the real output to what you expected, then judging pass or fail",
+        "Running the program faster",
+        "Deleting the program",
+        "Writing more print lines"
+      ],
+      "answer": 0,
+      "explanation": "The Check is simple: look at what came out, compare it to what you wanted, and decide pass or fail."
+    },
+    {
+      "id": "u05l01e02",
+      "type": "trueFalse",
+      "prompt": "The Check happens after you run the program, not before.",
+      "answer": true,
+      "explanation": "You need real output to compare. So the Check comes last, after the program runs."
+    },
+    {
+      "id": "u05l01e03",
+      "type": "multipleChoice",
+      "prompt": "You expected the output 'Hi'. The program printed 'Hi'. Did it pass the Check?",
+      "options": [
+        "Yes — it matches",
+        "No",
+        "Only if you run it twice",
+        "You can't tell"
+      ],
+      "answer": 0,
+      "explanation": "Expected 'Hi', got 'Hi'. They match, so it passes. The Check is just that comparison."
+    },
+    {
+      "id": "u05l01e04",
+      "type": "multipleChoice",
+      "prompt": "You expected 'Hi'. The program printed 'Bye'. Did it pass?",
+      "options": [
+        "No — the real output is different from what you expected",
+        "Yes",
+        "Maybe",
+        "Only on Mondays"
+      ],
+      "answer": 0,
+      "explanation": "Expected 'Hi', got 'Bye'. They differ, so it fails. That mismatch is exactly what the Check catches."
+    },
+    {
+      "id": "u05l01e05",
+      "type": "trueFalse",
+      "prompt": "To do the Check, you need to know what you expected ahead of time.",
+      "answer": true,
+      "explanation": "You can only compare against an expected answer you already have. That expected answer is your example from before."
+    },
+    {
+      "id": "u05l01e06",
+      "type": "multipleChoice",
+      "prompt": "Which two things do you compare in the Check?",
+      "options": [
+        "The real output and the expected output",
+        "The screen and the keyboard",
+        "Two different programs",
+        "The time and the date"
+      ],
+      "answer": 0,
+      "explanation": "Always the same two: what the program really printed, and what you expected it to print."
+    },
+    {
+      "id": "u05l01e07",
+      "type": "matchPairs",
+      "prompt": "Match each word to what it means.",
+      "pairs": [
+        { "left": "Expected", "right": "What you wanted the output to be" },
+        { "left": "Real output", "right": "What the program actually printed" },
+        { "left": "Pass", "right": "The two match" },
+        { "left": "Fail", "right": "The two are different" }
+      ],
+      "explanation": "Expected vs real output. Match = pass, different = fail. That's the whole Check."
+    },
+    {
+      "id": "u05l01e08",
+      "type": "trueFalse",
+      "prompt": "If the real output matches the expected output, the result is 'pass'.",
+      "answer": true,
+      "explanation": "Match means pass. It did what you expected."
+    },
+    {
+      "id": "u05l01e09",
+      "type": "orderBlocks",
+      "prompt": "Put the steps of checking in order.",
+      "blocks": [
+        "Decide what output you expect",
+        "Run the program and see the real output",
+        "Compare them and judge pass or fail"
+      ],
+      "answer": [0, 1, 2],
+      "explanation": "First you know what you want, then you run it, then you compare. That order is the Check."
+    },
+    {
+      "id": "u05l01e10",
+      "type": "multipleChoice",
+      "prompt": "Why bother with the Check at all?",
+      "options": [
+        "To catch when the program did NOT do what you expected",
+        "To make the program longer",
+        "To change the computer's mind",
+        "Because print needs it"
+      ],
+      "answer": 0,
+      "explanation": "The Check is how you catch mistakes. Without it, you'd never know the program went wrong."
+    }
+  ]
+}

@@ -1,0 +1,136 @@
+{
+  "unitId": "u81",
+  "lessonId": "u81l04",
+  "title": "The wrong wiring: right helpers, wrong order",
+  "idea": "Both helpers can be perfect, yet the answer is wrong because they were composed in the wrong order, or the output of one was fed to the wrong one. The bug lives in the connection, not the pieces.",
+  "exercises": [
+    {
+      "type": "multipleChoice",
+      "prompt": "double(n)=n*2 and add_one(n)=n+1 are both correct. The goal is 'double then add one' for 5 (=11). But the code is double(add_one(5)). What does it give?",
+      "options": [
+        "12 — it added one FIRST (6), then doubled",
+        "11 — order doesn't matter",
+        "10",
+        "7"
+      ],
+      "answer": 0,
+      "explanation": "add_one(5)=6, double(6)=12. Both helpers are fine, but they're wired in the wrong order, so the answer is wrong.",
+      "id": "u81l04e01"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "If two helpers are each correct, the order you compose them in can't change the result.",
+      "answer": false,
+      "explanation": "Order matters! double-then-add gives 11; add-then-double gives 12. Correct pieces, wrong wiring, wrong answer.",
+      "id": "u81l04e02"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "The goal is add_one(double(5)) = 11. In that expression, which call runs FIRST?",
+      "options": [
+        "double(5) — the inner call runs first",
+        "add_one — the outer call",
+        "print",
+        "They run together"
+      ],
+      "answer": 0,
+      "explanation": "Inner call first: double(5)=10, then add_one(10)=11. Composition runs inside-out, like nested math.",
+      "id": "u81l04e03"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "A solution computes meals_cost and drinks_cost correctly, then does total = meals_cost. What's the wiring bug?",
+      "options": [
+        "It forgot to add drinks_cost — one sub-result was dropped",
+        "It used the wrong helper",
+        "It has a missing case",
+        "Nothing is wrong"
+      ],
+      "answer": 0,
+      "explanation": "Both sub-results are right, but only one was wired into the total. Dropping a sub-result is a wiring bug.",
+      "id": "u81l04e04"
+    },
+    {
+      "type": "matchPairs",
+      "prompt": "Match each wiring mistake to what happens.",
+      "pairs": [
+        {
+          "left": "Helpers in the wrong order",
+          "right": "Right pieces, wrong final answer"
+        },
+        {
+          "left": "A sub-result dropped",
+          "right": "Part of the answer is missing"
+        },
+        {
+          "left": "Output fed to the wrong helper",
+          "right": "The next step works on the wrong value"
+        }
+      ],
+      "explanation": "Wiring bugs: wrong order, a dropped piece, or a value sent to the wrong place. The helpers themselves are innocent.",
+      "id": "u81l04e05"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "To check wiring, you can trace the VALUE as it flows from one helper's output into the next helper's input.",
+      "answer": true,
+      "explanation": "Yes. Follow the value step by step. If it enters the wrong helper or in the wrong order, you've found the wiring bug.",
+      "id": "u81l04e06"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "half(n)=n/2 and square(n)=n*n, both correct. You want 'square then halve' of 4 (=8). Which call is correct?",
+      "options": [
+        "half(square(4))",
+        "square(half(4))",
+        "half(4) + square(4)",
+        "square(square(4))"
+      ],
+      "answer": 0,
+      "explanation": "square(4)=16, half(16)=8. The inner call must be square so it runs first. half(square(4)) wires them right.",
+      "id": "u81l04e07"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Your helpers are all correct but the final total is too small. Where do you look?",
+      "options": [
+        "At the wiring — maybe a sub-result was dropped or added wrong",
+        "Inside each helper again",
+        "At the print color",
+        "Nowhere — it's random"
+      ],
+      "answer": 0,
+      "explanation": "If every piece is correct, the bug is in how they're combined. A dropped or mis-added sub-result shrinks the total.",
+      "id": "u81l04e08"
+    },
+    {
+      "type": "orderBlocks",
+      "prompt": "Order the steps to debug suspected wrong wiring.",
+      "blocks": [
+        "Confirm each helper is correct on its own",
+        "Trace the value from helper to helper",
+        "Fix the order or the connection that's off"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Clear the helpers first, then follow the value, then repair the connection. Wiring is about the flow between pieces.",
+      "id": "u81l04e09"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "The lesson in one line:",
+      "options": [
+        "Correct helpers can still be wired wrong — check the order and the connections",
+        "Order never matters",
+        "Wiring bugs crash the program",
+        "Only the helpers can be wrong"
+      ],
+      "answer": 0,
+      "explanation": "The split can be buggy even when every piece is right. Wiring — order and connections — is its own place to look.",
+      "id": "u81l04e10"
+    }
+  ]
+}

@@ -1,0 +1,127 @@
+{
+  "unitId": "u22",
+  "lessonId": "u22l07",
+  "title": "Common if/else mistakes",
+  "idea": "Spot the else slips: a condition on else, bad line-up, missing colon, or forgetting else needs an if above it.",
+  "exercises": [
+    {
+      "id": "u22l07e01",
+      "type": "multipleChoice",
+      "prompt": "What is wrong here?\n\nif score >= 60:\n    print(\"Pass\")\nelse score < 60:\n    print(\"Fail\")",
+      "options": [
+        "else must not have a condition — just else:",
+        "Pass should be a number",
+        "The if needs a comma",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "else takes no condition of its own. It should be just else: — it already means 'every other case'."
+    },
+    {
+      "id": "u22l07e02",
+      "type": "multipleChoice",
+      "prompt": "What is wrong here?\n\nif age >= 18:\n    print(\"Adult\")\nelse\n    print(\"Minor\")",
+      "options": [
+        "else is missing its colon",
+        "age should be in quotes",
+        "The print must not be indented",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "else needs a colon: else: . Without it, Python does not know the branch is starting."
+    },
+    {
+      "id": "u22l07e03",
+      "type": "multipleChoice",
+      "prompt": "What is wrong here?\n\nif n > 0:\n    print(\"Positive\")\n    else:\n    print(\"Not positive\")",
+      "options": [
+        "else is indented — it must line up with if, not inside the if block",
+        "n should be a word",
+        "Positive needs quotes removed",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "else lines up at the same left edge as if. Indenting it puts it inside the if block, which is not allowed."
+    },
+    {
+      "id": "u22l07e04",
+      "type": "multipleChoice",
+      "prompt": "What is wrong here?\n\nelse:\n    print(\"Otherwise\")",
+      "options": [
+        "else needs an if above it — it cannot stand alone",
+        "Otherwise should be a number",
+        "else needs a condition",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "else is the 'otherwise' for an if. Without a matching if above, it has no condition to be the opposite of."
+    },
+    {
+      "id": "u22l07e05",
+      "type": "multiSelect",
+      "prompt": "Select EVERY line that is a correct else line.",
+      "options": [
+        "else:",
+        "else",
+        "else score < 60:",
+        "    else:"
+      ],
+      "answer": [0],
+      "explanation": "Only else: is correct: no condition, a colon, lined up with if. The others miss the colon, add a condition, or are indented."
+    },
+    {
+      "id": "u22l07e06",
+      "type": "fillBlank",
+      "prompt": "Fix the else line by adding what is missing:\n\nif temp >= 30:\n    print(\"Hot\")\nelse____\n    print(\"Mild\")",
+      "answer": ":",
+      "acceptable": [":"],
+      "explanation": "Add the colon: else: . Both the if header and the else need a colon."
+    },
+    {
+      "id": "u22l07e07",
+      "type": "multipleChoice",
+      "prompt": "Review the = vs == trap. What is wrong here?\n\nif level = 5:\n    print(\"Max\")\nelse:\n    print(\"Not max\")",
+      "options": [
+        "The if uses = (store) but a condition needs == (compare)",
+        "else needs a condition",
+        "Max should be lowercase",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "The condition must check with ==, not store with =. This trap carries over from the if unit."
+    },
+    {
+      "id": "u22l07e08",
+      "type": "trueFalse",
+      "prompt": "else should line up directly under its if, with no condition and a colon.",
+      "answer": true,
+      "explanation": "Yes: same indent as if, no condition, ends in a colon. Then its step is indented beneath."
+    },
+    {
+      "id": "u22l07e09",
+      "type": "orderBlocks",
+      "prompt": "Arrange these into a fully correct if/else.",
+      "blocks": [
+        "else:",
+        "if stock == 0:",
+        "    print(\"In stock\")",
+        "    print(\"Sold out\")"
+      ],
+      "answer": [1, 3, 0, 2],
+      "explanation": "if header, indented Sold out, else: lined up with if, indented In stock. Colons and indentation all correct."
+    },
+    {
+      "id": "u22l07e10",
+      "type": "multipleChoice",
+      "prompt": "What is the checklist for a correct else?",
+      "options": [
+        "Line it up with if, no condition, colon at the end, step indented below",
+        "Give it its own condition and indent it inside the if",
+        "Put it before the if with a comma",
+        "Skip the colon"
+      ],
+      "answer": 0,
+      "explanation": "Lined up with if, no condition, colon, indented step. Run this checklist and the else slips disappear."
+    }
+  ]
+}

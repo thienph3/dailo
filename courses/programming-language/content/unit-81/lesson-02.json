@@ -1,0 +1,136 @@
+{
+  "unitId": "u81",
+  "lessonId": "u81l02",
+  "title": "The missing case: a helper that forgot an input",
+  "idea": "A very common decomposition bug: a helper handles the normal inputs but silently gives a wrong (or crashing) answer for an edge case like empty or zero. Spot it by thinking about the edge cases.",
+  "exercises": [
+    {
+      "type": "multipleChoice",
+      "prompt": "A helper average(nums) divides the total by how many numbers there are. Which input breaks it?",
+      "options": [
+        "An empty list (zero numbers)",
+        "A list of three numbers",
+        "A list of ten numbers",
+        "Any normal list"
+      ],
+      "answer": 0,
+      "explanation": "Dividing by zero numbers breaks. The empty list is the missing case this helper forgot.",
+      "id": "u81l02e01"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "A helper that works on all the examples you tried is proven to work on every possible input.",
+      "answer": false,
+      "explanation": "No. Examples only prove the cases you tried. A missing case hides in the inputs you didn't test — usually the edges.",
+      "id": "u81l02e02"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "count_positives(nums) counts numbers greater than 0. For the list [0, 0, 0] it returns 0. Is that a bug?",
+      "options": [
+        "No — zero is not greater than 0, so 0 is correct",
+        "Yes — it should count the zeros",
+        "Yes — it should return 3",
+        "Can't tell"
+      ],
+      "answer": 0,
+      "explanation": "0 is not greater than 0, so none are positive. Returning 0 is correct — not every surprising answer is a bug.",
+      "id": "u81l02e03"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "find_biggest(nums) starts with best = nums[0]. Which input makes that first line crash?",
+      "options": [
+        "An empty list — there is no nums[0]",
+        "A list with one item",
+        "A list of negatives",
+        "A long list"
+      ],
+      "answer": 0,
+      "explanation": "An empty list has no first item, so nums[0] fails. The missing case is 'what if the list is empty?'",
+      "id": "u81l02e04"
+    },
+    {
+      "type": "matchPairs",
+      "prompt": "Match each helper to the edge case it most easily forgets.",
+      "pairs": [
+        {
+          "left": "average(nums)",
+          "right": "empty list (divide by zero)"
+        },
+        {
+          "left": "find_biggest(nums)",
+          "right": "empty list (no first item)"
+        },
+        {
+          "left": "first_item(nums)",
+          "right": "empty list (nothing to return)"
+        }
+      ],
+      "explanation": "Many helpers share the same missing case: the empty list. Checking it first catches a lot of bugs.",
+      "id": "u81l02e05"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Adding an early guard like 'if the list is empty, return 0' can fix a missing-case bug.",
+      "answer": true,
+      "explanation": "Yes. A guard handles the edge on purpose, before the normal code runs. That's exactly how you repair a missing case.",
+      "id": "u81l02e06"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "halve(n) returns n / 2. A teammate says it has a missing case. Does it?",
+      "options": [
+        "No — dividing any number by 2 is always fine",
+        "Yes — it breaks on an empty list",
+        "Yes — it breaks on zero",
+        "Yes — it breaks on negatives"
+      ],
+      "answer": 0,
+      "explanation": "Dividing by 2 works for every number, including 0 and negatives. Not every helper has a missing case — think before assuming one.",
+      "id": "u81l02e07"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "To FIND a missing-case bug while planning, you should...",
+      "options": [
+        "List the edge inputs (empty, zero, one item) and ask 'does my helper handle each?'",
+        "Only test one normal input",
+        "Trust that it works",
+        "Run it once and move on"
+      ],
+      "answer": 0,
+      "explanation": "Enumerate the edges and check each against your helper. A case you can't answer for is a case you probably forgot.",
+      "id": "u81l02e08"
+    },
+    {
+      "type": "orderBlocks",
+      "prompt": "Order the steps to catch a missing case before it bites.",
+      "blocks": [
+        "List the edge inputs for this helper",
+        "Trace the helper on each edge",
+        "Add a guard for any edge that breaks"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Enumerate edges, trace them, guard the ones that fail. Planning the edges prevents the bug.",
+      "id": "u81l02e09"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "The lesson in one line:",
+      "options": [
+        "A missing case is an input the helper forgot — find it by checking the edges",
+        "Edges never happen",
+        "Helpers can't forget inputs",
+        "Only big programs forget cases"
+      ],
+      "answer": 0,
+      "explanation": "Missing cases hide at the edges. Enumerating them turns a lurking bug into a handled case.",
+      "id": "u81l02e10"
+    }
+  ]
+}

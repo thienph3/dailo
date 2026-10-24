@@ -1,0 +1,152 @@
+{
+  "unitId": "u87",
+  "lessonId": "u87l07",
+  "title": "Picking a pattern for each part of a split",
+  "idea": "MEET: put decomposition and selection together — take an ordered sub-problem list and label each part with its pattern.",
+  "exercises": [
+    {
+      "type": "multipleChoice",
+      "prompt": "PROBLEM split: (1) total the prices (2) count those over 10. The patterns are...",
+      "options": [
+        "running total; count with condition",
+        "filter; search",
+        "search; average",
+        "two running totals"
+      ],
+      "answer": 0,
+      "explanation": "Totalling is a running total; 'count those over 10' is a conditional count. One pattern per part.",
+      "id": "u87l07e01"
+    },
+    {
+      "type": "matchPairs",
+      "prompt": "Match each sub-problem to its pattern.",
+      "pairs": [
+        {
+          "left": "total the scores",
+          "right": "running total"
+        },
+        {
+          "left": "count the passers",
+          "right": "count with condition"
+        },
+        {
+          "left": "find the top score",
+          "right": "track the biggest"
+        }
+      ],
+      "explanation": "Each part of a split gets exactly one pattern. Labelling them is pattern selection.",
+      "id": "u87l07e02"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "PROBLEM 'average the passing scores' splits into filter, total, count, divide. Which part uses the FILTER pattern?",
+      "options": [
+        "keep only the passing scores",
+        "total the passers",
+        "count the passers",
+        "divide"
+      ],
+      "answer": 0,
+      "explanation": "Only 'keep the passing scores' is a filter. The rest are total, count, and a divide.",
+      "id": "u87l07e03"
+    },
+    {
+      "type": "multiSelect",
+      "prompt": "Select the correct part-to-pattern labels for 'biggest and smallest price'.",
+      "options": [
+        "biggest -> track the biggest",
+        "smallest -> track the smallest",
+        "biggest -> running total",
+        "smallest -> search"
+      ],
+      "answer": [
+        0,
+        1
+      ],
+      "explanation": "Biggest and smallest are extreme-tracking. The last two mislabel them.",
+      "id": "u87l07e04"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Why label each part with a pattern BEFORE coding?",
+      "options": [
+        "Each label tells you the exact loop shape to write next",
+        "To make the plan longer",
+        "Because labels are decoration",
+        "Labels slow you down"
+      ],
+      "answer": 0,
+      "explanation": "A labelled part is a solved part — you already know the pattern's shape. Coding becomes filling it in.",
+      "id": "u87l07e05"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Two different parts of the same problem can use two different patterns.",
+      "answer": true,
+      "explanation": "Yes — 'total AND count over 10' uses a running total for one part and a conditional count for the other.",
+      "id": "u87l07e06"
+    },
+    {
+      "type": "orderBlocks",
+      "prompt": "Order the understand-split-select flow.",
+      "blocks": [
+        "Understand: goal, inputs, outputs",
+        "Split: ordered list of sub-problems",
+        "Select: a pattern for each sub-problem"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Understand, split, select. Three thinking steps before a single line of code.",
+      "id": "u87l07e07"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "A part labelled 'running total' but the sub-problem is 'how many passed'. This label is...",
+      "options": [
+        "wrong — 'how many' is a count, not a total",
+        "right",
+        "faster",
+        "the only option"
+      ],
+      "answer": 0,
+      "explanation": "'How many' adds 1 per match (count), not the item's value (total). The label is mismatched.",
+      "id": "u87l07e08"
+    },
+    {
+      "type": "matchPairs",
+      "prompt": "Match each ordered part to its pattern for 'final bill = subtotal + 10% tip'.",
+      "pairs": [
+        {
+          "left": "compute subtotal",
+          "right": "running total"
+        },
+        {
+          "left": "compute tip",
+          "right": "arithmetic on the subtotal"
+        },
+        {
+          "left": "compute final",
+          "right": "arithmetic (subtotal + tip)"
+        }
+      ],
+      "explanation": "Subtotal is a running total; tip and final are plain arithmetic on earlier results. Not every part is a loop.",
+      "id": "u87l07e09"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "The big idea:",
+      "options": [
+        "Label each ordered sub-problem with the one pattern that solves it",
+        "All parts use the same pattern",
+        "Labels aren't needed",
+        "Selection comes before splitting"
+      ],
+      "answer": 0,
+      "explanation": "Decomposition gives the parts; selection gives each a pattern. Together they turn a big problem into a codable plan.",
+      "id": "u87l07e10"
+    }
+  ]
+}

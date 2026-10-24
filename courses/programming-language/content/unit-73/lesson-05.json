@@ -1,0 +1,134 @@
+{
+  "unitId": "u73",
+  "lessonId": "u73l05",
+  "title": "return vs no return",
+  "idea": "TOOL: a sub-plan with no return hands back nothing useful; return is what gives a usable value.",
+  "exercises": [
+    {
+      "id": "u73l05e01",
+      "type": "multipleChoice",
+      "prompt": "def show(n):\n    print(n)\n\nx = show(5)\n\nThis prints 5. But what is stored in x?",
+      "options": [
+        "None (nothing useful) - show has no return",
+        "5",
+        "show",
+        "print"
+      ],
+      "answer": 0,
+      "explanation": "show only prints; it never returns a value. So x gets None - there was nothing handed back to store."
+    },
+    {
+      "id": "u73l05e02",
+      "type": "trueFalse",
+      "prompt": "A sub-plan that only prints does NOT hand back a usable value.",
+      "answer": true,
+      "explanation": "Right. Printing shows something on screen but returns nothing. To get a value back you must use return."
+    },
+    {
+      "id": "u73l05e03",
+      "type": "multipleChoice",
+      "prompt": "def give(n):\n    return n\n\nx = give(5)\n\nWhat is x now?",
+      "options": [
+        "5",
+        "None",
+        "give",
+        "Nothing prints and x is empty"
+      ],
+      "answer": 0,
+      "explanation": "give uses return, so give(5) hands back 5 and x becomes 5. return is what makes a value usable."
+    },
+    {
+      "id": "u73l05e04",
+      "type": "multipleChoice",
+      "prompt": "You want 'y = f(3)' to store a real number in y. What must f do?",
+      "options": [
+        "Use return to hand a value back",
+        "Only print",
+        "Use a loop",
+        "Nothing special"
+      ],
+      "answer": 0,
+      "explanation": "To store a value from a call, the sub-plan must return it. A print alone leaves y holding None."
+    },
+    {
+      "id": "u73l05e05",
+      "type": "multipleChoice",
+      "prompt": "def add(a, b):\n    sum_result = a + b\n\nWhat does add(2, 3) return?",
+      "options": [
+        "None - there is no return line",
+        "5",
+        "2",
+        "add"
+      ],
+      "answer": 0,
+      "explanation": "add computes sum_result but never returns it, so the call hands back None. The computed value is lost."
+    },
+    {
+      "id": "u73l05e06",
+      "type": "matchPairs",
+      "prompt": "Match each sub-plan body to what its call hands back.",
+      "pairs": [
+        {
+          "left": "return n * 2",
+          "right": "a usable number"
+        },
+        {
+          "left": "print(n * 2)",
+          "right": "None"
+        },
+        {
+          "left": "x = n * 2 (no return)",
+          "right": "None"
+        }
+      ],
+      "explanation": "Only return hands a usable value back. Printing or computing without returning both give None to the caller."
+    },
+    {
+      "id": "u73l05e07",
+      "type": "orderBlocks",
+      "prompt": "Fix the broken sub-plan. Order lines so add(a,b) RETURNS the sum.",
+      "blocks": [
+        "total = a + b",
+        "return total"
+      ],
+      "answer": [
+        0,
+        1
+      ],
+      "explanation": "Add the missing return. Now the computed total is handed back instead of being thrown away."
+    },
+    {
+      "id": "u73l05e08",
+      "type": "multipleChoice",
+      "prompt": "def f(n):\n    return n\n\nprint(f(7))\n\nWhat prints?",
+      "options": [
+        "7",
+        "None",
+        "f",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "f returns 7, so print(f(7)) prints 7. The returned value flows straight into print."
+    },
+    {
+      "id": "u73l05e09",
+      "type": "multipleChoice",
+      "prompt": "REVIEW: both print and return 'end' something. What does return specifically give you that print does not?",
+      "options": [
+        "A value the caller can store and reuse",
+        "Colour on screen",
+        "A faster loop",
+        "A longer program"
+      ],
+      "answer": 0,
+      "explanation": "print shows; return gives back. Only return produces a value the rest of your program can keep using."
+    },
+    {
+      "id": "u73l05e10",
+      "type": "trueFalse",
+      "prompt": "If you forget the return, your sub-plan may still run - but the caller gets None instead of the answer.",
+      "answer": true,
+      "explanation": "Yes. A missing return is a common bug: the work happens but the result is never handed back."
+    }
+  ]
+}

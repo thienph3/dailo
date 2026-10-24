@@ -1,0 +1,133 @@
+{
+  "unitId": "u08",
+  "lessonId": "u08l08",
+  "title": "Giving a box a good name",
+  "idea": "A clear name tells you what the value means. Good names make a plan easy to read.",
+  "exercises": [
+    {
+      "id": "u08l08e01",
+      "type": "multipleChoice",
+      "prompt": "You store how many apples you have. Which name is clearest?",
+      "options": [
+        "apple_count",
+        "x",
+        "a",
+        "thing"
+      ],
+      "answer": 0,
+      "explanation": "apple_count tells you exactly what's inside. Good names make code read like plain English."
+    },
+    {
+      "id": "u08l08e02",
+      "type": "trueFalse",
+      "prompt": "A clear variable name helps you (and others) understand what the value means.",
+      "answer": true,
+      "explanation": "Yes. A name is a note to your future self about what the box holds."
+    },
+    {
+      "id": "u08l08e03",
+      "type": "multipleChoice",
+      "prompt": "You store a person's age. Which name reads best?",
+      "options": [
+        "age",
+        "q",
+        "z9",
+        "data"
+      ],
+      "answer": 0,
+      "explanation": "age says exactly what it is. Short AND clear is the sweet spot."
+    },
+    {
+      "id": "u08l08e04",
+      "type": "matchPairs",
+      "prompt": "Match each value to the clearest variable name.",
+      "pairs": [
+        {
+          "left": "number of pets",
+          "right": "pet_count"
+        },
+        {
+          "left": "a game score",
+          "right": "score"
+        },
+        {
+          "left": "a lucky number",
+          "right": "lucky_number"
+        }
+      ],
+      "explanation": "A name should echo what the value means, so the code reads like your plan."
+    },
+    {
+      "id": "u08l08e05",
+      "type": "multipleChoice",
+      "prompt": "Why avoid a name like x for a box that holds your test score?",
+      "options": [
+        "x doesn't tell you what the value means",
+        "x is not allowed in programs",
+        "x makes the value bigger",
+        "x prints nothing"
+      ],
+      "answer": 0,
+      "explanation": "x is a mystery. test_score explains itself, so later lines are easy to follow."
+    },
+    {
+      "id": "u08l08e06",
+      "type": "multipleChoice",
+      "prompt": "What does this clearly-named program show?\n\nticket_count = 4\nprint(ticket_count)",
+      "options": [
+        "4",
+        "ticket_count",
+        "ticket",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "The box ticket_count holds 4, so it shows 4. The clear name makes the code obvious."
+    },
+    {
+      "id": "u08l08e07",
+      "type": "trueFalse",
+      "prompt": "Two different values should usually get two different, clear names.",
+      "answer": true,
+      "explanation": "Yes. If you have apples and bananas, name them apple_count and banana_count, not both x."
+    },
+    {
+      "id": "u08l08e08",
+      "type": "multipleChoice",
+      "prompt": "You're storing the number of players in a game. Pick the clearest name.",
+      "options": [
+        "player_count",
+        "p",
+        "n2",
+        "box"
+      ],
+      "answer": 0,
+      "explanation": "player_count reads like your plan: 'the count of players'."
+    },
+    {
+      "id": "u08l08e09",
+      "type": "multipleChoice",
+      "prompt": "Review: which line stores a value (not shows one)?",
+      "options": [
+        "high_score = 99",
+        "print(high_score)",
+        "print(\"high_score\")",
+        "print(99)"
+      ],
+      "answer": 0,
+      "explanation": "The = line stores a value. The print lines show things. high_score = 99 fills the box."
+    },
+    {
+      "id": "u08l08e10",
+      "type": "multipleChoice",
+      "prompt": "Good names make a 2-3 step plan easier because...",
+      "options": [
+        "each step reads clearly, like a sentence about the value",
+        "they make the program run faster",
+        "they hide what the program does",
+        "they remove the need to print"
+      ],
+      "answer": 0,
+      "explanation": "Clear names turn code into readable steps — a big help when you plan ahead."
+    }
+  ]
+}

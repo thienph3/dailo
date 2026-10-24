@@ -1,0 +1,158 @@
+{
+  "unitId": "u82",
+  "lessonId": "u82l02",
+  "title": "Solve it together: count the passing scores",
+  "idea": "GUIDED (UEPCC). Split 'how many scores pass?' into a tiny is_pass(score) helper and a count-with-condition loop. Decomposition clarifies the rule.",
+  "problem": "Scores are [40, 55, 70, 30, 90]. A score passes if it is 50 or more. Show how many pass, using an is_pass(score) helper.",
+  "exercises": [
+    {
+      "id": "u82l02e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: scores [40, 55, 70, 30, 90]; pass means >= 50. Show how MANY pass, using is_pass(score).\n\nOUTPUT?",
+      "options": [
+        "A count: how many scores pass",
+        "The list of passing scores",
+        "The highest score",
+        "The average"
+      ],
+      "answer": 0,
+      "explanation": "Output = a single count. We're counting, not listing or averaging."
+    },
+    {
+      "id": "u82l02e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "INPUTS?",
+      "options": [
+        "The list of scores and the pass mark (50)",
+        "Only the number 3",
+        "The word count",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "Inputs are the scores and the rule's threshold, 50. The rule decides who counts."
+    },
+    {
+      "id": "u82l02e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example — by hand. Which of [40, 55, 70, 30, 90] are >= 50?",
+      "options": [
+        "55, 70, 90 — that's 3",
+        "40 and 30 — that's 2",
+        "All five",
+        "None"
+      ],
+      "answer": 0,
+      "explanation": "55, 70, 90 pass; 40 and 30 don't. Hand count = 3. That's our check value."
+    },
+    {
+      "id": "u82l02e04",
+      "type": "trueFalse",
+      "uepcc": "E",
+      "prompt": "is_pass(score) should return True when score >= 50 and False otherwise.",
+      "answer": true,
+      "explanation": "Yes — the helper answers one yes/no question per score. is_pass(55) is True; is_pass(40) is False."
+    },
+    {
+      "id": "u82l02e05",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Plan — which pattern counts items that satisfy a rule?",
+      "options": [
+        "Count with a condition (a counter that goes up when the rule holds)",
+        "Running total of the values",
+        "Find the biggest",
+        "Reverse the list"
+      ],
+      "answer": 0,
+      "explanation": "This is the count-with-condition pattern: a counter rising by 1 each time the rule is true."
+    },
+    {
+      "id": "u82l02e06",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Order the plan.",
+      "blocks": [
+        "Make is_pass(score) return score >= 50",
+        "Start a counter at 0",
+        "For each score, if is_pass(score), add 1 to the counter",
+        "Show the counter"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "Helper for the rule, counter at 0, bump it when the rule holds, show it."
+    },
+    {
+      "id": "u82l02e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code it.",
+      "blocks": [
+        "def is_pass(score):",
+        "    return score >= 50",
+        "scores = [40, 55, 70, 30, 90]",
+        "passed = 0",
+        "for score in scores:",
+        "    if is_pass(score):",
+        "        passed = passed + 1",
+        "print(passed)"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "explanation": "Define the rule helper, store scores, counter at 0, add 1 when is_pass is True, print. The helper names the rule clearly."
+    },
+    {
+      "id": "u82l02e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Complete the helper so a score of 50 counts as passing:\n\ndef is_pass(score):\n    return score ____ 50",
+      "answer": ">=",
+      "acceptable": [
+        ">="
+      ],
+      "explanation": "'50 or more' means greater-than-or-equal, so >=. is_pass(50) must be True."
+    },
+    {
+      "id": "u82l02e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check — the code prints 3; your hand count was 3. Verdict?",
+      "options": [
+        "Passes",
+        "Fails",
+        "Unknown",
+        "Rewrite example"
+      ],
+      "answer": 0,
+      "explanation": "Output (3) matches the hand count (3). The helper + count pattern is correct."
+    },
+    {
+      "id": "u82l02e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Re-check: scores [10, 50, 50, 49], pass >= 50. How many pass?",
+      "options": [
+        "2",
+        "1",
+        "3",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "50 and 50 pass (>= includes 50); 10 and 49 don't. Count = 2. The same plan handles the boundary 50 correctly."
+    }
+  ]
+}

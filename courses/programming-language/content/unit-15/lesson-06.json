@@ -1,0 +1,128 @@
+{
+  "unitId": "u15",
+  "lessonId": "u15l06",
+  "title": "Reporting a number in a sentence",
+  "idea": "An f-string can drop a number into a sentence — no + juggling, no missing spaces.",
+  "exercises": [
+    {
+      "id": "u15l06e01",
+      "type": "multipleChoice",
+      "prompt": "What will this show?\n\nage = 9\nprint(f\"I am {age} years old\")",
+      "options": [
+        "I am 9 years old",
+        "I am age years old",
+        "I am {age} years old",
+        "I am 9years old"
+      ],
+      "answer": 0,
+      "explanation": "{age} becomes its value 9, right inside the sentence: I am 9 years old. The spaces are already there."
+    },
+    {
+      "id": "u15l06e02",
+      "type": "trueFalse",
+      "prompt": "An f-string can put either a word variable or a number variable inside the braces.",
+      "answer": true,
+      "explanation": "Braces don't care what's inside — a word or a number, it drops in the value either way. This is why f-strings are so handy."
+    },
+    {
+      "id": "u15l06e03",
+      "type": "multipleChoice",
+      "prompt": "What will this show?\n\nscore = 100\nprint(f\"Your score is {score}\")",
+      "options": [
+        "Your score is 100",
+        "Your score is score",
+        "Your score is {score}",
+        "100"
+      ],
+      "answer": 0,
+      "explanation": "{score} fills in 100: Your score is 100. A readable report in one line."
+    },
+    {
+      "id": "u15l06e04",
+      "type": "multipleChoice",
+      "prompt": "You can mix words and numbers in one message. What will this show?\n\nname = \"Mia\"\nage = 9\nprint(f\"{name} is {age}\")",
+      "options": [
+        "Mia is 9",
+        "name is age",
+        "{name} is {age}",
+        "Mia is age"
+      ],
+      "answer": 0,
+      "explanation": "Two braces, two values: Mia is 9. Each brace is swapped for its own variable."
+    },
+    {
+      "id": "u15l06e05",
+      "type": "multipleChoice",
+      "prompt": "Why is the f-string the easy way to report a number in words?",
+      "options": [
+        "It drops the number straight into the sentence, keeping your spaces",
+        "It makes the number bigger",
+        "It is the only way to print a number",
+        "It rounds the number"
+      ],
+      "answer": 0,
+      "explanation": "You write the whole sentence and the number just appears where you put the braces. No fiddly joining."
+    },
+    {
+      "id": "u15l06e06",
+      "type": "fillBlank",
+      "prompt": "Fill the braces so this prints: You have 5 lives\n\nlives = 5\nprint(f\"You have {____} lives\")",
+      "answer": "lives",
+      "acceptable": [
+        "lives"
+      ],
+      "explanation": "Put the variable name inside the braces (no quotes). {lives} becomes 5: You have 5 lives."
+    },
+    {
+      "id": "u15l06e07",
+      "type": "multipleChoice",
+      "prompt": "What will this show?\n\nprice = 20\nprint(f\"It costs {price} dong\")",
+      "options": [
+        "It costs 20 dong",
+        "It costs price dong",
+        "It costs {20} dong",
+        "20"
+      ],
+      "answer": 0,
+      "explanation": "{price} drops in 20: It costs 20 dong. The number sits neatly inside the words."
+    },
+    {
+      "id": "u15l06e08",
+      "type": "tapTokens",
+      "prompt": "Build a line that prints: I have 3 pens (pens holds 3).",
+      "tokens": [
+        "print",
+        "(",
+        "f\"I have {pens} pens\"",
+        ")"
+      ],
+      "answer": [
+        "print",
+        "(",
+        "f\"I have {pens} pens\"",
+        ")"
+      ],
+      "explanation": "f\"I have {pens} pens\" drops the value 3 between the words: I have 3 pens."
+    },
+    {
+      "id": "u15l06e09",
+      "type": "multipleChoice",
+      "prompt": "What will this show?\n\nteam = \"Blue\"\npoints = 7\nprint(f\"{team} has {points} points\")",
+      "options": [
+        "Blue has 7 points",
+        "team has points points",
+        "Blue has points",
+        "{Blue} has {7} points"
+      ],
+      "answer": 0,
+      "explanation": "Both braces fill in: Blue has 7 points. Words and numbers side by side, cleanly."
+    },
+    {
+      "id": "u15l06e10",
+      "type": "trueFalse",
+      "prompt": "f\"Age: {age}\" and \"Age: \" + age do the same easy thing with a number variable.",
+      "answer": false,
+      "explanation": "Only the f-string makes reporting a number easy. (Joining a number with + needs an extra step we haven't learned yet — stick with f-strings for numbers.)"
+    }
+  ]
+}

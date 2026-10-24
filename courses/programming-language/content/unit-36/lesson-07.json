@@ -1,0 +1,129 @@
+{
+  "unitId": "u36",
+  "lessonId": "u36l07",
+  "title": "Spot the loop mistake",
+  "idea": "Common 'for each' loop bugs: missing colon, missing indent, or a step in the wrong place. Learn to spot and fix them.",
+  "exercises": [
+    {
+      "id": "u36l07e01",
+      "type": "multipleChoice",
+      "prompt": "What is wrong?\n\nfor each of 3 times\n    print(\"Hi\")",
+      "options": [
+        "The header is missing its colon ( : )",
+        "Hi is spelled wrong",
+        "3 is too small",
+        "Nothing is wrong"
+      ],
+      "answer": 0,
+      "explanation": "The header must end with a colon: 'for each of 3 times:'. Same rule as an if header."
+    },
+    {
+      "id": "u36l07e02",
+      "type": "multipleChoice",
+      "prompt": "What is wrong?\n\nfor each of 3 times:\nprint(\"Hi\")",
+      "options": [
+        "The body is not indented",
+        "The colon is missing",
+        "Hi needs no quotes",
+        "Nothing is wrong"
+      ],
+      "answer": 0,
+      "explanation": "The body must be indented under the header. Without indentation the computer can't tell what repeats."
+    },
+    {
+      "id": "u36l07e03",
+      "type": "trueFalse",
+      "prompt": "Both a missing colon and a missing indent will stop a loop from working as intended.",
+      "answer": true,
+      "explanation": "The colon and the indent are both required pieces of the loop shape. Miss either and it breaks."
+    },
+    {
+      "id": "u36l07e04",
+      "type": "multipleChoice",
+      "prompt": "The goal is to print a title ONCE then Hi 3 times. What's wrong?\n\nfor each of 3 times:\n    print(\"Title\")\n    print(\"Hi\")",
+      "options": [
+        "Title is inside the loop, so it repeats 3 times too",
+        "Hi should not be indented",
+        "The colon is missing",
+        "Nothing is wrong"
+      ],
+      "answer": 0,
+      "explanation": "Title is indented, so it repeats. To print it once, move it before the loop, un-indented."
+    },
+    {
+      "id": "u36l07e05",
+      "type": "orderBlocks",
+      "prompt": "Fix the last bug: arrange so Title prints once then Hi prints 3 times.",
+      "blocks": [
+        "print(\"Title\")",
+        "for each of 3 times:",
+        "    print(\"Hi\")"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Title moves out, before the loop; only Hi stays in the indented body. Now Title shows once."
+    },
+    {
+      "id": "u36l07e06",
+      "type": "multipleChoice",
+      "prompt": "A loop printed Hi only once, not 4 times. The most likely cause?",
+      "options": [
+        "The count or the indentation is wrong",
+        "Hi is too short",
+        "The screen is full",
+        "Loops can only run once"
+      ],
+      "answer": 0,
+      "explanation": "Too few repeats points at a wrong count or a body that isn't actually inside the loop. Check both."
+    },
+    {
+      "id": "u36l07e07",
+      "type": "multipleChoice",
+      "prompt": "Which loop is written correctly?",
+      "options": [
+        "for each of 2 times:\n    print(\"Go\")",
+        "for each of 2 times\n    print(\"Go\")",
+        "for each of 2 times:\nprint(\"Go\")",
+        "For Each of 2 times:\n    print(\"Go\")"
+      ],
+      "answer": 0,
+      "explanation": "Colon on the header AND the body indented. The others miss the colon, the indent, or use wrong capitalization."
+    },
+    {
+      "id": "u36l07e08",
+      "type": "trueFalse",
+      "prompt": "Writing the header as 'For Each' with capitals works the same as lowercase.",
+      "answer": false,
+      "explanation": "Python keywords are lowercase. Capitalization matters — same lesson you learned with print vs Print."
+    },
+    {
+      "id": "u36l07e09",
+      "type": "multipleChoice",
+      "prompt": "You expected 3 Hi lines and a Bye at the end, but Bye printed 3 times. What happened?",
+      "options": [
+        "Bye was indented, so it repeated inside the loop",
+        "Bye was spelled wrong",
+        "The count was 1",
+        "Loops always repeat Bye"
+      ],
+      "answer": 0,
+      "explanation": "Indenting Bye put it in the body. Un-indent it so it runs once after the loop."
+    },
+    {
+      "id": "u36l07e10",
+      "type": "multipleChoice",
+      "prompt": "A reliable way to catch these loop bugs is to...",
+      "options": [
+        "Trace the output line by line and compare to the goal",
+        "Hope it works",
+        "Make the font bigger",
+        "Add more copies"
+      ],
+      "answer": 0,
+      "explanation": "Tracing the output and checking it against the goal catches wrong counts, bad indents, and misplaced steps."
+    }
+  ]
+}

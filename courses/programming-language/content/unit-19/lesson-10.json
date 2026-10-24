@@ -1,0 +1,136 @@
+{
+  "unitId": "u19",
+  "lessonId": "u19l10",
+  "title": "Loop back: facts, booleans, and the whole idea",
+  "idea": "Review lesson. Pull together spotting a yes/no fact, storing it as True/False, telling it from text, and showing it. Leans review-heavy, including earlier units.",
+  "exercises": [
+    {
+      "id": "u19l10e01",
+      "type": "multipleChoice",
+      "prompt": "Which question has exactly two answers, yes or no?",
+      "options": [
+        "Is the tank full?",
+        "How full is the tank?",
+        "What's in the tank?",
+        "Where's the tank?"
+      ],
+      "answer": 0,
+      "explanation": "'Is the tank full?' is a yes/no question. Spotting these was the core idea of this unit."
+    },
+    {
+      "id": "u19l10e02",
+      "type": "multipleChoice",
+      "prompt": "What are Python's two boolean values?",
+      "options": [
+        "True and False",
+        "Yes and No",
+        "1 and 0",
+        "On and Off"
+      ],
+      "answer": 0,
+      "explanation": "True and False, both capitalized. These are the yes/no values."
+    },
+    {
+      "id": "u19l10e03",
+      "type": "multipleChoice",
+      "prompt": "What prints?\n\nis_done = True\nprint(is_done)",
+      "options": [
+        "True",
+        "is_done",
+        "\"True\"",
+        "False"
+      ],
+      "answer": 0,
+      "explanation": "is_done holds the boolean True, so it prints True."
+    },
+    {
+      "id": "u19l10e04",
+      "type": "trueFalse",
+      "prompt": "\"True\" in quotes is the same as the boolean True.",
+      "answer": false,
+      "explanation": "No - quotes make it text. The boolean True has no quotes."
+    },
+    {
+      "id": "u19l10e05",
+      "type": "multipleChoice",
+      "prompt": "What prints?\n\nopen_now = False\nopen_now = True\nprint(open_now)",
+      "options": [
+        "True",
+        "False",
+        "both",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "Reassignment: the last value wins, so open_now is True."
+    },
+    {
+      "id": "u19l10e06",
+      "type": "multipleChoice",
+      "prompt": "Review of earlier units - what prints?\n\nprint(2 + 3 * 2)",
+      "options": [
+        "8",
+        "10",
+        "12",
+        "7"
+      ],
+      "answer": 0,
+      "explanation": "Multiplication happens before addition: 3*2 = 6, then 2+6 = 8. Precedence from an earlier unit."
+    },
+    {
+      "id": "u19l10e07",
+      "type": "matchPairs",
+      "prompt": "Match each problem to the yes/no fact it depends on.",
+      "pairs": [
+        {
+          "left": "Alert if the disk is full",
+          "right": "Is the disk full?"
+        },
+        {
+          "left": "Let a VIP skip the line",
+          "right": "Is the person a VIP?"
+        },
+        {
+          "left": "Remind when the task is due",
+          "right": "Is the task due?"
+        }
+      ],
+      "explanation": "Each decision hinges on one yes/no fact. Finding it is step one of solving."
+    },
+    {
+      "id": "u19l10e08",
+      "type": "fillBlank",
+      "prompt": "Store the yes/no fact that a subscription is active (yes):\n\nis_active = ____\nprint(is_active)   # shows: True",
+      "answer": "True",
+      "acceptable": [
+        "True"
+      ],
+      "explanation": "is_active = True names and stores the fact. Clear boolean name, real boolean value."
+    },
+    {
+      "id": "u19l10e09",
+      "type": "multipleChoice",
+      "prompt": "What type is the value in flag = False?",
+      "options": [
+        "boolean",
+        "number",
+        "string",
+        "none"
+      ],
+      "answer": 0,
+      "explanation": "False is a boolean, so flag currently holds a boolean value."
+    },
+    {
+      "id": "u19l10e10",
+      "type": "multipleChoice",
+      "prompt": "You can now spot a yes/no fact and store it as True/False. What comes next in the course?",
+      "options": [
+        "Learning to produce yes/no answers by comparing things",
+        "Deleting all variables",
+        "Forgetting booleans",
+        "Only printing numbers"
+      ],
+      "answer": 0,
+      "explanation": "Next, comparisons (like 'is A bigger than B?') will PRODUCE booleans from values - turning facts into True/False automatically."
+    }
+  ]
+}

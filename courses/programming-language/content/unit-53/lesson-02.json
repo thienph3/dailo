@@ -1,0 +1,122 @@
+{
+  "unitId": "u53",
+  "lessonId": "u53l02",
+  "title": "len() counts for you",
+  "idea": "Introduce len(list): it hands back how many items. One new construct, visible output the learner can predict.",
+  "exercises": [
+    {
+      "id": "u53l02e01",
+      "type": "multipleChoice",
+      "prompt": "To count a list's items, you write len() with the list inside the round brackets. Which line counts a list named scores?",
+      "options": [
+        "len(scores)",
+        "scores.len",
+        "len[scores]",
+        "count(scores)"
+      ],
+      "answer": 0,
+      "explanation": "len(scores) is the form: the word len, then round brackets with the list inside. It hands back the count."
+    },
+    {
+      "id": "u53l02e02",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nscores = [10, 20, 30]\nprint(len(scores))",
+      "options": [
+        "3",
+        "60",
+        "[10, 20, 30]",
+        "30"
+      ],
+      "answer": 0,
+      "explanation": "len(scores) counts the items: three of them, so it gives 3. It does not add them (that would be 60)."
+    },
+    {
+      "id": "u53l02e03",
+      "type": "trueFalse",
+      "prompt": "len(list) gives the COUNT of items, not the sum of the values.",
+      "answer": true,
+      "explanation": "len is about how MANY, not how much. [100, 200] has len 2, even though the values are large."
+    },
+    {
+      "id": "u53l02e04",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nwords = [\"a\", \"b\", \"c\", \"d\"]\nprint(len(words))",
+      "options": [
+        "4",
+        "3",
+        "abcd",
+        "1"
+      ],
+      "answer": 0,
+      "explanation": "Four words means len is 4. len counts items whether they're numbers or words."
+    },
+    {
+      "id": "u53l02e05",
+      "type": "fillBlank",
+      "prompt": "Complete the line so it prints how many items are in nums:\n\nnums = [5, 6, 7]\nprint(____(nums))",
+      "answer": "len",
+      "acceptable": ["len"],
+      "explanation": "len(nums) counts the items and gives 3. len is the tool that counts."
+    },
+    {
+      "id": "u53l02e06",
+      "type": "multipleChoice",
+      "prompt": "You can store the count in a variable. Predict:\n\nitems = [9, 8, 7, 6]\nhow_many = len(items)\nprint(how_many)",
+      "options": [
+        "4",
+        "30",
+        "6",
+        "items"
+      ],
+      "answer": 0,
+      "explanation": "len(items) is 4, stored in how_many. Printing how_many shows 4. The count is just a number you can save."
+    },
+    {
+      "id": "u53l02e07",
+      "type": "multipleChoice",
+      "prompt": "Predict the output for an EMPTY list:\n\nempty = []\nprint(len(empty))",
+      "options": [
+        "0",
+        "1",
+        "empty",
+        "[]"
+      ],
+      "answer": 0,
+      "explanation": "An empty list has 0 items, so len gives 0. len handles the 'nothing yet' case cleanly."
+    },
+    {
+      "id": "u53l02e08",
+      "type": "tapTokens",
+      "prompt": "Arrange tokens to print how many items are in a list named cart.",
+      "tokens": ["print", "(", "len", "(", "cart", ")", ")"],
+      "answer": ["print", "(", "len", "(", "cart", ")", ")"],
+      "explanation": "len(cart) counts the items, and print shows that count. Note the two closing brackets: one for len, one for print."
+    },
+    {
+      "id": "u53l02e09",
+      "type": "multipleChoice",
+      "prompt": "A learner writes len[scores] with square brackets. Why is that wrong?",
+      "options": [
+        "len uses round brackets: len(scores)",
+        "len needs no brackets",
+        "len can't count lists",
+        "scores must be a number"
+      ],
+      "answer": 0,
+      "explanation": "len uses round ( ) brackets, like print does. Square brackets are for indexing an item, not for len."
+    },
+    {
+      "id": "u53l02e10",
+      "type": "multipleChoice",
+      "prompt": "What is the new tool this lesson introduced?",
+      "options": [
+        "len() — counts how many items a list has",
+        "A way to add items",
+        "A way to pick the first item",
+        "A new kind of list"
+      ],
+      "answer": 0,
+      "explanation": "len(list) hands back the item count. Next we use it to make decisions and to find the last position."
+    }
+  ]
+}

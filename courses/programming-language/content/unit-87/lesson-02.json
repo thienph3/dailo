@@ -1,0 +1,140 @@
+{
+  "unitId": "u87",
+  "lessonId": "u87l02",
+  "title": "'Add them up' means running total",
+  "idea": "MEET: a sub-problem that combines every item into one sum signals the running-total (accumulator) pattern.",
+  "exercises": [
+    {
+      "type": "multipleChoice",
+      "prompt": "Sub-problem: 'add up all the prices.' Which pattern?",
+      "options": [
+        "Running total",
+        "Filter",
+        "Search",
+        "Track the smallest"
+      ],
+      "answer": 0,
+      "explanation": "Combining every item into one sum is exactly the running-total pattern.",
+      "id": "u87l02e01"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "A running total always starts at...",
+      "options": [
+        "0",
+        "1",
+        "the first item doubled",
+        "the biggest item"
+      ],
+      "answer": 0,
+      "explanation": "Start the accumulator at 0, then add each item. Starting elsewhere gives a wrong sum.",
+      "id": "u87l02e02"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Phrases like 'total', 'sum', 'altogether', and 'combined' usually point to a running total.",
+      "answer": true,
+      "explanation": "Yes — these words all mean 'add everything into one value', which is the accumulator pattern.",
+      "id": "u87l02e03"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Which sub-problem is NOT a running total?",
+      "options": [
+        "Find the biggest score",
+        "Total the donations",
+        "Sum the prices",
+        "Add up the distances"
+      ],
+      "answer": 0,
+      "explanation": "Finding the biggest is a track-the-max pattern. The other three combine everything into a sum.",
+      "id": "u87l02e04"
+    },
+    {
+      "type": "multiSelect",
+      "prompt": "Select the sub-problems that call for a running total.",
+      "options": [
+        "total the item prices",
+        "add up all the rainfall amounts",
+        "count how many days it rained",
+        "the combined weight of all parcels"
+      ],
+      "answer": [
+        0,
+        1,
+        3
+      ],
+      "explanation": "Three ask for a sum. 'How many days it rained' is a conditional count, not a sum.",
+      "id": "u87l02e05"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "In 'total = total + price', what is 'total' doing?",
+      "options": [
+        "Growing by each price as the loop runs",
+        "Shrinking",
+        "Staying fixed",
+        "Holding the biggest"
+      ],
+      "answer": 0,
+      "explanation": "The accumulator grows by each item. After the loop it holds the full sum.",
+      "id": "u87l02e06"
+    },
+    {
+      "type": "matchPairs",
+      "prompt": "Match each phrase to whether it's a running total.",
+      "pairs": [
+        {
+          "left": "'sum the scores'",
+          "right": "running total"
+        },
+        {
+          "left": "'combined cost'",
+          "right": "running total"
+        },
+        {
+          "left": "'how many passed'",
+          "right": "NOT a running total (it's a count)"
+        }
+      ],
+      "explanation": "Sum/combined mean add-everything. 'How many' means count. Different patterns, different outputs.",
+      "id": "u87l02e07"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "A running total and a count are the same pattern.",
+      "answer": false,
+      "explanation": "No — a total ADDS each value; a count adds 1 per matching item. Different jobs, different results.",
+      "id": "u87l02e08"
+    },
+    {
+      "type": "orderBlocks",
+      "prompt": "Order the running-total pattern.",
+      "blocks": [
+        "Start total at 0",
+        "For each item, add it to total",
+        "After the loop, total holds the sum"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Start at 0, add each item, read the result. The classic accumulator shape.",
+      "id": "u87l02e09"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "The big idea:",
+      "options": [
+        "'Add them up / total / combined' means the running-total pattern",
+        "Totals need a brand-new pattern each time",
+        "A total starts at the biggest item",
+        "Totalling is the same as counting"
+      ],
+      "answer": 0,
+      "explanation": "When a sub-problem combines everything into one sum, reach for the running total.",
+      "id": "u87l02e10"
+    }
+  ]
+}

@@ -1,0 +1,119 @@
+{
+  "unitId": "u04",
+  "lessonId": "u04l02",
+  "title": "Why do the example first",
+  "idea": "Deciding the expected output before coding saves you from guessing later. The example is your target to aim at.",
+  "exercises": [
+    {
+      "id": "u04l02e01",
+      "type": "multipleChoice",
+      "prompt": "If you code first and never decide what output you want, what goes wrong?",
+      "options": [
+        "You can't tell if the result is right or wrong",
+        "The code runs faster",
+        "Nothing — guessing is fine",
+        "The screen turns off"
+      ],
+      "answer": 0,
+      "explanation": "With no target, any output looks as good as any other. The example gives you something to compare against."
+    },
+    {
+      "id": "u04l02e02",
+      "type": "trueFalse",
+      "prompt": "Having an expected output lets you spot a mistake quickly.",
+      "answer": true,
+      "explanation": "If the screen shows something different from your example, you instantly know something's off."
+    },
+    {
+      "id": "u04l02e03",
+      "type": "multipleChoice",
+      "prompt": "Task: show 'Welcome'. You expect the output to be Welcome. The program shows 'welcom'. What does the example tell you?",
+      "options": [
+        "The output is wrong — it doesn't match",
+        "The output is perfect",
+        "The example was useless",
+        "Nothing can be known"
+      ],
+      "answer": 0,
+      "explanation": "Your example said Welcome. The screen said welcom. They don't match, so the code is wrong. The example caught it."
+    },
+    {
+      "id": "u04l02e04",
+      "type": "trueFalse",
+      "prompt": "A worked example is only useful if it exactly describes the output you want.",
+      "answer": true,
+      "explanation": "A vague example ('something like Welcome') can't catch a small mistake. Be exact."
+    },
+    {
+      "id": "u04l02e05",
+      "type": "orderBlocks",
+      "prompt": "Put the smart order in place.",
+      "blocks": [
+        "Decide the expected output (example)",
+        "Write the code",
+        "Compare the real output to the example"
+      ],
+      "answer": [0, 1, 2],
+      "explanation": "Example first, then code, then compare. The example comes before the code so it can judge it."
+    },
+    {
+      "id": "u04l02e06",
+      "type": "multipleChoice",
+      "prompt": "Someone says: 'I'll just know if it looks right.' Why is that risky?",
+      "options": [
+        "A small error is easy to miss without an exact target",
+        "Looking is illegal",
+        "It always works",
+        "The computer decides what's right"
+      ],
+      "answer": 0,
+      "explanation": "The human eye misses small slips. An exact written example makes mismatches obvious."
+    },
+    {
+      "id": "u04l02e07",
+      "type": "multiSelect",
+      "prompt": "Which are true about an expected-output example? (pick all)",
+      "options": [
+        "It is decided before coding",
+        "It describes exactly what should appear",
+        "It is a target to compare against",
+        "It changes every time you look at it"
+      ],
+      "answer": [0, 1, 2],
+      "explanation": "Decided first, exact, and a stable target. It does NOT change each time — a moving target is useless."
+    },
+    {
+      "id": "u04l02e08",
+      "type": "trueFalse",
+      "prompt": "Working the example first is part of understanding the task.",
+      "answer": true,
+      "explanation": "To write the right output, you must truly understand what the task asks. The example proves you get it."
+    },
+    {
+      "id": "u04l02e09",
+      "type": "multipleChoice",
+      "prompt": "Task: show the number 7. What is the exact expected output?",
+      "options": [
+        "7",
+        "seven",
+        "number 7",
+        "print(7)"
+      ],
+      "answer": 0,
+      "explanation": "Just the digit 7 appears. Our example is precise: 7, nothing else."
+    },
+    {
+      "id": "u04l02e10",
+      "type": "multipleChoice",
+      "prompt": "The best time to write your example is...",
+      "options": [
+        "Before you write the code",
+        "After the program is finished",
+        "Only if the code breaks",
+        "Never"
+      ],
+      "answer": 0,
+      "explanation": "Before coding. Then the code has a clear goal, and you have a ready-made check."
+    }
+  ]
+}

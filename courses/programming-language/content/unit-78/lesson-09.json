@@ -1,0 +1,137 @@
+{
+  "unitId": "u78",
+  "lessonId": "u78l09",
+  "title": "Trace a helper-in-loop run",
+  "idea": "TOOL. Trace a helper-in-loop run step by step to trust the result.",
+  "exercises": [
+    {
+      "type": "multipleChoice",
+      "prompt": "Trace:\n\ndef double(n):\n    return n * 2\n\ntotal = 0\nfor n in [1, 2, 3]:\n    total = total + double(n)\n\nAfter n = 1, total is...",
+      "options": [
+        "2",
+        "0",
+        "1",
+        "6"
+      ],
+      "answer": 0,
+      "explanation": "total = 0 + double(1) = 2.",
+      "id": "u78l09e01"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Same trace: after n = 2, total is...",
+      "options": [
+        "6",
+        "2",
+        "4",
+        "12"
+      ],
+      "answer": 0,
+      "explanation": "2 + double(2) = 2 + 4 = 6.",
+      "id": "u78l09e02"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Same trace: after n = 3, total is...",
+      "options": [
+        "12",
+        "6",
+        "9",
+        "3"
+      ],
+      "answer": 0,
+      "explanation": "6 + double(3) = 6 + 6 = 12.",
+      "id": "u78l09e03"
+    },
+    {
+      "type": "orderBlocks",
+      "prompt": "Order the events for the first item (n = 1).",
+      "blocks": [
+        "n becomes 1",
+        "double(1) returns 2",
+        "total becomes 0 + 2",
+        "loop moves to next item"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "Item, helper call, accumulate, continue.",
+      "id": "u78l09e04"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "The total grows each loop because we ADD the helper's result, not replace it.",
+      "answer": true,
+      "explanation": "total = total + double(n) accumulates.",
+      "id": "u78l09e05"
+    },
+    {
+      "type": "fillBlank",
+      "prompt": "Trace: for [5] with helper triple, total ends at ____.",
+      "answer": "15",
+      "acceptable": [
+        "15"
+      ],
+      "explanation": "triple(5)=15, 0+15=15.",
+      "id": "u78l09e06"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Trace a counter:\n\ndef is_odd(n):\n    return n % 2 == 1\n\ncount = 0\nfor n in [1, 2, 3]:\n    if is_odd(n):\n        count = count + 1\n\nFinal count?",
+      "options": [
+        "2",
+        "3",
+        "1",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "1 and 3 are odd; count 2.",
+      "id": "u78l09e07"
+    },
+    {
+      "type": "multiSelect",
+      "prompt": "What changes as the loop runs? (choose all)",
+      "options": [
+        "the loop variable (current item)",
+        "the accumulator/counter",
+        "the helper's definition",
+        "the list length"
+      ],
+      "answer": [
+        0,
+        1
+      ],
+      "explanation": "The item and the accumulator change; the helper and list stay fixed.",
+      "id": "u78l09e08"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Tracing confirms...",
+      "options": [
+        "the helper runs once per item and feeds the running result",
+        "the helper runs once total",
+        "the loop skips items",
+        "totals need sum()"
+      ],
+      "answer": 0,
+      "explanation": "Per-item helper calls build the result step by step.",
+      "id": "u78l09e09"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Lesson point:",
+      "options": [
+        "Trace step by step to trust a helper-in-loop total or count",
+        "tracing is pointless",
+        "loops can't be traced",
+        "always guess"
+      ],
+      "answer": 0,
+      "explanation": "Step-by-step tracing verifies the pattern.",
+      "id": "u78l09e10"
+    }
+  ]
+}

@@ -1,0 +1,153 @@
+{
+  "unitId": "u85",
+  "lessonId": "u85l09",
+  "title": "Match the problem to its goal/inputs/outputs",
+  "idea": "MEET: practice reading several multi-part problems and restating each — building speed at the understand step before splitting.",
+  "exercises": [
+    {
+      "type": "matchPairs",
+      "prompt": "Match each problem to its OUTPUTS.",
+      "pairs": [
+        {
+          "left": "Total the prices and count those over 10",
+          "right": "the total; the count over 10"
+        },
+        {
+          "left": "Average the scores and say if it passed",
+          "right": "the average; a pass yes/no"
+        },
+        {
+          "left": "Find the biggest and smallest price",
+          "right": "the biggest; the smallest"
+        }
+      ],
+      "explanation": "Each problem's outputs come straight from the asking-verbs. Listing them is the understand step.",
+      "id": "u85l09e01"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "PROBLEM: 'Given a list of donations, show the total and the largest single donation.' INPUTS?",
+      "options": [
+        "The list of donations",
+        "The total",
+        "The largest donation",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "The only input is the list of donations. The total and largest are OUTPUTS, not inputs.",
+      "id": "u85l09e02"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Same problem — OUTPUTS?",
+      "options": [
+        "The total, and the largest single donation",
+        "Only the total",
+        "Only the largest",
+        "The list itself"
+      ],
+      "answer": 0,
+      "explanation": "Two outputs: the total and the largest. Both are asked for, so both must appear.",
+      "id": "u85l09e03"
+    },
+    {
+      "type": "multiSelect",
+      "prompt": "Select correct statements about: 'Count the passing and failing scores (pass is 60+).'",
+      "options": [
+        "There are two outputs",
+        "One output is the pass count",
+        "One output is the fail count",
+        "60 is the input list"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Two outputs (pass count, fail count). 60 is a rule-constant, not the input — the input is the scores.",
+      "id": "u85l09e04"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "PROBLEM: 'For a shop's 8 prices, show the total and the average.' What is len of the input?",
+      "options": [
+        "8",
+        "2",
+        "the total",
+        "the average"
+      ],
+      "answer": 0,
+      "explanation": "There are 8 prices, so len(prices) is 8. The two outputs are the total and the average.",
+      "id": "u85l09e05"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "The outputs of a problem are found by reading what it asks you to show, count, find, or report.",
+      "answer": true,
+      "explanation": "Yes — the asking-verbs point at the outputs every time. That's the reliable way to list them.",
+      "id": "u85l09e06"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "A restatement reads 'INPUTS: the list; the number 60'. For 'count scores of 60+' this is...",
+      "options": [
+        "Fine — 60 is the given threshold in the rule and can be listed as a provided value",
+        "Wrong — 60 is an output",
+        "Wrong — there are no inputs",
+        "Wrong — the list is an output"
+      ],
+      "answer": 0,
+      "explanation": "When a threshold is handed to you in the problem, listing it as a provided value is reasonable; the key thing is the list is the data.",
+      "id": "u85l09e07"
+    },
+    {
+      "type": "orderBlocks",
+      "prompt": "Order the understand step for any multi-part problem.",
+      "blocks": [
+        "State the goal in one sentence",
+        "List the inputs",
+        "List every output"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Goal, inputs, outputs — the same three-line habit works for every multi-part problem.",
+      "id": "u85l09e08"
+    },
+    {
+      "type": "matchPairs",
+      "prompt": "Match each asking-verb to the kind of output it signals.",
+      "pairs": [
+        {
+          "left": "'count how many'",
+          "right": "a number (count)"
+        },
+        {
+          "left": "'find the biggest'",
+          "right": "a single value"
+        },
+        {
+          "left": "'did it pass?'",
+          "right": "a yes/no"
+        }
+      ],
+      "explanation": "Verbs reveal outputs. Reading for verbs is the fastest way to list what's asked.",
+      "id": "u85l09e09"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "The big idea:",
+      "options": [
+        "Reading many problems the same way (goal/inputs/outputs) builds speed and confidence",
+        "Each problem needs a brand-new method",
+        "Understanding can be skipped once you're fast",
+        "Outputs are random"
+      ],
+      "answer": 0,
+      "explanation": "The three-line habit is the same every time. Repetition makes the understand step quick and automatic.",
+      "id": "u85l09e10"
+    }
+  ]
+}

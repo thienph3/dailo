@@ -1,0 +1,150 @@
+{
+  "unitId": "u13",
+  "lessonId": "u13l10",
+  "title": "Put it together",
+  "idea": "Review lesson: precedence, parentheses, left-to-right, plus a recall of variables and remainders from earlier units.",
+  "exercises": [
+    {
+      "id": "u13l10e01",
+      "type": "multipleChoice",
+      "prompt": "The precedence rule in one line:",
+      "options": [
+        "* / % // go first, then + - ; parentheses beat everything",
+        "+ - go first, then * /",
+        "Everything is left to right, always",
+        "Whatever is written first wins"
+      ],
+      "answer": 0,
+      "explanation": "Times/divide/remainder group first, then plus/minus. Parentheses override the whole thing. That's Unit 13."
+    },
+    {
+      "id": "u13l10e02",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nprint(2 + 3 * 4)",
+      "options": [
+        "14",
+        "20",
+        "24",
+        "9"
+      ],
+      "answer": 0,
+      "explanation": "Times first: 3*4=12, then +2=14."
+    },
+    {
+      "id": "u13l10e03",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nprint((2 + 3) * 4)",
+      "options": [
+        "20",
+        "14",
+        "9",
+        "24"
+      ],
+      "answer": 0,
+      "explanation": "Parentheses first: 2+3=5, then *4=20."
+    },
+    {
+      "id": "u13l10e04",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nprint(20 - 6 - 4)",
+      "options": [
+        "10",
+        "18",
+        "22",
+        "30"
+      ],
+      "answer": 0,
+      "explanation": "Left to right: 20-6=14, then 14-4=10."
+    },
+    {
+      "id": "u13l10e05",
+      "type": "multipleChoice",
+      "prompt": "Predict the output (review of %):\n\nprint(1 + 10 % 4)",
+      "options": [
+        "3",
+        "2",
+        "11",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "% first: 10 % 4 is 2, then 1 + 2 is 3. Remainder is in the first group."
+    },
+    {
+      "id": "u13l10e06",
+      "type": "fillBlank",
+      "prompt": "Finish the average of 8 and 12:\n\nprint((8 + 12) / ____ )",
+      "answer": "2",
+      "acceptable": [
+        "2"
+      ],
+      "explanation": "(8 + 12) / 2 is 20 / 2 is 10.0. Add first, then divide."
+    },
+    {
+      "id": "u13l10e07",
+      "type": "multiSelect",
+      "prompt": "Which of these equal 20? (pick all)",
+      "options": [
+        "print((2 + 3) * 4)",
+        "print(4 * 5)",
+        "print(2 + 3 * 4)",
+        "print(10 + 10)"
+      ],
+      "answer": [
+        0,
+        1,
+        3
+      ],
+      "explanation": "(2+3)*4=20, 4*5=20, 10+10=20. But 2+3*4=14 (times first), so it's left out."
+    },
+    {
+      "id": "u13l10e08",
+      "type": "tapTokens",
+      "prompt": "Build: add 7 and 5, then divide by 2. Tap the tokens in order.",
+      "tokens": [
+        "(",
+        "7",
+        "+",
+        "5",
+        ")",
+        "/",
+        "2"
+      ],
+      "answer": [
+        "(",
+        "7",
+        "+",
+        "5",
+        ")",
+        "/",
+        "2"
+      ],
+      "explanation": "(7 + 5) / 2 — add first (12), then divide by 2 is 6.0."
+    },
+    {
+      "id": "u13l10e09",
+      "type": "multipleChoice",
+      "prompt": "Review: variables + reassignment + precedence. What prints?\n\nscore = 5\nscore = score * 2 + 3\nprint(score)",
+      "options": [
+        "13",
+        "16",
+        "10",
+        "25"
+      ],
+      "answer": 0,
+      "explanation": "score * 2 is 10 (times first), + 3 is 13. score becomes 13."
+    },
+    {
+      "id": "u13l10e10",
+      "type": "multipleChoice",
+      "prompt": "You finished Unit 13! What can you now do?",
+      "options": [
+        "Get multi-step calculations right using precedence and parentheses",
+        "Only add two numbers",
+        "Only use print",
+        "Nothing new"
+      ],
+      "answer": 0,
+      "explanation": "You can read mixed expressions, force the order with ( ), and avoid the classic order mistakes. Next up: more number problems to practice."
+    }
+  ]
+}

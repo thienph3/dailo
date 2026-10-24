@@ -1,0 +1,128 @@
+{
+  "unitId": "u30",
+  "lessonId": "u30l02",
+  "title": "Ask, then react to the answer",
+  "idea": "The core move of the unit: store input() in a variable, then branch on it with if/else. Predict the output for different typed answers.",
+  "exercises": [
+    {
+      "id": "u30l02e01",
+      "type": "multipleChoice",
+      "prompt": "The two-step pattern of this unit is...",
+      "options": [
+        "ask with input(), then decide with if/else based on the answer",
+        "print, then stop",
+        "add two numbers",
+        "loop forever"
+      ],
+      "answer": 0,
+      "explanation": "First ask, then react. input() gets the answer; if/else chooses what to do with it."
+    },
+    {
+      "id": "u30l02e02",
+      "type": "multipleChoice",
+      "prompt": "The user types yes:\n\nanswer = input(\"Continue? \")\nif answer == \"yes\":\n    print(\"Great!\")\nelse:\n    print(\"Okay, stopping.\")\n\nWhat prints?",
+      "options": [
+        "Great!",
+        "Okay, stopping.",
+        "yes",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "answer holds \"yes\", and \"yes\" == \"yes\" is True, so the if branch prints \"Great!\"."
+    },
+    {
+      "id": "u30l02e03",
+      "type": "multipleChoice",
+      "prompt": "Same code, the user types no. What prints?",
+      "options": [
+        "Okay, stopping.",
+        "Great!",
+        "no",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "\"no\" == \"yes\" is False, so the else runs: \"Okay, stopping.\". The program reacted to the answer."
+    },
+    {
+      "id": "u30l02e04",
+      "type": "multipleChoice",
+      "prompt": "Same code, the user types maybe. What prints?",
+      "options": [
+        "Okay, stopping.",
+        "Great!",
+        "maybe",
+        "an error"
+      ],
+      "answer": 0,
+      "explanation": "\"maybe\" is not \"yes\", so the else runs. Any answer that is not exactly \"yes\" takes the else path here."
+    },
+    {
+      "id": "u30l02e05",
+      "type": "orderBlocks",
+      "prompt": "Arrange: ask for a password word, then if it equals \"open\" print \"Unlocked\" else print \"Denied\".",
+      "blocks": [
+        "word = input(\"Password: \")",
+        "if word == \"open\":",
+        "    print(\"Unlocked\")",
+        "else:",
+        "    print(\"Denied\")"
+      ],
+      "answer": [0, 1, 2, 3, 4],
+      "explanation": "Ask first, store in word, then branch on the comparison. Ask, then react."
+    },
+    {
+      "id": "u30l02e06",
+      "type": "fillBlank",
+      "prompt": "Fill the comparison so it reacts to the answer \"go\":\n\nanswer = input(\"Command: \")\nif answer ____ \"go\":\n    print(\"Moving\")",
+      "answer": "==",
+      "acceptable": ["=="],
+      "explanation": "== compares the typed word against \"go\". (Word comparison from last unit, now driven by input.)"
+    },
+    {
+      "id": "u30l02e07",
+      "type": "trueFalse",
+      "prompt": "The same program can print different things on different runs, depending on what the user types.",
+      "answer": true,
+      "explanation": "Yes - that is the point of input() plus branching. The behavior now depends on the user, not just the code."
+    },
+    {
+      "id": "u30l02e08",
+      "type": "multipleChoice",
+      "prompt": "Why store input() in a variable before the if, instead of calling input() inside the if?",
+      "options": [
+        "So you ask ONCE and can test the same answer in several branches",
+        "input cannot go in an if",
+        "It is faster",
+        "No reason"
+      ],
+      "answer": 0,
+      "explanation": "Storing it means one question, one answer, reused across if/elif/else. Asking inside each test would prompt repeatedly."
+    },
+    {
+      "id": "u30l02e09",
+      "type": "multipleChoice",
+      "prompt": "The user types Yes (capital Y) for the \"Continue?\" program that checks == \"yes\". What prints?",
+      "options": [
+        "Okay, stopping. - because \"Yes\" does not equal \"yes\"",
+        "Great!",
+        "Yes",
+        "an error"
+      ],
+      "answer": 0,
+      "explanation": "Case matters. \"Yes\" is not \"yes\", so the else runs. A very common real-world input gotcha - the next lessons address it."
+    },
+    {
+      "id": "u30l02e10",
+      "type": "multipleChoice",
+      "prompt": "You just solved 'ask, then react to the answer'. What did it take?",
+      "options": [
+        "input() to ask, a variable to hold the answer, and if/else to react",
+        "Only print",
+        "Only a number",
+        "A loop"
+      ],
+      "answer": 0,
+      "explanation": "Those three pieces are the whole pattern. Everything else this unit is variations on 'ask, then react'."
+    }
+  ]
+}

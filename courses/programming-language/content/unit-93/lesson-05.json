@@ -1,0 +1,153 @@
+{
+  "unitId": "u93",
+  "lessonId": "u93l05",
+  "title": "You pick the pattern",
+  "idea": "GUIDED PRACTICE. Decomposition focus: read a problem and CHOOSE which list pattern (sum / count / max / filter / average) solves it, before any code.",
+  "exercises": [
+    {
+      "id": "u93l05e01",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "'A list of donations [5, 20, 15]. Show the total raised.' Which pattern?",
+      "explanation": "Totalling every value is the sum (running total) pattern.",
+      "options": [
+        "Sum (a running total)",
+        "Max (track the biggest)",
+        "Count with a condition",
+        "Filter"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u93l05e02",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "'A list of ages. Show how many are 18 or over.' Which pattern?",
+      "explanation": "Counting only the items that meet a rule is count-with-a-condition.",
+      "options": [
+        "Count with a condition",
+        "Sum",
+        "Average",
+        "Max"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u93l05e03",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "'A list of race times. Show the fastest (smallest) time.' Which pattern?",
+      "explanation": "Tracking the smallest is the min variant of track-the-best (same loop, flip the comparison to <).",
+      "options": [
+        "Track the best — here the smallest, using <",
+        "Sum",
+        "Count",
+        "Filter"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u93l05e04",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "By hand for the fastest-time problem: times [12, 9, 15]. The answer is?",
+      "explanation": "9 is the smallest, so the fastest time is 9. Hand-work first, then choose code.",
+      "options": [
+        "9",
+        "12",
+        "15",
+        "36"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u93l05e05",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "'A list of prices. Make a NEW list of only the prices under 10.' Which pattern?",
+      "explanation": "Building a new list of items that pass a rule is the filter pattern (loop + if + append).",
+      "options": [
+        "Filter (build a new list of matches)",
+        "Sum",
+        "Max",
+        "Average"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u93l05e06",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "'A list of test scores. Show the average score.' Which pattern(s) do you need?",
+      "explanation": "Average combines two patterns: a running total AND a count, then one division (with an empty guard).",
+      "options": [
+        "Sum and count together, then divide",
+        "Max only",
+        "Filter only",
+        "Just a single print"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u93l05e07",
+      "type": "matchPairs",
+      "uepcc": "P",
+      "prompt": "Match each problem to its pattern.",
+      "explanation": "Recognising the pattern from the wording is the key planning skill — the code follows from the pattern.",
+      "pairs": [
+        {
+          "left": "Total of a list",
+          "right": "Sum"
+        },
+        {
+          "left": "How many match a rule",
+          "right": "Count with condition"
+        },
+        {
+          "left": "Biggest value",
+          "right": "Track the best (max)"
+        },
+        {
+          "left": "Only the matching items",
+          "right": "Filter"
+        }
+      ]
+    },
+    {
+      "id": "u93l05e08",
+      "type": "trueFalse",
+      "uepcc": "P",
+      "prompt": "Choosing the right pattern is part of PLANNING, done before you write code.",
+      "explanation": "Yes — picking sum vs count vs max vs filter is the plan. The code is just that choice written down.",
+      "answer": true
+    },
+    {
+      "id": "u93l05e09",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "'A list of items. Is 42 anywhere in it?' Which pattern?",
+      "explanation": "Looking for whether a value exists is search / membership — loop and check, or 'in'.",
+      "options": [
+        "Search / membership",
+        "Sum",
+        "Average",
+        "Max"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u93l05e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Why name the pattern BEFORE coding?",
+      "explanation": "The pattern decides the loop shape and the state variables. Choosing it first means the code almost writes itself.",
+      "options": [
+        "The pattern decides the loop shape and which state you track",
+        "It makes code run faster",
+        "Patterns are optional decoration",
+        "To avoid using functions"
+      ],
+      "answer": 0
+    }
+  ]
+}

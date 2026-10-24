@@ -1,0 +1,99 @@
+{
+  "unitId": "u50",
+  "lessonId": "u50l05",
+  "title": "Loop back: break and continue",
+  "idea": "REVIEW. Revisit stopping early (break) and skipping a pass (continue). No new concepts.",
+  "exercises": [
+    {
+      "id": "u50l05e01",
+      "type": "multipleChoice",
+      "prompt": "Trace:\n\nfor i in range(8):\n    if i == 3:\n        break\n    print(i)\n\nWhat prints?",
+      "options": ["0, 1, 2", "0, 1, 2, 3", "0 to 7", "nothing"],
+      "answer": 0,
+      "explanation": "break stops the loop at i = 3 before printing, so only 0, 1, 2 appear."
+    },
+    {
+      "id": "u50l05e02",
+      "type": "multipleChoice",
+      "prompt": "Trace:\n\nfor i in range(5):\n    if i == 2:\n        continue\n    print(i)\n\nWhat prints?",
+      "options": ["0, 1, 3, 4", "0, 1, 2, 3, 4", "2", "0, 1"],
+      "answer": 0,
+      "explanation": "continue skips the print when i is 2, but the loop keeps going: 0, 1, 3, 4."
+    },
+    {
+      "id": "u50l05e03",
+      "type": "matchPairs",
+      "prompt": "Match each need to the right tool.",
+      "pairs": [
+        { "left": "Stop at the first match", "right": "break" },
+        { "left": "Skip this one, keep looping", "right": "continue" },
+        { "left": "End the loop immediately", "right": "break" }
+      ],
+      "explanation": "break ends the loop; continue skips just the current pass and moves on."
+    },
+    {
+      "id": "u50l05e04",
+      "type": "trueFalse",
+      "prompt": "break ends the whole loop; continue only skips the current pass.",
+      "answer": true,
+      "explanation": "That's the core difference. break leaves entirely; continue skips one pass and the loop resumes."
+    },
+    {
+      "id": "u50l05e05",
+      "type": "multipleChoice",
+      "prompt": "Trace a 'first match' search:\n\nfor i in range(1, 30):\n    if i % 6 == 0:\n        print(i)\n        break\n\nWhat prints?",
+      "options": ["6", "6, 12", "6, 12, 18", "nothing"],
+      "answer": 0,
+      "explanation": "The first multiple of 6 is 6; it prints, then break stops the loop. break means 'first only'."
+    },
+    {
+      "id": "u50l05e06",
+      "type": "multipleChoice",
+      "prompt": "Trace counting with continue:\n\ncount = 0\nfor i in range(1, 7):\n    if i % 3 == 0:\n        continue\n    count = count + 1\n\nFinal count?",
+      "options": ["4 (3 and 6 are skipped)", "6", "2", "0"],
+      "answer": 0,
+      "explanation": "Multiples of 3 (3, 6) are skipped, so 1, 2, 4, 5 reach the counter: count = 4."
+    },
+    {
+      "id": "u50l05e07",
+      "type": "multipleChoice",
+      "prompt": "Trace break in a while True:\n\nn = 0\nwhile True:\n    n = n + 1\n    if n == 5:\n        break\n\nFinal n?",
+      "options": ["5", "4", "6", "forever"],
+      "answer": 0,
+      "explanation": "while True would loop forever, but break stops it at n = 5. break is the planned exit."
+    },
+    {
+      "id": "u50l05e08",
+      "type": "trueFalse",
+      "prompt": "A while True loop needs a break (or another way out) or it runs forever.",
+      "answer": true,
+      "explanation": "while True is always true, so only a break ends it. Always confirm there's a real exit."
+    },
+    {
+      "id": "u50l05e09",
+      "type": "multipleChoice",
+      "prompt": "Which phrase hints you want BREAK?",
+      "options": [
+        "'stop as soon as ...'",
+        "'for each and every ...'",
+        "'skip the even ones'",
+        "'count them all'"
+      ],
+      "answer": 0,
+      "explanation": "'Stop as soon as ...' means end at the first success - that's break."
+    },
+    {
+      "id": "u50l05e10",
+      "type": "multipleChoice",
+      "prompt": "Which phrase hints you want CONTINUE?",
+      "options": [
+        "'skip the ones that ...'",
+        "'exactly 5 times'",
+        "'stop at the first ...'",
+        "'print everything'"
+      ],
+      "answer": 0,
+      "explanation": "'Skip the ones that ...' means ignore certain passes but keep going - exactly continue."
+    }
+  ]
+}

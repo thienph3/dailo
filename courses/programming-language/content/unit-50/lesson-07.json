@@ -1,0 +1,117 @@
+{
+  "unitId": "u50",
+  "lessonId": "u50l07",
+  "title": "Loop back: loops meet earlier laps",
+  "idea": "REVIEW. Interleave loops with strings/f-strings, input, booleans, and elif from Laps 1-2, all used inside loops. No new concepts.",
+  "exercises": [
+    {
+      "id": "u50l07e01",
+      "type": "multipleChoice",
+      "prompt": "Review Lap 1 strings. Predict:\n\nfor i in range(3):\n    print(\"Round\")",
+      "options": [
+        "Round printed three times on three lines",
+        "Round once",
+        "Round0, Round1, Round2",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "The loop runs three times, printing the same text each pass. print inside a loop repeats the output."
+    },
+    {
+      "id": "u50l07e02",
+      "type": "multipleChoice",
+      "prompt": "Review f-strings. Predict:\n\nfor i in range(1, 4):\n    print(f\"Step {i}\")",
+      "options": [
+        "Step 1, Step 2, Step 3",
+        "Step i three times",
+        "1, 2, 3",
+        "Step {i}"
+      ],
+      "answer": 0,
+      "explanation": "An f-string drops the value of i into the text. So Step 1, Step 2, Step 3 on three lines."
+    },
+    {
+      "id": "u50l07e03",
+      "type": "multipleChoice",
+      "prompt": "Review Lap 2 comparisons inside a loop. Predict:\n\nfor i in range(1, 5):\n    if i > 2:\n        print(i)",
+      "options": ["3, 4", "1, 2, 3, 4", "3", "1, 2"],
+      "answer": 0,
+      "explanation": "Only i greater than 2 (3 and 4) print. The comparison filters which passes act."
+    },
+    {
+      "id": "u50l07e04",
+      "type": "trueFalse",
+      "prompt": "Review Lap 2: an if can use and / or to combine two conditions inside a loop.",
+      "answer": true,
+      "explanation": "You can write if i > 2 and i < 5 inside a loop to act only on passes that match both. Boolean logic still works there."
+    },
+    {
+      "id": "u50l07e05",
+      "type": "multipleChoice",
+      "prompt": "Review elif. Predict for i in range(1, 4):\n\nif i == 1:\n    print(\"one\")\nelif i == 2:\n    print(\"two\")\nelse:\n    print(\"many\")",
+      "options": [
+        "one, two, many",
+        "one, one, one",
+        "many, many, many",
+        "one, two"
+      ],
+      "answer": 0,
+      "explanation": "i is 1, 2, 3. The chain prints one, two, then many. elif picks exactly one branch per pass."
+    },
+    {
+      "id": "u50l07e06",
+      "type": "multipleChoice",
+      "prompt": "Review input (Lap 2). Which loop fits 'keep asking for input until the user types 0'?",
+      "options": [
+        "A while loop - the number of inputs is unknown",
+        "A for loop over range(1)",
+        "No loop",
+        "A for loop over range(100)"
+      ],
+      "answer": 0,
+      "explanation": "The count of inputs depends on the user, so it's unknown. Repeat-until-0 is a while loop."
+    },
+    {
+      "id": "u50l07e07",
+      "type": "multipleChoice",
+      "prompt": "Review int(). Why might you wrap input in int() before comparing it to a number?",
+      "options": [
+        "input gives text, and you need a number to compare or do math",
+        "int makes it print faster",
+        "int adds color",
+        "You never need int"
+      ],
+      "answer": 0,
+      "explanation": "input returns text; int() turns it into a number so comparisons and math work. A Lap 2 habit that matters in loops."
+    },
+    {
+      "id": "u50l07e08",
+      "type": "fillBlank",
+      "prompt": "Review f-strings. Fill the blank so it shows the running total:\n\ntotal = 15\nprint(f\"Total: {____}\")",
+      "answer": "total",
+      "acceptable": ["total"],
+      "explanation": "An f-string inserts a variable's value by name inside the braces: {total} shows 15."
+    },
+    {
+      "id": "u50l07e09",
+      "type": "multipleChoice",
+      "prompt": "Predict:\n\ncount = 0\nfor i in range(1, 6):\n    if i % 2 == 0:\n        count = count + 1\nprint(f\"Evens: {count}\")",
+      "options": ["Evens: 2", "Evens: 5", "Evens: 3", "Evens: 0"],
+      "answer": 0,
+      "explanation": "Evens in 1..5 are 2 and 4, so count = 2. The f-string shows 'Evens: 2'. Loops, ifs, and strings together."
+    },
+    {
+      "id": "u50l07e10",
+      "type": "multipleChoice",
+      "prompt": "What's the big takeaway about loops and earlier tools?",
+      "options": [
+        "Everything you learned (print, variables, math, if, strings) works INSIDE loops",
+        "Loops replace all earlier tools",
+        "Loops can't use strings",
+        "if doesn't work in loops"
+      ],
+      "answer": 0,
+      "explanation": "Loops don't stand alone - they combine with every earlier tool. That's what makes them so powerful."
+    }
+  ]
+}

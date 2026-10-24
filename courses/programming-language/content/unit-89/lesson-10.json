@@ -1,0 +1,129 @@
+{
+  "unitId": "u89",
+  "lessonId": "u89l10",
+  "title": "Everything multiple-state, reviewed",
+  "idea": "Review of the unit (lean review-heavy): recap total+count, max+min, grouped counts, and the start/update/read shape - mixing in earlier laps.",
+  "exercises": [
+    {
+      "type": "multipleChoice",
+      "prompt": "In ONE sentence, what is a 'multiple state variable' loop?",
+      "options": [
+        "A loop that keeps several running values through one pass",
+        "A loop that runs several times",
+        "A loop with no body",
+        "A loop that prints a lot"
+      ],
+      "answer": 0,
+      "explanation": "Several running values, one walk. That's the whole unit.",
+      "id": "u89l10e01"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Predict the output (review of total+count):\n\ntotal = 0\ncount = 0\nfor n in [6, 6, 6]:\n    total = total + n\n    count = count + 1\nprint(total, count)",
+      "options": [
+        "18 3",
+        "6 3",
+        "18 1",
+        "3 18"
+      ],
+      "answer": 0,
+      "explanation": "total = 18, count = 3. The classic pair, exactly as in lesson 2.",
+      "id": "u89l10e02"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Review: every running value must be given a starting value before the loop.",
+      "answer": true,
+      "explanation": "True - start before, update inside. Forgetting the start is the number-one multi-state bug.",
+      "id": "u89l10e03"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Review (earlier lap - if/else): which sends each item to exactly one of two counters?",
+      "options": [
+        "An if/else",
+        "Two separate ifs with overlapping conditions",
+        "A while with no update",
+        "A bare print"
+      ],
+      "answer": 0,
+      "explanation": "if/else guarantees one branch runs. That keeps pass/fail counters exclusive.",
+      "id": "u89l10e04"
+    },
+    {
+      "type": "orderBlocks",
+      "prompt": "Order the universal multiple-state recipe.",
+      "blocks": [
+        "Start each running value",
+        "Walk the data, updating each value per its rule",
+        "Read the finished values after the loop"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Start, update, read - the same three beats whether you keep one value or five.",
+      "id": "u89l10e05"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Review (max/min starts): to track the SMALLEST of positive scores, start the tracker at...",
+      "options": [
+        "A large number like 1000, so the first real score replaces it",
+        "0",
+        "-1",
+        "The average"
+      ],
+      "answer": 0,
+      "explanation": "A min tracker starts high; a max tracker starts low. Starting values are chosen to be beaten by real data.",
+      "id": "u89l10e06"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Predict the output (review of grouped counts):\n\npasses = 0\nfails = 0\nfor s in [90, 10, 55, 40]:\n    if s >= 50:\n        passes = passes + 1\n    else:\n        fails = fails + 1\nprint(passes, fails)",
+      "options": [
+        "2 2",
+        "3 1",
+        "1 3",
+        "4 0"
+      ],
+      "answer": 0,
+      "explanation": "90 and 55 pass (2); 10 and 40 fail (2). passes + fails = 4 = item count, a good sanity check.",
+      "id": "u89l10e07"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Review (functions): a multi-state loop can live in a function and return several values at once.",
+      "answer": true,
+      "explanation": "True - return total, count hands back both. Multiple state plays nicely with the function tools.",
+      "id": "u89l10e08"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Which problem clearly needs MULTIPLE state variables?",
+      "options": [
+        "Report the total spend AND the number of items AND the priciest item",
+        "Add two numbers",
+        "Print a greeting",
+        "Store one value"
+      ],
+      "answer": 0,
+      "explanation": "Three asks - total, count, max - mean three running values. Multi-part asks are the signal for multiple state.",
+      "id": "u89l10e09"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "You've finished Unit 89. What can you now do that you couldn't before?",
+      "options": [
+        "Keep several running values through one pass to answer several questions at once",
+        "Only track one value",
+        "Avoid loops entirely",
+        "Only use functions"
+      ],
+      "answer": 0,
+      "explanation": "You can summarise data several ways in a single walk - the foundation for the integrated problems ahead.",
+      "id": "u89l10e10"
+    }
+  ]
+}

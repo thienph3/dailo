@@ -1,0 +1,134 @@
+{
+  "unitId": "u34",
+  "lessonId": "u34l10",
+  "title": "Loop back: decisions capstone",
+  "idea": "LOOP. No new concept. A mixed capstone pulling together input, int(), arithmetic, comparisons, elif, and/or, string comparison, and edge cases across Laps 0-2.",
+  "exercises": [
+    {
+      "id": "u34l10e01",
+      "type": "multipleChoice",
+      "prompt": "The user types 18. What prints?\n\nage = int(input(\"Age: \"))\nif age >= 18:\n    print(\"Adult\")\nelse:\n    print(\"Minor\")",
+      "options": [
+        "Adult",
+        "Minor",
+        "18",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "18 >= 18 is true, so 'Adult'. The boundary counts because of >=. (Review of input + boundary.)"
+    },
+    {
+      "id": "u34l10e02",
+      "type": "multipleChoice",
+      "prompt": "What prints?\n\nn = 12\nif n % 2 == 0 and n > 10:\n    print(\"Big even\")\nelse:\n    print(\"Other\")",
+      "options": [
+        "Big even",
+        "Other",
+        "12",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "12 is even AND greater than 10, so both sides of 'and' hold. (Review of % + and.)"
+    },
+    {
+      "id": "u34l10e03",
+      "type": "multipleChoice",
+      "prompt": "What prints?\n\nreply = \"no\"\nif reply == \"yes\" or reply == \"y\":\n    print(\"Confirmed\")\nelse:\n    print(\"Cancelled\")",
+      "options": [
+        "Cancelled",
+        "Confirmed",
+        "no",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "'no' matches neither accepted form, so the else runs. (Review of or + else.)"
+    },
+    {
+      "id": "u34l10e04",
+      "type": "multipleChoice",
+      "prompt": "A shop charges 2 per apple. The user types 4 apples. What is the total?\n\napple_price = 2\napple_count = int(input(\"Apples: \"))\ntotal = apple_count * apple_price",
+      "options": [
+        "8",
+        "6",
+        "42",
+        "2"
+      ],
+      "answer": 0,
+      "explanation": "4 * 2 is 8. Both stated numbers are named variables. (Review of value-mapping + arithmetic.)"
+    },
+    {
+      "id": "u34l10e05",
+      "type": "orderBlocks",
+      "prompt": "Order the lines to ask an age and then decide.",
+      "blocks": [
+        "age = int(input(\"Age: \"))",
+        "if age >= 65:",
+        "    print(\"Senior\")",
+        "else:",
+        "    print(\"Not senior\")"
+      ],
+      "answer": [0, 1, 2, 3, 4],
+      "explanation": "Ask+convert first, then branch. (Review of input order + if/else.)"
+    },
+    {
+      "id": "u34l10e06",
+      "type": "multipleChoice",
+      "prompt": "What prints?\n\nscore = 50\nif score >= 90:\n    print(\"A\")\nelif score >= 50:\n    print(\"Pass\")\nelse:\n    print(\"Fail\")",
+      "options": [
+        "Pass",
+        "A",
+        "Fail",
+        "50"
+      ],
+      "answer": 0,
+      "explanation": "50 fails >= 90 but passes >= 50, so 'Pass'. The boundary 50 counts. (Review of elif + boundary.)"
+    },
+    {
+      "id": "u34l10e07",
+      "type": "fillBlank",
+      "prompt": "Fill the conversion so the input can be compared as a number:\n\nn = ____(input(\"Pick a number: \"))\nif n > 100:\n    print(\"Big\")",
+      "answer": "int",
+      "acceptable": ["int"],
+      "explanation": "int() makes n a number for the > comparison. (Review of int().)"
+    },
+    {
+      "id": "u34l10e08",
+      "type": "multipleChoice",
+      "prompt": "The user types 0 apples. What prints?\n\ncount = int(input(\"Apples: \"))\nif count == 0:\n    print(\"No apples\")\nelse:\n    print(f\"{count} apples\")",
+      "options": [
+        "No apples",
+        "0 apples",
+        "An error",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "The 0 guard runs first: 'No apples'. Handling the edge up front is the habit. (Review of edge guards.)"
+    },
+    {
+      "id": "u34l10e09",
+      "type": "multipleChoice",
+      "prompt": "A rule rejects exactly 100 with 'if total > 100: free shipping' when 100 should qualify. The fix is...",
+      "options": [
+        "Change > to >=",
+        "Change 100 to 99",
+        "Remove the branch",
+        "Use int()"
+      ],
+      "answer": 0,
+      "explanation": "'100 or more' needs >=. The boundary fix. (Review of debugging a boundary.)"
+    },
+    {
+      "id": "u34l10e10",
+      "type": "multipleChoice",
+      "prompt": "You have reached the end of the decisions lap. What can you now do?",
+      "options": [
+        "Ask the user, decide with if/elif/else and and/or, handle edge cases, and debug a wrong decision",
+        "Write loops",
+        "Make lists",
+        "Only print text"
+      ],
+      "answer": 0,
+      "explanation": "You can build and fix interactive decision programs across everything in Laps 0-2. Next lap: doing things many times!"
+    }
+  ]
+}

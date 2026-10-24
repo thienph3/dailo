@@ -1,0 +1,132 @@
+{
+  "unitId": "u60",
+  "lessonId": "u60l01",
+  "title": "The same pattern, flipped",
+  "idea": "Opener: finding the smallest is the SAME best-so-far pattern as the biggest (Unit 59) — you just replace when something is SMALLER. Thinking first.",
+  "exercises": [
+    {
+      "id": "u60l01e01",
+      "type": "multipleChoice",
+      "prompt": "Last unit you found the BIGGEST by keeping a best-so-far and replacing it when you met something bigger. To find the SMALLEST, what changes?",
+      "options": [
+        "Replace the best-so-far when you meet something SMALLER instead of bigger",
+        "Add the values up instead",
+        "Count the items instead",
+        "Nothing at all — it is a brand new idea"
+      ],
+      "answer": 0,
+      "explanation": "Min is the SAME pattern as max, just flipped: replace on smaller, not bigger. You already know the shape — you only change the comparison."
+    },
+    {
+      "id": "u60l01e02",
+      "type": "trueFalse",
+      "prompt": "Finding the smallest reuses the best-so-far idea from the biggest; only the comparison flips.",
+      "answer": true,
+      "explanation": "Same loop, same 'keep one best-so-far' shape. The only change is > becomes <. That is the whole unit."
+    },
+    {
+      "id": "u60l01e03",
+      "type": "multipleChoice",
+      "prompt": "Max replaced best when 'n > best'. For the smallest, the test becomes...",
+      "options": [
+        "n < best",
+        "n == best",
+        "n > best (unchanged)",
+        "n + best"
+      ],
+      "answer": 0,
+      "explanation": "Flip the > to <. Now best is replaced only when n is SMALLER, so you end up with the minimum."
+    },
+    {
+      "id": "u60l01e04",
+      "type": "multipleChoice",
+      "prompt": "Where should the 'smallest so far' start, just like the biggest did?",
+      "options": [
+        "At the first value in the list",
+        "At 0 always",
+        "At a huge number like 9999",
+        "At the length of the list"
+      ],
+      "answer": 0,
+      "explanation": "Same safe start as max: the first value. It is guaranteed to be a real value, so negatives and small numbers compare correctly."
+    },
+    {
+      "id": "u60l01e05",
+      "type": "orderBlocks",
+      "prompt": "Find the smallest of [4, 9, 2] by hand. Put the 'smallest so far' after each step in order (start with the first value, 4).",
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "blocks": [
+        "Smallest so far = 4 (the first value)",
+        "9 is not smaller than 4, stays 4",
+        "2 is smaller than 4, smallest so far = 2"
+      ],
+      "explanation": "Start 4, 9 does not beat it (we want smaller), 2 does -> 2. The smallest is 2. Same walk as max, flipped rule."
+    },
+    {
+      "id": "u60l01e06",
+      "type": "multipleChoice",
+      "prompt": "The smallest value in [4, 9, 2] is...",
+      "options": [
+        "2",
+        "9",
+        "4",
+        "15"
+      ],
+      "answer": 0,
+      "explanation": "2 is the smallest; it replaced the best-so-far on the last step."
+    },
+    {
+      "id": "u60l01e07",
+      "type": "multiSelect",
+      "prompt": "Which real questions are 'find the smallest'? (pick all)",
+      "options": [
+        "What was the coldest day?",
+        "Which item was cheapest?",
+        "What is the total cost?",
+        "Who scored the most?"
+      ],
+      "answer": [
+        0,
+        1
+      ],
+      "explanation": "Coldest and cheapest both ask for the single smallest value. Total is a sum; 'the most' is a max."
+    },
+    {
+      "id": "u60l01e08",
+      "type": "trueFalse",
+      "prompt": "For the smallest, you leave the best-so-far unchanged when the new value is NOT smaller.",
+      "answer": true,
+      "explanation": "Mirror image of max: only replace on a win. For min, a win means the new value is smaller."
+    },
+    {
+      "id": "u60l01e09",
+      "type": "multipleChoice",
+      "prompt": "You walk [6, 1, 8, 3] keeping the SMALLEST so far. What does it end at?",
+      "options": [
+        "1",
+        "8",
+        "6",
+        "3"
+      ],
+      "answer": 0,
+      "explanation": "Start 6; 1 is smaller -> 1; 8 and 3 are not smaller than 1. The smallest is 1."
+    },
+    {
+      "id": "u60l01e10",
+      "type": "multipleChoice",
+      "prompt": "This unit's tool is...",
+      "options": [
+        "Track the smallest-so-far (max's pattern, flipped) to find the smallest value",
+        "Add up a list",
+        "Count matching items",
+        "Find the biggest again"
+      ],
+      "answer": 0,
+      "explanation": "Same best-so-far loop as the biggest, with the comparison flipped to find the smallest."
+    }
+  ]
+}

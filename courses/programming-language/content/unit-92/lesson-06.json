@@ -1,0 +1,130 @@
+{
+  "unitId": "u92",
+  "lessonId": "u92l06",
+  "title": "A loop living inside a function",
+  "idea": "TOOL: push a whole loop into a function and return its result - the loop becomes a reusable sub-plan.",
+  "exercises": [
+    {
+      "type": "multipleChoice",
+      "prompt": "You have a loop that totals a list. How do you make that WHOLE loop reusable for any list?",
+      "options": [
+        "Put the loop inside a function with the list as a parameter, and return the total",
+        "Copy the loop everywhere",
+        "Use a bigger list",
+        "Remove the loop"
+      ],
+      "answer": 0,
+      "explanation": "Wrap the loop in a function. Now the entire repeat is a named sub-plan you can call on any list - loop inside a function.",
+      "id": "u92l06e01"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\ndef total_of(nums):\n    total = 0\n    for n in nums:\n        total = total + n\n    return total\n\nprint(total_of([4, 5, 6]))",
+      "options": [
+        "15",
+        "12",
+        "6",
+        "3"
+      ],
+      "answer": 0,
+      "explanation": "The loop sums 4+5+6 = 15 and returns it. The function hides the whole repeat behind one call.",
+      "id": "u92l06e02"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Once a loop is inside a function, you can reuse it just by calling the function with different lists.",
+      "answer": true,
+      "explanation": "True. total_of([1,2]) and total_of([9,9,9]) both reuse the same loop. The sub-plan works for any input.",
+      "id": "u92l06e03"
+    },
+    {
+      "type": "fillBlank",
+      "prompt": "Complete the return so the function hands back the loop's result:\n\ndef total_of(nums):\n    total = 0\n    for n in nums:\n        total = total + n\n    ____ total",
+      "answer": "return",
+      "acceptable": [
+        "return"
+      ],
+      "explanation": "return total gives the computed sum back to the caller. Without it, the function would return nothing.",
+      "id": "u92l06e04"
+    },
+    {
+      "type": "orderBlocks",
+      "prompt": "Arrange a function that counts a list's items with a loop.",
+      "blocks": [
+        "def count_of(nums):",
+        "    count = 0",
+        "    for n in nums:",
+        "        count = count + 1",
+        "    return count"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "explanation": "Header, start the counter, loop bumping it, return the count. The loop is now a reusable sub-plan.",
+      "id": "u92l06e05"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Why return the total instead of printing it inside the function?",
+      "options": [
+        "A returned total can be reused in more calculations; a print just shows it",
+        "print is slower",
+        "return breaks loops",
+        "You can't loop and print"
+      ],
+      "answer": 0,
+      "explanation": "Returning lets the caller combine the result further (e.g. compute an average). The return-vs-print distinction again.",
+      "id": "u92l06e06"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\ndef total_of(nums):\n    total = 0\n    for n in nums:\n        total = total + n\n    return total\n\nprint(total_of([]))",
+      "options": [
+        "0",
+        "Error",
+        "nothing",
+        "1"
+      ],
+      "answer": 0,
+      "explanation": "An empty list skips the loop, so total stays 0 and 0 is returned. The wrapped loop handles the empty case gracefully.",
+      "id": "u92l06e07"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "A loop inside a function is still just a loop and a function - no new syntax.",
+      "answer": true,
+      "explanation": "True. You're nesting tools you already have. The new idea is treating a whole loop as one reusable sub-plan.",
+      "id": "u92l06e08"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "You call total_of twice: total_of([1,2]) then total_of([10]). What comes back?",
+      "options": [
+        "3, then 10",
+        "13 both times",
+        "3 then 13",
+        "an error"
+      ],
+      "answer": 0,
+      "explanation": "Each call runs the loop fresh on its own list: 1+2 = 3, then 10. The function is reusable and self-contained.",
+      "id": "u92l06e09"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "The lesson:",
+      "options": [
+        "Wrapping a loop in a function turns a whole repeat into a reusable sub-plan",
+        "Loops can't go in functions",
+        "Functions can't return loop results",
+        "You must print inside the loop"
+      ],
+      "answer": 0,
+      "explanation": "A loop-in-a-function is a sub-plan you call by name - a key building block for larger integrated programs.",
+      "id": "u92l06e10"
+    }
+  ]
+}

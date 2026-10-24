@@ -1,0 +1,146 @@
+{
+  "unitId": "u12",
+  "lessonId": "u12l10",
+  "title": "Putting it all together",
+  "idea": "Mix // and % with the print, variables, and + - * / you already know.",
+  "exercises": [
+    {
+      "id": "u12l10e01",
+      "type": "multipleChoice",
+      "prompt": "Remember print from way back. What does this show?\n\nprint(19 // 4)",
+      "options": [
+        "4",
+        "3",
+        "5",
+        "19"
+      ],
+      "answer": 0,
+      "explanation": "Four 4s make 16, which fits in 19. 19 // 4 is 4, and print shows it."
+    },
+    {
+      "id": "u12l10e02",
+      "type": "multipleChoice",
+      "prompt": "What does this show?\n\nprint(19 % 4)",
+      "options": [
+        "3",
+        "4",
+        "0",
+        "1"
+      ],
+      "answer": 0,
+      "explanation": "19 minus the 16 from four 4s leaves 3. So 19 % 4 is 3."
+    },
+    {
+      "id": "u12l10e03",
+      "type": "multipleChoice",
+      "prompt": "Mixing + from before with //. What does this show?\n\nprint(10 // 3 + 1)",
+      "options": [
+        "4",
+        "3",
+        "5",
+        "2"
+      ],
+      "answer": 0,
+      "explanation": "10 // 3 is 3, then 3 + 1 is 4. We read left to right here with the tools we know."
+    },
+    {
+      "id": "u12l10e04",
+      "type": "multipleChoice",
+      "prompt": "Using variables and * from earlier units, what is the final value?\n\nboxes = 20 // 6\ntotal = boxes * 6\nprint(total)",
+      "options": [
+        "18",
+        "20",
+        "6",
+        "3"
+      ],
+      "answer": 0,
+      "explanation": "20 // 6 is 3 boxes. Then 3 * 6 is 18 — the items that fit in the full boxes. The leftover 2 is not counted."
+    },
+    {
+      "id": "u12l10e05",
+      "type": "trueFalse",
+      "prompt": "The number of full groups times the group size, plus the leftover, equals the start. So 3 * 6 + 2 is 20.",
+      "answer": true,
+      "explanation": "Exactly. For 20 shared into 6s: 3 groups, leftover 2, and 3 * 6 + 2 rebuilds 20. // and % fit together perfectly."
+    },
+    {
+      "id": "u12l10e06",
+      "type": "multipleChoice",
+      "prompt": "Reassignment review. What is the final value?\n\nn = 25\nn = n // 5\nn = n % 3\nprint(n)",
+      "options": [
+        "2",
+        "5",
+        "0",
+        "25"
+      ],
+      "answer": 0,
+      "explanation": "25 // 5 is 5, so n becomes 5. Then 5 % 3 is 2, so n becomes 2. Each line updates n in order."
+    },
+    {
+      "id": "u12l10e07",
+      "type": "matchPairs",
+      "prompt": "Match each line to its output.",
+      "pairs": [
+        {
+          "left": "print(16 // 5)",
+          "right": "3"
+        },
+        {
+          "left": "print(16 % 5)",
+          "right": "1"
+        },
+        {
+          "left": "print(16 % 2)",
+          "right": "0"
+        },
+        {
+          "left": "print(16 // 2)",
+          "right": "8"
+        }
+      ],
+      "explanation": "16 into 5s is 3 groups with 1 left. 16 is even so % 2 is 0, and // 2 halves it to 8."
+    },
+    {
+      "id": "u12l10e08",
+      "type": "multipleChoice",
+      "prompt": "Even/odd review. Which number gives 1 for number % 2?",
+      "options": [
+        "21",
+        "20",
+        "18",
+        "100"
+      ],
+      "answer": 0,
+      "explanation": "21 is odd, so 21 % 2 is 1. The others are even and would give 0."
+    },
+    {
+      "id": "u12l10e09",
+      "type": "orderBlocks",
+      "prompt": "Put these in order: name seconds as 95, find whole minutes, find leftover seconds.",
+      "blocks": [
+        "seconds = 95",
+        "print(seconds // 60)",
+        "print(seconds % 60)"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Name the value, then minutes with // (95 // 60 is 1), then leftover seconds with % (95 % 60 is 35)."
+    },
+    {
+      "id": "u12l10e10",
+      "type": "multipleChoice",
+      "prompt": "You've learned // and %! In one sentence, what do they do together?",
+      "options": [
+        "// gives how many full groups, and % gives how many are left over",
+        "They both give the leftover",
+        "They only work on even numbers",
+        "// adds and % subtracts"
+      ],
+      "answer": 0,
+      "explanation": "That's the whole unit: // for full groups, % for the leftover. Now you can solve sharing, leftover, and even/odd problems. Great work!"
+    }
+  ]
+}

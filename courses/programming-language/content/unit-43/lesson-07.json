@@ -1,0 +1,152 @@
+{
+  "unitId": "u43",
+  "lessonId": "u43l07",
+  "title": "Solve it together: total minutes over several days",
+  "idea": "GUIDED. Accumulate a computed amount each pass (count x per-item value).",
+  "problem": "You study 30 minutes a day for 6 days. Show the total minutes studied.",
+  "exercises": [
+    {
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: 30 minutes a day for 6 days. Show the total minutes.\n\nUnderstand -- what is the OUTPUT?",
+      "options": [
+        "The total minutes over all 6 days",
+        "The number of days",
+        "The minutes in one day",
+        "The average"
+      ],
+      "answer": 0,
+      "explanation": "The output is TOTAL minutes. Both the per-day minutes and the day count feed into it.",
+      "id": "u43l07e01"
+    },
+    {
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "What are the INPUTS?",
+      "options": [
+        "Minutes per day (30) and number of days (6)",
+        "Only 180",
+        "The word minutes",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "Inputs are minutes_per_day = 30 and days = 6. Both numbers must be named variables in the code.",
+      "id": "u43l07e02"
+    },
+    {
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "By hand: 30 minutes for 6 days -- total?",
+      "options": [
+        "180",
+        "36",
+        "306",
+        "30"
+      ],
+      "answer": 0,
+      "explanation": "30 times 6 is 180. The hand answer (180) is our check value.",
+      "id": "u43l07e03"
+    },
+    {
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Plan the steps.",
+      "blocks": [
+        "Start a total at 0",
+        "For each of the 6 days, add 30 minutes to the total",
+        "Show the total"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Start the total, add the day's minutes once per day, then show it. The loop repeats the add 6 times.",
+      "id": "u43l07e04"
+    },
+    {
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Which range runs once for each of the 6 days?",
+      "options": [
+        "range(days)",
+        "range(1, days)",
+        "range(30)",
+        "range(0, 30)"
+      ],
+      "answer": 0,
+      "explanation": "range(days) with days = 6 runs 6 passes -- one per day.",
+      "id": "u43l07e05"
+    },
+    {
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Fill the add-step so each day's minutes join the total:\n\nminutes_per_day = 30\ndays = 6\ntotal = 0\nfor n in range(days):\n    total = total ____ minutes_per_day\nprint(total)",
+      "answer": "+",
+      "acceptable": [
+        "+"
+      ],
+      "explanation": "Add the daily minutes each pass: total = total + minutes_per_day. After 6 passes total is 180.",
+      "id": "u43l07e06"
+    },
+    {
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Arrange the full solution.",
+      "blocks": [
+        "minutes_per_day = 30",
+        "days = 6",
+        "total = 0",
+        "for n in range(days):",
+        "    total = total + minutes_per_day",
+        "print(total)"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "explanation": "Both inputs named, total at 0, loop once per day adding the minutes, print. No number is hardcoded or dropped.",
+      "id": "u43l07e07"
+    },
+    {
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "It prints 180, matching your hand answer. So...",
+      "options": [
+        "The solution is correct",
+        "The solution is wrong",
+        "It skipped a day",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "Output (180) equals the hand answer (180). The per-day accumulation is right.",
+      "id": "u43l07e08"
+    },
+    {
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Re-check: 45 minutes a day for 4 days. What should it print?",
+      "options": [
+        "180",
+        "49",
+        "454",
+        "90"
+      ],
+      "answer": 0,
+      "explanation": "45 times 4 is also 180. Driven by the two variables, the solution handles new inputs.",
+      "id": "u43l07e09"
+    },
+    {
+      "type": "trueFalse",
+      "uepcc": "Check",
+      "prompt": "If you dropped the days count and just wrote total = minutes_per_day, the answer would be wrong.",
+      "answer": true,
+      "explanation": "True -- that would give 30, not 180. Every number in the problem (both 30 and 6) must appear in the code.",
+      "id": "u43l07e10"
+    }
+  ]
+}

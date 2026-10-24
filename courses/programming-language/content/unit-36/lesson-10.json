@@ -1,0 +1,133 @@
+{
+  "unitId": "u36",
+  "lessonId": "u36l10",
+  "title": "'For each' loop: pulling it together",
+  "idea": "Wrap-up of Unit 36: the 'for each' idea, header + indented body, predicting output, inside vs outside. Review-leaning, with earlier-lap recall.",
+  "exercises": [
+    {
+      "id": "u36l10e01",
+      "type": "multipleChoice",
+      "prompt": "What shows?\n\nfor each of 3 times:\n    print(\"Hi\")",
+      "options": [
+        "Hi\nHi\nHi",
+        "Hi",
+        "3",
+        "times"
+      ],
+      "answer": 0,
+      "explanation": "Body repeats three times — three Hi lines. The core 'for each' output."
+    },
+    {
+      "id": "u36l10e02",
+      "type": "multipleChoice",
+      "prompt": "Which part is the body?\n\nfor each of 2 rounds:\n    print(\"Go\")",
+      "options": [
+        "The indented print(\"Go\")",
+        "for each of 2 rounds:",
+        "The number 2",
+        "rounds"
+      ],
+      "answer": 0,
+      "explanation": "The indented line is the repeated body. The header controls how many times it runs."
+    },
+    {
+      "id": "u36l10e03",
+      "type": "trueFalse",
+      "prompt": "A loop header ends with a colon and its body is indented — the same shape as an if.",
+      "answer": true,
+      "explanation": "Colon then indented block: you learned it for if, and loops reuse it. Consistent shapes, less to remember."
+    },
+    {
+      "id": "u36l10e04",
+      "type": "multipleChoice",
+      "prompt": "What shows?\n\nprint(\"Start\")\nfor each of 2 times:\n    print(\"Go\")",
+      "options": [
+        "Start\nGo\nGo",
+        "Go\nGo\nStart",
+        "Start\nGo",
+        "Start"
+      ],
+      "answer": 0,
+      "explanation": "Start runs once before the loop; Go repeats twice. Outside-once then inside-per-pass."
+    },
+    {
+      "id": "u36l10e05",
+      "type": "multipleChoice",
+      "prompt": "Review: print(\"42\") shows what?",
+      "options": [
+        "42",
+        "\"42\"",
+        "print",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "print shows what's in the quotes without the quotes: 42. We now repeat such prints with a loop."
+    },
+    {
+      "id": "u36l10e06",
+      "type": "matchPairs",
+      "prompt": "Match each loop to its output line count (single-print body).",
+      "pairs": [
+        {
+          "left": "for each of 3 times",
+          "right": "3 lines"
+        },
+        {
+          "left": "for each of 1 time",
+          "right": "1 line"
+        },
+        {
+          "left": "for each of 5 times",
+          "right": "5 lines"
+        }
+      ],
+      "explanation": "Lines equal the count when the body is one print. Count the passes, count the lines."
+    },
+    {
+      "id": "u36l10e07",
+      "type": "multipleChoice",
+      "prompt": "Why use a loop instead of copying the line?",
+      "options": [
+        "Write the body once, pick any count, change it in one place",
+        "It makes the output bigger",
+        "Copies are illegal",
+        "No reason"
+      ],
+      "answer": 0,
+      "explanation": "One readable body, flexible count — the win over copy-paste. Recap of lesson 4."
+    },
+    {
+      "id": "u36l10e08",
+      "type": "multipleChoice",
+      "prompt": "Review: an if runs its body only when the condition is...",
+      "options": [
+        "True",
+        "False",
+        "Missing",
+        "A number"
+      ],
+      "answer": 0,
+      "explanation": "if runs its body when the condition is True. A loop repeats regardless — different jobs, both still in your toolbox."
+    },
+    {
+      "id": "u36l10e09",
+      "type": "trueFalse",
+      "prompt": "A step indented inside the loop repeats; a step after the loop runs once.",
+      "answer": true,
+      "explanation": "Inside = repeats; after = once. Placement decides behavior — the inside-vs-outside skill from lesson 5."
+    },
+    {
+      "id": "u36l10e10",
+      "type": "multipleChoice",
+      "prompt": "You finished the 'for each' unit. What can you do now?",
+      "options": [
+        "Write a simple loop, predict its output, and place steps inside or outside correctly",
+        "Only decisions",
+        "Nothing new",
+        "Write every advanced loop already"
+      ],
+      "answer": 0,
+      "explanation": "You own the 'for each' idea and its shape. Next, Python's real counting loop makes it official."
+    }
+  ]
+}

@@ -1,0 +1,122 @@
+{
+  "unitId": "u02",
+  "lessonId": "u02l02",
+  "title": "Spotting inputs and outputs everywhere",
+  "idea": "Practice naming the input and output of many everyday tasks. Still no code.",
+  "exercises": [
+    {
+      "id": "u02l02e01",
+      "type": "multipleChoice",
+      "prompt": "Task: washing a dirty plate. What is the INPUT?",
+      "options": [
+        "A dirty plate",
+        "A clean plate",
+        "The sink",
+        "Soap bubbles"
+      ],
+      "answer": 0,
+      "explanation": "You start with a dirty plate — that's what goes in."
+    },
+    {
+      "id": "u02l02e02",
+      "type": "multipleChoice",
+      "prompt": "Task: washing a dirty plate. What is the OUTPUT?",
+      "options": [
+        "A clean plate",
+        "A dirty plate",
+        "A towel",
+        "More dishes"
+      ],
+      "answer": 0,
+      "explanation": "You end with a clean plate — that's what comes out."
+    },
+    {
+      "id": "u02l02e03",
+      "type": "matchPairs",
+      "prompt": "Match each task to its OUTPUT.",
+      "pairs": [
+        { "left": "Baking cake batter", "right": "A cake" },
+        { "left": "Charging a phone", "right": "A full battery" },
+        { "left": "Mixing paint colors", "right": "A new color" }
+      ],
+      "explanation": "Each task turns an input into an output. The output is the finished result."
+    },
+    {
+      "id": "u02l02e04",
+      "type": "multipleChoice",
+      "prompt": "Task: translating a sentence from English to Spanish. What is the input?",
+      "options": [
+        "The English sentence",
+        "The Spanish sentence",
+        "A dictionary's price",
+        "The country Spain"
+      ],
+      "answer": 0,
+      "explanation": "You start with the English sentence — that goes in."
+    },
+    {
+      "id": "u02l02e05",
+      "type": "multipleChoice",
+      "prompt": "Task: translating a sentence from English to Spanish. What is the output?",
+      "options": [
+        "The Spanish sentence",
+        "The English sentence",
+        "A grammar rule",
+        "A new language"
+      ],
+      "answer": 0,
+      "explanation": "You end with the Spanish sentence — that comes out."
+    },
+    {
+      "id": "u02l02e06",
+      "type": "trueFalse",
+      "prompt": "For the task 'add up a shopping list', the input is the list of prices and the output is the total.",
+      "answer": true,
+      "explanation": "Prices go in, the total comes out. You named both correctly."
+    },
+    {
+      "id": "u02l02e07",
+      "type": "multipleChoice",
+      "prompt": "Task: a weather app shows today's temperature. What is the OUTPUT?",
+      "options": [
+        "Today's temperature",
+        "Your phone",
+        "The app's name",
+        "Tomorrow's news"
+      ],
+      "answer": 0,
+      "explanation": "The thing you get out is the temperature shown on screen."
+    },
+    {
+      "id": "u02l02e08",
+      "type": "matchPairs",
+      "prompt": "Match each task to its INPUT.",
+      "pairs": [
+        { "left": "Blending fruit into a smoothie", "right": "Fresh fruit" },
+        { "left": "Printing a photo", "right": "A digital picture" },
+        { "left": "Boiling an egg", "right": "A raw egg" }
+      ],
+      "explanation": "The input is what you start with before the task does its work."
+    },
+    {
+      "id": "u02l02e09",
+      "type": "trueFalse",
+      "prompt": "A task can have the same thing as both its input and its output.",
+      "answer": false,
+      "explanation": "A task changes something. If nothing changed, no real work happened. Input and output are different."
+    },
+    {
+      "id": "u02l02e10",
+      "type": "multipleChoice",
+      "prompt": "Why is it useful to name the input and output first?",
+      "options": [
+        "It tells you what you start with and what you must produce",
+        "It makes the task take longer",
+        "It replaces doing the task",
+        "It is only for math tasks"
+      ],
+      "answer": 0,
+      "explanation": "Naming input and output frames the problem before you solve it — the first thinking step."
+    }
+  ]
+}

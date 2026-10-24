@@ -1,0 +1,146 @@
+{
+  "unitId": "u56",
+  "lessonId": "u56l01",
+  "title": "Solve it together: greet every guest",
+  "idea": "GUIDED PROBLEM walked through UEPCC. Visit each name in a list and print a greeting for every one.",
+  "problem": "A party has a guest list of names. Print a greeting line for every guest.",
+  "exercises": [
+    {
+      "id": "u56l01e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: You have a guest list of names. Print a greeting for every guest.\n\nUnderstand first. What is the OUTPUT?",
+      "options": [
+        "One greeting line per guest",
+        "A single greeting for the whole party",
+        "The number of guests",
+        "The first guest only"
+      ],
+      "answer": 0,
+      "explanation": "The output is one greeting per guest — a per-item action. Naming the output first frames everything else."
+    },
+    {
+      "id": "u56l01e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "Still understanding. What is the INPUT?",
+      "options": [
+        "The list of guest names",
+        "A single name",
+        "The word 'greeting'",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "The input is the list of names. You'll walk it and act on each one."
+    },
+    {
+      "id": "u56l01e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example by hand. If the guests are [\"Mo\", \"Jo\"], how many greeting lines should appear?",
+      "options": [
+        "Two — one per guest",
+        "One",
+        "Three",
+        "Zero"
+      ],
+      "answer": 0,
+      "explanation": "Two guests -> two greetings. This hand count is the check you'll compare the code's output against."
+    },
+    {
+      "id": "u56l01e04",
+      "type": "trueFalse",
+      "uepcc": "E",
+      "prompt": "For guests [\"Mo\", \"Jo\"], the expected lines are 'Hi Mo' and 'Hi Jo'.",
+      "answer": true,
+      "explanation": "Working the exact expected output by hand tells you what the loop must produce."
+    },
+    {
+      "id": "u56l01e05",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Plan it. Put the plain-English steps in order.",
+      "blocks": [
+        "Greet that name",
+        "Take each name from the guest list",
+        "Repeat until the list is finished"
+      ],
+      "answer": [
+        1,
+        0,
+        2
+      ],
+      "explanation": "Take each name, greet it, repeat to the end. That's exactly what a for-each loop does."
+    },
+    {
+      "id": "u56l01e06",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Your plan says 'take each name and act on it'. Which tool does that?",
+      "options": [
+        "for item in list",
+        "a single print",
+        "range(2)",
+        "an if with no loop"
+      ],
+      "answer": 0,
+      "explanation": "'for name in guests' visits each value — the right tool for a per-item action."
+    },
+    {
+      "id": "u56l01e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code it. Arrange the lines to match your plan.",
+      "blocks": [
+        "    print(f\"Hi {name}\")",
+        "for name in guests:",
+        "guests = [\"Mo\", \"Jo\"]"
+      ],
+      "answer": [
+        2,
+        1,
+        0
+      ],
+      "explanation": "Make the list, open the loop, print a greeting for each name. The code mirrors the plan."
+    },
+    {
+      "id": "u56l01e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Finish the loop header:\n\nguests = [\"Mo\", \"Jo\"]\nfor name ____ guests:\n    print(f\"Hi {name}\")",
+      "answer": "in",
+      "acceptable": [
+        "in"
+      ],
+      "explanation": "'for name in guests:' — the 'in' keyword connects the loop variable to the list."
+    },
+    {
+      "id": "u56l01e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check. The code prints 'Hi Mo' and 'Hi Jo'. Your hand example said two lines, 'Hi Mo' and 'Hi Jo'. So...",
+      "options": [
+        "It passes — output matches the example",
+        "It fails",
+        "You can't tell",
+        "Change the example"
+      ],
+      "answer": 0,
+      "explanation": "Output matches the hand example, so the solution is correct."
+    },
+    {
+      "id": "u56l01e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "New input: guests = [\"Al\", \"Bo\", \"Cy\"]. With the same code, how many greeting lines now?",
+      "options": [
+        "Three",
+        "Two",
+        "One",
+        "Zero"
+      ],
+      "answer": 0,
+      "explanation": "Three guests -> three greetings. A good solution works for new inputs, not just the first. You solved it with UEPCC!"
+    }
+  ]
+}

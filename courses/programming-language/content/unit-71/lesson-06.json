@@ -1,0 +1,146 @@
+{
+  "unitId": "u71",
+  "lessonId": "u71l06",
+  "title": "Build a greeting sub-plan",
+  "idea": "TOOL: assemble a small program that defines greet() and calls it; predict and arrange.",
+  "exercises": [
+    {
+      "id": "u71l06e01",
+      "type": "multipleChoice",
+      "prompt": "GOAL: a program that shows 'Welcome!' using a sub-plan named welcome. First, what does the DEFINITION line look like?",
+      "options": [
+        "def welcome():",
+        "welcome():",
+        "def welcome",
+        "welcome()"
+      ],
+      "answer": 0,
+      "explanation": "A def line is 'def welcome():' - the word def, the name, (), and a colon. The body goes indented below."
+    },
+    {
+      "id": "u71l06e02",
+      "type": "tapTokens",
+      "prompt": "Tap tokens for the def line of a sub-plan named welcome.",
+      "tokens": [
+        "def",
+        "welcome",
+        "(",
+        ")",
+        ":"
+      ],
+      "answer": [
+        "def",
+        "welcome",
+        "(",
+        ")",
+        ":"
+      ],
+      "explanation": "def welcome(): - that's the definition line. Next you'd indent the print and then call it."
+    },
+    {
+      "id": "u71l06e03",
+      "type": "fillBlank",
+      "prompt": "Complete the body so welcome shows the text:\n\ndef welcome():\n    ____(\"Welcome!\")\nwelcome()",
+      "answer": "print",
+      "acceptable": [
+        "print"
+      ],
+      "explanation": "Inside the sub-plan, print(\"Welcome!\") shows the text. The call welcome() makes it run."
+    },
+    {
+      "id": "u71l06e04",
+      "type": "orderBlocks",
+      "prompt": "Arrange the whole program: define welcome (it prints 'Welcome!'), then call it.",
+      "blocks": [
+        "welcome()",
+        "def welcome():",
+        "    print(\"Welcome!\")"
+      ],
+      "answer": [
+        1,
+        2,
+        0
+      ],
+      "explanation": "def line first, indented print inside, then the call welcome() at the bottom. Define, then run."
+    },
+    {
+      "id": "u71l06e05",
+      "type": "multipleChoice",
+      "prompt": "Run your program. What prints?",
+      "options": [
+        "Welcome!",
+        "welcome",
+        "Nothing",
+        "def welcome"
+      ],
+      "answer": 0,
+      "explanation": "The call welcome() runs the body, printing 'Welcome!'. Define sets it up; the call does the work."
+    },
+    {
+      "id": "u71l06e06",
+      "type": "multipleChoice",
+      "prompt": "You remove the welcome() call but keep the def. Now what prints?",
+      "options": [
+        "Nothing",
+        "Welcome!",
+        "welcome",
+        "an error"
+      ],
+      "answer": 0,
+      "explanation": "Defined but not called means the body never runs - no output. The call is what produces the result."
+    },
+    {
+      "id": "u71l06e07",
+      "type": "trueFalse",
+      "prompt": "To show 'Welcome!' three times, you can keep one def and call welcome() three times.",
+      "answer": true,
+      "explanation": "Yes. Define once, call three times. Each call re-runs the print. No need to re-define it."
+    },
+    {
+      "id": "u71l06e08",
+      "type": "multipleChoice",
+      "prompt": "Which is a GOOD name for a sub-plan that prints a welcome message?",
+      "options": [
+        "welcome",
+        "x",
+        "thing",
+        "n123"
+      ],
+      "answer": 0,
+      "explanation": "'welcome' describes the job honestly. Vague names like x or thing hide what the sub-plan does."
+    },
+    {
+      "id": "u71l06e09",
+      "type": "matchPairs",
+      "prompt": "Match each line of your program to its role.",
+      "pairs": [
+        {
+          "left": "def welcome():",
+          "right": "define the sub-plan"
+        },
+        {
+          "left": "    print(\"Welcome!\")",
+          "right": "the body - runs when called"
+        },
+        {
+          "left": "welcome()",
+          "right": "call it to run"
+        }
+      ],
+      "explanation": "Three roles: define, body, call. The body runs only when the call fires - define is not run."
+    },
+    {
+      "id": "u71l06e10",
+      "type": "multipleChoice",
+      "prompt": "You just wrote and ran your first real sub-plan! The two things you did were...",
+      "options": [
+        "define it with def, then call it with welcome()",
+        "only define it",
+        "only call it",
+        "neither"
+      ],
+      "answer": 0,
+      "explanation": "Define with def welcome(), then call welcome(). That pair - define and call - is the whole tool. Nice work!"
+    }
+  ]
+}

@@ -1,0 +1,132 @@
+{
+  "unitId": "u15",
+  "lessonId": "u15l02",
+  "title": "Joining words with +",
+  "idea": "The + sign joins two strings into one. This is called concatenation.",
+  "exercises": [
+    {
+      "id": "u15l02e01",
+      "type": "multipleChoice",
+      "prompt": "With strings, what does + do?",
+      "options": [
+        "Joins two strings end to end",
+        "Adds their letters as numbers",
+        "Nothing, + is only for numbers",
+        "Removes letters"
+      ],
+      "answer": 0,
+      "explanation": "With strings, + sticks them together into one longer string. This is called concatenation — a long word for 'joining'."
+    },
+    {
+      "id": "u15l02e02",
+      "type": "multipleChoice",
+      "prompt": "What will this show?\n\nprint(\"sun\" + \"shine\")",
+      "options": [
+        "sunshine",
+        "sun shine",
+        "sun + shine",
+        "shinesun"
+      ],
+      "answer": 0,
+      "explanation": "+ joins them end to end with nothing between: sunshine. Notice there's no space added."
+    },
+    {
+      "id": "u15l02e03",
+      "type": "trueFalse",
+      "prompt": "\"cat\" + \"fish\" gives catfish.",
+      "answer": true,
+      "explanation": "Joined end to end: catfish. The + puts them together exactly, no gap."
+    },
+    {
+      "id": "u15l02e04",
+      "type": "multipleChoice",
+      "prompt": "What will this show?\n\nfirst = \"Harry\"\nlast = \"Lee\"\nprint(first + last)",
+      "options": [
+        "HarryLee",
+        "Harry Lee",
+        "first last",
+        "Harry + Lee"
+      ],
+      "answer": 0,
+      "explanation": "Both variables hold strings. + joins their values: HarryLee. (No space yet — that's the next lesson!)"
+    },
+    {
+      "id": "u15l02e05",
+      "type": "multipleChoice",
+      "prompt": "The order matters when joining. What will this show?\n\nprint(\"fish\" + \"cat\")",
+      "options": [
+        "fishcat",
+        "catfish",
+        "fish cat",
+        "cat fish"
+      ],
+      "answer": 0,
+      "explanation": "Left first, then right: fishcat. Swapping the order swaps the result."
+    },
+    {
+      "id": "u15l02e06",
+      "type": "fillBlank",
+      "prompt": "Join two strings to show: goodnight\n\nprint(\"good\" ____ \"night\")",
+      "answer": "+",
+      "acceptable": [
+        "+"
+      ],
+      "explanation": "The + joins \"good\" and \"night\" into goodnight."
+    },
+    {
+      "id": "u15l02e07",
+      "type": "multipleChoice",
+      "prompt": "What will this show?\n\nword = \"play\"\nprint(word + \"ground\")",
+      "options": [
+        "playground",
+        "play ground",
+        "wordground",
+        "groundplay"
+      ],
+      "answer": 0,
+      "explanation": "The value of word is \"play\". Joined with \"ground\": playground."
+    },
+    {
+      "id": "u15l02e08",
+      "type": "tapTokens",
+      "prompt": "Build a line that prints note + book joined together.",
+      "tokens": [
+        "print",
+        "(",
+        "\"note\"",
+        "+",
+        "\"book\"",
+        ")"
+      ],
+      "answer": [
+        "print",
+        "(",
+        "\"note\"",
+        "+",
+        "\"book\"",
+        ")"
+      ],
+      "explanation": "print( \"note\" + \"book\" ) shows notebook."
+    },
+    {
+      "id": "u15l02e09",
+      "type": "multipleChoice",
+      "prompt": "You can join more than two. What will this show?\n\nprint(\"a\" + \"b\" + \"c\")",
+      "options": [
+        "abc",
+        "a b c",
+        "a+b+c",
+        "cba"
+      ],
+      "answer": 0,
+      "explanation": "Each + joins the next piece: a, then b, then c, giving abc."
+    },
+    {
+      "id": "u15l02e10",
+      "type": "trueFalse",
+      "prompt": "When you join \"12\" + \"3\" (both are strings in quotes), you get the text 123, not the number 15.",
+      "answer": true,
+      "explanation": "In quotes they're text, so + just joins them: 123. It does NOT add them as numbers. Quotes change everything."
+    }
+  ]
+}

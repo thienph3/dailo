@@ -1,0 +1,150 @@
+{
+  "unitId": "u79",
+  "lessonId": "u79l02",
+  "title": "Solve it together: feed one answer into the next",
+  "idea": "GUIDED (UEPCC). Compose helpers where the first's RETURNED value is the argument to the second.",
+  "problem": "half(n) returns n//2 and add_five(n) returns n+5. Show add_five(half(20)).",
+  "exercises": [
+    {
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: half(n) returns n//2; add_five(n) returns n+5. Show add_five(half(20)).\n\nWhat is the OUTPUT?",
+      "options": [
+        "One number: half of 20, then plus five",
+        "The number 20",
+        "Two numbers",
+        "A list"
+      ],
+      "answer": 0,
+      "explanation": "Output is a single number: halve 20, then add five. Name the output first.",
+      "id": "u79l02e01"
+    },
+    {
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "Which helper's answer becomes the INPUT to the other?",
+      "options": [
+        "half's answer feeds add_five",
+        "add_five's answer feeds half",
+        "Neither feeds the other",
+        "Both run alone"
+      ],
+      "answer": 0,
+      "explanation": "half(20) is computed first; its returned value is handed to add_five. Inner result feeds outer call.",
+      "id": "u79l02e02"
+    },
+    {
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example by hand. Half of 20 is 10; 10 plus five is...",
+      "options": [
+        "15",
+        "10",
+        "25",
+        "5"
+      ],
+      "answer": 0,
+      "explanation": "10 + 5 = 15. This hand answer is what you'll check the code against.",
+      "id": "u79l02e03"
+    },
+    {
+      "type": "trueFalse",
+      "uepcc": "E",
+      "prompt": "The hand-worked 15 is the value we compare the code's output to in Check.",
+      "answer": true,
+      "explanation": "Yes. Work one example by hand FIRST so Check has something known-correct to compare with.",
+      "id": "u79l02e04"
+    },
+    {
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Plan the order of jobs.",
+      "blocks": [
+        "Halve the number",
+        "Add five to that half",
+        "Show the result"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Inner job (halve) first, then outer (add five), then show. Plan before writing code.",
+      "id": "u79l02e05"
+    },
+    {
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "To compose, where does half(20) go in the code?",
+      "options": [
+        "Inside add_five's parentheses: add_five(half(20))",
+        "On its own line only",
+        "Inside print's quotes",
+        "It can't be composed"
+      ],
+      "answer": 0,
+      "explanation": "half(20) is a value, so it fits where add_five expects an argument. That's composing.",
+      "id": "u79l02e06"
+    },
+    {
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code it: define half, define add_five, then compose in a print.",
+      "blocks": [
+        "def half(n):",
+        "    return n // 2",
+        "def add_five(n):",
+        "    return n + 5",
+        "print(add_five(half(20)))"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "explanation": "Define both helpers, then feed half(20) into add_five. half(20)=10, add_five(10)=15.",
+      "id": "u79l02e07"
+    },
+    {
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Complete so half runs first:\n\nprint(add_five(____(20)))",
+      "answer": "half",
+      "acceptable": [
+        "half"
+      ],
+      "explanation": "half(20) is the inner call (10); add_five(10) is 15.",
+      "id": "u79l02e08"
+    },
+    {
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check — the code prints 15; your example said 15. The result is...",
+      "options": [
+        "Correct — they match",
+        "Wrong",
+        "Unknown",
+        "To be changed"
+      ],
+      "answer": 0,
+      "explanation": "Matching the hand example (15) means the composition is correct.",
+      "id": "u79l02e09"
+    },
+    {
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Re-check: add_five(half(8)). What does it give?",
+      "options": [
+        "9",
+        "15",
+        "4",
+        "13"
+      ],
+      "answer": 0,
+      "explanation": "half(8)=4, add_five(4)=9. Works for new inputs — the solution generalizes.",
+      "id": "u79l02e10"
+    }
+  ]
+}

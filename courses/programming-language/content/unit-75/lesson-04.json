@@ -1,0 +1,141 @@
+{
+  "unitId": "u75",
+  "lessonId": "u75l04",
+  "title": "Solve it: a sub-plan that returns an average",
+  "idea": "GUIDED PROBLEM (UEPCC). Average of two numbers in a returning sub-plan — needs parentheses so the add happens before the divide.",
+  "problem": "Write average(a, b) that hands back the mean of a and b. Use it to show the average of 8 and 4.",
+  "exercises": [
+    {
+      "id": "u75l04e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: average(a, b) hands back the mean of a and b; show the average of 8 and 4.\n\nWhat is the OUTPUT?",
+      "options": [
+        "The average of the two numbers",
+        "Their sum only",
+        "The bigger number",
+        "The smaller number"
+      ],
+      "answer": 0,
+      "explanation": "Output is the average (the mean), handed back with return."
+    },
+    {
+      "id": "u75l04e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "What are the inputs?",
+      "options": [
+        "The two numbers a and b",
+        "Only a",
+        "Only the average",
+        "No inputs"
+      ],
+      "answer": 0,
+      "explanation": "The two numbers a and b are the inputs — the two parameters the sub-plan averages."
+    },
+    {
+      "id": "u75l04e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example by hand — the average of 8 and 4 is...",
+      "options": [
+        "6",
+        "12",
+        "2",
+        "32"
+      ],
+      "answer": 0,
+      "explanation": "Add them (8 + 4 = 12), then divide by 2 (12 / 2 = 6). So the average is 6."
+    },
+    {
+      "id": "u75l04e04",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "By hand you did two steps. Which order was correct?",
+      "options": [
+        "Add first, then divide the sum by 2",
+        "Divide first, then add",
+        "Multiply, then divide",
+        "Subtract, then add"
+      ],
+      "answer": 0,
+      "explanation": "Add first to get the total, then halve it. That order is why the code needs parentheses around the add."
+    },
+    {
+      "id": "u75l04e05",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Plan the code. Which expression computes the average correctly?",
+      "options": [
+        "(a + b) / 2",
+        "a + b / 2",
+        "a / 2 + b",
+        "a + b * 2"
+      ],
+      "answer": 0,
+      "explanation": "Parentheses force the add first: (a + b) / 2. Without them, only b would be halved — a classic bug."
+    },
+    {
+      "id": "u75l04e06",
+      "type": "trueFalse",
+      "uepcc": "P",
+      "prompt": "Without the parentheses, 'a + b / 2' would divide only b by 2, giving the wrong average.",
+      "answer": true,
+      "explanation": "Yes. Divide binds tighter than add, so a + b / 2 is a + (b / 2). The parentheses fix the order."
+    },
+    {
+      "id": "u75l04e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code it: define average, return (a + b) / 2, then print average(8, 4).",
+      "blocks": [
+        "def average(a, b):",
+        "    return (a + b) / 2",
+        "print(average(8, 4))"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Define with both parameters, return the parenthesized mean, call with 8 and 4 inside print."
+    },
+    {
+      "id": "u75l04e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Fill the blank so the add happens before the divide:\n\ndef average(a, b):\n    return ____ / 2",
+      "answer": "(a + b)",
+      "acceptable": ["(a + b)", "(a+b)"],
+      "explanation": "Wrap a + b in parentheses: (a + b) / 2. The parentheses force the add first."
+    },
+    {
+      "id": "u75l04e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check — it prints 6.0 and your hand example was 6. Verdict?",
+      "options": [
+        "Passes — 6.0 is 6 (division gives a decimal)",
+        "Fails",
+        "Unknown",
+        "Rewrite the example"
+      ],
+      "answer": 0,
+      "explanation": "Division gives a decimal, so 6.0 is shown — the same value as your hand answer 6. It passes."
+    },
+    {
+      "id": "u75l04e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Re-check: average(10, 20). What comes back?",
+      "options": [
+        "15.0",
+        "30",
+        "6.0",
+        "25"
+      ],
+      "answer": 0,
+      "explanation": "(10 + 20) / 2 = 30 / 2 = 15.0. Correct for new inputs — the sub-plan generalizes."
+    }
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "unitId": "u16",
+  "lessonId": "u16l04",
+  "title": "str() turns a number into text",
+  "idea": "str(5) hands back the text \"5\". Now it can join with other text.",
+  "exercises": [
+    {
+      "id": "u16l04e01",
+      "type": "multipleChoice",
+      "prompt": "str() turns a value into text. What does str(9) give back?",
+      "options": [
+        "The text \"9\"",
+        "The number 9",
+        "The word nine",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "str(9) converts the number 9 into the text \"9\". 'str' is short for string, which means text."
+    },
+    {
+      "id": "u16l04e02",
+      "type": "multipleChoice",
+      "prompt": "What will this show?\n\nprint(\"Score: \" + str(10))",
+      "options": [
+        "Score: 10",
+        "Score: + 10",
+        "Score: str(10)",
+        "Error"
+      ],
+      "answer": 0,
+      "explanation": "str(10) becomes the text \"10\", so it can join onto \"Score: \". The result is Score: 10."
+    },
+    {
+      "id": "u16l04e03",
+      "type": "multipleChoice",
+      "prompt": "Why do we need str() here?\n\nprint(\"Age: \" + str(12))",
+      "options": [
+        "You can only join text with text — str() makes 12 into text",
+        "str() makes the number bigger",
+        "str() does the math",
+        "No reason, it's optional"
+      ],
+      "answer": 0,
+      "explanation": "+ joins text with text. A number can't join onto text directly, so str() turns 12 into \"12\" first."
+    },
+    {
+      "id": "u16l04e04",
+      "type": "fillBlank",
+      "prompt": "Complete this to show 'You have 3 lives':\n\nprint(\"You have \" + ____(3) + \" lives\")",
+      "answer": "str",
+      "acceptable": [
+        "str"
+      ],
+      "explanation": "The number 3 must become text to join the sentence, so wrap it in str(). Result: You have 3 lives."
+    },
+    {
+      "id": "u16l04e05",
+      "type": "multipleChoice",
+      "prompt": "lives = 3\nprint(\"Lives: \" + str(lives))\n\nWhat shows?",
+      "options": [
+        "Lives: 3",
+        "Lives: lives",
+        "Lives: + 3",
+        "Error"
+      ],
+      "answer": 0,
+      "explanation": "lives holds the number 3. str(lives) makes it \"3\", which joins onto \"Lives: \" to give Lives: 3."
+    },
+    {
+      "id": "u16l04e06",
+      "type": "trueFalse",
+      "prompt": "str() turns a number into text so it can be joined with other text using +.",
+      "answer": true,
+      "explanation": "Right. str() is the partner of int(): one makes text into a number, the other makes a number into text."
+    },
+    {
+      "id": "u16l04e07",
+      "type": "matchPairs",
+      "prompt": "Match each tool to what it does.",
+      "pairs": [
+        {
+          "left": "int()",
+          "right": "Text into a whole number"
+        },
+        {
+          "left": "str()",
+          "right": "A number into text"
+        }
+      ],
+      "explanation": "int goes toward numbers, str goes toward text. Pick the one that matches the job you need."
+    },
+    {
+      "id": "u16l04e08",
+      "type": "multipleChoice",
+      "prompt": "You want to build the message 'Total: 15' from the number 15. Which line is right?",
+      "options": [
+        "print(\"Total: \" + str(15))",
+        "print(\"Total: \" + 15)",
+        "print(\"Total: \" + int(15))",
+        "print(\"Total: \" 15)"
+      ],
+      "answer": 0,
+      "explanation": "str(15) makes the number joinable text. (\"Total: \" + 15 would fail because you can't join text and a bare number.)"
+    },
+    {
+      "id": "u16l04e09",
+      "type": "orderBlocks",
+      "prompt": "Arrange a program that stores the number 7 and shows 'Count: 7'.",
+      "blocks": [
+        "count = 7",
+        "message = \"Count: \" + str(count)",
+        "print(message)"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Store the number, build the text with str(count) joined to the label, then print it."
+    },
+    {
+      "id": "u16l04e10",
+      "type": "multipleChoice",
+      "prompt": "What will this show?\n\nprint(\"Level \" + str(2) + \" done\")",
+      "options": [
+        "Level 2 done",
+        "Level 2done",
+        "Level + 2 + done",
+        "Error"
+      ],
+      "answer": 0,
+      "explanation": "str(2) is \"2\". Joined between \"Level \" and \" done\" (note the spaces), it reads Level 2 done."
+    }
+  ]
+}

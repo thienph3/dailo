@@ -1,0 +1,144 @@
+{
+  "unitId": "u99",
+  "lessonId": "u99l01",
+  "title": "Capstone: write a function that doubles a number",
+  "idea": "GUIDED CAPSTONE. Wrap a tiny calculation in a reusable function with a parameter and a return — your first full def walked through UEPCC.",
+  "problem": "Write a function double(n) that returns twice its input, so double(5) is 10.",
+  "exercises": [
+    {
+      "id": "u99l01e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "Functions capstone! PROBLEM: double(n) returns twice n. OUTPUT of the function is...",
+      "options": [
+        "Twice the input, returned to the caller",
+        "A printed message only",
+        "Nothing",
+        "The input unchanged"
+      ],
+      "answer": 0,
+      "explanation": "A function's output is what it RETURNS. Here that's n times 2, handed back to whoever called it."
+    },
+    {
+      "id": "u99l01e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "What is the function's INPUT, and how does it receive it?",
+      "options": [
+        "A parameter n passed in when called",
+        "A fixed number inside",
+        "input() from the keyboard",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "The parameter n is the input slot. The caller fills it (e.g. double(5)). Parameters are how data enters a function."
+    },
+    {
+      "id": "u99l01e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example by hand: what should double(5) give?",
+      "options": [
+        "10",
+        "5",
+        "25",
+        "2"
+      ],
+      "answer": 0,
+      "explanation": "5 * 2 = 10. That's the value the function must return for input 5 — our check."
+    },
+    {
+      "id": "u99l01e04",
+      "type": "trueFalse",
+      "uepcc": "E",
+      "prompt": "A function that RETURNS a value lets us use the result later (store it, add it); printing only shows it.",
+      "answer": true,
+      "explanation": "Return hands the value back so the caller can use it. This is why return beats print for a reusable calculation."
+    },
+    {
+      "id": "u99l01e05",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Plan the function. Order the pieces.",
+      "blocks": [
+        "Return that doubled value",
+        "Define double with a parameter n",
+        "Compute n times 2"
+      ],
+      "answer": [
+        1,
+        2,
+        0
+      ],
+      "explanation": "Header with the parameter, compute, return. Every function follows this shape: take input, do work, return output."
+    },
+    {
+      "id": "u99l01e06",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Which keyword hands the result back to the caller?",
+      "options": [
+        "return",
+        "print",
+        "def",
+        "input"
+      ],
+      "answer": 0,
+      "explanation": "return sends the value out. def only DEFINES the function; print would just display it, not return it."
+    },
+    {
+      "id": "u99l01e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code it. Arrange the two lines.",
+      "blocks": [
+        "    return n * 2",
+        "def double(n):"
+      ],
+      "answer": [
+        1,
+        0
+      ],
+      "explanation": "The def header first, then an indented return. double(n) gives back n*2."
+    },
+    {
+      "id": "u99l01e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Complete the function so it doubles n:\n\ndef double(n):\n    return n ____ 2",
+      "answer": "*",
+      "acceptable": [
+        "*"
+      ],
+      "explanation": "Multiply n by 2 and return it. double(5) now returns 10."
+    },
+    {
+      "id": "u99l01e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "You call double(5) and it returns 10. Hand example said 10. Verdict?",
+      "options": [
+        "Passes",
+        "Fails",
+        "Unknown",
+        "Rewrite example"
+      ],
+      "answer": 0,
+      "explanation": "Matches. Your first real function works — input in, output returned."
+    },
+    {
+      "id": "u99l01e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Re-check: what does double(0) return?",
+      "options": [
+        "0",
+        "2",
+        "10",
+        "1"
+      ],
+      "answer": 0,
+      "explanation": "0 * 2 = 0. A function works for every valid input, not just the first. Reusable and correct!"
+    }
+  ]
+}

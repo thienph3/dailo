@@ -1,0 +1,142 @@
+{
+  "unitId": "u26",
+  "lessonId": "u26l10",
+  "title": "Review: combining conditions",
+  "idea": "Consolidate and/or/not alongside if/elif/else and the edge-case habit. Review-leaning final lesson of the sub-lap.",
+  "exercises": [
+    {
+      "id": "u26l10e01",
+      "type": "multipleChoice",
+      "prompt": "'and' is True when...",
+      "options": [
+        "both sides are True",
+        "either side is True",
+        "both are False",
+        "neither"
+      ],
+      "answer": 0,
+      "explanation": "Review: 'and' needs both sides True. One False makes it False."
+    },
+    {
+      "id": "u26l10e02",
+      "type": "multipleChoice",
+      "prompt": "'or' is True when...",
+      "options": [
+        "at least one side is True",
+        "both must be True",
+        "both are False",
+        "never"
+      ],
+      "answer": 0,
+      "explanation": "Review: 'or' needs just one True side."
+    },
+    {
+      "id": "u26l10e03",
+      "type": "multipleChoice",
+      "prompt": "What does 'not' do?",
+      "options": [
+        "Flips True to False and False to True",
+        "Adds one",
+        "Doubles it",
+        "Deletes it"
+      ],
+      "answer": 0,
+      "explanation": "Review: 'not' reverses a condition - great for 'unless' rules."
+    },
+    {
+      "id": "u26l10e04",
+      "type": "multipleChoice",
+      "prompt": "What does this print?\n\na = True\nb = False\nif a and b:\n    print(\"Both\")\nelif a or b:\n    print(\"At least one\")\nelse:\n    print(\"Neither\")",
+      "options": [
+        "At least one",
+        "Both",
+        "Neither",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "a and b is False (b is False), but a or b is True, so the elif prints 'At least one'. Operators combine with elif chains."
+    },
+    {
+      "id": "u26l10e05",
+      "type": "matchPairs",
+      "prompt": "Match each English rule to its operator.",
+      "pairs": [
+        {
+          "left": "both must hold",
+          "right": "and"
+        },
+        {
+          "left": "either is enough",
+          "right": "or"
+        },
+        {
+          "left": "unless it is true",
+          "right": "not"
+        }
+      ],
+      "explanation": "Both to and, either to or, unless to not. This mapping is the heart of the unit."
+    },
+    {
+      "id": "u26l10e06",
+      "type": "multipleChoice",
+      "prompt": "Recall from Unit 24: before dividing total by count, you should...",
+      "options": [
+        "guard against count being 0",
+        "use 'or'",
+        "flip with 'not'",
+        "add an elif"
+      ],
+      "answer": 0,
+      "explanation": "The edge-case habit still applies: guard the zero count before dividing."
+    },
+    {
+      "id": "u26l10e07",
+      "type": "multipleChoice",
+      "prompt": "Which condition means 'score is between 50 and 100 inclusive'?",
+      "options": [
+        "score >= 50 and score <= 100",
+        "score >= 50 or score <= 100",
+        "not score >= 50",
+        "score == 75"
+      ],
+      "answer": 0,
+      "explanation": "'Between, inclusive' needs both bounds at once, joined with 'and'."
+    },
+    {
+      "id": "u26l10e08",
+      "type": "fillBlank",
+      "prompt": "Complete the 'either' rule:\n\nif is_vip ____ has_pass:\n    print(\"Enter\")\nelse:\n    print(\"Wait\")",
+      "answer": "or",
+      "acceptable": [
+        "or"
+      ],
+      "explanation": "'or' lets either a VIP or a pass-holder enter."
+    },
+    {
+      "id": "u26l10e09",
+      "type": "multipleChoice",
+      "prompt": "What does this print?\n\nis_open = True\nif not is_open:\n    print(\"Closed\")\nelse:\n    print(\"Open\")",
+      "options": [
+        "Open",
+        "Closed",
+        "True",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "'not True' is False, so the else runs: 'Open'. 'not' flipped the condition."
+    },
+    {
+      "id": "u26l10e10",
+      "type": "multipleChoice",
+      "prompt": "The big win of this sub-lap (Units 19-26) is...",
+      "options": [
+        "making real decisions: yes/no, two outcomes, several buckets, and combined conditions",
+        "printing numbers only",
+        "writing loops",
+        "making lists"
+      ],
+      "answer": 0,
+      "explanation": "You can now sense a yes/no fact, choose between outcomes, sort into buckets, and combine conditions with and/or/not. That is real decision-making!"
+    }
+  ]
+}

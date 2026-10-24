@@ -1,0 +1,148 @@
+{
+  "unitId": "u56",
+  "lessonId": "u56l06",
+  "title": "Solve it together: add tax to every price",
+  "idea": "GUIDED UEPCC. For each price add a fixed tax and print the final price, honouring the value-mapping rule.",
+  "problem": "A tax of 2 is added to every item price. For each price, print the final price (price + tax).",
+  "exercises": [
+    {
+      "id": "u56l06e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: tax is 2. For each price, print price + tax.\n\nWhat values does the problem name?",
+      "options": [
+        "Each price, and the tax (2)",
+        "Only the tax",
+        "Only one price",
+        "The count of prices"
+      ],
+      "answer": 0,
+      "explanation": "Two named things: the per-item price and the tax of 2. Both must appear in the code as variables."
+    },
+    {
+      "id": "u56l06e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "What is the OUTPUT?",
+      "options": [
+        "One final price per item",
+        "A single grand total",
+        "The tax only",
+        "The number of items"
+      ],
+      "answer": 0,
+      "explanation": "One final price per item — a per-item transform, not a total."
+    },
+    {
+      "id": "u56l06e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example by hand. prices = [10, 20], tax = 2. What prints?",
+      "options": [
+        "12, 22",
+        "10, 20",
+        "20, 40",
+        "32"
+      ],
+      "answer": 0,
+      "explanation": "10+2=12, 20+2=22. Your check target."
+    },
+    {
+      "id": "u56l06e04",
+      "type": "trueFalse",
+      "uepcc": "E",
+      "prompt": "Because tax is a named value (2), the code should use a variable 'tax', not hide the 2 inside the math.",
+      "answer": true,
+      "explanation": "Value-mapping habit: every stated number becomes a named variable, so the code reads like the problem."
+    },
+    {
+      "id": "u56l06e05",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Plan it. Order the steps.",
+      "blocks": [
+        "Remember the tax (2)",
+        "For each price, add the tax",
+        "Print that final price"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Store tax, then for each price add tax and print. Repeat."
+    },
+    {
+      "id": "u56l06e06",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Which operation adds the tax to a price?",
+      "options": [
+        "+",
+        "*",
+        "//",
+        "%"
+      ],
+      "answer": 0,
+      "explanation": "Adding tax is price + tax."
+    },
+    {
+      "id": "u56l06e07",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Code it. Fill the blank:\n\ntax = 2\nprices = [10, 20]\nfor price in prices:\n    print(price ____ tax)",
+      "answer": "+",
+      "acceptable": [
+        "+"
+      ],
+      "explanation": "price + tax gives the final price for each item."
+    },
+    {
+      "id": "u56l06e08",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Arrange the full solution.",
+      "blocks": [
+        "    print(price + tax)",
+        "for price in prices:",
+        "prices = [10, 20]",
+        "tax = 2"
+      ],
+      "answer": [
+        3,
+        2,
+        1,
+        0
+      ],
+      "explanation": "Store tax, store prices, loop, print each price + tax. Prints 12, 22."
+    },
+    {
+      "id": "u56l06e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check. Code prints 12, 22. Hand example said 12, 22. Verdict?",
+      "options": [
+        "Passes",
+        "Fails",
+        "Unknown",
+        "Change tax"
+      ],
+      "answer": 0,
+      "explanation": "Matches — correct."
+    },
+    {
+      "id": "u56l06e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Re-check with tax = 3, prices = [5, 100]. What prints?",
+      "options": [
+        "8, 103",
+        "7, 102",
+        "5, 100",
+        "15, 300"
+      ],
+      "answer": 0,
+      "explanation": "5+3=8, 100+3=103. Because tax is a variable, changing it just works."
+    }
+  ]
+}

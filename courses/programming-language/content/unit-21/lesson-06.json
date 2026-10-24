@@ -1,0 +1,130 @@
+{
+  "unitId": "u21",
+  "lessonId": "u21l06",
+  "title": "When the step is skipped",
+  "idea": "Tracing what happens when the condition is False - the guarded step is skipped and the program continues below. Careful tracing.",
+  "exercises": [
+    {
+      "id": "u21l06e01",
+      "type": "multipleChoice",
+      "prompt": "What does this print?\n\nx = 3\nif x > 10:\n    print(\"big\")\nprint(\"done\")",
+      "options": [
+        "done",
+        "big then done",
+        "big",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "3 > 10 is False, so 'big' is skipped. 'done' is not indented, so it still prints."
+    },
+    {
+      "id": "u21l06e02",
+      "type": "multipleChoice",
+      "prompt": "What does this print?\n\nx = 30\nif x > 10:\n    print(\"big\")\nprint(\"done\")",
+      "options": [
+        "big then done",
+        "done",
+        "big",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "30 > 10 is True, so 'big' prints. Then 'done' always prints. Both appear."
+    },
+    {
+      "id": "u21l06e03",
+      "type": "trueFalse",
+      "prompt": "When the condition is False, the program simply continues after the guarded step.",
+      "answer": true,
+      "explanation": "Yes - a skipped if just means the guarded lines don't run; the rest of the program carries on."
+    },
+    {
+      "id": "u21l06e04",
+      "type": "multipleChoice",
+      "prompt": "How many lines print?\n\nscore = 40\nif score >= 50:\n    print(\"Pass\")\n    print(\"Well done\")",
+      "options": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "answer": 0,
+      "explanation": "40 >= 50 is False, so BOTH guarded lines are skipped. Nothing prints."
+    },
+    {
+      "id": "u21l06e05",
+      "type": "multipleChoice",
+      "prompt": "How many lines print?\n\nscore = 90\nif score >= 50:\n    print(\"Pass\")\n    print(\"Well done\")",
+      "options": [
+        "2",
+        "0",
+        "1",
+        "3"
+      ],
+      "answer": 0,
+      "explanation": "90 >= 50 is True, so both guarded lines run. Two lines print."
+    },
+    {
+      "id": "u21l06e06",
+      "type": "multipleChoice",
+      "prompt": "What prints?\n\nopen_now = False\nif open_now:\n    print(\"Enter\")\nprint(\"Thanks\")",
+      "options": [
+        "Thanks",
+        "Enter then Thanks",
+        "Enter",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "open_now is False, so 'Enter' is skipped. 'Thanks' is unindented and always runs."
+    },
+    {
+      "id": "u21l06e07",
+      "type": "multipleChoice",
+      "prompt": "What prints?\n\nn = 5\nif n == 5:\n    print(\"five\")\nprint(\"end\")",
+      "options": [
+        "five then end",
+        "end",
+        "five",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "5 == 5 is True, so 'five' prints, then the always-on 'end' prints too."
+    },
+    {
+      "id": "u21l06e08",
+      "type": "fillBlank",
+      "prompt": "This should print nothing. Fill a value for temp that makes the condition False:\n\ntemp = ____\nif temp > 100:\n    print(\"Boiling\")",
+      "answer": "50",
+      "acceptable": [
+        "50",
+        "0",
+        "20",
+        "99",
+        "100",
+        "-5",
+        "10",
+        "30"
+      ],
+      "explanation": "Any value not greater than 100 (like 50) makes temp > 100 False, so the guarded step is skipped."
+    },
+    {
+      "id": "u21l06e09",
+      "type": "trueFalse",
+      "prompt": "An unindented line after the if runs whether the condition was True or False.",
+      "answer": true,
+      "explanation": "Yes - only the indented lines are guarded. Unindented lines always run."
+    },
+    {
+      "id": "u21l06e10",
+      "type": "multipleChoice",
+      "prompt": "Why practice tracing the False case?",
+      "options": [
+        "To be sure the right lines are skipped and the rest still runs",
+        "Because False never happens",
+        "Because if always runs",
+        "To avoid using comparisons"
+      ],
+      "answer": 0,
+      "explanation": "Half the value of an if is what it DOESN'T do. Tracing the skip keeps your mental model correct."
+    }
+  ]
+}

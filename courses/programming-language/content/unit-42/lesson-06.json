@@ -1,0 +1,133 @@
+{
+  "unitId": "u42",
+  "lessonId": "u42l06",
+  "title": "if and else inside a loop",
+  "idea": "Each pass can take one of two actions using if/else inside the loop. Every pass does SOMETHING, but which depends on the value. Review else.",
+  "exercises": [
+    {
+      "id": "u42l06e01",
+      "type": "multipleChoice",
+      "prompt": "With if/else inside a loop, on each pass...",
+      "options": [
+        "Exactly one of the two branches runs",
+        "Both branches run",
+        "Neither runs",
+        "The loop stops"
+      ],
+      "answer": 0,
+      "explanation": "if/else means one or the other. Every pass picks a branch based on the condition — never both."
+    },
+    {
+      "id": "u42l06e02",
+      "type": "multipleChoice",
+      "prompt": "What shows?\n\nfor i in range(1, 5):\n    if i % 2 == 0:\n        print(\"even\")\n    else:\n        print(\"odd\")",
+      "options": [
+        "odd\neven\nodd\neven",
+        "even\nodd\neven\nodd",
+        "odd\nodd\nodd\nodd",
+        "even\neven\neven\neven"
+      ],
+      "answer": 0,
+      "explanation": "i = 1 odd, 2 even, 3 odd, 4 even. Each pass labels the number, choosing a branch by the test."
+    },
+    {
+      "id": "u42l06e03",
+      "type": "trueFalse",
+      "prompt": "With if/else in a loop, every pass prints something (unlike a bare if, which may print nothing on some passes).",
+      "answer": true,
+      "explanation": "Yes. A bare if can skip a pass; if/else always does one branch, so every pass acts."
+    },
+    {
+      "id": "u42l06e04",
+      "type": "multipleChoice",
+      "prompt": "What shows?\n\nfor i in range(1, 4):\n    if i > 2:\n        print(\"big\")\n    else:\n        print(\"small\")",
+      "options": [
+        "small\nsmall\nbig",
+        "big\nbig\nsmall",
+        "small\nbig\nbig",
+        "big\nsmall\nsmall"
+      ],
+      "answer": 0,
+      "explanation": "i = 1 and 2 are not > 2 (small); i = 3 is (big). So small, small, big."
+    },
+    {
+      "id": "u42l06e05",
+      "type": "multipleChoice",
+      "prompt": "The else must be lined up with which keyword?",
+      "options": [
+        "The if it belongs to (same indentation)",
+        "The for",
+        "The print",
+        "Nothing — else can go anywhere"
+      ],
+      "answer": 0,
+      "explanation": "else pairs with its if and sits at the same indentation. Both are one level in, inside the loop body."
+    },
+    {
+      "id": "u42l06e06",
+      "type": "orderBlocks",
+      "prompt": "Arrange a loop that prints 'yes' when i is even and 'no' otherwise (i from 1 to 3).",
+      "blocks": [
+        "        print(\"yes\")",
+        "    else:",
+        "        print(\"no\")",
+        "    if i % 2 == 0:",
+        "for i in range(1, 4):"
+      ],
+      "answer": [4, 3, 0, 1, 2],
+      "explanation": "for, if (level 1), 'yes' (level 2), else (level 1), 'no' (level 2). Output: no, yes, no."
+    },
+    {
+      "id": "u42l06e07",
+      "type": "multipleChoice",
+      "prompt": "How many lines does this print for range(1, 6)?\n\nfor i in range(1, 6):\n    if i % 2 == 0:\n        print(\"e\")\n    else:\n        print(\"o\")",
+      "options": [
+        "5 — one per pass, always a branch",
+        "2",
+        "3",
+        "10"
+      ],
+      "answer": 0,
+      "explanation": "if/else guarantees one print per pass, so 5 passes give 5 lines."
+    },
+    {
+      "id": "u42l06e08",
+      "type": "multipleChoice",
+      "prompt": "You can also combine if/else with a counter. What does this count?\n\ncount = 0\nfor i in range(1, 6):\n    if i % 2 == 0:\n        count += 1\n    else:\n        print(i)\nprint(count)",
+      "options": [
+        "It prints the odds (1, 3, 5) then the count of evens (2)",
+        "It prints only 2",
+        "It counts everything",
+        "It errors"
+      ],
+      "answer": 0,
+      "explanation": "Odd passes print i (1, 3, 5); even passes count (2, 4 -> count 2). After the loop, count is 2."
+    },
+    {
+      "id": "u42l06e09",
+      "type": "multipleChoice",
+      "prompt": "A learner indented else under the print instead of lining it up with if. What happens?",
+      "options": [
+        "An error — else must align with its if",
+        "It works fine",
+        "The loop speeds up",
+        "else is ignored"
+      ],
+      "answer": 0,
+      "explanation": "Misaligned else is a syntax error. It must sit at the same indentation as the if it belongs to."
+    },
+    {
+      "id": "u42l06e10",
+      "type": "multipleChoice",
+      "prompt": "Re-check: label each of 1 to 3 as 'low' if under 2, else 'high'. What prints?",
+      "options": [
+        "low\nhigh\nhigh",
+        "low\nlow\nhigh",
+        "high\nhigh\nlow",
+        "low\nhigh\nlow"
+      ],
+      "answer": 0,
+      "explanation": "i = 1 is under 2 (low); 2 and 3 are not (high). So low, high, high. if/else gives every pass a label."
+    }
+  ]
+}

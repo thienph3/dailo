@@ -1,0 +1,128 @@
+{
+  "unitId": "u18",
+  "lessonId": "u18l01",
+  "title": "Loop back: store, compute, report",
+  "idea": "REVIEW. Run the full UEPCC spine on a fresh store->compute->report problem, interleaving Lap 0 (variables, print) with Lap 1 (+ and f-strings).",
+  "problem": "A lunchbox has 2 sandwiches that cost 4 each. Show a sentence with the total cost.",
+  "exercises": [
+    {
+      "id": "u18l01e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: A lunchbox has 2 sandwiches that cost 4 each. Show a sentence with the total cost.\n\nUnderstand first. What is the OUTPUT?",
+      "options": [
+        "A sentence showing the total cost",
+        "Just the number 2",
+        "The word sandwich",
+        "The price of one sandwich only"
+      ],
+      "answer": 0,
+      "explanation": "Name the output before anything else. Here it is a sentence that reports the total cost."
+    },
+    {
+      "id": "u18l01e02",
+      "type": "multiSelect",
+      "uepcc": "U",
+      "prompt": "What are the INPUTS (the values you start with)? Pick all.",
+      "options": [
+        "How many sandwiches (2)",
+        "The price of one sandwich (4)",
+        "The word total",
+        "The color of the lunchbox"
+      ],
+      "answer": [0, 1],
+      "explanation": "Two inputs: the count (2) and the price (4). Everything you compute comes from these."
+    },
+    {
+      "id": "u18l01e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example by hand. 2 sandwiches at 4 each — what is the total cost?",
+      "options": ["8", "6", "24", "2"],
+      "answer": 0,
+      "explanation": "2 * 4 = 8. This hand answer becomes the value you check your code against later."
+    },
+    {
+      "id": "u18l01e04",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Plan it. Put these plain-English steps in order (store, compute, report).",
+      "blocks": [
+        "Multiply count by price to get the total",
+        "Remember the count and the price",
+        "Show a sentence with the total"
+      ],
+      "answer": [1, 0, 2],
+      "explanation": "Store the inputs, compute the total, then report it. Every store->compute->report problem follows this shape."
+    },
+    {
+      "id": "u18l01e05",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Your plan says 'multiply count by price.' Which operator is that?",
+      "options": ["*", "+", "-", "/"],
+      "answer": 0,
+      "explanation": "Multiply uses *. The plan picks the operation before you write any code."
+    },
+    {
+      "id": "u18l01e06",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "The value-mapping rule says every number in the problem must be a named variable. Which set of names fits best?",
+      "options": [
+        "sandwich_count and sandwich_price",
+        "x and y",
+        "total only (hardcode the rest)",
+        "a, b, c"
+      ],
+      "answer": 0,
+      "explanation": "Descriptive names echo the problem: sandwich_count = 2 and sandwich_price = 4. Nothing is hardcoded or dropped."
+    },
+    {
+      "id": "u18l01e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code it. Arrange the lines to match your plan.",
+      "blocks": [
+        "total = sandwich_count * sandwich_price",
+        "sandwich_count = 2",
+        "sandwich_price = 4",
+        "print(f\"Total: {total}\")"
+      ],
+      "answer": [1, 2, 0, 3],
+      "explanation": "Store count, store price, compute total, then report with an f-string. The code mirrors the plan exactly."
+    },
+    {
+      "id": "u18l01e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Complete the compute step:\n\nsandwich_count = 2\nsandwich_price = 4\ntotal = sandwich_count ____ sandwich_price\nprint(f\"Total: {total}\")",
+      "answer": "*",
+      "acceptable": ["*"],
+      "explanation": "Multiply count by price with *. Now total holds 8."
+    },
+    {
+      "id": "u18l01e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "You run it and it prints 'Total: 8'. Your hand example said 8. Verdict?",
+      "options": [
+        "Passes — the number matches the example",
+        "Fails — the output is wrong",
+        "Can't tell",
+        "Change the example to match"
+      ],
+      "answer": 0,
+      "explanation": "The computed 8 matches the hand-worked 8, so the solution is correct. That is what Check means."
+    },
+    {
+      "id": "u18l01e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "New numbers: sandwich_count = 3, sandwich_price = 5. What does it print?",
+      "options": ["Total: 15", "Total: 8", "Total: 35", "Total: 2"],
+      "answer": 0,
+      "explanation": "3 * 5 = 15, so it prints 'Total: 15'. A good solution works for fresh inputs too. You just ran full UEPCC!"
+    }
+  ]
+}

@@ -1,0 +1,155 @@
+{
+  "unitId": "u28",
+  "lessonId": "u28l04",
+  "title": "Building a nested if, line by line",
+  "idea": "Assemble a nested if from the inside out: outer question, then the inner question in its branch. Arrange and complete code with predictable output.",
+  "exercises": [
+    {
+      "id": "u28l04e01",
+      "type": "orderBlocks",
+      "prompt": "Arrange a nested if: check the weather, then (only if raining) check for an umbrella.",
+      "blocks": [
+        "if raining:",
+        "    if have_umbrella:",
+        "        print(\"Take a walk\")",
+        "    else:",
+        "        print(\"Stay home\")"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "explanation": "Outer if first, then the inner if indented inside its body, then the inner else matched to the inner if."
+    },
+    {
+      "id": "u28l04e02",
+      "type": "fillBlank",
+      "prompt": "Complete the keyword that starts the inner decision:\n\nif raining:\n    ____ have_umbrella:\n        print(\"Take a walk\")",
+      "answer": "if",
+      "acceptable": [
+        "if"
+      ],
+      "explanation": "The inner decision also starts with 'if'. It just lives one level deeper, inside the outer body."
+    },
+    {
+      "id": "u28l04e03",
+      "type": "multipleChoice",
+      "prompt": "After typing 'if raining:' what must the very next line (the inner if) have?",
+      "options": [
+        "More indentation than the outer if",
+        "The same indentation as the outer if",
+        "No indentation",
+        "A semicolon"
+      ],
+      "answer": 0,
+      "explanation": "The inner if is part of the outer body, so it must be indented further in. That extra indent is what makes it 'nested'."
+    },
+    {
+      "id": "u28l04e04",
+      "type": "orderBlocks",
+      "prompt": "Arrange: a store is open; inside, check if an item is in stock.",
+      "blocks": [
+        "if store_open:",
+        "    if in_stock:",
+        "        print(\"Buy it\")",
+        "    else:",
+        "        print(\"Out of stock\")",
+        "else:",
+        "    print(\"Come back later\")"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "explanation": "Outer if and its inner if/else, then the outer else lined up with the outer if to catch the closed-store case."
+    },
+    {
+      "id": "u28l04e05",
+      "type": "fillBlank",
+      "prompt": "Complete the inner branch's keyword so it handles the not-in-stock case:\n\nif store_open:\n    if in_stock:\n        print(\"Buy it\")\n    ____:\n        print(\"Out of stock\")",
+      "answer": "else",
+      "acceptable": [
+        "else"
+      ],
+      "explanation": "The inner else, indented to match the inner if, handles in_stock being False."
+    },
+    {
+      "id": "u28l04e06",
+      "type": "multipleChoice",
+      "prompt": "You wrote 'if store_open:' and want the 'Come back later' message for when it is closed. Where does that else go?",
+      "options": [
+        "At the outer indent level, matching 'if store_open:'",
+        "Inside the inner if",
+        "Before the outer if",
+        "It is not allowed"
+      ],
+      "answer": 0,
+      "explanation": "To answer the outer if, the else must share its indentation. Then it runs only when store_open is False."
+    },
+    {
+      "id": "u28l04e07",
+      "type": "orderBlocks",
+      "prompt": "Arrange a plain-English plan for 'Can I ride? Tall enough, then old enough?'.",
+      "blocks": [
+        "Check if tall enough",
+        "If tall enough, check if old enough",
+        "If both, allow the ride",
+        "Otherwise give the matching reason"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "Plan outer-first: the height gate, then the age gate inside it. The plan maps straight onto a nested if."
+    },
+    {
+      "id": "u28l04e08",
+      "type": "multipleChoice",
+      "prompt": "What does the finished ride code print?\n\ntall_enough = True\nold_enough = False\nif tall_enough:\n    if old_enough:\n        print(\"Ride\")\n    else:\n        print(\"Too young\")\nelse:\n    print(\"Too short\")",
+      "options": [
+        "Too young",
+        "Ride",
+        "Too short",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "tall_enough is True so we go inside; old_enough is False so the inner else runs: 'Too young'."
+    },
+    {
+      "id": "u28l04e09",
+      "type": "multipleChoice",
+      "prompt": "In this code, which if does the 'else' answer?\n\nif tall_enough:\n    if old_enough:\n        print(\"Ride\")\nelse:\n    print(\"Too short\")",
+      "options": [
+        "The outer if (it runs when tall_enough is False)",
+        "The inner if (it runs when old_enough is False)",
+        "Both ifs at once",
+        "Neither"
+      ],
+      "answer": 0,
+      "explanation": "That else lines up with 'if tall_enough:', so it answers the OUTER question - it runs when the rider is too short."
+    },
+    {
+      "id": "u28l04e10",
+      "type": "multipleChoice",
+      "prompt": "The safest way to build a nested if is...",
+      "options": [
+        "write the outer if first, then add the inner if inside its body",
+        "write both elses first",
+        "write the deepest print and work outward by guessing",
+        "skip the indentation and add it later"
+      ],
+      "answer": 0,
+      "explanation": "Build outer-first: the outer decision frames where the inner one goes. Correct indentation as you type keeps the branches clear."
+    }
+  ]
+}

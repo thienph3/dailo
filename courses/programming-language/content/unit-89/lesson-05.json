@@ -1,0 +1,134 @@
+{
+  "unitId": "u89",
+  "lessonId": "u89l05",
+  "title": "Add one group while counting another",
+  "idea": "TOOL: mix the kinds of running value - a total for one condition and a count for another, in one pass.",
+  "exercises": [
+    {
+      "type": "multipleChoice",
+      "prompt": "Running values don't all have to be the same kind. Which pair mixes a total and a count?",
+      "options": [
+        "Sum the prices over 100 AND count how many items there are in total",
+        "Sum everything twice",
+        "Count everything twice",
+        "Only a total is possible"
+      ],
+      "answer": 0,
+      "explanation": "One running value is a conditional total, another is a plain count. Different jobs, same single pass.",
+      "id": "u89l05e01"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nbig_total = 0\ncount = 0\nfor price in [120, 50, 200]:\n    count = count + 1\n    if price > 100:\n        big_total = big_total + price\nprint(big_total, count)",
+      "options": [
+        "320 3",
+        "370 3",
+        "320 2",
+        "200 3"
+      ],
+      "answer": 0,
+      "explanation": "count rises every turn to 3. big_total adds only 120 and 200 (both > 100) = 320.",
+      "id": "u89l05e02"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "A count should update EVERY turn, but a conditional total updates only when its 'if' is true.",
+      "answer": true,
+      "explanation": "True. Here count bumps each turn; big_total adds only when price > 100. Each running value follows its own rule.",
+      "id": "u89l05e03"
+    },
+    {
+      "type": "fillBlank",
+      "prompt": "Complete the conditional total:\n\nbig_total = 0\nfor price in [150, 40]:\n    if price > 100:\n        big_total = big_total ____ price\nprint(big_total)",
+      "answer": "+",
+      "acceptable": [
+        "+"
+      ],
+      "explanation": "Add the qualifying price into big_total. Only 150 qualifies, so output is 150.",
+      "id": "u89l05e04"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Why put 'count = count + 1' OUTSIDE the if (not inside it)?",
+      "options": [
+        "Because you want to count every item, not just the qualifying ones",
+        "Counts must always be inside ifs",
+        "It makes no difference",
+        "To skip some items"
+      ],
+      "answer": 0,
+      "explanation": "Placement decides what gets counted. Outside the if = count all items. Inside = count only matching ones. Pick on purpose.",
+      "id": "u89l05e05"
+    },
+    {
+      "type": "orderBlocks",
+      "prompt": "Arrange a loop: total the prices over 100, and count ALL items, for [120, 90].",
+      "blocks": [
+        "big_total = 0",
+        "count = 0",
+        "for price in [120, 90]:",
+        "    count = count + 1",
+        "    if price > 100:",
+        "        big_total = big_total + price",
+        "print(big_total, count)"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "explanation": "count bumps every turn (2), big_total adds only 120. Output: 120 2.",
+      "id": "u89l05e06"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nbig_total = 0\ncount = 0\nfor price in [10, 20, 30]:\n    count = count + 1\n    if price > 100:\n        big_total = big_total + price\nprint(big_total, count)",
+      "options": [
+        "0 3",
+        "60 3",
+        "0 0",
+        "60 0"
+      ],
+      "answer": 0,
+      "explanation": "No price is over 100, so big_total stays 0, but count still reaches 3 (it updates every turn).",
+      "id": "u89l05e07"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "You have big_total and count. What could you now report?",
+      "options": [
+        "Both the spend on expensive items and how many items there were",
+        "Only the smallest price",
+        "Nothing",
+        "The list in reverse"
+      ],
+      "answer": 0,
+      "explanation": "Two running values answer two questions at once: conditional spend, and total item count.",
+      "id": "u89l05e08"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Running values can be of different kinds (a total, a count, a max) in the same loop.",
+      "answer": true,
+      "explanation": "True. There is no rule that they match. Mix whatever running values the problem needs.",
+      "id": "u89l05e09"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "The lesson in one line:",
+      "options": [
+        "Each running value follows its own update rule and placement inside the loop",
+        "All running values must update together",
+        "Totals and counts can't coexist",
+        "Conditions aren't allowed with totals"
+      ],
+      "answer": 0,
+      "explanation": "Where and when each running value updates is a deliberate choice - that control is the power of multiple state.",
+      "id": "u89l05e10"
+    }
+  ]
+}

@@ -1,0 +1,129 @@
+{
+  "unitId": "u94",
+  "lessonId": "u94l02",
+  "title": "Picking a good normal example",
+  "idea": "MEET. A 'normal' example is a typical input with an answer you can compute by hand. Learn to choose one that actually exercises the logic.",
+  "exercises": [
+    {
+      "id": "u94l02e01",
+      "type": "multipleChoice",
+      "prompt": "A 'normal' example is...",
+      "explanation": "A normal example is a typical, everyday input — not a tricky boundary — whose answer you can work out by hand.",
+      "options": [
+        "A typical input whose answer you can work out by hand",
+        "Always the empty list",
+        "The weirdest input you can find",
+        "An input with no answer"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u94l02e02",
+      "type": "multipleChoice",
+      "prompt": "For 'total of a list', which is a GOOD normal example to hand-check?",
+      "explanation": "[2, 3, 5] is small enough to add by hand (10) yet has several items, so it really exercises the accumulate loop.",
+      "options": [
+        "[2, 3, 5] → 10",
+        "[] → ?",
+        "A list of 1000 numbers",
+        "[] → 0"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u94l02e03",
+      "type": "multipleChoice",
+      "prompt": "Why is a list of 1000 numbers a POOR example to hand-check?",
+      "explanation": "You can't reliably add 1000 numbers by hand, so you'd have no trustworthy answer to compare against. Keep examples hand-sized.",
+      "options": [
+        "You can't work out the correct total by hand, so you can't compare",
+        "It's too small",
+        "Lists can't be that long",
+        "The computer refuses"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u94l02e04",
+      "type": "trueFalse",
+      "prompt": "A good normal example is small enough to compute by hand but rich enough to use the logic.",
+      "explanation": "Exactly — small enough to hand-check, but with enough items that the loop and any condition actually run.",
+      "answer": true
+    },
+    {
+      "id": "u94l02e05",
+      "type": "multipleChoice",
+      "prompt": "For 'count scores >= 50', which normal example best exercises the condition?",
+      "explanation": "[40, 70, 55] mixes failing and passing scores, so the if-condition is tested both ways — true and false.",
+      "options": [
+        "[40, 70, 55] → 2",
+        "[70, 70, 70] → 3",
+        "[10] → 0",
+        "[] → 0"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u94l02e06",
+      "type": "multipleChoice",
+      "prompt": "An example where EVERY item passes the condition — what might it miss?",
+      "explanation": "If every item passes, you never test the 'skip this one' path, so a bug in the reject case could hide.",
+      "options": [
+        "It never tests the case where an item is skipped",
+        "Nothing — it's perfect",
+        "It tests too many things",
+        "It can't be hand-checked"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u94l02e07",
+      "type": "orderBlocks",
+      "prompt": "Order how to build a normal example.",
+      "explanation": "Pick a realistic small input, decide what a correct answer is by hand, write it down to compare later.",
+      "blocks": [
+        "Pick a small, realistic input",
+        "Work out the correct output by hand",
+        "Write down the input and its answer as your check"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "id": "u94l02e08",
+      "type": "multipleChoice",
+      "prompt": "For 'highest bid', a good normal example puts the biggest value...",
+      "explanation": "Put the max in the MIDDLE, not first or last, so you test that the loop can replace the best partway through.",
+      "options": [
+        "In the middle, so the loop must update best partway through",
+        "Always first",
+        "Always last",
+        "Nowhere — use equal values"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u94l02e09",
+      "type": "trueFalse",
+      "prompt": "Using the same example as the one printed in the problem is always enough.",
+      "explanation": "It's a fine start, but you should add your own examples too — especially ones that stress different paths.",
+      "answer": false
+    },
+    {
+      "id": "u94l02e10",
+      "type": "multipleChoice",
+      "prompt": "The real purpose of a normal example is to...",
+      "explanation": "A normal example proves the common, everyday case works. Edge cases (next lessons) then cover the tricky corners.",
+      "options": [
+        "Prove the everyday case works before testing tricky corners",
+        "Make the program longer",
+        "Replace the plan",
+        "Avoid writing code"
+      ],
+      "answer": 0
+    }
+  ]
+}

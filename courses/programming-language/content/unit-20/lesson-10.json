@@ -1,0 +1,111 @@
+{
+  "unitId": "u20",
+  "lessonId": "u20l10",
+  "title": "Put it together: all six comparisons",
+  "idea": "Wrap up: review the six comparison symbols, store results in booleans, and pick the right one for a rule.",
+  "exercises": [
+    {
+      "id": "u20l10e01",
+      "type": "matchPairs",
+      "prompt": "Match each comparison symbol to what it asks.",
+      "pairs": [
+        { "left": "==", "right": "Equal?" },
+        { "left": "!=", "right": "Different?" },
+        { "left": "<", "right": "Smaller?" },
+        { "left": ">", "right": "Bigger?" }
+      ],
+      "explanation": "These four, plus <= and >=, are the full set of comparisons. Each returns a boolean."
+    },
+    {
+      "id": "u20l10e02",
+      "type": "multipleChoice",
+      "prompt": "What will this show?\n\nprint(12 >= 12)",
+      "options": ["True", "False", "12", "24"],
+      "answer": 0,
+      "explanation": "12 equals 12, and >= accepts equal, so the result is True."
+    },
+    {
+      "id": "u20l10e03",
+      "type": "multipleChoice",
+      "prompt": "What does passed hold?\n\nscore = 58\npassed = score >= 60\nprint(passed)",
+      "options": ["False", "True", "58", "60"],
+      "answer": 0,
+      "explanation": "58 is less than 60, so score >= 60 is False. passed holds False."
+    },
+    {
+      "id": "u20l10e04",
+      "type": "multipleChoice",
+      "prompt": "Rule: 'Refuse entry if age is UNDER 18.' Which comparison matches?",
+      "options": [
+        "age < 18",
+        "age <= 18",
+        "age > 18",
+        "age == 18"
+      ],
+      "answer": 0,
+      "explanation": "'Under 18' is strictly less than 18, so <. Exactly 18 is not under 18."
+    },
+    {
+      "id": "u20l10e05",
+      "type": "multipleChoice",
+      "prompt": "Review: what does one = do (not ==)?\n\nlevel = 5",
+      "options": [
+        "Stores 5 in level",
+        "Checks if level is 5",
+        "Prints 5",
+        "Adds 5 to level"
+      ],
+      "answer": 0,
+      "explanation": "One = stores. Two == would compare. 'One store, two ask.'"
+    },
+    {
+      "id": "u20l10e06",
+      "type": "multipleChoice",
+      "prompt": "What will this show?\n\nprint(3 + 2 != 5)",
+      "options": ["False", "True", "5", "6"],
+      "answer": 0,
+      "explanation": "3 + 2 is 5, then 5 != 5 is False because they are equal."
+    },
+    {
+      "id": "u20l10e07",
+      "type": "multiSelect",
+      "prompt": "Select EVERY comparison below that is True.",
+      "options": [
+        "4 == 4",
+        "7 > 2",
+        "5 < 1",
+        "9 <= 9"
+      ],
+      "answer": [0, 1, 3],
+      "explanation": "4 == 4 (equal), 7 > 2 (bigger), and 9 <= 9 (equal counts) are True. 5 < 1 is False."
+    },
+    {
+      "id": "u20l10e08",
+      "type": "fillBlank",
+      "prompt": "Store whether the cart reaches the free-shipping limit of 100 (100 counts):\n\ntotal = 100\nfree_shipping = total ____ 100\nprint(free_shipping)",
+      "answer": ">=",
+      "acceptable": [">="],
+      "explanation": "'Reaches 100' includes exactly 100, so >= . total >= 100 is True, so free_shipping holds True."
+    },
+    {
+      "id": "u20l10e09",
+      "type": "trueFalse",
+      "prompt": "Every comparison hands back a boolean you can store or print.",
+      "answer": true,
+      "explanation": "All six comparisons return True or False. That boolean is exactly what if will use next unit."
+    },
+    {
+      "id": "u20l10e10",
+      "type": "multipleChoice",
+      "prompt": "What can you now do that you could not before this unit?",
+      "options": [
+        "Turn two values into a True/False fact with the right comparison",
+        "Make a program choose a step",
+        "Ask the user for input",
+        "Write a loop"
+      ],
+      "answer": 0,
+      "explanation": "You can compare values and read a rule to pick the correct symbol. Next unit, if finally acts on these facts."
+    }
+  ]
+}

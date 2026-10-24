@@ -1,0 +1,145 @@
+{
+  "unitId": "u67",
+  "lessonId": "u67l04",
+  "title": "Fix it: the filter that drops the 50",
+  "idea": "GUIDED BUG-FIX (filter + boundary). A filter uses > where >= was meant, dropping the exact boundary. Find and fix.",
+  "problem": "This code should keep scores that PASS, where pass means 50 or more, from [50, 49, 80]. It should keep [50, 80] but keeps only [80]. Fix it.",
+  "exercises": [
+    {
+      "id": "u67l04e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "BROKEN CODE:\n\nscores = [50, 49, 80]\npass_mark = 50\npassed = []\nfor s in scores:\n    if s > pass_mark:\n        passed.append(s)\nprint(passed)\n\nUnderstand. What is the OUTPUT meant to be?",
+      "options": [
+        "A list of the scores that passed (50 or more)",
+        "The total of the scores",
+        "How many passed",
+        "The highest score"
+      ],
+      "answer": 0,
+      "explanation": "It's a filter: build a new list of passing scores. 'Pass = 50 or more' is the rule we must encode exactly."
+    },
+    {
+      "id": "u67l04e02",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example. By hand, with pass mark 50, which of [50, 49, 80] pass?",
+      "options": [
+        "50 and 80",
+        "just 80",
+        "50 and 49",
+        "all three"
+      ],
+      "answer": 0,
+      "explanation": "'50 or more' includes 50 itself, so 50 and 80 pass; 49 fails. The correct kept list is [50, 80]."
+    },
+    {
+      "id": "u67l04e03",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Expected [50, 80] but got [80]. Exactly the boundary value 50 was dropped. Which bug family is that?",
+      "options": [
+        "a wrong comparison (> used instead of >=)",
+        "off-by-one range",
+        "reset inside loop",
+        "empty list"
+      ],
+      "answer": 0,
+      "explanation": "Losing the exact boundary is the wrong-comparison signature. '> 50' excludes 50; it should be '>= 50'."
+    },
+    {
+      "id": "u67l04e04",
+      "type": "trueFalse",
+      "uepcc": "U",
+      "prompt": "The phrase 'pass mark is 50' means a score of exactly 50 should be KEPT.",
+      "answer": true,
+      "explanation": "Yes — 'pass mark 50' means 50 counts as a pass. So the boundary value belongs in the kept list, which demands >=."
+    },
+    {
+      "id": "u67l04e05",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Plan the fix. To keep 50 and above, the test should be...",
+      "options": [
+        "s >= pass_mark",
+        "s > pass_mark",
+        "s == pass_mark",
+        "s < pass_mark"
+      ],
+      "answer": 0,
+      "explanation": "'50 or more' is >=. Change the one operator from > to >= and the 50 is kept."
+    },
+    {
+      "id": "u67l04e06",
+      "type": "trueFalse",
+      "uepcc": "P",
+      "prompt": "The empty list 'passed = []' and the append line are correct; only the comparison operator needs changing.",
+      "answer": true,
+      "explanation": "Right. The filter structure is fine. The single bug is > vs >=, so only that operator changes."
+    },
+    {
+      "id": "u67l04e07",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Fix the test so a score of exactly 50 is kept:\n\nfor s in scores:\n    if s ____ pass_mark:\n        passed.append(s)",
+      "answer": ">=",
+      "acceptable": [
+        ">="
+      ],
+      "explanation": "Use >= so 50 (equal to the pass mark) is included. Now passed becomes [50, 80]."
+    },
+    {
+      "id": "u67l04e08",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Arrange the full FIXED filter (store inputs, empty list, loop + >= test + append, print).",
+      "blocks": [
+        "scores = [50, 49, 80]",
+        "pass_mark = 50",
+        "passed = []",
+        "for s in scores:",
+        "    if s >= pass_mark:",
+        "        passed.append(s)",
+        "print(passed)"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "explanation": "Inputs first, then an empty 'passed' list, then the loop keeping each score >= pass_mark, then print. pass_mark stays a named variable, not a hardcoded 50."
+    },
+    {
+      "id": "u67l04e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check. The fixed code prints [50, 80]. Your hand answer was [50, 80]. So...",
+      "options": [
+        "It passes — the boundary 50 is now kept",
+        "It still drops the 50",
+        "You can't tell",
+        "The example was wrong"
+      ],
+      "answer": 0,
+      "explanation": "Output matches the hand result, including the boundary 50. Switching > to >= fixed it."
+    },
+    {
+      "id": "u67l04e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Re-check with new inputs: scores = [30, 50, 51], pass_mark = 50, test s >= pass_mark. What prints?",
+      "options": [
+        "[50, 51]",
+        "[51]",
+        "[30, 50, 51]",
+        "[30]"
+      ],
+      "answer": 0,
+      "explanation": "30 fails; 50 and 51 pass (50 because the test is >=). The fix keeps the boundary for new inputs too."
+    }
+  ]
+}

@@ -1,0 +1,127 @@
+{
+  "unitId": "u08",
+  "lessonId": "u08l07",
+  "title": "Spot the mistake",
+  "idea": "Common slips with variables: wrong side of =, quotes when you meant the box, printing before storing. Learn to spot them.",
+  "exercises": [
+    {
+      "id": "u08l07e01",
+      "type": "multipleChoice",
+      "prompt": "This should store 5 in count, but it's wrong. Which line is the fix?\n\n5 = count",
+      "options": [
+        "count = 5",
+        "5 == count",
+        "print(count)",
+        "count 5"
+      ],
+      "answer": 0,
+      "explanation": "The name must be on the left: count = 5. The value goes on the right."
+    },
+    {
+      "id": "u08l07e02",
+      "type": "multipleChoice",
+      "prompt": "The goal is to show the VALUE 7. Which line is the mistake?\n\nlucky = 7\nprint(\"lucky\")",
+      "options": [
+        "print(\"lucky\") shows the word, not the value",
+        "lucky = 7 is wrong",
+        "Both lines are wrong",
+        "Nothing is wrong"
+      ],
+      "answer": 0,
+      "explanation": "Quotes make it text. To show the value 7, drop the quotes: print(lucky)."
+    },
+    {
+      "id": "u08l07e03",
+      "type": "trueFalse",
+      "prompt": "This program has a mistake: it prints the box before filling it.\n\nprint(score)\nscore = 10",
+      "answer": true,
+      "explanation": "Right — you can't read a box before storing a value. Store first, then print."
+    },
+    {
+      "id": "u08l07e04",
+      "type": "orderBlocks",
+      "prompt": "These two lines are in the wrong order. Put them right so the value shows.",
+      "blocks": [
+        "print(gold)",
+        "gold = 40"
+      ],
+      "answer": [
+        1,
+        0
+      ],
+      "explanation": "Store the value first (gold = 40), then show it (print(gold))."
+    },
+    {
+      "id": "u08l07e05",
+      "type": "multipleChoice",
+      "prompt": "Someone wanted to show the value of age but wrote print(\"age\"). What should they write?",
+      "options": [
+        "print(age)",
+        "print(\"age\")",
+        "age = print",
+        "print = age"
+      ],
+      "answer": 0,
+      "explanation": "No quotes! print(age) opens the box and shows its value."
+    },
+    {
+      "id": "u08l07e06",
+      "type": "multipleChoice",
+      "prompt": "Which line correctly stores 12 in a variable named total?",
+      "options": [
+        "total = 12",
+        "12 = total",
+        "total == 12",
+        "total 12 ="
+      ],
+      "answer": 0,
+      "explanation": "Name on the left, value on the right: total = 12."
+    },
+    {
+      "id": "u08l07e07",
+      "type": "trueFalse",
+      "prompt": "print(\"money\") is a mistake if you wanted to show the value stored in money.",
+      "answer": true,
+      "explanation": "Yes. The quotes show the word money. Drop them: print(money)."
+    },
+    {
+      "id": "u08l07e08",
+      "type": "multipleChoice",
+      "prompt": "What does this correct program show?\n\nwins = 3\nprint(wins)",
+      "options": [
+        "3",
+        "wins",
+        "Nothing",
+        "wins = 3"
+      ],
+      "answer": 0,
+      "explanation": "No mistakes here! Store 3, then print(wins) shows 3."
+    },
+    {
+      "id": "u08l07e09",
+      "type": "multipleChoice",
+      "prompt": "Review: which line just shows plain text, with no variable at all?",
+      "options": [
+        "print(\"Welcome\")",
+        "print(welcome)",
+        "welcome = 1",
+        "print(score)"
+      ],
+      "answer": 0,
+      "explanation": "Quotes mean plain text. print(\"Welcome\") shows Welcome and uses no box."
+    },
+    {
+      "id": "u08l07e10",
+      "type": "multipleChoice",
+      "prompt": "Final check: to store then show, which order is correct?",
+      "options": [
+        "Store the value, then print the variable",
+        "Print the variable, then store the value",
+        "Print twice, never store",
+        "Store twice, never print"
+      ],
+      "answer": 0,
+      "explanation": "Always store first so the box has a value, then print to see it."
+    }
+  ]
+}

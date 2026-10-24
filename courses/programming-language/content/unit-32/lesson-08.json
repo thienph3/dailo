@@ -1,0 +1,131 @@
+{
+  "unitId": "u32",
+  "lessonId": "u32l08",
+  "title": "Trace it like the computer",
+  "idea": "The core skill: step through the chain line by line with a real value to SEE which branch runs and why.",
+  "exercises": [
+    {
+      "id": "u32l08e01",
+      "type": "multipleChoice",
+      "prompt": "Chain: if n > 100: 'Big' elif n > 10: 'Medium' else: 'Small'. Trace n = 50. Which branch runs?",
+      "options": [
+        "Medium",
+        "Big",
+        "Small",
+        "none"
+      ],
+      "answer": 0,
+      "explanation": "50 > 100 is False, 50 > 10 is True, so 'Medium' runs. Tracing shows exactly where it lands."
+    },
+    {
+      "id": "u32l08e02",
+      "type": "multipleChoice",
+      "prompt": "Same chain, trace n = 150.",
+      "options": [
+        "Big",
+        "Medium",
+        "Small",
+        "none"
+      ],
+      "answer": 0,
+      "explanation": "150 > 100 is True on the first line, so 'Big' — and the chain stops there."
+    },
+    {
+      "id": "u32l08e03",
+      "type": "multipleChoice",
+      "prompt": "Same chain, trace n = 4.",
+      "options": [
+        "Small",
+        "Medium",
+        "Big",
+        "none"
+      ],
+      "answer": 0,
+      "explanation": "4 > 100 False, 4 > 10 False, so the else runs: 'Small'."
+    },
+    {
+      "id": "u32l08e04",
+      "type": "trueFalse",
+      "prompt": "Once a branch's condition is True, the chain checks the remaining branches too.",
+      "answer": false,
+      "explanation": "False. The first True branch runs and the rest are skipped. Tracing makes this obvious."
+    },
+    {
+      "id": "u32l08e05",
+      "type": "multipleChoice",
+      "prompt": "Chain: if n >= 0: 'Non-negative' elif n < 0: 'Negative'. Trace n = 0. Result?",
+      "options": [
+        "Non-negative",
+        "Negative",
+        "both",
+        "none"
+      ],
+      "answer": 0,
+      "explanation": "0 >= 0 is True, so 'Non-negative'. Tracing the boundary value confirms 0 is handled."
+    },
+    {
+      "id": "u32l08e06",
+      "type": "orderBlocks",
+      "prompt": "Order the mental steps of tracing one value through a chain.",
+      "blocks": [
+        "Pick a specific value for the variable",
+        "Check the first condition: true or false?",
+        "If false, move to the next condition",
+        "Stop at the first true branch — that is the result"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "Pick a value, test each condition top-down, stop at the first True, that branch is the result."
+    },
+    {
+      "id": "u32l08e07",
+      "type": "multipleChoice",
+      "prompt": "Why trace a BUGGY chain with a specific number instead of just re-reading it?",
+      "options": [
+        "A concrete value reveals the exact branch that runs",
+        "Reading is always wrong",
+        "Numbers fix bugs by themselves",
+        "It doubles the speed"
+      ],
+      "answer": 0,
+      "explanation": "A concrete value shows exactly which branch fires, making a wrong result impossible to hand-wave away."
+    },
+    {
+      "id": "u32l08e08",
+      "type": "multipleChoice",
+      "prompt": "Buggy chain: if score >= 50: 'Pass' elif score >= 90: 'Top'. Trace score = 95 and name the bug.",
+      "options": [
+        "It prints 'Pass'; the >=90 branch is shadowed by >=50",
+        "It prints 'Top' correctly",
+        "It crashes on 95",
+        "95 is out of range"
+      ],
+      "answer": 0,
+      "explanation": "95 hits 'Pass' first, so 'Top' is unreachable. Tracing exposes the order bug: broad band first."
+    },
+    {
+      "id": "u32l08e09",
+      "type": "multipleChoice",
+      "prompt": "When tracing, what should you write down at each line?",
+      "options": [
+        "True/False for each condition as you go",
+        "The time of day",
+        "How many letters each line has",
+        "Nothing — just guess"
+      ],
+      "answer": 0,
+      "explanation": "Note whether each condition is True or False for your value; the first True tells you the outcome."
+    },
+    {
+      "id": "u32l08e10",
+      "type": "trueFalse",
+      "prompt": "Tracing a few well-chosen values (including boundaries) is a reliable way to find logic bugs.",
+      "answer": true,
+      "explanation": "True. Hand-tracing with representative and boundary values is the heart of debugging reasoning."
+    }
+  ]
+}

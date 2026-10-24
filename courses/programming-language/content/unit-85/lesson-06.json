@@ -1,0 +1,139 @@
+{
+  "unitId": "u85",
+  "lessonId": "u85l06",
+  "title": "Which detail is noise?",
+  "idea": "MEET: big problem statements often add story details that don't change the computation — learn to keep the values and the rule, and drop the decoration.",
+  "exercises": [
+    {
+      "type": "multipleChoice",
+      "prompt": "PROBLEM: 'On a rainy Tuesday, Ama checked her shop and totalled the 12 prices in her list.' Which detail is NOISE (doesn't change the answer)?",
+      "options": [
+        "That it was a rainy Tuesday",
+        "The list of prices",
+        "That we must total them",
+        "The values in the list"
+      ],
+      "answer": 0,
+      "explanation": "The weather and the day don't affect the total. They're story colour — noise. The prices and 'total them' are what matter.",
+      "id": "u85l06e01"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Story details like names and weather usually change how you compute the answer.",
+      "answer": false,
+      "explanation": "Usually they don't. They make the problem readable, but the computation depends on the values and the rule.",
+      "id": "u85l06e02"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Why learn to spot noise?",
+      "options": [
+        "So you plan around the parts that matter, not the decoration",
+        "So you can delete the problem",
+        "Because noise is the answer",
+        "To make reading slower"
+      ],
+      "answer": 0,
+      "explanation": "Separating signal from noise keeps your plan focused on what actually produces the output.",
+      "id": "u85l06e03"
+    },
+    {
+      "type": "multiSelect",
+      "prompt": "Select the details that are NOISE in: 'Hungry after football, Leo listed 5 snack prices and found the biggest.'",
+      "options": [
+        "that Leo was hungry",
+        "that it was after football",
+        "the 5 snack prices",
+        "that we find the biggest"
+      ],
+      "answer": [
+        0,
+        1
+      ],
+      "explanation": "Hunger and football are colour. The prices and 'find the biggest' are the real signal.",
+      "id": "u85l06e04"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "PROBLEM: 'The teacher, Ms Rao, has a list of scores and wants the average.' What is the INPUT?",
+      "options": [
+        "The list of scores",
+        "Ms Rao",
+        "The word 'teacher'",
+        "The average"
+      ],
+      "answer": 0,
+      "explanation": "The input is the list of scores. 'Ms Rao' and 'teacher' are story, not data to compute with.",
+      "id": "u85l06e05"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "A number inside a story detail is always an input.",
+      "answer": false,
+      "explanation": "Not always — 'it was 7 am' is noise even though 7 is a number. Ask: does this value feed the computation?",
+      "id": "u85l06e06"
+    },
+    {
+      "type": "matchPairs",
+      "prompt": "Match each phrase to signal or noise for 'total the prices'.",
+      "pairs": [
+        {
+          "left": "the list of prices",
+          "right": "Signal (it's the input)"
+        },
+        {
+          "left": "'total them'",
+          "right": "Signal (it's the rule)"
+        },
+        {
+          "left": "'on a sunny day'",
+          "right": "Noise (decoration)"
+        }
+      ],
+      "explanation": "Signal is anything that changes the output; noise is everything else. Keep signal, drop noise.",
+      "id": "u85l06e07"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "A classmate includes 'it was a sunny day' as an input in their restatement. What should you say?",
+      "options": [
+        "That's noise — it doesn't feed the computation, so leave it out",
+        "Great, keep it as an input",
+        "Add more weather details",
+        "Noise is the main output"
+      ],
+      "answer": 0,
+      "explanation": "Gently: the weather is decoration. Inputs are only the values the computation uses.",
+      "id": "u85l06e08"
+    },
+    {
+      "type": "orderBlocks",
+      "prompt": "Order the habit for filtering noise.",
+      "blocks": [
+        "Read the problem",
+        "Mark the values and the rule you'll actually use",
+        "Cross out the story details that don't change the answer"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Find the signal, then cross out the noise. A clean restatement has no decoration.",
+      "id": "u85l06e09"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "The big idea:",
+      "options": [
+        "Keep the values and the rule; drop story details that don't change the answer",
+        "Every word in a problem is essential",
+        "Noise is the output",
+        "Longer problems have fewer parts"
+      ],
+      "answer": 0,
+      "explanation": "Signal vs noise: a focused restatement ignores the decoration and keeps what computes the answer.",
+      "id": "u85l06e10"
+    }
+  ]
+}

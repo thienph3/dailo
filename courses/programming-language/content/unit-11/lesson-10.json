@@ -1,0 +1,111 @@
+{
+  "unitId": "u11",
+  "lessonId": "u11l10",
+  "title": "Mixed practice: you drive",
+  "idea": "REVIEW / interleave. Mixed problems from the whole unit, learner chooses operation, order, and checks. ~30% recalls earlier laps (print, variables). Proves transfer.",
+  "exercises": [
+    {
+      "id": "u11l10e01",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "'A class has 5 rows of 6 desks. Show the number of desks.' Operation?",
+      "options": ["Multiply", "Add", "Subtract", "Divide"],
+      "answer": 0,
+      "explanation": "Rows of equal desks = multiply: 5 * 6 = 30."
+    },
+    {
+      "id": "u11l10e02",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Work it by hand: 5 rows of 6 desks = ?",
+      "options": ["30", "11", "1", "56"],
+      "answer": 0,
+      "explanation": "5 * 6 = 30."
+    },
+    {
+      "id": "u11l10e03",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Code it:\n\nrows = 5\nper_row = 6\ndesks = rows ____ per_row\nprint(desks)",
+      "answer": "*",
+      "acceptable": ["*"],
+      "explanation": "Multiply: desks = 30."
+    },
+    {
+      "id": "u11l10e04",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "'You walked 12 km and your friend 8 km. How much FURTHER did you walk?' Operation and order?",
+      "options": ["12 - 8 (subtract, you minus friend)", "8 - 12", "12 + 8", "12 * 8"],
+      "answer": 0,
+      "explanation": "'How much further you walked' = yours - friend's = 12 - 8 = 4."
+    },
+    {
+      "id": "u11l10e05",
+      "type": "multipleChoice",
+      "uepcc": "C",
+      "prompt": "Recall from Lap 0: how do you SHOW the result in a variable called answer?",
+      "options": ["print(answer)", "print(\"answer\")", "show(answer)", "answer.print()"],
+      "answer": 0,
+      "explanation": "print(answer) shows the value. print(\"answer\") would show the word. (Reviewing earlier laps.)"
+    },
+    {
+      "id": "u11l10e06",
+      "type": "trueFalse",
+      "uepcc": "C",
+      "prompt": "Recall: a variable remembers a value so a later step can use it.",
+      "answer": true,
+      "explanation": "Yes — the Lap 1 idea you've used in every problem this unit."
+    },
+    {
+      "id": "u11l10e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "'Buy 6 apples at 2 each, pay with 20, show the change.' Arrange the code.",
+      "blocks": [
+        "cost = 6 * 2",
+        "change = 20 - cost",
+        "print(change)"
+      ],
+      "answer": [0, 1, 2],
+      "explanation": "Two steps: cost = 12, then change = 20 - 12 = 8, then show. Decomposition + two operations."
+    },
+    {
+      "id": "u11l10e08",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "That code prints 8. By hand: 6*2=12, 20-12=8. Verdict?",
+      "options": ["Passes", "Fails", "Unknown", "Rewrite example"],
+      "answer": 0,
+      "explanation": "Matches — a correct two-step solution."
+    },
+    {
+      "id": "u11l10e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Someone wrote change = cost - 20 instead. With cost=12 it shows -8. What's the lesson?",
+      "options": [
+        "Order matters for subtraction — it should be 20 - cost",
+        "The computer is broken",
+        "-8 is fine",
+        "Add a bracket"
+      ],
+      "answer": 0,
+      "explanation": "Flipped subtraction gives the negative. Checking against the hand example (8) catches it."
+    },
+    {
+      "id": "u11l10e10",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "You've finished Unit 11. What can you now do?",
+      "options": [
+        "Take a small word problem, plan it with UEPCC, pick the right operations, code it, and check it",
+        "Only print fixed text",
+        "Write any program with no thinking",
+        "Nothing new"
+      ],
+      "answer": 0,
+      "explanation": "You solved many calculation problems with the full process. Next unit adds new tools (remainder, text) for new kinds of problems."
+    }
+  ]
+}

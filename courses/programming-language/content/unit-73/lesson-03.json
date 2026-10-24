@@ -1,0 +1,129 @@
+{
+  "unitId": "u73",
+  "lessonId": "u73l03",
+  "title": "return stops the sub-plan",
+  "idea": "TOOL: when return runs, the sub-plan ends immediately - lines after return do not run.",
+  "exercises": [
+    {
+      "id": "u73l03e01",
+      "type": "multipleChoice",
+      "prompt": "def f(n):\n    return n + 1\n    print(\"after\")\n\nWhen you call f(5), does 'after' print?",
+      "options": [
+        "No - return ends the sub-plan right away",
+        "Yes, always",
+        "Only the second time",
+        "Yes, before returning"
+      ],
+      "answer": 0,
+      "explanation": "return ends the sub-plan immediately. Any line after the return that runs never gets reached."
+    },
+    {
+      "id": "u73l03e02",
+      "type": "trueFalse",
+      "prompt": "Lines written after a return (that runs) are dead code - they never execute.",
+      "answer": true,
+      "explanation": "Yes. Once return hands the value back, the sub-plan is done. Nothing below that return runs."
+    },
+    {
+      "id": "u73l03e03",
+      "type": "multipleChoice",
+      "prompt": "def f(n):\n    return n\n    return n * 2\n\nWhat does f(4) return?",
+      "options": [
+        "4",
+        "8",
+        "Both",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "The first return (return n) ends the sub-plan with 4. The second return is never reached."
+    },
+    {
+      "id": "u73l03e04",
+      "type": "multipleChoice",
+      "prompt": "Why might return ending the sub-plan be useful?",
+      "options": [
+        "You can hand back an answer and skip the rest of the work",
+        "It makes code longer",
+        "It prints twice",
+        "It is never useful"
+      ],
+      "answer": 0,
+      "explanation": "Once you have the answer, there's no reason to keep going. return lets you hand it back and stop."
+    },
+    {
+      "id": "u73l03e05",
+      "type": "multipleChoice",
+      "prompt": "def is_big(n):\n    if n > 100:\n        return n\n    return 0\n\nWhat does is_big(5) return?",
+      "options": [
+        "0",
+        "5",
+        "100",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "5 > 100 is False, so the if body is skipped. The next line 'return 0' runs, handing back 0."
+    },
+    {
+      "id": "u73l03e06",
+      "type": "multipleChoice",
+      "prompt": "Same code. What does is_big(250) return?",
+      "options": [
+        "250",
+        "0",
+        "100",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "250 > 100 is True, so 'return n' runs and hands back 250. The sub-plan ends before reaching return 0."
+    },
+    {
+      "id": "u73l03e07",
+      "type": "orderBlocks",
+      "prompt": "Order what happens when f(5) runs, where f is 'return n + 1' then 'print(\"x\")'.",
+      "blocks": [
+        "f starts with n = 5",
+        "return hands back 6",
+        "the sub-plan ends - print is skipped"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "The body runs, hits return, hands back 6, and ends. The print below the return never runs."
+    },
+    {
+      "id": "u73l03e08",
+      "type": "trueFalse",
+      "prompt": "A sub-plan can have more than one return line, but only the FIRST one that runs takes effect.",
+      "answer": true,
+      "explanation": "Yes. You can write several returns (often inside if/else), but the first one reached ends the sub-plan."
+    },
+    {
+      "id": "u73l03e09",
+      "type": "multipleChoice",
+      "prompt": "REVIEW: this 'stop early' idea is like which loop tool you learned?",
+      "options": [
+        "break - it also ends something early",
+        "append",
+        "len()",
+        "input()"
+      ],
+      "answer": 0,
+      "explanation": "break ends a loop early; return ends a sub-plan early. Both stop the current work as soon as they run."
+    },
+    {
+      "id": "u73l03e10",
+      "type": "multipleChoice",
+      "prompt": "def grade(score):\n    if score >= 50:\n        return 1\n    return 0\n\nWhat does grade(50) return?",
+      "options": [
+        "1",
+        "0",
+        "50",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "50 >= 50 is True, so 'return 1' runs and hands back 1, ending the sub-plan before return 0."
+    }
+  ]
+}

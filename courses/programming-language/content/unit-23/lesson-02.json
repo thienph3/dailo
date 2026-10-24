@@ -1,0 +1,158 @@
+{
+  "unitId": "u23",
+  "lessonId": "u23l02",
+  "title": "Solve it: free delivery",
+  "idea": "GUIDED. Decide whether an order gets free delivery using if/else on the order total.",
+  "problem": "Delivery is free when the order total is over 100; otherwise it costs 10. Show the delivery cost.",
+  "exercises": [
+    {
+      "id": "u23l02e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: delivery is free over 100, else 10. What is the OUTPUT?",
+      "options": [
+        "The delivery cost (0 or 10)",
+        "The order total",
+        "The number of orders",
+        "Pass or Fail"
+      ],
+      "answer": 0,
+      "explanation": "Output is one delivery cost: 0 when free, 10 otherwise."
+    },
+    {
+      "id": "u23l02e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "What is the INPUT?",
+      "options": [
+        "The order total",
+        "The delivery cost",
+        "The word free",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "You start from the order total and decide the delivery cost from it."
+    },
+    {
+      "id": "u23l02e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "By hand: an order total of 150 gives what delivery cost?",
+      "options": [
+        "0",
+        "10",
+        "150",
+        "100"
+      ],
+      "answer": 0,
+      "explanation": "150 is over 100, so delivery is free: 0. That is your check value."
+    },
+    {
+      "id": "u23l02e04",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "By hand: a total of 80 gives what delivery cost?",
+      "options": [
+        "10",
+        "0",
+        "80",
+        "100"
+      ],
+      "answer": 0,
+      "explanation": "80 is not over 100, so delivery costs 10."
+    },
+    {
+      "id": "u23l02e05",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Which comparison means 'over 100'?",
+      "options": [
+        "total > 100",
+        "total >= 100",
+        "total < 100",
+        "total = 100"
+      ],
+      "answer": 0,
+      "explanation": "'Over' means strictly greater, so > 100. A total of exactly 100 is NOT over 100."
+    },
+    {
+      "id": "u23l02e06",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Plan the steps.",
+      "blocks": [
+        "Compare the total with 100",
+        "If over 100, delivery = 0",
+        "Otherwise delivery = 10",
+        "Show delivery"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "Compare, branch to set delivery, then show it."
+    },
+    {
+      "id": "u23l02e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Arrange the code.",
+      "blocks": [
+        "if total > 100:",
+        "    delivery = 0",
+        "else:",
+        "    delivery = 10",
+        "print(delivery)"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "explanation": "Set delivery inside the matching branch, then print it after."
+    },
+    {
+      "id": "u23l02e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Complete the comparison:\n\nif total __ 100:\n    delivery = 0\nelse:\n    delivery = 10",
+      "answer": ">",
+      "acceptable": [
+        ">"
+      ],
+      "explanation": "'Over 100' is strictly greater, so >. Using >= would wrongly give free delivery at exactly 100."
+    },
+    {
+      "id": "u23l02e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Run with total = 150. What does print(delivery) show?",
+      "options": [
+        "0",
+        "10",
+        "150",
+        "100"
+      ],
+      "answer": 0,
+      "explanation": "150 > 100 is True, so delivery = 0 - matches the hand example."
+    },
+    {
+      "id": "u23l02e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Re-check the edge: total = 100. What prints?",
+      "options": [
+        "10",
+        "0",
+        "100",
+        "free"
+      ],
+      "answer": 0,
+      "explanation": "100 > 100 is False, so the else runs: delivery = 10. The edge confirms > was correct, not >=."
+    }
+  ]
+}

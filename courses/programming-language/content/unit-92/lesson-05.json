@@ -1,0 +1,132 @@
+{
+  "unitId": "u92",
+  "lessonId": "u92l05",
+  "title": "Two sub-plans, one pass",
+  "idea": "TOOL: weave two helper functions into one loop - each does a named part of the per-item work.",
+  "exercises": [
+    {
+      "type": "multipleChoice",
+      "prompt": "A per-item job has two clear parts (say, a tax and a discount). How can you keep each part named and tidy?",
+      "options": [
+        "Write a helper function for each part and call both in the loop",
+        "Cram both into one line",
+        "Use two loops",
+        "Skip functions"
+      ],
+      "answer": 0,
+      "explanation": "One helper per part keeps each sub-plan named. The loop calls both each turn - composing functions inside a repeat.",
+      "id": "u92l05e01"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\ndef add_tax(p):\n    return p + 1\n\ndef add_fee(p):\n    return p + 2\n\ntotal = 0\nfor price in [10, 20]:\n    total = total + add_tax(add_fee(price))\nprint(total)",
+      "options": [
+        "36",
+        "30",
+        "33",
+        "40"
+      ],
+      "answer": 0,
+      "explanation": "For 10: add_fee -> 12, add_tax -> 13. For 20: 22 -> 23. total = 13 + 23 = 36. One helper feeds the other - composing functions.",
+      "id": "u92l05e02"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "The result of one function can be passed straight into another - that's composing functions.",
+      "answer": true,
+      "explanation": "True. add_tax(add_fee(price)) runs add_fee first, then feeds its result into add_tax. Sub-plans chain together.",
+      "id": "u92l05e03"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "In add_tax(add_fee(price)), which helper runs FIRST?",
+      "options": [
+        "add_fee (the inner call) runs first",
+        "add_tax runs first",
+        "They run at the same time",
+        "Neither runs"
+      ],
+      "answer": 0,
+      "explanation": "The inner call is evaluated first, then its result is handed to the outer call. Inside-out order.",
+      "id": "u92l05e04"
+    },
+    {
+      "type": "fillBlank",
+      "prompt": "Complete the loop so it totals each taxed-and-feed price:\n\ndef add_tax(p):\n    return p + 1\ndef add_fee(p):\n    return p + 2\ntotal = 0\nfor price in [10]:\n    total = total + add_tax(add_fee(____))\nprint(total)",
+      "answer": "price",
+      "acceptable": [
+        "price"
+      ],
+      "explanation": "Pass the loop's current item, price, through both helpers. For 10 that's 13, so total = 13.",
+      "id": "u92l05e05"
+    },
+    {
+      "type": "orderBlocks",
+      "prompt": "Arrange a loop that totals each price after one helper adjusts it.",
+      "blocks": [
+        "def adjust(p):",
+        "    return p + 5",
+        "total = 0",
+        "for price in [10, 20]:",
+        "    total = total + adjust(price)",
+        "print(total)"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "explanation": "Define adjust, start total, loop adding adjust(price) each turn, print. 15 + 25 = 40.",
+      "id": "u92l05e06"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Why split the work into TWO helpers instead of one big one?",
+      "options": [
+        "Each named part is easier to understand, test, and reuse separately",
+        "Two is always faster",
+        "Python requires it",
+        "To make the loop longer"
+      ],
+      "answer": 0,
+      "explanation": "Small, named sub-plans are clearer and independently reusable. Decomposition applies to functions too.",
+      "id": "u92l05e07"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Calling two helpers per turn still uses no new syntax - it's just more of the tools you have.",
+      "answer": true,
+      "explanation": "True. Defining and calling functions, and a loop, are all familiar. Composition is a way of USING them, not a new feature.",
+      "id": "u92l05e08"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\ndef adjust(p):\n    return p + 5\n\ntotal = 0\nfor price in [0]:\n    total = total + adjust(price)\nprint(total)",
+      "options": [
+        "5",
+        "0",
+        "10",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "adjust(0) = 5, added once to total. Even a single-item list runs the helper once.",
+      "id": "u92l05e09"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "The lesson:",
+      "options": [
+        "Several small helpers can be composed inside one loop for a tidy solution",
+        "One helper is the maximum",
+        "Helpers can't be chained",
+        "Loops forbid functions"
+      ],
+      "answer": 0,
+      "explanation": "Composing named sub-plans inside a repeat keeps even layered per-item work readable.",
+      "id": "u92l05e10"
+    }
+  ]
+}

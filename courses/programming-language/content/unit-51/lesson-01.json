@@ -1,0 +1,124 @@
+{
+  "unitId": "u51",
+  "lessonId": "u51l01",
+  "title": "Many values, held together",
+  "idea": "MEET the idea of a collection: sometimes a problem is about a whole group of values at once, not a single number. Thinking, almost no code.",
+  "exercises": [
+    {
+      "id": "u51l01e01",
+      "type": "multipleChoice",
+      "prompt": "So far, a variable has held ONE value at a time. But some problems are about MANY values. Which of these is about many values at once?",
+      "options": [
+        "The test scores of everyone in a class",
+        "Your single age",
+        "Today's date",
+        "The number 7"
+      ],
+      "answer": 0,
+      "explanation": "One class has many scores. When a problem talks about a whole group like that, a single variable isn't enough — we need something that holds many values."
+    },
+    {
+      "id": "u51l01e02",
+      "type": "multipleChoice",
+      "prompt": "Which everyday thing is most like 'many values held together in order'?",
+      "options": [
+        "A shopping list",
+        "A single coin",
+        "A light switch",
+        "One photograph"
+      ],
+      "answer": 0,
+      "explanation": "A shopping list is many items, written in order, as one thing. That is exactly the idea of a collection."
+    },
+    {
+      "id": "u51l01e03",
+      "type": "trueFalse",
+      "prompt": "A single variable like score = 7 is a good fit when a problem is about one value.",
+      "answer": true,
+      "explanation": "One value, one variable — perfect. It's when there are MANY values that we reach for a collection instead."
+    },
+    {
+      "id": "u51l01e04",
+      "type": "multiSelect",
+      "prompt": "Which of these problems are about a WHOLE GROUP of values (pick all that apply)?",
+      "options": [
+        "The prices of every item in a cart",
+        "The temperatures each hour today",
+        "Your single house number",
+        "One player's final score"
+      ],
+      "answer": [0, 1],
+      "explanation": "A cart of prices and hourly temperatures are both groups of many values. A single house number or one score is just one value."
+    },
+    {
+      "id": "u51l01e05",
+      "type": "multipleChoice",
+      "prompt": "What is a 'collection' (also called a list)?",
+      "options": [
+        "One thing that holds many values in order",
+        "A single number",
+        "A way to print text",
+        "A yes/no answer"
+      ],
+      "answer": 0,
+      "explanation": "A collection is a single container holding many values, kept in order. That's the big new idea of this lap."
+    },
+    {
+      "id": "u51l01e06",
+      "type": "matchPairs",
+      "prompt": "Match each real-world group to the kind of values it holds.",
+      "pairs": [
+        { "left": "A class's test scores", "right": "many numbers" },
+        { "left": "A week's daily steps", "right": "many numbers" },
+        { "left": "A single age", "right": "one number" }
+      ],
+      "explanation": "Groups hold many values; a lone fact holds one. Spotting which you have tells you whether you need a list."
+    },
+    {
+      "id": "u51l01e07",
+      "type": "trueFalse",
+      "prompt": "A collection lets you keep many values together under one name, instead of inventing a separate variable for each.",
+      "answer": true,
+      "explanation": "Imagine 100 scores. You don't want 100 variables. One list holds all of them — that's why collections exist."
+    },
+    {
+      "id": "u51l01e08",
+      "type": "multipleChoice",
+      "prompt": "You have the ages of 30 students. Without a collection, what would you be forced to do?",
+      "options": [
+        "Make 30 separate variables, one per student",
+        "Use just one variable for all 30",
+        "Ignore 29 of them",
+        "Nothing — one number can hold 30 values"
+      ],
+      "answer": 0,
+      "explanation": "Thirty separate variables would be painful. A collection holds all 30 together, which is far simpler."
+    },
+    {
+      "id": "u51l01e09",
+      "type": "multipleChoice",
+      "prompt": "Which word signals a problem is probably about a collection?",
+      "options": [
+        "'each', 'all', or 'every' value",
+        "'the' value",
+        "'a' value",
+        "'this one' value"
+      ],
+      "answer": 0,
+      "explanation": "Words like each, all, and every point at a whole group. They're a strong hint you'll want a list."
+    },
+    {
+      "id": "u51l01e10",
+      "type": "multipleChoice",
+      "prompt": "This unit is MEET — just the idea. What will you learn to actually write next?",
+      "options": [
+        "How to create a list of values",
+        "How to delete your computer",
+        "How to count to a million",
+        "Nothing new ever"
+      ],
+      "answer": 0,
+      "explanation": "Now that you can recognize a 'many values' problem, the next lessons show how to write a list down in code."
+    }
+  ]
+}

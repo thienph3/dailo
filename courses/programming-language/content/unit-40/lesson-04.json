@@ -1,0 +1,136 @@
+{
+  "unitId": "u40",
+  "lessonId": "u40l04",
+  "title": "Counting only the ones that match",
+  "idea": "A counter can count only passes where a simple condition is true (count how many).",
+  "exercises": [
+    {
+      "id": "u40l04e01",
+      "type": "multipleChoice",
+      "prompt": "We want to count how many numbers from 1 to 5 are greater than 3. What will the counter hold?",
+      "options": [
+        "2",
+        "3",
+        "5",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "Only 4 and 5 are greater than 3, so the counter should end at 2."
+    },
+    {
+      "id": "u40l04e02",
+      "type": "multipleChoice",
+      "prompt": "What shows?\n\ncount = 0\nfor i in range(1, 6):\n    if i > 3:\n        count += 1\nprint(count)",
+      "options": [
+        "2",
+        "5",
+        "3",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "i is 1..5; only 4 and 5 pass i > 3, so the counter is raised twice and prints 2."
+    },
+    {
+      "id": "u40l04e03",
+      "type": "multipleChoice",
+      "prompt": "In that loop, on which passes does count go up?",
+      "options": [
+        "When i is 4 and 5",
+        "Every pass",
+        "Only when i is 1",
+        "Never"
+      ],
+      "answer": 0,
+      "explanation": "Only when i > 3 — that is i = 4 and i = 5. On other passes the counter is untouched."
+    },
+    {
+      "id": "u40l04e04",
+      "type": "trueFalse",
+      "prompt": "When the condition is false, the counter stays the same on that pass.",
+      "answer": true,
+      "explanation": "True. The += 1 line only runs when the if is true, so a false pass leaves the count unchanged."
+    },
+    {
+      "id": "u40l04e05",
+      "type": "multipleChoice",
+      "prompt": "How many numbers from 1 to 6 are even? (even means i % 2 == 0)",
+      "options": [
+        "3",
+        "2",
+        "6",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "2, 4, 6 are even — three of them. A counter with if i % 2 == 0 would end at 3."
+    },
+    {
+      "id": "u40l04e06",
+      "type": "orderBlocks",
+      "prompt": "Arrange a loop that counts how many numbers 1..5 are even.",
+      "blocks": [
+        "        count += 1",
+        "count = 0",
+        "    if i % 2 == 0:",
+        "print(count)",
+        "for i in range(1, 6):"
+      ],
+      "answer": [
+        1,
+        4,
+        2,
+        0,
+        3
+      ],
+      "explanation": "Start counter at 0, loop, if even add 1, then print the count."
+    },
+    {
+      "id": "u40l04e07",
+      "type": "fillBlank",
+      "prompt": "Fill the comparison to count numbers 1..10 that are less than 5:\n\ncount = 0\nfor i in range(1, 11):\n    if i ____ 5:\n        count += 1\nprint(count)",
+      "answer": "<",
+      "acceptable": [
+        "<"
+      ],
+      "explanation": "Less-than is <. Numbers 1, 2, 3, 4 are below 5, so the counter ends at 4."
+    },
+    {
+      "id": "u40l04e08",
+      "type": "multipleChoice",
+      "prompt": "What final number prints?\n\ncount = 0\nfor i in range(1, 11):\n    if i < 5:\n        count += 1\nprint(count)",
+      "options": [
+        "4",
+        "5",
+        "10",
+        "6"
+      ],
+      "answer": 0,
+      "explanation": "i = 1, 2, 3, 4 are below 5 — four matches — so the counter prints 4."
+    },
+    {
+      "id": "u40l04e09",
+      "type": "multipleChoice",
+      "prompt": "If NONE of the numbers match the condition, what does the counter hold?",
+      "options": [
+        "0",
+        "1",
+        "The range stop",
+        "It errors"
+      ],
+      "answer": 0,
+      "explanation": "No matches means no +1 ever runs, so the counter keeps its start value, 0."
+    },
+    {
+      "id": "u40l04e10",
+      "type": "multipleChoice",
+      "prompt": "Why keep the counter start (count = 0) outside the if as well as outside the loop?",
+      "options": [
+        "So it is ready once before any counting",
+        "To make it faster",
+        "The if needs it",
+        "So it counts twice"
+      ],
+      "answer": 0,
+      "explanation": "It must be set once before counting begins; placing it inside the if would reset it on matches."
+    }
+  ]
+}

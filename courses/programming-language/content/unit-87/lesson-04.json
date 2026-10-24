@@ -1,0 +1,140 @@
+{
+  "unitId": "u87",
+  "lessonId": "u87l04",
+  "title": "'Biggest or smallest' means track the extreme",
+  "idea": "MEET: a sub-problem asking for the largest or smallest value signals the track-the-extreme pattern.",
+  "exercises": [
+    {
+      "type": "multipleChoice",
+      "prompt": "Sub-problem: 'find the highest score.' Which pattern?",
+      "options": [
+        "Track the biggest (keep the best so far)",
+        "Running total",
+        "Count with condition",
+        "Filter"
+      ],
+      "answer": 0,
+      "explanation": "Finding the highest means tracking the biggest seen so far, updating when a bigger one appears.",
+      "id": "u87l04e01"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "To track the biggest, you compare each item to...",
+      "options": [
+        "the best value seen so far",
+        "0 always",
+        "the list length",
+        "the first item only"
+      ],
+      "answer": 0,
+      "explanation": "Each item is compared to the current best; if it's bigger, it becomes the new best.",
+      "id": "u87l04e02"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "'Highest', 'largest', 'maximum', and 'most' all point to tracking the biggest.",
+      "answer": true,
+      "explanation": "Yes — they all ask for the top value, which the track-the-biggest pattern finds.",
+      "id": "u87l04e03"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "To track the SMALLEST, you update the best-so-far when an item is...",
+      "options": [
+        "smaller than the current best",
+        "bigger than the current best",
+        "equal to 0",
+        "the last item"
+      ],
+      "answer": 0,
+      "explanation": "Smallest tracking flips the comparison: keep the item if it's smaller than what you've seen.",
+      "id": "u87l04e04"
+    },
+    {
+      "type": "multiSelect",
+      "prompt": "Select the track-the-extreme sub-problems.",
+      "options": [
+        "the cheapest item",
+        "the highest temperature",
+        "the total rainfall",
+        "the largest donation"
+      ],
+      "answer": [
+        0,
+        1,
+        3
+      ],
+      "explanation": "Cheapest, highest, largest are extremes. Total rainfall is a sum, not an extreme.",
+      "id": "u87l04e05"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Why start 'the biggest so far' as the FIRST item, not 0?",
+      "options": [
+        "If all values are negative, 0 would wrongly win",
+        "0 is always biggest",
+        "It's faster",
+        "It doesn't matter"
+      ],
+      "answer": 0,
+      "explanation": "Starting at the first real item avoids a fake winner. Starting at 0 breaks when every value is below 0.",
+      "id": "u87l04e06"
+    },
+    {
+      "type": "matchPairs",
+      "prompt": "Match each phrase to its pattern.",
+      "pairs": [
+        {
+          "left": "'the most expensive'",
+          "right": "track the biggest"
+        },
+        {
+          "left": "'the cheapest'",
+          "right": "track the smallest"
+        },
+        {
+          "left": "'the total spent'",
+          "right": "running total"
+        }
+      ],
+      "explanation": "Most expensive -> biggest; cheapest -> smallest; total -> sum. The words choose the tool.",
+      "id": "u87l04e07"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Finding the biggest and totalling the list are the same pattern.",
+      "answer": false,
+      "explanation": "No — totalling adds everything; tracking the biggest keeps one value and replaces it when beaten.",
+      "id": "u87l04e08"
+    },
+    {
+      "type": "orderBlocks",
+      "prompt": "Order the track-the-biggest pattern.",
+      "blocks": [
+        "Start 'best' at the first item",
+        "For each later item, if it's bigger, make it the new best",
+        "After the loop, best holds the biggest"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Start at the first item, replace when beaten, read the result. The extreme-tracking shape.",
+      "id": "u87l04e09"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "The big idea:",
+      "options": [
+        "'Biggest / smallest / most / cheapest' means track the extreme value",
+        "Extremes need a running total",
+        "Start the best at 0 always",
+        "Extremes can't be found with a loop"
+      ],
+      "answer": 0,
+      "explanation": "When a sub-problem wants the top or bottom value, track it: keep the best seen so far.",
+      "id": "u87l04e10"
+    }
+  ]
+}

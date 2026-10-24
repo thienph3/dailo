@@ -1,0 +1,129 @@
+{
+  "unitId": "u71",
+  "lessonId": "u71l03",
+  "title": "What runs, and when",
+  "idea": "TOOL: trace a program - the def is set up, then the call runs the body. Predict the output.",
+  "exercises": [
+    {
+      "id": "u71l03e01",
+      "type": "multipleChoice",
+      "prompt": "Program:\n\nprint(\"start\")\ndef greet():\n    print(\"Hi\")\ngreet()\nprint(\"end\")\n\nWhat prints, in order?",
+      "options": [
+        "start\nHi\nend",
+        "Hi\nstart\nend",
+        "start\nend",
+        "start\nHi\nend\nHi"
+      ],
+      "answer": 0,
+      "explanation": "print start, define greet (nothing shown), call greet (Hi), print end. Order: start, Hi, end."
+    },
+    {
+      "id": "u71l03e02",
+      "type": "multipleChoice",
+      "prompt": "In that program, when does 'Hi' print?",
+      "options": [
+        "When greet() is called, not when it's defined",
+        "When greet is defined",
+        "Before 'start'",
+        "Never"
+      ],
+      "answer": 0,
+      "explanation": "The def is silent setup. 'Hi' shows the moment greet() runs. Calls, not definitions, produce output."
+    },
+    {
+      "id": "u71l03e03",
+      "type": "trueFalse",
+      "prompt": "A def line runs its body as Python reads past it.",
+      "answer": false,
+      "explanation": "No. Reading past a def just registers the sub-plan. The body waits, running only when the name is called."
+    },
+    {
+      "id": "u71l03e04",
+      "type": "orderBlocks",
+      "prompt": "Order what HAPPENS when this runs:\n\ndef greet():\n    print(\"Hi\")\ngreet()",
+      "blocks": [
+        "greet() is called, so 'Hi' prints",
+        "Python reads the def and remembers greet",
+        "the def body waits, printing nothing yet"
+      ],
+      "answer": [
+        1,
+        2,
+        0
+      ],
+      "explanation": "Python reads+remembers the def, the body waits, then the call makes 'Hi' print. Define, wait, call."
+    },
+    {
+      "id": "u71l03e05",
+      "type": "multipleChoice",
+      "prompt": "Program:\n\ndef greet():\n    print(\"Hi\")\ngreet()\ngreet()\ngreet()\n\nHow many times does 'Hi' print?",
+      "options": [
+        "3",
+        "1",
+        "0",
+        "9"
+      ],
+      "answer": 0,
+      "explanation": "Three calls, three 'Hi's. Each call runs the body once. The single def doesn't print at all."
+    },
+    {
+      "id": "u71l03e06",
+      "type": "multipleChoice",
+      "prompt": "Program:\n\ndef show():\n    print(\"A\")\n    print(\"B\")\nshow()\n\nWhat prints?",
+      "options": [
+        "A\nB",
+        "B\nA",
+        "A",
+        "AB together with no newline"
+      ],
+      "answer": 0,
+      "explanation": "The call runs the whole body top to bottom: print A, then print B. Both indented lines belong to show."
+    },
+    {
+      "id": "u71l03e07",
+      "type": "trueFalse",
+      "prompt": "All the indented lines inside a sub-plan run (in order) each time it's called.",
+      "answer": true,
+      "explanation": "Yes. A call runs the entire body, top to bottom, every time. Here that's print A then print B."
+    },
+    {
+      "id": "u71l03e08",
+      "type": "multipleChoice",
+      "prompt": "Program:\n\ndef greet():\n    print(\"Hi\")\nprint(\"Bye\")\n\n(No call to greet.) What prints?",
+      "options": [
+        "Bye",
+        "Hi\nBye",
+        "Hi",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "greet is defined but never called, so 'Hi' never shows. The un-indented print(\"Bye\") runs and shows 'Bye'."
+    },
+    {
+      "id": "u71l03e09",
+      "type": "multipleChoice",
+      "prompt": "Which line is INSIDE greet, and which is part of the main program?\n\ndef greet():\n    print(\"Hi\")\nprint(\"Bye\")",
+      "options": [
+        "print(\"Hi\") is inside greet; print(\"Bye\") is the main program",
+        "both are inside greet",
+        "both are the main program",
+        "neither prints"
+      ],
+      "answer": 0,
+      "explanation": "Indented print(\"Hi\") belongs to greet. The un-indented print(\"Bye\") is the main program and runs on its own."
+    },
+    {
+      "id": "u71l03e10",
+      "type": "multipleChoice",
+      "prompt": "The habit this lesson builds:",
+      "options": [
+        "trace a program knowing a def is setup and a call runs the body",
+        "ignore all calls",
+        "assume defs print",
+        "guess output randomly"
+      ],
+      "answer": 0,
+      "explanation": "Read top to bottom: defs are quiet setup; calls run bodies. That's how you predict a program's output."
+    }
+  ]
+}

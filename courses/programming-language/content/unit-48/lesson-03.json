@@ -1,0 +1,145 @@
+{
+  "unitId": "u48",
+  "lessonId": "u48l03",
+  "title": "Trace a running total",
+  "idea": "MEET. Hand-trace an accumulator (total = total + value). Predicting the final sum. Reading only.",
+  "exercises": [
+    {
+      "id": "u48l03e01",
+      "type": "multipleChoice",
+      "prompt": "total starts at 0. Each pass does total = total + value, for values 2, 3, 5. Final total?",
+      "options": [
+        "10",
+        "0",
+        "3",
+        "5"
+      ],
+      "answer": 0,
+      "explanation": "0+2=2, +3=5, +5=10. Tracing each add gives 10."
+    },
+    {
+      "id": "u48l03e02",
+      "type": "orderBlocks",
+      "prompt": "Trace total = total + value for 2, 3, 5 (total starts 0).",
+      "blocks": [
+        "Start: total is 0",
+        "After +2: total is 2",
+        "After +3: total is 5",
+        "After +5: total is 10"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "Add each value in turn, writing the running total. The last value, 10, is the sum."
+    },
+    {
+      "id": "u48l03e03",
+      "type": "multipleChoice",
+      "prompt": "total = total + i for i in range(1, 4) (total starts 0). i takes 1,2,3. Final total?",
+      "options": [
+        "6",
+        "3",
+        "4",
+        "7"
+      ],
+      "answer": 0,
+      "explanation": "0+1=1, +2=3, +3=6. The sum of 1,2,3 is 6."
+    },
+    {
+      "id": "u48l03e04",
+      "type": "matchPairs",
+      "prompt": "Summing 1,2,3,4 with total starting 0. Match each step to the running total.",
+      "pairs": [
+        {
+          "left": "after +1",
+          "right": "1"
+        },
+        {
+          "left": "after +2",
+          "right": "3"
+        },
+        {
+          "left": "after +3",
+          "right": "6"
+        },
+        {
+          "left": "after +4",
+          "right": "10"
+        }
+      ],
+      "explanation": "Each add builds on the last. 1,3,6,10 is the running total. The sum of 1..4 is 10."
+    },
+    {
+      "id": "u48l03e05",
+      "type": "trueFalse",
+      "prompt": "An accumulator adds the current VALUE, while a counter usually adds just 1.",
+      "answer": true,
+      "explanation": "True. The accumulator grows by the value each pass; the counter grows by 1. Different jobs."
+    },
+    {
+      "id": "u48l03e06",
+      "type": "multipleChoice",
+      "prompt": "Add only the even values among 2,3,4 to a total that starts at 0. Final total?",
+      "options": [
+        "6",
+        "9",
+        "2",
+        "4"
+      ],
+      "answer": 0,
+      "explanation": "Evens are 2 and 4: 0+2=2, +4=6. The odd 3 is skipped. Trace only the acting passes."
+    },
+    {
+      "id": "u48l03e07",
+      "type": "multipleChoice",
+      "prompt": "Why must an accumulator start at 0 (not be left unset)?",
+      "options": [
+        "so the first add has a value to build on",
+        "to make it even",
+        "to count the passes",
+        "it must start at 1"
+      ],
+      "answer": 0,
+      "explanation": "Starting at 0 gives the first total = total + value something to add to. An unset total has no base."
+    },
+    {
+      "id": "u48l03e08",
+      "type": "orderBlocks",
+      "prompt": "Trace adding 5, then 10, to total (starts 0).",
+      "blocks": [
+        "Start: total is 0",
+        "After +5: total is 5",
+        "After +10: total is 15"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "0, then 5, then 15. The running total climbs with each value added."
+    },
+    {
+      "id": "u48l03e09",
+      "type": "multipleChoice",
+      "prompt": "If you want an AVERAGE later, which two traced values do you need at the end?",
+      "options": [
+        "the total (accumulator) and the count (counter)",
+        "only the total",
+        "only the count",
+        "the loop variable only"
+      ],
+      "answer": 0,
+      "explanation": "An average is total divided by count, so you trace both an accumulator and a counter."
+    },
+    {
+      "id": "u48l03e10",
+      "type": "trueFalse",
+      "prompt": "Tracing a running total means writing total after each add and reading the last one as the sum.",
+      "answer": true,
+      "explanation": "True. The accumulator's final value is the sum. Tracing proves it before you trust the code."
+    }
+  ]
+}

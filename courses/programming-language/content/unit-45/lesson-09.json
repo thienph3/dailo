@@ -1,0 +1,131 @@
+{
+  "unitId": "u45",
+  "lessonId": "u45l09",
+  "title": "Fix the broken loop",
+  "idea": "Diagnose why a loop never stops or stops wrong, and repair it.",
+  "exercises": [
+    {
+      "type": "multipleChoice",
+      "prompt": "This should count 1 to 5 but never stops. What's missing?\n\ni = 1\nwhile i <= 5:\n    print(i)",
+      "options": [
+        "The update line i = i + 1",
+        "Another print",
+        "A bigger number",
+        "input()"
+      ],
+      "answer": 0,
+      "explanation": "With no update, i stays 1 and i <= 5 is always true. Add i = i + 1 so it reaches 6 and stops.",
+      "id": "u45l09e01"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "This should count down 5 to 1 but runs forever. What's the fix?\n\nn = 5\nwhile n >= 1:\n    print(n)\n    n = n + 1",
+      "options": [
+        "Change n = n + 1 to n = n - 1",
+        "Change >= to <=",
+        "Remove the print",
+        "Start n at 0"
+      ],
+      "answer": 0,
+      "explanation": "To reach the stop (below 1), n must shrink. n = n + 1 grows it away from the stop; n = n - 1 fixes it.",
+      "id": "u45l09e02"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "A loop that stops but prints one too many times usually has an off-by-one in its condition.",
+      "answer": true,
+      "explanation": "True. Using <= where you meant <, or the wrong start, adds one extra pass. Check the boundary.",
+      "id": "u45l09e03"
+    },
+    {
+      "type": "orderBlocks",
+      "prompt": "Repair: arrange these into a loop that prints 1, 2, 3 and stops.",
+      "blocks": [
+        "i = 1",
+        "while i <= 3:",
+        "    print(i)",
+        "    i = i + 1"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "Setup, condition, body, update. The update i = i + 1 is the line that makes it stop after 3.",
+      "id": "u45l09e04"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "This prints 0 through 5 (six numbers) but should print five. Fix?\n\ni = 0\nwhile i <= 5:\n    print(i)\n    i = i + 1",
+      "options": [
+        "Use while i < 5, or start at i = 1",
+        "Add i = i + 2",
+        "Remove the update",
+        "Change print"
+      ],
+      "answer": 0,
+      "explanation": "0..5 is six numbers. i < 5 gives 0..4, or starting at 1 gives 1..5 -- either way, five numbers.",
+      "id": "u45l09e05"
+    },
+    {
+      "type": "fillBlank",
+      "prompt": "Fix the update so this reaches the stop:\n\ni = 0\nwhile i < 10:\n    print(i)\n    i = i ____ 2",
+      "answer": "+",
+      "acceptable": [
+        "+"
+      ],
+      "explanation": "i must grow toward 10, so the update adds: i = i + 2 gives 0,2,4,6,8 then stops at 10.",
+      "id": "u45l09e06"
+    },
+    {
+      "type": "multiSelect",
+      "prompt": "Which fixes could stop this infinite loop?\n\ni = 1\nwhile i < 4:\n    print(i)",
+      "options": [
+        "Add i = i + 1 inside the loop",
+        "Change the condition to i > 4 (false at start)",
+        "Leave it as is",
+        "Print more"
+      ],
+      "answer": [
+        0,
+        1
+      ],
+      "explanation": "Adding an update makes progress to the stop. Making the condition start false means zero passes. Both halt it; leaving it as is does not.",
+      "id": "u45l09e07"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "A loop stops immediately and prints nothing, but you expected output. Likely cause?",
+      "options": [
+        "The condition was already false at the start",
+        "The update is too big",
+        "The print is missing",
+        "range is wrong"
+      ],
+      "answer": 0,
+      "explanation": "A while that prints nothing checked its condition first and found it false -- so the body never ran.",
+      "id": "u45l09e08"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Reading a loop as setup / condition / body / update makes the bug easier to find.",
+      "answer": true,
+      "explanation": "True. Naming the parts shows which one is missing or wrong -- usually the update or the boundary.",
+      "id": "u45l09e09"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "The repair routine for a stuck loop is:",
+      "options": [
+        "Find the update, confirm it moves toward the stop, then trace a few passes",
+        "Add more numbers",
+        "Delete the condition",
+        "Run it longer and hope"
+      ],
+      "answer": 0,
+      "explanation": "Check the update makes progress, fix the boundary if the count is off, and trace small values to confirm.",
+      "id": "u45l09e10"
+    }
+  ]
+}

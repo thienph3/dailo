@@ -1,0 +1,130 @@
+{
+  "unitId": "u76",
+  "lessonId": "u76l05",
+  "title": "Composing three in a row",
+  "idea": "Composing functions: chain three sub-plans, resolving inside-out. Longer chains are just the same rule applied again.",
+  "exercises": [
+    {
+      "id": "u76l05e01",
+      "type": "multipleChoice",
+      "prompt": "Read:\n\ndef double(n):\n    return n * 2\n\ndef add_one(n):\n    return n + 1\n\nprint(double(add_one(double(3))))\n\nWhich runs FIRST?",
+      "options": [
+        "The innermost double(3)",
+        "The outermost double",
+        "add_one",
+        "print"
+      ],
+      "answer": 0,
+      "explanation": "Always the innermost first: double(3) -> 6. Then work outward."
+    },
+    {
+      "id": "u76l05e02",
+      "type": "orderBlocks",
+      "prompt": "Trace double(add_one(double(3))) step by step. Put the steps in order.",
+      "blocks": [
+        "double(3) returns 6",
+        "add_one(6) returns 7",
+        "double(7) returns 14"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Inner double(3)=6, then add_one(6)=7, then outer double(7)=14. Inside-out, three times."
+    },
+    {
+      "id": "u76l05e03",
+      "type": "multipleChoice",
+      "prompt": "So what prints?\n\nprint(double(add_one(double(3))))",
+      "options": [
+        "14",
+        "7",
+        "6",
+        "12"
+      ],
+      "answer": 0,
+      "explanation": "double(3)=6, add_one(6)=7, double(7)=14. The final value is 14."
+    },
+    {
+      "id": "u76l05e04",
+      "type": "trueFalse",
+      "prompt": "A longer chain uses the SAME inside-out rule — just applied more times.",
+      "answer": true,
+      "explanation": "Yes. Two calls or five, you resolve the innermost first each time. No new rule, just more steps."
+    },
+    {
+      "id": "u76l05e05",
+      "type": "multipleChoice",
+      "prompt": "Trace:\n\ndef triple(n):\n    return n * 3\n\nprint(triple(triple(triple(1))))",
+      "options": [
+        "27",
+        "9",
+        "3",
+        "1"
+      ],
+      "answer": 0,
+      "explanation": "triple(1)=3, triple(3)=9, triple(9)=27. Each layer multiplies by 3, inside-out."
+    },
+    {
+      "id": "u76l05e06",
+      "type": "fillBlank",
+      "prompt": "Trace: for add_one(double(add_one(2))), the innermost add_one(2) becomes ____ first.\n\ndef add_one(n):\n    return n + 1",
+      "answer": "3",
+      "acceptable": ["3"],
+      "explanation": "add_one(2) is 3. Replace it, then continue: double(3)=6, add_one(6)=7."
+    },
+    {
+      "id": "u76l05e07",
+      "type": "multipleChoice",
+      "prompt": "Finish that trace: add_one(double(add_one(2))) equals...",
+      "options": [
+        "7",
+        "6",
+        "5",
+        "3"
+      ],
+      "answer": 0,
+      "explanation": "add_one(2)=3, double(3)=6, add_one(6)=7. Inside-out gives 7."
+    },
+    {
+      "id": "u76l05e08",
+      "type": "multipleChoice",
+      "prompt": "Why keep each sub-plan small even when chaining several?",
+      "options": [
+        "Small pieces are easy to reuse and combine in different orders",
+        "big pieces run faster",
+        "chaining needs big pieces",
+        "no reason"
+      ],
+      "answer": 0,
+      "explanation": "Small, single-job sub-plans snap together in many ways. That's the power of composing."
+    },
+    {
+      "id": "u76l05e09",
+      "type": "multipleChoice",
+      "prompt": "REVIEW: a long chain can also be written with middle variables. That is...",
+      "options": [
+        "allowed and often clearer than deep nesting",
+        "never allowed",
+        "slower and wrong",
+        "the same as printing"
+      ],
+      "answer": 0,
+      "explanation": "Deep nesting can get hard to read. Named middle steps show each stage — same result, clearer."
+    },
+    {
+      "id": "u76l05e10",
+      "type": "multipleChoice",
+      "prompt": "The idea of this lesson:",
+      "options": [
+        "Chaining three (or more) sub-plans uses the same inside-out rule",
+        "long chains need a new rule",
+        "only two can chain",
+        "order doesn't matter in long chains"
+      ],
+      "answer": 0,
+      "explanation": "Resolve innermost first, repeat outward. The rule scales to any number of composed calls."
+    }
+  ]
+}

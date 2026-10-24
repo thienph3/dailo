@@ -1,0 +1,128 @@
+{
+  "unitId": "u52",
+  "lessonId": "u52l01",
+  "title": "Getting one value out: nums[0]",
+  "idea": "To pick a single value out of a list by its position, use square brackets with a number: nums[0] gives the FIRST value. Positions start at 0.",
+  "exercises": [
+    {
+      "id": "u52l01e01",
+      "type": "multipleChoice",
+      "prompt": "You have nums = [3, 7, 2]. To pull out ONE value by its position, you write the list name and a number in square brackets. Which gets the first value?",
+      "options": [
+        "nums[0]",
+        "nums(0)",
+        "nums.0",
+        "nums{0}"
+      ],
+      "answer": 0,
+      "explanation": "Square brackets after the name pick a value by position: nums[0]. The number inside is the position, and the first position is 0."
+    },
+    {
+      "id": "u52l01e02",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nnums = [3, 7, 2]\nprint(nums[0])",
+      "options": [
+        "3",
+        "7",
+        "2",
+        "[3, 7, 2]"
+      ],
+      "answer": 0,
+      "explanation": "Position 0 is the FIRST value, which is 3. Indexing gives you one value, not the whole list."
+    },
+    {
+      "id": "u52l01e03",
+      "type": "trueFalse",
+      "prompt": "In a list, the first value is at position 0, not position 1.",
+      "answer": true,
+      "explanation": "Yes — this surprises everyone at first. Counting starts at 0, so the first value lives at index 0."
+    },
+    {
+      "id": "u52l01e04",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nnums = [3, 7, 2]\nprint(nums[1])",
+      "options": [
+        "7",
+        "3",
+        "2",
+        "1"
+      ],
+      "answer": 0,
+      "explanation": "Position 0 is 3, position 1 is 7. So nums[1] gives the SECOND value, 7."
+    },
+    {
+      "id": "u52l01e05",
+      "type": "matchPairs",
+      "prompt": "For nums = [3, 7, 2], match each index to the value it gives.",
+      "pairs": [
+        {
+          "left": "nums[0]",
+          "right": "3"
+        },
+        {
+          "left": "nums[1]",
+          "right": "7"
+        },
+        {
+          "left": "nums[2]",
+          "right": "2"
+        }
+      ],
+      "explanation": "Positions go 0, 1, 2 for a three-value list. The index picks out the value sitting at that position."
+    },
+    {
+      "id": "u52l01e06",
+      "type": "fillBlank",
+      "prompt": "Complete the line to print the first value of nums:\n\nnums = [10, 20, 30]\nprint(nums[____])",
+      "answer": "0",
+      "acceptable": ["0"],
+      "explanation": "The first value sits at index 0, so nums[0] gives 10. Remember: counting starts at zero."
+    },
+    {
+      "id": "u52l01e07",
+      "type": "multipleChoice",
+      "prompt": "What does indexing like nums[1] GIVE you?",
+      "options": [
+        "A single value from the list",
+        "The whole list",
+        "How many values the list has",
+        "A new empty list"
+      ],
+      "answer": 0,
+      "explanation": "Indexing reaches in and pulls out one value — the one at that position. The rest of the list stays untouched."
+    },
+    {
+      "id": "u52l01e08",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nprices = [5, 8, 2]\nprint(prices[2])",
+      "options": [
+        "2",
+        "8",
+        "5",
+        "3"
+      ],
+      "answer": 0,
+      "explanation": "Positions: 0 is 5, 1 is 8, 2 is 2. So prices[2] gives the value 2, the third one."
+    },
+    {
+      "id": "u52l01e09",
+      "type": "trueFalse",
+      "prompt": "nums[0] and nums mean the same thing.",
+      "answer": false,
+      "explanation": "No. nums is the whole list; nums[0] is just the one value at position 0. The brackets with a number pick a single item."
+    },
+    {
+      "id": "u52l01e10",
+      "type": "multipleChoice",
+      "prompt": "scores = [90, 85, 70]. Which line prints the SECOND score, 85?",
+      "options": [
+        "print(scores[1])",
+        "print(scores[2])",
+        "print(scores[0])",
+        "print(scores)"
+      ],
+      "answer": 0,
+      "explanation": "The second value sits at index 1 (because the first is index 0). So scores[1] is 85. You just indexed a list on purpose!"
+    }
+  ]
+}

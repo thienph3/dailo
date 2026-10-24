@@ -1,0 +1,138 @@
+{
+  "unitId": "u25",
+  "lessonId": "u25l10",
+  "title": "Review: several outcomes with elif",
+  "idea": "Consolidate elif: order, boundaries, the leftover else, and choosing branch count. Review-leaning final lesson, with earlier-unit recall.",
+  "exercises": [
+    {
+      "id": "u25l10e01",
+      "type": "multipleChoice",
+      "prompt": "What does this print?\n\nn = 88\nif n >= 90:\n    print(\"A\")\nelif n >= 80:\n    print(\"B\")\nelse:\n    print(\"C\")",
+      "options": [
+        "B",
+        "A",
+        "C",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "88 fails >= 90 but passes >= 80, so 'B' prints. The first match wins."
+    },
+    {
+      "id": "u25l10e02",
+      "type": "trueFalse",
+      "prompt": "In an if/elif/else chain, at most one branch runs.",
+      "answer": true,
+      "explanation": "Review: the chain stops at the first True, so exactly one (or zero without else) branch runs."
+    },
+    {
+      "id": "u25l10e03",
+      "type": "multipleChoice",
+      "prompt": "Recall from Unit 24: before 'average = total / count', you should...",
+      "options": [
+        "guard against count being 0",
+        "make total bigger",
+        "add an elif",
+        "print count twice"
+      ],
+      "answer": 0,
+      "explanation": "The edge-case habit carries forward: guard the zero count before dividing, even inside a chain."
+    },
+    {
+      "id": "u25l10e04",
+      "type": "multipleChoice",
+      "prompt": "For number bands, which ordering usually avoids a loose test stealing matches?",
+      "options": [
+        "strictest (highest) test first",
+        "loosest first",
+        "random order",
+        "else first"
+      ],
+      "answer": 0,
+      "explanation": "Strictest-first keeps a broad test from grabbing values that belong in a higher band."
+    },
+    {
+      "id": "u25l10e05",
+      "type": "multipleChoice",
+      "prompt": "Recall: '18 or older' is which comparison?",
+      "options": [
+        "age >= 18",
+        "age > 18",
+        "age < 18",
+        "age == 18"
+      ],
+      "answer": 0,
+      "explanation": "Review of boundaries: >= includes 18 itself, matching 'or older'."
+    },
+    {
+      "id": "u25l10e06",
+      "type": "orderBlocks",
+      "prompt": "Arrange a correct three-bucket sign chain (positive / negative / zero).",
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "blocks": [
+        "if n > 0:",
+        "    print(\"Positive\")",
+        "elif n < 0:",
+        "    print(\"Negative\")",
+        "else:",
+        "    print(\"Zero\")"
+      ],
+      "explanation": "if for positive, elif for negative, else for the leftover zero. Three outcomes, three paths."
+    },
+    {
+      "id": "u25l10e07",
+      "type": "multipleChoice",
+      "prompt": "What does this print?\n\nn = 0\nif n > 0:\n    print(\"Positive\")\nelif n < 0:\n    print(\"Negative\")\nelse:\n    print(\"Zero\")",
+      "options": [
+        "Zero",
+        "Positive",
+        "Negative",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "0 is neither positive nor negative, so the else catches it: 'Zero'."
+    },
+    {
+      "id": "u25l10e08",
+      "type": "fillBlank",
+      "prompt": "Fill the middle-path keyword:\n\nif size >= 100:\n    print(\"Large\")\n____ size >= 50:\n    print(\"Medium\")\nelse:\n    print(\"Small\")",
+      "answer": "elif",
+      "acceptable": [
+        "elif"
+      ],
+      "explanation": "elif adds the Medium path, reached only when Large was False."
+    },
+    {
+      "id": "u25l10e09",
+      "type": "multipleChoice",
+      "prompt": "How many paths does a four-outcome classifier need?",
+      "options": [
+        "Four: if + two elifs + else",
+        "Two",
+        "One",
+        "Eight"
+      ],
+      "answer": 0,
+      "explanation": "One path per outcome. Four outcomes mean an if, two elifs, and an else."
+    },
+    {
+      "id": "u25l10e10",
+      "type": "multipleChoice",
+      "prompt": "The big win of elif is...",
+      "options": [
+        "solving 'sort into one of several buckets' problems cleanly",
+        "making code longer",
+        "removing the need for if",
+        "looping forever"
+      ],
+      "answer": 0,
+      "explanation": "elif turns a tangle of ifs into one clear chain that drops a value into exactly one bucket."
+    }
+  ]
+}

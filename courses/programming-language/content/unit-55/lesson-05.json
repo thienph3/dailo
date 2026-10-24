@@ -1,0 +1,126 @@
+{
+  "unitId": "u55",
+  "lessonId": "u55l05",
+  "title": "Looping words, not just numbers",
+  "idea": "A list can hold strings; for-item-in-list visits each word the same way. Reviews strings and f-strings.",
+  "exercises": [
+    {
+      "id": "u55l05e01",
+      "type": "multipleChoice",
+      "prompt": "names = [\"Ada\", \"Lin\", \"Sam\"]\nfor name in names:\n    print(name)\n\nWhat is printed?",
+      "options": [
+        "Ada, Lin, Sam — each on its own line",
+        "the whole list in brackets",
+        "Just Ada",
+        "name three times"
+      ],
+      "answer": 0,
+      "explanation": "The loop works the same for words: each string is handed to 'name' in turn and printed."
+    },
+    {
+      "id": "u55l05e02",
+      "type": "multipleChoice",
+      "prompt": "names = [\"Ada\", \"Lin\"]\nfor name in names:\n    print(f\"Hi {name}!\")\n\nWhat shows?",
+      "options": [
+        "Hi Ada!  then  Hi Lin!",
+        "Hi name! twice",
+        "Ada Lin",
+        "Hi {name}! twice"
+      ],
+      "answer": 0,
+      "explanation": "The f-string drops each current word in for {name}, greeting every person."
+    },
+    {
+      "id": "u55l05e03",
+      "type": "trueFalse",
+      "prompt": "The 'for item in list' tool only works on lists of numbers.",
+      "answer": false,
+      "explanation": "It visits each value whatever the type — numbers, words, anything in the list."
+    },
+    {
+      "id": "u55l05e04",
+      "type": "orderBlocks",
+      "prompt": "Arrange the code to greet each guest in a list of names.",
+      "blocks": [
+        "    print(f\"Welcome, {guest}\")",
+        "for guest in guests:",
+        "guests = [\"Mo\", \"Jo\"]"
+      ],
+      "answer": [
+        2,
+        1,
+        0
+      ],
+      "explanation": "List of names, loop header, indented greeting. Prints 'Welcome, Mo' then 'Welcome, Jo'."
+    },
+    {
+      "id": "u55l05e05",
+      "type": "fillBlank",
+      "prompt": "Greet each name. Fill the keyword:\n\nnames = [\"Ada\", \"Lin\"]\nfor name ____ names:\n    print(name)",
+      "answer": "in",
+      "acceptable": [
+        "in"
+      ],
+      "explanation": "Same shape as always: 'for name in names:'. The 'in' keyword connects the variable to the list."
+    },
+    {
+      "id": "u55l05e06",
+      "type": "multipleChoice",
+      "prompt": "words = [\"cat\", \"dog\", \"fish\"]\nfor word in words:\n    if word == \"dog\":\n        print(\"found the dog\")\n\nWhat prints?",
+      "options": [
+        "found the dog (once)",
+        "found the dog (three times)",
+        "cat dog fish",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "String comparison with == checks each word; only 'dog' matches, so the message prints once."
+    },
+    {
+      "id": "u55l05e07",
+      "type": "multipleChoice",
+      "prompt": "colors = [\"red\", \"blue\"]\nfor color in colors:\n    print(\"Color:\", color)\n\nWhich line shows the loop visiting the SECOND item?",
+      "options": [
+        "Color: blue",
+        "Color: red",
+        "Color: color",
+        "Color: colors"
+      ],
+      "answer": 0,
+      "explanation": "Second pass holds 'blue', so the line is 'Color: blue'."
+    },
+    {
+      "id": "u55l05e08",
+      "type": "trueFalse",
+      "prompt": "A loop variable can hold a word on one pass and the next word on the next pass.",
+      "answer": true,
+      "explanation": "Each pass it takes the next value from the list — words here — one at a time."
+    },
+    {
+      "id": "u55l05e09",
+      "type": "multipleChoice",
+      "prompt": "pets = [\"cat\", \"dog\"]\nfor pet in pets:\n    print(pet + \"!\")\n\nWhat shows?",
+      "options": [
+        "cat!  then  dog!",
+        "catdog!",
+        "pet! twice",
+        "cat dog"
+      ],
+      "answer": 0,
+      "explanation": "Concatenation glues '!' to each word: 'cat!' then 'dog!'."
+    },
+    {
+      "id": "u55l05e10",
+      "type": "multipleChoice",
+      "prompt": "Big idea so far: 'for item in list' lets you...",
+      "options": [
+        "Visit each value and act on it, numbers or words",
+        "Only add numbers",
+        "Only count",
+        "Only sort words"
+      ],
+      "answer": 0,
+      "explanation": "It's the general 'do something to every value' tool — the type of the values doesn't matter."
+    }
+  ]
+}

@@ -1,0 +1,132 @@
+{
+  "unitId": "u95",
+  "lessonId": "u95l02",
+  "title": "Better names make code read itself",
+  "idea": "MEET (thinking): a variable's name should say what it holds. Good names turn code into a sentence you can read. Renaming never changes behavior.",
+  "exercises": [
+    {
+      "id": "u95l02e01",
+      "type": "multipleChoice",
+      "prompt": "A variable holds the price of a bus ticket. Which name reads best?",
+      "options": [
+        "ticket_price",
+        "x",
+        "a2",
+        "thing"
+      ],
+      "answer": 0,
+      "explanation": "ticket_price says exactly what it holds. A reader never has to guess. x, a2, and thing tell you nothing."
+    },
+    {
+      "id": "u95l02e02",
+      "type": "multipleChoice",
+      "prompt": "Predict the output of each version:\n\nVersion A:\nx = 3\ny = 5\nz = x + y\nprint(z)\n\nVersion B:\npen = 3\nnotebook = 5\ntotal = pen + notebook\nprint(total)",
+      "options": [
+        "Both print 8 - only the NAMES changed",
+        "A prints 8, B prints something else",
+        "B prints an error",
+        "A prints nothing"
+      ],
+      "answer": 0,
+      "explanation": "Renaming doesn't touch the math. Both print 8. Version B just READS better - you can tell it's a pen plus a notebook."
+    },
+    {
+      "id": "u95l02e03",
+      "type": "trueFalse",
+      "prompt": "Changing a variable's name (everywhere it appears) can change what the program computes.",
+      "answer": false,
+      "explanation": "A name is just a label. As long as you rename EVERY use, the computer does the exact same work. The answer is unchanged."
+    },
+    {
+      "id": "u95l02e04",
+      "type": "multipleChoice",
+      "prompt": "A problem mentions two prices. Someone wrote:\n\nprice = 3\nprice2 = 5\n\nWhy is 'price' and 'price2' a weak choice?",
+      "options": [
+        "The names don't say WHICH thing each price is for",
+        "You can't have two variables",
+        "Numbers can't be stored in variables",
+        "price2 is not a legal name"
+      ],
+      "answer": 0,
+      "explanation": "price2 just means 'another price.' Names like pen_price and notebook_price say which is which - the code reads like the problem."
+    },
+    {
+      "id": "u95l02e05",
+      "type": "matchPairs",
+      "prompt": "Match each vague name to a clearer one for a shopping total.",
+      "pairs": [
+        {
+          "left": "n",
+          "right": "item_count"
+        },
+        {
+          "left": "p",
+          "right": "item_price"
+        },
+        {
+          "left": "t",
+          "right": "total"
+        }
+      ],
+      "explanation": "Short names save a few keystrokes but cost every reader (including you) time later. Spell it out."
+    },
+    {
+      "id": "u95l02e06",
+      "type": "trueFalse",
+      "prompt": "A result variable like 'total' or 'average' is a perfectly clear name as-is.",
+      "answer": true,
+      "explanation": "Right. When there's one obvious result, total / average / area read fine. You mainly need extra care when there are SEVERAL similar values."
+    },
+    {
+      "id": "u95l02e07",
+      "type": "multipleChoice",
+      "prompt": "Which rename is a GOOD refactor?",
+      "options": [
+        "Rename c to apples everywhere it appears, so the count reads clearly",
+        "Rename c to apples in one place but leave the other uses as c",
+        "Rename c to a different number",
+        "Rename c to print"
+      ],
+      "answer": 0,
+      "explanation": "Rename EVERY use together. Half-renaming breaks the code (two names for one thing). And never reuse a built-in word like print as a variable name."
+    },
+    {
+      "id": "u95l02e08",
+      "type": "multipleChoice",
+      "prompt": "You see: m = 60. The problem is about minutes in an hour. A clearer name is...",
+      "options": [
+        "minutes_per_hour",
+        "m60",
+        "num",
+        "value"
+      ],
+      "answer": 0,
+      "explanation": "minutes_per_hour tells the reader both the amount AND its meaning. Later, '60' in the code stops being a mystery number."
+    },
+    {
+      "id": "u95l02e09",
+      "type": "orderBlocks",
+      "prompt": "Order the steps to safely rename a variable.",
+      "blocks": [
+        "Pick a clearer name that says what it holds",
+        "Change the name at EVERY place it appears",
+        "Re-run and confirm the output is unchanged"
+      ],
+      "answer": [0, 1, 2],
+      "explanation": "Choose a good name, apply it everywhere, then re-check. The output should match exactly - that proves the rename was safe."
+    },
+    {
+      "id": "u95l02e10",
+      "type": "multipleChoice",
+      "prompt": "Why do clear names count as 'making a solution clearer' even though the computer ignores them?",
+      "options": [
+        "People read code far more often than they write it - names help the reader",
+        "The computer reads names aloud",
+        "Longer names run faster",
+        "Names change the math"
+      ],
+      "answer": 0,
+      "explanation": "Code is read many times after it's written. Names are a gift to the next reader, who is usually future you."
+    }
+  ]
+}

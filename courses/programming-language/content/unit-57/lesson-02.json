@@ -1,0 +1,143 @@
+{
+  "unitId": "u57",
+  "lessonId": "u57l02",
+  "title": "Meet: total = total + value",
+  "idea": "Introduce the accumulator-over-a-list pattern with visible output: start at 0, add each value, print the total.",
+  "exercises": [
+    {
+      "id": "u57l02e01",
+      "type": "multipleChoice",
+      "prompt": "Here is the tool:\n\nnums = [3, 5, 2]\ntotal = 0\nfor n in nums:\n    total = total + n\nprint(total)\n\nWhat prints?",
+      "options": [
+        "10",
+        "3",
+        "[3, 5, 2]",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "total starts 0, then grows 3, 8, 10. After the loop it prints 10."
+    },
+    {
+      "id": "u57l02e02",
+      "type": "multipleChoice",
+      "prompt": "What does 'total = total + n' do each pass?",
+      "options": [
+        "Adds the current value n into total",
+        "Replaces total with n",
+        "Adds 1 to total",
+        "Prints total"
+      ],
+      "answer": 0,
+      "explanation": "It takes the old total, adds the current value, and stores the result back in total."
+    },
+    {
+      "id": "u57l02e03",
+      "type": "multipleChoice",
+      "prompt": "Why is 'total = 0' written BEFORE the loop, not inside it?",
+      "options": [
+        "So it starts at 0 once; inside, it would reset every pass",
+        "It must be inside",
+        "0 is wrong",
+        "Order doesn't matter"
+      ],
+      "answer": 0,
+      "explanation": "Setting it to 0 inside the loop would wipe the running total each pass. Initialise once, before the loop."
+    },
+    {
+      "id": "u57l02e04",
+      "type": "fillBlank",
+      "prompt": "Fill the blank to add each value into the total:\n\ntotal = 0\nfor n in nums:\n    total = total ____ n",
+      "answer": "+",
+      "acceptable": [
+        "+"
+      ],
+      "explanation": "Adding the value uses +: total = total + n."
+    },
+    {
+      "id": "u57l02e05",
+      "type": "orderBlocks",
+      "prompt": "Arrange the lines to total a list and print the result.",
+      "blocks": [
+        "print(total)",
+        "    total = total + n",
+        "total = 0",
+        "for n in nums:",
+        "nums = [10, 20]"
+      ],
+      "answer": [
+        4,
+        2,
+        3,
+        1,
+        0
+      ],
+      "explanation": "List, start total at 0, loop, add each value, then print. Prints 30."
+    },
+    {
+      "id": "u57l02e06",
+      "type": "multipleChoice",
+      "prompt": "nums = [10, 20]\ntotal = 0\nfor n in nums:\n    total = total + n\nprint(total)\n\nWhat is the value of total after the FIRST pass?",
+      "options": [
+        "10",
+        "30",
+        "0",
+        "20"
+      ],
+      "answer": 0,
+      "explanation": "First pass adds 10 to 0, giving 10. The second pass will make it 30."
+    },
+    {
+      "id": "u57l02e07",
+      "type": "trueFalse",
+      "prompt": "The print(total) is placed AFTER the loop so it shows the final total, not a partial one.",
+      "answer": true,
+      "explanation": "Printing after the loop shows the total once, fully added up. Inside, it would print every partial sum."
+    },
+    {
+      "id": "u57l02e08",
+      "type": "multipleChoice",
+      "prompt": "nums = []\ntotal = 0\nfor n in nums:\n    total = total + n\nprint(total)\n\nWhat prints?",
+      "options": [
+        "0",
+        "nothing",
+        "an error",
+        "1"
+      ],
+      "answer": 0,
+      "explanation": "Empty list: the body never runs, so total stays 0. The start value is the empty-list answer."
+    },
+    {
+      "id": "u57l02e09",
+      "type": "multipleChoice",
+      "prompt": "The shortcut 'total += n' means the same as which line?",
+      "options": [
+        "total = total + n",
+        "total = n",
+        "total = total + 1",
+        "n = n + total"
+      ],
+      "answer": 0,
+      "explanation": "+= is a handy shorthand for 'add into'. total += n is exactly total = total + n."
+    },
+    {
+      "id": "u57l02e10",
+      "type": "tapTokens",
+      "prompt": "Build the accumulate line that adds the current value into total. (Tap in order.)",
+      "tokens": [
+        "total",
+        "=",
+        "total",
+        "+",
+        "n"
+      ],
+      "answer": [
+        "total",
+        "=",
+        "total",
+        "+",
+        "n"
+      ],
+      "explanation": "total = total + n — old total plus the current value, stored back in total."
+    }
+  ]
+}

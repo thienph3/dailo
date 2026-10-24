@@ -1,0 +1,127 @@
+{
+  "unitId": "u30",
+  "lessonId": "u30l01",
+  "title": "Meet input(): ask the user",
+  "idea": "input() pauses the program, lets the user type, and hands back what they typed as a string. Meet it with visible behavior.",
+  "exercises": [
+    {
+      "id": "u30l01e01",
+      "type": "multipleChoice",
+      "prompt": "What does input() do?",
+      "options": [
+        "Pauses and waits for the user to type something, then gives it back",
+        "Prints a fixed message",
+        "Adds two numbers",
+        "Ends the program"
+      ],
+      "answer": 0,
+      "explanation": "input() is how a program ASKS. It waits for the user to type and press Enter, then hands the typed text back."
+    },
+    {
+      "id": "u30l01e02",
+      "type": "multipleChoice",
+      "prompt": "Where does the typed answer go in this line?\n\nname = input(\"Your name: \")",
+      "options": [
+        "Into the variable name",
+        "It is lost",
+        "Into the prompt text",
+        "Onto the screen only"
+      ],
+      "answer": 0,
+      "explanation": "Whatever the user types is stored in name, so a later line can use it. input() gives back a value; = remembers it."
+    },
+    {
+      "id": "u30l01e03",
+      "type": "multipleChoice",
+      "prompt": "What is the text in the brackets, as in input(\"Your name: \")?",
+      "options": [
+        "A prompt shown to the user before they type",
+        "The answer",
+        "A variable name",
+        "Ignored"
+      ],
+      "answer": 0,
+      "explanation": "The string inside input() is the prompt - it tells the user what to type. It is displayed first, then the program waits."
+    },
+    {
+      "id": "u30l01e04",
+      "type": "multipleChoice",
+      "prompt": "What TYPE of value does input() always give back?",
+      "options": [
+        "A string (text), even if the user types digits",
+        "Always a number",
+        "A True/False",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "input() always returns text. Even if the user types 5, you get the string \"5\". This matters a lot - next lessons cover it."
+    },
+    {
+      "id": "u30l01e05",
+      "type": "multipleChoice",
+      "prompt": "The user runs this and types Ada:\n\nname = input(\"Your name: \")\nprint(\"Hello \" + name)\n\nWhat appears after they type?",
+      "options": [
+        "Hello Ada",
+        "Hello name",
+        "Hello input",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "name holds \"Ada\", and \"Hello \" + name joins them into \"Hello Ada\". (Concatenation review.)"
+    },
+    {
+      "id": "u30l01e06",
+      "type": "trueFalse",
+      "prompt": "input() makes the program wait until the user presses Enter.",
+      "answer": true,
+      "explanation": "Yes - the program pauses at input() until the user finishes typing and hits Enter. Then it continues with the typed value."
+    },
+    {
+      "id": "u30l01e07",
+      "type": "orderBlocks",
+      "prompt": "Order the steps when this runs:\n\ncity = input(\"City? \")\nprint(\"Nice, \" + city)",
+      "blocks": [
+        "Show the prompt \"City? \"",
+        "Wait for the user to type and press Enter",
+        "Store what they typed in city",
+        "Print \"Nice, \" joined with city"
+      ],
+      "answer": [0, 1, 2, 3],
+      "explanation": "Prompt, wait, store, then use. That is the lifecycle of an input() call."
+    },
+    {
+      "id": "u30l01e08",
+      "type": "multipleChoice",
+      "prompt": "Why is input() powerful compared to a fixed value in the code?",
+      "options": [
+        "The program can react to different answers each time it runs",
+        "It makes the code shorter",
+        "It runs faster",
+        "It never changes"
+      ],
+      "answer": 0,
+      "explanation": "Instead of a value baked in, the program responds to whatever the user types - so it behaves differently for different people."
+    },
+    {
+      "id": "u30l01e09",
+      "type": "fillBlank",
+      "prompt": "Fill the tool that asks the user for text:\n\nanswer = ____(\"Type yes or no: \")",
+      "answer": "input",
+      "acceptable": ["input"],
+      "explanation": "input() shows the prompt, waits, and returns the typed text into answer."
+    },
+    {
+      "id": "u30l01e10",
+      "type": "multipleChoice",
+      "prompt": "The big idea of input():",
+      "options": [
+        "It brings the user's typed answer into the program as a string",
+        "It prints only",
+        "It replaces variables",
+        "It does math"
+      ],
+      "answer": 0,
+      "explanation": "input() is the doorway for user answers. Next, you will branch on those answers to react to them."
+    }
+  ]
+}

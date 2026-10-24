@@ -1,0 +1,133 @@
+{
+  "unitId": "u71",
+  "lessonId": "u71l01",
+  "title": "Writing a sub-plan with def",
+  "idea": "TOOL: 'def name():' writes a named sub-plan. Defining it does NOT run it yet. Visible output only when called (next lesson).",
+  "exercises": [
+    {
+      "id": "u71l01e01",
+      "type": "multipleChoice",
+      "prompt": "To WRITE a named sub-plan in real code, Python uses a special word. Which one?",
+      "options": [
+        "def",
+        "print",
+        "for",
+        "if"
+      ],
+      "answer": 0,
+      "explanation": "'def' starts a definition - it means 'here is a named sub-plan'. This is the new tool of this unit."
+    },
+    {
+      "id": "u71l01e02",
+      "type": "multipleChoice",
+      "prompt": "Look at this definition:\n\ndef greet():\n    print(\"Hi there\")\n\nWhat is the NAME of this sub-plan?",
+      "options": [
+        "greet",
+        "def",
+        "print",
+        "Hi there"
+      ],
+      "answer": 0,
+      "explanation": "The name comes right after 'def'. Here it's 'greet'. The '()' and ':' are part of the def line's shape."
+    },
+    {
+      "id": "u71l01e03",
+      "type": "multipleChoice",
+      "prompt": "In 'def greet():', what are the '()' and ':' doing?",
+      "options": [
+        "They are the required shape of a def line",
+        "They print a message",
+        "They add two numbers",
+        "They are optional decoration"
+      ],
+      "answer": 0,
+      "explanation": "A def line is 'def NAME():' - the parentheses and colon are required punctuation that mark a definition."
+    },
+    {
+      "id": "u71l01e04",
+      "type": "trueFalse",
+      "prompt": "The steps inside a sub-plan are indented underneath the 'def' line.",
+      "answer": true,
+      "explanation": "Yes. Like if and for, the body is indented. The indented lines belong to the sub-plan."
+    },
+    {
+      "id": "u71l01e05",
+      "type": "multipleChoice",
+      "prompt": "This whole program is just:\n\ndef greet():\n    print(\"Hi there\")\n\nWhat does it PRINT when you run it?",
+      "options": [
+        "Nothing",
+        "Hi there",
+        "greet",
+        "def greet"
+      ],
+      "answer": 0,
+      "explanation": "Defining a sub-plan only DESCRIBES it. Nothing is printed until you CALL it. Define is not run."
+    },
+    {
+      "id": "u71l01e06",
+      "type": "trueFalse",
+      "prompt": "Writing 'def greet(): ...' makes 'Hi there' appear on the screen right away.",
+      "answer": false,
+      "explanation": "No. A def only sets the job up. The print inside runs later, when greet is called - not at definition time."
+    },
+    {
+      "id": "u71l01e07",
+      "type": "multipleChoice",
+      "prompt": "This is the exact code idea behind which earlier lesson?",
+      "options": [
+        "'describe the job vs do the job' - def describes it",
+        "a loop",
+        "a list",
+        "a comparison"
+      ],
+      "answer": 0,
+      "explanation": "def is 'describe the job'. It matches the idea you learned: defining sets up, it doesn't do the work yet."
+    },
+    {
+      "id": "u71l01e08",
+      "type": "tapTokens",
+      "prompt": "Tap the tokens to write the FIRST line that defines a sub-plan named greet.",
+      "tokens": [
+        "def",
+        "greet",
+        "(",
+        ")",
+        ":"
+      ],
+      "answer": [
+        "def",
+        "greet",
+        "(",
+        ")",
+        ":"
+      ],
+      "explanation": "A def line is: def, the name, (), then a colon -> 'def greet():'. The body goes indented below it."
+    },
+    {
+      "id": "u71l01e09",
+      "type": "multipleChoice",
+      "prompt": "Why indent the body of a def?",
+      "options": [
+        "So Python knows those lines belong to the sub-plan",
+        "To make it colourful",
+        "It is never needed",
+        "To run it twice"
+      ],
+      "answer": 0,
+      "explanation": "Indentation shows which lines are inside the sub-plan - the same rule you used for if and for bodies."
+    },
+    {
+      "id": "u71l01e10",
+      "type": "multipleChoice",
+      "prompt": "After writing 'def greet(): print(...)', what still needs to happen for the message to show?",
+      "options": [
+        "You must CALL greet",
+        "Nothing - it already showed",
+        "Delete the def",
+        "Add a number"
+      ],
+      "answer": 0,
+      "explanation": "Defining is only half the story. To actually run the steps, you call the sub-plan - that's the next lesson."
+    }
+  ]
+}

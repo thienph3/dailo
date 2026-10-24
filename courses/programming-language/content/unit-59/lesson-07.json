@@ -1,0 +1,144 @@
+{
+  "unitId": "u59",
+  "lessonId": "u59l07",
+  "title": "Writing the max loop",
+  "idea": "TOOL: assemble the best-so-far loop piece by piece. Light code, with predictable results.",
+  "exercises": [
+    {
+      "id": "u59l07e01",
+      "type": "tapTokens",
+      "prompt": "Tap the tokens to set the starting best to the first value of nums.",
+      "answer": [
+        "best",
+        "=",
+        "nums",
+        "[",
+        "0",
+        "]"
+      ],
+      "tokens": [
+        "best",
+        "=",
+        "nums",
+        "[",
+        "0",
+        "]"
+      ],
+      "explanation": "best = nums[0] starts the champion at the first real value so comparisons work even for negatives."
+    },
+    {
+      "id": "u59l07e02",
+      "type": "fillBlank",
+      "prompt": "Write the loop header that visits each value in nums (call the value n):\n\nfor ____ in nums:",
+      "answer": "n",
+      "acceptable": [
+        "n"
+      ],
+      "explanation": "'for n in nums:' takes each value one at a time into n."
+    },
+    {
+      "id": "u59l07e03",
+      "type": "fillBlank",
+      "prompt": "Write the test that is true when n beats the best so far:\n\n    if n ____ best:",
+      "answer": ">",
+      "acceptable": [
+        ">"
+      ],
+      "explanation": "n > best is true exactly when n is bigger, which is when you should replace best."
+    },
+    {
+      "id": "u59l07e04",
+      "type": "fillBlank",
+      "prompt": "Write the line that saves the new winner into best:\n\n        best ____ n",
+      "answer": "=",
+      "acceptable": [
+        "="
+      ],
+      "explanation": "best = n stores the bigger value. (Remember: winner goes INTO best, not the other way round.)"
+    },
+    {
+      "id": "u59l07e05",
+      "type": "orderBlocks",
+      "prompt": "Put the whole max program in order.",
+      "answer": [
+        1,
+        3,
+        2,
+        0,
+        4
+      ],
+      "blocks": [
+        "        best = n",
+        "best = nums[0]",
+        "    if n > best:",
+        "for n in nums:",
+        "print(best)"
+      ],
+      "explanation": "Start best, loop, test, replace on a win, print the final biggest."
+    },
+    {
+      "id": "u59l07e06",
+      "type": "multipleChoice",
+      "prompt": "You assembled the loop for nums = [6, 2, 9, 4]. What prints?",
+      "options": [
+        "9",
+        "6",
+        "4",
+        "21"
+      ],
+      "answer": 0,
+      "explanation": "best climbs 6 -> 9 and nothing beats 9. It prints the maximum, 9."
+    },
+    {
+      "id": "u59l07e07",
+      "type": "tapTokens",
+      "prompt": "Tap the tokens to print the result after the loop.",
+      "answer": [
+        "print",
+        "(",
+        "best",
+        ")"
+      ],
+      "tokens": [
+        "print",
+        "(",
+        "best",
+        ")"
+      ],
+      "explanation": "print(best) shows the biggest value once the loop has finished walking every item."
+    },
+    {
+      "id": "u59l07e08",
+      "type": "multipleChoice",
+      "prompt": "Where must 'best = n' sit so it only runs on a winning value?",
+      "options": [
+        "Indented under the if",
+        "At the same level as the for",
+        "Before the loop",
+        "After the print"
+      ],
+      "answer": 0,
+      "explanation": "Indenting it under the if ties the replacement to the comparison, so it only runs when n is bigger."
+    },
+    {
+      "id": "u59l07e09",
+      "type": "trueFalse",
+      "prompt": "The loop variable name (n, t, s, value) does not change what the code does, as long as you use it consistently.",
+      "answer": true,
+      "explanation": "Any name works; pick one that reads well. Just use the SAME name in the loop header and inside the loop."
+    },
+    {
+      "id": "u59l07e10",
+      "type": "multipleChoice",
+      "prompt": "After you build it, what is the best next step before trusting it?",
+      "options": [
+        "Trace it by hand on a small list and compare to the output",
+        "Delete the comments",
+        "Run it on a million numbers",
+        "Change all the names"
+      ],
+      "answer": 0,
+      "explanation": "Hand-tracing a small list gives you an expected answer to check the code against — the Check habit."
+    }
+  ]
+}

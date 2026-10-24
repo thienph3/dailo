@@ -1,0 +1,147 @@
+{
+  "unitId": "u33",
+  "lessonId": "u33l04",
+  "title": "Fix it: the forgotten int()",
+  "idea": "GUIDED BUG. An age gate compares raw text to a number. Add int() so the comparison is sound.",
+  "problem": "Rule: 'Adult' if age is 18 or more, else 'Minor'. Broken: age = input('Age: ') then if age >= 18.",
+  "exercises": [
+    {
+      "id": "u33l04e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: 'Adult' for 18 or more, else 'Minor'.\n\nWhat is the OUTPUT?",
+      "options": [
+        "'Adult' or 'Minor'",
+        "The age in months",
+        "A name",
+        "Always 'Adult'"
+      ],
+      "answer": 0,
+      "explanation": "One of two labels based on a number comparison. The age must behave as a number."
+    },
+    {
+      "id": "u33l04e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "input() returns what type, even when the user types 18?",
+      "options": [
+        "Text (a string)",
+        "A number",
+        "True/False",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "Text. '18' from input() is a string, not the number 18, which breaks a number comparison."
+    },
+    {
+      "id": "u33l04e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Work it by hand: age typed is 20. The CORRECT answer is?",
+      "options": [
+        "Adult",
+        "Minor",
+        "20",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "20 is 18 or more, so 'Adult'. Check value."
+    },
+    {
+      "id": "u33l04e04",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Why does if age >= 18 misbehave when age is the text '20'?",
+      "options": [
+        "It compares text to a number, which is the wrong kind of comparison",
+        "20 is less than 18",
+        "18 needs quotes",
+        "input is broken"
+      ],
+      "answer": 0,
+      "explanation": "Comparing text to the number 18 is the flaw; text and numbers are different types. int() fixes it."
+    },
+    {
+      "id": "u33l04e05",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Plan the fix: how do we make age a number?",
+      "options": [
+        "age = int(input('Age: '))",
+        "age = input('Age: ') + 0",
+        "age == 18 only",
+        "remove the comparison"
+      ],
+      "answer": 0,
+      "explanation": "Wrap the input in int(): age = int(input('Age: ')). Now >= 18 compares number to number."
+    },
+    {
+      "id": "u33l04e06",
+      "type": "trueFalse",
+      "uepcc": "P",
+      "prompt": "The boundary 18 should count as 'Adult', so the comparison stays >= (not >).",
+      "answer": true,
+      "explanation": "True. '18 or more' includes 18, so >= is correct. We only needed to fix the type, not the boundary."
+    },
+    {
+      "id": "u33l04e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Arrange the FIXED code.",
+      "blocks": [
+        "age = int(input(\"Age: \"))",
+        "if age >= 18:",
+        "    print(\"Adult\")",
+        "else:",
+        "    print(\"Minor\")"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "explanation": "Convert the input with int(), then compare the number to 18."
+    },
+    {
+      "id": "u33l04e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Add the conversion that fixes the type:\n\nage = ____(input(\"Age: \"))\nif age >= 18:\n    print(\"Adult\")\nelse:\n    print(\"Minor\")",
+      "answer": "int",
+      "acceptable": [
+        "int"
+      ],
+      "explanation": "int() turns the typed text into a whole number so the >= comparison works."
+    },
+    {
+      "id": "u33l04e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check with the fix: age typed is 20. What prints?",
+      "options": [
+        "Adult",
+        "Minor",
+        "20",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "int('20') is 20; 20 >= 18 is True -> 'Adult'. Matches the hand answer. Fixed."
+    },
+    {
+      "id": "u33l04e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Re-check the boundary: age typed is 18. What prints?",
+      "options": [
+        "Adult",
+        "Minor",
+        "18",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "int('18') is 18; 18 >= 18 is True -> 'Adult'. The boundary is handled correctly too."
+    }
+  ]
+}

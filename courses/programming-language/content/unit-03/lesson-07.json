@@ -1,0 +1,108 @@
+{
+  "unitId": "u03",
+  "lessonId": "u03l07",
+  "title": "Solve it: a weather report",
+  "idea": "GUIDED PROBLEM. Report three weather facts with a header line, then the facts. Practice choosing the order and counting the output lines.",
+  "problem": "Show a weather report: the header Today, then three facts — sunny, warm, light wind.",
+  "exercises": [
+    {
+      "id": "u03l07e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: Show a header Today, then three facts: sunny, warm, light wind.\n\nHow many lines of output?",
+      "options": ["4", "3", "1", "7"],
+      "answer": 0,
+      "explanation": "Header (1) + three facts (3) = 4 lines. Counting lines up front helps you size the code."
+    },
+    {
+      "id": "u03l07e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "Which line should come first?",
+      "options": ["The header, Today", "sunny", "light wind", "warm"],
+      "answer": 0,
+      "explanation": "A header introduces the report, so it goes on the first line."
+    },
+    {
+      "id": "u03l07e03",
+      "type": "orderBlocks",
+      "uepcc": "E",
+      "prompt": "Example. Order the output by hand: header first, then the three facts as listed.",
+      "blocks": ["Today", "sunny", "warm", "light wind"],
+      "answer": [0, 1, 2, 3],
+      "explanation": "Today, sunny, warm, light wind. Four lines in that order — your check value."
+    },
+    {
+      "id": "u03l07e04",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Plan: what is the shape of the solution?",
+      "options": [
+        "One print for the header, then one print per fact",
+        "One print for everything",
+        "Only print the facts, skip the header",
+        "Add the facts together"
+      ],
+      "answer": 0,
+      "explanation": "Header line plus one line per fact. The plan mirrors the output you drew by hand."
+    },
+    {
+      "id": "u03l07e05",
+      "type": "trueFalse",
+      "uepcc": "P",
+      "prompt": "Plan check: print(\"light wind\") shows the whole phrase, spaces included, on one line.",
+      "answer": true,
+      "explanation": "Yes. Everything inside the quotes, including the space, is shown exactly as one line."
+    },
+    {
+      "id": "u03l07e06",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code. Arrange the four print lines: header, then the three facts.",
+      "blocks": ["print(\"warm\")", "print(\"Today\")", "print(\"light wind\")", "print(\"sunny\")"],
+      "answer": [1, 3, 0, 2],
+      "explanation": "Today, sunny, warm, light wind — the header first, then the facts in order."
+    },
+    {
+      "id": "u03l07e07",
+      "type": "tapTokens",
+      "uepcc": "C",
+      "prompt": "Build the header line (it should show Today).",
+      "tokens": ["print", "(", "\"Today\"", ")"],
+      "answer": ["print", "(", "\"Today\"", ")"],
+      "explanation": "print(\"Today\") shows the header on its own line, first in the report."
+    },
+    {
+      "id": "u03l07e08",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check. Output:\n\nToday\nsunny\nwarm\nlight wind\n\nMatches the example?",
+      "options": ["Yes — header then three facts, right order", "No — header is last", "No — a fact is missing", "Can't tell"],
+      "answer": 0,
+      "explanation": "Four lines in the planned order. Check passes."
+    },
+    {
+      "id": "u03l07e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "If the output were:\n\nsunny\nwarm\nlight wind\nToday\n\nwhat is the problem?",
+      "options": [
+        "The header ended up last instead of first",
+        "A fact is missing",
+        "A fact is duplicated",
+        "Nothing is wrong"
+      ],
+      "answer": 0,
+      "explanation": "All lines are present, but Today should lead. The print order needs fixing."
+    },
+    {
+      "id": "u03l07e10",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "Review: how many lines does one print instruction produce?",
+      "options": ["One", "Two", "Zero", "As many as it wants"],
+      "answer": 0,
+      "explanation": "Each print makes exactly one line (even an empty print makes one blank line)."
+    }
+  ]
+}

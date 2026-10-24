@@ -1,0 +1,138 @@
+{
+  "unitId": "u68",
+  "lessonId": "u68l02",
+  "title": "Predict the output (mixed laps)",
+  "idea": "LOOP: predict output for code mixing arithmetic, conditions, loops and lists from Laps 0-4. No new concept.",
+  "exercises": [
+    {
+      "id": "u68l02e01",
+      "type": "multipleChoice",
+      "prompt": "Predict:\n\nnums = [2, 4, 6]\ntotal = 0\nfor n in nums:\n    total = total + n\nprint(total)",
+      "options": [
+        "12",
+        "6",
+        "3",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "2 + 4 + 6 = 12. A plain sum over the list."
+    },
+    {
+      "id": "u68l02e02",
+      "type": "multipleChoice",
+      "prompt": "Predict:\n\ncount = 0\nfor n in [5, 1, 8, 3]:\n    if n >= 5:\n        count = count + 1\nprint(count)",
+      "options": [
+        "2",
+        "3",
+        "1",
+        "4"
+      ],
+      "answer": 0,
+      "explanation": "5 and 8 are at least 5 (1 and 3 are not), so count = 2."
+    },
+    {
+      "id": "u68l02e03",
+      "type": "multipleChoice",
+      "prompt": "Predict (Lap 1 arithmetic):\n\nprint(7 // 2, 7 % 2)",
+      "options": [
+        "3 1",
+        "3.5 0",
+        "1 3",
+        "2 7"
+      ],
+      "answer": 0,
+      "explanation": "// is whole-number division (7 // 2 = 3) and % is the remainder (7 % 2 = 1)."
+    },
+    {
+      "id": "u68l02e04",
+      "type": "multipleChoice",
+      "prompt": "Predict:\n\nbest = [3, 9, 5][0]\nfor n in [3, 9, 5]:\n    if n > best:\n        best = n\nprint(best)",
+      "options": [
+        "9",
+        "3",
+        "5",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "best starts at 3, then 9 beats it and stays biggest. The max of the list is 9."
+    },
+    {
+      "id": "u68l02e05",
+      "type": "multipleChoice",
+      "prompt": "Predict (Lap 2 conditions):\n\nscore = 72\nif score >= 90:\n    print(\"A\")\nelif score >= 70:\n    print(\"B\")\nelse:\n    print(\"C\")",
+      "options": [
+        "B",
+        "A",
+        "C",
+        "72"
+      ],
+      "answer": 0,
+      "explanation": "72 isn't >= 90 but is >= 70, so the elif runs and prints B. elif checks in order, top to bottom."
+    },
+    {
+      "id": "u68l02e06",
+      "type": "multipleChoice",
+      "prompt": "Predict (filter):\n\nkeep = []\nfor n in [1, 6, 2, 8]:\n    if n > 4:\n        keep.append(n)\nprint(keep)",
+      "options": [
+        "[6, 8]",
+        "[1, 2]",
+        "[6, 2, 8]",
+        "[]"
+      ],
+      "answer": 0,
+      "explanation": "Only 6 and 8 are over 4, so keep becomes [6, 8]. A filter builds a list of matches."
+    },
+    {
+      "id": "u68l02e07",
+      "type": "multipleChoice",
+      "prompt": "Predict (Lap 3 while + break):\n\nn = 1\nwhile n <= 10:\n    if n == 4:\n        break\n    n = n + 1\nprint(n)",
+      "options": [
+        "4",
+        "10",
+        "1",
+        "11"
+      ],
+      "answer": 0,
+      "explanation": "n climbs 1,2,3,4; at 4 the break stops the loop, so n is 4 when it ends."
+    },
+    {
+      "id": "u68l02e08",
+      "type": "multipleChoice",
+      "prompt": "Predict (search):\n\nfound = False\nfor n in [2, 5, 9]:\n    if n == 5:\n        found = True\nprint(found)",
+      "options": [
+        "True",
+        "False",
+        "5",
+        "[5]"
+      ],
+      "answer": 0,
+      "explanation": "5 is present, so found flips to True (and stays True). A search returns a yes/no."
+    },
+    {
+      "id": "u68l02e09",
+      "type": "multipleChoice",
+      "prompt": "Predict (continue):\n\ntotal = 0\nfor n in [1, 2, 3, 4]:\n    if n % 2 == 0:\n        continue\n    total = total + n\nprint(total)",
+      "options": [
+        "4",
+        "10",
+        "6",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "continue skips the even numbers (2, 4), so only 1 + 3 = 4 is added."
+    },
+    {
+      "id": "u68l02e10",
+      "type": "multipleChoice",
+      "prompt": "Predict (strings, Lap 1b):\n\nname = \"Sam\"\nprint(\"Hi \" + name)",
+      "options": [
+        "Hi Sam",
+        "Hi name",
+        "Sam",
+        "HiSam"
+      ],
+      "answer": 0,
+      "explanation": "+ joins strings, so \"Hi \" + \"Sam\" is \"Hi Sam\". The space is inside the first string."
+    }
+  ]
+}

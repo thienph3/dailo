@@ -1,0 +1,140 @@
+{
+  "unitId": "u85",
+  "lessonId": "u85l01",
+  "title": "What makes a problem 'big'?",
+  "idea": "MEET: a 'big' problem asks for several things at once — more than one output or more than one step you can't do in a single line.",
+  "exercises": [
+    {
+      "type": "multipleChoice",
+      "prompt": "What usually makes a problem feel 'big' or 'multi-part'?",
+      "options": [
+        "It asks for several things, or needs several steps to answer",
+        "It uses large numbers",
+        "It is written in a different language",
+        "It has a long title"
+      ],
+      "answer": 0,
+      "explanation": "'Big' isn't about large numbers — it's about having several parts: several outputs, or several steps that each need their own little plan.",
+      "id": "u85l01e01"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "A problem that asks for both a total AND an average is a multi-part problem.",
+      "answer": true,
+      "explanation": "Two things are asked for (total, average), so there are at least two parts to plan. That's multi-part.",
+      "id": "u85l01e02"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Which of these reads like a MULTI-PART problem?",
+      "options": [
+        "Find the total of the orders, then show how many were above 100",
+        "Add 3 and 5",
+        "Print the word Hello",
+        "Store the number 7 in a variable"
+      ],
+      "answer": 0,
+      "explanation": "'Find the total' and 'show how many above 100' are two separate jobs. Two jobs = multi-part.",
+      "id": "u85l01e03"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Why notice a problem is multi-part BEFORE you start?",
+      "options": [
+        "So you can plan each part on purpose instead of tangling them together",
+        "So you can skip the hard part",
+        "So the computer runs faster",
+        "There is no reason"
+      ],
+      "answer": 0,
+      "explanation": "Spotting the parts early lets you give each one its own small plan — the whole Lap 6 skill.",
+      "id": "u85l01e04"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Every problem has exactly one part and one step.",
+      "answer": false,
+      "explanation": "Many do, but plenty ask for several things. Learning to see the parts is what this unit is about.",
+      "id": "u85l01e05"
+    },
+    {
+      "type": "multiSelect",
+      "prompt": "Select the problems that are MULTI-PART (ask for more than one thing).",
+      "options": [
+        "Total the scores, then report the average",
+        "Count the passing scores and the failing scores",
+        "Add two numbers",
+        "Find the biggest price and the smallest price"
+      ],
+      "answer": [
+        0,
+        1,
+        3
+      ],
+      "explanation": "Each selected one names two or more jobs. 'Add two numbers' is a single job.",
+      "id": "u85l01e06"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "A friend says: 'This problem is big, I can't do it.' A better first thought is...",
+      "options": [
+        "'How many smaller things is it really asking for?'",
+        "'I should give up.'",
+        "'I'll write one huge line of code.'",
+        "'Big problems are impossible.'"
+      ],
+      "answer": 0,
+      "explanation": "Big problems shrink the moment you count their parts. Each part is usually something you already know.",
+      "id": "u85l01e07"
+    },
+    {
+      "type": "matchPairs",
+      "prompt": "Match each problem to how many things it asks for.",
+      "pairs": [
+        {
+          "left": "Show the total of a list",
+          "right": "One thing"
+        },
+        {
+          "left": "Show the total AND the average",
+          "right": "Two things"
+        },
+        {
+          "left": "Show the total, the average, and the biggest",
+          "right": "Three things"
+        }
+      ],
+      "explanation": "Counting the 'things asked for' is the first measure of how big a problem is.",
+      "id": "u85l01e08"
+    },
+    {
+      "type": "orderBlocks",
+      "prompt": "Order the healthy first reaction to a big problem.",
+      "blocks": [
+        "Read the whole problem slowly",
+        "Notice it asks for several things",
+        "Get ready to plan each thing on its own"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Read it all, count the parts, then plan each part. Panic is optional; counting is not.",
+      "id": "u85l01e09"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "The big idea of this lesson:",
+      "options": [
+        "A 'big' problem just asks for several things — count the parts first",
+        "Big problems use big numbers",
+        "Big problems can't be solved",
+        "Only experts read problems"
+      ],
+      "answer": 0,
+      "explanation": "Multi-part means several asks. Counting them turns 'big and scary' into 'a few familiar jobs'.",
+      "id": "u85l01e10"
+    }
+  ]
+}

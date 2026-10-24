@@ -1,0 +1,97 @@
+{
+  "unitId": "u10",
+  "lessonId": "u10l09",
+  "title": "Solving a combine-the-numbers problem",
+  "idea": "Put it together: name the numbers in variables, combine them, store the result, then show it.",
+  "exercises": [
+    {
+      "id": "u10l09e01",
+      "type": "multipleChoice",
+      "prompt": "What will this show?\n\npens = 3\npencils = 5\ntotal = pens + pencils\nprint(total)",
+      "options": ["8", "35", "pens + pencils", "total"],
+      "answer": 0,
+      "explanation": "3 + 5 is 8, stored in total, then shown. Name, combine, store, show."
+    },
+    {
+      "id": "u10l09e02",
+      "type": "orderBlocks",
+      "prompt": "A snack costs 4 and you buy 6. Put the steps in order to show the total cost.",
+      "blocks": [
+        "snack_price = 4",
+        "snack_count = 6",
+        "total = snack_price * snack_count",
+        "print(total)"
+      ],
+      "answer": [0, 1, 2, 3],
+      "explanation": "Name both numbers, multiply to combine, store in total, then show it: 24."
+    },
+    {
+      "id": "u10l09e03",
+      "type": "multipleChoice",
+      "prompt": "What will this show?\n\nmoney = 50\ncost = 12\nchange = money - cost\nprint(change)",
+      "options": ["38", "62", "50 - 12", "change"],
+      "answer": 0,
+      "explanation": "50 - 12 is 38. That's the money left, stored in change."
+    },
+    {
+      "id": "u10l09e04",
+      "type": "multipleChoice",
+      "prompt": "A problem says '6 bags, 4 apples in each'. How many variables should name the numbers?",
+      "options": ["2 — one for bags, one for apples per bag", "1", "0", "4"],
+      "answer": 0,
+      "explanation": "Every number in the problem gets its own named variable: bag_count and apples_per_bag."
+    },
+    {
+      "id": "u10l09e05",
+      "type": "fillBlank",
+      "prompt": "Share 20 sweets equally among 4 friends. Fill the sign:\n\nsweets = 20\nfriends = 4\neach = sweets ____ friends\nprint(each)",
+      "answer": "/",
+      "acceptable": ["/"],
+      "explanation": "Shared equally means divide: 20 / 4 is 5.0 each."
+    },
+    {
+      "id": "u10l09e06",
+      "type": "tapTokens",
+      "prompt": "The variables length and width exist. Build the line that stores the multiplied result in area.",
+      "tokens": ["area", "=", "length", "*", "width"],
+      "answer": ["area", "=", "length", "*", "width"],
+      "explanation": "area = length * width combines the two values and saves the result."
+    },
+    {
+      "id": "u10l09e07",
+      "type": "multipleChoice",
+      "prompt": "Spot the mistake.\n\nticket_price = 9\ntotal = ticket_price * ticket_count\nprint(total)",
+      "options": [
+        "ticket_count was never given a value",
+        "The math sign is wrong",
+        "print needs quotes",
+        "Nothing is wrong"
+      ],
+      "answer": 0,
+      "explanation": "Every number needs a named variable with a value. ticket_count is used but never set."
+    },
+    {
+      "id": "u10l09e08",
+      "type": "multipleChoice",
+      "prompt": "What will this show?\n\nrows = 5\nseats = 4\ntotal = rows * seats\nprint(total)",
+      "options": ["20", "54", "9", "total"],
+      "answer": 0,
+      "explanation": "5 rows of 4 seats: 5 * 4 is 20 seats total."
+    },
+    {
+      "id": "u10l09e09",
+      "type": "trueFalse",
+      "prompt": "In a 'combine the numbers' problem, it helps to name every number from the problem as a variable before combining.",
+      "answer": true,
+      "explanation": "Naming each number makes the plan clear and lets you change a value in one place."
+    },
+    {
+      "id": "u10l09e10",
+      "type": "fillBlank",
+      "prompt": "A meal is 7 and a drink is 3. Write the line that stores their sum in a variable named bill.",
+      "answer": "bill = meal + drink",
+      "acceptable": ["bill = meal + drink", "bill=meal+drink"],
+      "explanation": "bill = meal + drink combines the two prices into the total bill."
+    }
+  ]
+}

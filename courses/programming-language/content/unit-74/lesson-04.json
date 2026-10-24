@@ -1,0 +1,127 @@
+{
+  "unitId": "u74",
+  "lessonId": "u74l04",
+  "title": "Same look, different behaviour",
+  "idea": "TOOL: two sub-plans can produce the same screen output yet behave differently when stored.",
+  "exercises": [
+    {
+      "id": "u74l04e01",
+      "type": "multipleChoice",
+      "prompt": "def a(n):\n    print(n * 2)\n\ndef b(n):\n    return n * 2\n\nOn screen, a(5) shows 10. Does b(5) show anything?",
+      "options": [
+        "No - b returns, it does not print",
+        "Yes, 10",
+        "Yes, b",
+        "It shows None"
+      ],
+      "answer": 0,
+      "explanation": "b(5) returns 10 but shows nothing. a prints to the screen; b hands the value back silently."
+    },
+    {
+      "id": "u74l04e02",
+      "type": "multipleChoice",
+      "prompt": "Same a and b. What does 'x = a(5)' store? (a prints n*2)",
+      "options": [
+        "None",
+        "10",
+        "5",
+        "a"
+      ],
+      "answer": 0,
+      "explanation": "a prints 10 but returns nothing, so x = None. The screen showed 10, but that is not what was stored."
+    },
+    {
+      "id": "u74l04e03",
+      "type": "multipleChoice",
+      "prompt": "Same a and b. What does 'x = b(5)' store? (b returns n*2)",
+      "options": [
+        "10",
+        "None",
+        "5",
+        "b"
+      ],
+      "answer": 0,
+      "explanation": "b returns 10, so x = 10. Returning is what makes the value available to store."
+    },
+    {
+      "id": "u74l04e04",
+      "type": "trueFalse",
+      "prompt": "Two sub-plans can look identical on screen yet store different things.",
+      "answer": true,
+      "explanation": "Yes. a prints and b returns. Both can show 10, but only b gives you a 10 you can store and reuse."
+    },
+    {
+      "id": "u74l04e05",
+      "type": "multipleChoice",
+      "prompt": "To both SEE the value and STORE it, which sub-plan plus caller works?",
+      "options": [
+        "b (returns), then print(b(5)) in the caller",
+        "a (prints) only",
+        "neither",
+        "loop a"
+      ],
+      "answer": 0,
+      "explanation": "b returns 10, and print(b(5)) shows it AND you can also store b(5). Returning keeps both options."
+    },
+    {
+      "id": "u74l04e06",
+      "type": "orderBlocks",
+      "prompt": "Using b that returns n*2, order the caller code to store AND show the result.",
+      "blocks": [
+        "x = b(5)",
+        "print(x)"
+      ],
+      "answer": [
+        0,
+        1
+      ],
+      "explanation": "Store the returned value first, then print it. Because b returns, x holds 10 and print shows it."
+    },
+    {
+      "id": "u74l04e07",
+      "type": "multipleChoice",
+      "prompt": "def a(n):\n    print(n)\n\nresult = a(7) + 1\n\nWhat goes wrong?",
+      "options": [
+        "a returns None, so None + 1 is an error",
+        "It prints 8",
+        "result becomes 7",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "a only prints, so a(7) is None. You cannot add 1 to None - that is an error. a needed a return."
+    },
+    {
+      "id": "u74l04e08",
+      "type": "multipleChoice",
+      "prompt": "Fix the previous bug. Change a so 'result = a(7) + 1' makes result 8.",
+      "options": [
+        "Make a return n instead of printing it",
+        "Add another print",
+        "Remove the + 1",
+        "Use a loop"
+      ],
+      "answer": 0,
+      "explanation": "With 'return n', a(7) is 7 and 7 + 1 = 8. A returning sub-plan can join arithmetic; a printing one cannot."
+    },
+    {
+      "id": "u74l04e09",
+      "type": "multipleChoice",
+      "prompt": "REVIEW: 'None + 1' failing is a reminder that...",
+      "options": [
+        "a print-only sub-plan hands back None, not the shown value",
+        "None is a big number",
+        "print is broken",
+        "1 is special"
+      ],
+      "answer": 0,
+      "explanation": "None is what you get with no return. It cannot do math, which is why mixing print and reuse fails."
+    },
+    {
+      "id": "u74l04e10",
+      "type": "trueFalse",
+      "prompt": "The screen output alone cannot tell you whether a value was returned or just printed.",
+      "answer": true,
+      "explanation": "Right. You must look at the code - a return line, not the screen, decides what the caller receives."
+    }
+  ]
+}

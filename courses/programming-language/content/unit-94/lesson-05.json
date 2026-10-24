@@ -1,0 +1,126 @@
+{
+  "unitId": "u94",
+  "lessonId": "u94l05",
+  "title": "Tracing a solution by hand",
+  "idea": "MEET. Read a small integrated solution and predict its output by tracking the state variables turn by turn — no running it.",
+  "exercises": [
+    {
+      "id": "u94l05e01",
+      "type": "multipleChoice",
+      "prompt": "Trace by hand:\n\ntotal = 0\nfor n in [4, 1, 5]:\n    total = total + n\nprint(total)\n\nWhat prints?",
+      "explanation": "total goes 0 -> 4 -> 5 -> 10. Tracking the accumulator each turn gives 10 without running anything.",
+      "options": [
+        "10",
+        "0",
+        "5",
+        "9"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u94l05e02",
+      "type": "multipleChoice",
+      "prompt": "Trace:\n\ncount = 0\nfor n in [8, 3, 10, 1]:\n    if n >= 5:\n        count = count + 1\nprint(count)\n\nResult?",
+      "explanation": "8 and 10 are >= 5 (count becomes 2); 3 and 1 are not. The counter ends at 2.",
+      "options": [
+        "2",
+        "4",
+        "3",
+        "1"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u94l05e03",
+      "type": "multipleChoice",
+      "prompt": "Trace:\n\nbest = 0\nfor n in [3, 9, 6]:\n    if n > best:\n        best = n\nprint(best)\n\nResult?",
+      "explanation": "best: 0 -> 3 -> 9 (6 doesn't beat 9). Final best is 9.",
+      "options": [
+        "9",
+        "6",
+        "3",
+        "0"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u94l05e04",
+      "type": "multipleChoice",
+      "prompt": "Trace a function:\n\ndef label(n):\n    if n >= 10:\n        return 1\n    return 0\n\nprint(label(10) + label(4) + label(20))",
+      "explanation": "label(10)=1 (>= includes 10), label(4)=0, label(20)=1. Sum is 2.",
+      "options": [
+        "2",
+        "3",
+        "1",
+        "0"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u94l05e05",
+      "type": "multipleChoice",
+      "prompt": "Trace two state variables:\n\ntotal = 0\nhits = 0\nfor n in [2, 6, 4]:\n    total = total + n\n    if n >= 4:\n        hits = hits + 1\nprint(hits)",
+      "explanation": "hits counts items >= 4: 6 and 4 qualify (2 does not). hits = 2. (total would be 12, but we printed hits.)",
+      "options": [
+        "2",
+        "3",
+        "12",
+        "1"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u94l05e06",
+      "type": "trueFalse",
+      "prompt": "Tracing by hand means writing down how each variable changes each time through the loop.",
+      "explanation": "Exactly — a little table of variable values per turn is the surest way to predict output without running code.",
+      "answer": true
+    },
+    {
+      "id": "u94l05e07",
+      "type": "multipleChoice",
+      "prompt": "Trace:\n\ntotal = 0\nfor n in []:\n    total = total + n\nprint(total)\n\nThe list is empty. Result?",
+      "explanation": "The loop body never runs, so total stays at its starting value 0. Empty input, safe answer.",
+      "options": [
+        "0",
+        "An error",
+        "Nothing prints",
+        "1"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u94l05e08",
+      "type": "multipleChoice",
+      "prompt": "Trace with continue:\n\ncount = 0\nfor n in [5, 2, 8]:\n    if n < 5:\n        continue\n    count = count + 1\nprint(count)",
+      "explanation": "continue skips 2 (it's < 5). 5 and 8 reach the counter, so count = 2.",
+      "options": [
+        "2",
+        "3",
+        "1",
+        "0"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u94l05e09",
+      "type": "multipleChoice",
+      "prompt": "Why trace by hand instead of just running it?",
+      "explanation": "Tracing builds the mental model AND gives you the predicted answer to compare against — the heart of checking.",
+      "options": [
+        "It gives you a predicted answer to check the real output against",
+        "It's slower on purpose",
+        "The computer can't run loops",
+        "Tracing changes the code"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u94l05e10",
+      "type": "trueFalse",
+      "prompt": "If your hand trace and the real output disagree, exactly one of them has a mistake worth finding.",
+      "explanation": "Yes — a disagreement is a gift: it points straight at a bug in the code or a slip in your reasoning.",
+      "answer": true
+    }
+  ]
+}

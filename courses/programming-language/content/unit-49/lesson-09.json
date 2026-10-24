@@ -1,0 +1,126 @@
+{
+  "unitId": "u49",
+  "lessonId": "u49l09",
+  "title": "Solve it: average of 1 to 6",
+  "idea": "GUIDED PROBLEM. A counted loop tracking TWO variables - a total and a count - then dividing. Choosing for and tracking two pieces of state are the Plan focus.",
+  "problem": "Find the average of the numbers 1 to 6. Show the average.",
+  "exercises": [
+    {
+      "id": "u49l09e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: Find the average of the numbers 1 to 6.\n\nUnderstand. What is the OUTPUT?",
+      "options": [
+        "The average (total divided by how many numbers)",
+        "The total only",
+        "The count only",
+        "The number 6"
+      ],
+      "answer": 0,
+      "explanation": "An average is the total divided by the count. We'll need both pieces, then one division."
+    },
+    {
+      "id": "u49l09e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "Understand. What two things must we track to compute an average?",
+      "options": [
+        "The running total AND how many numbers there were",
+        "Only the total",
+        "Only the largest number",
+        "The color of the number"
+      ],
+      "answer": 0,
+      "explanation": "Average = total / count, so we track a total (accumulator) and a count (counter). Two variables, one goal."
+    },
+    {
+      "id": "u49l09e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example by hand. The total of 1 to 6 is 21, and there are 6 numbers. The average is:",
+      "options": ["21 / 6 = 3.5", "21", "6", "27"],
+      "answer": 0,
+      "explanation": "21 divided by 6 is 3.5. Check value: 3.5. Doing it by hand gives the target for our code."
+    },
+    {
+      "id": "u49l09e04",
+      "type": "trueFalse",
+      "uepcc": "E",
+      "prompt": "We could get the average by dividing by the wrong count and still be right.",
+      "answer": false,
+      "explanation": "No - the count must be exactly how many numbers we added (6). A wrong count gives a wrong average. Both pieces must be accurate."
+    },
+    {
+      "id": "u49l09e05",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Plan - choose the loop. 1 to 6 is a known range, so...",
+      "options": [
+        "A for loop over range(1, 7)",
+        "A while loop with no count",
+        "No loop",
+        "A for loop over range(6, 1)"
+      ],
+      "answer": 0,
+      "explanation": "Known range -> for over range(1, 7), which walks 1 through 6. Inside, we grow both the total and the count."
+    },
+    {
+      "id": "u49l09e06",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Plan - after the loop, how do we get the average?",
+      "options": [
+        "Divide total by count",
+        "Multiply total by count",
+        "Subtract count from total",
+        "Just print total"
+      ],
+      "answer": 0,
+      "explanation": "The division happens once, AFTER the loop finishes building total and count. average = total / count."
+    },
+    {
+      "id": "u49l09e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code it. Arrange the lines to match the plan.",
+      "blocks": [
+        "total = 0",
+        "count = 0",
+        "for i in range(1, 7):",
+        "    total = total + i",
+        "    count = count + 1",
+        "average = total / count",
+        "print(average)"
+      ],
+      "answer": [0, 1, 2, 3, 4, 5, 6],
+      "explanation": "Start both at 0, loop 1..6 adding to total and counting, then divide after the loop and print. Two variables built together, one division at the end."
+    },
+    {
+      "id": "u49l09e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Complete the average step:\n\ntotal = 21\ncount = 6\naverage = total ____ count",
+      "answer": "/",
+      "acceptable": ["/"],
+      "explanation": "Average is a division, so we use /. 21 / 6 = 3.5."
+    },
+    {
+      "id": "u49l09e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "The code prints 3.5; your hand example was 3.5. Verdict?",
+      "options": ["Passes", "Fails", "Unknown", "Rewrite the example"],
+      "answer": 0,
+      "explanation": "3.5 matches 3.5. Both tracked variables were correct and the division gave the right average. Passing Check."
+    },
+    {
+      "id": "u49l09e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "New version: average of 1 to 4 (total 10, count 4). What should it print?",
+      "options": ["2.5", "10", "4", "3.5"],
+      "answer": 0,
+      "explanation": "10 / 4 = 2.5. The same two-variable plan handles new numbers - track total and count, then divide."
+    }
+  ]
+}

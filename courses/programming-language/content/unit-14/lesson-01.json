@@ -1,0 +1,130 @@
+{
+  "unitId": "u14",
+  "lessonId": "u14l01",
+  "title": "Solve it: sweets left over after sharing",
+  "idea": "GUIDED PROBLEM. One small sharing problem walked through UEPCC. Uses // for whole shares and % for the leftover — the two newer tools — with every value named.",
+  "problem": "You have 17 sweets to share equally among 5 friends. Show how many are left over after everyone gets the same whole number.",
+  "exercises": [
+    {
+      "id": "u14l01e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: 17 sweets shared equally among 5 friends. Show how many are LEFT OVER.\n\nFirst — Understand. What is the OUTPUT we must show?",
+      "options": [
+        "The number of sweets left over after fair sharing",
+        "The total number of sweets",
+        "The number of friends",
+        "The price of a sweet"
+      ],
+      "answer": 0,
+      "explanation": "Name the output first. Here it is the leftover — the sweets that can't be shared evenly."
+    },
+    {
+      "id": "u14l01e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "Still understanding. What are the INPUTS (the values you start with)?",
+      "options": [
+        "The number of sweets (17) and the number of friends (5)",
+        "Only the number 2",
+        "The word 'leftover'",
+        "Nothing — there are no inputs"
+      ],
+      "answer": 0,
+      "explanation": "Two inputs: 17 sweets and 5 friends. Both will become named variables."
+    },
+    {
+      "id": "u14l01e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Next — Example. By hand: 17 sweets among 5 friends. Each gets 3 (that's 15 used). How many are left over?",
+      "options": ["2", "3", "5", "0"],
+      "answer": 0,
+      "explanation": "5 friends x 3 each = 15 used, 17 - 15 = 2 left over. That leftover, 2, is your check value."
+    },
+    {
+      "id": "u14l01e04",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Now — Plan. Which operator gives the LEFTOVER after equal sharing?",
+      "options": [
+        "% (remainder)",
+        "// (whole division)",
+        "* (multiply)",
+        "+ (add)"
+      ],
+      "answer": 0,
+      "explanation": "% gives the remainder — exactly what's left after everyone gets a whole share. // would give the share size instead."
+    },
+    {
+      "id": "u14l01e05",
+      "type": "matchPairs",
+      "uepcc": "P",
+      "prompt": "Match each operator to what it tells you when sharing 17 among 5.",
+      "pairs": [
+        { "left": "17 // 5", "right": "how many each friend gets (3)" },
+        { "left": "17 % 5", "right": "how many are left over (2)" }
+      ],
+      "explanation": "// is the whole share, % is the leftover. Same two numbers, two different questions."
+    },
+    {
+      "id": "u14l01e06",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Put the plain-English plan in order.",
+      "blocks": [
+        "Work out the leftover with %",
+        "Remember the number of sweets and friends",
+        "Show the leftover"
+      ],
+      "answer": [1, 0, 2],
+      "explanation": "Remember the inputs, compute the leftover with %, then show it. Plan in words before code."
+    },
+    {
+      "id": "u14l01e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Now — Code. Arrange the lines to match your plan. Every value is a named variable.",
+      "blocks": [
+        "sweets = 17",
+        "friends = 5",
+        "leftover = sweets % friends",
+        "print(leftover)"
+      ],
+      "answer": [0, 1, 2, 3],
+      "explanation": "Store sweets, store friends, take the remainder into leftover, print it. 17 % 5 = 2."
+    },
+    {
+      "id": "u14l01e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Complete the leftover step:\n\nsweets = 17\nfriends = 5\nleftover = sweets ____ friends\nprint(leftover)",
+      "answer": "%",
+      "acceptable": ["%"],
+      "explanation": "% gives the remainder, so leftover holds 2."
+    },
+    {
+      "id": "u14l01e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Finally — Check. The code prints 2. Your hand example said 2. Verdict?",
+      "options": [
+        "Passes — the output matches the example",
+        "Fails — the output is wrong",
+        "Can't tell",
+        "Change the example to match"
+      ],
+      "answer": 0,
+      "explanation": "Output (2) matches the hand example (2), so the solution is correct. That's Check."
+    },
+    {
+      "id": "u14l01e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "New numbers: 20 sweets among 6 friends. Same code (leftover = sweets % friends). What does it show?",
+      "options": ["2", "3", "6", "0"],
+      "answer": 0,
+      "explanation": "20 % 6 = 2 (each gets 3, that's 18, 2 left). A good solution works for new inputs too. Nice work!"
+    }
+  ]
+}

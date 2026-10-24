@@ -1,0 +1,127 @@
+{
+  "unitId": "u30",
+  "lessonId": "u30l03",
+  "title": "Typed numbers are still text",
+  "idea": "input() returns text even for digits, so \"5\" is not 5. Convert with int() before doing math or number comparisons. Predict the pitfalls.",
+  "exercises": [
+    {
+      "id": "u30l03e01",
+      "type": "multipleChoice",
+      "prompt": "The user types 5. What does age hold after:\n\nage = input(\"Age: \")",
+      "options": [
+        "the string \"5\"",
+        "the number 5",
+        "True",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "input() always gives text. Typing 5 stores the string \"5\", not the number 5 - a crucial difference."
+    },
+    {
+      "id": "u30l03e02",
+      "type": "multipleChoice",
+      "prompt": "Why can't you do age >= 18 directly on the result of input()?",
+      "options": [
+        "age is text like \"5\", and comparing text to a number is a mismatch",
+        "18 is too big",
+        "input blocks comparisons",
+        "You can - it always works"
+      ],
+      "answer": 0,
+      "explanation": "The value is a string. To compare it as a number you must first convert it with int()."
+    },
+    {
+      "id": "u30l03e03",
+      "type": "multipleChoice",
+      "prompt": "Which line turns the typed text into a number?\n\nage = input(\"Age: \")",
+      "options": [
+        "age = int(age)",
+        "age = str(age)",
+        "age = \"age\"",
+        "age = age + age"
+      ],
+      "answer": 0,
+      "explanation": "int() converts text like \"5\" into the number 5. (int() is a tool you already met for type conversion.)"
+    },
+    {
+      "id": "u30l03e04",
+      "type": "multipleChoice",
+      "prompt": "The user types 20:\n\nage = int(input(\"Age: \"))\nif age >= 18:\n    print(\"Adult\")\nelse:\n    print(\"Minor\")\n\nWhat prints?",
+      "options": [
+        "Adult",
+        "Minor",
+        "20",
+        "an error"
+      ],
+      "answer": 0,
+      "explanation": "int() made age the number 20, and 20 >= 18 is True, so \"Adult\" prints. Convert, then compare."
+    },
+    {
+      "id": "u30l03e05",
+      "type": "multipleChoice",
+      "prompt": "What does int(input(...)) do, read from the inside out?",
+      "options": [
+        "input() gets the text, then int() converts that text to a number",
+        "int() runs first, then input()",
+        "They cancel out",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "The inner call runs first: input() returns text, then int() wraps it into a number. Inside-out is how nested calls work."
+    },
+    {
+      "id": "u30l03e06",
+      "type": "trueFalse",
+      "prompt": "\"5\" + \"5\" with two typed values gives \"55\", not 10.",
+      "answer": true,
+      "explanation": "Yes - joining two strings sticks them together: \"5\" + \"5\" is \"55\". For arithmetic you must int() them first."
+    },
+    {
+      "id": "u30l03e07",
+      "type": "fillBlank",
+      "prompt": "Convert the typed age to a number before comparing:\n\nage = ____(input(\"Age: \"))\nif age >= 18:\n    print(\"Adult\")",
+      "answer": "int",
+      "acceptable": ["int"],
+      "explanation": "int() turns the typed text into a whole number so the >= comparison is a real number test."
+    },
+    {
+      "id": "u30l03e08",
+      "type": "multipleChoice",
+      "prompt": "The user types 3 and 4 into two inputs, then you do total = a + b WITHOUT converting. What is total?",
+      "options": [
+        "\"34\" - the two strings joined",
+        "7",
+        "an error",
+        "12"
+      ],
+      "answer": 0,
+      "explanation": "Without int(), a and b are \"3\" and \"4\", so + joins them into \"34\". Convert first to get 7."
+    },
+    {
+      "id": "u30l03e09",
+      "type": "multipleChoice",
+      "prompt": "When should you NOT convert the input with int()?",
+      "options": [
+        "When the answer is a word (like \"yes\" or a name), not a number",
+        "Never - always convert",
+        "Only on weekends",
+        "Always convert even words"
+      ],
+      "answer": 0,
+      "explanation": "Convert only when you need a number. Words stay as text so you can compare them with == like last unit."
+    },
+    {
+      "id": "u30l03e10",
+      "type": "multipleChoice",
+      "prompt": "The key rule of this lesson:",
+      "options": [
+        "input() gives text; use int() when you need to treat it as a number",
+        "input() gives numbers",
+        "int() is never needed",
+        "Text and numbers are the same"
+      ],
+      "answer": 0,
+      "explanation": "Remember: typed digits are still text. int() bridges to numbers for math and number comparisons."
+    }
+  ]
+}

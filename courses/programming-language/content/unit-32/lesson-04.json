@@ -1,0 +1,129 @@
+{
+  "unitId": "u32",
+  "lessonId": "u32l04",
+  "title": "The = vs == mix-up in meaning",
+  "idea": "= stores a value; == asks a question. Confusing them changes what a condition MEANS (here, spotting the reasoning, not the syntax error).",
+  "exercises": [
+    {
+      "id": "u32l04e01",
+      "type": "multipleChoice",
+      "prompt": "What does a single = do?",
+      "options": [
+        "Stores a value into a variable",
+        "Tests if two things are equal",
+        "Adds two numbers",
+        "Prints something"
+      ],
+      "answer": 0,
+      "explanation": "= assigns: it stores the value on the right into the variable on the left. It does not ask a question."
+    },
+    {
+      "id": "u32l04e02",
+      "type": "multipleChoice",
+      "prompt": "What does == do?",
+      "options": [
+        "Tests whether two values are equal",
+        "Stores a value",
+        "Subtracts",
+        "Ends the program"
+      ],
+      "answer": 0,
+      "explanation": "== compares: it asks 'are these equal?' and gives back True or False. That is what a condition needs."
+    },
+    {
+      "id": "u32l04e03",
+      "type": "multipleChoice",
+      "prompt": "In plain English, if answer == \"yes\" means…",
+      "options": [
+        "'Is answer equal to \"yes\"?'",
+        "'Make answer be \"yes\".'",
+        "'Print yes.'",
+        "'Delete answer.'"
+      ],
+      "answer": 0,
+      "explanation": "It is a question: 'is answer equal to yes?' A condition must be a question, so == is correct here."
+    },
+    {
+      "id": "u32l04e04",
+      "type": "multipleChoice",
+      "prompt": "A learner wrote if count = 5 and it failed. Which did they MEAN?",
+      "options": [
+        "if count == 5 — a comparison",
+        "nothing, = is fine in a condition",
+        "if count + 5",
+        "if print(count)"
+      ],
+      "answer": 0,
+      "explanation": "A condition needs a question, so they meant == to test whether count is 5, not = to store 5."
+    },
+    {
+      "id": "u32l04e05",
+      "type": "trueFalse",
+      "prompt": "Using = where you meant == changes the MEANING from 'ask' to 'store'.",
+      "answer": true,
+      "explanation": "True. That is the reasoning trap: one is a question, the other an instruction to change a value."
+    },
+    {
+      "id": "u32l04e06",
+      "type": "matchPairs",
+      "prompt": "Match each symbol to what it means.",
+      "pairs": [
+        {
+          "left": "=",
+          "right": "Store a value (assign)"
+        },
+        {
+          "left": "==",
+          "right": "Ask if two values are equal"
+        }
+      ],
+      "explanation": "= stores; == asks a yes/no question. Conditions need the question form, ==."
+    },
+    {
+      "id": "u32l04e07",
+      "type": "multipleChoice",
+      "prompt": "Which line belongs in an if condition that checks the PIN?",
+      "options": [
+        "if pin == 1234:",
+        "if pin = 1234:",
+        "if pin + 1234:",
+        "if 1234:"
+      ],
+      "answer": 0,
+      "explanation": "A condition tests, so it needs ==. pin == 1234 asks the question; pin = 1234 would just store 1234."
+    },
+    {
+      "id": "u32l04e08",
+      "type": "multipleChoice",
+      "prompt": "Why is it correct to use a single = on the line level = 1 (not in an if)?",
+      "options": [
+        "Because it is storing 1 into level, which is what we want",
+        "Because = is never allowed",
+        "Because level must be a string",
+        "Because 1 needs quotes"
+      ],
+      "answer": 0,
+      "explanation": "Outside a condition, = is exactly right: it stores 1 into level. = is only wrong when you meant to compare."
+    },
+    {
+      "id": "u32l04e09",
+      "type": "multipleChoice",
+      "prompt": "Read for MEANING: if score = 100: — what was intended?",
+      "options": [
+        "Compare: if score == 100",
+        "Store 100 into score and move on",
+        "Add 100",
+        "Print 100"
+      ],
+      "answer": 0,
+      "explanation": "A pass/fail-style test wants to ASK if score is 100, so the intended operator is ==."
+    },
+    {
+      "id": "u32l04e10",
+      "type": "trueFalse",
+      "prompt": "'= vs ==' is about meaning: store versus ask. Knowing which you intend prevents the bug.",
+      "answer": true,
+      "explanation": "Exactly. Decide whether you are storing a value or asking a question, and pick = or == to match."
+    }
+  ]
+}

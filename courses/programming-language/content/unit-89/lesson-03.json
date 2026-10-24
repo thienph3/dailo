@@ -1,0 +1,136 @@
+{
+  "unitId": "u89",
+  "lessonId": "u89l03",
+  "title": "Biggest and smallest in one walk",
+  "idea": "TOOL: track a running max AND a running min at the same time - two comparisons per turn.",
+  "exercises": [
+    {
+      "type": "multipleChoice",
+      "prompt": "You want the HIGHEST and the LOWEST score from a list in one pass. How many trackers do you keep?",
+      "options": [
+        "Two - one holding the biggest so far, one the smallest so far",
+        "One, it does both",
+        "Three",
+        "You must sort first"
+      ],
+      "answer": 0,
+      "explanation": "One tracker per fact: a 'biggest so far' and a 'smallest so far'. Each turn you check both.",
+      "id": "u89l03e01"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nhigh = 0\nlow = 1000\nfor s in [40, 70, 20]:\n    if s > high:\n        high = s\n    if s < low:\n        low = s\nprint(high, low)",
+      "options": [
+        "70 20",
+        "40 20",
+        "70 40",
+        "20 70"
+      ],
+      "answer": 0,
+      "explanation": "high rises 40, 70, stays 70; low falls 40, stays, then 20. Final: 70 and 20.",
+      "id": "u89l03e02"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Why start 'low' at a very BIG number like 1000 before the loop?",
+      "options": [
+        "So the first real score is smaller and replaces it",
+        "So it prints 1000",
+        "Low numbers aren't allowed",
+        "It must match high"
+      ],
+      "answer": 0,
+      "explanation": "A high starting value guarantees the first real score is less, so low snaps to a real value. (Starting low at 0 would be wrong - nothing is below 0.)",
+      "id": "u89l03e03"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Tracking the biggest is the same pattern as tracking the smallest, just with the comparison flipped.",
+      "answer": true,
+      "explanation": "True. 'If bigger, keep it' becomes 'if smaller, keep it'. Same shape, opposite comparison.",
+      "id": "u89l03e04"
+    },
+    {
+      "type": "fillBlank",
+      "prompt": "Complete the smallest-tracker test:\n\nlow = 1000\nfor s in [5, 2, 9]:\n    if s ____ low:\n        low = s\nprint(low)",
+      "answer": "<",
+      "acceptable": [
+        "<"
+      ],
+      "explanation": "You keep s when it is LESS than the smallest so far, so the test is s < low. Output: 2.",
+      "id": "u89l03e05"
+    },
+    {
+      "type": "orderBlocks",
+      "prompt": "Arrange a loop that finds the biggest and smallest of [8, 3, 6].",
+      "blocks": [
+        "high = 0",
+        "low = 1000",
+        "for n in [8, 3, 6]:",
+        "    if n > high:",
+        "        high = n",
+        "    if n < low:",
+        "        low = n",
+        "print(high, low)"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "explanation": "Start high low and low high, test each item against both, then print. Output: 8 3.",
+      "id": "u89l03e06"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "A subtle bug: a learner starts BOTH high and low at 0 for the list [5, 2, 9]. What goes wrong?",
+      "options": [
+        "low stays 0 - nothing in the list is below 0, so it never updates",
+        "high stays 0",
+        "Both work fine",
+        "The loop never runs"
+      ],
+      "answer": 0,
+      "explanation": "low at 0 is already smaller than every positive score, so it never changes. Starting values for min/max matter.",
+      "id": "u89l03e07"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nhigh = 0\nlow = 1000\nfor n in [50]:\n    if n > high:\n        high = n\n    if n < low:\n        low = n\nprint(high, low)",
+      "options": [
+        "50 50",
+        "0 1000",
+        "50 1000",
+        "0 50"
+      ],
+      "answer": 0,
+      "explanation": "With one item, both trackers snap to it: high 50, low 50. A single value is both the biggest and the smallest.",
+      "id": "u89l03e08"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Both 'if' checks for high and low can live in the same loop turn.",
+      "answer": true,
+      "explanation": "True. Each turn you run both tests on the same item n. Two trackers, two checks, one pass.",
+      "id": "u89l03e09"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "The takeaway:",
+      "options": [
+        "Max and min are twin trackers - run both each turn in one pass",
+        "You need two loops for two results",
+        "Only one tracker is allowed",
+        "Sorting is required"
+      ],
+      "answer": 0,
+      "explanation": "Biggest and smallest are mirror-image trackers. Keeping both in one walk is multiple state in action.",
+      "id": "u89l03e10"
+    }
+  ]
+}

@@ -1,0 +1,141 @@
+{
+  "unitId": "u84",
+  "lessonId": "u84l01",
+  "title": "Loop back: the decomposition habit in one picture",
+  "idea": "LOOP. Recall the full 'too big for one plan' habit — understand, example, split into sub-problems, pick a pattern per part, code, check — interleaving ideas from every lap.",
+  "exercises": [
+    {
+      "id": "u84l01e01",
+      "type": "multipleChoice",
+      "prompt": "When a problem feels 'too big for one plan', the first move is to...",
+      "options": [
+        "Split it into smaller sub-problems you already know how to solve",
+        "Write it all in one giant line",
+        "Give up",
+        "Guess the answer"
+      ],
+      "answer": 0,
+      "explanation": "Decomposition: break the big problem into small, familiar pieces. That's the heart of Lap 5."
+    },
+    {
+      "id": "u84l01e02",
+      "type": "orderBlocks",
+      "prompt": "REVIEW the solving spine. Order the steps.",
+      "blocks": [
+        "Understand the inputs and output",
+        "Work one example by hand",
+        "Split into sub-problems and pick a pattern for each",
+        "Code it, then check against the example"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "Understand, example, plan (split + pattern), code, check. The same spine you've used since Lap 1."
+    },
+    {
+      "id": "u84l01e03",
+      "type": "multipleChoice",
+      "prompt": "REVIEW (Lap 0): which line shows a message on the screen?",
+      "options": [
+        "print(\"Hello\")",
+        "total = 5",
+        "if x > 0:",
+        "for n in nums:"
+      ],
+      "answer": 0,
+      "explanation": "print() displays output — the very first tool, from Unit 1. We still use it to SHOW an answer."
+    },
+    {
+      "id": "u84l01e04",
+      "type": "matchPairs",
+      "prompt": "Match each sub-problem to the pattern that solves it.",
+      "pairs": [
+        {
+          "left": "Add up a list",
+          "right": "Running total (accumulate)"
+        },
+        {
+          "left": "Find the highest",
+          "right": "Track the biggest"
+        },
+        {
+          "left": "How many pass a rule",
+          "right": "Count with a condition"
+        }
+      ],
+      "explanation": "Each familiar sub-problem has a go-to pattern. Picking the right one per part is the Lap-5 skill."
+    },
+    {
+      "id": "u84l01e05",
+      "type": "trueFalse",
+      "prompt": "A small helper function can be written once and reused for each item in a loop.",
+      "answer": true,
+      "explanation": "Yes — helper-in-a-loop (Unit 78). One helper, called many times, keeps the loop clean."
+    },
+    {
+      "id": "u84l01e06",
+      "type": "multipleChoice",
+      "prompt": "REVIEW (Lap 1): what does a variable do?",
+      "options": [
+        "Remembers a value for a later step",
+        "Prints text",
+        "Repeats code",
+        "Compares two numbers"
+      ],
+      "answer": 0,
+      "explanation": "A variable stores a value to use later — the memory that lets a plan carry results between steps."
+    },
+    {
+      "id": "u84l01e07",
+      "type": "multipleChoice",
+      "prompt": "Why split a big problem into helpers instead of one long block?",
+      "options": [
+        "Smaller pieces are easier to understand, reuse, and debug",
+        "It makes the file longer",
+        "The computer requires it",
+        "There's no reason"
+      ],
+      "answer": 0,
+      "explanation": "Decomposition tames complexity: each piece is simple to grasp, reuse, and check."
+    },
+    {
+      "id": "u84l01e08",
+      "type": "fillBlank",
+      "prompt": "REVIEW (Lap 4b): finish the accumulator that totals a list:\n\ntotal = 0\nfor n in nums:\n    total = total ____ n",
+      "answer": "+",
+      "acceptable": [
+        "+"
+      ],
+      "explanation": "A running total adds each item: total = total + n. The accumulator starts at 0."
+    },
+    {
+      "id": "u84l01e09",
+      "type": "multipleChoice",
+      "prompt": "After coding a split-up solution, the LAST step is always to...",
+      "options": [
+        "Check the output against your hand-worked example",
+        "Delete the helpers",
+        "Add more features",
+        "Stop without testing"
+      ],
+      "answer": 0,
+      "explanation": "Check: does the output match the example you worked by hand? If yes, the solution is trustworthy."
+    },
+    {
+      "id": "u84l01e10",
+      "type": "multipleChoice",
+      "prompt": "The big idea you're looping back on:",
+      "options": [
+        "Break a big problem into familiar small pieces, solve each, then combine and check",
+        "Big problems can't be solved",
+        "Only experts split problems",
+        "Helpers are optional clutter"
+      ],
+      "answer": 0,
+      "explanation": "That's the whole Lap-5 habit. You can now face an unseen 'too big' problem with a plan."
+    }
+  ]
+}

@@ -1,0 +1,121 @@
+{
+  "unitId": "u74",
+  "lessonId": "u74l05",
+  "title": "You can't do math on a print",
+  "idea": "return vs print: a printed value is gone — you cannot add to it or store it. Only a returned value flows into later math.",
+  "exercises": [
+    {
+      "id": "u74l05e01",
+      "type": "multipleChoice",
+      "prompt": "Why does this fail?\n\ndef f(n):\n    print(n)\n\ntotal = f(5) + f(3)",
+      "options": [
+        "f returns None, and None + None can't be added",
+        "f returns 5 and 3",
+        "print is too slow",
+        "it works fine"
+      ],
+      "answer": 0,
+      "explanation": "f prints but returns None. So f(5) + f(3) is None + None, which errors. You can't do math on what was only printed."
+    },
+    {
+      "id": "u74l05e02",
+      "type": "trueFalse",
+      "prompt": "A value that was printed can still be added to later.",
+      "answer": false,
+      "explanation": "No. Printing shows the value and lets it go. Only a returned value can be stored or added to."
+    },
+    {
+      "id": "u74l05e03",
+      "type": "multipleChoice",
+      "prompt": "Which fixes the previous code?\n\ndef f(n):\n    print(n)\n\ntotal = f(5) + f(3)",
+      "options": [
+        "Change 'print(n)' to 'return n'",
+        "Change + to -",
+        "Remove total",
+        "Print total twice"
+      ],
+      "answer": 0,
+      "explanation": "With 'return n', f(5) is 5 and f(3) is 3, so total = 8. The values now flow into the math."
+    },
+    {
+      "id": "u74l05e04",
+      "type": "multipleChoice",
+      "prompt": "Predict (after the fix):\n\ndef f(n):\n    return n\n\ntotal = f(5) + f(3)\nprint(total)",
+      "options": [
+        "8",
+        "None",
+        "53",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "f(5) is 5, f(3) is 3, so total = 8. Returned values can be added; then we print the 8."
+    },
+    {
+      "id": "u74l05e05",
+      "type": "multipleChoice",
+      "prompt": "A returned value can be used in all of these EXCEPT...",
+      "options": [
+        "nothing — it can be stored, printed, and added",
+        "stored in a variable",
+        "printed",
+        "added to another number"
+      ],
+      "answer": 0,
+      "explanation": "A returned value is a full value: store it, print it, add to it. There's nothing it can't do that a number can."
+    },
+    {
+      "id": "u74l05e06",
+      "type": "fillBlank",
+      "prompt": "Make f hand back the value so it can be added:\n\ndef f(n):\n    ____ n\n\ntotal = f(5) + f(3)",
+      "answer": "return",
+      "acceptable": ["return"],
+      "explanation": "return n hands back the value. Now f(5) + f(3) is 5 + 3 = 8 instead of None + None."
+    },
+    {
+      "id": "u74l05e07",
+      "type": "multipleChoice",
+      "prompt": "Predict both lines:\n\ndef f(n):\n    print(n)\n    return n * 2\n\nx = f(5)\nprint(x)",
+      "options": [
+        "5\n10",
+        "10\n5",
+        "5\n5",
+        "10\n10"
+      ],
+      "answer": 0,
+      "explanation": "f prints 5 (first line), then returns 10 into x, so print(x) shows 10 (second line). A sub-plan CAN do both."
+    },
+    {
+      "id": "u74l05e08",
+      "type": "trueFalse",
+      "prompt": "A sub-plan may both print something AND return something — they're independent actions.",
+      "answer": true,
+      "explanation": "Yes. print shows text; return hands a value back. A sub-plan can do one, the other, or both."
+    },
+    {
+      "id": "u74l05e09",
+      "type": "multipleChoice",
+      "prompt": "REVIEW: what value does a sub-plan hand back if it never returns one?",
+      "options": [
+        "None",
+        "0",
+        "the last printed value",
+        "True"
+      ],
+      "answer": 0,
+      "explanation": "No return means the call is None. That's why doing math on it fails."
+    },
+    {
+      "id": "u74l05e10",
+      "type": "multipleChoice",
+      "prompt": "The idea of this lesson:",
+      "options": [
+        "Only a RETURNED value can flow into later math; a printed value is gone",
+        "printed values can be added later",
+        "return and print both give usable values",
+        "None can be added"
+      ],
+      "answer": 0,
+      "explanation": "If you need to compute with a value afterward, it must be returned. Printing alone leaves you with None."
+    }
+  ]
+}

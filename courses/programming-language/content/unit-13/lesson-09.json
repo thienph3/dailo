@@ -1,0 +1,132 @@
+{
+  "unitId": "u13",
+  "lessonId": "u13l09",
+  "title": "Parentheses inside parentheses",
+  "idea": "You can nest ( ) inside ( ). The innermost one happens first, then work outward.",
+  "exercises": [
+    {
+      "id": "u13l09e01",
+      "type": "multipleChoice",
+      "prompt": "When one ( ) is inside another, which happens first?",
+      "options": [
+        "The innermost one",
+        "The outermost one",
+        "They happen together",
+        "The one on the right"
+      ],
+      "answer": 0,
+      "explanation": "Work from the inside out: the innermost parentheses go first, then the ones around them."
+    },
+    {
+      "id": "u13l09e02",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nprint((2 + (3 * 4)))",
+      "options": [
+        "14",
+        "20",
+        "24",
+        "9"
+      ],
+      "answer": 0,
+      "explanation": "Innermost first: 3 * 4 is 12. Then 2 + 12 is 14. The outer ( ) just wrap the whole thing."
+    },
+    {
+      "id": "u13l09e03",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nprint(((2 + 3) * 4))",
+      "options": [
+        "20",
+        "14",
+        "9",
+        "24"
+      ],
+      "answer": 0,
+      "explanation": "Innermost first: 2 + 3 is 5. Then 5 * 4 is 20."
+    },
+    {
+      "id": "u13l09e04",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nprint((10 - (2 + 3)) * 2)",
+      "options": [
+        "10",
+        "16",
+        "6",
+        "30"
+      ],
+      "answer": 0,
+      "explanation": "Innermost: 2 + 3 is 5. Then 10 - 5 is 5. Then 5 * 2 is 10. Inside out!"
+    },
+    {
+      "id": "u13l09e05",
+      "type": "fillBlank",
+      "prompt": "Fill in the result:\n\nprint((1 + (2 * 3)) * 2)\n\nOutput: ____",
+      "answer": "14",
+      "acceptable": [
+        "14"
+      ],
+      "explanation": "Innermost: 2 * 3 is 6. Then 1 + 6 is 7. Then 7 * 2 is 14."
+    },
+    {
+      "id": "u13l09e06",
+      "type": "orderBlocks",
+      "prompt": "Order the steps for: ((4 + 1) * 2) - 3",
+      "blocks": [
+        "Innermost: 4 + 1 = 5",
+        "Next: 5 * 2 = 10",
+        "Last: 10 - 3 = 7"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Inside out: 4+1 first, then *2, then -3. Final answer 7."
+    },
+    {
+      "id": "u13l09e07",
+      "type": "trueFalse",
+      "prompt": "In ((1 + 2) * (3 + 4)), both inner adds happen before the multiply.",
+      "answer": true,
+      "explanation": "Yes: 1+2 is 3 and 3+4 is 7, both first. Then 3 * 7 is 21."
+    },
+    {
+      "id": "u13l09e08",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nprint((1 + 2) * (3 + 4))",
+      "options": [
+        "21",
+        "10",
+        "11",
+        "24"
+      ],
+      "answer": 0,
+      "explanation": "Both ( ) first: 3 and 7. Then 3 * 7 is 21."
+    },
+    {
+      "id": "u13l09e09",
+      "type": "multipleChoice",
+      "prompt": "Why might you nest parentheses instead of using one big expression?",
+      "options": [
+        "To make a tricky order clear and correct",
+        "To make the computer slower",
+        "Because more brackets look nicer",
+        "It is required for every sum"
+      ],
+      "answer": 0,
+      "explanation": "Nesting spells out exactly which parts go first, so a complex calculation stays correct and readable."
+    },
+    {
+      "id": "u13l09e10",
+      "type": "multipleChoice",
+      "prompt": "Review: store a nested result. What prints?\n\ntotal = (2 + (4 * 2)) * 3\nprint(total)",
+      "options": [
+        "30",
+        "18",
+        "24",
+        "12"
+      ],
+      "answer": 0,
+      "explanation": "Innermost: 4 * 2 is 8. Then 2 + 8 is 10. Then 10 * 3 is 30. total holds 30."
+    }
+  ]
+}

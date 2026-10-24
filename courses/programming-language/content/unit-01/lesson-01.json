@@ -1,0 +1,130 @@
+{
+  "unitId": "u01",
+  "lessonId": "u01l01",
+  "title": "A computer follows instructions",
+  "idea": "A program is a list of instructions the computer does exactly, in order. No code yet — just the idea.",
+  "exercises": [
+    {
+      "id": "u01l01e01",
+      "type": "multipleChoice",
+      "prompt": "What is a 'program'?",
+      "options": [
+        "A list of instructions a computer follows",
+        "A kind of computer",
+        "A picture on the screen",
+        "A person who uses a computer"
+      ],
+      "answer": 0,
+      "explanation": "A program is just a list of instructions. The computer follows them one by one."
+    },
+    {
+      "id": "u01l01e02",
+      "type": "trueFalse",
+      "prompt": "A computer does exactly what its instructions say — nothing more, nothing less.",
+      "answer": true,
+      "explanation": "Computers follow instructions literally. If something goes wrong, it's almost always the instructions, not the computer."
+    },
+    {
+      "id": "u01l01e03",
+      "type": "trueFalse",
+      "prompt": "A computer can guess what you meant if your instructions are unclear.",
+      "answer": false,
+      "explanation": "It can't guess. It does exactly what you wrote. Being clear and exact is the whole job."
+    },
+    {
+      "id": "u01l01e04",
+      "type": "multipleChoice",
+      "prompt": "You tell a computer: 1) pour water, 2) add coffee, 3) stir. In what order does it do them?",
+      "options": [
+        "1, 2, 3 — in order",
+        "All at once",
+        "3, 2, 1 — backwards",
+        "Whichever it prefers"
+      ],
+      "answer": 0,
+      "explanation": "Instructions run top to bottom, in order. Order matters — we'll see that a lot."
+    },
+    {
+      "id": "u01l01e05",
+      "type": "multipleChoice",
+      "prompt": "Which of these is most like a computer program?",
+      "options": [
+        "A recipe: a list of steps to follow in order",
+        "A photograph",
+        "A song playing",
+        "An empty box"
+      ],
+      "answer": 0,
+      "explanation": "A recipe is a perfect everyday program: ordered steps that produce a result."
+    },
+    {
+      "id": "u01l01e06",
+      "type": "matchPairs",
+      "prompt": "Match each word to what it means.",
+      "pairs": [
+        {
+          "left": "Program",
+          "right": "A list of instructions"
+        },
+        {
+          "left": "Instruction",
+          "right": "One single step to do"
+        },
+        {
+          "left": "Run",
+          "right": "Make the computer follow the steps"
+        }
+      ],
+      "explanation": "A program is made of instructions; to 'run' it is to make the computer follow them."
+    },
+    {
+      "id": "u01l01e07",
+      "type": "orderBlocks",
+      "prompt": "Put these morning steps in a sensible order.",
+      "blocks": [
+        "Wake up",
+        "Get out of bed",
+        "Eat breakfast"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Programs are about order. You can't eat breakfast before waking up — the computer needs the right sequence too."
+    },
+    {
+      "id": "u01l01e08",
+      "type": "trueFalse",
+      "prompt": "The order of instructions can change the result.",
+      "answer": true,
+      "explanation": "Putting your socks on after your shoes gives a very different result. Order matters in programs too."
+    },
+    {
+      "id": "u01l01e09",
+      "type": "multipleChoice",
+      "prompt": "If a program does something wrong, what is the most likely reason?",
+      "options": [
+        "The instructions told it to",
+        "The computer got bored",
+        "The computer changed its mind",
+        "Computers are random"
+      ],
+      "answer": 0,
+      "explanation": "The computer only did what it was told. Fixing a program means fixing the instructions."
+    },
+    {
+      "id": "u01l01e10",
+      "type": "multipleChoice",
+      "prompt": "You're about to write your first instruction for the computer. What should you expect it to do?",
+      "options": [
+        "Exactly what the instruction says",
+        "Something close to what you meant",
+        "Whatever looks best",
+        "Nothing until you ask twice"
+      ],
+      "answer": 0,
+      "explanation": "Exactly what you say. Next lesson, you'll give it its first real instruction."
+    }
+  ]
+}

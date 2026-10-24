@@ -1,0 +1,103 @@
+{
+  "unitId": "u11",
+  "lessonId": "u11l08",
+  "title": "Solve it: rectangle area",
+  "idea": "GUIDED PROBLEM. A named formula (area = width * height) framed as a plan. Less scaffolding — learner drives more steps.",
+  "problem": "A rectangle is 7 wide and 4 tall. Show its area.",
+  "exercises": [
+    {
+      "id": "u11l08e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: A rectangle is 7 wide, 4 tall. Show its area.\n\nWhat are the inputs and output?",
+      "options": [
+        "Inputs: width 7, height 4. Output: the area",
+        "Input: area. Output: width",
+        "Inputs: none. Output: 7",
+        "Input: 28. Output: 28"
+      ],
+      "answer": 0,
+      "explanation": "Inputs are the two sides; output is the area."
+    },
+    {
+      "id": "u11l08e02",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Area of a rectangle is width times height. Which operation is that?",
+      "options": ["Multiply", "Add", "Subtract", "Divide"],
+      "answer": 0,
+      "explanation": "Area = width * height, a multiplication."
+    },
+    {
+      "id": "u11l08e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "By hand: 7 wide, 4 tall. Area = ?",
+      "options": ["28", "11", "22", "3"],
+      "answer": 0,
+      "explanation": "7 * 4 = 28. Your check value."
+    },
+    {
+      "id": "u11l08e04",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code it.",
+      "blocks": ["area = width * height", "height = 4", "width = 7", "print(area)"],
+      "answer": [2, 1, 0, 3],
+      "explanation": "Store width, store height, area = width * height, print area."
+    },
+    {
+      "id": "u11l08e05",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Complete:\n\nwidth = 7\nheight = 4\narea = width ____ height\nprint(area)",
+      "answer": "*",
+      "acceptable": ["*"],
+      "explanation": "Multiply: area = 28."
+    },
+    {
+      "id": "u11l08e06",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Output 28, example 28. Verdict?",
+      "options": ["Passes", "Fails", "Unknown", "Rewrite example"],
+      "answer": 0,
+      "explanation": "Matches — correct."
+    },
+    {
+      "id": "u11l08e07",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "New rectangle: width=10, height=3. print(area) shows?",
+      "options": ["30", "13", "7", "103"],
+      "answer": 0,
+      "explanation": "10 * 3 = 30."
+    },
+    {
+      "id": "u11l08e08",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "A square has all sides equal. For a square of side 5, area = ?  Which plan works?",
+      "options": ["side * side", "side + side", "side * 4", "side / 2"],
+      "answer": 0,
+      "explanation": "A square is a rectangle with width = height, so area = side * side = 25. (side * 4 is the perimeter, not area.)"
+    },
+    {
+      "id": "u11l08e09",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Code the square's area for side 5:\n\nside = 5\narea = side ____ side\nprint(area)",
+      "answer": "*",
+      "acceptable": ["*"],
+      "explanation": "side * side = 25. You reused the rectangle idea for a new shape — pattern transfer."
+    },
+    {
+      "id": "u11l08e10",
+      "type": "trueFalse",
+      "uepcc": "P",
+      "prompt": "Recognizing that a square is 'just a rectangle with equal sides' let you reuse a plan you already knew.",
+      "answer": true,
+      "explanation": "That's pattern recognition — spotting that a new problem has the same shape as one you've solved."
+    }
+  ]
+}

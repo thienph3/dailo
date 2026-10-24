@@ -1,0 +1,141 @@
+{
+  "unitId": "u08",
+  "lessonId": "u08l10",
+  "title": "Putting it together",
+  "idea": "Review: store a value, show it, reuse it, and mix with plain text — bringing back print from earlier units.",
+  "exercises": [
+    {
+      "id": "u08l10e01",
+      "type": "multipleChoice",
+      "prompt": "Review: what does print(\"Hi there\") show?",
+      "options": [
+        "Hi there",
+        "\"Hi there\"",
+        "a box named Hi there",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "From earlier units: quotes mean plain text, shown exactly. Hi there."
+    },
+    {
+      "id": "u08l10e02",
+      "type": "multipleChoice",
+      "prompt": "What does this show?\n\ncoins = 25\nprint(coins)",
+      "options": [
+        "25",
+        "coins",
+        "\"25\"",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "print(coins) opens the box and shows its value: 25."
+    },
+    {
+      "id": "u08l10e03",
+      "type": "trueFalse",
+      "prompt": "print(gems) shows the VALUE in the box, while print(\"gems\") shows the WORD gems.",
+      "answer": true,
+      "explanation": "The key idea of this unit: quotes = text, no quotes = the box's value."
+    },
+    {
+      "id": "u08l10e04",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nprint(\"Loading\")\nlevel = 3\nprint(level)\nprint(level)",
+      "options": [
+        "Loading, then 3, then 3",
+        "Loading, then 3",
+        "3, then 3, then Loading",
+        "Loading, then level, then level"
+      ],
+      "answer": 0,
+      "explanation": "Text first, then the saved value 3 twice. Reusing the box gives 3 each time."
+    },
+    {
+      "id": "u08l10e05",
+      "type": "orderBlocks",
+      "prompt": "Arrange a tiny program: store a value, show a label, then show the value.",
+      "blocks": [
+        "stars = 5",
+        "print(\"Stars earned:\")",
+        "print(stars)"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Store, label, reveal. The box kept 5 until the last line needed it."
+    },
+    {
+      "id": "u08l10e06",
+      "type": "multipleChoice",
+      "prompt": "Which line is the MISTAKE if you want to show the value stored in year?",
+      "options": [
+        "print(\"year\")",
+        "print(year)",
+        "year = 2026",
+        "None are mistakes"
+      ],
+      "answer": 0,
+      "explanation": "print(\"year\") shows the word year, not the value. Drop the quotes: print(year)."
+    },
+    {
+      "id": "u08l10e07",
+      "type": "matchPairs",
+      "prompt": "Match each line to what it does.",
+      "pairs": [
+        {
+          "left": "points = 8",
+          "right": "stores 8 in a box named points"
+        },
+        {
+          "left": "print(points)",
+          "right": "shows the value in the box"
+        },
+        {
+          "left": "print(\"points\")",
+          "right": "shows the word points"
+        }
+      ],
+      "explanation": "Storing fills a box; print with no quotes reads it; print with quotes shows plain text."
+    },
+    {
+      "id": "u08l10e08",
+      "type": "multipleChoice",
+      "prompt": "Two boxes:\n\nbig = 10\nsmall = 2\nprint(small)\nprint(big)\n\nWhat shows?",
+      "options": [
+        "2, then 10",
+        "10, then 2",
+        "12",
+        "small, then big"
+      ],
+      "answer": 0,
+      "explanation": "Each box keeps its own value. Printed in order: small (2), then big (10)."
+    },
+    {
+      "id": "u08l10e09",
+      "type": "trueFalse",
+      "prompt": "You can store a value in step 1 and still use it in step 3, even with a line in between.",
+      "answer": true,
+      "explanation": "Yes — that's remembering a value for a later step. The box holds on until you need it."
+    },
+    {
+      "id": "u08l10e10",
+      "type": "tapTokens",
+      "prompt": "Finish the program: the box treats holds a value. Build the line that shows it.",
+      "tokens": [
+        "print",
+        "(",
+        "treats",
+        ")"
+      ],
+      "answer": [
+        "print",
+        "(",
+        "treats",
+        ")"
+      ],
+      "explanation": "print(treats) — no quotes — shows the saved value. You've learned variables. Well done!"
+    }
+  ]
+}

@@ -1,0 +1,143 @@
+{
+  "unitId": "u84",
+  "lessonId": "u84l09",
+  "title": "Loop back: spot the right tool fast",
+  "idea": "LOOP (review). Rapid mixed recognition across all laps — read a tiny snippet or a phrase and name what it does or which tool fits.",
+  "exercises": [
+    {
+      "id": "u84l09e01",
+      "type": "multipleChoice",
+      "prompt": "What does this snippet compute?\n\nc = 0\nfor x in nums:\n    if x < 0:\n        c = c + 1",
+      "options": [
+        "How many numbers are negative (count with a condition)",
+        "The total of the numbers",
+        "The biggest number",
+        "The average"
+      ],
+      "answer": 0,
+      "explanation": "A counter that grows only when x < 0 counts the negatives. Reading the shape tells you the pattern."
+    },
+    {
+      "id": "u84l09e02",
+      "type": "multipleChoice",
+      "prompt": "What does this compute?\n\nbest = nums[0]\nfor x in nums:\n    if x > best:\n        best = x",
+      "options": [
+        "The biggest number (track the biggest)",
+        "The smallest number",
+        "The total",
+        "The count"
+      ],
+      "answer": 0,
+      "explanation": "Seed with the first, update on anything larger — the max pattern by hand. Recognizing it at a glance is the goal."
+    },
+    {
+      "id": "u84l09e03",
+      "type": "multipleChoice",
+      "prompt": "Phrase: 'show the running total of a list'. Which tool?",
+      "options": [
+        "A loop with an accumulator starting at 0",
+        "An if/else",
+        "input()",
+        "A single print"
+      ],
+      "answer": 0,
+      "explanation": "A running total is an accumulator: total = 0, then add each item in a loop. No sum() in this course."
+    },
+    {
+      "id": "u84l09e04",
+      "type": "multipleChoice",
+      "prompt": "Phrase: 'return 1 if a number is even, else 0'. Which tool?",
+      "options": [
+        "A helper with if/else using the remainder (% 2 == 0)",
+        "A sum",
+        "A filter",
+        "Track the biggest"
+      ],
+      "answer": 0,
+      "explanation": "Even means n % 2 == 0. A decision helper returns 1 or 0 — conditions (Lap 2) plus the % operator (Lap 0)."
+    },
+    {
+      "id": "u84l09e05",
+      "type": "matchPairs",
+      "prompt": "Match each snippet idea to its pattern.",
+      "pairs": [
+        {
+          "left": "total = total + x in a loop",
+          "right": "Sum"
+        },
+        {
+          "left": "kept.append(x) when x passes",
+          "right": "Filter"
+        },
+        {
+          "left": "c = c + 1 when x passes",
+          "right": "Count with condition"
+        },
+        {
+          "left": "if x > best: best = x",
+          "right": "Track the biggest"
+        }
+      ],
+      "explanation": "Each tiny shape is a signature of one pattern. Fast recognition speeds up both writing and debugging."
+    },
+    {
+      "id": "u84l09e06",
+      "type": "multipleChoice",
+      "prompt": "What does len(nums) give, and what must it NOT be used for?",
+      "options": [
+        "It gives the SIZE of the list; do not use it to add the list up",
+        "It gives the total; use it instead of a sum loop",
+        "It gives the biggest item",
+        "It gives the first item"
+      ],
+      "answer": 0,
+      "explanation": "len is the count of items — allowed for size. Summing is done by hand with a loop, never by a builtin."
+    },
+    {
+      "id": "u84l09e07",
+      "type": "trueFalse",
+      "prompt": "A helper that returns a value can be composed into another call; one that only prints cannot.",
+      "answer": true,
+      "explanation": "Yes. return feeds the next step; print just shows. Composition needs returned values."
+    },
+    {
+      "id": "u84l09e08",
+      "type": "multipleChoice",
+      "prompt": "Phrase: 'the average, guarding an empty list'. Which parts?",
+      "options": [
+        "Empty guard, then sum for the total, then divide by len",
+        "Just divide by len",
+        "Track the biggest, then divide",
+        "Filter, then count"
+      ],
+      "answer": 0,
+      "explanation": "Average = total / count, with an empty guard first so you never divide by 0. Several laps combine in one small helper."
+    },
+    {
+      "id": "u84l09e09",
+      "type": "multipleChoice",
+      "prompt": "Phrase: 'keep only the passing scores'. Which tool?",
+      "options": [
+        "A filter: empty list, append scores that pass",
+        "A sum",
+        "A counter",
+        "A single comparison"
+      ],
+      "answer": 0,
+      "explanation": "Keeping a subset is a filter — build a new list of the items that pass the test."
+    },
+    {
+      "id": "u84l09e10",
+      "type": "multipleChoice",
+      "prompt": "The loop-back idea:",
+      "options": [
+        "Recognizing patterns and tools quickly lets you break any problem into parts you already know how to solve",
+        "Every problem needs a brand-new idea",
+        "Patterns are impossible to tell apart",
+        "len can replace a sum loop"
+      ],
+      "answer": 0,
+      "explanation": "Fast recognition is the payoff of all the laps. Once you see the pattern in a part, you know the helper to write."
+    }
+  ]
+}

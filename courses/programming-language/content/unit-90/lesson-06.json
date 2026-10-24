@@ -1,0 +1,132 @@
+{
+  "unitId": "u90",
+  "lessonId": "u90l06",
+  "title": "Count the attempts",
+  "idea": "TOOL + review: combine validation with a counter (multiple state) to track how many tries it took.",
+  "exercises": [
+    {
+      "type": "multipleChoice",
+      "prompt": "You want to know how many TRIES it took the user to enter a valid value. What do you add to the validation loop?",
+      "options": [
+        "A counter that bumps up once per attempt",
+        "Nothing",
+        "A second input",
+        "A longer message"
+      ],
+      "answer": 0,
+      "explanation": "A running counter inside (or around) the loop records attempts. This reuses multiple state from the previous unit.",
+      "id": "u90l06e01"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Predict:\n\ntries = 1\nn = int(input())\nwhile n < 1:\n    tries = tries + 1\n    n = int(input())\nprint(tries)\n\nUser types 0, 0, 4. What prints?",
+      "options": [
+        "3",
+        "2",
+        "1",
+        "4"
+      ],
+      "answer": 0,
+      "explanation": "The first read is attempt 1. Two bad 0s each add 1 to tries (2, then 3). The valid 4 ends the loop. tries = 3.",
+      "id": "u90l06e02"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Starting 'tries' at 1 counts the very first input as the first attempt.",
+      "answer": true,
+      "explanation": "True. The read before the loop is attempt one, so tries starts at 1 and the loop adds one per retry.",
+      "id": "u90l06e03"
+    },
+    {
+      "type": "fillBlank",
+      "prompt": "Complete the attempt counter:\n\ntries = 1\nn = int(input())\nwhile n < 1:\n    tries = tries ____ 1\n    n = int(input())\nprint(tries)",
+      "answer": "+",
+      "acceptable": [
+        "+"
+      ],
+      "explanation": "tries = tries + 1 adds one per retry - a counter living alongside the validation.",
+      "id": "u90l06e04"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "This mixes which two ideas you've learned?",
+      "options": [
+        "A validation loop AND a running counter (multiple state)",
+        "Two prints",
+        "Two inputs only",
+        "Lists and strings"
+      ],
+      "answer": 0,
+      "explanation": "It's validation (this unit) plus a counter (last unit's multiple state) - old tools combined, no new syntax.",
+      "id": "u90l06e05"
+    },
+    {
+      "type": "orderBlocks",
+      "prompt": "Arrange a validator that counts attempts.",
+      "blocks": [
+        "tries = 1",
+        "n = int(input())",
+        "while n < 1:",
+        "    tries = tries + 1",
+        "    n = int(input())",
+        "print(n, tries)"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "explanation": "Start the counter, read once, loop while invalid bumping tries and re-reading, then report both.",
+      "id": "u90l06e06"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Predict: user types a valid 9 on the FIRST try (rule: at least 1). What does 'tries' print?",
+      "options": [
+        "1",
+        "0",
+        "2",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "Valid first input skips the loop, so tries stays at its start of 1. One attempt, no retries.",
+      "id": "u90l06e07"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "The counter is a running value that follows its own rule, exactly like totals and counts last unit.",
+      "answer": true,
+      "explanation": "True. It initialises before, updates inside, and is read after - the multiple-state recipe again.",
+      "id": "u90l06e08"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Why might counting attempts be useful?",
+      "options": [
+        "To report, warn, or (later) limit how many tries a user gets",
+        "It is never useful",
+        "To slow the program",
+        "To change the input"
+      ],
+      "answer": 0,
+      "explanation": "Knowing the attempt count lets you give feedback or set a limit - practical touches built from tools you already have.",
+      "id": "u90l06e09"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "The lesson:",
+      "options": [
+        "Validation and a counter combine cleanly - two old tools, one loop",
+        "Counting needs new syntax",
+        "You can't count inside a while",
+        "Validation forbids counters"
+      ],
+      "answer": 0,
+      "explanation": "Stacking a counter onto a validation loop is combining skills, the whole spirit of this lap.",
+      "id": "u90l06e10"
+    }
+  ]
+}

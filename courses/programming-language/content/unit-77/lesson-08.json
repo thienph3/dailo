@@ -1,0 +1,136 @@
+{
+  "unitId": "u77",
+  "lessonId": "u77l08",
+  "title": "Mixed review: scope and the tools so far",
+  "idea": "TOOL. Mixed review: scope alongside variables, loops, and helper-in-a-sum.",
+  "exercises": [
+    {
+      "type": "multipleChoice",
+      "prompt": "REVIEW (variables): after total = 3 + 4, total holds...",
+      "options": [
+        "7",
+        "34",
+        "3",
+        "4"
+      ],
+      "answer": 0,
+      "explanation": "3 + 4 = 7.",
+      "id": "u77l08e01"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "REVIEW (loops): for the list [2, 4], a running total starting at 0 ends at...",
+      "options": [
+        "6",
+        "2",
+        "4",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "0+2+4 = 6.",
+      "id": "u77l08e02"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "SCOPE: a variable made inside a function is...",
+      "options": [
+        "private to that function",
+        "visible everywhere",
+        "never usable",
+        "the same as a return"
+      ],
+      "answer": 0,
+      "explanation": "Private — share via return.",
+      "id": "u77l08e03"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Predict:\n\ndef f(n):\n    doubled = n * 2\n    return doubled\n\nprint(f(7))",
+      "options": [
+        "14",
+        "7",
+        "doubled",
+        "error"
+      ],
+      "answer": 0,
+      "explanation": "f returns 14.",
+      "id": "u77l08e04"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "print(doubled) after that call would error.",
+      "answer": true,
+      "explanation": "doubled is private to f.",
+      "id": "u77l08e05"
+    },
+    {
+      "type": "orderBlocks",
+      "prompt": "REVIEW (helper in a sum): arrange correctly.",
+      "blocks": [
+        "def sq(n):",
+        "    return n * n",
+        "print(sq(3) + sq(4))"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "9 + 16 = 25.",
+      "id": "u77l08e06"
+    },
+    {
+      "type": "fillBlank",
+      "prompt": "REVIEW: hand back the value:\n\ndef f(n):\n    r = n + 10\n    ____ r",
+      "answer": "return",
+      "acceptable": [
+        "return"
+      ],
+      "explanation": "return r shares n + 10.",
+      "id": "u77l08e07"
+    },
+    {
+      "type": "multiSelect",
+      "prompt": "Which are TRUE about scope? (choose all)",
+      "options": [
+        "Inside names are private",
+        "return shares a value",
+        "two functions can reuse a name",
+        "inside names stay after the call"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "The first three are true; inside names vanish when the function ends.",
+      "id": "u77l08e08"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "REVIEW (return vs print): to USE a result later you need...",
+      "options": [
+        "return",
+        "print",
+        "input",
+        "a loop"
+      ],
+      "answer": 0,
+      "explanation": "return hands the value back for later use.",
+      "id": "u77l08e09"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Why scope matters for bigger programs:",
+      "options": [
+        "Sub-plans stay independent and safe to combine",
+        "It slows things down",
+        "It hides all variables",
+        "It removes return"
+      ],
+      "answer": 0,
+      "explanation": "Independent sub-plans are easy to compose.",
+      "id": "u77l08e10"
+    }
+  ]
+}

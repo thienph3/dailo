@@ -1,0 +1,132 @@
+{
+  "unitId": "u64",
+  "lessonId": "u64l04",
+  "title": "Stopping early with break",
+  "idea": "TOOL: once found, you can stop searching with break — no need to check the rest. Predict behaviour.",
+  "exercises": [
+    {
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nnums = [3, 8, 8, 1]\ntarget = 8\nfound = False\nfor n in nums:\n    if n == target:\n        found = True\n        break\nprint(found)",
+      "options": [
+        "True",
+        "False",
+        "8",
+        "[8, 8]"
+      ],
+      "answer": 0,
+      "explanation": "The first 8 sets found to True and break stops the loop. The answer is still True — you found it.",
+      "id": "u64l04e01"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Why use break after setting found = True?",
+      "options": [
+        "once you know it is present, checking the rest is wasted work",
+        "break deletes the list",
+        "break makes found False",
+        "it is required by Python"
+      ],
+      "answer": 0,
+      "explanation": "A yes/no only needs ONE match. break stops early so you do not scan items you no longer need to check.",
+      "id": "u64l04e02"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Adding break after a match does not change WHETHER the value was found — only how soon you stop.",
+      "answer": true,
+      "explanation": "found is already True before break. break just ends the loop early; the yes/no answer is the same.",
+      "id": "u64l04e03"
+    },
+    {
+      "type": "fillBlank",
+      "prompt": "Stop the search as soon as you find the target:\n\nfor n in nums:\n    if n == target:\n        found = True\n        ____",
+      "answer": "break",
+      "acceptable": [
+        "break"
+      ],
+      "explanation": "break ends the loop immediately. With a yes/no search, one match is enough to stop.",
+      "id": "u64l04e04"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nnums = [5, 2, 9]\ntarget = 2\nfound = False\nfor n in nums:\n    if n == target:\n        found = True\n        break\nif found:\n    print(\"present\")\nelse:\n    print(\"absent\")",
+      "options": [
+        "present",
+        "absent",
+        "True",
+        "2"
+      ],
+      "answer": 0,
+      "explanation": "2 is the second item; it sets found True and break stops. The message is 'present'.",
+      "id": "u64l04e05"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "If the target is NOT in the list, what does break do?",
+      "options": [
+        "nothing — break only runs on a match, which never happens, so the loop finishes normally",
+        "it stops the loop at the start",
+        "it sets found True anyway",
+        "it crashes"
+      ],
+      "answer": 0,
+      "explanation": "break is inside the if, so with no match it never runs. The loop checks every item and found stays False.",
+      "id": "u64l04e06"
+    },
+    {
+      "type": "orderBlocks",
+      "prompt": "Arrange an early-stopping search.",
+      "blocks": [
+        "found = False",
+        "for n in nums:",
+        "    if n == target:",
+        "        found = True",
+        "        break",
+        "print(found)"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "explanation": "Flag starts False, loop compares each item, and on a match you set True and break out early.",
+      "id": "u64l04e07"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "With break, a search can finish before reaching the end of the list.",
+      "answer": true,
+      "explanation": "As soon as it finds the target it breaks out, so it need not visit the remaining items.",
+      "id": "u64l04e08"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nnums = [1, 2, 3]\ntarget = 9\nfound = False\nfor n in nums:\n    if n == target:\n        found = True\n        break\nprint(found)",
+      "options": [
+        "False",
+        "True",
+        "9",
+        "[]"
+      ],
+      "answer": 0,
+      "explanation": "9 is absent, so the if never runs, break never runs, and found stays False after the full scan.",
+      "id": "u64l04e09"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "For a plain yes/no search, break is...",
+      "options": [
+        "a nice speed-up, since one match is all you need",
+        "required or the code is wrong",
+        "a way to change the answer",
+        "only for sums"
+      ],
+      "answer": 0,
+      "explanation": "break is optional but efficient: the answer cannot change once found is True, so you may as well stop.",
+      "id": "u64l04e10"
+    }
+  ]
+}

@@ -1,0 +1,147 @@
+{
+  "unitId": "u31",
+  "lessonId": "u31l03",
+  "title": "Solve it: yes or no answer",
+  "idea": "GUIDED. UEPCC comparing a typed word with string comparison to branch.",
+  "problem": "Ask 'Do you want to continue? (yes/no)'. If they type yes, print 'Continuing'; otherwise print 'Stopping'.",
+  "exercises": [
+    {
+      "id": "u31l03e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: ask yes/no, print 'Continuing' or 'Stopping'.\n\nWhat is the OUTPUT?",
+      "options": [
+        "'Continuing' or 'Stopping'",
+        "The word 'yes'",
+        "A number",
+        "The question text"
+      ],
+      "answer": 0,
+      "explanation": "The output is one of two messages. The input is a word, so we will compare words."
+    },
+    {
+      "id": "u31l03e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "The answer the user types is a word. Do we need int() here?",
+      "options": [
+        "No, we compare the text as-is",
+        "Yes, always use int()",
+        "Yes, to make it a float",
+        "We must delete it first"
+      ],
+      "answer": 0,
+      "explanation": "No — we are comparing words, not doing math, so we keep it as the string input() returns."
+    },
+    {
+      "id": "u31l03e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Work it by hand: the user types yes. What prints?",
+      "options": [
+        "Continuing",
+        "Stopping",
+        "yes",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "yes matches the yes case, so 'Continuing'. This is your check value."
+    },
+    {
+      "id": "u31l03e04",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Another by hand: the user types no. What prints?",
+      "options": [
+        "Stopping",
+        "Continuing",
+        "no",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "no does not match yes, so the else runs: 'Stopping'. Test the failing side too."
+    },
+    {
+      "id": "u31l03e05",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Plan: how do we check if the typed word equals \"yes\"?",
+      "options": [
+        "answer == \"yes\"",
+        "answer = \"yes\"",
+        "answer % \"yes\"",
+        "answer + \"yes\""
+      ],
+      "answer": 0,
+      "explanation": "Compare the variable to the text \"yes\" with ==. String comparison checks exact match."
+    },
+    {
+      "id": "u31l03e06",
+      "type": "trueFalse",
+      "uepcc": "P",
+      "prompt": "\"yes\" and \"Yes\" are the same to Python's == comparison.",
+      "answer": false,
+      "explanation": "They differ — capital Y is a different character. String comparison is exact and case-sensitive."
+    },
+    {
+      "id": "u31l03e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Arrange the code to match the plan.",
+      "blocks": [
+        "answer = input(\"Continue? (yes/no) \")",
+        "if answer == \"yes\":",
+        "    print(\"Continuing\")",
+        "else:",
+        "    print(\"Stopping\")"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "explanation": "Read the answer, compare it to \"yes\", print the matching message."
+    },
+    {
+      "id": "u31l03e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Complete the comparison:\n\nanswer = input(\"Continue? (yes/no) \")\nif answer ____ \"yes\":\n    print(\"Continuing\")\nelse:\n    print(\"Stopping\")",
+      "answer": "==",
+      "acceptable": [
+        "=="
+      ],
+      "explanation": "Use == to test equality. One = would assign \"yes\" to answer instead of testing it."
+    },
+    {
+      "id": "u31l03e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check with the first example: the user types yes. What prints?",
+      "options": [
+        "Continuing",
+        "Stopping",
+        "yes",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "answer == \"yes\" is True, so 'Continuing' prints — matching your hand answer."
+    },
+    {
+      "id": "u31l03e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Re-check with a fresh input: the user types maybe. What prints?",
+      "options": [
+        "Stopping",
+        "Continuing",
+        "maybe",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "maybe is not \"yes\", so the else runs: 'Stopping'. Anything other than yes stops."
+    }
+  ]
+}

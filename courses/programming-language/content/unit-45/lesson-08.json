@@ -1,0 +1,139 @@
+{
+  "unitId": "u45",
+  "lessonId": "u45l08",
+  "title": "Choosing for vs while",
+  "idea": "Use for with range when you know the count; use while when a condition decides.",
+  "exercises": [
+    {
+      "type": "multipleChoice",
+      "prompt": "You know you need exactly 7 repeats. Which loop is the natural fit?",
+      "options": [
+        "for with range(7)",
+        "while",
+        "neither",
+        "both are wrong"
+      ],
+      "answer": 0,
+      "explanation": "A known count is a for-loop job: for i in range(7) runs exactly seven times, no update bug possible.",
+      "id": "u45l08e01"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "You must keep asking until the user types a correct password. Which loop fits?",
+      "options": [
+        "while -- the number of tries isn't known ahead of time",
+        "for with a fixed range",
+        "neither",
+        "a single if"
+      ],
+      "answer": 0,
+      "explanation": "An unknown number of repeats, decided by a condition, is a while job. You can't put a fixed count on it.",
+      "id": "u45l08e02"
+    },
+    {
+      "type": "matchPairs",
+      "prompt": "Match each situation to the better loop.",
+      "pairs": [
+        {
+          "left": "Print every number 1..10",
+          "right": "for with range"
+        },
+        {
+          "left": "Count down until a total reaches 0",
+          "right": "while"
+        },
+        {
+          "left": "Repeat a fixed 5 times",
+          "right": "for with range"
+        },
+        {
+          "left": "Keep going until input is valid",
+          "right": "while"
+        }
+      ],
+      "explanation": "Known count -> for. Condition decides -> while. Matching the loop to the problem avoids bugs.",
+      "id": "u45l08e03"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "A for-loop over range can't accidentally become infinite the way a while can.",
+      "answer": true,
+      "explanation": "True. range already knows where to stop, so there's no missing-update bug. while trusts you to make progress.",
+      "id": "u45l08e04"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Which of these is better written as a for-loop?\n\ni = 1\nwhile i <= 5:\n    print(i)\n    i = i + 1",
+      "options": [
+        "for i in range(1, 6): print(i)",
+        "Keep it as while, it's required",
+        "It can't be a for-loop",
+        "It needs input()"
+      ],
+      "answer": 0,
+      "explanation": "A fixed count 1..5 is cleaner as for i in range(1, 6). The while version just re-creates range by hand.",
+      "id": "u45l08e05"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Which of these NEEDS a while loop?",
+      "options": [
+        "Keep rolling until you get a 6",
+        "Print 1 to 100",
+        "Repeat exactly 3 times",
+        "Count down from 10 to 1"
+      ],
+      "answer": 0,
+      "explanation": "'Until you get a 6' has no known count -- only a condition decides. That's the while case. The others have known counts.",
+      "id": "u45l08e06"
+    },
+    {
+      "type": "orderBlocks",
+      "prompt": "Order the decision steps for choosing a loop.",
+      "blocks": [
+        "Ask: do I know the number of repeats?",
+        "If yes -> use for with range",
+        "If no -> use while with a condition",
+        "Make sure the loop can stop"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "Decide by whether the count is known. Known -> for. Unknown -> while. Either way, confirm it stops.",
+      "id": "u45l08e07"
+    },
+    {
+      "type": "fillBlank",
+      "prompt": "Rewrite as a for-loop header that prints 0 through 3:\n\nfor i in range(____):\n    print(i)",
+      "answer": "4",
+      "acceptable": [
+        "4"
+      ],
+      "explanation": "range(4) gives 0, 1, 2, 3 -- four numbers. A known count is exactly what range is for.",
+      "id": "u45l08e08"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "You can often rewrite a counting while loop as a for-loop, and it's usually clearer.",
+      "answer": true,
+      "explanation": "True. When the count is known, for with range is shorter and can't forget the update. Pick the clearest tool.",
+      "id": "u45l08e09"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "The one-line rule for choosing:",
+      "options": [
+        "Known count -> for; condition decides -> while",
+        "Always use while",
+        "Always use for",
+        "Flip a coin"
+      ],
+      "answer": 0,
+      "explanation": "Match the loop to the problem: a count you know is for; a stop a condition decides is while.",
+      "id": "u45l08e10"
+    }
+  ]
+}

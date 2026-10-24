@@ -1,0 +1,152 @@
+{
+  "unitId": "u79",
+  "lessonId": "u79l07",
+  "title": "Solve it together: discount then tax",
+  "idea": "GUIDED PROBLEM (UEPCC). Compose two helpers per item: first apply a discount, then add tax, for each price.",
+  "problem": "Each price gets a 10% discount, then 10% tax on the discounted price. For prices [100, 50], show each final price.",
+  "exercises": [
+    {
+      "id": "u79l07e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: discount 10% off, THEN add 10% tax, for each of [100, 50]. Show each final price.\n\nWhat is the OUTPUT?",
+      "options": [
+        "Each item's final price after discount and tax",
+        "One total only",
+        "The count of items",
+        "The discount amount only"
+      ],
+      "answer": 0,
+      "explanation": "The output is each item's final price (two numbers here), after both steps are applied."
+    },
+    {
+      "id": "u79l07e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "Does ORDER matter — discount first, then tax?",
+      "options": [
+        "Yes — tax is applied to the discounted price, so order changes the result",
+        "No, order never matters",
+        "Only for the first item",
+        "Only if prices are equal"
+      ],
+      "answer": 0,
+      "explanation": "Tax is charged on the discounted price. Discount-then-tax and tax-then-discount give different answers, so order matters."
+    },
+    {
+      "id": "u79l07e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example — by hand for 100. Discount 10%: 100 -> 90. Then tax 10%: 90 -> ?",
+      "options": [
+        "99.0",
+        "90.0",
+        "100.0",
+        "110.0"
+      ],
+      "answer": 0,
+      "explanation": "90 + 90 * 0.1 = 99.0. Discount first (90), then tax on 90 gives 99.0 — our check value for the first item."
+    },
+    {
+      "id": "u79l07e04",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example — by hand for 50. Discount: 50 -> 45. Tax: 45 -> ?",
+      "options": [
+        "49.5",
+        "45.0",
+        "50.0",
+        "55.0"
+      ],
+      "answer": 0,
+      "explanation": "45 + 45 * 0.1 = 49.5. So the expected outputs are 99.0 and 49.5."
+    },
+    {
+      "id": "u79l07e05",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Plan — two small jobs. Which pair of helpers fits?",
+      "options": [
+        "discount(price) returns price * 0.9; add_tax(price) returns price + price * 0.1",
+        "one helper that does both secretly",
+        "a helper that prints only",
+        "no helpers, inline everything"
+      ],
+      "answer": 0,
+      "explanation": "Two single-job helpers compose cleanly: discount(price) then add_tax on its result. Each is testable alone."
+    },
+    {
+      "id": "u79l07e06",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Plan the per-item steps (composition order).",
+      "blocks": [
+        "Discount the price first",
+        "Add tax to the discounted price",
+        "Show that final price"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Discount, then tax the discounted value, then show. The inner helper (discount) feeds the outer (add_tax)."
+    },
+    {
+      "id": "u79l07e07",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Code the discount helper (10% off = keep 90%):\n\ndef discount(price):\n    return price * ____",
+      "answer": "0.9",
+      "acceptable": ["0.9"],
+      "explanation": "Keeping 90% means price * 0.9. discount(100) returns 90.0."
+    },
+    {
+      "id": "u79l07e08",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code the loop that composes both helpers per item.",
+      "blocks": [
+        "def add_tax(price):",
+        "    return price + price * 0.1",
+        "for price in [100, 50]:",
+        "    print(add_tax(discount(price)))"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "add_tax(discount(price)): discount runs first, add_tax uses its result. Prints 99.0 then 49.5."
+    },
+    {
+      "id": "u79l07e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check — the code prints 99.0 then 49.5, matching your hand examples. So...",
+      "options": [
+        "It passes",
+        "It fails",
+        "You can't tell",
+        "Change the examples"
+      ],
+      "answer": 0,
+      "explanation": "Both outputs match the hand-worked values. Composing discount then tax is correct."
+    },
+    {
+      "id": "u79l07e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Re-check with price 200. Discount -> 180, tax -> ?",
+      "options": [
+        "198.0",
+        "180.0",
+        "220.0",
+        "200.0"
+      ],
+      "answer": 0,
+      "explanation": "180 + 180 * 0.1 = 198.0. Fresh input, same composition, correct result. You composed two helpers with UEPCC!"
+    }
+  ]
+}

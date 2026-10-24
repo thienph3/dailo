@@ -1,0 +1,166 @@
+{
+  "unitId": "u65",
+  "lessonId": "u65l10",
+  "title": "Solve it: a mixed find-and-keep round",
+  "idea": "GUIDED PROBLEM (review round). Interleaves filter, search, and earlier list tools (sum, max, len) across a couple of small tasks, so the learner picks the right tool each time. Review-heavy, as the last lesson of the unit.",
+  "problem": "Donations today were [20, 5, 50, 5, 35]. Three small tasks: (A) keep the donations of 20 or more; (B) was there a donation of exactly 50? (C) what was the largest donation?",
+  "exercises": [
+    {
+      "id": "u65l10e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "Three tasks on donations = [20, 5, 50, 5, 35]. Match each task to the kind of OUTPUT it needs. Task A: 'keep donations of 20 or more.'",
+      "options": [
+        "A new list (filter)",
+        "A yes/no (search)",
+        "A single biggest value",
+        "An average"
+      ],
+      "answer": 0,
+      "explanation": "'Keep the ones that match' collects items into a new list \u2014 a filter."
+    },
+    {
+      "id": "u65l10e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "Task B: 'was there a donation of exactly 50?' What output?",
+      "options": [
+        "A yes/no (search for presence)",
+        "A new list",
+        "A total",
+        "A count of items"
+      ],
+      "answer": 0,
+      "explanation": "'Was there...?' is a presence question \u2014 a search giving True/False."
+    },
+    {
+      "id": "u65l10e03",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "Task C: 'what was the largest donation?' Which earlier pattern fits?",
+      "options": [
+        "track-the-best: start at the first, keep the larger while looping",
+        "'in' (search)",
+        "append()",
+        "len()"
+      ],
+      "answer": 0,
+      "explanation": "The biggest value comes from the track-the-best pattern (Unit 59): start biggest at the first item, then keep the larger one as you loop."
+    },
+    {
+      "id": "u65l10e04",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example, Task A. By hand, keep 20-or-more from [20, 5, 50, 5, 35]. Which stay?",
+      "options": [
+        "20, 50, 35",
+        "5, 5",
+        "50, 35",
+        "all five"
+      ],
+      "answer": 0,
+      "explanation": "20 (exactly), 50, and 35 qualify; the two 5s do not. Kept list is [20, 50, 35]."
+    },
+    {
+      "id": "u65l10e05",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Examples, Tasks B and C. By hand: is 50 present, and what is the max?",
+      "options": [
+        "Present: yes (True); max: 50",
+        "Present: no; max: 35",
+        "Present: yes; max: 20",
+        "Present: no; max: 50"
+      ],
+      "answer": 0,
+      "explanation": "50 appears, so True; the largest value is 50. Your check values: True and 50."
+    },
+    {
+      "id": "u65l10e06",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code Task A (filter). Arrange the lines.",
+      "blocks": [
+        "big_gifts = []",
+        "donations = [20, 5, 50, 5, 35]",
+        "limit = 20",
+        "for gift in donations:",
+        "    if gift >= limit:",
+        "        big_gifts.append(gift)",
+        "print(big_gifts)"
+      ],
+      "answer": [
+        1,
+        2,
+        0,
+        3,
+        4,
+        5,
+        6
+      ],
+      "explanation": "Store donations and the limit, start big_gifts empty, keep each gift >= limit, then print the list."
+    },
+    {
+      "id": "u65l10e07",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Code Task B (search). Complete it:\n\ndonations = [20, 5, 50, 5, 35]\nwanted = 50\nfound = wanted ____ donations\nprint(found)",
+      "answer": "in",
+      "acceptable": [
+        "in"
+      ],
+      "explanation": "'in' asks whether 50 is present and gives True/False \u2014 the whole search in one line."
+    },
+    {
+      "id": "u65l10e08",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code Task C (largest). Arrange the lines to find the biggest donation with a loop.",
+      "blocks": [
+        "donations = [20, 5, 50, 5, 35]",
+        "biggest = donations[0]",
+        "for gift in donations:",
+        "    if gift > biggest:",
+        "        biggest = gift",
+        "print(biggest)"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "explanation": "Start biggest at the first donation, then walk the list and keep the larger value whenever you find one. That is the track-the-best pattern from Unit 59."
+    },
+    {
+      "id": "u65l10e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check. The code prints [20, 50, 35], then True, then 50. Your hand examples were [20, 50, 35], True, 50. Verdict?",
+      "options": [
+        "All three pass",
+        "All three fail",
+        "Only A passes",
+        "Only C passes"
+      ],
+      "answer": 0,
+      "explanation": "Every output matches its by-hand example, so filter, search, and max each solved their task correctly."
+    },
+    {
+      "id": "u65l10e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "New day, same three plans: donations = [10, 60, 10]. What do A (limit 20), B (wanted 50), and C print?",
+      "options": [
+        "[60], False, 60",
+        "[10, 60, 10], True, 60",
+        "[60], True, 10",
+        "[10, 10], False, 60"
+      ],
+      "answer": 0,
+      "explanation": "A keeps only 60 (>= 20); B finds no 50, so False; C's max is 60. Each tool generalizes to the new inputs \u2014 you've practiced find-and-keep end to end!"
+    }
+  ]
+}

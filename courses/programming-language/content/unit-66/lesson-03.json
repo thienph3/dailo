@@ -1,0 +1,126 @@
+{
+  "unitId": "u66",
+  "lessonId": "u66l03",
+  "title": "The off-by-one: range stops early",
+  "idea": "range(n) goes 0..n-1, so range(len(list)) is right but a stray -1 drops the last item and a +1 runs off the end. Spot the miss.",
+  "exercises": [
+    {
+      "id": "u66l03e01",
+      "type": "multipleChoice",
+      "prompt": "What numbers does range(3) produce?",
+      "options": [
+        "0, 1, 2",
+        "1, 2, 3",
+        "0, 1, 2, 3",
+        "3"
+      ],
+      "answer": 0,
+      "explanation": "range(3) is 0, 1, 2 — it STOPS before 3. Forgetting that it stops early is the classic off-by-one bug."
+    },
+    {
+      "id": "u66l03e02",
+      "type": "trueFalse",
+      "prompt": "range(5) includes the number 5.",
+      "answer": false,
+      "explanation": "No. range(5) is 0,1,2,3,4. It stops one before 5. This 'stops before the stop' rule causes many off-by-one bugs."
+    },
+    {
+      "id": "u66l03e03",
+      "type": "multipleChoice",
+      "prompt": "A list has 4 items: nums = [10, 20, 30, 40]. What is len(nums)?",
+      "options": [
+        "4",
+        "3",
+        "5",
+        "40"
+      ],
+      "answer": 0,
+      "explanation": "len is the count of items: 4. The valid indexes are 0, 1, 2, 3, which is one less than the length."
+    },
+    {
+      "id": "u66l03e04",
+      "type": "multipleChoice",
+      "prompt": "nums = [10, 20, 30, 40]. Which indexes are valid?",
+      "options": [
+        "0, 1, 2, 3",
+        "1, 2, 3, 4",
+        "0, 1, 2, 3, 4",
+        "4"
+      ],
+      "answer": 0,
+      "explanation": "Indexes start at 0, so a 4-item list uses 0,1,2,3. Index 4 is OFF THE END, and using it is an off-by-one error."
+    },
+    {
+      "id": "u66l03e05",
+      "type": "multipleChoice",
+      "prompt": "To visit EVERY index of nums (4 items), which is correct?",
+      "options": [
+        "range(len(nums))",
+        "range(1, len(nums))",
+        "range(len(nums) - 1)",
+        "range(5)"
+      ],
+      "answer": 0,
+      "explanation": "range(len(nums)) = range(4) = 0,1,2,3 — every index, exactly once. range(len-1) would miss the last item."
+    },
+    {
+      "id": "u66l03e06",
+      "type": "multipleChoice",
+      "prompt": "BUGGY: this means to print all 3 items.\n\nnums = [7, 8, 9]\nfor i in range(len(nums) - 1):\n    print(nums[i])\n\nWhat goes wrong?",
+      "options": [
+        "It only prints 7 and 8 — the last item is skipped",
+        "It prints all three correctly",
+        "It crashes immediately",
+        "It prints 9 twice"
+      ],
+      "answer": 0,
+      "explanation": "range(len-1) = range(2) = 0,1, so only nums[0] and nums[1] print. The '- 1' is the off-by-one bug; remove it."
+    },
+    {
+      "id": "u66l03e07",
+      "type": "multipleChoice",
+      "prompt": "BUGGY: nums = [7, 8, 9]; this tries to read every item.\n\nfor i in range(len(nums) + 1):\n    print(nums[i])\n\nWhat happens on the last pass?",
+      "options": [
+        "It tries nums[3], which is off the end, and crashes",
+        "It prints 9",
+        "Nothing, it works fine",
+        "It prints 0"
+      ],
+      "answer": 0,
+      "explanation": "range(len+1) = range(4) = 0,1,2,3, but valid indexes stop at 2. nums[3] is past the end — an off-by-one crash."
+    },
+    {
+      "id": "u66l03e08",
+      "type": "trueFalse",
+      "prompt": "For visiting each item, 'for item in nums' avoids off-by-one index bugs entirely.",
+      "answer": true,
+      "explanation": "True. 'for item in nums' hands you each item with no index math, so there's nothing to be off-by-one about. Prefer it when you don't need positions."
+    },
+    {
+      "id": "u66l03e09",
+      "type": "multipleChoice",
+      "prompt": "Someone's loop misses the last item of a list. The likeliest culprit is...",
+      "options": [
+        "range(len(nums) - 1) instead of range(len(nums))",
+        "using 'for item in nums'",
+        "adding the items",
+        "printing"
+      ],
+      "answer": 0,
+      "explanation": "A '- 1' on the range stops one item early. That's the signature of a 'drops the last one' off-by-one bug."
+    },
+    {
+      "id": "u66l03e10",
+      "type": "multipleChoice",
+      "prompt": "The off-by-one lesson in one sentence:",
+      "options": [
+        "range stops BEFORE its number, and the last index is len - 1",
+        "range always includes its number",
+        "lists start at index 1",
+        "len counts from 0"
+      ],
+      "answer": 0,
+      "explanation": "range(n) is 0..n-1 and the last index is len-1. Keep both facts straight and off-by-one bugs melt away."
+    }
+  ]
+}

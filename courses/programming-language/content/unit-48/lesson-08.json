@@ -1,0 +1,101 @@
+{
+  "unitId": "u48",
+  "lessonId": "u48l08",
+  "title": "Off-by-one: the sneaky loop bug",
+  "idea": "Tracing's biggest payoff: catching off-by-one errors - one pass too many or too few. Learn to check the FIRST and LAST passes carefully.",
+  "exercises": [
+    {
+      "id": "u48l08e01",
+      "type": "multipleChoice",
+      "prompt": "You want to print 1 to 5, but wrote for i in range(1, 5). Tracing i gives:",
+      "options": [
+        "1, 2, 3, 4 - it's MISSING 5",
+        "1, 2, 3, 4, 5 - correct",
+        "1, 2, 3, 4, 5, 6",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "range(1, 5) stops before 5. To include 5 you need range(1, 6). Tracing the last value catches this off-by-one."
+    },
+    {
+      "id": "u48l08e02",
+      "type": "multipleChoice",
+      "prompt": "To print 1 through 5 (including 5), the correct range is:",
+      "options": ["range(1, 6)", "range(1, 5)", "range(5)", "range(0, 5)"],
+      "answer": 0,
+      "explanation": "The stop number isn't included, so use one more than your last value: range(1, 6) gives 1, 2, 3, 4, 5."
+    },
+    {
+      "id": "u48l08e03",
+      "type": "trueFalse",
+      "prompt": "'Off-by-one' means the loop ran one pass too many or one too few.",
+      "answer": true,
+      "explanation": "It's the most common loop bug. Tracing the first and last passes is the cure - you see exactly where it over- or under-runs."
+    },
+    {
+      "id": "u48l08e04",
+      "type": "multipleChoice",
+      "prompt": "Trace: you expected 10 passes but wrote for i in range(1, 10). How many passes actually run?",
+      "options": ["9 - one too few", "10 - correct", "11", "1"],
+      "answer": 0,
+      "explanation": "range(1, 10) is 1..9, only 9 passes. For 10 passes use range(1, 11) or range(10). Count the values to catch it."
+    },
+    {
+      "id": "u48l08e05",
+      "type": "multipleChoice",
+      "prompt": "Trace a while off-by-one:\n\nn = 1\nwhile n <= 5:\n    print(n)\n    n = n + 1\n\nWhat prints?",
+      "options": ["1, 2, 3, 4, 5", "1, 2, 3, 4", "1, 2, 3, 4, 5, 6", "nothing"],
+      "answer": 0,
+      "explanation": "n <= 5 includes 5, so it prints 1 through 5 then stops at n = 6. Using <= vs < changes the last pass - trace it."
+    },
+    {
+      "id": "u48l08e06",
+      "type": "multipleChoice",
+      "prompt": "Change the condition to n < 5 in the loop above. Now what prints?",
+      "options": ["1, 2, 3, 4", "1, 2, 3, 4, 5", "1, 2, 3", "nothing"],
+      "answer": 0,
+      "explanation": "n < 5 stops at 4, so 5 is left out. The single character < vs <= is a classic off-by-one. Always trace the final pass."
+    },
+    {
+      "id": "u48l08e07",
+      "type": "multipleChoice",
+      "prompt": "When hunting an off-by-one, which two passes deserve the closest look?",
+      "options": [
+        "The very first and the very last",
+        "The middle two",
+        "None of them",
+        "Only the first"
+      ],
+      "answer": 0,
+      "explanation": "Off-by-ones hide at the edges: does it start where you meant, and stop where you meant? Trace the first and last passes."
+    },
+    {
+      "id": "u48l08e08",
+      "type": "fillBlank",
+      "prompt": "To make for i in range(____) run exactly 8 passes (i from 0), fill the blank with a number.",
+      "answer": "8",
+      "acceptable": ["8"],
+      "explanation": "range(8) gives 0..7 - eight values, eight passes. The count equals the stop number when you start at 0."
+    },
+    {
+      "id": "u48l08e09",
+      "type": "trueFalse",
+      "prompt": "range(0, 5) and range(5) produce the same values.",
+      "answer": true,
+      "explanation": "Both give 0, 1, 2, 3, 4. When the start is 0 you can leave it out. Knowing this prevents a false off-by-one worry."
+    },
+    {
+      "id": "u48l08e10",
+      "type": "multipleChoice",
+      "prompt": "The deep lesson about off-by-one errors is:",
+      "options": [
+        "A quick trace of the edges catches them before they ever reach the user",
+        "They cannot be avoided",
+        "They only happen in while loops",
+        "They change the screen color"
+      ],
+      "answer": 0,
+      "explanation": "Tracing the first and last passes turns an invisible edge bug into something you spot on paper. That's the power of tracing."
+    }
+  ]
+}

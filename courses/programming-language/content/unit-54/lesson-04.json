@@ -1,0 +1,116 @@
+{
+  "unitId": "u54",
+  "lessonId": "u54l04",
+  "title": "Changing an item in place",
+  "idea": "Introduce item assignment: list[i] = value replaces the item at a position. Visible output; uses indexing from Unit 52.",
+  "exercises": [
+    {
+      "id": "u54l04e01",
+      "type": "multipleChoice",
+      "prompt": "To CHANGE the item at a position, you put the indexed spot on the left of = and the new value on the right. Which line changes the first item of n to 99?",
+      "options": [
+        "n[0] = 99",
+        "n = 99",
+        "n[99] = 0",
+        "n.append(99)"
+      ],
+      "answer": 0,
+      "explanation": "n[0] = 99 replaces the item at position 0 with 99. It's like a variable assignment, but aimed at one spot in the list."
+    },
+    {
+      "id": "u54l04e02",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nn = [10, 20, 30]\nn[1] = 99\nprint(n)",
+      "options": [
+        "[10, 99, 30]",
+        "[99, 20, 30]",
+        "[10, 20, 99]",
+        "[10, 20, 30, 99]"
+      ],
+      "answer": 0,
+      "explanation": "Position 1 is the second item, 20. Assigning n[1] = 99 replaces it, giving [10, 99, 30]. Length is unchanged."
+    },
+    {
+      "id": "u54l04e03",
+      "type": "trueFalse",
+      "prompt": "Changing an item with list[i] = value keeps the list the same length.",
+      "answer": true,
+      "explanation": "You replaced one value in an existing spot. No item was added or removed, so the count stays the same."
+    },
+    {
+      "id": "u54l04e04",
+      "type": "multipleChoice",
+      "prompt": "How is n[1] = 99 different from n.append(99)?",
+      "options": [
+        "Assignment replaces an existing item; append adds a new one at the end",
+        "They do the same thing",
+        "Assignment adds an item; append replaces one",
+        "Both make the list shorter"
+      ],
+      "answer": 0,
+      "explanation": "Assignment changes a spot that's already there (same length). append grows the list by one. Two different jobs."
+    },
+    {
+      "id": "u54l04e05",
+      "type": "fillBlank",
+      "prompt": "Change the LAST item to 0. Fill in the position:\n\nn = [5, 6, 7]\nn[____] = 0\nprint(n)",
+      "answer": "-1",
+      "acceptable": ["-1", "2"],
+      "explanation": "n[-1] = 0 (or n[2] = 0) targets the last spot, giving [5, 6, 0]. You can assign to any valid position, even -1."
+    },
+    {
+      "id": "u54l04e06",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nscores = [70, 80, 90]\nscores[0] = scores[0] + 5\nprint(scores)",
+      "options": [
+        "[75, 80, 90]",
+        "[70, 80, 90]",
+        "[75, 85, 95]",
+        "[80, 80, 90]"
+      ],
+      "answer": 0,
+      "explanation": "scores[0] is 70; 70 + 5 is 75; assigning puts 75 back in spot 0. You can use the old value to compute the new one."
+    },
+    {
+      "id": "u54l04e07",
+      "type": "trueFalse",
+      "prompt": "You can only assign to a position that already exists in the list.",
+      "answer": true,
+      "explanation": "Assignment replaces an EXISTING item. To put something at a brand-new spot past the end, you append instead."
+    },
+    {
+      "id": "u54l04e08",
+      "type": "tapTokens",
+      "prompt": "Arrange tokens to change the item at position 2 of a list named row to 50.",
+      "tokens": ["row", "[", "2", "]", "=", "50"],
+      "answer": ["row", "[", "2", "]", "=", "50"],
+      "explanation": "row[2] = 50 replaces the third item with 50. Indexed spot on the left of =, new value on the right."
+    },
+    {
+      "id": "u54l04e09",
+      "type": "multipleChoice",
+      "prompt": "A list has 3 items. A learner writes n[3] = 100 to add a fourth. Why does it fail?",
+      "options": [
+        "Position 3 doesn't exist yet — assignment can't create a new spot; use append",
+        "You can't assign numbers",
+        "n[3] is the third item",
+        "Nothing fails"
+      ],
+      "answer": 0,
+      "explanation": "Three items fill positions 0, 1, 2. There's no position 3 to assign to. To add a new item, use n.append(100)."
+    },
+    {
+      "id": "u54l04e10",
+      "type": "multipleChoice",
+      "prompt": "What new tool did this lesson add?",
+      "options": [
+        "Item assignment: list[position] = new value",
+        "A way to count items",
+        "A way to make a list",
+        "A way to loop"
+      ],
+      "answer": 0,
+      "explanation": "list[i] = value replaces the item at a position in place. Together with append, you can now grow and change lists."
+    }
+  ]
+}

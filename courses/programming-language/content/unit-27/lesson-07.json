@@ -1,0 +1,155 @@
+{
+  "unitId": "u27",
+  "lessonId": "u27l07",
+  "title": "Solve it: water state from temperature",
+  "idea": "GUIDED. One problem through UEPCC with an elif chain, including spotting a wrong-order approach.",
+  "problem": "Describe water by temperature: 100 or more is 'Steam', 0 or less is 'Ice', otherwise 'Liquid'. Given temp, print the state.",
+  "exercises": [
+    {
+      "id": "u27l07e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: 100+ Steam, 0 or less Ice, else Liquid. Print the state for temp.\n\nWhat is the OUTPUT?",
+      "options": [
+        "One word: Steam, Ice, or Liquid",
+        "The temperature",
+        "A count",
+        "The boiling point"
+      ],
+      "answer": 0,
+      "explanation": "One of three state words. The temperature is the input."
+    },
+    {
+      "id": "u27l07e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "How many buckets does this rule have?",
+      "options": [
+        "Three: Steam, Ice, Liquid",
+        "Two",
+        "Four",
+        "One"
+      ],
+      "answer": 0,
+      "explanation": "Three outcomes - a strong hint that an if/elif/else chain fits."
+    },
+    {
+      "id": "u27l07e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "By hand: temp 25. Which state?",
+      "options": [
+        "Liquid",
+        "Steam",
+        "Ice",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "25 is not 100+ and not 0 or less, so it falls to the else: 'Liquid'. Your check value."
+    },
+    {
+      "id": "u27l07e04",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "By hand: temp 0. Which state?",
+      "options": [
+        "Ice",
+        "Liquid",
+        "Steam",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "'0 or less' includes 0, so 'Ice'. Edge values like 0 are worth checking by hand."
+    },
+    {
+      "id": "u27l07e05",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Someone plans: 'if temp <= 0: Ice / elif temp >= 100: Steam / else: Liquid'. Does the ORDER of the first two matter here?",
+      "options": [
+        "No - the Ice and Steam ranges don't overlap, so either can come first",
+        "Yes - Steam must always be first",
+        "Yes - Ice must always be last",
+        "The code won't run"
+      ],
+      "answer": 0,
+      "explanation": "Because <= 0 and >= 100 can never both be true, their order is safe. Order only matters when ranges could overlap."
+    },
+    {
+      "id": "u27l07e06",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "A WRONG plan writes three separate ifs with no elif. Why is that risky in general?",
+      "options": [
+        "With overlapping tests, more than one branch could fire; elif guarantees exactly one",
+        "Separate ifs are illegal",
+        "elif runs faster than hardware",
+        "Nothing is risky about it"
+      ],
+      "answer": 0,
+      "explanation": "An elif chain stops at the first match, so exactly one bucket wins. Separate ifs can each fire when ranges overlap - a classic bug."
+    },
+    {
+      "id": "u27l07e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Arrange the chain.",
+      "blocks": [
+        "if temp >= 100:",
+        "    print(\"Steam\")",
+        "elif temp <= 0:",
+        "    print(\"Ice\")",
+        "else:",
+        "    print(\"Liquid\")"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "explanation": "Steam test, then Ice test as an elif, then else for everything in between. Exactly one branch runs."
+    },
+    {
+      "id": "u27l07e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Complete the Ice test so exactly 0 counts as Ice:\n\nif temp >= 100:\n    print(\"Steam\")\nelif temp __ 0:\n    print(\"Ice\")",
+      "answer": "<=",
+      "acceptable": [
+        "<="
+      ],
+      "explanation": "<= 0 includes 0 itself. A plain < would leave 0 as 'Liquid', which is wrong."
+    },
+    {
+      "id": "u27l07e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check the first example: temp 25. What prints?",
+      "options": [
+        "Liquid",
+        "Steam",
+        "Ice",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "25 >= 100 False, 25 <= 0 False, so the else: 'Liquid' - matching your hand answer."
+    },
+    {
+      "id": "u27l07e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Re-check the exact edge: temp 100. What prints?",
+      "options": [
+        "Steam",
+        "Liquid",
+        "Ice",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "100 >= 100 is True, so 'Steam'. Testing the boundary proves >= was the right operator."
+    }
+  ]
+}

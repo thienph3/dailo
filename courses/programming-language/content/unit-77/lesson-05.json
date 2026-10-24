@@ -1,0 +1,128 @@
+{
+  "unitId": "u77",
+  "lessonId": "u77l05",
+  "title": "Predict what a sub-plan shares",
+  "idea": "TOOL. Predict exactly which values a sub-plan shares, with mixed review of composing.",
+  "exercises": [
+    {
+      "type": "multipleChoice",
+      "prompt": "Predict:\n\ndef f():\n    a = 6\n    b = 4\n    return a + b\n\nprint(f())",
+      "options": [
+        "10",
+        "6",
+        "4",
+        "error"
+      ],
+      "answer": 0,
+      "explanation": "a and b are private; f returns their sum 10.",
+      "id": "u77l05e01"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "After that, print(a) would...",
+      "options": [
+        "error — a is private",
+        "print 6",
+        "print 10",
+        "print a"
+      ],
+      "answer": 0,
+      "explanation": "a only exists inside f.",
+      "id": "u77l05e02"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "A function can use several private variables and return just one combined answer.",
+      "answer": true,
+      "explanation": "Yes — do the work privately, hand back one result.",
+      "id": "u77l05e03"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Predict:\n\ndef f(x):\n    y = x + 1\n    return y\n\nprint(f(9))",
+      "options": [
+        "10",
+        "9",
+        "y",
+        "error"
+      ],
+      "answer": 0,
+      "explanation": "y = 9 + 1 = 10 is returned.",
+      "id": "u77l05e04"
+    },
+    {
+      "type": "orderBlocks",
+      "prompt": "Arrange: a helper that returns, then use its result.",
+      "blocks": [
+        "def plus_two(n):",
+        "    r = n + 2",
+        "    return r",
+        "print(plus_two(8))"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "plus_two(8) returns 10.",
+      "id": "u77l05e05"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "REVIEW (composing): double(add_one(3)) where each returns the expected thing gives... (add_one adds 1, double doubles)",
+      "options": [
+        "8",
+        "6",
+        "7",
+        "9"
+      ],
+      "answer": 0,
+      "explanation": "add_one(3)=4, double(4)=8. Inner first.",
+      "id": "u77l05e06"
+    },
+    {
+      "type": "fillBlank",
+      "prompt": "Share the result:\n\ndef f(n):\n    v = n * n\n    ____ v",
+      "answer": "return",
+      "acceptable": [
+        "return"
+      ],
+      "explanation": "return v hands back the square.",
+      "id": "u77l05e07"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Which name is visible in the main code?\n\ndef f():\n    inside = 1\n    return inside\n\nouter = f()",
+      "options": [
+        "outer",
+        "inside",
+        "both",
+        "neither"
+      ],
+      "answer": 0,
+      "explanation": "outer is a main-code variable; inside is private to f.",
+      "id": "u77l05e08"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "print inside a function shows output but does NOT hand a value back to the caller.",
+      "answer": true,
+      "explanation": "Right — print displays; return hands back. Different jobs.",
+      "id": "u77l05e09"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "The lesson's point:",
+      "options": [
+        "A sub-plan shares results via return, not via private variables",
+        "All variables leak out",
+        "return is optional for sharing",
+        "print shares values"
+      ],
+      "answer": 0,
+      "explanation": "Return is the share mechanism.",
+      "id": "u77l05e10"
+    }
+  ]
+}

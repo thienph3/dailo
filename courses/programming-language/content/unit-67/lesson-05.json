@@ -1,0 +1,143 @@
+{
+  "unitId": "u67",
+  "lessonId": "u67l05",
+  "title": "Fix it: the biggest that isn't in the list",
+  "idea": "GUIDED BUG-FIX (max start). A 'biggest so far' loop starts best at 0, so with all-negative data it returns 0. Fix the start.",
+  "problem": "This code should find the biggest temperature in [-5, -2, -9] (answer: -2). Instead it prints 0. Fix it.",
+  "exercises": [
+    {
+      "id": "u67l05e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "BROKEN CODE:\n\ntemps = [-5, -2, -9]\nbest = 0\nfor t in temps:\n    if t > best:\n        best = t\nprint(best)\n\nUnderstand. What is this meant to find?",
+      "options": [
+        "The biggest temperature in the list",
+        "The total of the temperatures",
+        "How many temperatures",
+        "The smallest temperature"
+      ],
+      "answer": 0,
+      "explanation": "The goal is the biggest value. So the answer MUST be one of the temperatures in the list."
+    },
+    {
+      "id": "u67l05e02",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example. By hand, which of -5, -2, -9 is the biggest?",
+      "options": [
+        "-2",
+        "-9",
+        "-5",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "Among negatives, -2 is closest to zero, so it's the biggest. The correct answer is -2, not 0."
+    },
+    {
+      "id": "u67l05e03",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "The code printed 0, but 0 is not even in [-5, -2, -9]. What does an answer that's NOT in the list tell you?",
+      "options": [
+        "The starting value 'best = 0' leaked into the answer",
+        "The list is empty",
+        "The print is wrong",
+        "Negatives can't be compared"
+      ],
+      "answer": 0,
+      "explanation": "If the output isn't a list item, the start value survived untouched. No negative beat 0, so best never changed off its wrong start."
+    },
+    {
+      "id": "u67l05e04",
+      "type": "trueFalse",
+      "uepcc": "U",
+      "prompt": "Starting best at 0 is unsafe when the list might contain only negative numbers.",
+      "answer": true,
+      "explanation": "Yes — if every item is below 0, none beats the start of 0, so best wrongly stays 0. The start must be a real list value."
+    },
+    {
+      "id": "u67l05e05",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Plan the fix. A safe starting value for 'biggest so far' is...",
+      "options": [
+        "the first item of the list, temps[0]",
+        "0",
+        "100",
+        "-100"
+      ],
+      "answer": 0,
+      "explanation": "Start best at the first actual item, then compare the rest. That way the answer is always a real list value, negatives included."
+    },
+    {
+      "id": "u67l05e06",
+      "type": "trueFalse",
+      "uepcc": "P",
+      "prompt": "The comparison 'if t > best: best = t' is correct; only the starting value needs fixing.",
+      "answer": true,
+      "explanation": "Right. The track-the-best logic is fine. The single bug is the start, so change 'best = 0' to 'best = temps[0]'."
+    },
+    {
+      "id": "u67l05e07",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Fix the starting value to the first temperature:\n\ntemps = [-5, -2, -9]\nbest = temps[____]\nfor t in temps:\n    if t > best:\n        best = t",
+      "answer": "0",
+      "acceptable": [
+        "0"
+      ],
+      "explanation": "temps[0] is the first item, -5. Starting there, the loop then finds -2 as the biggest. Index 0 is the first position."
+    },
+    {
+      "id": "u67l05e08",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Arrange the FIXED code (start best at the first item, compare the rest, print).",
+      "blocks": [
+        "temps = [-5, -2, -9]",
+        "best = temps[0]",
+        "for t in temps:",
+        "    if t > best:",
+        "        best = t",
+        "print(best)"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "explanation": "Start best at temps[0], loop comparing each t, keep the larger, then print. Now best correctly becomes -2."
+    },
+    {
+      "id": "u67l05e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check. The fixed code prints -2. Your hand answer was -2. So...",
+      "options": [
+        "It passes — and the answer is a real list value now",
+        "It still prints 0",
+        "You can't tell",
+        "The example was wrong"
+      ],
+      "answer": 0,
+      "explanation": "Output -2 matches the hand result and is actually in the list. Starting best at the first item fixed it."
+    },
+    {
+      "id": "u67l05e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Re-check with positives: temps = [3, 9, 5], best = temps[0]. What prints?",
+      "options": [
+        "9",
+        "3",
+        "5",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "best starts at 3, then 9 beats it and stays biggest. The fix works for positive lists too — it generalizes."
+    }
+  ]
+}

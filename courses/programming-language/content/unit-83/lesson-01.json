@@ -1,0 +1,146 @@
+{
+  "unitId": "u83",
+  "lessonId": "u83l01",
+  "title": "Fix it together: the helper that added instead of multiplied",
+  "idea": "GUIDED (UEPCC), bug-focused. A line_cost helper returns qty + price instead of qty * price. Find it by comparing to a hand example, then repair the one broken line.",
+  "problem": "line_cost(qty, price) should give a line's cost. The code says 'return qty + price', and total_cost([2],[12]) prints 14 instead of 24. Fix it.",
+  "exercises": [
+    {
+      "id": "u83l01e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: line_cost(qty, price) should be a line's cost, but 'return qty + price' makes line_cost(2, 12) give 14. What SHOULD the output be for one line of 2 at 12?",
+      "options": [
+        "24",
+        "14",
+        "10",
+        "6"
+      ],
+      "answer": 0,
+      "explanation": "A line's cost is quantity times price: 2 * 12 = 24. The buggy helper adds instead, giving 14."
+    },
+    {
+      "id": "u83l01e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "Understand the bug. Which part of the solution is wrong?",
+      "options": [
+        "The line_cost helper — it uses + where it needs *",
+        "The loop that totals the lines",
+        "The print statement",
+        "Nothing is wrong"
+      ],
+      "answer": 0,
+      "explanation": "The loop and print are fine; the helper computes the wrong sub-result. Isolate the broken piece first."
+    },
+    {
+      "id": "u83l01e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example — by hand, what should line_cost(2, 12) return?",
+      "options": [
+        "24",
+        "14",
+        "2",
+        "12"
+      ],
+      "answer": 0,
+      "explanation": "2 * 12 = 24. The hand example (24) is our yardstick — the helper's 14 disagrees, so the helper is the bug."
+    },
+    {
+      "id": "u83l01e04",
+      "type": "trueFalse",
+      "uepcc": "E",
+      "prompt": "Because the helper RUNS without crashing, it must be returning the right number.",
+      "answer": false,
+      "explanation": "No — it runs fine but returns the wrong value. Running and correct are different. The hand example exposes the gap."
+    },
+    {
+      "id": "u83l01e05",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Plan the fix. What is the smallest change that repairs it?",
+      "options": [
+        "Change + to * in the helper's return line",
+        "Rewrite the whole program",
+        "Change the print",
+        "Add a new helper"
+      ],
+      "answer": 0,
+      "explanation": "One wrong operator, one small fix. Change + to * and the helper gives 24. Fix the root, not the symptom."
+    },
+    {
+      "id": "u83l01e06",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Order the fix-it routine.",
+      "blocks": [
+        "Work the correct line cost by hand (24)",
+        "Spot that the helper returns 14, not 24",
+        "Change + to * in line_cost",
+        "Re-run and confirm it now prints 24"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "Hand answer, spot the mismatch, fix the one line, re-check. The bug-fixing loop."
+    },
+    {
+      "id": "u83l01e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code the fixed helper.",
+      "blocks": [
+        "def line_cost(qty, price):",
+        "    return qty * price"
+      ],
+      "answer": [
+        0,
+        1
+      ],
+      "explanation": "The repaired helper multiplies: qty * price. line_cost(2, 12) = 24 now."
+    },
+    {
+      "id": "u83l01e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Repair the operator:\n\ndef line_cost(qty, price):\n    return qty ____ price",
+      "answer": "*",
+      "acceptable": [
+        "*"
+      ],
+      "explanation": "A line's cost is quantity TIMES price, so the correct operator is *."
+    },
+    {
+      "id": "u83l01e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check — after the fix, total_cost([2],[12]) prints 24; your hand example was 24. Verdict?",
+      "options": [
+        "Passes — the fix is correct",
+        "Fails",
+        "Unknown",
+        "Rewrite example"
+      ],
+      "answer": 0,
+      "explanation": "Output (24) now matches the hand example (24). The one-line fix repaired the helper."
+    },
+    {
+      "id": "u83l01e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Re-check with new input: a line of 3 at 5. The fixed helper gives...",
+      "options": [
+        "15",
+        "8",
+        "35",
+        "2"
+      ],
+      "answer": 0,
+      "explanation": "3 * 5 = 15. The fixed helper works for new numbers too, so the repair is real, not a fluke."
+    }
+  ]
+}

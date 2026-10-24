@@ -1,0 +1,128 @@
+{
+  "unitId": "u55",
+  "lessonId": "u55l08",
+  "title": "Do something to each, collect the results",
+  "idea": "A classic use: loop each value, compute something, append the result to a new list. Reviews append and empty list.",
+  "exercises": [
+    {
+      "id": "u55l08e01",
+      "type": "multipleChoice",
+      "prompt": "prices = [10, 20, 30]\ndoubled = []\nfor price in prices:\n    doubled.append(price * 2)\n\nWhat does 'doubled' hold at the end?",
+      "options": [
+        "[20, 40, 60]",
+        "[10, 20, 30]",
+        "60",
+        "[]"
+      ],
+      "answer": 0,
+      "explanation": "Each pass appends the doubled value to the new list, building [20, 40, 60]."
+    },
+    {
+      "id": "u55l08e02",
+      "type": "multipleChoice",
+      "prompt": "Why start with 'doubled = []' (an empty list) before the loop?",
+      "options": [
+        "So there's a list ready to add each result to",
+        "Because lists must start empty",
+        "To make it run faster",
+        "It isn't needed"
+      ],
+      "answer": 0,
+      "explanation": "You need somewhere to collect results. Start empty, then append one per pass — the collect pattern from the last unit."
+    },
+    {
+      "id": "u55l08e03",
+      "type": "orderBlocks",
+      "prompt": "Arrange: make an empty list, loop each number, append number + 1.",
+      "blocks": [
+        "    result.append(n + 1)",
+        "for n in nums:",
+        "result = []",
+        "nums = [5, 8]"
+      ],
+      "answer": [
+        3,
+        2,
+        1,
+        0
+      ],
+      "explanation": "List of inputs, empty result list, loop, append each computed value. result ends as [6, 9]."
+    },
+    {
+      "id": "u55l08e04",
+      "type": "fillBlank",
+      "prompt": "Collect each value tripled into 'tripled'. Fill the blank:\n\ntripled = []\nfor n in nums:\n    tripled.____(n * 3)",
+      "answer": "append",
+      "acceptable": [
+        "append"
+      ],
+      "explanation": "append adds the new value to the end of the list, one per pass."
+    },
+    {
+      "id": "u55l08e05",
+      "type": "multipleChoice",
+      "prompt": "nums = [1, 2, 3]\nbig = []\nfor n in nums:\n    if n > 1:\n        big.append(n)\n\nWhat is 'big' at the end?",
+      "options": [
+        "[2, 3]",
+        "[1, 2, 3]",
+        "[1]",
+        "[]"
+      ],
+      "answer": 0,
+      "explanation": "Only values over 1 are appended: 2 and 3. This is 'keep the ones that pass a test', built from tools you have."
+    },
+    {
+      "id": "u55l08e06",
+      "type": "trueFalse",
+      "prompt": "The original list 'nums' is unchanged when you append results to a DIFFERENT list.",
+      "answer": true,
+      "explanation": "You only add to the new list. The input list keeps its original values."
+    },
+    {
+      "id": "u55l08e07",
+      "type": "multipleChoice",
+      "prompt": "After this runs, how many items are in 'out'?\n\nnums = [4, 5, 6]\nout = []\nfor n in nums:\n    out.append(n)",
+      "options": [
+        "Three — one appended per pass",
+        "One",
+        "Zero",
+        "Six"
+      ],
+      "answer": 0,
+      "explanation": "Three items, one append each, so 'out' ends with three items — a copy of nums here."
+    },
+    {
+      "id": "u55l08e08",
+      "type": "multipleChoice",
+      "prompt": "words = [\"a\", \"bb\", \"ccc\"]\nlengths = []\nfor w in words:\n    lengths.append(len(w))\n\nWhat is 'lengths'?",
+      "options": [
+        "[1, 2, 3]",
+        "the three words",
+        "3",
+        "[0, 0, 0]"
+      ],
+      "answer": 0,
+      "explanation": "len() measures each word: 'a'->1, 'bb'->2, 'ccc'->3. We just reuse len on each item."
+    },
+    {
+      "id": "u55l08e09",
+      "type": "multipleChoice",
+      "prompt": "Which line correctly adds the current item to a result list named kept?",
+      "options": [
+        "kept.append(item)",
+        "kept.append(items)",
+        "append(kept, item)",
+        "kept = item"
+      ],
+      "answer": 0,
+      "explanation": "The shape is listname.append(value). Here value is the loop variable 'item'."
+    },
+    {
+      "id": "u55l08e10",
+      "type": "trueFalse",
+      "prompt": "'Loop each value, append a result' is a general recipe: transform-and-collect.",
+      "answer": true,
+      "explanation": "Yes — visit every value, compute something, collect it. You'll reuse this shape constantly."
+    }
+  ]
+}

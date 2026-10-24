@@ -1,0 +1,151 @@
+{
+  "unitId": "u27",
+  "lessonId": "u27l09",
+  "title": "Solve it: who gets the student rate",
+  "idea": "GUIDED. One problem through UEPCC combining 'and' and 'or' with parentheses for grouping.",
+  "problem": "A student rate applies if the person is a student AND is either under 18 or over 65. Given is_student, age, print 'Student rate' or 'Standard rate'.",
+  "exercises": [
+    {
+      "id": "u27l09e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: Student rate if is_student AND (under 18 OR over 65). Print 'Student rate' or 'Standard rate'.\n\nWhat is the OUTPUT?",
+      "options": [
+        "The label 'Student rate' or 'Standard rate'",
+        "The age",
+        "The student id",
+        "A price in dollars"
+      ],
+      "answer": 0,
+      "explanation": "One of two rate labels. The rule mixes an 'and' with an 'or'."
+    },
+    {
+      "id": "u27l09e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "Restate the rule in parts. The student rate needs...",
+      "options": [
+        "is_student to be true AND (age < 18 OR age > 65)",
+        "is_student OR age < 18",
+        "age < 18 AND age > 65",
+        "is_student only"
+      ],
+      "answer": 0,
+      "explanation": "Being a student is required (and), plus one of the two age conditions (or). Both pieces must be captured."
+    },
+    {
+      "id": "u27l09e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "By hand: a student aged 70. Which rate?",
+      "options": [
+        "Student rate",
+        "Standard rate",
+        "70",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "is_student True, and (70 < 18 False OR 70 > 65 True) is True. True and True = 'Student rate'."
+    },
+    {
+      "id": "u27l09e04",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "By hand: a student aged 40. Which rate?",
+      "options": [
+        "Standard rate",
+        "Student rate",
+        "40",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "is_student True, but (40 < 18 False OR 40 > 65 False) is False. True and False = 'Standard rate'."
+    },
+    {
+      "id": "u27l09e05",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Plan: why do the OR conditions need parentheses around them?",
+      "options": [
+        "To keep the two age options together as one group before the AND",
+        "Parentheses are only decoration",
+        "To make it run faster",
+        "Python requires them around every condition"
+      ],
+      "answer": 0,
+      "explanation": "Grouping with parentheses makes '(under 18 or over 65)' one unit, then 'and' requires that whole group plus being a student. Grouping was taught back with arithmetic precedence."
+    },
+    {
+      "id": "u27l09e06",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Which expression matches the rule?",
+      "options": [
+        "is_student and (age < 18 or age > 65)",
+        "is_student or age < 18 or age > 65",
+        "is_student and age < 18 and age > 65",
+        "(is_student and age < 18) or age > 65"
+      ],
+      "answer": 0,
+      "explanation": "Student is required, combined by 'and' with the grouped age 'or'. The other options change the meaning."
+    },
+    {
+      "id": "u27l09e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Arrange the code.",
+      "blocks": [
+        "if is_student and (age < 18 or age > 65):",
+        "    print(\"Student rate\")",
+        "else:",
+        "    print(\"Standard rate\")"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "The grouped 'or' sits inside the 'and', then the else catches everyone who misses the rule."
+    },
+    {
+      "id": "u27l09e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Complete the joining word before the grouped age test:\n\nif is_student ____ (age < 18 or age > 65):\n    print(\"Student rate\")",
+      "answer": "and",
+      "acceptable": [
+        "and"
+      ],
+      "explanation": "'and' requires being a student in addition to the grouped age condition."
+    },
+    {
+      "id": "u27l09e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check the first example: student, age 70. What prints?",
+      "options": [
+        "Student rate",
+        "Standard rate",
+        "70",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "True and (False or True) = True and True = True, so 'Student rate' - matching your hand answer."
+    },
+    {
+      "id": "u27l09e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Fresh case: NOT a student, age 15. What prints?",
+      "options": [
+        "Standard rate",
+        "Student rate",
+        "15",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "is_student is False, so the whole 'and' is False no matter the age group: 'Standard rate'. The grouping behaves correctly."
+    }
+  ]
+}

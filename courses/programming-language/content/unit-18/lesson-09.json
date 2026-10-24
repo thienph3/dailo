@@ -1,0 +1,126 @@
+{
+  "unitId": "u18",
+  "lessonId": "u18l09",
+  "title": "Loop back: pack boxes and report",
+  "idea": "REVIEW. One problem using // and % together, reported with an f-string. Interleaves the whole Lap 1 toolbox.",
+  "problem": "You have 23 cookies. Each box holds 6. Report how many full boxes you can pack and how many cookies are left over.",
+  "exercises": [
+    {
+      "id": "u18l09e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: 23 cookies, 6 per box. Report full boxes AND leftover cookies.\n\nHow many OUTPUTS does this report?",
+      "options": [
+        "Two — full boxes and leftover",
+        "One — just the boxes",
+        "One — just the leftover",
+        "Zero"
+      ],
+      "answer": 0,
+      "explanation": "The report needs two numbers: full boxes and leftover cookies. Naming both outputs keeps you honest."
+    },
+    {
+      "id": "u18l09e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "What are the INPUTS?",
+      "options": [
+        "The cookie count (23) and box size (6)",
+        "Only 23",
+        "Only 6",
+        "The word box"
+      ],
+      "answer": 0,
+      "explanation": "Two inputs: total cookies and how many fit per box."
+    },
+    {
+      "id": "u18l09e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example by hand. 23 cookies, 6 per box: 6+6+6 = 18 fills 3 boxes, leaving 5. So full boxes = 3, leftover = ?",
+      "options": ["5", "3", "6", "0"],
+      "answer": 0,
+      "explanation": "23 - 18 = 5 left over. Check values: full boxes 3, leftover 5."
+    },
+    {
+      "id": "u18l09e04",
+      "type": "matchPairs",
+      "uepcc": "P",
+      "prompt": "Plan. Match each output to the operator that computes it.",
+      "pairs": [
+        { "left": "Full boxes (how many groups of 6)", "right": "//" },
+        { "left": "Leftover cookies (remainder)", "right": "%" }
+      ],
+      "explanation": "// gives the whole-number count of full boxes; % gives the leftover. The two partners answer the two outputs."
+    },
+    {
+      "id": "u18l09e05",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Which names echo the problem?",
+      "options": [
+        "cookie_count, box_size, full_boxes, leftover",
+        "a, b, c, d",
+        "x1, x2, x3, x4",
+        "n, m (reuse for both results)"
+      ],
+      "answer": 0,
+      "explanation": "Descriptive names make the code read like the plan: cookie_count, box_size, full_boxes, leftover."
+    },
+    {
+      "id": "u18l09e06",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code it. Arrange the lines (store, compute both, report).",
+      "blocks": [
+        "cookie_count = 23",
+        "box_size = 6",
+        "full_boxes = cookie_count // box_size",
+        "leftover = cookie_count % box_size",
+        "print(f\"{full_boxes} full boxes, {leftover} left over\")"
+      ],
+      "answer": [0, 1, 2, 3, 4],
+      "explanation": "Store both inputs, compute full_boxes with // and leftover with %, then report both in one f-string."
+    },
+    {
+      "id": "u18l09e07",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Complete the leftover step:\n\ncookie_count = 23\nbox_size = 6\nleftover = cookie_count ____ box_size",
+      "answer": "%",
+      "acceptable": ["%"],
+      "explanation": "% gives the remainder: 23 % 6 = 5 cookies left over."
+    },
+    {
+      "id": "u18l09e08",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "It prints '3 full boxes, 5 left over'. Your example said 3 and 5. Verdict?",
+      "options": ["Passes", "Fails", "Can't tell", "Change the example"],
+      "answer": 0,
+      "explanation": "Both computed numbers match the hand example — correct."
+    },
+    {
+      "id": "u18l09e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "New inputs: cookie_count = 30, box_size = 6. What prints?",
+      "options": [
+        "5 full boxes, 0 left over",
+        "3 full boxes, 5 left over",
+        "6 full boxes, 0 left over",
+        "5 full boxes, 5 left over"
+      ],
+      "answer": 0,
+      "explanation": "30 // 6 = 5 full boxes, 30 % 6 = 0 left over. The two-output solution generalizes."
+    },
+    {
+      "id": "u18l09e10",
+      "type": "trueFalse",
+      "uepcc": "P",
+      "prompt": "For the same two inputs, full_boxes * box_size + leftover should always add back up to cookie_count.",
+      "answer": true,
+      "explanation": "Yes: 3 * 6 + 5 = 23. // and % are partners, and this identity is a great extra Check that your two outputs agree."
+    }
+  ]
+}

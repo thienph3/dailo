@@ -1,0 +1,148 @@
+{
+  "unitId": "u98",
+  "lessonId": "u98l06",
+  "title": "Capstone: total up a shopping list",
+  "idea": "GUIDED CAPSTONE. A running total over a list of prices — the accumulator again, built by hand, no builtin.",
+  "problem": "Add up the prices [4, 2, 6, 3] to get the bill total of 15.",
+  "exercises": [
+    {
+      "id": "u98l06e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: total of prices [4, 2, 6, 3]. OUTPUT is...",
+      "options": [
+        "One number: the bill total",
+        "The number of items",
+        "The biggest price",
+        "The average"
+      ],
+      "answer": 0,
+      "explanation": "Output is a single total. We'll accumulate it, not call a builtin sum."
+    },
+    {
+      "id": "u98l06e02",
+      "type": "trueFalse",
+      "uepcc": "U",
+      "prompt": "We could use a builtin to add the list, but this course wants us to build the total with a loop.",
+      "answer": true,
+      "explanation": "The accumulate pattern is the lesson: total starts at 0 and grows each pass."
+    },
+    {
+      "id": "u98l06e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example by hand: 4 + 2 + 6 + 3 = ?",
+      "options": [
+        "15",
+        "12",
+        "13",
+        "9"
+      ],
+      "answer": 0,
+      "explanation": "15. Our check value for the bill."
+    },
+    {
+      "id": "u98l06e04",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "What value must the running total start at before the loop?",
+      "options": [
+        "0",
+        "1",
+        "4",
+        "15"
+      ],
+      "answer": 0,
+      "explanation": "0 is the neutral start for a sum. Starting anywhere else skews the total."
+    },
+    {
+      "id": "u98l06e05",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Plan it. Order the steps.",
+      "blocks": [
+        "Add each price to the running total",
+        "Start total at 0",
+        "Show the total after the loop"
+      ],
+      "answer": [
+        1,
+        0,
+        2
+      ],
+      "explanation": "Classic accumulate: init 0, add each item, show once at the end."
+    },
+    {
+      "id": "u98l06e06",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Where should print(total) go?",
+      "options": [
+        "After the loop, once",
+        "Inside the loop, every pass",
+        "Before the loop",
+        "Never"
+      ],
+      "answer": 0,
+      "explanation": "After the loop prints the final total once. Inside would print every partial sum."
+    },
+    {
+      "id": "u98l06e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code it. Arrange the lines.",
+      "blocks": [
+        "    total = total + price",
+        "total = 0",
+        "print(total)",
+        "for price in prices:"
+      ],
+      "answer": [
+        1,
+        3,
+        0,
+        2
+      ],
+      "explanation": "Init total, loop prices, accumulate, then print once after the loop."
+    },
+    {
+      "id": "u98l06e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Complete the accumulate step:\n\nprices = [4, 2, 6, 3]\ntotal = 0\nfor price in prices:\n    total = total ____ price\nprint(total)",
+      "answer": "+",
+      "acceptable": [
+        "+"
+      ],
+      "explanation": "Add each price onto the running total. After the loop total is 15."
+    },
+    {
+      "id": "u98l06e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Run it: prints 15. Hand said 15. Verdict?",
+      "options": [
+        "Passes",
+        "Fails",
+        "Unknown",
+        "Rewrite example"
+      ],
+      "answer": 0,
+      "explanation": "Matches. The total grew 4, 6, 12, 15 across the passes."
+    },
+    {
+      "id": "u98l06e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Re-run on an empty list []. What does total print?",
+      "options": [
+        "0",
+        "15",
+        "Nothing",
+        "It crashes"
+      ],
+      "answer": 0,
+      "explanation": "The loop never runs, so total stays at its start of 0. Empty-list edge case handled for free."
+    }
+  ]
+}

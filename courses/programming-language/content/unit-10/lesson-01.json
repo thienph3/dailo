@@ -1,0 +1,87 @@
+{
+  "unitId": "u10",
+  "lessonId": "u10l01",
+  "title": "Adding numbers with +",
+  "idea": "Numbers without quotes can be added. print(3 + 4) actually does the math and shows 7.",
+  "exercises": [
+    {
+      "id": "u10l01e01",
+      "type": "multipleChoice",
+      "prompt": "What will this show?\n\nprint(3 + 4)",
+      "options": ["7", "3 + 4", "34", "Nothing"],
+      "answer": 0,
+      "explanation": "No quotes, so these are real numbers. The computer adds them and shows 7."
+    },
+    {
+      "id": "u10l01e02",
+      "type": "multipleChoice",
+      "prompt": "Remember: with quotes it's text. What will this show?\n\nprint(\"3 + 4\")",
+      "options": ["3 + 4", "7", "34", "Error"],
+      "answer": 0,
+      "explanation": "Quotes mean text, so it's shown exactly: 3 + 4. No quotes would make it do the math. That difference is the whole idea this lesson."
+    },
+    {
+      "id": "u10l01e03",
+      "type": "multipleChoice",
+      "prompt": "What will this show?\n\nprint(10 + 5)",
+      "options": ["15", "105", "10 + 5", "5"],
+      "answer": 0,
+      "explanation": "10 and 5 are real numbers, so the computer adds them: 15."
+    },
+    {
+      "id": "u10l01e04",
+      "type": "trueFalse",
+      "prompt": "print(2 + 2) shows 4, not 2 + 2.",
+      "answer": true,
+      "explanation": "Without quotes the + means 'add'. The computer does the math first, then shows the result: 4."
+    },
+    {
+      "id": "u10l01e05",
+      "type": "multipleChoice",
+      "prompt": "You want the screen to show 9. Which instruction does that by adding?",
+      "options": ["print(6 + 3)", "print(\"6 + 3\")", "print(63)", "print(6 3)"],
+      "answer": 0,
+      "explanation": "print(6 + 3) adds the two numbers and shows 9. The quoted one would show the text 6 + 3."
+    },
+    {
+      "id": "u10l01e06",
+      "type": "fillBlank",
+      "prompt": "Fill the blank so the screen shows 12:\n\nprint(7 ____ 5)",
+      "answer": "+",
+      "acceptable": ["+"],
+      "explanation": "7 + 5 is 12. The + sign tells the computer to add."
+    },
+    {
+      "id": "u10l01e07",
+      "type": "tapTokens",
+      "prompt": "Build an instruction that adds 8 and 1 and shows the result.",
+      "tokens": ["print", "(", "8", "+", "1", ")"],
+      "answer": ["print", "(", "8", "+", "1", ")"],
+      "explanation": "print(8 + 1) adds them and shows 9."
+    },
+    {
+      "id": "u10l01e08",
+      "type": "multipleChoice",
+      "prompt": "What will this show?\n\nprint(0 + 0)",
+      "options": ["0", "00", "0 + 0", "Nothing"],
+      "answer": 0,
+      "explanation": "Zero plus zero is zero. The computer still does the math and shows 0."
+    },
+    {
+      "id": "u10l01e09",
+      "type": "multipleChoice",
+      "prompt": "Which shows the TEXT 5 + 5 instead of the number 10?",
+      "options": ["print(\"5 + 5\")", "print(5 + 5)", "print(10)", "print(5+5)"],
+      "answer": 0,
+      "explanation": "Quotes make it text, shown exactly. Without quotes it would add to 10."
+    },
+    {
+      "id": "u10l01e10",
+      "type": "fillBlank",
+      "prompt": "Write a full instruction that adds 20 and 30 and shows the result.",
+      "answer": "print(20 + 30)",
+      "acceptable": ["print(20 + 30)", "print(20+30)"],
+      "explanation": "print(20 + 30) shows 50. You just made the computer do math!"
+    }
+  ]
+}

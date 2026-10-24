@@ -1,0 +1,141 @@
+{
+  "unitId": "u59",
+  "lessonId": "u59l09",
+  "title": "Max in the wild",
+  "idea": "TOOL: mixed predict/choose/spot exercises combining max with earlier list skills. ~30% review.",
+  "exercises": [
+    {
+      "id": "u59l09e01",
+      "type": "multipleChoice",
+      "prompt": "Predict:\n\nrain = [0, 2, 0, 5, 1]\nmost = rain[0]\nfor r in rain:\n    if r > most:\n        most = r\nprint(most)",
+      "options": [
+        "5",
+        "0",
+        "8",
+        "1"
+      ],
+      "answer": 0,
+      "explanation": "The rainiest day had 5. The best-so-far climbs to 5 and stops there."
+    },
+    {
+      "id": "u59l09e02",
+      "type": "multipleChoice",
+      "prompt": "REVIEW: len([4, 9, 2, 7]) is...",
+      "options": [
+        "4",
+        "9",
+        "22",
+        "3"
+      ],
+      "answer": 0,
+      "explanation": "len() counts items: four values, so 4. (That's a count of items, not the biggest value.)"
+    },
+    {
+      "id": "u59l09e03",
+      "type": "multipleChoice",
+      "prompt": "Predict:\n\nnums = [8, 3, 8, 1]\nbest = nums[0]\nfor n in nums:\n    if n > best:\n        best = n\ntotal = 0\nfor n in nums:\n    total = total + n\nprint(best, total)",
+      "options": [
+        "8 20",
+        "8 8",
+        "20 8",
+        "8 4"
+      ],
+      "answer": 0,
+      "explanation": "best = 8 (the biggest), total = 8+3+8+1 = 20. Two separate walks answer two questions."
+    },
+    {
+      "id": "u59l09e04",
+      "type": "trueFalse",
+      "prompt": "You can find the biggest and the total of the same list using two separate loops.",
+      "answer": true,
+      "explanation": "Each tool keeps its own result. Running a max loop and a sum loop answers both questions."
+    },
+    {
+      "id": "u59l09e05",
+      "type": "orderBlocks",
+      "prompt": "Trace [6, 10, 8, 10] for the biggest. Put the best-so-far after each value in order (start 6).",
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "blocks": [
+        "Start best = 6",
+        "10 > 6, best = 10",
+        "8 is not > 10, best stays 10",
+        "10 is not > 10, best stays 10"
+      ],
+      "explanation": "best goes 6 -> 10 and the second 10 ties (no change). The biggest is 10."
+    },
+    {
+      "id": "u59l09e06",
+      "type": "multipleChoice",
+      "prompt": "REVIEW: how many of [6, 10, 8, 10] equal the biggest value, 10?",
+      "options": [
+        "2",
+        "1",
+        "3",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "Two values are 10. (Finding the biggest is max; counting how many equal it is a conditional count.)"
+    },
+    {
+      "id": "u59l09e07",
+      "type": "multipleChoice",
+      "prompt": "A spreadsheet of monthly profits may dip negative. Which start is safe for a max?",
+      "options": [
+        "profits[0]",
+        "0",
+        "len(profits)",
+        "100"
+      ],
+      "answer": 0,
+      "explanation": "Starting at the first real value handles possible negative months. A fixed start like 0 or 100 can be wrong."
+    },
+    {
+      "id": "u59l09e08",
+      "type": "multipleChoice",
+      "prompt": "Predict:\n\nscores = [70]\nbest = scores[0]\nfor s in scores:\n    if s > best:\n        best = s\nprint(best)",
+      "options": [
+        "70",
+        "0",
+        "1",
+        "An error"
+      ],
+      "answer": 0,
+      "explanation": "One score, so best is just 70. The max of a single-item list is that item."
+    },
+    {
+      "id": "u59l09e09",
+      "type": "multiSelect",
+      "prompt": "Which code lines belong in a correct max loop? (pick all)",
+      "options": [
+        "best = nums[0]",
+        "if n > best:",
+        "best = n",
+        "total = total + n"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "The first three build the max. 'total = total + n' is the SUM pattern, not max."
+    },
+    {
+      "id": "u59l09e10",
+      "type": "multipleChoice",
+      "prompt": "You read 'most votes went to...'. Which list tool finds it?",
+      "options": [
+        "max — the single biggest count",
+        "sum",
+        "len",
+        "none"
+      ],
+      "answer": 0,
+      "explanation": "'Most' points to the single biggest value, which is the max pattern."
+    }
+  ]
+}

@@ -1,0 +1,140 @@
+{
+  "unitId": "u12",
+  "lessonId": "u12l02",
+  "title": "The leftover with %",
+  "idea": "% divides and keeps only what's left over after making the whole groups.",
+  "exercises": [
+    {
+      "id": "u12l02e01",
+      "type": "multipleChoice",
+      "prompt": "You share 7 cookies into groups of 3. After the full groups, how many cookies are LEFT OVER?",
+      "options": [
+        "1 left over",
+        "2 left over",
+        "0 left over",
+        "3 left over"
+      ],
+      "answer": 0,
+      "explanation": "Two groups of 3 use 6 cookies. 7 minus 6 is 1. So 1 cookie is left over."
+    },
+    {
+      "id": "u12l02e02",
+      "type": "multipleChoice",
+      "prompt": "The % sign means 'the leftover after sharing'. What will this show?\n\nprint(7 % 3)",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "7 % 3 gives the leftover after fitting whole 3s. Two 3s make 6, and 1 is left. So it shows 1."
+    },
+    {
+      "id": "u12l02e03",
+      "type": "trueFalse",
+      "prompt": "% gives the leftover, not the number of groups.",
+      "answer": true,
+      "explanation": "Right. // gives the whole groups; % gives what's left over after those groups. They're a pair."
+    },
+    {
+      "id": "u12l02e04",
+      "type": "multipleChoice",
+      "prompt": "What will this show?\n\nprint(10 % 2)",
+      "options": [
+        "0",
+        "5",
+        "2",
+        "1"
+      ],
+      "answer": 0,
+      "explanation": "10 shares into 2s perfectly, with nothing left. A leftover of 0 means it divided evenly."
+    },
+    {
+      "id": "u12l02e05",
+      "type": "multipleChoice",
+      "prompt": "What will this show?\n\nprint(9 % 4)",
+      "options": [
+        "1",
+        "2",
+        "4",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "Two 4s make 8, and 9 minus 8 is 1. So 9 % 4 is 1 — one left over."
+    },
+    {
+      "id": "u12l02e06",
+      "type": "multipleChoice",
+      "prompt": "A leftover of 0 tells you what?",
+      "options": [
+        "It divided evenly, with nothing left",
+        "The math went wrong",
+        "There were no groups",
+        "The number was too small"
+      ],
+      "answer": 0,
+      "explanation": "A 0 leftover means it shared perfectly. We'll use this a lot to check 'did it split evenly?'"
+    },
+    {
+      "id": "u12l02e07",
+      "type": "fillBlank",
+      "prompt": "Fill the blank so this shows the leftover when 17 is shared into 5s.\n\nprint(17 _ 5)",
+      "answer": "%",
+      "acceptable": [
+        "%"
+      ],
+      "explanation": "17 % 5 is 2. Three 5s make 15, and 17 minus 15 is 2 left over."
+    },
+    {
+      "id": "u12l02e08",
+      "type": "multipleChoice",
+      "prompt": "What will this show?\n\nprint(6 % 6)",
+      "options": [
+        "0",
+        "1",
+        "6",
+        "12"
+      ],
+      "answer": 0,
+      "explanation": "6 shares into one group of 6 with nothing left. The leftover is 0."
+    },
+    {
+      "id": "u12l02e09",
+      "type": "matchPairs",
+      "prompt": "Match each % expression to its leftover.",
+      "pairs": [
+        {
+          "left": "8 % 3",
+          "right": "2"
+        },
+        {
+          "left": "8 % 4",
+          "right": "0"
+        },
+        {
+          "left": "8 % 5",
+          "right": "3"
+        },
+        {
+          "left": "8 % 2",
+          "right": "0"
+        }
+      ],
+      "explanation": "Each asks 'what's left after the whole groups?' 8 shares evenly into 4s and 2s (leftover 0), but leaves 2 after 3s and 3 after 5s."
+    },
+    {
+      "id": "u12l02e10",
+      "type": "multipleChoice",
+      "prompt": "You have 13 candies and 4 kids. Which line finds how many candies are left over after each kid gets an equal whole share?",
+      "options": [
+        "print(13 % 4)",
+        "print(13 // 4)",
+        "print(13 - 4)",
+        "print(13 * 4)"
+      ],
+      "answer": 0,
+      "explanation": "13 % 4 is 1. Each kid gets 3 (that's 12), and 1 candy is left over. % found the leftover!"
+    }
+  ]
+}

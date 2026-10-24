@@ -1,0 +1,131 @@
+{
+  "unitId": "u29",
+  "lessonId": "u29l08",
+  "title": "Building a word-driven decision",
+  "idea": "Turn a 'react to this word' problem into code. Learner picks the comparison and arranges a small handler, then predicts results.",
+  "exercises": [
+    {
+      "id": "u29l08e01",
+      "type": "multipleChoice",
+      "prompt": "Task: a traffic light word decides an action. \"red\" -> \"Stop\", \"yellow\" -> \"Slow\", \"green\" -> \"Go\", anything else -> \"Broken light\". The output is...",
+      "options": [
+        "one of four messages depending on the word",
+        "a number",
+        "always \"Go\"",
+        "the word itself"
+      ],
+      "answer": 0,
+      "explanation": "Four possible messages, chosen by which word came in. Naming the outputs tells you the branch count."
+    },
+    {
+      "id": "u29l08e02",
+      "type": "multipleChoice",
+      "prompt": "What single INPUT drives the decision?",
+      "options": [
+        "The light's color word",
+        "The time of day",
+        "A number of cars",
+        "Three separate words"
+      ],
+      "answer": 0,
+      "explanation": "One word comes in - the light color - and one action goes out. Simple word-to-action mapping."
+    },
+    {
+      "id": "u29l08e03",
+      "type": "orderBlocks",
+      "prompt": "Arrange the handler.",
+      "blocks": [
+        "if light == \"red\":",
+        "    print(\"Stop\")",
+        "elif light == \"yellow\":",
+        "    print(\"Slow\")",
+        "elif light == \"green\":",
+        "    print(\"Go\")",
+        "else:",
+        "    print(\"Broken light\")"
+      ],
+      "answer": [0, 1, 2, 3, 4, 5, 6, 7],
+      "explanation": "One branch per known color, else as the catch-all for anything unexpected."
+    },
+    {
+      "id": "u29l08e04",
+      "type": "fillBlank",
+      "prompt": "Fill the comparison for the first branch:\n\nif light ____ \"red\":\n    print(\"Stop\")",
+      "answer": "==",
+      "acceptable": ["=="],
+      "explanation": "== compares the word in light against the literal \"red\"."
+    },
+    {
+      "id": "u29l08e05",
+      "type": "multipleChoice",
+      "prompt": "For that handler, light = \"yellow\" prints...",
+      "options": [
+        "Slow",
+        "Stop",
+        "Go",
+        "Broken light"
+      ],
+      "answer": 0,
+      "explanation": "\"yellow\" fails the red test, matches the yellow elif, so \"Slow\" prints."
+    },
+    {
+      "id": "u29l08e06",
+      "type": "multipleChoice",
+      "prompt": "light = \"purple\" prints...",
+      "options": [
+        "Broken light",
+        "Stop",
+        "Go",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "\"purple\" matches no known color, so the else catches it: \"Broken light\"."
+    },
+    {
+      "id": "u29l08e07",
+      "type": "multipleChoice",
+      "prompt": "Why is the catch-all else a good habit for word handlers?",
+      "options": [
+        "Real input can be anything, so you always want a response for the unexpected",
+        "It is required by Python",
+        "It makes the code shorter",
+        "It never runs"
+      ],
+      "answer": 0,
+      "explanation": "Words you did not plan for will show up. The else keeps the program graceful instead of silent."
+    },
+    {
+      "id": "u29l08e08",
+      "type": "multipleChoice",
+      "prompt": "light = \"Red\" (capital R) prints...",
+      "options": [
+        "Broken light - because \"Red\" does not equal \"red\"",
+        "Stop",
+        "Slow",
+        "Go"
+      ],
+      "answer": 0,
+      "explanation": "Case matters: \"Red\" is not \"red\", so no color branch matches and the else runs. A real capitalization gotcha."
+    },
+    {
+      "id": "u29l08e09",
+      "type": "trueFalse",
+      "prompt": "Checking the hand examples (\"red\", \"yellow\", \"green\", and an odd word) proves all four branches work.",
+      "answer": true,
+      "explanation": "Yes - one test per branch, including an unexpected word for the else, confirms the whole handler."
+    },
+    {
+      "id": "u29l08e10",
+      "type": "multipleChoice",
+      "prompt": "Good first step for a 'react to this word' task?",
+      "options": [
+        "List the known words and their actions, then write one branch each plus an else",
+        "Start with the else only",
+        "Guess the output",
+        "Use numbers instead"
+      ],
+      "answer": 0,
+      "explanation": "Mapping each word to its action first gives you the branch structure directly - then the code writes itself."
+    }
+  ]
+}

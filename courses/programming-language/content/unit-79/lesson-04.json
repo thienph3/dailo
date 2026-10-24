@@ -1,0 +1,154 @@
+{
+  "unitId": "u79",
+  "lessonId": "u79l04",
+  "title": "Solve it together: keep the passing scores",
+  "idea": "GUIDED (UEPCC). Use a True/False helper inside a loop to filter a list into a new one.",
+  "problem": "is_pass(score) returns score >= 50. From [40, 70, 55, 30], build a list of only the passing scores.",
+  "exercises": [
+    {
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: is_pass(score) returns score >= 50. From [40, 70, 55, 30], build a list of passing scores.\n\nWhat is the OUTPUT?",
+      "options": [
+        "A new list containing only the scores that pass",
+        "A single True/False",
+        "The count of passes",
+        "The highest score"
+      ],
+      "answer": 0,
+      "explanation": "Output is a new, shorter list of just the passing scores. Name the output first.",
+      "id": "u79l04e01"
+    },
+    {
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "What does the helper is_pass hand back for each score?",
+      "options": [
+        "True or False (whether the score passes)",
+        "The score doubled",
+        "The list",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "is_pass returns a boolean. We use that True/False to decide whether to keep the score.",
+      "id": "u79l04e02"
+    },
+    {
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example by hand. Which of [40, 70, 55, 30] are >= 50?",
+      "options": [
+        "70 and 55",
+        "40 and 30",
+        "all four",
+        "none"
+      ],
+      "answer": 0,
+      "explanation": "70 and 55 pass; 40 and 30 don't. So the kept list should be [70, 55].",
+      "id": "u79l04e03"
+    },
+    {
+      "type": "trueFalse",
+      "uepcc": "E",
+      "prompt": "A filtered list can be shorter than the original — that's expected.",
+      "answer": true,
+      "explanation": "Yes. Only passing items are kept, so [40, 70, 55, 30] becomes [70, 55].",
+      "id": "u79l04e04"
+    },
+    {
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Plan the steps.",
+      "blocks": [
+        "Start an empty kept list",
+        "For each score, if it passes, append it",
+        "Show the kept list"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Init empty list, loop appending only passers, then show. The helper supplies the pass/fail test.",
+      "id": "u79l04e05"
+    },
+    {
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "What gets appended when is_pass(score) is True?",
+      "options": [
+        "The score itself",
+        "The value True",
+        "The count",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "Append the actual score. The boolean only decides WHETHER to append; the item is what we keep.",
+      "id": "u79l04e06"
+    },
+    {
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code it: define is_pass, empty list, loop with if, append, print.",
+      "blocks": [
+        "def is_pass(score):",
+        "    return score >= 50",
+        "kept = []",
+        "for s in [40, 70, 55, 30]:",
+        "    if is_pass(s):",
+        "        kept.append(s)",
+        "print(kept)"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "explanation": "Define the test, start kept empty, loop appending s only when is_pass(s) is True, then print [70, 55].",
+      "id": "u79l04e07"
+    },
+    {
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Keep the score when it passes:\n\nfor s in [40, 70, 55, 30]:\n    if is_pass(s):\n        kept.____(s)",
+      "answer": "append",
+      "acceptable": [
+        "append"
+      ],
+      "explanation": "append s when the helper is True. kept becomes [70, 55].",
+      "id": "u79l04e08"
+    },
+    {
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check — the code prints [70, 55]; your example said [70, 55]. So...",
+      "options": [
+        "It passes",
+        "It fails",
+        "Unknown",
+        "Change the example"
+      ],
+      "answer": 0,
+      "explanation": "Output matches the hand-worked list, so the filter is correct.",
+      "id": "u79l04e09"
+    },
+    {
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Re-check with [90, 20]. What is kept?",
+      "options": [
+        "[90]",
+        "[20]",
+        "[90, 20]",
+        "[]"
+      ],
+      "answer": 0,
+      "explanation": "Only 90 is >= 50, so kept is [90]. Works for new inputs too.",
+      "id": "u79l04e10"
+    }
+  ]
+}

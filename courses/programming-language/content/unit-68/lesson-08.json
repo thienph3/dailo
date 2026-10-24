@@ -1,0 +1,143 @@
+{
+  "unitId": "u68",
+  "lessonId": "u68l08",
+  "title": "Solve it: the safe average",
+  "idea": "LOOP: average a list by building the total yourself, with an empty-list guard. Reuses the accumulate pattern, len, if/else, and the edge-case habit.",
+  "exercises": [
+    {
+      "id": "u68l08e01",
+      "type": "multipleChoice",
+      "prompt": "PROBLEM: ages = [20, 30, 40]. Find the average, and handle an empty list safely. Main tool?",
+      "options": [
+        "build a running total in a loop, divide by the count, plus an empty-list guard",
+        "max",
+        "search",
+        "filter"
+      ],
+      "answer": 0,
+      "explanation": "Average is a total divided by a count. We build the total ourselves with a loop, divide by len, and the 'safely' part means adding a guard for the empty list."
+    },
+    {
+      "id": "u68l08e02",
+      "type": "multipleChoice",
+      "prompt": "By hand, the average of [20, 30, 40] is...",
+      "options": [
+        "30",
+        "90",
+        "3",
+        "40"
+      ],
+      "answer": 0,
+      "explanation": "Adding them up gives 20 + 30 + 40 = 90, and the count is 3, so 90 / 3 = 30. That's the target for a non-empty list."
+    },
+    {
+      "id": "u68l08e03",
+      "type": "multipleChoice",
+      "prompt": "You build the total in a loop and divide by len. Which input makes that divide crash?",
+      "options": [
+        "an empty list [] — len is 0",
+        "a single age",
+        "a big list",
+        "a list of 30s"
+      ],
+      "answer": 0,
+      "explanation": "With [] the loop never runs, so the total stays 0, and len([]) is 0 — dividing the total by 0 crashes. That's the case the guard protects."
+    },
+    {
+      "id": "u68l08e04",
+      "type": "multipleChoice",
+      "prompt": "Which test detects the empty list?",
+      "options": [
+        "if len(ages) == 0",
+        "if total == 0",
+        "if ages == 30",
+        "if len(ages) == 1"
+      ],
+      "answer": 0,
+      "explanation": "len 0 means empty. (total == 0 would be wrong: a list like [0] builds a total of 0 but isn't empty.)"
+    },
+    {
+      "id": "u68l08e05",
+      "type": "orderBlocks",
+      "prompt": "Arrange the safe-average code: build the total, then guard the empty case.",
+      "blocks": [
+        "total = 0",
+        "for x in ages:",
+        "    total = total + x",
+        "if len(ages) == 0:",
+        "    print(\"no ages\")",
+        "else:",
+        "    print(total / len(ages))"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "explanation": "Add the ages up in the loop first, then guard the empty case; otherwise divide the total by len and print. The guard runs before any division."
+    },
+    {
+      "id": "u68l08e06",
+      "type": "multipleChoice",
+      "prompt": "For ages = [20, 30, 40], which branch runs?",
+      "options": [
+        "the else branch — it prints 30",
+        "the if branch",
+        "both",
+        "neither"
+      ],
+      "answer": 0,
+      "explanation": "The loop builds total = 90 and len is 3 (not 0), so the else runs and prints 30. The guard only changes the empty case."
+    },
+    {
+      "id": "u68l08e07",
+      "type": "multipleChoice",
+      "prompt": "For ages = [], which branch runs?",
+      "options": [
+        "the if branch — it prints 'no ages'",
+        "the else branch",
+        "both",
+        "it crashes"
+      ],
+      "answer": 0,
+      "explanation": "The loop never runs so total stays 0, and len is 0, so the guard fires and prints 'no ages' safely — no division happens."
+    },
+    {
+      "id": "u68l08e08",
+      "type": "trueFalse",
+      "prompt": "Guarding the empty case is the same careful edge-case habit first learned back in Lap 2 (conditions).",
+      "answer": true,
+      "explanation": "Yes — thinking about the special input (empty) is the edge-case guard idea from Lap 2, reused on lists."
+    },
+    {
+      "id": "u68l08e09",
+      "type": "multipleChoice",
+      "prompt": "REVIEW: after the loop over [20, 30, 40], the built-up total and len([20, 30, 40]) are...",
+      "options": [
+        "90 and 3",
+        "3 and 90",
+        "30 and 3",
+        "90 and 90"
+      ],
+      "answer": 0,
+      "explanation": "Adding each number leaves total at 90, and len counts 3. Average is 90 / 3 = 30."
+    },
+    {
+      "id": "u68l08e10",
+      "type": "multipleChoice",
+      "prompt": "The lesson in one line:",
+      "options": [
+        "build the total in a loop, divide by the count, but guard the empty list first",
+        "always divide",
+        "averages never crash",
+        "len is optional"
+      ],
+      "answer": 0,
+      "explanation": "Accumulate the total yourself, divide by the count, but protect the zero-count case. A finished average always handles empty."
+    }
+  ]
+}

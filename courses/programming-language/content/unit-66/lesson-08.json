@@ -1,0 +1,132 @@
+{
+  "unitId": "u66",
+  "lessonId": "u66l08",
+  "title": "Spot the difference: buggy vs correct",
+  "idea": "Given two near-identical loops, say which is correct and name the one-line difference. Pure diagnosis.",
+  "exercises": [
+    {
+      "id": "u66l08e01",
+      "type": "multipleChoice",
+      "prompt": "Both aim to sum [2, 3].\nA: total = 0 above the loop, then add each item\nB: total = 0 inside the loop, then add each item\nWhich is correct?",
+      "options": [
+        "A — the reset is above the loop",
+        "B",
+        "both",
+        "neither"
+      ],
+      "answer": 0,
+      "explanation": "A resets once above the loop, so the total survives. B resets every pass and loses the running total. The difference is one line's indentation."
+    },
+    {
+      "id": "u66l08e02",
+      "type": "multipleChoice",
+      "prompt": "Both count items > 4 in [5, 2, 9].\nA starts count = 0.\nB starts count = 1.\nWhich is correct?",
+      "options": [
+        "A — counting starts at 0",
+        "B",
+        "both",
+        "neither"
+      ],
+      "answer": 0,
+      "explanation": "A gives 2 (right). B gives 3, one too many, because it started at 1. The only difference is the starting value."
+    },
+    {
+      "id": "u66l08e03",
+      "type": "multipleChoice",
+      "prompt": "Both keep passing scores (50+).\nA: if s >= 50\nB: if s > 50\nWhich is correct?",
+      "options": [
+        "A — includes exactly 50",
+        "B",
+        "both",
+        "neither"
+      ],
+      "answer": 0,
+      "explanation": "'50 or more' includes 50, so >= is right. B drops a score of exactly 50. One operator is the whole difference."
+    },
+    {
+      "id": "u66l08e04",
+      "type": "multipleChoice",
+      "prompt": "Both print every item of a 3-item list using indexes.\nA: range(len(nums))\nB: range(len(nums) - 1)\nWhich is correct?",
+      "options": [
+        "A — visits all indexes",
+        "B",
+        "both",
+        "neither"
+      ],
+      "answer": 0,
+      "explanation": "A visits 0,1,2 (all). B stops at 0,1 and misses the last item, the off-by-one '- 1' bug."
+    },
+    {
+      "id": "u66l08e05",
+      "type": "multipleChoice",
+      "prompt": "Both test equality to 7.\nA: if n == 7\nB: if n = 7\nWhich is correct?",
+      "options": [
+        "A — == compares",
+        "B",
+        "both",
+        "neither"
+      ],
+      "answer": 0,
+      "explanation": "== tests equality; a single = tries to assign and is a mistake here. A is correct."
+    },
+    {
+      "id": "u66l08e06",
+      "type": "multipleChoice",
+      "prompt": "Both find the biggest of [-3, -8].\nA: best = first item\nB: best = 0\nWhich is correct?",
+      "options": [
+        "A — starts at a real item",
+        "B",
+        "both",
+        "neither"
+      ],
+      "answer": 0,
+      "explanation": "A starts best at -3 and correctly finds -3. B starts at 0 and wrongly reports 0, which isn't even in the list."
+    },
+    {
+      "id": "u66l08e07",
+      "type": "trueFalse",
+      "prompt": "Comparing a buggy version with a correct version side by side is a fast way to see the exact mistake.",
+      "answer": true,
+      "explanation": "Yes. When everything else matches, the one line that differs is the bug. This 'diff' habit is a real debugging tool."
+    },
+    {
+      "id": "u66l08e08",
+      "type": "multipleChoice",
+      "prompt": "Both average a list.\nA guards the empty case first.\nB divides straight away.\nWhich is safe on EVERY input?",
+      "options": [
+        "A — it won't crash on an empty list",
+        "B",
+        "both",
+        "neither"
+      ],
+      "answer": 0,
+      "explanation": "A handles the empty list; B crashes on it with divide-by-zero. The guard is the safety difference."
+    },
+    {
+      "id": "u66l08e09",
+      "type": "multipleChoice",
+      "prompt": "When two versions look the same but give different answers, the bug is...",
+      "options": [
+        "in the single line (or indentation) where they differ",
+        "impossible to find",
+        "always in the list",
+        "in the print"
+      ],
+      "answer": 0,
+      "explanation": "Identical everywhere except one spot means the bug lives in that spot. Narrow it down, then fix just that line."
+    },
+    {
+      "id": "u66l08e10",
+      "type": "multipleChoice",
+      "prompt": "The skill this lesson builds:",
+      "options": [
+        "diagnosing which version is correct and naming the one difference",
+        "writing the longest code",
+        "memorizing answers",
+        "avoiding loops"
+      ],
+      "answer": 0,
+      "explanation": "You practiced spotting the exact difference that makes one version right and the other buggy, the core of debugging."
+    }
+  ]
+}

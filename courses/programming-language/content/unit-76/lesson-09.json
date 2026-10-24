@@ -1,0 +1,124 @@
+{
+  "unitId": "u76",
+  "lessonId": "u76l09",
+  "title": "Composing with a looping sub-plan",
+  "idea": "Composing functions: a sub-plan that loops to return a total can feed another sub-plan. Combine a list result with a transform.",
+  "exercises": [
+    {
+      "id": "u76l09e01",
+      "type": "multipleChoice",
+      "prompt": "Read:\n\ndef total(nums):\n    running = 0\n    for x in nums:\n        running = running + x\n    return running\n\ndef double(n):\n    return n * 2\n\nprint(double(total([1, 2, 3])))\n\nWhat prints?",
+      "options": [
+        "12",
+        "6",
+        "123",
+        "None"
+      ],
+      "answer": 0,
+      "explanation": "total([1,2,3]) loops to 6; double(6) is 12. A looping sub-plan's returned total feeds double."
+    },
+    {
+      "id": "u76l09e02",
+      "type": "orderBlocks",
+      "prompt": "Trace double(total([1, 2, 3])) in order.",
+      "blocks": [
+        "total([1, 2, 3]) returns 6",
+        "double(6) returns 12",
+        "print shows 12"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "The inner looping sub-plan runs first (6), then double (12), then print. Inside-out."
+    },
+    {
+      "id": "u76l09e03",
+      "type": "trueFalse",
+      "prompt": "A sub-plan that loops to build a total can be composed just like any returning sub-plan.",
+      "answer": true,
+      "explanation": "Yes. It returns a single value (the total), so it slots into a bigger expression like double(total(...))."
+    },
+    {
+      "id": "u76l09e04",
+      "type": "multipleChoice",
+      "prompt": "REVIEW: why must 'return running' be AFTER the loop in total?",
+      "options": [
+        "So it hands back the finished total, not an early partial",
+        "returns must be last in the file",
+        "the loop prints it",
+        "it doesn't matter"
+      ],
+      "answer": 0,
+      "explanation": "After the loop, running holds the full total. Returning inside the loop would stop after the first item."
+    },
+    {
+      "id": "u76l09e05",
+      "type": "fillBlank",
+      "prompt": "Compose: feed total([2, 4]) into double.\n\nprint(double(____([2, 4])))",
+      "answer": "total",
+      "acceptable": ["total"],
+      "explanation": "total([2, 4]) returns 6; double(6) is 12. The inner total feeds the outer double."
+    },
+    {
+      "id": "u76l09e06",
+      "type": "multipleChoice",
+      "prompt": "Predict:\n\nprint(double(total([2, 4])))",
+      "options": [
+        "12",
+        "6",
+        "24",
+        "None"
+      ],
+      "answer": 0,
+      "explanation": "total([2, 4]) is 6; double(6) is 12."
+    },
+    {
+      "id": "u76l09e07",
+      "type": "multipleChoice",
+      "prompt": "A middle variable can make this clearer. Predict:\n\nsum_value = total([1, 2, 3])\nprint(double(sum_value))",
+      "options": [
+        "12",
+        "6",
+        "3",
+        "None"
+      ],
+      "answer": 0,
+      "explanation": "sum_value is 6; double(6) is 12. Naming the total makes the chain easy to read."
+    },
+    {
+      "id": "u76l09e08",
+      "type": "multipleChoice",
+      "prompt": "Compose the other way:\n\ndef total(nums):\n    running = 0\n    for x in nums:\n        running = running + x\n    return running\n\nprint(total([double(1), double(2)]))\n\nWhat prints? (double returns n * 2)",
+      "options": [
+        "6",
+        "3",
+        "12",
+        "None"
+      ],
+      "answer": 0,
+      "explanation": "double(1)=2 and double(2)=4, so the list is [2, 4]; total([2, 4]) is 6. Calls can even build the list items."
+    },
+    {
+      "id": "u76l09e09",
+      "type": "trueFalse",
+      "prompt": "Composing works because every piece here RETURNS a value the next piece can use.",
+      "answer": true,
+      "explanation": "Yes. total returns a number, double returns a number — so they connect in either order."
+    },
+    {
+      "id": "u76l09e10",
+      "type": "multipleChoice",
+      "prompt": "The idea of this lesson:",
+      "options": [
+        "A looping sub-plan returns a value that composes like any other",
+        "loops can't be in composed sub-plans",
+        "composing needs printing",
+        "totals can't be doubled"
+      ],
+      "answer": 0,
+      "explanation": "A looping sub-plan hands back one value, so it feeds (or is fed by) other sub-plans just the same."
+    }
+  ]
+}

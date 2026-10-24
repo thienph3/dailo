@@ -1,0 +1,135 @@
+{
+  "unitId": "u63",
+  "lessonId": "u63l01",
+  "title": "Keeping only some of the values",
+  "idea": "Opener: the idea of a filter — walk a list and keep only the items that pass a test. Thinking first, no new syntax.",
+  "exercises": [
+    {
+      "id": "u63l01e01",
+      "type": "multipleChoice",
+      "prompt": "You have the scores [4, 9, 2, 7, 5] and you want only the scores above 5. Which numbers do you keep?",
+      "options": [
+        "9 and 7",
+        "4, 2 and 5",
+        "all of them",
+        "none of them"
+      ],
+      "answer": 0,
+      "explanation": "You keep each number that passes the test 'above 5'. Only 9 and 7 pass. That 'keep the ones that pass' idea is called filtering."
+    },
+    {
+      "id": "u63l01e02",
+      "type": "multipleChoice",
+      "prompt": "Filtering a list means...",
+      "options": [
+        "going through every item and keeping only the ones that pass a test",
+        "adding all the items together",
+        "finding the biggest item",
+        "putting the items in order"
+      ],
+      "answer": 0,
+      "explanation": "A filter walks the whole list and keeps the items that match a condition. The rest are simply left out."
+    },
+    {
+      "id": "u63l01e03",
+      "type": "trueFalse",
+      "prompt": "When you filter a list, the items you keep go into a NEW list — the original list is not changed.",
+      "answer": true,
+      "explanation": "Filtering builds a fresh, shorter list of the ones that passed. The original stays as it was, which is handy if you still need it."
+    },
+    {
+      "id": "u63l01e04",
+      "type": "multipleChoice",
+      "prompt": "From [12, 3, 20, 8, 1] you want only the numbers below 10. What does the kept list contain?",
+      "options": [
+        "3, 8 and 1",
+        "12 and 20",
+        "everything",
+        "only 3"
+      ],
+      "answer": 0,
+      "explanation": "Test each one against 'below 10'. 3, 8 and 1 pass; 12 and 20 do not. The kept list is [3, 8, 1]."
+    },
+    {
+      "id": "u63l01e05",
+      "type": "multipleChoice",
+      "prompt": "Which everyday task is most like filtering a list?",
+      "options": [
+        "Picking only the ripe apples out of a basket",
+        "Counting how many apples there are",
+        "Eating the biggest apple",
+        "Stacking the apples in a tower"
+      ],
+      "answer": 0,
+      "explanation": "Picking only the ripe ones is a filter: you check each apple and keep the ones that pass 'is it ripe?'."
+    },
+    {
+      "id": "u63l01e06",
+      "type": "multiSelect",
+      "prompt": "You filter [2, 5, 8, 11, 14] for 'even numbers'. Which numbers end up in the kept list? (Pick all.)",
+      "options": [
+        "2",
+        "5",
+        "8",
+        "14"
+      ],
+      "answer": [
+        0,
+        2,
+        3
+      ],
+      "explanation": "Even means it divides by 2 with no remainder. 2, 8 and 14 are even; 5 and 11 are odd and are left out."
+    },
+    {
+      "id": "u63l01e07",
+      "type": "trueFalse",
+      "prompt": "A filter can keep NONE of the items if nothing passes the test.",
+      "answer": true,
+      "explanation": "If no item passes, the kept list is empty — that is a perfectly normal result, not an error."
+    },
+    {
+      "id": "u63l01e08",
+      "type": "multipleChoice",
+      "prompt": "To decide whether to keep an item, what do you need first?",
+      "options": [
+        "A test (a true/false condition) to check each item against",
+        "The total of all the items",
+        "The number of items",
+        "A sorted list"
+      ],
+      "answer": 0,
+      "explanation": "Filtering always needs a test that is either true or false for each item, like 'is it above 5?'. The true ones are kept."
+    },
+    {
+      "id": "u63l01e09",
+      "type": "orderBlocks",
+      "prompt": "Put the plain-English steps of a filter in order.",
+      "blocks": [
+        "Start with an empty 'kept' list",
+        "For each item, check it against the test",
+        "If it passes, add it to the kept list",
+        "After the loop, the kept list holds the matches"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "Start empty, walk every item, add the ones that pass, and when the loop ends the kept list is your answer. This is the shape of every filter."
+    },
+    {
+      "id": "u63l01e10",
+      "type": "multipleChoice",
+      "prompt": "You already know how to walk a list and test an item. What is the one NEW thing a filter does with the items that pass?",
+      "options": [
+        "It collects them into a new list",
+        "It adds them up",
+        "It prints the whole original list",
+        "It counts how many there are in total"
+      ],
+      "answer": 0,
+      "explanation": "You know the loop and the if-test already. The new move is collecting the passers into a fresh list — you'll do exactly that next lesson."
+    }
+  ]
+}

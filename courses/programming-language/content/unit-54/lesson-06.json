@@ -1,0 +1,126 @@
+{
+  "unitId": "u54",
+  "lessonId": "u54l06",
+  "title": "Predict the changing list",
+  "idea": "Pure tracing: follow a list through a mix of append and item-assignment steps. Thinking-heavy, reinforces how each step reshapes the list.",
+  "exercises": [
+    {
+      "id": "u54l06e01",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nn = [1, 2]\nn.append(3)\nn[0] = 9\nprint(n)",
+      "options": [
+        "[9, 2, 3]",
+        "[1, 2, 3]",
+        "[9, 2]",
+        "[1, 2, 9, 3]"
+      ],
+      "answer": 0,
+      "explanation": "append 3 gives [1, 2, 3]; then n[0] = 9 changes the first spot: [9, 2, 3]. Trace one step at a time."
+    },
+    {
+      "id": "u54l06e02",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nn = []\nn.append(4)\nn.append(5)\nn[0] = 40\nprint(n)",
+      "options": [
+        "[40, 5]",
+        "[4, 5]",
+        "[40, 50]",
+        "[4, 40, 5]"
+      ],
+      "answer": 0,
+      "explanation": "Appends build [4, 5]; then n[0] = 40 replaces the first item: [40, 5]."
+    },
+    {
+      "id": "u54l06e03",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nn = [10, 20, 30]\nn[1] = 0\nn.append(40)\nprint(n)",
+      "options": [
+        "[10, 0, 30, 40]",
+        "[10, 20, 30, 40]",
+        "[10, 0, 30]",
+        "[0, 20, 30, 40]"
+      ],
+      "answer": 0,
+      "explanation": "n[1] = 0 gives [10, 0, 30]; append 40 adds to the end: [10, 0, 30, 40]."
+    },
+    {
+      "id": "u54l06e04",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nn = [5]\nn.append(5)\nn.append(5)\nn[0] = 1\nprint(n)",
+      "options": [
+        "[1, 5, 5]",
+        "[5, 5, 5]",
+        "[1, 1, 1]",
+        "[1, 5]"
+      ],
+      "answer": 0,
+      "explanation": "Appends build [5, 5, 5]; then n[0] = 1 changes only the first: [1, 5, 5]."
+    },
+    {
+      "id": "u54l06e05",
+      "type": "fillBlank",
+      "prompt": "This should end as [2, 2]. Fill the missing step:\n\nn = [1]\nn.append(2)\nn[0] = ____\nprint(n)",
+      "answer": "2",
+      "acceptable": ["2"],
+      "explanation": "After append, n is [1, 2]. Setting n[0] = 2 makes it [2, 2]."
+    },
+    {
+      "id": "u54l06e06",
+      "type": "trueFalse",
+      "prompt": "Predict: after n = [1, 2]; n.append(3), the list n has 3 items.",
+      "answer": true,
+      "explanation": "append added one item, so the count went from 2 to 3. The list is now [1, 2, 3]."
+    },
+    {
+      "id": "u54l06e07",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nn = [1, 2, 3]\nn[-1] = 99\nprint(n)",
+      "options": [
+        "[1, 2, 99]",
+        "[99, 2, 3]",
+        "[1, 2, 3, 99]",
+        "[1, 99, 3]"
+      ],
+      "answer": 0,
+      "explanation": "n[-1] is the last spot, so assigning 99 there gives [1, 2, 99]. Negative positions work for assignment too."
+    },
+    {
+      "id": "u54l06e08",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nn = [0, 0, 0]\nn[1] = 5\nn.append(5)\nprint(n)",
+      "options": [
+        "[0, 5, 0, 5]",
+        "[0, 5, 0]",
+        "[5, 5, 0, 5]",
+        "[0, 0, 0, 5]"
+      ],
+      "answer": 0,
+      "explanation": "n[1] = 5 gives [0, 5, 0]; append 5 adds to the end: [0, 5, 0, 5]."
+    },
+    {
+      "id": "u54l06e09",
+      "type": "orderBlocks",
+      "prompt": "These steps turn [1, 2] into [1, 2, 3] then into [1, 9, 3]. Put them in the order that produces that result.",
+      "blocks": [
+        "n = [1, 2]",
+        "n.append(3)",
+        "n[1] = 9"
+      ],
+      "answer": [0, 1, 2],
+      "explanation": "Start [1, 2], append 3 -> [1, 2, 3], then n[1] = 9 -> [1, 9, 3]. Order of steps matters."
+    },
+    {
+      "id": "u54l06e10",
+      "type": "multipleChoice",
+      "prompt": "Which single step GROWS the list, and which only CHANGES it?",
+      "options": [
+        "append grows; list[i] = value changes",
+        "Both grow",
+        "append changes; list[i] = value grows",
+        "Both only change"
+      ],
+      "answer": 0,
+      "explanation": "append adds a new item (longer list); list[i] = value swaps an existing item (same length). Keep that pair straight."
+    }
+  ]
+}

@@ -1,0 +1,140 @@
+{
+  "unitId": "u23",
+  "lessonId": "u23l05",
+  "title": "Spot the mistake in a choice",
+  "idea": "GUIDED. Find why a decision gives the wrong answer - the classic = vs == trap and a wrong comparison.",
+  "problem": "A program should print 'Win' when points equals 10. Find and fix the bug.",
+  "exercises": [
+    {
+      "id": "u23l05e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: print 'Win' when points equals 10. What is the OUTPUT?",
+      "options": [
+        "'Win' only when points is 10",
+        "The points value",
+        "Always 'Win'",
+        "A number"
+      ],
+      "answer": 0,
+      "explanation": "Output is the word Win, and only when points is exactly 10."
+    },
+    {
+      "id": "u23l05e02",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "By hand: points = 10 should print what? points = 7 should print what?",
+      "options": [
+        "Win for 10; nothing for 7",
+        "Win for both",
+        "nothing for both",
+        "7 then 10"
+      ],
+      "answer": 0,
+      "explanation": "Only 10 should trigger Win. 7 should produce no Win. These are your check values."
+    },
+    {
+      "id": "u23l05e03",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Which comparison means 'points equals 10'?",
+      "options": [
+        "points == 10",
+        "points = 10",
+        "points > 10",
+        "points % 10"
+      ],
+      "answer": 0,
+      "explanation": "== compares. A single = assigns and is a bug inside a condition."
+    },
+    {
+      "id": "u23l05e04",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Why is this wrong?\n\nif points = 10:\n    print(\"Win\")",
+      "options": [
+        "It uses = (assign) instead of == (compare)",
+        "It is missing an else",
+        "Win is misspelled",
+        "The number is wrong"
+      ],
+      "answer": 0,
+      "explanation": "Inside a condition you must compare with ==. A single = tries to assign and is an error."
+    },
+    {
+      "id": "u23l05e05",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Fix the condition:\n\nif points __ 10:\n    print(\"Win\")",
+      "answer": "==",
+      "acceptable": [
+        "=="
+      ],
+      "explanation": "Replace = with == so it compares points to 10."
+    },
+    {
+      "id": "u23l05e06",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Why is this wrong for the goal?\n\nif points > 10:\n    print(\"Win\")",
+      "options": [
+        "> 10 excludes 10 itself and includes 11, 12, ...",
+        "It uses the wrong keyword",
+        "It needs a loop",
+        "Nothing is wrong"
+      ],
+      "answer": 0,
+      "explanation": "'Equals 10' is == 10, not > 10. > 10 misses 10 and wrongly fires for larger numbers."
+    },
+    {
+      "id": "u23l05e07",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "With the FIXED code (points == 10) and points = 10, what prints?",
+      "options": [
+        "Win",
+        "nothing",
+        "10",
+        "Lose"
+      ],
+      "answer": 0,
+      "explanation": "10 == 10 is True, so Win - matching the hand example."
+    },
+    {
+      "id": "u23l05e08",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "With the fixed code and points = 7, what prints?",
+      "options": [
+        "nothing",
+        "Win",
+        "7",
+        "Lose"
+      ],
+      "answer": 0,
+      "explanation": "7 == 10 is False, and there is no else, so nothing prints. Correct for the goal."
+    },
+    {
+      "id": "u23l05e09",
+      "type": "trueFalse",
+      "uepcc": "P",
+      "prompt": "= means 'store a value' and == means 'compare two values'.",
+      "answer": true,
+      "explanation": "Exactly. = assigns; == tests for equality. Mixing them is the most common beginner bug in conditions."
+    },
+    {
+      "id": "u23l05e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Checking a program with BOTH a matching and a non-matching input helps because...",
+      "options": [
+        "It proves the condition fires only when it should",
+        "It makes the code longer",
+        "It is required by Python",
+        "It replaces the plan"
+      ],
+      "answer": 0,
+      "explanation": "Testing a value that should match and one that should not confirms the condition is neither too loose nor too tight."
+    }
+  ]
+}

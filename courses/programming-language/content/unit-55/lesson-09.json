@@ -1,0 +1,137 @@
+{
+  "unitId": "u55",
+  "lessonId": "u55l09",
+  "title": "Put it to work",
+  "idea": "Small end-to-end uses of for-item-in-list, mixing print, if, and append. Review-leaning on earlier laps.",
+  "exercises": [
+    {
+      "id": "u55l09e01",
+      "type": "multipleChoice",
+      "prompt": "A teacher wants to print each student's score with a label. Which loop body fits?\n\nfor score in scores:\n    ____",
+      "options": [
+        "print(f\"Score: {score}\")",
+        "print(scores)",
+        "print(\"Score\")",
+        "score = score"
+      ],
+      "answer": 0,
+      "explanation": "Label each individual value with an f-string using the loop variable."
+    },
+    {
+      "id": "u55l09e02",
+      "type": "multipleChoice",
+      "prompt": "prices = [100, 50, 200]\nfor price in prices:\n    print(price - 10)\n\nWhat shows (a 10-off sale)?",
+      "options": [
+        "90, 40, 190",
+        "100, 50, 200",
+        "10, 10, 10",
+        "340"
+      ],
+      "answer": 0,
+      "explanation": "Each value loses 10: 90, 40, 190. A per-item discount."
+    },
+    {
+      "id": "u55l09e03",
+      "type": "orderBlocks",
+      "prompt": "Goal: for each age, print 'can vote' if 18 or older, else 'too young'. Arrange the code.",
+      "blocks": [
+        "        print(\"can vote\")",
+        "    if age >= 18:",
+        "    else:",
+        "        print(\"too young\")",
+        "for age in ages:"
+      ],
+      "answer": [
+        4,
+        1,
+        0,
+        2,
+        3
+      ],
+      "explanation": "Loop header, then if (indent 1) with its print (indent 2), then else (indent 1) with its print (indent 2)."
+    },
+    {
+      "id": "u55l09e04",
+      "type": "multipleChoice",
+      "prompt": "nums = [3, 6, 9]\nseen = 0\nfor n in nums:\n    seen = seen + 1\n\nWhat is 'seen' at the end?",
+      "options": [
+        "3 — it went up by 1 each pass",
+        "9",
+        "18",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "This is a counter from Lap 3: +1 per pass, three passes, so 3. (Counting as a NAMED pattern comes later, but the counter tool is yours now.)"
+    },
+    {
+      "id": "u55l09e05",
+      "type": "fillBlank",
+      "prompt": "Print each value with a star after it. Fill the blank:\n\nfor v in vals:\n    print(f\"{v} ____\")",
+      "answer": "*",
+      "acceptable": [
+        "*",
+        "star"
+      ],
+      "explanation": "Any fixed label works; a '*' after each value marks it. The f-string drops in the value, then shows the star."
+    },
+    {
+      "id": "u55l09e06",
+      "type": "multipleChoice",
+      "prompt": "readings = [20, 35, 28]\nfor r in readings:\n    if r > 30:\n        print(\"high\")\n    else:\n        print(\"ok\")\n\nWhat prints, in order?",
+      "options": [
+        "ok, high, ok",
+        "high, ok, high",
+        "ok, ok, ok",
+        "high only"
+      ],
+      "answer": 0,
+      "explanation": "20->ok, 35->high, 28->ok. Each pass picks one branch."
+    },
+    {
+      "id": "u55l09e07",
+      "type": "multipleChoice",
+      "prompt": "You have a list and want a NEW list of only the positive numbers. Which tools do you combine?",
+      "options": [
+        "for-each + if + append to a new list",
+        "Just print",
+        "Only len()",
+        "range() and a counter"
+      ],
+      "answer": 0,
+      "explanation": "Loop each value, test it with if, and append the ones that pass to a fresh list."
+    },
+    {
+      "id": "u55l09e08",
+      "type": "trueFalse",
+      "prompt": "You can loop a list written directly, like for x in [1, 2, 3]: — no variable needed.",
+      "answer": true,
+      "explanation": "True. A list literal can follow 'in' just like a named list."
+    },
+    {
+      "id": "u55l09e09",
+      "type": "multipleChoice",
+      "prompt": "temps = [15, 15, 15]\nfor t in temps:\n    print(t)\n\nWhat prints?",
+      "options": [
+        "15 three times",
+        "15 once",
+        "45",
+        "the whole list once"
+      ],
+      "answer": 0,
+      "explanation": "Three items means three passes; each prints 15. Repeated values are fine."
+    },
+    {
+      "id": "u55l09e10",
+      "type": "multipleChoice",
+      "prompt": "Which sentence best describes 'for item in list'?",
+      "options": [
+        "Do the body once for each value, giving you that value as 'item'",
+        "Do the body once for the whole list",
+        "Do the body only for the first value",
+        "Skip the list entirely"
+      ],
+      "answer": 0,
+      "explanation": "One pass per value, with the current value handed to your loop variable. That's the heart of this unit."
+    }
+  ]
+}

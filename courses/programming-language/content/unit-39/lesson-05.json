@@ -1,0 +1,154 @@
+{
+  "unitId": "u39",
+  "lessonId": "u39l05",
+  "title": "Solve it together: count down from 5 to 1",
+  "idea": "GUIDED PROBLEM. A negative step counts downward: range(5, 0, -1).",
+  "problem": "Print 5, 4, 3, 2, 1 — a countdown, each on its own line.",
+  "exercises": [
+    {
+      "id": "u39l05e01",
+      "type": "multipleChoice",
+      "prompt": "PROBLEM: Print 5, 4, 3, 2, 1.\n\nUnderstand. What is the OUTPUT?",
+      "uepcc": "U",
+      "options": [
+        "5, 4, 3, 2, 1 in order",
+        "1, 2, 3, 4, 5",
+        "Just 5",
+        "The total 15"
+      ],
+      "answer": 0,
+      "explanation": "The numbers 5 down to 1, in that order."
+    },
+    {
+      "id": "u39l05e02",
+      "type": "multipleChoice",
+      "prompt": "Understand: compared to counting up, what is different here?",
+      "uepcc": "U",
+      "options": [
+        "The numbers decrease instead of increase",
+        "Nothing is different",
+        "It uses no loop",
+        "It prints letters"
+      ],
+      "answer": 0,
+      "explanation": "The numbers go down, not up — each is 1 less than the last."
+    },
+    {
+      "id": "u39l05e03",
+      "type": "orderBlocks",
+      "prompt": "Example. Put the hand answer in the order it should print.",
+      "uepcc": "E",
+      "blocks": [
+        "5",
+        "4",
+        "3",
+        "2",
+        "1"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "explanation": "5, 4, 3, 2, 1 — top to bottom. That is the target."
+    },
+    {
+      "id": "u39l05e04",
+      "type": "multipleChoice",
+      "prompt": "Example: what is the very first number printed?",
+      "uepcc": "E",
+      "options": [
+        "5",
+        "1",
+        "0",
+        "4"
+      ],
+      "answer": 0,
+      "explanation": "The countdown starts at 5, so 5 prints first."
+    },
+    {
+      "id": "u39l05e05",
+      "type": "multipleChoice",
+      "prompt": "Plan: to count DOWN by 1 each pass, what should the step be?",
+      "uepcc": "P",
+      "options": [
+        "-1",
+        "1",
+        "0",
+        "5"
+      ],
+      "answer": 0,
+      "explanation": "A step of -1 moves the loop variable down by one each pass."
+    },
+    {
+      "id": "u39l05e06",
+      "type": "multipleChoice",
+      "prompt": "Plan: to include 1 but stop before going below it, which range gives 5, 4, 3, 2, 1?",
+      "uepcc": "P",
+      "options": [
+        "range(5, 0, -1)",
+        "range(5, 1, -1)",
+        "range(5, 0, 1)",
+        "range(1, 6)"
+      ],
+      "answer": 0,
+      "explanation": "range(5, 0, -1) starts at 5, steps -1, stops before 0 — so 1 is the last value."
+    },
+    {
+      "id": "u39l05e07",
+      "type": "orderBlocks",
+      "prompt": "Code. Arrange the lines.",
+      "uepcc": "C",
+      "blocks": [
+        "    print(i)",
+        "for i in range(5, 0, -1):"
+      ],
+      "answer": [
+        1,
+        0
+      ],
+      "explanation": "for header with the downward range, then the indented print."
+    },
+    {
+      "id": "u39l05e08",
+      "type": "fillBlank",
+      "prompt": "Code. Fill the step for a countdown:\n\nfor i in range(5, 0, ____):\n    print(i)",
+      "uepcc": "C",
+      "answer": "-1",
+      "acceptable": [
+        "-1"
+      ],
+      "explanation": "Counting down uses a step of -1."
+    },
+    {
+      "id": "u39l05e09",
+      "type": "multipleChoice",
+      "prompt": "Check. Output is 5, 4, 3, 2, 1. Hand list matched. So...",
+      "uepcc": "Check",
+      "options": [
+        "It passes",
+        "It fails",
+        "Can't tell",
+        "Fix the list"
+      ],
+      "answer": 0,
+      "explanation": "Matches the by-hand countdown, so it passes."
+    },
+    {
+      "id": "u39l05e10",
+      "type": "multipleChoice",
+      "prompt": "Check: to count down from 10 to 1, which range?",
+      "uepcc": "Check",
+      "options": [
+        "range(10, 0, -1)",
+        "range(10, 1, -1)",
+        "range(1, 11)",
+        "range(10, 0, 1)"
+      ],
+      "answer": 0,
+      "explanation": "Start 10, stop before 0, step -1: range(10, 0, -1) gives 10 down to 1."
+    }
+  ]
+}

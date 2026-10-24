@@ -1,0 +1,153 @@
+{
+  "unitId": "u31",
+  "lessonId": "u31l08",
+  "title": "Solve it: weekend or weekday from a typed day",
+  "idea": "GUIDED. UEPCC using 'or' with string comparison on typed text.",
+  "problem": "Ask for a day name. If it is Saturday or Sunday, print 'Weekend'; otherwise print 'Weekday'.",
+  "exercises": [
+    {
+      "id": "u31l08e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: read a day name, print 'Weekend' for Saturday/Sunday, else 'Weekday'.\n\nWhat is the OUTPUT?",
+      "options": [
+        "'Weekend' or 'Weekday'",
+        "The number of days",
+        "The day doubled",
+        "The question"
+      ],
+      "answer": 0,
+      "explanation": "The output is one of two labels. The input is a word, so we compare strings."
+    },
+    {
+      "id": "u31l08e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "How many day names should trigger 'Weekend'?",
+      "options": [
+        "Two: Saturday and Sunday",
+        "One: only Sunday",
+        "Seven",
+        "None"
+      ],
+      "answer": 0,
+      "explanation": "Two names, Saturday and Sunday, both lead to 'Weekend'. That 'either one' shape points to 'or'."
+    },
+    {
+      "id": "u31l08e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Work it by hand: the user types Saturday. What prints?",
+      "options": [
+        "Weekend",
+        "Weekday",
+        "Saturday",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "Saturday is a weekend day, so 'Weekend'. Check value for the weekend case."
+    },
+    {
+      "id": "u31l08e04",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Another by hand: the user types Monday. What prints?",
+      "options": [
+        "Weekday",
+        "Weekend",
+        "Monday",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "Monday is neither Saturday nor Sunday, so 'Weekday'. The else case."
+    },
+    {
+      "id": "u31l08e05",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Plan: which tool means 'Saturday OR Sunday'?",
+      "options": [
+        "or",
+        "and",
+        "not",
+        "elif"
+      ],
+      "answer": 0,
+      "explanation": "'or' is true when either side is true — exactly 'either of these two days'."
+    },
+    {
+      "id": "u31l08e06",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Write the weekend condition.",
+      "options": [
+        "day == \"Saturday\" or day == \"Sunday\"",
+        "day == \"Saturday\" and day == \"Sunday\"",
+        "day == \"Saturday\" or \"Sunday\"",
+        "day = \"Saturday\" or day = \"Sunday\""
+      ],
+      "answer": 0,
+      "explanation": "Compare day to each name with == and join them with 'or' so either match counts."
+    },
+    {
+      "id": "u31l08e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Arrange the code to match the plan.",
+      "blocks": [
+        "day = input(\"Day name: \")",
+        "if day == \"Saturday\" or day == \"Sunday\":",
+        "    print(\"Weekend\")",
+        "else:",
+        "    print(\"Weekday\")"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "explanation": "Read the day, test the two-name 'or' condition, print the matching label."
+    },
+    {
+      "id": "u31l08e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Complete the joining word so either weekend day matches:\n\nif day == \"Saturday\" ____ day == \"Sunday\":\n    print(\"Weekend\")\nelse:\n    print(\"Weekday\")",
+      "answer": "or",
+      "acceptable": [
+        "or"
+      ],
+      "explanation": "'or' makes the condition true if either comparison is true."
+    },
+    {
+      "id": "u31l08e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check with the first example: the user types Saturday. What prints?",
+      "options": [
+        "Weekend",
+        "Weekday",
+        "Saturday",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "The left side day == \"Saturday\" is True, so the whole 'or' is True: 'Weekend'. Matches hand answer."
+    },
+    {
+      "id": "u31l08e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Re-check with a fresh input: the user types Sunday. What prints?",
+      "options": [
+        "Weekend",
+        "Weekday",
+        "Sunday",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "The right side day == \"Sunday\" is True, so 'or' is True: 'Weekend'. Both weekend days work."
+    }
+  ]
+}

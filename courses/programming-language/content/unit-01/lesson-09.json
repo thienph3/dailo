@@ -1,0 +1,91 @@
+{
+  "unitId": "u01",
+  "lessonId": "u01l09",
+  "title": "Printing numbers",
+  "idea": "You can print numbers too. A number can go straight inside print() without quotes. (We do NOT yet explain text-vs-number types — that comes much later; here it's just 'numbers can print').",
+  "exercises": [
+    {
+      "id": "u01l09e01",
+      "type": "multipleChoice",
+      "prompt": "What does this show?\n\nprint(5)",
+      "options": ["5", "\"5\"", "five", "Nothing"],
+      "answer": 0,
+      "explanation": "print can show a number. It shows: 5."
+    },
+    {
+      "id": "u01l09e02",
+      "type": "trueFalse",
+      "prompt": "You can print a number like 42.",
+      "answer": true,
+      "explanation": "Yes. print(42) shows 42."
+    },
+    {
+      "id": "u01l09e03",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nprint(100)",
+      "options": ["100", "one hundred", "\"100\"", "Error"],
+      "answer": 0,
+      "explanation": "A number prints as itself: 100."
+    },
+    {
+      "id": "u01l09e04",
+      "type": "tapTokens",
+      "prompt": "Build an instruction that prints the number 9.",
+      "tokens": ["print", "(", "9", ")"],
+      "answer": ["print", "(", "9", ")"],
+      "explanation": "print(9) shows 9."
+    },
+    {
+      "id": "u01l09e05",
+      "type": "multipleChoice",
+      "prompt": "Which one prints the number 7?",
+      "options": ["print(7)", "print 7", "Print(7)", "print(7"],
+      "answer": 0,
+      "explanation": "Lowercase print, both brackets. print(7) shows 7."
+    },
+    {
+      "id": "u01l09e06",
+      "type": "fillBlank",
+      "prompt": "Complete the instruction to print the number 3:\n\nprint(____)",
+      "answer": "3",
+      "acceptable": ["3"],
+      "explanation": "print(3) shows 3."
+    },
+    {
+      "id": "u01l09e07",
+      "type": "multipleChoice",
+      "prompt": "What does this show?\n\nprint(0)",
+      "options": ["0", "zero", "nothing", "Error"],
+      "answer": 0,
+      "explanation": "It shows the digit 0."
+    },
+    {
+      "id": "u01l09e08",
+      "type": "trueFalse",
+      "prompt": "print(2024) is a valid instruction.",
+      "answer": true,
+      "explanation": "Yes — any number can go in print()."
+    },
+    {
+      "id": "u01l09e09",
+      "type": "multipleChoice",
+      "prompt": "How many lines does this show?\n\nprint(1)\nprint(2)\nprint(3)",
+      "options": ["3 lines: 1, then 2, then 3", "1 line: 123", "1 line: 6", "Nothing"],
+      "answer": 0,
+      "explanation": "Each print makes its own line: 1, 2, 3 on three lines."
+    },
+    {
+      "id": "u01l09e10",
+      "type": "multipleChoice",
+      "prompt": "So far, print can show...",
+      "options": [
+        "Text (in quotes) and numbers",
+        "Only text",
+        "Only numbers",
+        "Only one thing ever"
+      ],
+      "answer": 0,
+      "explanation": "print shows text (in quotes) and numbers. You've got both now!"
+    }
+  ]
+}

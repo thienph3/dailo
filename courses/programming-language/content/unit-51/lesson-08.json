@@ -1,0 +1,127 @@
+{
+  "unitId": "u51",
+  "lessonId": "u51l08",
+  "title": "Build the list the problem describes",
+  "idea": "Turn a described group of values into the matching list literal, in the right order. Still no indexing; focus on creating lists faithfully.",
+  "exercises": [
+    {
+      "id": "u51l08e01",
+      "type": "multipleChoice",
+      "prompt": "A shop sold 4, then 9, then 2 cakes over three days. Which list records that, in order?",
+      "options": [
+        "[4, 9, 2]",
+        "[2, 9, 4]",
+        "[2, 4, 9]",
+        "15"
+      ],
+      "answer": 0,
+      "explanation": "Write the values in the order they happened: day 1 is 4, day 2 is 9, day 3 is 2, so [4, 9, 2]. Order preserves which day is which."
+    },
+    {
+      "id": "u51l08e02",
+      "type": "multipleChoice",
+      "prompt": "Three friends are named Ana, Bo, and Cy, in that seating order. Which list is right?",
+      "options": [
+        "[\"Ana\", \"Bo\", \"Cy\"]",
+        "[Ana, Bo, Cy]",
+        "[\"Cy\", \"Bo\", \"Ana\"]",
+        "(\"Ana\", \"Bo\", \"Cy\")"
+      ],
+      "answer": 0,
+      "explanation": "Words need quotes and the list needs square brackets, in seating order: [\"Ana\", \"Bo\", \"Cy\"]."
+    },
+    {
+      "id": "u51l08e03",
+      "type": "fillBlank",
+      "prompt": "A week of step counts is 1000, 1200, and 900. Complete the list:\n\nsteps = [1000, 1200, ____]",
+      "answer": "900",
+      "acceptable": ["900"],
+      "explanation": "The third value is 900, so steps = [1000, 1200, 900]. Each number from the problem appears in the list, in order."
+    },
+    {
+      "id": "u51l08e04",
+      "type": "multipleChoice",
+      "prompt": "The problem lists prices 5, 5, and 8. Which list is correct?",
+      "options": [
+        "[5, 5, 8]",
+        "[5, 8]",
+        "[13, 5]",
+        "[8, 5]"
+      ],
+      "answer": 0,
+      "explanation": "Even though two prices are the same, you keep both: [5, 5, 8]. Dropping a repeat would lose a value."
+    },
+    {
+      "id": "u51l08e05",
+      "type": "orderBlocks",
+      "prompt": "Arrange these values into a list that counts UP from 10 by tens: 10, 20, 30.",
+      "blocks": [
+        "10",
+        "20",
+        "30"
+      ],
+      "answer": [0, 1, 2],
+      "explanation": "Counting up gives [10, 20, 30]. The order you arrange them is the order the list will keep."
+    },
+    {
+      "id": "u51l08e06",
+      "type": "tapTokens",
+      "prompt": "Build a list of the three temperatures 18, 21, 25 stored in temps.",
+      "tokens": ["temps", "=", "[", "18", ",", "21", ",", "25", "]"],
+      "answer": ["temps", "=", "[", "18", ",", "21", ",", "25", "]"],
+      "explanation": "temps = [18, 21, 25] records all three readings in order, each separated by a comma."
+    },
+    {
+      "id": "u51l08e07",
+      "type": "multipleChoice",
+      "prompt": "A problem says 'no scores have been recorded yet.' Which list fits the START?",
+      "options": [
+        "[]",
+        "[0]",
+        "[\"none\"]",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "Nothing recorded means an empty list, []. [0] would wrongly claim there's one score of zero."
+    },
+    {
+      "id": "u51l08e08",
+      "type": "multipleChoice",
+      "prompt": "The problem gives '3 drinks at the same price' as a group of three. Which list honors 'three'?",
+      "options": [
+        "[2, 2, 2]  (three drinks, each 2)",
+        "[2]  (just one drink)",
+        "[6]  (the total)",
+        "2"
+      ],
+      "answer": 0,
+      "explanation": "Three drinks means three items in the list, even if the price repeats: [2, 2, 2]. Collapsing them to one would drop two values."
+    },
+    {
+      "id": "u51l08e09",
+      "type": "multipleChoice",
+      "prompt": "Why must you keep every value the problem mentions, even repeats?",
+      "options": [
+        "Dropping one would change what the list represents",
+        "Lists can't hold repeats",
+        "Repeats are always errors",
+        "You should keep only the biggest value"
+      ],
+      "answer": 0,
+      "explanation": "A list should faithfully mirror the data. Dropping a repeat (or a count) makes it lie about the real group."
+    },
+    {
+      "id": "u51l08e10",
+      "type": "multipleChoice",
+      "prompt": "You built a list that exactly matches the problem's values and order. What can you NOT yet do with it?",
+      "options": [
+        "Pull out a single named item, like the first",
+        "Print the whole list",
+        "Store it in a variable",
+        "Keep its order"
+      ],
+      "answer": 0,
+      "explanation": "Creating and printing the list works now. Reaching in for one item by position arrives in the next unit."
+    }
+  ]
+}

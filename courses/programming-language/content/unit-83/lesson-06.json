@@ -1,0 +1,146 @@
+{
+  "unitId": "u83",
+  "lessonId": "u83l06",
+  "title": "Fix it together: the rule that let the boundary through",
+  "idea": "GUIDED (UEPCC), bug-focused. is_pass uses '> 50' but passing should be '>= 50', so an exact 50 is wrongly failed. Fix the comparison at the boundary.",
+  "problem": "Passing is '50 or more', but is_pass(score) uses 'score > 50', so is_pass(50) wrongly returns False. On [50, 60, 40] it counts 1 passer instead of 2. Fix it.",
+  "exercises": [
+    {
+      "id": "u83l06e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: passing is '50 OR MORE', but is_pass uses 'score > 50'. Should a score of exactly 50 pass?",
+      "options": [
+        "Yes — '50 or more' includes 50",
+        "No",
+        "Only if it's the highest",
+        "Can't tell"
+      ],
+      "answer": 0,
+      "explanation": "'50 or more' includes 50. Using > 50 wrongly fails an exact 50 — a boundary bug."
+    },
+    {
+      "id": "u83l06e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "Understand — on [50, 60, 40], how many SHOULD pass?",
+      "options": [
+        "2 — 50 and 60",
+        "1 — only 60",
+        "3",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "50 passes (it's 50 or more) and 60 passes; 40 doesn't. Correct count = 2. The buggy > 50 gives only 1."
+    },
+    {
+      "id": "u83l06e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example — by hand with the RIGHT rule (>= 50), is 50 a pass?",
+      "options": [
+        "Yes",
+        "No",
+        "Maybe",
+        "Only once"
+      ],
+      "answer": 0,
+      "explanation": "50 >= 50 is True, so 50 passes. The hand check confirms the boundary belongs on the passing side."
+    },
+    {
+      "id": "u83l06e04",
+      "type": "trueFalse",
+      "uepcc": "E",
+      "prompt": "The only difference that matters here is the exact value 50 — the boundary.",
+      "answer": true,
+      "explanation": "Yes — > and >= agree on everything except the boundary. 50 is exactly where the bug shows."
+    },
+    {
+      "id": "u83l06e05",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Plan the fix. Which operator makes 50 pass?",
+      "options": [
+        ">= (greater than or equal)",
+        "> (strictly greater)",
+        "< (less than)",
+        "== (equal only)"
+      ],
+      "answer": 0,
+      "explanation": ">= includes the boundary, so 50 passes. One operator change repairs the rule."
+    },
+    {
+      "id": "u83l06e06",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Order the fix-it routine.",
+      "blocks": [
+        "Hand-check the boundary: 50 should pass",
+        "See that > 50 fails 50",
+        "Change > to >= in is_pass",
+        "Re-check: count is now 2"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "Hand-check the boundary, spot the strict >, fix to >=, re-check. Boundary bugs hide at the exact edge value."
+    },
+    {
+      "id": "u83l06e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code the fixed rule helper.",
+      "blocks": [
+        "def is_pass(score):",
+        "    return score >= 50"
+      ],
+      "answer": [
+        0,
+        1
+      ],
+      "explanation": "The fixed helper uses >= so a score of exactly 50 passes. is_pass(50) is now True."
+    },
+    {
+      "id": "u83l06e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Repair the comparison so 50 counts as passing:\n\ndef is_pass(score):\n    return score ____ 50",
+      "answer": ">=",
+      "acceptable": [
+        ">="
+      ],
+      "explanation": "'50 or more' is >=, which includes the boundary 50. is_pass(50) becomes True."
+    },
+    {
+      "id": "u83l06e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check — after the fix, counting passers of [50, 60, 40] gives 2; hand count was 2. Verdict?",
+      "options": [
+        "Passes",
+        "Fails",
+        "Unknown",
+        "Rewrite example"
+      ],
+      "answer": 0,
+      "explanation": "Output (2) matches the hand count (2). Switching > to >= fixed the boundary."
+    },
+    {
+      "id": "u83l06e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Re-check: [49, 50, 51] with the fixed rule. How many pass?",
+      "options": [
+        "2 — 50 and 51",
+        "1 — only 51",
+        "3",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "50 and 51 pass; 49 doesn't. The fixed >= handles the boundary 50 correctly for new data too."
+    }
+  ]
+}

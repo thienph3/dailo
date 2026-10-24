@@ -1,0 +1,154 @@
+{
+  "unitId": "u39",
+  "lessonId": "u39l10",
+  "title": "Loop back: counting-loop problems",
+  "idea": "REVIEW-HEAVY. Recap UEPCC on counting loops, mixing earlier laps (variables, math, choices).",
+  "problem": "Recap: solve small repeat-and-vary problems end to end.",
+  "exercises": [
+    {
+      "id": "u39l10e01",
+      "type": "multipleChoice",
+      "prompt": "Recall. In UEPCC, which step means 'work one case by hand before coding'?",
+      "uepcc": "E",
+      "options": [
+        "Example (E)",
+        "Understand (U)",
+        "Plan (P)",
+        "Code (C)"
+      ],
+      "answer": 0,
+      "explanation": "E is Example — the hand-worked case you later check the code against."
+    },
+    {
+      "id": "u39l10e02",
+      "type": "multipleChoice",
+      "prompt": "Understand: a problem says 'print the numbers 1 to 8'. What is the output?",
+      "uepcc": "U",
+      "options": [
+        "The numbers 1 through 8",
+        "Just 8",
+        "0 through 8",
+        "The total 36"
+      ],
+      "answer": 0,
+      "explanation": "Eight lines, 1 through 8."
+    },
+    {
+      "id": "u39l10e03",
+      "type": "multipleChoice",
+      "prompt": "Plan: which range gives 1 through 8?",
+      "uepcc": "P",
+      "options": [
+        "range(1, 9)",
+        "range(1, 8)",
+        "range(8)",
+        "range(0, 8)"
+      ],
+      "answer": 0,
+      "explanation": "Stop one past 8 is 9: range(1, 9)."
+    },
+    {
+      "id": "u39l10e04",
+      "type": "fillBlank",
+      "prompt": "Review (variables + math): fill the operator so it shows 12.\n\na = 7\nb = 5\nprint(a ____ b)",
+      "uepcc": "C",
+      "answer": "+",
+      "acceptable": [
+        "+"
+      ],
+      "explanation": "7 + 5 = 12. A quick recall of earlier number work."
+    },
+    {
+      "id": "u39l10e05",
+      "type": "multipleChoice",
+      "prompt": "Example: for 'print 2 times each number 1 to 3', what are the three results by hand?",
+      "uepcc": "E",
+      "options": [
+        "2, 4, 6",
+        "1, 2, 3",
+        "2, 3, 4",
+        "3, 6, 9"
+      ],
+      "answer": 0,
+      "explanation": "2, 4, 6 — two times 1, 2, 3."
+    },
+    {
+      "id": "u39l10e06",
+      "type": "orderBlocks",
+      "prompt": "Plan: order the UEPCC steps correctly.",
+      "uepcc": "P",
+      "blocks": [
+        "Understand",
+        "Example",
+        "Plan",
+        "Code",
+        "Check"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "explanation": "Understand, Example, Plan, Code, Check — the spine of every solved problem."
+    },
+    {
+      "id": "u39l10e07",
+      "type": "multipleChoice",
+      "prompt": "Review (choices): is the comparison 5 > 3 true or false?",
+      "uepcc": "Check",
+      "options": [
+        "True",
+        "False",
+        "Neither",
+        "Can't tell"
+      ],
+      "answer": 0,
+      "explanation": "5 is greater than 3, so it is True. A recall from the decisions lap."
+    },
+    {
+      "id": "u39l10e08",
+      "type": "orderBlocks",
+      "prompt": "Code: arrange a loop that prints 1 to 3.",
+      "uepcc": "C",
+      "blocks": [
+        "    print(i)",
+        "for i in range(1, 4):"
+      ],
+      "answer": [
+        1,
+        0
+      ],
+      "explanation": "for header, then the indented print of i."
+    },
+    {
+      "id": "u39l10e09",
+      "type": "multipleChoice",
+      "prompt": "Check: the loop for i in range(1, 4) printed 1, 2, 3. Target was 1 to 3. So...",
+      "uepcc": "Check",
+      "options": [
+        "It passes",
+        "It fails",
+        "Can't tell",
+        "Fix it"
+      ],
+      "answer": 0,
+      "explanation": "Matches the target, so it passes."
+    },
+    {
+      "id": "u39l10e10",
+      "type": "multipleChoice",
+      "prompt": "Big picture: why walk every problem through UEPCC?",
+      "uepcc": "Check",
+      "options": [
+        "It makes solving steady and checkable",
+        "It makes code run faster",
+        "It avoids using loops",
+        "It is only for hard problems"
+      ],
+      "answer": 0,
+      "explanation": "It turns a vague problem into named inputs/output, a checked example, and code you can trust."
+    }
+  ]
+}

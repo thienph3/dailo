@@ -1,0 +1,139 @@
+{
+  "unitId": "u66",
+  "lessonId": "u66l10",
+  "title": "The family of list bugs",
+  "idea": "Wrap-up: name the common list-loop bug families (off-by-one, wrong start, reset-inside, wrong test, empty case). Review-heavy.",
+  "exercises": [
+    {
+      "id": "u66l10e01",
+      "type": "matchPairs",
+      "prompt": "Match each bug family to its symptom.",
+      "pairs": [
+        {
+          "left": "Off-by-one (range -1)",
+          "right": "misses the last item"
+        },
+        {
+          "left": "Wrong start (sum at 5)",
+          "right": "answer is off by a constant"
+        },
+        {
+          "left": "Reset inside loop",
+          "right": "only the last pass survives"
+        }
+      ],
+      "explanation": "Each family has a signature symptom. Recognizing the symptom points you straight at the likely cause."
+    },
+    {
+      "id": "u66l10e02",
+      "type": "multipleChoice",
+      "prompt": "A loop's total comes out exactly 5 too high every time. Which family?",
+      "options": [
+        "wrong starting value (started at 5 not 0)",
+        "off-by-one",
+        "empty list",
+        "wrong comparison"
+      ],
+      "answer": 0,
+      "explanation": "A constant offset screams 'wrong start'. The loop body is fine; the setup value is off by that constant."
+    },
+    {
+      "id": "u66l10e03",
+      "type": "multipleChoice",
+      "prompt": "A loop drops the final item of the list. Which family?",
+      "options": [
+        "off-by-one (range stops one early)",
+        "wrong start",
+        "reset inside loop",
+        "empty case"
+      ],
+      "answer": 0,
+      "explanation": "Missing the last item is the off-by-one signature, usually a stray '- 1' on the range."
+    },
+    {
+      "id": "u66l10e04",
+      "type": "multipleChoice",
+      "prompt": "A filter always misses exactly the boundary value (like 50). Which family?",
+      "options": [
+        "wrong comparison (> instead of >=)",
+        "off-by-one",
+        "reset inside loop",
+        "empty case"
+      ],
+      "answer": 0,
+      "explanation": "Dropping the exact boundary means > was used where >= was meant. Hand-check the edge to confirm."
+    },
+    {
+      "id": "u66l10e05",
+      "type": "multipleChoice",
+      "prompt": "An averaging program crashes only on certain inputs. Which family?",
+      "options": [
+        "empty case (divide by zero)",
+        "wrong start",
+        "off-by-one",
+        "wrong comparison"
+      ],
+      "answer": 0,
+      "explanation": "A crash on special input is the empty-list / divide-by-zero family, a missing guard."
+    },
+    {
+      "id": "u66l10e06",
+      "type": "multipleChoice",
+      "prompt": "REVIEW: safest first move once a bug appears is to...",
+      "options": [
+        "decide the correct answer by hand, then trace the loop",
+        "rewrite randomly",
+        "ignore it",
+        "add more lists"
+      ],
+      "answer": 0,
+      "explanation": "Know the right answer, then trace to find where actual diverges. That routine finds any of the bug families."
+    },
+    {
+      "id": "u66l10e07",
+      "type": "trueFalse",
+      "prompt": "Most list-loop bugs fall into a handful of familiar families you can now recognize.",
+      "answer": true,
+      "explanation": "Yes: off-by-one, wrong start, reset-inside, wrong test, empty case. Knowing the families makes debugging far faster."
+    },
+    {
+      "id": "u66l10e08",
+      "type": "multipleChoice",
+      "prompt": "REVIEW: 'total = 0' belongs where, for a summing loop?",
+      "options": [
+        "above the loop, run once",
+        "inside the loop",
+        "after the loop",
+        "in the if"
+      ],
+      "answer": 0,
+      "explanation": "Set up once above the loop. Inside, it resets every pass (reset-inside bug); after, the loop can't use it."
+    },
+    {
+      "id": "u66l10e09",
+      "type": "multipleChoice",
+      "prompt": "REVIEW: to count how many items in [2, 9, 4] are at least 4, the correct test and start are...",
+      "options": [
+        "start count = 0, test n >= 4",
+        "start count = 1, test n > 4",
+        "start count = 0, test n > 4",
+        "start count = 1, test n >= 4"
+      ],
+      "answer": 0,
+      "explanation": "Count from 0 and use >= 4 for 'at least 4'. That gives 9 and 4, so 2. The other options trip a start or a boundary bug."
+    },
+    {
+      "id": "u66l10e10",
+      "type": "multipleChoice",
+      "prompt": "You can now debug list loops. What comes NEXT (Unit 67)?",
+      "options": [
+        "practice FIXING and finishing broken list solutions, guided step by step",
+        "learning functions",
+        "sorting",
+        "starting over"
+      ],
+      "answer": 0,
+      "explanation": "Next you'll repair real broken solutions with the full UEPCC routine, turning bug-spotting into bug-fixing."
+    }
+  ]
+}

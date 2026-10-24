@@ -1,0 +1,110 @@
+{
+  "unitId": "u06",
+  "lessonId": "u06l08",
+  "title": "Full circle: a receipt with a blank line",
+  "idea": "Micro-circle on a slightly bigger show-task: three lines with a blank line for spacing. Review blank-line print() from Unit 1.",
+  "exercises": [
+    {
+      "id": "u06l08e01",
+      "type": "multipleChoice",
+      "prompt": "TASK: Show Order, then a blank line, then Thanks. What is the output?",
+      "options": [
+        "Order, a blank line, then Thanks (three lines of output)",
+        "OrderThanks on one line",
+        "Order and Thanks with no gap",
+        "Just Thanks"
+      ],
+      "answer": 0,
+      "explanation": "Understand first: Order, an empty line, then Thanks. The blank line is part of the task."
+    },
+    {
+      "id": "u06l08e02",
+      "type": "multipleChoice",
+      "prompt": "What makes the blank line in the middle?",
+      "options": [
+        "print() with nothing inside",
+        "print(\"blank\")",
+        "A space bar",
+        "Nothing — you can't make a blank line"
+      ],
+      "answer": 0,
+      "explanation": "print() with empty brackets outputs an empty line. Review from Unit 1."
+    },
+    {
+      "id": "u06l08e03",
+      "type": "trueFalse",
+      "prompt": "print() with empty brackets is still a valid instruction and prints a blank line.",
+      "answer": true,
+      "explanation": "It's valid — it just outputs one empty line, handy for spacing."
+    },
+    {
+      "id": "u06l08e04",
+      "type": "orderBlocks",
+      "prompt": "Code step: arrange to show Order, a blank line, then Thanks.",
+      "blocks": [
+        "print(\"Order\")",
+        "print()",
+        "print(\"Thanks\")"
+      ],
+      "answer": [0, 1, 2],
+      "explanation": "Order, then empty print() for the gap, then Thanks."
+    },
+    {
+      "id": "u06l08e05",
+      "type": "multipleChoice",
+      "prompt": "How many lines of output in total (counting the blank one)?",
+      "options": ["3", "2", "1", "4"],
+      "answer": 0,
+      "explanation": "Order, blank line, Thanks — three lines, because each print makes a line."
+    },
+    {
+      "id": "u06l08e06",
+      "type": "multipleChoice",
+      "prompt": "Check: output is Order / (blank) / Thanks. Example was the same. Result?",
+      "options": ["Pass", "Fail", "Unknown", "Rewrite"],
+      "answer": 0,
+      "explanation": "Matches the example exactly, blank line included. It passes."
+    },
+    {
+      "id": "u06l08e07",
+      "type": "multipleChoice",
+      "prompt": "Someone forgot the middle print() so there's no gap. What does checking say?",
+      "options": [
+        "Fail — the blank line is missing",
+        "Pass",
+        "It doesn't matter",
+        "Unknown"
+      ],
+      "answer": 0,
+      "explanation": "The example expects a blank line. Missing it is a mismatch, so the check fails."
+    },
+    {
+      "id": "u06l08e08",
+      "type": "tapTokens",
+      "prompt": "Build the instruction that makes the blank line.",
+      "tokens": ["print", "(", ")"],
+      "answer": ["print", "(", ")"],
+      "explanation": "print() — brackets with nothing inside gives a blank line."
+    },
+    {
+      "id": "u06l08e09",
+      "type": "trueFalse",
+      "prompt": "A blank line counts as a line of output and must match the example too.",
+      "answer": true,
+      "explanation": "Yes — if the example has a gap, your output needs the same gap to pass."
+    },
+    {
+      "id": "u06l08e10",
+      "type": "multipleChoice",
+      "prompt": "You ran the full circle on a receipt task. What did the rhythm give you?",
+      "options": [
+        "Confidence the output matches, blank line and all",
+        "A shorter task",
+        "A new tool",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "Understand, example, code, check — you know the output is right, spacing included."
+    }
+  ]
+}

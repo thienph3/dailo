@@ -1,0 +1,136 @@
+{
+  "unitId": "u69",
+  "lessonId": "u69l03",
+  "title": "One job, done more than once",
+  "idea": "MEET: notice when the SAME sub-job appears several times in a task. No code.",
+  "exercises": [
+    {
+      "id": "u69l03e01",
+      "type": "multipleChoice",
+      "prompt": "TASK: 'Print a welcome banner at the top, and the SAME banner at the bottom.' What do you notice?",
+      "options": [
+        "The same job (print the banner) happens twice",
+        "There are two different jobs",
+        "There is no repeated job",
+        "The banner is only printed once"
+      ],
+      "answer": 0,
+      "explanation": "The banner job appears twice. A repeated job is a strong hint you've found a reusable sub-plan."
+    },
+    {
+      "id": "u69l03e02",
+      "type": "trueFalse",
+      "prompt": "If the same little job shows up several times in a task, that job is a good candidate to name and reuse.",
+      "answer": true,
+      "explanation": "Exactly. A job you do again and again is worth naming once, so you don't rewrite it each time."
+    },
+    {
+      "id": "u69l03e03",
+      "type": "multipleChoice",
+      "prompt": "TASK: 'Show the header, show the report, show the header again.' How many TIMES does the header job run?",
+      "options": [
+        "Twice",
+        "Once",
+        "Three times",
+        "Never"
+      ],
+      "answer": 0,
+      "explanation": "'Show the header' appears at the start and the end - twice. The report job happens once in between."
+    },
+    {
+      "id": "u69l03e04",
+      "type": "multiSelect",
+      "prompt": "Which of these tasks contain a REPEATED sub-job? (Pick all.)",
+      "options": [
+        "Print a line of stars, then text, then a line of stars",
+        "Greet, show total, say bye",
+        "Say hello to player 1, then say hello to player 2",
+        "Add two numbers once"
+      ],
+      "answer": [
+        0,
+        2
+      ],
+      "explanation": "The stars job repeats, and the 'say hello' job repeats for each player. The other two have no repeat."
+    },
+    {
+      "id": "u69l03e05",
+      "type": "multipleChoice",
+      "prompt": "Doing the exact same steps again by RE-TYPING them each time has a downside. What is it?",
+      "options": [
+        "If the steps need a change, you must fix every copy",
+        "It runs faster",
+        "It uses fewer letters",
+        "It never has bugs"
+      ],
+      "answer": 0,
+      "explanation": "Copies drift and break. Fixing one copy but not the others is a classic bug. Reuse avoids that."
+    },
+    {
+      "id": "u69l03e06",
+      "type": "multipleChoice",
+      "prompt": "What's a better idea than copying the same steps three times?",
+      "options": [
+        "Name the job once and use that name three times",
+        "Copy it four times instead",
+        "Delete the job",
+        "Write it in capitals"
+      ],
+      "answer": 0,
+      "explanation": "Name it once, reuse the name. One place to read, one place to fix. That's what sub-plans are for."
+    },
+    {
+      "id": "u69l03e07",
+      "type": "matchPairs",
+      "prompt": "Match each task to its repeated sub-job.",
+      "pairs": [
+        {
+          "left": "banner at top and bottom",
+          "right": "print the banner"
+        },
+        {
+          "left": "greet each of three players",
+          "right": "print a greeting"
+        },
+        {
+          "left": "draw a line between each section",
+          "right": "print a divider line"
+        }
+      ],
+      "explanation": "In each task, one small job is reused several times. That job is the natural sub-plan."
+    },
+    {
+      "id": "u69l03e08",
+      "type": "trueFalse",
+      "prompt": "Reusing a named job keeps the main plan short and easy to read.",
+      "answer": true,
+      "explanation": "Yes. The main plan just says the job's name instead of repeating all its steps. Shorter and clearer."
+    },
+    {
+      "id": "u69l03e09",
+      "type": "multipleChoice",
+      "prompt": "REVIEW: a different way to repeat work is a loop. When is a loop the better fit?",
+      "options": [
+        "When you repeat the SAME steps for each item in a sequence",
+        "When each repeat is a totally different job",
+        "When you never repeat anything",
+        "When you only act once"
+      ],
+      "answer": 0,
+      "explanation": "Loops repeat steps over items. A named sub-plan is for a job you call by name at chosen moments - sometimes both help."
+    },
+    {
+      "id": "u69l03e10",
+      "type": "multipleChoice",
+      "prompt": "The habit this lesson builds:",
+      "options": [
+        "spot a job that repeats, so it can be named once and reused",
+        "always copy code",
+        "avoid repeating anything ever",
+        "use bigger numbers"
+      ],
+      "answer": 0,
+      "explanation": "Seeing the repeat is the clue. Next, you'll learn to name that job - and then to write it as real code."
+    }
+  ]
+}

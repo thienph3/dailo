@@ -1,0 +1,154 @@
+{
+  "unitId": "u79",
+  "lessonId": "u79l09",
+  "title": "Solve it together: the highest score",
+  "idea": "GUIDED PROBLEM (UEPCC). Track the biggest value yourself: start with the first item, and whenever an item beats it, keep that one.",
+  "problem": "Given scores [42, 88, 73, 91, 60], show the highest score — compute it yourself, without any shortcut.",
+  "exercises": [
+    {
+      "id": "u79l09e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: find the highest score in [42, 88, 73, 91, 60].\n\nWhat is the OUTPUT?",
+      "options": [
+        "One number — the biggest score",
+        "The count of scores",
+        "The total of scores",
+        "The list sorted"
+      ],
+      "answer": 0,
+      "explanation": "The output is a single number: the largest value in the list."
+    },
+    {
+      "id": "u79l09e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "We must compute this OURSELVES with a loop. What idea tracks 'the biggest seen so far'?",
+      "options": [
+        "Keep a 'best' value and replace it whenever a bigger one appears",
+        "Add all the scores",
+        "Count the scores",
+        "Divide by the count"
+      ],
+      "answer": 0,
+      "explanation": "The track-the-max pattern: hold a 'best' and update it whenever an item beats it. We don't use a shortcut here."
+    },
+    {
+      "id": "u79l09e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example — by hand. Walk [42, 88, 73, 91, 60], keeping the best. What is the final best?",
+      "options": [
+        "91",
+        "88",
+        "60",
+        "42"
+      ],
+      "answer": 0,
+      "explanation": "best starts 42, then 88 beats it, 73 doesn't, 91 beats it, 60 doesn't. Final best is 91 — our check value."
+    },
+    {
+      "id": "u79l09e04",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "What should 'best' start as, so the first comparison is fair?",
+      "options": [
+        "The first score in the list",
+        "0",
+        "100",
+        "The last score"
+      ],
+      "answer": 0,
+      "explanation": "Start best at the first item (scores[0]). Starting at 0 could fail if all scores were negative; the first item is always safe."
+    },
+    {
+      "id": "u79l09e05",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Plan — a helper to compare two values. What should bigger(a, b) return?",
+      "options": [
+        "Whichever of a and b is larger",
+        "a + b",
+        "a - b",
+        "True or False"
+      ],
+      "answer": 0,
+      "explanation": "bigger(a, b) returns the larger of the two. The loop feeds it the current best and each item to keep the max."
+    },
+    {
+      "id": "u79l09e06",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Plan the track-the-max steps.",
+      "blocks": [
+        "Set best to the first score",
+        "For each score, keep the bigger of best and that score",
+        "Show best"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Start best at the first item, update it to the bigger value each pass, then show it."
+    },
+    {
+      "id": "u79l09e07",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Code the compare helper:\n\ndef bigger(a, b):\n    if a > b:\n        return a\n    ____ b",
+      "answer": "return",
+      "acceptable": ["return"],
+      "explanation": "If a isn't bigger, return b. So bigger(88, 73) returns 88. We compute the max ourselves — no shortcut."
+    },
+    {
+      "id": "u79l09e08",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code the loop that tracks the highest. Arrange the lines.",
+      "blocks": [
+        "scores = [42, 88, 73, 91, 60]",
+        "best = scores[0]",
+        "for score in scores:",
+        "    best = bigger(best, score)",
+        "print(best)"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "explanation": "best starts at scores[0], then becomes the bigger of best and each score. Prints 91."
+    },
+    {
+      "id": "u79l09e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check — the code prints 91, matching your hand example. So...",
+      "options": [
+        "It passes",
+        "It fails",
+        "You can't tell",
+        "Change the example"
+      ],
+      "answer": 0,
+      "explanation": "Output 91 matches the hand-tracked best 91. The track-the-max solution is correct."
+    },
+    {
+      "id": "u79l09e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Re-check with [5, 2, 9, 9, 1]. What is the highest?",
+      "options": [
+        "9",
+        "5",
+        "1",
+        "26"
+      ],
+      "answer": 0,
+      "explanation": "best walks 5, then 9 beats it, stays 9, then 1 doesn't. Highest is 9. Ties keep 9 — the solution generalizes."
+    }
+  ]
+}

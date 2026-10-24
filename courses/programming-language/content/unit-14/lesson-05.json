@@ -1,0 +1,125 @@
+{
+  "unitId": "u14",
+  "lessonId": "u14l05",
+  "title": "Spot the wrong plan: brackets and operators",
+  "idea": "GUIDED PRACTICE. Debug the APPROACH, not typos. Learner finds why answers are wrong — missing brackets, or // vs % mixed up. Reviews earlier + - * / order too.",
+  "exercises": [
+    {
+      "id": "u14l05e01",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Problem: total cost of (3 + 2) toys at 10 each — should be 50. Code:\n\ntotal = toys_a + toys_b * price\n\ntoys_a=3, toys_b=2, price=10. What does it show, and is it right?",
+      "options": [
+        "Shows 23 — wrong, it multiplied toys_b * price first",
+        "Shows 50 — correct",
+        "Shows 60 — wrong",
+        "Shows 5 — wrong"
+      ],
+      "answer": 0,
+      "explanation": "Without brackets, 2 * 10 = 20 happens first, then + 3 = 23. We needed (3 + 2) * 10 = 50."
+    },
+    {
+      "id": "u14l05e02",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Fix it with brackets so the add is first:\n\ntotal = (toys_a + toys_b) ____ price",
+      "answer": "*",
+      "acceptable": ["*"],
+      "explanation": "With brackets forcing the add, multiply the group by price: (3 + 2) * 10 = 50."
+    },
+    {
+      "id": "u14l05e03",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Problem: how many full groups of 4 from 19 items — should be 4. Code:\n\ngroups = items % size\n\nitems=19, size=4. Right or wrong?",
+      "options": [
+        "Wrong — % gives the leftover (3), not the number of full groups",
+        "Right — shows 4",
+        "Wrong — shows 76",
+        "Right — shows 3"
+      ],
+      "answer": 0,
+      "explanation": "% gives the remainder, 19 % 4 = 3. For the count of full groups you want // : 19 // 4 = 4. Wrong operator chosen."
+    },
+    {
+      "id": "u14l05e04",
+      "type": "matchPairs",
+      "uepcc": "P",
+      "prompt": "Match the question to the right operator.",
+      "pairs": [
+        { "left": "How many full groups?", "right": "//" },
+        { "left": "How many left over?", "right": "%" },
+        { "left": "How much more is A than B?", "right": "-" }
+      ],
+      "explanation": "Choosing the operator IS the plan. // for whole groups, % for leftover, - for a difference."
+    },
+    {
+      "id": "u14l05e05",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Problem: average of two scores 8 and 12 — should be 10. Code:\n\naverage = score_a + score_b / 2\n\nscore_a=8, score_b=12. What's wrong?",
+      "options": [
+        "Missing brackets — it does 12 / 2 = 6 first, then + 8 = 14",
+        "Nothing wrong",
+        "Wrong operator",
+        "The scores are backwards"
+      ],
+      "answer": 0,
+      "explanation": "Division runs before addition, so 12 / 2 = 6, + 8 = 14. You must group the add: (score_a + score_b) / 2 = 10."
+    },
+    {
+      "id": "u14l05e06",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Fix the average with brackets:\n\naverage = (score_a + score_b) ____ 2",
+      "answer": "/",
+      "acceptable": ["/"],
+      "explanation": "Group the add first, then divide by 2: (8 + 12) / 2 = 10."
+    },
+    {
+      "id": "u14l05e07",
+      "type": "trueFalse",
+      "uepcc": "Check",
+      "prompt": "A program with no error message can still give the WRONG answer.",
+      "answer": true,
+      "explanation": "Yes — missing brackets or the wrong operator runs fine but gives a wrong result. That's why you check against a hand example."
+    },
+    {
+      "id": "u14l05e08",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Review from before: for - and /, does swapping the two numbers change the answer?",
+      "options": [
+        "Yes — 10 - 7 is not 7 - 10, and 20 / 4 is not 4 / 20",
+        "No — order never matters",
+        "Only for +",
+        "Only for *"
+      ],
+      "answer": 0,
+      "explanation": "Order matters for - and /. (It doesn't for + and *.) Getting the order right is part of the plan."
+    },
+    {
+      "id": "u14l05e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "You got 14 but expected 10. Best first move?",
+      "options": [
+        "Compare to the hand example and check the order of operations / brackets",
+        "Delete everything and restart",
+        "Assume the computer is wrong",
+        "Change the hand example to 14"
+      ],
+      "answer": 0,
+      "explanation": "The hand example is your anchor. A mismatch usually points at a missing bracket or wrong operator."
+    },
+    {
+      "id": "u14l05e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "After fixing: average = (score_a + score_b) / 2 shows 10. Hand example said 10. Verdict?",
+      "options": ["Passes", "Fails", "Unknown", "Rewrite example"],
+      "answer": 0,
+      "explanation": "Matches — correct. You can now spot missing-bracket and wrong-operator bugs."
+    }
+  ]
+}

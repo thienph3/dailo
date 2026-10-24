@@ -1,0 +1,135 @@
+{
+  "unitId": "u37",
+  "lessonId": "u37l05",
+  "title": "Spot the for/range mistake",
+  "idea": "Common for/range bugs: missing colon, missing indent, wrong count, or a once-only step trapped inside the loop. Find and fix them.",
+  "exercises": [
+    {
+      "id": "u37l05e01",
+      "type": "multipleChoice",
+      "prompt": "What's wrong?\n\nfor i in range(3)\n    print(\"Hi\")",
+      "options": [
+        "Missing colon after range(3)",
+        "Hi is misspelled",
+        "3 is too big",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "The header must end with a colon. 'for i in range(3):' then the indented body."
+    },
+    {
+      "id": "u37l05e02",
+      "type": "multipleChoice",
+      "prompt": "What's wrong?\n\nfor i in range(3):\nprint(\"Hi\")",
+      "options": [
+        "The body is not indented",
+        "The colon is missing",
+        "range is spelled wrong",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "The body must be indented under the header, or Python can't tell what repeats."
+    },
+    {
+      "id": "u37l05e03",
+      "type": "multipleChoice",
+      "prompt": "Goal: Hi 5 times. What's wrong?\n\nfor i in range(4):\n    print(\"Hi\")",
+      "options": [
+        "The count is one short — should be range(5)",
+        "The colon is missing",
+        "Hi should be lowercase",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "range(4) gives 4 repeats, but you wanted 5. Bump it to range(5)."
+    },
+    {
+      "id": "u37l05e04",
+      "type": "multipleChoice",
+      "prompt": "Goal: title ONCE then Hi 3 times. What's wrong?\n\nfor i in range(3):\n    print(\"Title\")\n    print(\"Hi\")",
+      "options": [
+        "Title is indented, so it repeats 3 times too",
+        "Hi should not be indented",
+        "range(3) is wrong",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "Title is inside the body, so it repeats. Move it before the loop, un-indented, to print once."
+    },
+    {
+      "id": "u37l05e05",
+      "type": "orderBlocks",
+      "prompt": "Fix it: arrange so Title prints once then Hi 3 times.",
+      "blocks": [
+        "print(\"Title\")",
+        "for i in range(3):",
+        "    print(\"Hi\")"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Title moves out before the loop; only Hi stays in the indented body."
+    },
+    {
+      "id": "u37l05e06",
+      "type": "multipleChoice",
+      "prompt": "A loop printed Hi once instead of 4 times. Most likely cause?",
+      "options": [
+        "range(1) by mistake, or the body isn't really inside the loop",
+        "Hi is too short",
+        "The screen is full",
+        "range only works once"
+      ],
+      "answer": 0,
+      "explanation": "Too few repeats points to a wrong count or a body that isn't indented into the loop. Check both."
+    },
+    {
+      "id": "u37l05e07",
+      "type": "trueFalse",
+      "prompt": "Writing Range(3) with a capital R works the same as range(3).",
+      "answer": false,
+      "explanation": "Python is case-sensitive. It must be lowercase range — just like lowercase print and for."
+    },
+    {
+      "id": "u37l05e08",
+      "type": "multipleChoice",
+      "prompt": "Goal: Bye once after the loop. What went wrong?\n\nfor i in range(3):\n    print(\"Hi\")\n    print(\"Bye\")",
+      "options": [
+        "Bye is indented, so it repeats with Hi",
+        "Hi should move out",
+        "range(3) is wrong",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "Indented Bye joins the body and repeats. Un-indent it so it runs once after the loop."
+    },
+    {
+      "id": "u37l05e09",
+      "type": "multipleChoice",
+      "prompt": "Which loop correctly prints Go exactly twice?",
+      "options": [
+        "for i in range(2):\n    print(\"Go\")",
+        "for i in range(2)\n    print(\"Go\")",
+        "for i in range(3):\n    print(\"Go\")",
+        "for i range(2):\n    print(\"Go\")"
+      ],
+      "answer": 0,
+      "explanation": "Colon, indent, and range(2) for two repeats. The others miss the colon, overshoot the count, or drop 'in'."
+    },
+    {
+      "id": "u37l05e10",
+      "type": "multipleChoice",
+      "prompt": "The surest way to catch these bugs is to...",
+      "options": [
+        "Trace the output line by line and compare to the goal",
+        "Guess",
+        "Make the font bigger",
+        "Add more prints"
+      ],
+      "answer": 0,
+      "explanation": "Tracing catches wrong counts, missing colons, bad indents, and misplaced steps. Check beats hope."
+    }
+  ]
+}

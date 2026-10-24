@@ -1,0 +1,129 @@
+{
+  "unitId": "u25",
+  "lessonId": "u25l08",
+  "title": "Spot the elif bug",
+  "idea": "Read elif chains and find the bug - wrong order, wrong comparison, or a missing branch. Wrong-approach spotting. Thinking-heavy.",
+  "exercises": [
+    {
+      "id": "u25l08e01",
+      "type": "multipleChoice",
+      "prompt": "This chain always prints 'Low' even for big numbers:\n\nif n >= 0:\n    print(\"Low\")\nelif n >= 100:\n    print(\"High\")\n\nWhy?",
+      "options": [
+        "'>= 0' matches almost everything and comes first, so 'High' is unreachable",
+        "100 is too small",
+        "elif is broken",
+        "n is always 0"
+      ],
+      "answer": 0,
+      "explanation": "The loose test >= 0 steals every non-negative value. The High branch can never be reached - a classic ordering bug."
+    },
+    {
+      "id": "u25l08e02",
+      "type": "multipleChoice",
+      "prompt": "How would you FIX that chain so High can win?",
+      "options": [
+        "Check '>= 100' before '>= 0'",
+        "Delete the elif",
+        "Make n negative",
+        "Add more prints"
+      ],
+      "answer": 0,
+      "explanation": "Put the stricter test (>= 100) first. Then big numbers match High before the loose >= 0 branch."
+    },
+    {
+      "id": "u25l08e03",
+      "type": "multipleChoice",
+      "prompt": "What does this buggy chain print for score = 100?\n\nif score > 100:\n    print(\"A\")\nelif score >= 80:\n    print(\"B\")\nelse:\n    print(\"C\")",
+      "options": [
+        "B",
+        "A",
+        "C",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "100 is not > 100 (strictly greater), so it falls to >= 80 and prints 'B'. If 100 should be an A, the first test should be >=."
+    },
+    {
+      "id": "u25l08e04",
+      "type": "multipleChoice",
+      "prompt": "In that chain, what is the likely intended fix if 100 should be 'A'?",
+      "options": [
+        "Use 'score >= 100' instead of 'score > 100'",
+        "Remove the else",
+        "Change 80 to 90",
+        "Nothing - it is correct"
+      ],
+      "answer": 0,
+      "explanation": "A top score of exactly 100 needs >= to be included. The > excluded the boundary - a subtle bug."
+    },
+    {
+      "id": "u25l08e05",
+      "type": "trueFalse",
+      "prompt": "A missing else can make some inputs produce no output in a classifier.",
+      "answer": true,
+      "explanation": "Yes - without a catch-all, values that match no branch fall through silently. Add else to be safe."
+    },
+    {
+      "id": "u25l08e06",
+      "type": "multipleChoice",
+      "prompt": "This chain forgets a case:\n\nif n > 0:\n    print(\"Positive\")\nelif n < 0:\n    print(\"Negative\")\n\nWhat input prints nothing?",
+      "options": [
+        "n = 0",
+        "n = 5",
+        "n = -5",
+        "n = 100"
+      ],
+      "answer": 0,
+      "explanation": "0 is neither > 0 nor < 0, and there is no else, so nothing prints. The zero case was forgotten."
+    },
+    {
+      "id": "u25l08e07",
+      "type": "multipleChoice",
+      "prompt": "Best fix for the forgotten-zero chain?",
+      "options": [
+        "Add 'else: print(\"Zero\")'",
+        "Remove the elif",
+        "Change < to >",
+        "Make n a string"
+      ],
+      "answer": 0,
+      "explanation": "An else catches the only leftover case - zero - and gives it a clear label."
+    },
+    {
+      "id": "u25l08e08",
+      "type": "fillBlank",
+      "prompt": "Add the missing catch-all:\n\nif n > 0:\n    print(\"Positive\")\nelif n < 0:\n    print(\"Negative\")\n____:\n    print(\"Zero\")",
+      "answer": "else",
+      "acceptable": [
+        "else"
+      ],
+      "explanation": "else handles the forgotten zero case, so every input now gets a label."
+    },
+    {
+      "id": "u25l08e09",
+      "type": "multipleChoice",
+      "prompt": "When debugging an elif chain, the three things to check are...",
+      "options": [
+        "order, comparison (> vs >=), and a missing branch/else",
+        "color, font, speed",
+        "only the first line",
+        "nothing - chains never break"
+      ],
+      "answer": 0,
+      "explanation": "Most elif bugs are an ordering problem, a boundary (> vs >=) problem, or a forgotten branch. Check those three."
+    },
+    {
+      "id": "u25l08e10",
+      "type": "multipleChoice",
+      "prompt": "The debugging skill here is...",
+      "options": [
+        "reading a chain and predicting which branch actually wins for a given input",
+        "typing faster",
+        "writing longer chains",
+        "avoiding elif"
+      ],
+      "answer": 0,
+      "explanation": "Trace each input through the chain top to bottom and see where it really lands. That reveals the bug."
+    }
+  ]
+}

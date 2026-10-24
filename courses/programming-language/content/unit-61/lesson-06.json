@@ -1,0 +1,148 @@
+{
+  "unitId": "u61",
+  "lessonId": "u61l06",
+  "title": "Solve it together: steps this week",
+  "idea": "GUIDED via UEPCC. Apply SUM to add daily step counts; contrast with count so the choice is deliberate.",
+  "problem": "Daily steps are [3000, 5000, 2000, 4000]. What is the total steps for the week?",
+  "exercises": [
+    {
+      "id": "u61l06e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: daily steps [3000, 5000, 2000, 4000]. Total steps this week?\n\nWhat is the OUTPUT?",
+      "options": [
+        "One number: all the steps added together",
+        "The busiest day",
+        "How many days there were",
+        "Each day printed"
+      ],
+      "answer": 0,
+      "explanation": "'Total steps' is a single added-up number — the sum pattern."
+    },
+    {
+      "id": "u61l06e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "Why is this SUM and not COUNT?",
+      "options": [
+        "We add the step VALUES; count would add 1 per day instead",
+        "They are the same",
+        "Count adds the values",
+        "Sum adds 1 per day"
+      ],
+      "answer": 0,
+      "explanation": "Sum adds each value in; count would just tally the number of days. Different answers, different tools."
+    },
+    {
+      "id": "u61l06e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example by hand. 3000 + 5000 + 2000 + 4000 = ?",
+      "options": [
+        "14000",
+        "4000",
+        "4",
+        "5000"
+      ],
+      "answer": 0,
+      "explanation": "The total is 14000 — your check value. (A COUNT of days would be 4, a different question.)"
+    },
+    {
+      "id": "u61l06e04",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Plan it. Put the steps in order.",
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "blocks": [
+        "Start the total at 0",
+        "Add each day's steps to the total",
+        "Show the total"
+      ],
+      "explanation": "Start at 0, add each value, show the result — the sum plan."
+    },
+    {
+      "id": "u61l06e05",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "What should the running total start at?",
+      "options": [
+        "0 — the total of nothing is zero",
+        "The first day's steps",
+        "1",
+        "The number of days"
+      ],
+      "answer": 0,
+      "explanation": "Sum starts at 0 so the first value is added correctly. (Max/min start at the first value, but sum starts at 0.)"
+    },
+    {
+      "id": "u61l06e06",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code it. Arrange the lines.",
+      "answer": [
+        1,
+        2,
+        0,
+        3
+      ],
+      "blocks": [
+        "    total = total + day",
+        "total = 0",
+        "for day in steps:",
+        "print(total)"
+      ],
+      "explanation": "Start total at 0, loop each day, add it in, print the total."
+    },
+    {
+      "id": "u61l06e07",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Finish the loop header (call each value day):\n\ntotal = 0\nfor ____ in steps:\n    total = total + day",
+      "answer": "day",
+      "acceptable": [
+        "day"
+      ],
+      "explanation": "'for day in steps:' takes each day's step count in turn."
+    },
+    {
+      "id": "u61l06e08",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check. The code prints 14000. Your hand example said 14000. So...",
+      "options": [
+        "It passes",
+        "It fails",
+        "You can't tell",
+        "Change the example"
+      ],
+      "answer": 0,
+      "explanation": "Output matches the hand total, so the sum solution is correct."
+    },
+    {
+      "id": "u61l06e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "If the question had been 'how many days did you walk?', what would the answer be for this list?",
+      "options": [
+        "4 — a count of days",
+        "14000 — the total",
+        "5000 — the max",
+        "2000 — the min"
+      ],
+      "answer": 0,
+      "explanation": "'How many days' is a count (4). Same list, different question, different pattern — choose deliberately."
+    },
+    {
+      "id": "u61l06e10",
+      "type": "trueFalse",
+      "uepcc": "Check",
+      "prompt": "The same list can answer 'total steps' (sum) and 'number of days' (count) — but you must pick the right pattern for each.",
+      "answer": true,
+      "explanation": "One list, many questions. Reading what is asked tells you whether to sum, count, max, or min."
+    }
+  ]
+}

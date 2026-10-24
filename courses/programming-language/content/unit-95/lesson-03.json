@@ -1,0 +1,133 @@
+{
+  "unitId": "u95",
+  "lessonId": "u95l03",
+  "title": "Spotting repetition",
+  "idea": "MEET (thinking): when the same code appears again and again, that's a smell. Repetition is a chance to simplify. First, learn to NOTICE it.",
+  "exercises": [
+    {
+      "id": "u95l03e01",
+      "type": "multipleChoice",
+      "prompt": "Look at this code:\n\nprint(1 * 2)\nprint(2 * 2)\nprint(3 * 2)\nprint(4 * 2)\n\nWhat pattern repeats?",
+      "options": [
+        "The same 'print a number times 2' shape, with the number counting up",
+        "Nothing repeats",
+        "The number 2 is different each line",
+        "A different operation each line"
+      ],
+      "answer": 0,
+      "explanation": "Each line does the same thing - multiply by 2 and print - only the counting number changes. That's a textbook case for a loop."
+    },
+    {
+      "id": "u95l03e02",
+      "type": "multipleChoice",
+      "prompt": "Which tool is designed to replace 'do almost the same thing several times'?",
+      "options": [
+        "A loop",
+        "A longer variable name",
+        "Another print",
+        "Quotes"
+      ],
+      "answer": 0,
+      "explanation": "A loop repeats a body for you. Four near-identical lines become one loop that counts - less code, fewer places for a typo to hide."
+    },
+    {
+      "id": "u95l03e03",
+      "type": "trueFalse",
+      "prompt": "Copy-pasting the same three lines five times is usually a sign you could simplify.",
+      "answer": true,
+      "explanation": "Repeated blocks are a 'smell.' A loop (for a repeat) or a function (for a reusable chunk) can usually replace the copies."
+    },
+    {
+      "id": "u95l03e04",
+      "type": "multipleChoice",
+      "prompt": "Why is copy-pasted code risky even when it works today?",
+      "options": [
+        "If the logic needs a fix, you must remember to change EVERY copy",
+        "The computer refuses to run duplicate lines",
+        "It always gives wrong answers",
+        "Copies use a different language"
+      ],
+      "answer": 0,
+      "explanation": "Five copies means five places to update - and one you'll forget. One loop or helper means one place to fix. That's the real win."
+    },
+    {
+      "id": "u95l03e05",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nfor n in range(1, 5):\n    print(n * 2)\n\n(Remember range(1, 5) gives 1, 2, 3, 4.)",
+      "options": [
+        "2 then 4 then 6 then 8",
+        "1 2 3 4",
+        "2 4 6 8 10",
+        "An error"
+      ],
+      "answer": 0,
+      "explanation": "n is 1,2,3,4; n*2 is 2,4,6,8. This one loop replaces the four repeated print lines from exercise 1 - same output, far less code."
+    },
+    {
+      "id": "u95l03e06",
+      "type": "multiSelect",
+      "prompt": "Which of these are signs of repetition worth simplifying? Pick ALL that apply.",
+      "options": [
+        "The same two lines appear for item 1, item 2, and item 3",
+        "You computed 'price * 1.1' in four different spots",
+        "A single print at the end",
+        "The exact same if-check copied into three functions"
+      ],
+      "answer": [0, 1, 3],
+      "explanation": "Repeated line-blocks, a repeated calculation, and a copied check are all duplication. One print at the end is not repetition at all."
+    },
+    {
+      "id": "u95l03e07",
+      "type": "matchPairs",
+      "prompt": "Match each kind of repetition to the tool that removes it.",
+      "pairs": [
+        {
+          "left": "Same action for each item in a list",
+          "right": "A loop"
+        },
+        {
+          "left": "Same calculation reused in many spots",
+          "right": "A helper function"
+        },
+        {
+          "left": "Same number typed over and over",
+          "right": "A named variable"
+        }
+      ],
+      "explanation": "Loops remove repeated actions, functions remove repeated logic, named variables remove repeated 'magic numbers.'"
+    },
+    {
+      "id": "u95l03e08",
+      "type": "trueFalse",
+      "prompt": "Removing repetition changes what the program produces.",
+      "answer": false,
+      "explanation": "Done correctly, it produces the exact same output - just from tidier code. That's the whole point of refactoring."
+    },
+    {
+      "id": "u95l03e09",
+      "type": "multipleChoice",
+      "prompt": "You spot the number 60 typed in eight places (all meaning 'minutes per hour'). Best fix?",
+      "options": [
+        "Store it once as minutes_per_hour = 60 and use that name everywhere",
+        "Leave all eight copies",
+        "Change a few of them to 60.0",
+        "Delete the number entirely"
+      ],
+      "answer": 0,
+      "explanation": "A repeated 'magic number' becomes one named variable. Now its meaning is clear AND you'd only change one line if it ever needed to."
+    },
+    {
+      "id": "u95l03e10",
+      "type": "multipleChoice",
+      "prompt": "What is the FIRST skill this lesson builds?",
+      "options": [
+        "Noticing repetition before deciding how to remove it",
+        "Writing faster loops",
+        "Memorizing range numbers",
+        "Adding more copies"
+      ],
+      "answer": 0,
+      "explanation": "You can't simplify what you don't notice. Spotting the repeated pattern comes first; choosing the loop/function/variable comes next."
+    }
+  ]
+}

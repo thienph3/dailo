@@ -1,0 +1,128 @@
+{
+  "unitId": "u44",
+  "lessonId": "u44l07",
+  "title": "Predict what a while does",
+  "idea": "Trace the control value each pass to predict a while loop's output.",
+  "exercises": [
+    {
+      "type": "multipleChoice",
+      "prompt": "The reliable way to predict a while loop is to...",
+      "options": [
+        "Trace the control value and condition pass by pass",
+        "Guess from the length",
+        "Assume it runs ten times",
+        "Read only the first line"
+      ],
+      "answer": 0,
+      "explanation": "Write the control value each pass and check the condition. That tells you exactly what the loop does.",
+      "id": "u44l07e01"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "What is the LAST number printed?\n\ni = 1\nwhile i < 10:\n    print(i)\n    i = i + 3",
+      "options": [
+        "7",
+        "10",
+        "9",
+        "1"
+      ],
+      "answer": 0,
+      "explanation": "i is 1, 4, 7 (all < 10), then 10 fails 10 < 10. The last printed is 7.",
+      "id": "u44l07e02"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "How many times does this print?\n\nn = 8\nwhile n > 2:\n    print(n)\n    n = n - 2",
+      "options": [
+        "3",
+        "4",
+        "2",
+        "forever"
+      ],
+      "answer": 0,
+      "explanation": "n is 8, 6, 4 (all > 2), then 2 fails 2 > 2. Three prints.",
+      "id": "u44l07e03"
+    },
+    {
+      "type": "orderBlocks",
+      "prompt": "Trace the values i takes, then the stop.\n\ni = 0\nwhile i < 3:\n    print(i)\n    i = i + 1",
+      "blocks": [
+        "i = 0 (print 0)",
+        "i = 1 (print 1)",
+        "i = 2 (print 2)",
+        "i = 3 (3 < 3 false -- stop)"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "0 prints, 1 prints, 2 prints, then i = 3 fails the condition and the loop stops.",
+      "id": "u44l07e04"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Knowing the value where the condition first fails tells you when the loop stops.",
+      "answer": true,
+      "explanation": "True. The loop ends on the pass where the condition becomes false -- that value is the key to the trace.",
+      "id": "u44l07e05"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "What does total print?\n\ntotal = 0\nn = 3\nwhile n > 0:\n    total = total + n\n    n = n - 1\nprint(total)",
+      "options": [
+        "6",
+        "3",
+        "0",
+        "9"
+      ],
+      "answer": 0,
+      "explanation": "It adds 3 + 2 + 1 = 6. Tracing: total 3, then 5, then 6, then n = 0 stops it.",
+      "id": "u44l07e06"
+    },
+    {
+      "type": "fillBlank",
+      "prompt": "Trace to fill: after this loop, i equals ____:\n\ni = 1\nwhile i < 5:\n    i = i + 1",
+      "answer": "5",
+      "acceptable": [
+        "5"
+      ],
+      "explanation": "i goes 1,2,3,4,5. At i = 5 the condition 5 < 5 is false, so the loop stops with i equal to 5.",
+      "id": "u44l07e07"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "What shows?\n\ni = 1\nwhile i <= 16:\n    print(i)\n    i = i * 2",
+      "options": [
+        "1\n2\n4\n8\n16",
+        "1\n2\n4\n8",
+        "1\n2\n3\n4",
+        "forever"
+      ],
+      "answer": 0,
+      "explanation": "i doubles: 1,2,4,8,16 (all <= 16), then 32 fails. Multiplying still moves toward the stop.",
+      "id": "u44l07e08"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Tracing small numbers by hand is a good way to check a while loop before trusting it.",
+      "answer": true,
+      "explanation": "True. A quick by-hand trace reveals miscounts and conditions that stop too early or too late.",
+      "id": "u44l07e09"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "If a trace shows the control value never reaching the stop, that means...",
+      "options": [
+        "The loop would run forever -- fix the update or condition",
+        "The loop is perfect",
+        "It runs zero times",
+        "It prints once"
+      ],
+      "answer": 0,
+      "explanation": "A control value that never reaches the stop signals an infinite loop. The trace caught it before you ran it.",
+      "id": "u44l07e10"
+    }
+  ]
+}

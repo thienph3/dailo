@@ -1,0 +1,134 @@
+{
+  "unitId": "u30",
+  "lessonId": "u30l07",
+  "title": "Ask, then ask again: nested input decisions",
+  "idea": "An answer can gate a second question. Combine input() with nested if to ask a follow-up only when it is relevant. Predict the path.",
+  "exercises": [
+    {
+      "id": "u30l07e01",
+      "type": "multipleChoice",
+      "prompt": "Sometimes the second question only matters depending on the first answer. That calls for...",
+      "options": [
+        "a nested if, with the follow-up inside the first branch",
+        "two prints",
+        "a single ==",
+        "no if at all"
+      ],
+      "answer": 0,
+      "explanation": "Gate the follow-up inside the branch it belongs to - the nesting idea, now driven by typed answers."
+    },
+    {
+      "id": "u30l07e02",
+      "type": "multipleChoice",
+      "prompt": "The user types yes then vip:\n\nentry = input(\"Ticket? \")\nif entry == \"yes\":\n    seat = input(\"Seat type? \")\n    if seat == \"vip\":\n        print(\"VIP lounge\")\n    else:\n        print(\"Main hall\")\nelse:\n    print(\"No entry\")\n\nWhat prints?",
+      "options": [
+        "VIP lounge",
+        "Main hall",
+        "No entry",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "\"yes\" enters the outer branch and triggers the seat question; \"vip\" matches, so \"VIP lounge\" prints."
+    },
+    {
+      "id": "u30l07e03",
+      "type": "multipleChoice",
+      "prompt": "Same code, the user types yes then regular. What prints?",
+      "options": [
+        "Main hall",
+        "VIP lounge",
+        "No entry",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "\"yes\" asks the seat question; \"regular\" is not \"vip\", so the inner else prints \"Main hall\"."
+    },
+    {
+      "id": "u30l07e04",
+      "type": "multipleChoice",
+      "prompt": "Same code, the user types no. What prints, and is the seat question asked?",
+      "options": [
+        "No entry - and the seat question is never asked",
+        "VIP lounge",
+        "Main hall - after asking the seat",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "\"no\" fails the outer test, so the whole inner block (including the second input) is skipped. Only \"No entry\" prints."
+    },
+    {
+      "id": "u30l07e05",
+      "type": "trueFalse",
+      "prompt": "A second input() inside the if is only reached when the outer condition is true.",
+      "answer": true,
+      "explanation": "Yes - it lives inside the outer branch, so the follow-up question is asked only when it is relevant."
+    },
+    {
+      "id": "u30l07e06",
+      "type": "multipleChoice",
+      "prompt": "Why put the seat question INSIDE the ticket check?",
+      "options": [
+        "There is no point asking about a seat if they have no ticket",
+        "Seats are always inner",
+        "It runs faster",
+        "No reason"
+      ],
+      "answer": 0,
+      "explanation": "The follow-up only makes sense after the first answer. Nesting asks it exactly when it matters - no wasted questions."
+    },
+    {
+      "id": "u30l07e07",
+      "type": "orderBlocks",
+      "prompt": "Build: ask if they want dessert; if \"yes\", ask which and print it; if not, print \"Just the bill\".",
+      "blocks": [
+        "want = input(\"Dessert? \")",
+        "if want == \"yes\":",
+        "    pick = input(\"Which? \")",
+        "    print(\"Serving \" + pick)",
+        "else:",
+        "    print(\"Just the bill\")"
+      ],
+      "answer": [0, 1, 2, 3, 4, 5],
+      "explanation": "The second question (which dessert) is nested inside the yes branch, so it is only asked if they want dessert."
+    },
+    {
+      "id": "u30l07e08",
+      "type": "multipleChoice",
+      "prompt": "For that dessert code, the user types yes then cake. What prints?",
+      "options": [
+        "Serving cake",
+        "Just the bill",
+        "cake",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "\"yes\" triggers the which-dessert question; pick holds \"cake\", so \"Serving \" + pick is \"Serving cake\"."
+    },
+    {
+      "id": "u30l07e09",
+      "type": "multipleChoice",
+      "prompt": "This lesson combines which ideas?",
+      "options": [
+        "input() plus nested if - asking a follow-up only when relevant",
+        "loops and lists",
+        "functions only",
+        "just printing"
+      ],
+      "answer": 0,
+      "explanation": "You are gating a second input behind the first answer - interactive nesting, the full decision toolkit at work."
+    },
+    {
+      "id": "u30l07e10",
+      "type": "multipleChoice",
+      "prompt": "The takeaway:",
+      "options": [
+        "A typed answer can control whether a follow-up question is even asked",
+        "Always ask every question",
+        "Nesting breaks input",
+        "input must be top-level only"
+      ],
+      "answer": 0,
+      "explanation": "Nesting input() inside a branch makes conversations feel natural - the program asks what matters, when it matters."
+    }
+  ]
+}

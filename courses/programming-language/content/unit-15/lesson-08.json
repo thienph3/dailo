@@ -1,0 +1,133 @@
+{
+  "unitId": "u15",
+  "lessonId": "u15l08",
+  "title": "Two ways to join text",
+  "idea": "Concatenation with + and f-strings both build messages; f-strings are cleaner, especially with numbers.",
+  "exercises": [
+    {
+      "id": "u15l08e01",
+      "type": "multipleChoice",
+      "prompt": "These two lines do the same thing. What do they both show?\n\nname = \"Mia\"\nprint(\"Hi, \" + name + \"!\")\nprint(f\"Hi, {name}!\")",
+      "options": [
+        "Both show Hi, Mia!",
+        "Only the first works",
+        "Only the second works",
+        "They show different things"
+      ],
+      "answer": 0,
+      "explanation": "Same result: Hi, Mia! Two roads to the same message. The f-string is shorter and easier to read."
+    },
+    {
+      "id": "u15l08e02",
+      "type": "multipleChoice",
+      "prompt": "Which is easier to read for a message with two names?",
+      "options": [
+        "f\"{a} and {b}\"",
+        "a + \" and \" + b",
+        "They are equally hard",
+        "Neither works"
+      ],
+      "answer": 0,
+      "explanation": "The f-string reads like the sentence itself. The + version has more quotes and spaces to track."
+    },
+    {
+      "id": "u15l08e03",
+      "type": "trueFalse",
+      "prompt": "For putting a number into a sentence, the f-string is the clear choice in this course.",
+      "answer": true,
+      "explanation": "f-strings drop numbers in with no fuss. Joining numbers with + needs a tool we haven't met yet."
+    },
+    {
+      "id": "u15l08e04",
+      "type": "multipleChoice",
+      "prompt": "Rewrite as an f-string:\n\nprint(\"Score: \" + \"high\")",
+      "options": [
+        "print(f\"Score: high\")",
+        "print(f\"Score: {high}\")",
+        "print(\"Score: high\")",
+        "print(f\"{Score: high}\")"
+      ],
+      "answer": 0,
+      "explanation": "\"high\" was fixed text, not a variable, so no braces are needed: f\"Score: high\" shows Score: high."
+    },
+    {
+      "id": "u15l08e05",
+      "type": "multipleChoice",
+      "prompt": "Rewrite as an f-string:\n\ncity = \"Hue\"\nprint(\"From \" + city)",
+      "options": [
+        "print(f\"From {city}\")",
+        "print(f\"From city\")",
+        "print(f\"{From city}\")",
+        "print(\"From {city}\")"
+      ],
+      "answer": 0,
+      "explanation": "city is a variable, so it goes in braces: f\"From {city}\" shows From Hue."
+    },
+    {
+      "id": "u15l08e06",
+      "type": "matchPairs",
+      "prompt": "Match each piece to how it appears in an f-string.",
+      "pairs": [
+        {
+          "left": "A variable's value",
+          "right": "goes inside {braces}"
+        },
+        {
+          "left": "Fixed words and spaces",
+          "right": "written plainly, no braces"
+        },
+        {
+          "left": "The f before the quote",
+          "right": "turns the braces on"
+        }
+      ],
+      "explanation": "Braces for values, plain text for the rest, and the f switches it all on."
+    },
+    {
+      "id": "u15l08e07",
+      "type": "fillBlank",
+      "prompt": "Rewrite as an f-string so it prints: Hello Sam\n\nname = \"Sam\"\nprint(f\"Hello {____}\")",
+      "answer": "name",
+      "acceptable": [
+        "name"
+      ],
+      "explanation": "The variable name goes in the braces: f\"Hello {name}\" shows Hello Sam."
+    },
+    {
+      "id": "u15l08e08",
+      "type": "multipleChoice",
+      "prompt": "Spot the mistake:\n\nname = \"Mia\"\nprint(f\"Hi, name\")",
+      "options": [
+        "name needs braces, or it shows the word name",
+        "Missing the f",
+        "Too many quotes",
+        "Nothing is wrong"
+      ],
+      "answer": 0,
+      "explanation": "Without braces, name is just letters in the text: Hi, name. Wrap it: f\"Hi, {name}\" to get Hi, Mia."
+    },
+    {
+      "id": "u15l08e09",
+      "type": "multiSelect",
+      "prompt": "name holds \"Mia\". Which lines show Hi Mia? (pick all)",
+      "options": [
+        "print(\"Hi \" + name)",
+        "print(f\"Hi {name}\")",
+        "print(\"Hi \" + \"name\")",
+        "print(f\"Hi name\")"
+      ],
+      "answer": [
+        0,
+        1
+      ],
+      "explanation": "The first uses + with the variable; the second uses an f-string. The other two use the word 'name', not its value."
+    },
+    {
+      "id": "u15l08e10",
+      "type": "trueFalse",
+      "prompt": "Both + and f-strings are correct; you can pick whichever reads clearest.",
+      "answer": true,
+      "explanation": "There's no single right way. For numbers and longer sentences, most people reach for f-strings."
+    }
+  ]
+}

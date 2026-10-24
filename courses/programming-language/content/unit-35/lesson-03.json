@@ -1,0 +1,136 @@
+{
+  "unitId": "u35",
+  "lessonId": "u35l03",
+  "title": "The one step that repeats",
+  "idea": "Inside a repetition there is a single action — the body. Finding that one repeated step is how you plan a loop before you write it.",
+  "exercises": [
+    {
+      "id": "u35l03e01",
+      "type": "multipleChoice",
+      "prompt": "'Print a star 4 times.' What is the single step that repeats (the body)?",
+      "options": [
+        "Print a star",
+        "Print four stars",
+        "Count to 4",
+        "Stop printing"
+      ],
+      "answer": 0,
+      "explanation": "The body is the one action done each pass: print a star. The loop just does that body 4 times."
+    },
+    {
+      "id": "u35l03e02",
+      "type": "trueFalse",
+      "prompt": "The 'body' of a repetition is the single action done each time.",
+      "answer": true,
+      "explanation": "Yes — the body is that one repeated step. Spotting it lets you plan the step once and repeat it."
+    },
+    {
+      "id": "u35l03e03",
+      "type": "multipleChoice",
+      "prompt": "'Give each of 3 kids one sticker.' What is the body?",
+      "options": [
+        "Give one kid a sticker",
+        "Count the kids",
+        "Give 3 stickers at once",
+        "Collect the stickers"
+      ],
+      "answer": 0,
+      "explanation": "The repeated action for each kid is 'give one sticker'. That single action is the body, done 3 times."
+    },
+    {
+      "id": "u35l03e04",
+      "type": "multipleChoice",
+      "prompt": "A problem: 'Sharpen each of 10 pencils.' Which is the body, and which is the count?",
+      "options": [
+        "Body: sharpen one pencil; Count: 10",
+        "Body: 10; Count: sharpen",
+        "Body: count pencils; Count: 1",
+        "Body: sharpen 10 pencils; Count: 1"
+      ],
+      "answer": 0,
+      "explanation": "Body = the single repeated step (sharpen one pencil). Count = how many times (10). Separating them makes the plan clear."
+    },
+    {
+      "id": "u35l03e05",
+      "type": "trueFalse",
+      "prompt": "A repetition can have a long list of different actions as its body.",
+      "answer": false,
+      "explanation": "For the problems we meet now, the body is one simple repeated step. Keeping the body small keeps the repetition clear."
+    },
+    {
+      "id": "u35l03e06",
+      "type": "orderBlocks",
+      "prompt": "Put these in order to describe a repetition in plain English.",
+      "blocks": [
+        "Decide how many times to repeat",
+        "Decide the one step to repeat (the body)",
+        "Repeat that step that many times"
+      ],
+      "answer": [
+        1,
+        0,
+        2
+      ],
+      "explanation": "First name the body, then the count, then repeat the body that many times. That is the shape of every count loop."
+    },
+    {
+      "id": "u35l03e07",
+      "type": "multipleChoice",
+      "prompt": "'Wave hello to each of 5 neighbors.' If the body is 'wave hello', how many times does it run?",
+      "options": [
+        "5",
+        "1",
+        "0",
+        "10"
+      ],
+      "answer": 0,
+      "explanation": "Five neighbors, one wave each — the body runs 5 times. Body plus count fully describe the repetition."
+    },
+    {
+      "id": "u35l03e08",
+      "type": "matchPairs",
+      "prompt": "Match each problem to its repeated body.",
+      "pairs": [
+        {
+          "left": "Fold each of 6 shirts",
+          "right": "Fold one shirt"
+        },
+        {
+          "left": "Beep 3 times",
+          "right": "Beep once"
+        },
+        {
+          "left": "Hug each of 4 friends",
+          "right": "Hug one friend"
+        }
+      ],
+      "explanation": "The body is always the single action, stated for just one item or one pass."
+    },
+    {
+      "id": "u35l03e09",
+      "type": "multipleChoice",
+      "prompt": "Why describe the body for ONE item instead of all of them at once?",
+      "options": [
+        "Because the loop will repeat that one-item step for you",
+        "Because one item is all there ever is",
+        "Because counting is not allowed",
+        "Because it makes the problem harder"
+      ],
+      "answer": 0,
+      "explanation": "You write the step for one item; the repetition handles doing it for every item. Plan small, repeat many."
+    },
+    {
+      "id": "u35l03e10",
+      "type": "multipleChoice",
+      "prompt": "'Print Dailo 3 times.' Describe it as body + count.",
+      "options": [
+        "Body: print Dailo; Count: 3",
+        "Body: 3; Count: print Dailo",
+        "Body: print 3 Dailos; Count: 1",
+        "Body: nothing; Count: 3"
+      ],
+      "answer": 0,
+      "explanation": "Body = print Dailo (one line), Count = 3. You just split a repetition into its two key parts."
+    }
+  ]
+}

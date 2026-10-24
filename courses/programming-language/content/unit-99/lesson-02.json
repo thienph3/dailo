@@ -1,0 +1,154 @@
+{
+  "unitId": "u99",
+  "lessonId": "u99l02",
+  "title": "Capstone: a function for the larger of two numbers",
+  "idea": "GUIDED CAPSTONE. A function with two parameters that returns one of them using an if/else — decision logic wrapped for reuse.",
+  "problem": "Write larger(a, b) that returns the bigger of two numbers, so larger(3, 8) is 8.",
+  "exercises": [
+    {
+      "id": "u99l02e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: larger(a, b) returns the bigger number. OUTPUT is...",
+      "options": [
+        "Whichever of a and b is larger",
+        "Both numbers",
+        "Their sum",
+        "Always a"
+      ],
+      "answer": 0,
+      "explanation": "The function returns a single value: the larger input. Decision logic decides which."
+    },
+    {
+      "id": "u99l02e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "How many INPUTS (parameters) does this function need?",
+      "options": [
+        "Two — a and b",
+        "One",
+        "None",
+        "Three"
+      ],
+      "answer": 0,
+      "explanation": "Two numbers to compare, so two parameters. The caller supplies both."
+    },
+    {
+      "id": "u99l02e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example by hand: larger(3, 8) should return...",
+      "options": [
+        "8",
+        "3",
+        "11",
+        "5"
+      ],
+      "answer": 0,
+      "explanation": "8 is bigger than 3, so 8. Our check value."
+    },
+    {
+      "id": "u99l02e04",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "And larger(10, 4) should return...",
+      "options": [
+        "10",
+        "4",
+        "14",
+        "6"
+      ],
+      "answer": 0,
+      "explanation": "10 beats 4, so 10. Two examples confirm the rule: return whichever is bigger."
+    },
+    {
+      "id": "u99l02e05",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Plan the decision. Order the steps.",
+      "blocks": [
+        "Otherwise return b",
+        "Define larger with parameters a and b",
+        "If a is bigger, return a"
+      ],
+      "answer": [
+        1,
+        2,
+        0
+      ],
+      "explanation": "Header, then if/else returning the winner. The branch picks which parameter to return."
+    },
+    {
+      "id": "u99l02e06",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Which test means 'a is the bigger one'?",
+      "options": [
+        "a > b",
+        "a < b",
+        "a == b",
+        "a + b"
+      ],
+      "answer": 0,
+      "explanation": "a > b is true when a is larger, so we return a; otherwise return b."
+    },
+    {
+      "id": "u99l02e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code it. Arrange the lines.",
+      "blocks": [
+        "    else:",
+        "        return b",
+        "    if a > b:",
+        "        return a"
+      ],
+      "answer": [
+        2,
+        3,
+        0,
+        1
+      ],
+      "explanation": "if a>b return a, else return b. Each return is nested under its branch."
+    },
+    {
+      "id": "u99l02e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Complete the comparison:\n\ndef larger(a, b):\n    if a ____ b:\n        return a\n    else:\n        return b",
+      "answer": ">",
+      "acceptable": [
+        ">"
+      ],
+      "explanation": "Use > so the bigger value is returned. larger(3, 8) returns 8."
+    },
+    {
+      "id": "u99l02e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Call larger(3, 8): returns 8. Hand said 8. Verdict?",
+      "options": [
+        "Passes",
+        "Fails",
+        "Unknown",
+        "Rewrite example"
+      ],
+      "answer": 0,
+      "explanation": "Matches. A two-parameter function with a decision inside — clean and reusable."
+    },
+    {
+      "id": "u99l02e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "What does larger(5, 5) return?",
+      "options": [
+        "5 — the else branch returns b, which is 5",
+        "It crashes",
+        "Nothing",
+        "10"
+      ],
+      "answer": 0,
+      "explanation": "5 is not > 5, so the else returns b (5). Equal inputs are handled safely — correct either way since both are 5."
+    }
+  ]
+}

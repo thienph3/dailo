@@ -1,0 +1,130 @@
+{
+  "unitId": "u45",
+  "lessonId": "u45l02",
+  "title": "Make progress toward the stop",
+  "idea": "Progress means each pass moves the loop closer to its condition becoming false.",
+  "exercises": [
+    {
+      "type": "multipleChoice",
+      "prompt": "'Progress' in a loop means...",
+      "options": [
+        "Each pass moves closer to making the condition false",
+        "The loop prints more each time",
+        "The loop speeds up",
+        "The condition never changes"
+      ],
+      "answer": 0,
+      "explanation": "Progress is movement toward the exit. Each pass should nudge the checked value toward the point where the loop stops.",
+      "id": "u45l02e01"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Which loop makes progress toward stopping?",
+      "options": [
+        "i = 0\nwhile i < 3:\n    i = i + 1",
+        "i = 0\nwhile i < 3:\n    print(i)",
+        "i = 0\nwhile i < 3:\n    i = 0",
+        "i = 5\nwhile i < 3:\n    i = i + 1"
+      ],
+      "answer": 0,
+      "explanation": "The first grows i each pass, so i < 3 eventually becomes false. The others never change i toward the limit.",
+      "id": "u45l02e02"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Resetting i back to the start inside the loop can stop it from ever ending.",
+      "answer": true,
+      "explanation": "True. If you set i = 0 every pass, it never reaches the limit, so the condition stays true forever.",
+      "id": "u45l02e03"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "What shows?\n\nn = 5\nwhile n > 0:\n    print(n)\n    n = n - 1",
+      "options": [
+        "5\n4\n3\n2\n1",
+        "5\n4\n3\n2\n1\n0",
+        "forever",
+        "5"
+      ],
+      "answer": 0,
+      "explanation": "n counts DOWN: 5,4,3,2,1. At n = 0 the condition 0 > 0 is false, so it stops before printing 0.",
+      "id": "u45l02e04"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Counting down toward 0 is progress because...",
+      "options": [
+        "n gets smaller each pass and will reach the stopping point",
+        "n gets bigger",
+        "n never changes",
+        "counting down is always infinite"
+      ],
+      "answer": 0,
+      "explanation": "Making n smaller moves it toward 0 where n > 0 turns false. Progress can go up OR down -- as long as it heads for the exit.",
+      "id": "u45l02e05"
+    },
+    {
+      "type": "orderBlocks",
+      "prompt": "Arrange a countdown that prints 3, 2, 1 and stops.",
+      "blocks": [
+        "    n = n - 1",
+        "while n > 0:",
+        "    print(n)",
+        "n = 3"
+      ],
+      "answer": [
+        3,
+        1,
+        2,
+        0
+      ],
+      "explanation": "Set n = 3, while n > 0, print n, then shrink n. Shrinking is the progress toward n = 0.",
+      "id": "u45l02e06"
+    },
+    {
+      "type": "fillBlank",
+      "prompt": "Fill the line so this countdown reaches the stop:\n\nn = 4\nwhile n > 0:\n    print(n)\n    ____",
+      "answer": "n = n - 1",
+      "acceptable": [
+        "n = n - 1",
+        "n=n-1",
+        "n -= 1"
+      ],
+      "explanation": "Subtracting 1 each pass moves n toward 0, where n > 0 becomes false and the loop ends.",
+      "id": "u45l02e07"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Which change would make this loop run FOREVER?\n\nn = 5\nwhile n > 0:\n    print(n)\n    n = n - 1",
+      "options": [
+        "Change n = n - 1 to n = n + 1",
+        "Change n = 5 to n = 3",
+        "Change n > 0 to n > -1",
+        "Remove the print"
+      ],
+      "answer": 0,
+      "explanation": "n = n + 1 makes n grow, moving AWAY from 0. n > 0 would stay true forever -- no progress toward the stop.",
+      "id": "u45l02e08"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "A loop can make progress by counting up or by counting down -- what matters is it heads toward the condition becoming false.",
+      "answer": true,
+      "explanation": "True. Up or down doesn't matter; moving toward the exit does. 'Progress' is really 'getting closer to stopping.'",
+      "id": "u45l02e09"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Before trusting a while loop, the key question is:",
+      "options": [
+        "Does each pass move toward making the condition false?",
+        "Does it use range?",
+        "Is it longer than five lines?",
+        "Does it print twice?"
+      ],
+      "answer": 0,
+      "explanation": "If you can point to the line that makes progress and see it will reach the stop, the loop is safe.",
+      "id": "u45l02e10"
+    }
+  ]
+}

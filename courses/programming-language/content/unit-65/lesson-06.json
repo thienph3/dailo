@@ -1,0 +1,162 @@
+{
+  "unitId": "u65",
+  "lessonId": "u65l06",
+  "title": "Solve it: how many are tall enough?",
+  "idea": "GUIDED PROBLEM (filter + count). Keep the matching items, then count them with len() \u2014 or count directly with a counter. Interleaves filter with count-with-condition and len() from earlier list units (review-leaning).",
+  "problem": "Ride heights needed is 120. These riders measure [110, 130, 120, 95, 140]. How many riders are tall enough?",
+  "exercises": [
+    {
+      "id": "u65l06e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: the needed height is 120; riders measure [110, 130, 120, 95, 140]. How many riders are tall enough?\n\nOUTPUT?",
+      "options": [
+        "A single number: how many riders are 120 or taller",
+        "A new list of tall riders only",
+        "The tallest rider's height",
+        "The total of all heights"
+      ],
+      "answer": 0,
+      "explanation": "'How many' asks for a count \u2014 one number. (Building the list of tall riders is a fine first step, but the final output is the count.)"
+    },
+    {
+      "id": "u65l06e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "INPUTS?",
+      "options": [
+        "The needed height (120) and the list of rider heights",
+        "Only the list of heights",
+        "Only the needed height",
+        "The word 'tall'"
+      ],
+      "answer": 0,
+      "explanation": "The threshold and the list are both inputs. The needed height becomes a named variable so it is not hardcoded."
+    },
+    {
+      "id": "u65l06e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example. By hand, which heights are 120 or more in [110, 130, 120, 95, 140], and how many?",
+      "options": [
+        "130, 120, 140 \u2014 that's 3",
+        "110, 95 \u2014 that's 2",
+        "all five",
+        "just 140 \u2014 that's 1"
+      ],
+      "answer": 0,
+      "explanation": "130, 120 (exactly the limit), and 140 qualify \u2014 three riders. Your check value is 3."
+    },
+    {
+      "id": "u65l06e04",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Plan. One clean way is: filter the tall riders into a list, then take its length. Which tool gives the count of a list?",
+      "options": [
+        "len(the_list)",
+        "sum(the_list)",
+        "max(the_list)",
+        "the_list.append()"
+      ],
+      "answer": 0,
+      "explanation": "len() reports how many items a list holds. Filter first, then len() of the kept list is the count."
+    },
+    {
+      "id": "u65l06e05",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Put the filter-then-count plan in order.",
+      "blocks": [
+        "For each height, if it is 120 or more, add it to the tall list",
+        "Start with an empty 'tall' list",
+        "Count the tall list with len() and show that number"
+      ],
+      "answer": [
+        1,
+        0,
+        2
+      ],
+      "explanation": "Build the filtered list, then len() it. Reusing filter plus a known tool (len) solves a new question."
+    },
+    {
+      "id": "u65l06e06",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code it. Arrange the lines (threshold, empty list, loop + test + append, count, show).",
+      "blocks": [
+        "needed = 120",
+        "heights = [110, 130, 120, 95, 140]",
+        "tall = []",
+        "for height in heights:",
+        "    if height >= needed:",
+        "        tall.append(height)",
+        "count = len(tall)",
+        "print(count)"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "explanation": "Store the threshold and heights, filter the tall ones, len() the result into count, then print. needed is a named variable, not a hardcoded 120."
+    },
+    {
+      "id": "u65l06e07",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Complete the counting step:\n\ntall = [130, 120, 140]\ncount = ____(tall)\nprint(count)",
+      "answer": "len",
+      "acceptable": [
+        "len"
+      ],
+      "explanation": "len(tall) is 3 \u2014 the number of items the filtered list holds."
+    },
+    {
+      "id": "u65l06e08",
+      "type": "multipleChoice",
+      "uepcc": "C",
+      "prompt": "A friend skips the list and counts directly with a counter. Which pair of lines does that?",
+      "options": [
+        "count = 0  ...then inside the if:  count = count + 1",
+        "count = []  ...then inside the if:  count.append()",
+        "count = len(heights) before the loop",
+        "count = max(heights)"
+      ],
+      "answer": 0,
+      "explanation": "A counter starts at 0 and adds 1 on each match \u2014 count-with-condition from earlier. Both ways give the same 3; pick whichever reads clearer."
+    },
+    {
+      "id": "u65l06e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check. The code prints 3; your hand example was 3. Verdict?",
+      "options": [
+        "Passes",
+        "Fails",
+        "Unknown",
+        "Rewrite the example"
+      ],
+      "answer": 0,
+      "explanation": "The printed count matches the by-hand count, so the solution is correct."
+    },
+    {
+      "id": "u65l06e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Same plan, new inputs: needed = 100, heights = [90, 100, 150]. What count prints?",
+      "options": [
+        "2",
+        "1",
+        "3",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "100 (exactly) and 150 are tall enough, 90 is not, so the count is 2. The >= test includes the exactly-100 rider."
+    }
+  ]
+}

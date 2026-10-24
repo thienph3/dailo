@@ -1,0 +1,136 @@
+{
+  "unitId": "u19",
+  "lessonId": "u19l08",
+  "title": "True/False is a type, like number and text",
+  "idea": "Booleans are a data type, alongside numbers and strings. The idea of types from earlier units applies here too.",
+  "exercises": [
+    {
+      "id": "u19l08e01",
+      "type": "multipleChoice",
+      "prompt": "We've met numbers and text. What type are True and False?",
+      "options": [
+        "booleans",
+        "integers",
+        "strings",
+        "floats"
+      ],
+      "answer": 0,
+      "explanation": "True and False form their own type: booleans. It sits alongside numbers and text."
+    },
+    {
+      "id": "u19l08e02",
+      "type": "matchPairs",
+      "prompt": "Match each value to its type.",
+      "pairs": [
+        {
+          "left": "7",
+          "right": "number"
+        },
+        {
+          "left": "\"hi\"",
+          "right": "text (string)"
+        },
+        {
+          "left": "True",
+          "right": "boolean"
+        }
+      ],
+      "explanation": "Every value has a type. 7 is a number, \"hi\" is text, True is a boolean."
+    },
+    {
+      "id": "u19l08e03",
+      "type": "trueFalse",
+      "prompt": "A boolean is a different type from a number.",
+      "answer": true,
+      "explanation": "Yes. Booleans (True/False) are their own type, separate from numbers like 7."
+    },
+    {
+      "id": "u19l08e04",
+      "type": "multipleChoice",
+      "prompt": "Which list has ALL three value types we've seen?",
+      "options": [
+        "5, \"cat\", True",
+        "5, 6, 7",
+        "\"a\", \"b\", \"c\"",
+        "True, False, True"
+      ],
+      "answer": 0,
+      "explanation": "5 is a number, \"cat\" is text, True is a boolean - three different types together."
+    },
+    {
+      "id": "u19l08e05",
+      "type": "multipleChoice",
+      "prompt": "What is the type of the value in this variable?\n\nflag = False",
+      "options": [
+        "boolean",
+        "number",
+        "string",
+        "unknown"
+      ],
+      "answer": 0,
+      "explanation": "flag holds False, which is a boolean value. The variable's current type is boolean."
+    },
+    {
+      "id": "u19l08e06",
+      "type": "multipleChoice",
+      "prompt": "What is the type of the value in this variable?\n\ncount = 10",
+      "options": [
+        "number",
+        "boolean",
+        "string",
+        "list"
+      ],
+      "answer": 0,
+      "explanation": "count holds 10, a number. A quick review that different values have different types."
+    },
+    {
+      "id": "u19l08e07",
+      "type": "trueFalse",
+      "prompt": "\"True\" (in quotes) and True (no quotes) have the same type.",
+      "answer": false,
+      "explanation": "No - \"True\" is text (a string) and True is a boolean. Quotes change the type."
+    },
+    {
+      "id": "u19l08e08",
+      "type": "multipleChoice",
+      "prompt": "Which of these is a boolean value?",
+      "options": [
+        "False",
+        "\"False\"",
+        "3.5",
+        "\"no\""
+      ],
+      "answer": 0,
+      "explanation": "False (no quotes) is the boolean. \"False\" and \"no\" are text; 3.5 is a number."
+    },
+    {
+      "id": "u19l08e09",
+      "type": "multiSelect",
+      "prompt": "Select ALL the boolean values.",
+      "options": [
+        "True",
+        "False",
+        "\"True\"",
+        "0"
+      ],
+      "answer": [
+        0,
+        1
+      ],
+      "explanation": "Only True and False (no quotes) are booleans. \"True\" is text and 0 is a number."
+    },
+    {
+      "id": "u19l08e10",
+      "type": "multipleChoice",
+      "prompt": "Why does knowing the type of a value matter?",
+      "options": [
+        "Because the computer treats each type differently",
+        "Because all types are the same",
+        "Because booleans can't be used",
+        "So we can ignore the value"
+      ],
+      "answer": 0,
+      "explanation": "Type decides what the computer can do with a value. A yes/no fact behaves differently from a number or text."
+    }
+  ]
+}

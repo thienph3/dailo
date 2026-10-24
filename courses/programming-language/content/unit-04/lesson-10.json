@@ -1,0 +1,130 @@
+{
+  "unitId": "u04",
+  "lessonId": "u04l10",
+  "title": "Put it together: build an example end to end",
+  "idea": "Take a tiny task, name input and output, write the full example, and connect it to the print code you'd use — all the pieces of this unit at once.",
+  "exercises": [
+    {
+      "id": "u04l10e01",
+      "type": "multipleChoice",
+      "prompt": "Task: 'show the word Hello'. What's the very first thinking step?",
+      "options": [
+        "Name the input and the output",
+        "Write the code",
+        "Run the program",
+        "Give up"
+      ],
+      "answer": 0,
+      "explanation": "Start by naming input and output. That's the Understand/Example thinking before any typing."
+    },
+    {
+      "id": "u04l10e02",
+      "type": "multipleChoice",
+      "prompt": "Same task. What is the expected output?",
+      "options": [
+        "Hello",
+        "Hi",
+        "print(Hello)",
+        "hello world"
+      ],
+      "answer": 0,
+      "explanation": "The task asks for Hello, so the hand-worked output is Hello — exactly."
+    },
+    {
+      "id": "u04l10e03",
+      "type": "multipleChoice",
+      "prompt": "Which print line would produce the output Hello? (review from Unit 1)",
+      "options": [
+        "print(\"Hello\")",
+        "print(Hello)",
+        "print Hello",
+        "Hello"
+      ],
+      "answer": 0,
+      "explanation": "print(\"Hello\") — text in matching quotes, inside brackets. The example (Hello) tells us this is the right code."
+    },
+    {
+      "id": "u04l10e04",
+      "type": "orderBlocks",
+      "prompt": "Put the whole mini-rhythm in order for this task.",
+      "blocks": [
+        "Name input and output",
+        "Write the example output by hand",
+        "Write the print code",
+        "Check the real output against the example"
+      ],
+      "answer": [0, 1, 2, 3],
+      "explanation": "Understand, example, code, check. The example in step 2 is what step 4 compares against."
+    },
+    {
+      "id": "u04l10e05",
+      "type": "multipleChoice",
+      "prompt": "Task: 'show Hi, then Bye'. What's the full expected output?",
+      "options": [
+        "Line 1: Hi, Line 2: Bye",
+        "Line 1: Bye, Line 2: Hi",
+        "Line 1: HiBye",
+        "Line 1: Hi only"
+      ],
+      "answer": 0,
+      "explanation": "Two lines, in order: Hi then Bye. You worked the multi-line example by hand."
+    },
+    {
+      "id": "u04l10e06",
+      "type": "orderBlocks",
+      "prompt": "Which code produces that output? Put the print lines in order.",
+      "blocks": [
+        "print(\"Hi\")",
+        "print(\"Bye\")"
+      ],
+      "answer": [0, 1],
+      "explanation": "print(\"Hi\") first, then print(\"Bye\") — matching the example lines Hi then Bye. (Review of Unit 3's several prints.)"
+    },
+    {
+      "id": "u04l10e07",
+      "type": "multiSelect",
+      "prompt": "Which of these did you practice in this unit? (pick all)",
+      "options": [
+        "Naming the input of a task",
+        "Writing the expected output by hand",
+        "Spotting a flawed example",
+        "Using it as a check later"
+      ],
+      "answer": [0, 1, 2, 3],
+      "explanation": "All four — name I/O, work the example, catch bad examples, and use the example to check. That's the E of the rhythm."
+    },
+    {
+      "id": "u04l10e08",
+      "type": "trueFalse",
+      "prompt": "The output you wrote by hand is what you'll compare the real output to.",
+      "answer": true,
+      "explanation": "Yes — the hand-worked example is your check value. This ties the whole unit together."
+    },
+    {
+      "id": "u04l10e09",
+      "type": "multipleChoice",
+      "prompt": "Task: 'show the number 7'. The example says 7; the program prints 7. Pass or fail?",
+      "options": [
+        "Pass — real output matches the example",
+        "Fail — numbers can't be shown",
+        "Fail — needs quotes on screen",
+        "Can't tell"
+      ],
+      "answer": 0,
+      "explanation": "The screen shows 7 and the example expected 7. They match, so it passes. You used the example as your check."
+    },
+    {
+      "id": "u04l10e10",
+      "type": "multipleChoice",
+      "prompt": "You can now do which thing, that you couldn't before this unit?",
+      "options": [
+        "Write a concrete input->output example for a task before coding",
+        "Write loops",
+        "Store values in variables",
+        "Ask the user for input"
+      ],
+      "answer": 0,
+      "explanation": "That's the Out goal of Unit 4: hand-work a concrete example first — the E of the rhythm. Great progress!"
+    }
+  ]
+}

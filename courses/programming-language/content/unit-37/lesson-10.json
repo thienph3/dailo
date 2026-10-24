@@ -1,0 +1,133 @@
+{
+  "unitId": "u37",
+  "lessonId": "u37l10",
+  "title": "for/range: pulling it together",
+  "idea": "Wrap-up of Unit 37: for i in range(n) repeats n times; header + indent; predict output; set the count. Review-leaning with earlier-lap recall.",
+  "exercises": [
+    {
+      "id": "u37l10e01",
+      "type": "multipleChoice",
+      "prompt": "What shows?\n\nfor i in range(3):\n    print(\"Hi\")",
+      "options": [
+        "Hi\nHi\nHi",
+        "Hi",
+        "3",
+        "i\ni\ni"
+      ],
+      "answer": 0,
+      "explanation": "range(3) repeats the body three times — three Hi lines. The core for/range output."
+    },
+    {
+      "id": "u37l10e02",
+      "type": "multipleChoice",
+      "prompt": "range(8) repeats the body how many times?",
+      "options": [
+        "8",
+        "7",
+        "9",
+        "1"
+      ],
+      "answer": 0,
+      "explanation": "range(n) runs the body n times — range(8) is eight passes."
+    },
+    {
+      "id": "u37l10e03",
+      "type": "trueFalse",
+      "prompt": "The for loop header ends with a colon and the body is indented beneath it.",
+      "answer": true,
+      "explanation": "Colon then indented block — the same shape as if and 'for each'. Consistent across the language."
+    },
+    {
+      "id": "u37l10e04",
+      "type": "multipleChoice",
+      "prompt": "What shows?\n\nprint(\"Start\")\nfor i in range(2):\n    print(\"Go\")\nprint(\"End\")",
+      "options": [
+        "Start\nGo\nGo\nEnd",
+        "Start\nGo\nEnd",
+        "Go\nGo",
+        "Start\nEnd"
+      ],
+      "answer": 0,
+      "explanation": "Start once, Go twice (the body), End once. Outside-once, inside-per-pass, outside-once."
+    },
+    {
+      "id": "u37l10e05",
+      "type": "multipleChoice",
+      "prompt": "Review: with n = 5, what does range(n) mean?",
+      "options": [
+        "range(5) — five repeats",
+        "range(n) — the letter n",
+        "One repeat",
+        "An error"
+      ],
+      "answer": 0,
+      "explanation": "range(n) uses the value in n. With n = 5 it's range(5), five repeats. Variables feed the count."
+    },
+    {
+      "id": "u37l10e06",
+      "type": "matchPairs",
+      "prompt": "Match each range to its number of output lines (single-print body).",
+      "pairs": [
+        {
+          "left": "range(3)",
+          "right": "3 lines"
+        },
+        {
+          "left": "range(1)",
+          "right": "1 line"
+        },
+        {
+          "left": "range(0)",
+          "right": "0 lines"
+        }
+      ],
+      "explanation": "Lines equal the count with one print. range(0) is the empty case — nothing prints."
+    },
+    {
+      "id": "u37l10e07",
+      "type": "multipleChoice",
+      "prompt": "What's wrong?\n\nfor i in range(3)\n    print(\"Hi\")",
+      "options": [
+        "Missing colon after range(3)",
+        "Hi is wrong",
+        "3 is too big",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "The header needs a colon. A recap of the common bug from lesson 5."
+    },
+    {
+      "id": "u37l10e08",
+      "type": "multipleChoice",
+      "prompt": "Review from Lap 1: after total = 2 + 3, print(total) shows what?",
+      "options": [
+        "5",
+        "2 + 3",
+        "total",
+        "23"
+      ],
+      "answer": 0,
+      "explanation": "2 + 3 is 5, stored in total, so it prints 5. Math and variables still work — including inside a loop body."
+    },
+    {
+      "id": "u37l10e09",
+      "type": "trueFalse",
+      "prompt": "So far, each pass of our for/range loop prints the exact same thing.",
+      "answer": true,
+      "explanation": "Right — the value hasn't changed pass to pass. Making it change is exactly what the next unit adds."
+    },
+    {
+      "id": "u37l10e10",
+      "type": "multipleChoice",
+      "prompt": "You finished for + range(n). What's the next step?",
+      "options": [
+        "Use the current count each pass, e.g. print 1, 2, 3",
+        "Stop learning loops",
+        "Only do decisions",
+        "Delete range"
+      ],
+      "answer": 0,
+      "explanation": "Next, the loop variable lets each pass use its own number — 1, 2, 3 — and range gains a start, stop, and step."
+    }
+  ]
+}

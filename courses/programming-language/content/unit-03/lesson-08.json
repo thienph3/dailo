@@ -1,0 +1,113 @@
+{
+  "unitId": "u03",
+  "lessonId": "u03l08",
+  "title": "Solve it: a menu with sections",
+  "idea": "GUIDED PROBLEM. Report two sections separated by a blank line. Combines ordering, blank-line spacing, and line counting in one problem.",
+  "problem": "Show a menu: a Drinks section (tea, water), a blank line, then a Snacks section (chips, fruit). Each item on its own line.",
+  "exercises": [
+    {
+      "id": "u03l08e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: Show Drinks (tea, water), a blank line, then Snacks (chips, fruit).\n\nHow many lines total, counting the blank line?",
+      "options": ["5", "4", "6", "2"],
+      "answer": 0,
+      "explanation": "tea, water, blank, chips, fruit = 5 lines. The blank line is one of them."
+    },
+    {
+      "id": "u03l08e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "What is the point of the blank line here?",
+      "options": [
+        "To separate the Drinks section from the Snacks section",
+        "To end the program",
+        "To delete the drinks",
+        "No reason"
+      ],
+      "answer": 0,
+      "explanation": "The blank line visually splits the two sections so the menu is easy to read."
+    },
+    {
+      "id": "u03l08e03",
+      "type": "orderBlocks",
+      "uepcc": "E",
+      "prompt": "Example. Order the output by hand: drinks first, then the gap, then snacks.",
+      "blocks": ["tea", "water", "(blank line)", "chips", "fruit"],
+      "answer": [0, 1, 2, 3, 4],
+      "explanation": "tea, water, blank, chips, fruit. Five lines in that order — your check value."
+    },
+    {
+      "id": "u03l08e04",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Plan: how many print instructions, counting the blank one?",
+      "options": ["Five", "Four", "Three", "Two"],
+      "answer": 0,
+      "explanation": "Two drinks + one blank print + two snacks = five prints, one per line."
+    },
+    {
+      "id": "u03l08e05",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Where does the empty print() go in the plan?",
+      "options": [
+        "After water and before chips",
+        "At the very top",
+        "At the very bottom",
+        "There is no empty print"
+      ],
+      "answer": 0,
+      "explanation": "The gap sits between the two sections, so the empty print goes after water, before chips."
+    },
+    {
+      "id": "u03l08e06",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code. Arrange all five lines: the two drinks, the blank, then the two snacks.",
+      "blocks": ["print(\"chips\")", "print(\"tea\")", "print()", "print(\"fruit\")", "print(\"water\")"],
+      "answer": [1, 4, 2, 0, 3],
+      "explanation": "tea, water, print() for the gap, chips, fruit — matching the plan exactly."
+    },
+    {
+      "id": "u03l08e07",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Complete the gap line between the sections:\n\nprint(\"water\")\nprint____\nprint(\"chips\")",
+      "answer": "()",
+      "acceptable": ["()"],
+      "explanation": "An empty print() makes the blank line. The brackets have nothing inside."
+    },
+    {
+      "id": "u03l08e08",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check. Output:\n\ntea\nwater\n\nchips\nfruit\n\nMatches the example?",
+      "options": ["Yes — two sections split by a blank line", "No — no gap", "No — a line is missing", "Can't tell"],
+      "answer": 0,
+      "explanation": "Drinks, a blank line, then snacks — all five lines in order. Check passes."
+    },
+    {
+      "id": "u03l08e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "If the empty print() were missing, the output would be?",
+      "options": [
+        "tea, water, chips, fruit with no gap between sections",
+        "Exactly the same",
+        "An error",
+        "Only the snacks"
+      ],
+      "answer": 0,
+      "explanation": "Without the blank print, the four items run together with no separating gap — it no longer matches."
+    },
+    {
+      "id": "u03l08e10",
+      "type": "trueFalse",
+      "uepcc": "U",
+      "prompt": "You can build a nicely spaced report using only print lines and empty print() lines.",
+      "answer": true,
+      "explanation": "Yes! With just print and blank prints you can order and space a whole report. That is this unit's power."
+    }
+  ]
+}

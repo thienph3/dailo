@@ -1,0 +1,130 @@
+{
+  "unitId": "u37",
+  "lessonId": "u37l06",
+  "title": "The body can use a remembered value",
+  "idea": "The loop body is ordinary code: it can print a variable you set before the loop. The same value shows each pass (it doesn't change yet).",
+  "exercises": [
+    {
+      "id": "u37l06e01",
+      "type": "multipleChoice",
+      "prompt": "What shows?\n\nprice = 5\nfor i in range(3):\n    print(price)",
+      "options": [
+        "5\n5\n5",
+        "5",
+        "15",
+        "price"
+      ],
+      "answer": 0,
+      "explanation": "price is 5, and the body prints it each pass. Three passes, so 5 shows three times."
+    },
+    {
+      "id": "u37l06e02",
+      "type": "trueFalse",
+      "prompt": "A variable set before the loop can be used inside the loop body.",
+      "answer": true,
+      "explanation": "Yes — the body is normal code and can read variables you made earlier. A quick recall of variables from Lap 1."
+    },
+    {
+      "id": "u37l06e03",
+      "type": "multipleChoice",
+      "prompt": "What shows?\n\nseats = 4\nfor i in range(2):\n    print(seats)",
+      "options": [
+        "4\n4",
+        "4",
+        "2",
+        "8"
+      ],
+      "answer": 0,
+      "explanation": "seats is 4; the body prints it twice (range(2)). The value doesn't change, so 4 appears both times."
+    },
+    {
+      "id": "u37l06e04",
+      "type": "multipleChoice",
+      "prompt": "Review: after score = 7, what does print(score) show?",
+      "options": [
+        "7",
+        "score",
+        "\"score\"",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "A variable prints its stored value: 7. The loop just repeats that print."
+    },
+    {
+      "id": "u37l06e05",
+      "type": "multipleChoice",
+      "prompt": "What shows?\n\nn = 3\nfor i in range(n):\n    print(\"Hi\")",
+      "options": [
+        "Hi\nHi\nHi",
+        "Hi",
+        "3",
+        "n\nn\nn"
+      ],
+      "answer": 0,
+      "explanation": "n is 3, so range(n) is range(3) — three passes, three Hi lines. The count can come from a variable."
+    },
+    {
+      "id": "u37l06e06",
+      "type": "trueFalse",
+      "prompt": "You can put a variable inside range, like range(n), to set the count from a remembered value.",
+      "answer": true,
+      "explanation": "Yes — range(n) uses whatever n holds. Change n before the loop and the repeat count changes with it."
+    },
+    {
+      "id": "u37l06e07",
+      "type": "fillBlank",
+      "prompt": "Make this loop repeat as many times as the variable times holds:\n\ntimes = 5\nfor i in range(____):\n    print(\"Go\")",
+      "answer": "times",
+      "acceptable": [
+        "times"
+      ],
+      "explanation": "range(times) uses the value in times (5), so the body runs five times."
+    },
+    {
+      "id": "u37l06e08",
+      "type": "multipleChoice",
+      "prompt": "What shows?\n\ncount = 2\nfor i in range(count):\n    print(\"Beep\")",
+      "options": [
+        "Beep\nBeep",
+        "Beep",
+        "2",
+        "count\ncount"
+      ],
+      "answer": 0,
+      "explanation": "count is 2, so range(count) is range(2) — two Beep lines."
+    },
+    {
+      "id": "u37l06e09",
+      "type": "matchPairs",
+      "prompt": "Match each setup to its repeat count.",
+      "pairs": [
+        {
+          "left": "n = 4; range(n)",
+          "right": "4 times"
+        },
+        {
+          "left": "n = 1; range(n)",
+          "right": "1 time"
+        },
+        {
+          "left": "n = 6; range(n)",
+          "right": "6 times"
+        }
+      ],
+      "explanation": "range(n) runs the body n times, where n is whatever the variable holds."
+    },
+    {
+      "id": "u37l06e10",
+      "type": "multipleChoice",
+      "prompt": "Why is using a variable in range(n) handy?",
+      "options": [
+        "You can decide the count once in a variable and reuse it",
+        "It makes Hi longer",
+        "It removes the colon",
+        "It stops the loop early"
+      ],
+      "answer": 0,
+      "explanation": "A variable count is easy to set in one place and change later. Variables and loops work together nicely."
+    }
+  ]
+}

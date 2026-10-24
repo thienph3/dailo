@@ -1,0 +1,148 @@
+{
+  "unitId": "u100",
+  "lessonId": "u100l07",
+  "title": "Grand finale: assemble a solution from your own functions",
+  "idea": "GUIDED FINALE. Decompose a word problem into helpers you write, then compose them — the full engineering loop.",
+  "problem": "Compute the area of a border: outer square area minus inner square area. Use area(side) for both (outer 5, inner 3 -> 25 - 9 = 16).",
+  "exercises": [
+    {
+      "id": "u100l07e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: border area = outer area - inner area, each a square. OUTPUT is...",
+      "options": [
+        "One number: the leftover border area",
+        "Both areas",
+        "The perimeter",
+        "A count"
+      ],
+      "answer": 0,
+      "explanation": "Output is the difference of two areas. We'll compute each with a helper, then subtract."
+    },
+    {
+      "id": "u100l07e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "How does decomposing into area(side) help here?",
+      "options": [
+        "We write the square-area logic ONCE and call it twice",
+        "It's slower",
+        "It doubles the code",
+        "No help"
+      ],
+      "answer": 0,
+      "explanation": "One helper, two calls (outer and inner). Decomposition + composition — the heart of this course."
+    },
+    {
+      "id": "u100l07e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example by hand: outer side 5 -> area 25; inner side 3 -> area 9. Border = 25 - 9 = ?",
+      "options": [
+        "16",
+        "34",
+        "8",
+        "225"
+      ],
+      "answer": 0,
+      "explanation": "25 - 9 = 16. Our check value. Each area comes from the same helper."
+    },
+    {
+      "id": "u100l07e04",
+      "type": "trueFalse",
+      "uepcc": "E",
+      "prompt": "area(5) and area(3) must RETURN their results so we can subtract them.",
+      "answer": true,
+      "explanation": "Yes — returned values can be subtracted. A print-only helper couldn't be composed this way."
+    },
+    {
+      "id": "u100l07e05",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Plan it. Order the steps.",
+      "blocks": [
+        "border = area(outer) - area(inner)",
+        "Write area(side) returning side * side",
+        "Show the border area"
+      ],
+      "answer": [
+        1,
+        0,
+        2
+      ],
+      "explanation": "Define the helper, call it for both squares, subtract, show. Build the piece, then use it twice."
+    },
+    {
+      "id": "u100l07e06",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Which expression computes the border using the helper?",
+      "options": [
+        "area(5) - area(3)",
+        "area(5) + area(3)",
+        "area(5 - 3)",
+        "area(5) * area(3)"
+      ],
+      "answer": 0,
+      "explanation": "Subtract the inner area from the outer: area(5) - area(3). area(5-3) would wrongly compute area(2)."
+    },
+    {
+      "id": "u100l07e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code the helper and the composition. Arrange the lines.",
+      "blocks": [
+        "border = area(5) - area(3)",
+        "def area(side):",
+        "    return side * side",
+        "print(border)"
+      ],
+      "answer": [
+        1,
+        2,
+        0,
+        3
+      ],
+      "explanation": "Define area, then border = area(5) - area(3), then print. One helper, composed into the answer."
+    },
+    {
+      "id": "u100l07e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Complete the border calculation using the helper twice:\n\ndef area(side):\n    return side * side\nborder = area(5) ____ area(3)\nprint(border)",
+      "answer": "-",
+      "acceptable": [
+        "-"
+      ],
+      "explanation": "Subtract the inner area from the outer: 25 - 9 = 16."
+    },
+    {
+      "id": "u100l07e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Run it: prints 16. Hand said 16. Verdict?",
+      "options": [
+        "Passes",
+        "Fails",
+        "Unknown",
+        "Rewrite example"
+      ],
+      "answer": 0,
+      "explanation": "Matches. You decomposed the problem into one helper and composed the answer — real engineering!"
+    },
+    {
+      "id": "u100l07e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Re-run with outer 10, inner 6: area(10) - area(6) = ?",
+      "options": [
+        "64 — 100 - 36",
+        "16",
+        "40",
+        "136"
+      ],
+      "answer": 0,
+      "explanation": "100 - 36 = 64. The same helper serves any sizes. Build once, reuse everywhere!"
+    }
+  ]
+}

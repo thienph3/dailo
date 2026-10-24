@@ -1,0 +1,146 @@
+{
+  "unitId": "u60",
+  "lessonId": "u60l10",
+  "title": "You can find the smallest too",
+  "idea": "Review-heavy close; cement that max and min are one pattern, and bridge to practising all the list tools.",
+  "exercises": [
+    {
+      "id": "u60l10e01",
+      "type": "multipleChoice",
+      "prompt": "In one sentence, how do you find the smallest value in a list?",
+      "options": [
+        "Keep a best-so-far starting at the first value, and replace it whenever you meet something smaller",
+        "Add every value together",
+        "Count the items",
+        "Print the last value"
+      ],
+      "answer": 0,
+      "explanation": "Same best-so-far pattern as the biggest, with 'smaller' instead of 'bigger'."
+    },
+    {
+      "id": "u60l10e02",
+      "type": "multipleChoice",
+      "prompt": "Smallest of [15, 42, 8, 23]?",
+      "options": [
+        "8",
+        "42",
+        "88",
+        "15"
+      ],
+      "answer": 0,
+      "explanation": "8 is the smallest. best drops to 8 and nothing beats it."
+    },
+    {
+      "id": "u60l10e03",
+      "type": "trueFalse",
+      "prompt": "The ONLY difference between the max loop and the min loop is the comparison sign.",
+      "answer": true,
+      "explanation": "> for biggest, < for smallest. Everything else — start, loop, replace, print — is identical."
+    },
+    {
+      "id": "u60l10e04",
+      "type": "matchPairs",
+      "prompt": "Match each job to the sign that does it.",
+      "pairs": [
+        {
+          "left": "Biggest",
+          "right": ">"
+        },
+        {
+          "left": "Smallest",
+          "right": "<"
+        }
+      ],
+      "explanation": "One pattern, two signs. You learned max, then flipped it to get min."
+    },
+    {
+      "id": "u60l10e05",
+      "type": "orderBlocks",
+      "prompt": "REVIEW: put the min program in order one more time.",
+      "answer": [
+        1,
+        0,
+        3,
+        2,
+        4
+      ],
+      "blocks": [
+        "for v in vals:",
+        "best = vals[0]",
+        "        best = v",
+        "    if v < best:",
+        "print(best)"
+      ],
+      "explanation": "Start best, loop, test with <, replace on a smaller value, print. You own this now."
+    },
+    {
+      "id": "u60l10e06",
+      "type": "multipleChoice",
+      "prompt": "REVIEW: 'how many days were below freezing (< 0)' uses which tool?",
+      "options": [
+        "conditional count",
+        "min",
+        "max",
+        "sum"
+      ],
+      "answer": 0,
+      "explanation": "'How many fit a rule' is the count pattern from Unit 58."
+    },
+    {
+      "id": "u60l10e07",
+      "type": "multipleChoice",
+      "prompt": "REVIEW: 'the warmest day' uses which tool?",
+      "options": [
+        "max",
+        "min",
+        "sum",
+        "count"
+      ],
+      "answer": 0,
+      "explanation": "'Warmest' is the biggest value — max."
+    },
+    {
+      "id": "u60l10e08",
+      "type": "multiSelect",
+      "prompt": "Which are true about min? (pick all)",
+      "options": [
+        "Start best at the first value",
+        "Replace best when you meet something smaller",
+        "It is the max pattern with < instead of >",
+        "It adds the values together"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "First three describe min exactly. Adding is sum, not min."
+    },
+    {
+      "id": "u60l10e09",
+      "type": "multipleChoice",
+      "prompt": "Smallest of [-1, -1, -1]?",
+      "options": [
+        "-1",
+        "0",
+        "-3",
+        "3"
+      ],
+      "answer": 0,
+      "explanation": "All equal to -1, so the smallest is -1. Starting at the first value handles all-negative lists."
+    },
+    {
+      "id": "u60l10e10",
+      "type": "multipleChoice",
+      "prompt": "You now know sum, count, max, and min. What comes next?",
+      "options": [
+        "Practising which pattern to pick for a given problem",
+        "Forgetting max",
+        "Sorting lists",
+        "Nothing more to learn"
+      ],
+      "answer": 0,
+      "explanation": "Next is a practice unit: given a problem, choose sum, count, max, or min — and solve it with UEPCC."
+    }
+  ]
+}

@@ -1,0 +1,139 @@
+{
+  "unitId": "u85",
+  "lessonId": "u85l07",
+  "title": "Two problems hiding in one sentence",
+  "idea": "MEET: a single sentence can carry two independent asks joined by 'and' — splitting them into two clear outputs is the heart of understanding a big problem.",
+  "exercises": [
+    {
+      "type": "multipleChoice",
+      "prompt": "PROBLEM: 'Show the total of the prices and the number of items over 50.' How many INDEPENDENT asks?",
+      "options": [
+        "Two — a total, and a count over 50",
+        "One — they're the same",
+        "Three",
+        "Zero"
+      ],
+      "answer": 0,
+      "explanation": "'the total of the prices' and 'the number of items over 50' are two independent outputs joined by 'and'.",
+      "id": "u85l07e01"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Two asks joined by 'and' can each be planned on their own.",
+      "answer": true,
+      "explanation": "Yes — that's the point. Independent asks become independent sub-problems you tackle one at a time.",
+      "id": "u85l07e02"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "PROBLEM: 'Report the average and the highest score.' If you only plan the average, you have...",
+      "options": [
+        "Solved half the problem — the highest is still missing",
+        "Solved all of it",
+        "Solved none of it",
+        "Made the problem bigger"
+      ],
+      "answer": 0,
+      "explanation": "Two asks means two parts. Planning one leaves the other undone. Both must appear in the answer.",
+      "id": "u85l07e03"
+    },
+    {
+      "type": "multiSelect",
+      "prompt": "Select the sentences that actually contain TWO independent asks.",
+      "options": [
+        "Show the total and the average",
+        "Count the passes and the fails",
+        "Add two numbers together",
+        "Find the smallest price"
+      ],
+      "answer": [
+        0,
+        1
+      ],
+      "explanation": "The first two each join two outputs with 'and'. The last two each name a single output.",
+      "id": "u85l07e04"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Why split a two-ask sentence into two lines in your restatement?",
+      "options": [
+        "Each line becomes a clear, separate sub-problem to plan",
+        "To make the restatement messy",
+        "Because one line is illegal",
+        "It changes the inputs"
+      ],
+      "answer": 0,
+      "explanation": "One ask per line keeps each sub-problem visible so none gets dropped.",
+      "id": "u85l07e05"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "'Show the total and the average' is a single ask because it is one sentence.",
+      "answer": false,
+      "explanation": "No — being one sentence doesn't make it one ask. It carries two outputs: total AND average.",
+      "id": "u85l07e06"
+    },
+    {
+      "type": "matchPairs",
+      "prompt": "Split each sentence: match it to its two asks.",
+      "pairs": [
+        {
+          "left": "'total and average'",
+          "right": "the total; the average"
+        },
+        {
+          "left": "'biggest and smallest'",
+          "right": "the biggest; the smallest"
+        },
+        {
+          "left": "'passes and fails'",
+          "right": "the pass count; the fail count"
+        }
+      ],
+      "explanation": "Each sentence breaks cleanly into two asks. Naming both is how you avoid forgetting one.",
+      "id": "u85l07e07"
+    },
+    {
+      "type": "orderBlocks",
+      "prompt": "Order the habit for a two-ask sentence.",
+      "blocks": [
+        "Read the sentence",
+        "Find the word 'and' joining two asks",
+        "Write each ask on its own line as an output"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Spot the 'and', split into two outputs, list them separately. Two clean parts, not one tangled one.",
+      "id": "u85l07e08"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "PROBLEM: 'List the orders above 100 and tell me how many there are.' The two asks are...",
+      "options": [
+        "the orders above 100; the count of them",
+        "only the orders above 100",
+        "only the count",
+        "the total of all orders"
+      ],
+      "answer": 0,
+      "explanation": "Two asks: the filtered list, and the count of it. The second depends on the first but is still its own output.",
+      "id": "u85l07e09"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "The big idea:",
+      "options": [
+        "One sentence can carry two independent asks — split them into two outputs",
+        "Every sentence is exactly one ask",
+        "'and' never joins two asks",
+        "Splitting sentences is forbidden"
+      ],
+      "answer": 0,
+      "explanation": "Watch for 'and'. Two asks in a sentence become two sub-problems — the setup for the next unit.",
+      "id": "u85l07e10"
+    }
+  ]
+}

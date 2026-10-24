@@ -1,0 +1,137 @@
+{
+  "unitId": "u24",
+  "lessonId": "u24l07",
+  "title": "Which problems need a guard?",
+  "idea": "Not every problem has an edge case. Practice telling apart problems that need a guard from ones that are always safe.",
+  "exercises": [
+    {
+      "id": "u24l07e01",
+      "type": "multipleChoice",
+      "prompt": "Which problem NEEDS a zero guard?",
+      "options": [
+        "average = total / count",
+        "total = price + tax",
+        "double = n * 2",
+        "sum = a + b"
+      ],
+      "answer": 0,
+      "explanation": "Only the division by count can divide by zero. Adding and multiplying are always safe."
+    },
+    {
+      "id": "u24l07e02",
+      "type": "multipleChoice",
+      "prompt": "Which problem is always safe (no divide-by-zero risk)?",
+      "options": [
+        "area = width * height",
+        "per_person = bill / people",
+        "rate = miles / hours",
+        "share = total / count"
+      ],
+      "answer": 0,
+      "explanation": "Multiplying width by height can never divide by zero. The others divide by a variable that might be zero."
+    },
+    {
+      "id": "u24l07e03",
+      "type": "trueFalse",
+      "prompt": "Every problem has a dangerous edge case.",
+      "answer": false,
+      "explanation": "No - many problems (pure addition or multiplication) are always safe. Part of the skill is knowing when a guard is NOT needed."
+    },
+    {
+      "id": "u24l07e04",
+      "type": "multiSelect",
+      "prompt": "Select ALL problems that need a divide-by-zero guard.",
+      "options": [
+        "price per item = cost / items",
+        "speed = distance / time",
+        "total = a + b + c",
+        "average = sum / how_many"
+      ],
+      "answer": [
+        0,
+        1,
+        3
+      ],
+      "explanation": "The three divisions by a variable need guards. The pure addition (a + b + c) is always safe."
+    },
+    {
+      "id": "u24l07e05",
+      "type": "multipleChoice",
+      "prompt": "'Show the first of several scores.' Which guard does this need?",
+      "options": [
+        "a guard for the empty case (no scores)",
+        "a divide-by-zero guard",
+        "a negative guard",
+        "no guard"
+      ],
+      "answer": 0,
+      "explanation": "The risk here is emptiness - no scores to show - not division. Different edge case, different guard."
+    },
+    {
+      "id": "u24l07e06",
+      "type": "matchPairs",
+      "prompt": "Match each problem to the edge case it should guard.",
+      "pairs": [
+        {
+          "left": "bill / diners",
+          "right": "zero diners"
+        },
+        {
+          "left": "first item in cart",
+          "right": "empty cart"
+        },
+        {
+          "left": "accept an age",
+          "right": "negative age"
+        }
+      ],
+      "explanation": "Division worries about a zero divisor; 'first of' worries about empty; accepting a value worries about impossible input."
+    },
+    {
+      "id": "u24l07e07",
+      "type": "multipleChoice",
+      "prompt": "A problem computes total = count * price. Does it need a zero guard?",
+      "options": [
+        "No - multiplying is always safe",
+        "Yes - count might be zero",
+        "Yes - price might be zero",
+        "Yes, always guard everything"
+      ],
+      "answer": 0,
+      "explanation": "Multiplying by zero just gives 0, which is fine. No division means no divide-by-zero risk."
+    },
+    {
+      "id": "u24l07e08",
+      "type": "trueFalse",
+      "prompt": "Knowing when a guard is NOT needed is as useful as knowing when it is.",
+      "answer": true,
+      "explanation": "Yes. Adding guards where none are needed clutters a plan. Spot the real edge case, guard only that."
+    },
+    {
+      "id": "u24l07e09",
+      "type": "multipleChoice",
+      "prompt": "Which of these could produce an edge case worth guarding?",
+      "options": [
+        "dividing by a count that users control",
+        "adding two fixed numbers",
+        "multiplying by 2",
+        "printing a fixed message"
+      ],
+      "answer": 0,
+      "explanation": "A user-controlled count could be zero, so that division needs a guard. The others are always safe."
+    },
+    {
+      "id": "u24l07e10",
+      "type": "multipleChoice",
+      "prompt": "The decision for every problem is...",
+      "options": [
+        "Ask if an empty/zero/impossible value is possible, and guard only if so",
+        "Always add a guard",
+        "Never add a guard",
+        "Guess"
+      ],
+      "answer": 0,
+      "explanation": "Check whether a bad value is even possible. Guard exactly those problems - no more, no less."
+    }
+  ]
+}

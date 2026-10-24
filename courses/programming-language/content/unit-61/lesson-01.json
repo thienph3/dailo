@@ -1,0 +1,148 @@
+{
+  "unitId": "u61",
+  "lessonId": "u61l01",
+  "title": "Solve it together: total of a basket",
+  "idea": "GUIDED PROBLEM via UEPCC. Choose and apply the SUM pattern to add every price in a basket.",
+  "problem": "A basket holds prices [4, 7, 3]. Show the total cost of the whole basket.",
+  "exercises": [
+    {
+      "id": "u61l01e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: A basket holds prices [4, 7, 3]. Show the total cost.\n\nUnderstand first. What is the OUTPUT?",
+      "options": [
+        "One number: the total of all prices",
+        "The biggest price",
+        "How many prices there are",
+        "Each price printed separately"
+      ],
+      "answer": 0,
+      "explanation": "The output is a single total. Naming it first tells you this is a 'add them all up' problem."
+    },
+    {
+      "id": "u61l01e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "Still understanding. What is the INPUT?",
+      "options": [
+        "The list of prices [4, 7, 3]",
+        "A single price",
+        "The word 'total'",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "The input is the list of prices. You will walk it and combine the values."
+    },
+    {
+      "id": "u61l01e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example by hand. Add 4 + 7 + 3. What should the total be?",
+      "options": [
+        "14",
+        "7",
+        "3",
+        "47"
+      ],
+      "answer": 0,
+      "explanation": "4 + 7 + 3 = 14. This hand answer is the check value you compare the code against."
+    },
+    {
+      "id": "u61l01e04",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Plan. Which of the four list patterns (sum, count, max, min) fits 'total of all'?",
+      "options": [
+        "Sum — a running total that adds each value",
+        "Count — add 1 per match",
+        "Max — the biggest",
+        "Min — the smallest"
+      ],
+      "answer": 0,
+      "explanation": "'Total of all' means add every value into one result: the SUM pattern."
+    },
+    {
+      "id": "u61l01e05",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Put the plain-English plan in order.",
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "blocks": [
+        "Start a running total at 0",
+        "Add each price to the total",
+        "Show the total"
+      ],
+      "explanation": "Start at 0, add each value, then show the total. Plan in words before coding."
+    },
+    {
+      "id": "u61l01e06",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code it. Arrange the lines to total the basket.",
+      "answer": [
+        1,
+        2,
+        0,
+        3
+      ],
+      "blocks": [
+        "    total = total + price",
+        "total = 0",
+        "for price in prices:",
+        "print(total)"
+      ],
+      "explanation": "Start total at 0, loop each price, add it in, then print. The code mirrors the plan."
+    },
+    {
+      "id": "u61l01e07",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Finish the start line so the running total begins correctly:\n\ntotal ____ 0\nfor price in prices:\n    total = total + price",
+      "answer": "=",
+      "acceptable": [
+        "="
+      ],
+      "explanation": "total = 0 starts the accumulator empty so the first price is added correctly."
+    },
+    {
+      "id": "u61l01e08",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check. The code prints 14. Your hand example said 14. So...",
+      "options": [
+        "It passes — output matches the example",
+        "It fails",
+        "You can't tell",
+        "Change the example"
+      ],
+      "answer": 0,
+      "explanation": "Output matches the hand-worked total, so the sum solution is correct."
+    },
+    {
+      "id": "u61l01e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "New input: prices = [5, 5, 10]. With the same sum code, what prints?",
+      "options": [
+        "20",
+        "14",
+        "3",
+        "10"
+      ],
+      "answer": 0,
+      "explanation": "5 + 5 + 10 = 20. A good solution works for new inputs, proving the sum pattern generalises."
+    },
+    {
+      "id": "u61l01e10",
+      "type": "trueFalse",
+      "uepcc": "Check",
+      "prompt": "Re-checking with fresh numbers proves the pattern works in general, not just for the first example.",
+      "answer": true,
+      "explanation": "One example can pass by luck; a second, different one builds real confidence."
+    }
+  ]
+}

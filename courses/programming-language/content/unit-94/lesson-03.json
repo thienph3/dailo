@@ -1,0 +1,133 @@
+{
+  "unitId": "u94",
+  "lessonId": "u94l03",
+  "title": "The empty case",
+  "idea": "MEET. The empty list is the classic edge case. Reason about what SHOULD happen and whether a solution handles it.",
+  "exercises": [
+    {
+      "id": "u94l03e01",
+      "type": "multipleChoice",
+      "prompt": "An 'edge case' is...",
+      "explanation": "An edge case is an unusual input at the boundary of what's expected — empty, zero, the exact limit — where bugs love to hide.",
+      "options": [
+        "An unusual boundary input where bugs often hide",
+        "The most common input",
+        "A typing mistake",
+        "A kind of loop"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u94l03e02",
+      "type": "multipleChoice",
+      "prompt": "For 'total of a list', what SHOULD the total of an empty list [] be?",
+      "explanation": "Adding nothing gives 0 — the accumulator starts at 0 and never changes. The empty total is 0, which is sensible.",
+      "options": [
+        "0",
+        "1",
+        "An error",
+        "Undefined"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u94l03e03",
+      "type": "multipleChoice",
+      "prompt": "For 'average of a list', why is the empty list DANGEROUS?",
+      "explanation": "Average divides by the count. An empty list has count 0, and dividing by zero crashes — so it needs a guard.",
+      "options": [
+        "Count is 0, and dividing by zero crashes",
+        "It's too long",
+        "It has negative numbers",
+        "Averages can't be computed ever"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u94l03e04",
+      "type": "trueFalse",
+      "prompt": "A solution that works on [3, 4] but crashes on [] is not fully proven.",
+      "explanation": "Right — proving it works means the edge cases work too. A crash on empty is a real, unhandled case.",
+      "answer": true
+    },
+    {
+      "id": "u94l03e05",
+      "type": "multipleChoice",
+      "prompt": "For 'highest bid' on an empty list, what's the honest answer?",
+      "explanation": "There is no highest of nothing, so the right design is to guard and report 'no bids' (or 0), not to invent a number.",
+      "options": [
+        "There's no maximum — guard it and report no bids",
+        "0 is always correct",
+        "The list fixes itself",
+        "Any number will do"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u94l03e06",
+      "type": "matchPairs",
+      "prompt": "Match each operation to its correct EMPTY-list result.",
+      "explanation": "Empty totals and counts are 0; empty average and max have no value, so they need a guard rather than a number.",
+      "pairs": [
+        {
+          "left": "Total of []",
+          "right": "0"
+        },
+        {
+          "left": "Count of []",
+          "right": "0"
+        },
+        {
+          "left": "Average of []",
+          "right": "Needs a guard (no value)"
+        }
+      ]
+    },
+    {
+      "id": "u94l03e07",
+      "type": "multipleChoice",
+      "prompt": "The way to handle the empty case in code (from Unit 93) is to...",
+      "explanation": "Check count == 0 (or len == 0) BEFORE the risky division and return a safe value. The guard comes first.",
+      "options": [
+        "Guard it with an if before any division, returning a safe value",
+        "Ignore it",
+        "Make the list longer",
+        "Divide anyway"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u94l03e08",
+      "type": "trueFalse",
+      "prompt": "You should test the empty case even if 'the data is never empty in practice'.",
+      "explanation": "Yes — 'never' has a way of happening. A guard is cheap; a crash in front of a user is not.",
+      "answer": true
+    },
+    {
+      "id": "u94l03e09",
+      "type": "multipleChoice",
+      "prompt": "Someone's average function returns 0 for []. Is that acceptable?",
+      "explanation": "Returning 0 (or clearly reporting 'no data') is a reasonable, non-crashing choice. The key is that it doesn't crash.",
+      "options": [
+        "Yes — it's a safe, non-crashing choice stated up front",
+        "No — it must crash",
+        "No — it must return the list",
+        "Only if the list is long"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "u94l03e10",
+      "type": "multipleChoice",
+      "prompt": "The lesson of the empty case is...",
+      "explanation": "Always ask 'what if there's nothing?' Deciding the empty answer up front turns a crash into a handled case.",
+      "options": [
+        "Always decide what 'nothing' should produce, before it bites you",
+        "Empty lists are illegal",
+        "Avoid lists entirely",
+        "Only test big inputs"
+      ],
+      "answer": 0
+    }
+  ]
+}

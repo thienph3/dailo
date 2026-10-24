@@ -1,0 +1,129 @@
+{
+  "unitId": "u13",
+  "lessonId": "u13l06",
+  "title": "Parentheses with % and //",
+  "idea": "% and // sit in the same first group as * and / . Parentheses still force a part to go first.",
+  "exercises": [
+    {
+      "id": "u13l06e01",
+      "type": "multipleChoice",
+      "prompt": "Review: what does % give you?",
+      "options": [
+        "The remainder after dividing",
+        "A percentage sign",
+        "The quotient only",
+        "A decimal answer"
+      ],
+      "answer": 0,
+      "explanation": "% is the remainder (leftover). 7 % 2 is 1. You learned this last unit — now we add order rules."
+    },
+    {
+      "id": "u13l06e02",
+      "type": "multipleChoice",
+      "prompt": "% and // go in which precedence group?",
+      "options": [
+        "The same first group as * and /",
+        "The same group as + and -",
+        "They always go last",
+        "They have no order"
+      ],
+      "answer": 0,
+      "explanation": "% and // happen before + and - , just like * and / . Same first group."
+    },
+    {
+      "id": "u13l06e03",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nprint(1 + 10 % 3)",
+      "options": [
+        "2",
+        "3",
+        "0",
+        "11"
+      ],
+      "answer": 0,
+      "explanation": "% first: 10 % 3 is 1 (10 = 3*3 + 1). Then 1 + 1 is 2."
+    },
+    {
+      "id": "u13l06e04",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nprint(10 // 3 + 1)",
+      "options": [
+        "4",
+        "3",
+        "11",
+        "2"
+      ],
+      "answer": 0,
+      "explanation": "// first: 10 // 3 is 3 (whole part). Then 3 + 1 is 4."
+    },
+    {
+      "id": "u13l06e05",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nprint((1 + 10) % 3)",
+      "options": [
+        "2",
+        "1",
+        "11",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "Inside first: 1 + 10 is 11. Then 11 % 3 is 2. The ( ) changed which numbers % works on."
+    },
+    {
+      "id": "u13l06e06",
+      "type": "multipleChoice",
+      "prompt": "Compare:\n\nprint(1 + 10 % 3)\nprint((1 + 10) % 3)",
+      "options": [
+        "2 then 2",
+        "2 then 1",
+        "11 then 2",
+        "0 then 11"
+      ],
+      "answer": 0,
+      "explanation": "First: 10%3=1, 1+1=2. Second: 1+10=11, 11%3=2. Here both happen to be 2, but for different reasons — always check!"
+    },
+    {
+      "id": "u13l06e07",
+      "type": "fillBlank",
+      "prompt": "Fill in the result:\n\nprint((12 + 3) // 4)\n\nOutput: ____",
+      "answer": "3",
+      "acceptable": [
+        "3"
+      ],
+      "explanation": "Inside first: 12 + 3 is 15. Then 15 // 4 is 3 (whole part of 3.75)."
+    },
+    {
+      "id": "u13l06e08",
+      "type": "trueFalse",
+      "prompt": "In 2 + 9 % 4, the % happens before the + .",
+      "answer": true,
+      "explanation": "Yes — % is in the first group. 9 % 4 is 1, then 2 + 1 is 3."
+    },
+    {
+      "id": "u13l06e09",
+      "type": "multipleChoice",
+      "prompt": "You want to add 7 and 5 FIRST, then take the remainder when divided by 4. Which is correct?",
+      "options": [
+        "print((7 + 5) % 4)",
+        "print(7 + 5 % 4)",
+        "print(7 % 4 + 5)",
+        "print(7 + 5 // 4)"
+      ],
+      "answer": 0,
+      "explanation": "(7 + 5) % 4 adds first: 12 % 4 is 0. The others let % sneak in before the add."
+    },
+    {
+      "id": "u13l06e10",
+      "type": "multipleChoice",
+      "prompt": "Review: store the result. What prints?\n\nleftover = (6 + 4) % 3\nprint(leftover)",
+      "options": [
+        "1",
+        "0",
+        "10",
+        "3"
+      ],
+      "answer": 0,
+      "explanation": "Inside first: 6 + 4 is 10. Then 10 % 3 is 1. The variable holds 1."
+    }
+  ]
+}

@@ -1,0 +1,147 @@
+{
+  "unitId": "u37",
+  "lessonId": "u37l08",
+  "title": "From plan to for/range code",
+  "idea": "Turn a repetition plan (body + count) into a real for/range loop, then check the output. Full UEPCC on a repeat problem.",
+  "exercises": [
+    {
+      "id": "u37l08e01",
+      "type": "multipleChoice",
+      "prompt": "PROBLEM: Print Hi 4 times. First — what is the OUTPUT?",
+      "options": [
+        "Four lines, each showing Hi",
+        "The number 4",
+        "One Hi",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "Name the output first: four Hi lines. That's the result the code must produce."
+    },
+    {
+      "id": "u37l08e02",
+      "type": "multipleChoice",
+      "prompt": "Still planning. Body and count?",
+      "options": [
+        "Body: print Hi; Count: 4",
+        "Body: 4; Count: print Hi",
+        "Body: print 4 His; Count: 1",
+        "Body: nothing; Count: 4"
+      ],
+      "answer": 0,
+      "explanation": "Body is the repeated step (print Hi); count is 4. These map onto the loop body and range(4)."
+    },
+    {
+      "id": "u37l08e03",
+      "type": "multipleChoice",
+      "prompt": "Which loop matches body = print Hi, count = 4?",
+      "options": [
+        "for i in range(4):\n    print(\"Hi\")",
+        "for i in range(4):\n    print(\"4\")",
+        "print(\"Hi\")",
+        "if range(4):\n    print(\"Hi\")"
+      ],
+      "answer": 0,
+      "explanation": "range(4) for the count, print(\"Hi\") for the body. The plan becomes the code directly."
+    },
+    {
+      "id": "u37l08e04",
+      "type": "orderBlocks",
+      "prompt": "Code the plan: print a header once, then Hi 3 times.",
+      "blocks": [
+        "print(\"Greetings:\")",
+        "for i in range(3):",
+        "    print(\"Hi\")"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Once-only header, then the loop header, then the indented body. The plan's shape is the code's shape."
+    },
+    {
+      "id": "u37l08e05",
+      "type": "multipleChoice",
+      "prompt": "You run it and see Hi four times. Your plan said 4. So...",
+      "options": [
+        "It passes — output matches the plan",
+        "It fails",
+        "You can't tell",
+        "Change the plan"
+      ],
+      "answer": 0,
+      "explanation": "Output (4 Hi) matches the plan (4). A passing Check closes the UEPCC loop."
+    },
+    {
+      "id": "u37l08e06",
+      "type": "trueFalse",
+      "prompt": "Planning body + count in words makes the for/range loop easy to write.",
+      "answer": true,
+      "explanation": "The body becomes the indented line; the count becomes range(count). Plan clearly, code quickly."
+    },
+    {
+      "id": "u37l08e07",
+      "type": "matchPairs",
+      "prompt": "Match each plan to its loop header.",
+      "pairs": [
+        {
+          "left": "Count 6",
+          "right": "for i in range(6):"
+        },
+        {
+          "left": "Count 2",
+          "right": "for i in range(2):"
+        },
+        {
+          "left": "Count 9",
+          "right": "for i in range(9):"
+        }
+      ],
+      "explanation": "The plan's count becomes the number inside range. Count 6 -> range(6)."
+    },
+    {
+      "id": "u37l08e08",
+      "type": "multipleChoice",
+      "prompt": "PROBLEM: print a thank-you for each of 5 orders. What range?",
+      "options": [
+        "range(5)",
+        "range(4)",
+        "range(6)",
+        "range(1)"
+      ],
+      "answer": 0,
+      "explanation": "Five orders, five repeats — range(5). Match the count in range to the number of things."
+    },
+    {
+      "id": "u37l08e09",
+      "type": "orderBlocks",
+      "prompt": "Order the UEPCC flow for a repeat problem.",
+      "blocks": [
+        "Understand: name the output",
+        "Plan: body + count",
+        "Code: for i in range(count): body",
+        "Check: trace output vs plan"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "Understand, plan, code, check — the course's spine, now on a for/range loop."
+    },
+    {
+      "id": "u37l08e10",
+      "type": "multipleChoice",
+      "prompt": "Your loop prints the same line n times. What's the one thing it can't do yet?",
+      "options": [
+        "Show a different value each pass (like 1, 2, 3)",
+        "Print text",
+        "Repeat n times",
+        "Use a variable count"
+      ],
+      "answer": 0,
+      "explanation": "So far each pass is identical. Making the value change each pass is the next unit — using the step number."
+    }
+  ]
+}

@@ -1,0 +1,151 @@
+{
+  "unitId": "u27",
+  "lessonId": "u27l04",
+  "title": "Solve it: is the number in range?",
+  "idea": "GUIDED. One problem through UEPCC using 'and' to test a value between two bounds.",
+  "problem": "A ride is for people whose height is between 120 and 195 cm (inclusive). Given height, print 'Can ride' or 'Cannot ride'.",
+  "exercises": [
+    {
+      "id": "u27l04e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: Height between 120 and 195 (inclusive) may ride. Print 'Can ride' or 'Cannot ride'.\n\nWhat is the OUTPUT?",
+      "options": [
+        "The label 'Can ride' or 'Cannot ride'",
+        "The height number",
+        "The ride name",
+        "A count of riders"
+      ],
+      "answer": 0,
+      "explanation": "One of two labels. The height is the input; the label is the output."
+    },
+    {
+      "id": "u27l04e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "The rule has TWO bounds. What must be true for 'Can ride'?",
+      "options": [
+        "Height is at least 120 AND at most 195",
+        "Height is at least 120 only",
+        "Height is at most 195 only",
+        "Height is exactly 120"
+      ],
+      "answer": 0,
+      "explanation": "Both bounds must hold at once: not too short and not too tall. That 'both' points to 'and'."
+    },
+    {
+      "id": "u27l04e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "By hand: height 150. Can ride?",
+      "options": [
+        "Can ride",
+        "Cannot ride",
+        "150",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "150 is >= 120 and <= 195, so both sides hold: 'Can ride'. Your check value."
+    },
+    {
+      "id": "u27l04e04",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "By hand: height 200. Can ride?",
+      "options": [
+        "Cannot ride",
+        "Can ride",
+        "200",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "200 is over 195, so the upper bound fails; with 'and' the whole thing is false: 'Cannot ride'."
+    },
+    {
+      "id": "u27l04e05",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Plan: how do you write 'at least 120 and at most 195'?",
+      "options": [
+        "height >= 120 and height <= 195",
+        "height >= 120 or height <= 195",
+        "height > 120 and height > 195",
+        "height == 120 and height == 195"
+      ],
+      "answer": 0,
+      "explanation": ">= 120 for the lower bound, <= 195 for the upper, joined by 'and' so both must hold. The inclusive bounds need >= and <=."
+    },
+    {
+      "id": "u27l04e06",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Why 'and' here and not 'or'?",
+      "options": [
+        "Both bounds must hold at the same time; 'or' would accept being just tall enough OR just short enough",
+        "'or' is faster",
+        "'and' is only for numbers",
+        "They behave the same"
+      ],
+      "answer": 0,
+      "explanation": "A range needs BOTH limits satisfied. 'or' would wrongly pass a 300 cm person (short-enough side false, but tall-enough side... also false - the point is 'or' loosens the rule incorrectly)."
+    },
+    {
+      "id": "u27l04e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Arrange the code.",
+      "blocks": [
+        "if height >= 120 and height <= 195:",
+        "    print(\"Can ride\")",
+        "else:",
+        "    print(\"Cannot ride\")"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "One combined range test with 'and', then the else for anyone outside the range."
+    },
+    {
+      "id": "u27l04e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Complete the upper-bound operator so exactly 195 still passes:\n\nif height >= 120 and height __ 195:\n    print(\"Can ride\")",
+      "answer": "<=",
+      "acceptable": [
+        "<="
+      ],
+      "explanation": "<= 195 includes 195 itself. A plain < would wrongly reject someone exactly 195 cm."
+    },
+    {
+      "id": "u27l04e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check the first example: height 150. What prints?",
+      "options": [
+        "Can ride",
+        "Cannot ride",
+        "150",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "150 >= 120 True and 150 <= 195 True, so 'Can ride' - matching your hand answer."
+    },
+    {
+      "id": "u27l04e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Re-check the lower edge: height 120. What prints?",
+      "options": [
+        "Can ride",
+        "Cannot ride",
+        "120",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "120 >= 120 is True and 120 <= 195 is True, so 'Can ride'. Testing the exact edge proves >= was right."
+    }
+  ]
+}

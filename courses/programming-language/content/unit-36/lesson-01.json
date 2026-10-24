@@ -1,0 +1,127 @@
+{
+  "unitId": "u36",
+  "lessonId": "u36l01",
+  "title": "The 'for each' idea",
+  "idea": "A loop lets you say 'for each thing, do this one step.' Meet the idea and see the repeated output it produces. Stays at the plain-English loop level.",
+  "exercises": [
+    {
+      "id": "u36l01e01",
+      "type": "multipleChoice",
+      "prompt": "A loop is a way to tell the computer to...",
+      "options": [
+        "Do the same step again for each thing, without copying it",
+        "Make one decision",
+        "Show a single line once",
+        "Delete your code"
+      ],
+      "answer": 0,
+      "explanation": "A loop repeats one step for each thing in a group. That's the 'for each' idea at the heart of this lap."
+    },
+    {
+      "id": "u36l01e02",
+      "type": "trueFalse",
+      "prompt": "'For each' means: run the same body once per item.",
+      "answer": true,
+      "explanation": "Exactly. One item, one run of the body; next item, body again. That repeats until the items run out."
+    },
+    {
+      "id": "u36l01e03",
+      "type": "multipleChoice",
+      "prompt": "If you loop 'for each of 3 guests: print Welcome', what shows on the screen?",
+      "options": [
+        "Welcome\nWelcome\nWelcome",
+        "Welcome",
+        "3",
+        "guests"
+      ],
+      "answer": 0,
+      "explanation": "The body 'print Welcome' runs once per guest — three guests, three Welcome lines. That's visible, predictable output."
+    },
+    {
+      "id": "u36l01e04",
+      "type": "multipleChoice",
+      "prompt": "Looping 'for each of 4 items: print Hi' prints how many lines?",
+      "options": [
+        "4",
+        "1",
+        "0",
+        "8"
+      ],
+      "answer": 0,
+      "explanation": "One Hi per item, four items — four lines. Output lines match the number of things with a single-print body."
+    },
+    {
+      "id": "u36l01e05",
+      "type": "trueFalse",
+      "prompt": "A loop saves you from copying the same print line over and over.",
+      "answer": true,
+      "explanation": "You write the body once; the loop repeats it. That's the fix for the copy-paste pain from Unit 35."
+    },
+    {
+      "id": "u36l01e06",
+      "type": "multipleChoice",
+      "prompt": "Which everyday sentence matches the 'for each' idea best?",
+      "options": [
+        "For each plate, wash it",
+        "Wash the single plate once",
+        "If the plate is dirty, wash it",
+        "Never wash plates"
+      ],
+      "answer": 0,
+      "explanation": "'For each plate, wash it' is a loop in plain English: one body (wash it), repeated per plate."
+    },
+    {
+      "id": "u36l01e07",
+      "type": "matchPairs",
+      "prompt": "Match each 'for each' loop to its number of output lines (body is a single print).",
+      "pairs": [
+        {
+          "left": "For each of 2 things: print Go",
+          "right": "2 lines"
+        },
+        {
+          "left": "For each of 5 things: print Go",
+          "right": "5 lines"
+        },
+        {
+          "left": "For each of 1 thing: print Go",
+          "right": "1 line"
+        }
+      ],
+      "explanation": "With one print in the body, lines equal the number of things looped over."
+    },
+    {
+      "id": "u36l01e08",
+      "type": "multipleChoice",
+      "prompt": "In 'for each of 3 things: print Hi', which part is the BODY?",
+      "options": [
+        "print Hi",
+        "for each of 3 things",
+        "3",
+        "things"
+      ],
+      "answer": 0,
+      "explanation": "The body is the indented step that repeats: print Hi. The 'for each' part controls how many times it runs."
+    },
+    {
+      "id": "u36l01e09",
+      "type": "trueFalse",
+      "prompt": "A loop with 0 things to go through runs its body 0 times.",
+      "answer": true,
+      "explanation": "No things means the body never runs — nothing prints. Loops handle 'none' gracefully."
+    },
+    {
+      "id": "u36l01e10",
+      "type": "multipleChoice",
+      "prompt": "Why is the 'for each' idea such a big deal?",
+      "options": [
+        "It turns 'do this many times' into one short, clear instruction",
+        "It makes text bigger",
+        "It replaces all decisions",
+        "It stops the program"
+      ],
+      "answer": 0,
+      "explanation": "One readable loop can stand for hundreds of repeats. You just met the core tool of this whole lap."
+    }
+  ]
+}

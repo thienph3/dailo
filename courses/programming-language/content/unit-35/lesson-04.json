@@ -1,0 +1,123 @@
+{
+  "unitId": "u35",
+  "lessonId": "u35l04",
+  "title": "Why copy-paste gets painful",
+  "idea": "You could repeat a step by copying a line many times — but it is slow, error-prone, and breaks when the count changes. That pain is why loops exist.",
+  "exercises": [
+    {
+      "id": "u35l04e01",
+      "type": "multipleChoice",
+      "prompt": "To show Hi five times, a beginner writes print(\"Hi\") five times. What is the main downside?",
+      "options": [
+        "If the count changes to 50, you must copy 50 lines",
+        "It will not run at all",
+        "Python forbids copying lines",
+        "It shows the wrong word"
+      ],
+      "answer": 0,
+      "explanation": "Copy-paste works for 5 but is miserable for 50 or 500. Loops let one line stand in for many."
+    },
+    {
+      "id": "u35l04e02",
+      "type": "trueFalse",
+      "prompt": "Copying the same line many times is easy to get wrong (a typo in one copy).",
+      "answer": true,
+      "explanation": "Every copy is a chance for a mistake. One looped line has no copies to get out of sync."
+    },
+    {
+      "id": "u35l04e03",
+      "type": "multipleChoice",
+      "prompt": "You pasted print(\"Hi\") 10 times but one line says print(\"Hii\"). What happens?",
+      "options": [
+        "One line shows Hii instead of Hi",
+        "Nothing shows at all",
+        "All lines show Hii",
+        "The computer fixes it"
+      ],
+      "answer": 0,
+      "explanation": "Only the mistyped copy is wrong. Hunting one bad copy among ten is exactly the pain loops remove."
+    },
+    {
+      "id": "u35l04e04",
+      "type": "multipleChoice",
+      "prompt": "Which situation makes copy-paste repetition clearly a bad idea?",
+      "options": [
+        "The action must run 1000 times",
+        "The action runs once",
+        "The action runs twice",
+        "There is no action"
+      ],
+      "answer": 0,
+      "explanation": "1000 copies is unthinkable by hand. The bigger the count, the more you want a loop."
+    },
+    {
+      "id": "u35l04e05",
+      "type": "trueFalse",
+      "prompt": "A loop lets you write the repeated step ONCE and choose how many times it runs.",
+      "answer": true,
+      "explanation": "That is the whole appeal: one clear step, a count you can change in one place. You'll meet the loop tool soon."
+    },
+    {
+      "id": "u35l04e06",
+      "type": "multipleChoice",
+      "prompt": "With copy-paste, to change Hi to Hello everywhere, you must...",
+      "options": [
+        "Edit every single copy",
+        "Edit just one place",
+        "Do nothing",
+        "Delete the program"
+      ],
+      "answer": 0,
+      "explanation": "Change in many copies = many edits and easy mistakes. A loop changes the body in one place."
+    },
+    {
+      "id": "u35l04e07",
+      "type": "orderBlocks",
+      "prompt": "Order these reasons from the problem to the fix.",
+      "blocks": [
+        "Copy-paste means many lines and many mistakes",
+        "A step needs to repeat many times",
+        "A loop writes the step once and repeats it"
+      ],
+      "answer": [
+        1,
+        0,
+        2
+      ],
+      "explanation": "A step repeats -> copy-paste is painful -> a loop fixes it. That story motivates the whole lap."
+    },
+    {
+      "id": "u35l04e08",
+      "type": "multipleChoice",
+      "prompt": "What is the real benefit of repeating with a loop instead of copies?",
+      "options": [
+        "One place to read, one place to fix, any count",
+        "It makes the screen bigger",
+        "It removes the need to think",
+        "It hides the output"
+      ],
+      "answer": 0,
+      "explanation": "One readable body, easy to fix, and the count is flexible. That is why every language has loops."
+    },
+    {
+      "id": "u35l04e09",
+      "type": "trueFalse",
+      "prompt": "For a one-time action, writing it once (no loop) is perfectly fine.",
+      "answer": true,
+      "explanation": "Loops are for repetition. If it happens once, just write it once — no loop needed."
+    },
+    {
+      "id": "u35l04e10",
+      "type": "multipleChoice",
+      "prompt": "You see 20 identical print lines in a program. What does that smell like?",
+      "options": [
+        "A repetition that wants to be a loop",
+        "A perfect, finished program",
+        "A decision (if/else)",
+        "An input() problem"
+      ],
+      "answer": 0,
+      "explanation": "Twenty identical lines is a loud hint: this is repetition, and a loop would be cleaner. Next units give you that tool."
+    }
+  ]
+}

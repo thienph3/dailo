@@ -1,0 +1,143 @@
+{
+  "unitId": "u39",
+  "lessonId": "u39l07",
+  "title": "Solve it together: how many times will it run?",
+  "idea": "GUIDED PROBLEM. Reason about pass count from a range before running. Thinking-heavy.",
+  "problem": "Given a loop, predict how many lines it prints — without running it.",
+  "exercises": [
+    {
+      "id": "u39l07e01",
+      "type": "multipleChoice",
+      "prompt": "PROBLEM: predict the number of lines from\n\nfor i in range(1, 6):\n    print(i)\n\nUnderstand. What do we need to produce?",
+      "uepcc": "U",
+      "options": [
+        "The number of lines it prints",
+        "The sum of the numbers",
+        "The last number only",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "The task is a prediction: the count of passes, which equals the lines printed."
+    },
+    {
+      "id": "u39l07e02",
+      "type": "multipleChoice",
+      "prompt": "Example. List the values of i by hand for range(1, 6).",
+      "uepcc": "E",
+      "options": [
+        "1, 2, 3, 4, 5",
+        "1, 2, 3, 4, 5, 6",
+        "0, 1, 2, 3, 4",
+        "1 to 6"
+      ],
+      "answer": 0,
+      "explanation": "range(1, 6) gives 1, 2, 3, 4, 5 — five values."
+    },
+    {
+      "id": "u39l07e03",
+      "type": "multipleChoice",
+      "prompt": "Example: counting those values, how many lines print?",
+      "uepcc": "E",
+      "options": [
+        "5",
+        "6",
+        "4",
+        "1"
+      ],
+      "answer": 0,
+      "explanation": "Five values means five lines."
+    },
+    {
+      "id": "u39l07e04",
+      "type": "multipleChoice",
+      "prompt": "Plan: a quick rule for range(start, stop) with step 1 — how many passes?",
+      "uepcc": "P",
+      "options": [
+        "stop minus start",
+        "stop plus start",
+        "start only",
+        "stop only"
+      ],
+      "answer": 0,
+      "explanation": "It is stop minus start. For range(1, 6): 6 - 1 = 5 passes."
+    },
+    {
+      "id": "u39l07e05",
+      "type": "multipleChoice",
+      "prompt": "Plan: use the rule on range(3, 7). How many passes?",
+      "uepcc": "P",
+      "options": [
+        "4",
+        "7",
+        "3",
+        "10"
+      ],
+      "answer": 0,
+      "explanation": "7 - 3 = 4 passes (values 3, 4, 5, 6)."
+    },
+    {
+      "id": "u39l07e06",
+      "type": "multipleChoice",
+      "prompt": "Code reading: range(0, 10, 2) — how many passes? (step is 2)",
+      "uepcc": "C",
+      "options": [
+        "5",
+        "10",
+        "4",
+        "2"
+      ],
+      "answer": 0,
+      "explanation": "Values 0, 2, 4, 6, 8 — five passes. With a step, count the values, not just stop minus start."
+    },
+    {
+      "id": "u39l07e07",
+      "type": "multipleChoice",
+      "prompt": "Code reading: range(5) — how many passes?",
+      "uepcc": "C",
+      "options": [
+        "5",
+        "4",
+        "6",
+        "1"
+      ],
+      "answer": 0,
+      "explanation": "range(5) is 0, 1, 2, 3, 4 — five passes."
+    },
+    {
+      "id": "u39l07e08",
+      "type": "trueFalse",
+      "prompt": "Check: for step 1, 'stop minus start' always gives the number of passes.",
+      "uepcc": "Check",
+      "answer": true,
+      "explanation": "True for a step of 1. With other steps, count the actual values instead."
+    },
+    {
+      "id": "u39l07e09",
+      "type": "multipleChoice",
+      "prompt": "Check: predict the passes for range(2, 2).",
+      "uepcc": "Check",
+      "options": [
+        "0",
+        "1",
+        "2",
+        "4"
+      ],
+      "answer": 0,
+      "explanation": "Start equals stop, so there are no values — zero passes. The loop body never runs."
+    },
+    {
+      "id": "u39l07e10",
+      "type": "multipleChoice",
+      "prompt": "Check the habit: why predict pass count before running?",
+      "uepcc": "Check",
+      "options": [
+        "To catch loops that repeat the wrong number of times",
+        "To make the loop faster",
+        "It is required syntax",
+        "To avoid using range"
+      ],
+      "answer": 0,
+      "explanation": "Predicting first catches loops that run too many or too few times before you trust the output."
+    }
+  ]
+}

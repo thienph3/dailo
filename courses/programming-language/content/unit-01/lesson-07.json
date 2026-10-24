@@ -1,0 +1,126 @@
+{
+  "unitId": "u01",
+  "lessonId": "u01l07",
+  "title": "Showing a blank line",
+  "idea": "print() with nothing inside shows an empty line. A tiny idea, but it proves print always does something.",
+  "exercises": [
+    {
+      "id": "u01l07e01",
+      "type": "multipleChoice",
+      "prompt": "What does print() with empty brackets do?",
+      "options": [
+        "Shows a blank (empty) line",
+        "Shows the word empty",
+        "Nothing at all",
+        "Causes an error"
+      ],
+      "answer": 0,
+      "explanation": "print() still prints — it prints an empty line. Useful for spacing output."
+    },
+    {
+      "id": "u01l07e02",
+      "type": "trueFalse",
+      "prompt": "print() with nothing inside is still a valid instruction.",
+      "answer": true,
+      "explanation": "It's valid. It just outputs a blank line."
+    },
+    {
+      "id": "u01l07e03",
+      "type": "multipleChoice",
+      "prompt": "How many lines appear?\n\nprint(\"A\")\nprint()\nprint(\"B\")",
+      "options": [
+        "3 (A, a blank line, then B)",
+        "2",
+        "1",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "Each print makes its own line: A, then an empty line, then B — 3 lines."
+    },
+    {
+      "id": "u01l07e04",
+      "type": "trueFalse",
+      "prompt": "print(\"\") (quotes with nothing between them) also shows an empty line.",
+      "answer": true,
+      "explanation": "Empty text is still text — it shows as a blank line, like print()."
+    },
+    {
+      "id": "u01l07e05",
+      "type": "multipleChoice",
+      "prompt": "Why might you use print() with nothing inside?",
+      "options": [
+        "To add a blank line / space between outputs",
+        "To delete text",
+        "To stop the program",
+        "To ask a question"
+      ],
+      "answer": 0,
+      "explanation": "A blank line spaces things out and makes output easier to read."
+    },
+    {
+      "id": "u01l07e06",
+      "type": "orderBlocks",
+      "prompt": "Arrange these so the output is: Hi, then a blank line, then Bye.",
+      "blocks": [
+        "print(\"Hi\")",
+        "print()",
+        "print(\"Bye\")"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Hi first, blank line in the middle, Bye last."
+    },
+    {
+      "id": "u01l07e07",
+      "type": "trueFalse",
+      "prompt": "Each print instruction puts its output on its own line.",
+      "answer": true,
+      "explanation": "By default, every print ends its line, so the next print starts fresh below."
+    },
+    {
+      "id": "u01l07e08",
+      "type": "multipleChoice",
+      "prompt": "What shows?\n\nprint(\"Top\")\nprint(\"Bottom\")",
+      "options": [
+        "Top on one line, Bottom on the next",
+        "TopBottom",
+        "Top Bottom",
+        "Only Bottom"
+      ],
+      "answer": 0,
+      "explanation": "Two prints make two lines: Top, then Bottom below it."
+    },
+    {
+      "id": "u01l07e09",
+      "type": "tapTokens",
+      "prompt": "Build an instruction that shows a blank line.",
+      "tokens": [
+        "print",
+        "(",
+        ")"
+      ],
+      "answer": [
+        "print",
+        "(",
+        ")"
+      ],
+      "explanation": "print() — brackets with nothing inside gives a blank line."
+    },
+    {
+      "id": "u01l07e10",
+      "type": "multipleChoice",
+      "prompt": "You want a gap between two messages. What goes in the gap?",
+      "options": [
+        "print()",
+        "gap()",
+        "space()",
+        "blank()"
+      ],
+      "answer": 0,
+      "explanation": "print() between them makes the blank line. There is no gap() or blank() — just empty print()."
+    }
+  ]
+}

@@ -1,0 +1,124 @@
+{
+  "unitId": "u95",
+  "lessonId": "u95l04",
+  "title": "Removing repetition with a loop",
+  "idea": "MEET (thinking): turn several near-identical lines into one loop. Read both versions, confirm they produce the same output.",
+  "exercises": [
+    {
+      "id": "u95l04e01",
+      "type": "multipleChoice",
+      "prompt": "Original (repeated):\n\nprint(\"Hello\")\nprint(\"Hello\")\nprint(\"Hello\")\n\nWhat does this show?",
+      "options": [
+        "Hello three times, on three lines",
+        "Hello once",
+        "An error",
+        "HelloHelloHello on one line"
+      ],
+      "answer": 0,
+      "explanation": "Three separate prints give three lines of Hello. Next we'll replace them with a loop that does the same."
+    },
+    {
+      "id": "u95l04e02",
+      "type": "multipleChoice",
+      "prompt": "Tidier version:\n\nfor i in range(3):\n    print(\"Hello\")\n\nWhat does THIS show?",
+      "options": [
+        "Hello three times, on three lines - identical to the original",
+        "Hello once",
+        "The numbers 0 1 2",
+        "An error"
+      ],
+      "answer": 0,
+      "explanation": "range(3) runs the body three times, so Hello prints three times. Same output as the three copies - fewer lines, one place to edit."
+    },
+    {
+      "id": "u95l04e03",
+      "type": "trueFalse",
+      "prompt": "The three-print version and the loop version produce the same output.",
+      "answer": true,
+      "explanation": "Identical output. That's what makes swapping the copies for a loop a valid refactor - behavior stays the same."
+    },
+    {
+      "id": "u95l04e04",
+      "type": "multipleChoice",
+      "prompt": "Original:\n\nprint(10 + 5)\nprint(20 + 5)\nprint(30 + 5)\n\nTo loop it, what changes each time, and what stays the same?",
+      "options": [
+        "The first number changes (10, 20, 30); '+ 5 then print' stays the same",
+        "Everything changes",
+        "Nothing changes",
+        "The + 5 changes each time"
+      ],
+      "answer": 0,
+      "explanation": "Spotting what VARIES (the base number) versus what's CONSTANT (+ 5, then print) is how you turn copies into a loop over those values."
+    },
+    {
+      "id": "u95l04e05",
+      "type": "orderBlocks",
+      "prompt": "Arrange a loop that prints 10+5, 20+5, 30+5 (i.e. 15, 25, 35).",
+      "blocks": [
+        "for base in [10, 20, 30]:",
+        "    print(base + 5)"
+      ],
+      "answer": [0, 1],
+      "explanation": "The header walks base over 10, 20, 30; the indented body adds 5 and prints. Output: 15, 25, 35 - same as the three copies."
+    },
+    {
+      "id": "u95l04e06",
+      "type": "multipleChoice",
+      "prompt": "Predict the output:\n\nfor base in [10, 20, 30]:\n    print(base + 5)",
+      "options": [
+        "15 then 25 then 35",
+        "10 20 30",
+        "5 5 5",
+        "65"
+      ],
+      "answer": 0,
+      "explanation": "base is 10, 20, 30; base + 5 is 15, 25, 35. The loop reproduces the three original prints exactly."
+    },
+    {
+      "id": "u95l04e07",
+      "type": "trueFalse",
+      "prompt": "A good reason to prefer the loop: if the '+ 5' ever becomes '+ 7', you change it in ONE place, not three.",
+      "answer": true,
+      "explanation": "Exactly. Fewer copies means fewer places to update - and fewer chances to miss one. Loops make change safer."
+    },
+    {
+      "id": "u95l04e08",
+      "type": "multipleChoice",
+      "prompt": "Someone 'de-duplicates' but writes:\n\nfor base in [10, 20, 30]:\n    print(base + 7)\n\nWhy is this NOT a valid refactor of the +5 original?",
+      "options": [
+        "It changed the behavior - now it adds 7, so the output differs",
+        "Loops can't use lists",
+        "base is a bad name",
+        "It is perfectly fine"
+      ],
+      "answer": 0,
+      "explanation": "Refactoring must keep the SAME output. Switching +5 to +7 changes the answers (17,27,37 instead of 15,25,35). That's a behavior change, not a tidy-up."
+    },
+    {
+      "id": "u95l04e09",
+      "type": "multipleChoice",
+      "prompt": "When is turning copies into a loop MOST worth it?",
+      "options": [
+        "When the repeated block is identical except for a value that follows a pattern",
+        "When every line does something totally unrelated",
+        "When there is only one line",
+        "When the lines must run in random order"
+      ],
+      "answer": 0,
+      "explanation": "Loops shine when the same shape repeats with a changing value. Unrelated one-off lines don't share a pattern, so a loop wouldn't help."
+    },
+    {
+      "id": "u95l04e10",
+      "type": "multipleChoice",
+      "prompt": "After replacing copies with a loop, what proves you refactored safely?",
+      "options": [
+        "The new output matches the old output exactly",
+        "The code is shorter, regardless of output",
+        "It uses the word 'for'",
+        "It has no comments"
+      ],
+      "answer": 0,
+      "explanation": "Shorter is nice, but the proof is MATCHING output. Re-run both mentally or for real - same result means the loop refactor is correct."
+    }
+  ]
+}

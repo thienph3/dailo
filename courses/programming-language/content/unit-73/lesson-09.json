@@ -1,0 +1,128 @@
+{
+  "unitId": "u73",
+  "lessonId": "u73l09",
+  "title": "Using a returned answer in the main plan",
+  "idea": "TOOL: the point of return — a sub-plan solves a sub-problem and hands the answer to the MAIN plan, which uses it in a later step.",
+  "exercises": [
+    {
+      "id": "u73l09e01",
+      "type": "multipleChoice",
+      "prompt": "Main plan: buy items, then apply a discount. A sub-plan computes the raw total:\n\ndef item_total(price, count):\n    return price * count\n\nbill = item_total(3, 4)\nfinal = bill - 2\nprint(final)\n\nWhat prints?",
+      "options": [
+        "10",
+        "12",
+        "14",
+        "None"
+      ],
+      "answer": 0,
+      "explanation": "item_total(3, 4) hands back 12 into bill. Then final = 12 - 2 = 10. The sub-plan's answer fed the next step."
+    },
+    {
+      "id": "u73l09e02",
+      "type": "trueFalse",
+      "prompt": "The whole reason to return a value is so the MAIN plan can keep using it in later steps.",
+      "answer": true,
+      "explanation": "Exactly. A sub-plan solves one piece; returning hands that piece back so the main plan can carry on."
+    },
+    {
+      "id": "u73l09e03",
+      "type": "multipleChoice",
+      "prompt": "Which line actually USES the sub-plan's returned answer?",
+      "options": [
+        "bill = item_total(3, 4)",
+        "def item_total(price, count):",
+        "    return price * count",
+        "print(final)"
+      ],
+      "answer": 0,
+      "explanation": "The call item_total(3, 4) is where the returned value (12) gets caught and stored in bill for later use."
+    },
+    {
+      "id": "u73l09e04",
+      "type": "orderBlocks",
+      "prompt": "Arrange a main plan: define area, store area(5, 2), add a border of 3, print the result.",
+      "blocks": [
+        "def area(width, height):",
+        "    return width * height",
+        "room = area(5, 2)",
+        "with_border = room + 3",
+        "print(with_border)"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "explanation": "Define area, call it to get 10 into room, add 3 to get 13, then print. The returned 10 flows into the next step."
+    },
+    {
+      "id": "u73l09e05",
+      "type": "fillBlank",
+      "prompt": "Catch the returned total in a variable named bill:\n\ndef item_total(price, count):\n    return price * count\n\n____ = item_total(2, 5)",
+      "answer": "bill",
+      "acceptable": ["bill"],
+      "explanation": "item_total(2, 5) hands back 10; store it in bill so the main plan can use it next."
+    },
+    {
+      "id": "u73l09e06",
+      "type": "multipleChoice",
+      "prompt": "You can even feed one call straight into another step without a variable:\n\ndef item_total(price, count):\n    return price * count\n\nprint(item_total(3, 4) - 2)\n\nWhat prints?",
+      "options": [
+        "10",
+        "12",
+        "14",
+        "None"
+      ],
+      "answer": 0,
+      "explanation": "item_total(3, 4) becomes 12, then 12 - 2 = 10 is printed. The call is a value, usable right in the expression."
+    },
+    {
+      "id": "u73l09e07",
+      "type": "multipleChoice",
+      "prompt": "REVIEW: this idea (sub-plan solves a piece, main plan uses it) is the grown-up version of which earlier skill?",
+      "options": [
+        "Decomposition — breaking a big problem into smaller steps",
+        "printing",
+        "looping",
+        "comparing"
+      ],
+      "answer": 0,
+      "explanation": "It's decomposition with a twist: each sub-piece now hands its answer back so the main plan can combine the pieces."
+    },
+    {
+      "id": "u73l09e08",
+      "type": "multipleChoice",
+      "prompt": "Predict:\n\ndef half(n):\n    return n / 2\n\nx = half(10)\ny = x + 1\nprint(y)",
+      "options": [
+        "6.0",
+        "5.0",
+        "11",
+        "None"
+      ],
+      "answer": 0,
+      "explanation": "half(10) hands back 5.0 into x, then y = 5.0 + 1 = 6.0. The returned value flowed into the next line."
+    },
+    {
+      "id": "u73l09e09",
+      "type": "trueFalse",
+      "prompt": "A returned value can be stored, printed, OR used directly inside a bigger expression.",
+      "answer": true,
+      "explanation": "All three. Because the call IS a value, you have the same freedom you'd have with any number."
+    },
+    {
+      "id": "u73l09e10",
+      "type": "multipleChoice",
+      "prompt": "The idea of this lesson:",
+      "options": [
+        "A sub-plan hands its answer back so the main plan can use it in a later step",
+        "returned answers can't be reused",
+        "the main plan must recompute everything",
+        "return only prints"
+      ],
+      "answer": 0,
+      "explanation": "That's the payoff of return: solve a sub-problem, hand back the answer, and let the main plan build on it."
+    }
+  ]
+}

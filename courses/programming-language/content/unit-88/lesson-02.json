@@ -1,0 +1,127 @@
+{
+  "unitId": "u88",
+  "lessonId": "u88l02",
+  "title": "Tracing a nested loop step by step",
+  "idea": "TOOL: trace the two loop variables carefully to predict output. Heavy on thinking (prediction).",
+  "exercises": [
+    {
+      "id": "u88l02e01",
+      "type": "multipleChoice",
+      "prompt": "To trace a nested loop, which variable changes FASTER as you read the output top to bottom?",
+      "options": [
+        "The inner loop's variable",
+        "The outer loop's variable",
+        "Both change at the same speed",
+        "Neither changes"
+      ],
+      "answer": 0,
+      "explanation": "The inner variable races through all its values before the outer takes one step. Inner is fast, outer is slow — like minutes and hours."
+    },
+    {
+      "id": "u88l02e02",
+      "type": "orderBlocks",
+      "prompt": "Trace and order the output:\n\nfor x in range(1, 3):\n    for y in range(1, 3):\n        print(x, y)",
+      "blocks": [
+        "1 1",
+        "1 2",
+        "2 1",
+        "2 2"
+      ],
+      "answer": [0, 1, 2, 3],
+      "explanation": "x=1: y goes 1,2 -> '1 1','1 2'. x=2: y goes 1,2 -> '2 1','2 2'. range(1,3) is 1 and 2. The inner runs fully each time."
+    },
+    {
+      "id": "u88l02e03",
+      "type": "multipleChoice",
+      "prompt": "Predict the FIRST line of output:\n\nfor x in range(3):\n    for y in range(3):\n        print(x, y)",
+      "options": [
+        "0 0",
+        "0 1",
+        "2 2",
+        "1 0"
+      ],
+      "answer": 0,
+      "explanation": "Both start at 0, so the very first line is '0 0'. The outer sets x=0, the inner sets y=0, then it prints."
+    },
+    {
+      "id": "u88l02e04",
+      "type": "multipleChoice",
+      "prompt": "Predict the LAST line of that same loop (x in range(3), y in range(3)).",
+      "options": [
+        "2 2",
+        "0 0",
+        "3 3",
+        "2 0"
+      ],
+      "answer": 0,
+      "explanation": "The last outer value is 2 and the last inner value is 2, so the final line is '2 2'. range(3) ends at 2."
+    },
+    {
+      "id": "u88l02e05",
+      "type": "multipleChoice",
+      "prompt": "In the loop above, how many lines total are printed?",
+      "options": [
+        "9 (3 times 3)",
+        "6",
+        "3",
+        "12"
+      ],
+      "answer": 0,
+      "explanation": "3 outer turns times 3 inner turns = 9 lines. Multiply the two counts to get the total."
+    },
+    {
+      "id": "u88l02e06",
+      "type": "trueFalse",
+      "prompt": "When the inner loop restarts, its variable goes back to its START value each time.",
+      "answer": true,
+      "explanation": "Yes — every time the outer loop steps, the inner loop begins fresh from its first value. The inner variable resets, not continues."
+    },
+    {
+      "id": "u88l02e07",
+      "type": "multipleChoice",
+      "prompt": "Predict the output lines for:\n\nfor x in range(2):\n    for y in range(3):\n        print(x + y)",
+      "options": [
+        "0, 1, 2, 1, 2, 3",
+        "0, 1, 2, 3, 4, 5",
+        "1, 2, 3",
+        "0, 0, 0, 1, 1, 1"
+      ],
+      "answer": 0,
+      "explanation": "x=0: y=0,1,2 -> 0,1,2. x=1: y=0,1,2 -> 1,2,3. The printed value is x+y each time, so: 0,1,2,1,2,3."
+    },
+    {
+      "id": "u88l02e08",
+      "type": "multipleChoice",
+      "prompt": "A good way to trace a nested loop by hand is to...",
+      "options": [
+        "Hold the outer value fixed and run the inner all the way, then step the outer",
+        "Change both variables randomly",
+        "Only look at the outer loop",
+        "Guess the last line and stop"
+      ],
+      "answer": 0,
+      "explanation": "Fix the outer, sweep the inner fully, then advance the outer. That mirrors exactly how the computer runs it."
+    },
+    {
+      "id": "u88l02e09",
+      "type": "fillBlank",
+      "prompt": "For x in range(2) and y in range(4), the total number of printed lines is ____.",
+      "answer": "8",
+      "acceptable": ["8"],
+      "explanation": "2 outer turns times 4 inner turns = 8 lines. Multiplying the two ranges gives the count."
+    },
+    {
+      "id": "u88l02e10",
+      "type": "multipleChoice",
+      "prompt": "Why is careful tracing so valuable with nested loops?",
+      "options": [
+        "The output grows quickly, so predicting it checks your understanding",
+        "Tracing is only for single loops",
+        "Nested loops never print",
+        "The computer traces for you"
+      ],
+      "answer": 0,
+      "explanation": "Nested output multiplies fast. Tracing a small case by hand proves you understand the order before you trust a big one."
+    }
+  ]
+}

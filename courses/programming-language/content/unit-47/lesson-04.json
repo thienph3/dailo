@@ -1,0 +1,149 @@
+{
+  "unitId": "u47",
+  "lessonId": "u47l04",
+  "title": "Sort the problems: for or while?",
+  "idea": "MEET. Practice telling the two shapes apart across many short problems. Pattern choice only — no code.",
+  "exercises": [
+    {
+      "id": "u47l04e01",
+      "type": "multipleChoice",
+      "prompt": "'Say good morning to each of 8 students.' for or while?",
+      "options": [
+        "for — 8 is a known count",
+        "while — the count is hidden",
+        "neither",
+        "both fail"
+      ],
+      "answer": 0,
+      "explanation": "8 students is a fixed, known count, so a for loop over range(8) fits."
+    },
+    {
+      "id": "u47l04e02",
+      "type": "multipleChoice",
+      "prompt": "'Keep refreshing until the page loads.' for or while?",
+      "options": [
+        "while — stop on a condition",
+        "for — exactly once",
+        "neither",
+        "for — 100 times"
+      ],
+      "answer": 0,
+      "explanation": "You refresh an unknown number of times, stopping when it loads. That stopping condition means while."
+    },
+    {
+      "id": "u47l04e03",
+      "type": "multipleChoice",
+      "prompt": "'Print the 12 months of the year.' for or while?",
+      "options": [
+        "for — 12 is known",
+        "while — unknown count",
+        "neither",
+        "both"
+      ],
+      "answer": 0,
+      "explanation": "12 months is a fixed count known before starting — a for loop."
+    },
+    {
+      "id": "u47l04e04",
+      "type": "multipleChoice",
+      "prompt": "'Keep spending until your wallet is empty.' for or while?",
+      "options": [
+        "while — stop when empty",
+        "for — exactly 5 times",
+        "neither",
+        "for — 0 times"
+      ],
+      "answer": 0,
+      "explanation": "You stop when the wallet is empty, an amount you do not know in advance — a while loop."
+    },
+    {
+      "id": "u47l04e05",
+      "type": "multiSelect",
+      "prompt": "Select ALL problems that are count-controlled (for).",
+      "options": [
+        "Print 'hi' 6 times",
+        "Keep asking until correct",
+        "Greet all 9 guests",
+        "Double until over 50"
+      ],
+      "answer": [
+        0,
+        2
+      ],
+      "explanation": "'6 times' and 'all 9 guests' are fixed counts. The 'until ...' ones stop on a condition (while)."
+    },
+    {
+      "id": "u47l04e06",
+      "type": "multiSelect",
+      "prompt": "Select ALL problems that are condition-controlled (while).",
+      "options": [
+        "Keep rolling until you get a 6",
+        "Clap 4 times",
+        "Keep adding until the sum passes 20",
+        "Print 1 to 7"
+      ],
+      "answer": [
+        0,
+        2
+      ],
+      "explanation": "The two 'until ...' problems stop on a changing condition (while). 'Clap 4 times' and 'print 1 to 7' are fixed counts."
+    },
+    {
+      "id": "u47l04e07",
+      "type": "trueFalse",
+      "prompt": "'Count from 1 to 100' is condition-controlled because 100 is large.",
+      "answer": false,
+      "explanation": "False. A big count is still a KNOWN count. Size does not matter — 100 repeats is count-controlled (for)."
+    },
+    {
+      "id": "u47l04e08",
+      "type": "multipleChoice",
+      "prompt": "'Keep knocking until someone answers.' Which signal word gives it away?",
+      "options": [
+        "'until'",
+        "'keep'",
+        "'someone'",
+        "'knocking'"
+      ],
+      "answer": 0,
+      "explanation": "'until' marks the stopping condition, the clearest sign of a condition-controlled (while) loop."
+    },
+    {
+      "id": "u47l04e09",
+      "type": "matchPairs",
+      "prompt": "Match each problem to for or while.",
+      "pairs": [
+        {
+          "left": "Water all 5 plants",
+          "right": "for"
+        },
+        {
+          "left": "Scoop until the tub is empty",
+          "right": "while"
+        },
+        {
+          "left": "Print the numbers 1 to 3",
+          "right": "for"
+        },
+        {
+          "left": "Ask until they say 'done'",
+          "right": "while"
+        }
+      ],
+      "explanation": "Fixed counts (5 plants, 1 to 3) are for; stopping on a condition (empty, 'done') is while."
+    },
+    {
+      "id": "u47l04e10",
+      "type": "multipleChoice",
+      "prompt": "A problem says 'repeat the quiz up to 3 times, but stop early if they pass.' Which single shape is the MAIN driver?",
+      "options": [
+        "for — there is a known maximum of 3",
+        "while — there is no count at all",
+        "neither works",
+        "it needs no loop"
+      ],
+      "answer": 0,
+      "explanation": "The known maximum (3) makes it count-controlled (for); stopping early if they pass is handled by break inside that for loop."
+    }
+  ]
+}

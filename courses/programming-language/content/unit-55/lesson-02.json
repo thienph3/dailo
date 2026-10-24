@@ -1,0 +1,133 @@
+{
+  "unitId": "u55",
+  "lessonId": "u55l02",
+  "title": "Meet: for item in list",
+  "idea": "Introduce the exact syntax 'for item in list:' with visible, predictable output — each value printed in turn.",
+  "exercises": [
+    {
+      "id": "u55l02e01",
+      "type": "multipleChoice",
+      "prompt": "Here is the new tool:\n\nscores = [10, 7, 9]\nfor score in scores:\n    print(score)\n\nWhat does 'score' hold on each pass of the loop?",
+      "options": [
+        "One value from the list, in order: first 10, then 7, then 9",
+        "The whole list every time",
+        "The position number 0, 1, 2",
+        "Always the last value, 9"
+      ],
+      "answer": 0,
+      "explanation": "'for score in scores' hands you each value in turn. First pass score is 10, next 7, next 9."
+    },
+    {
+      "id": "u55l02e02",
+      "type": "multipleChoice",
+      "prompt": "scores = [10, 7, 9]\nfor score in scores:\n    print(score)\n\nWhat is printed?",
+      "options": [
+        "10, then 7, then 9 — each on its own line",
+        "Just 10",
+        "[10, 7, 9]",
+        "26"
+      ],
+      "answer": 0,
+      "explanation": "The print runs once per value, so you see 10, 7, 9 on three lines. No totalling — each value is simply shown."
+    },
+    {
+      "id": "u55l02e03",
+      "type": "trueFalse",
+      "prompt": "In 'for score in scores:', the name 'score' is a variable YOU choose — it just holds the current value each time around.",
+      "answer": true,
+      "explanation": "You pick the loop-variable name. 'score' reads nicely because the list is called scores and holds scores."
+    },
+    {
+      "id": "u55l02e04",
+      "type": "fillBlank",
+      "prompt": "Fill the blank so the loop visits every price in the list:\n\nprices = [3, 5, 2]\nfor price ____ prices:\n    print(price)",
+      "answer": "in",
+      "acceptable": [
+        "in"
+      ],
+      "explanation": "The shape is 'for <name> in <list>:'. The keyword 'in' connects your loop variable to the list."
+    },
+    {
+      "id": "u55l02e05",
+      "type": "multipleChoice",
+      "prompt": "Why does the body line 'print(score)' need to be indented (pushed right)?",
+      "options": [
+        "Indentation shows it belongs INSIDE the loop, so it runs each pass",
+        "It makes the code prettier only",
+        "Python ignores indentation",
+        "It makes the loop run once"
+      ],
+      "answer": 0,
+      "explanation": "Just like with if and range-loops, indentation marks the body — the lines done on every pass."
+    },
+    {
+      "id": "u55l02e06",
+      "type": "orderBlocks",
+      "prompt": "Arrange these lines so each value in the list is printed.",
+      "blocks": [
+        "    print(num)",
+        "nums = [1, 2, 3]",
+        "for num in nums:"
+      ],
+      "answer": [
+        1,
+        2,
+        0
+      ],
+      "explanation": "First make the list, then start the loop header, then the indented body. Prints 1, 2, 3."
+    },
+    {
+      "id": "u55l02e07",
+      "type": "multipleChoice",
+      "prompt": "temps = [18, 21]\nfor t in temps:\n    print(t)\n    print(\"done\")\n\nHow many lines are printed in total?",
+      "options": [
+        "Four — the body has two prints and runs twice",
+        "Two",
+        "One",
+        "Three"
+      ],
+      "answer": 0,
+      "explanation": "Two items, and the body prints twice per pass, so 2 x 2 = 4 lines: 18, done, 21, done."
+    },
+    {
+      "id": "u55l02e08",
+      "type": "trueFalse",
+      "prompt": "If the list is empty, like items = [], the loop body runs zero times.",
+      "answer": true,
+      "explanation": "No items means nothing to visit, so the body never runs. An empty list is a perfectly valid list."
+    },
+    {
+      "id": "u55l02e09",
+      "type": "multipleChoice",
+      "prompt": "nums = [4, 8, 1]\nfor n in nums:\n    print(n)\n\nWhich value does the loop variable hold on the LAST pass?",
+      "options": [
+        "1",
+        "4",
+        "8",
+        "the whole list"
+      ],
+      "answer": 0,
+      "explanation": "The loop walks front to back, so the last pass holds the last value, 1."
+    },
+    {
+      "id": "u55l02e10",
+      "type": "tapTokens",
+      "prompt": "Build the loop header that visits every value in a list called ages. (Tap the tokens in order.)",
+      "tokens": [
+        "for",
+        "age",
+        "in",
+        "ages",
+        ":"
+      ],
+      "answer": [
+        "for",
+        "age",
+        "in",
+        "ages",
+        ":"
+      ],
+      "explanation": "for age in ages: — pick a readable loop-variable name (age), use 'in', name the list, end with a colon."
+    }
+  ]
+}

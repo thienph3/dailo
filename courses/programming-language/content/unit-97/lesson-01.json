@@ -1,0 +1,156 @@
+{
+  "unitId": "u97",
+  "lessonId": "u97l01",
+  "title": "Capstone: FizzBuzz for one number, reasoned not memorized",
+  "idea": "GUIDED CAPSTONE. Decompose FizzBuzz into its real rule (divisible by 3? by 5? both?) and build it from parts you already know — not a memorized trick.",
+  "problem": "For a number n: print 'Fizz' if it divides by 3, 'Buzz' if it divides by 5, 'FizzBuzz' if by both, otherwise the number. Solve it for n = 15.",
+  "exercises": [
+    {
+      "id": "u97l01e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "Welcome to your first capstone! You already own every tool for this.\n\nPROBLEM: for n=15, print 'Fizz' (divisible by 3), 'Buzz' (by 5), 'FizzBuzz' (both), else n.\n\nUnderstand first: what is the OUTPUT here?",
+      "options": [
+        "One word (or the number) describing n's divisibility",
+        "A list of every number up to n",
+        "The sum of 3 and 5",
+        "How many times n divides"
+      ],
+      "answer": 0,
+      "explanation": "The output is a single result for this one n: 'Fizz', 'Buzz', 'FizzBuzz', or the number itself. Naming the output keeps us honest."
+    },
+    {
+      "id": "u97l01e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "What is the INPUT you start with?",
+      "options": [
+        "The number n (here 15)",
+        "The words Fizz and Buzz",
+        "The numbers 3 and 5 only",
+        "Nothing at all"
+      ],
+      "answer": 0,
+      "explanation": "The input is n. The 3 and 5 are rules you apply TO n, not the input. Capstones reuse the same 'name the I/O' habit from day one."
+    },
+    {
+      "id": "u97l01e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "Example by hand: is 15 divisible by 3? by 5? Use the remainder (%). 15 % 3 and 15 % 5 are...",
+      "options": [
+        "Both 0 — so 15 is divisible by both",
+        "Both 1",
+        "3 and 5",
+        "Can't tell without code"
+      ],
+      "answer": 0,
+      "explanation": "15 % 3 = 0 and 15 % 5 = 0. A remainder of 0 means 'divides evenly'. That is the whole secret of FizzBuzz — no trick, just %."
+    },
+    {
+      "id": "u97l01e04",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "So by hand, what should the answer be for n=15?",
+      "options": [
+        "FizzBuzz",
+        "Fizz",
+        "Buzz",
+        "15"
+      ],
+      "answer": 0,
+      "explanation": "Divisible by BOTH 3 and 5, so 'FizzBuzz'. This hand-worked answer is the value we will check our code against."
+    },
+    {
+      "id": "u97l01e05",
+      "type": "orderBlocks",
+      "uepcc": "P",
+      "prompt": "Plan the decision order. Why does 'both' have to be checked FIRST? Put the plan in order.",
+      "blocks": [
+        "If divisible by 3 only -> Fizz",
+        "If divisible by both 3 and 5 -> FizzBuzz",
+        "If divisible by 5 only -> Buzz",
+        "Otherwise -> the number"
+      ],
+      "answer": [
+        1,
+        0,
+        2,
+        3
+      ],
+      "explanation": "Check BOTH first. If you checked 3 first, 15 would wrongly stop at 'Fizz'. Order of elif branches is a real design choice — that is the reasoning, not a trick."
+    },
+    {
+      "id": "u97l01e06",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Which tool chain matches 'check several conditions in order, pick the first true one'?",
+      "options": [
+        "if / elif / elif / else",
+        "a loop with range",
+        "a list of numbers",
+        "just one if"
+      ],
+      "answer": 0,
+      "explanation": "if/elif/else picks exactly one branch, top to bottom. That is the right pattern for 'first rule that fits'."
+    },
+    {
+      "id": "u97l01e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Code it. Arrange the lines so 'both' is tested first (uses % and and).",
+      "blocks": [
+        "elif n % 3 == 0:",
+        "if n % 3 == 0 and n % 5 == 0:",
+        "    print(\"FizzBuzz\")",
+        "    print(\"Fizz\")"
+      ],
+      "answer": [
+        1,
+        2,
+        0,
+        3
+      ],
+      "explanation": "Line order: the combined 'and' test first, then the single-3 test. Each print is indented under its condition."
+    },
+    {
+      "id": "u97l01e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Finish the remainder test for 'divisible by 5':\n\nn = 15\nif n % 5 ____ 0:\n    print(\"Buzz\")",
+      "answer": "==",
+      "acceptable": [
+        "=="
+      ],
+      "explanation": "Divisible means remainder equals 0, so we compare with ==. (= would be assignment — a classic mix-up you already learned to avoid.)"
+    },
+    {
+      "id": "u97l01e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "You run the full if/elif chain with n=15 and it prints 'FizzBuzz'. Your hand example said 'FizzBuzz'. Verdict?",
+      "options": [
+        "Passes — output matches the hand example",
+        "Fails — it should print 15",
+        "Unknown",
+        "Rewrite the example"
+      ],
+      "answer": 0,
+      "explanation": "Match! Because we tested 'both' first, 15 correctly lands on FizzBuzz. Checking against the hand value is how you KNOW it is right."
+    },
+    {
+      "id": "u97l01e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Prove it generalizes: with n=9, your same code runs. What prints?",
+      "options": [
+        "Fizz",
+        "Buzz",
+        "FizzBuzz",
+        "9"
+      ],
+      "answer": 0,
+      "explanation": "9 % 3 == 0 but 9 % 5 != 0, so only 'Fizz'. One solution, many inputs — you reasoned FizzBuzz from parts you already knew. That is real problem solving!"
+    }
+  ]
+}

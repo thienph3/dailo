@@ -1,0 +1,151 @@
+{
+  "unitId": "u27",
+  "lessonId": "u27l08",
+  "title": "Solve it: login with an attempts guard",
+  "idea": "GUIDED. One problem through UEPCC combining 'and' with an edge-case guard reviewed from Unit 24.",
+  "problem": "A login succeeds only if the password is correct AND there are attempts left (attempts_left is more than 0). Given password_ok and attempts_left, print 'Login' or 'Denied'.",
+  "exercises": [
+    {
+      "id": "u27l08e01",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "PROBLEM: Login only if password_ok AND attempts_left > 0. Print 'Login' or 'Denied'.\n\nWhat is the OUTPUT?",
+      "options": [
+        "The label 'Login' or 'Denied'",
+        "The password",
+        "The number of attempts",
+        "The username"
+      ],
+      "answer": 0,
+      "explanation": "One of two labels. Two inputs - whether the password is right and how many attempts remain - drive it."
+    },
+    {
+      "id": "u27l08e02",
+      "type": "multipleChoice",
+      "uepcc": "U",
+      "prompt": "Both parts must hold for a login. What are they?",
+      "options": [
+        "Password is correct, AND attempts_left is more than 0",
+        "Just the password",
+        "Just the attempts",
+        "Either one"
+      ],
+      "answer": 0,
+      "explanation": "The word 'and' in the rule tells you both must be true at once."
+    },
+    {
+      "id": "u27l08e03",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "By hand: password_ok True, attempts_left 2. Login or Denied?",
+      "options": [
+        "Login",
+        "Denied",
+        "2",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "True and (2 > 0 True) = True, so 'Login'. Your check value."
+    },
+    {
+      "id": "u27l08e04",
+      "type": "multipleChoice",
+      "uepcc": "E",
+      "prompt": "By hand: password_ok True, attempts_left 0. Login or Denied?",
+      "options": [
+        "Denied",
+        "Login",
+        "0",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "0 > 0 is False (the guard), so even a correct password gives 'Denied'. The zero case is exactly what the guard protects against."
+    },
+    {
+      "id": "u27l08e05",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Plan: how do you write 'password correct AND attempts remain'?",
+      "options": [
+        "password_ok and attempts_left > 0",
+        "password_ok or attempts_left > 0",
+        "password_ok and attempts_left >= 0",
+        "not password_ok and attempts_left > 0"
+      ],
+      "answer": 0,
+      "explanation": "'and' requires both. Note > 0 (not >= 0): zero attempts must fail, so the strict > is the right guard."
+    },
+    {
+      "id": "u27l08e06",
+      "type": "multipleChoice",
+      "uepcc": "P",
+      "prompt": "Why is the guard '> 0' and not '>= 0'?",
+      "options": [
+        "Zero attempts means none left, so it must fail - >= 0 would wrongly allow zero",
+        "They are the same",
+        ">= 0 is faster",
+        "Attempts can be negative"
+      ],
+      "answer": 0,
+      "explanation": "With zero attempts the login must be denied. >= 0 is true at zero, which would let a locked-out user in. The edge value decides the operator."
+    },
+    {
+      "id": "u27l08e07",
+      "type": "orderBlocks",
+      "uepcc": "C",
+      "prompt": "Arrange the code.",
+      "blocks": [
+        "if password_ok and attempts_left > 0:",
+        "    print(\"Login\")",
+        "else:",
+        "    print(\"Denied\")"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "One 'and' condition joining the password check and the attempts guard, then the else for every failure."
+    },
+    {
+      "id": "u27l08e08",
+      "type": "fillBlank",
+      "uepcc": "C",
+      "prompt": "Complete the guard so zero attempts fails:\n\nif password_ok and attempts_left __ 0:\n    print(\"Login\")",
+      "answer": ">",
+      "acceptable": [
+        ">"
+      ],
+      "explanation": "> 0 is true only for 1 or more attempts. That strict comparison is what locks out a user at zero."
+    },
+    {
+      "id": "u27l08e09",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Check the first example: password_ok True, attempts_left 2. What prints?",
+      "options": [
+        "Login",
+        "Denied",
+        "2",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "True and (2 > 0) = True, so 'Login' - matching your hand answer."
+    },
+    {
+      "id": "u27l08e10",
+      "type": "multipleChoice",
+      "uepcc": "Check",
+      "prompt": "Re-check the guard edge: password_ok True, attempts_left 0. What prints?",
+      "options": [
+        "Denied",
+        "Login",
+        "0",
+        "nothing"
+      ],
+      "answer": 0,
+      "explanation": "0 > 0 is False, so the 'and' is False: 'Denied'. The guard correctly blocks the zero case."
+    }
+  ]
+}

@@ -1,0 +1,136 @@
+{
+  "unitId": "u57",
+  "lessonId": "u57l06",
+  "title": "Totalling words' lengths and more",
+  "idea": "The value you add doesn't have to be the item itself — you can add len(word) or a computed amount. Reviews len().",
+  "exercises": [
+    {
+      "id": "u57l06e01",
+      "type": "multipleChoice",
+      "prompt": "words = [\"hi\", \"bye\", \"a\"]\ntotal = 0\nfor w in words:\n    total = total + len(w)\nprint(total)\n\nWhat prints?",
+      "options": [
+        "6",
+        "3",
+        "[2, 3, 1]",
+        "hibyea"
+      ],
+      "answer": 0,
+      "explanation": "Add each word's length: 2 + 3 + 1 = 6. You can accumulate a computed amount, not just the raw item."
+    },
+    {
+      "id": "u57l06e02",
+      "type": "multipleChoice",
+      "prompt": "What is added into total each pass here?",
+      "options": [
+        "The length of the current word",
+        "The word itself",
+        "1",
+        "The whole list"
+      ],
+      "answer": 0,
+      "explanation": "len(w) is the number added, so total becomes the sum of all word lengths."
+    },
+    {
+      "id": "u57l06e03",
+      "type": "fillBlank",
+      "prompt": "Total each number after doubling it:\n\ntotal = 0\nfor n in nums:\n    total = total + (n ____ 2)",
+      "answer": "*",
+      "acceptable": [
+        "*"
+      ],
+      "explanation": "n * 2 doubles each value before adding, so the total is the sum of the doubled values."
+    },
+    {
+      "id": "u57l06e04",
+      "type": "multipleChoice",
+      "prompt": "nums = [1, 2, 3]\ntotal = 0\nfor n in nums:\n    total = total + (n * 10)\nprint(total)\n\nWhat prints?",
+      "options": [
+        "60",
+        "6",
+        "123",
+        "10"
+      ],
+      "answer": 0,
+      "explanation": "Add 10, 20, 30 -> 60. The amount added can be any expression using the current value."
+    },
+    {
+      "id": "u57l06e05",
+      "type": "orderBlocks",
+      "prompt": "Arrange: total the lengths of a list of words and print it.",
+      "blocks": [
+        "print(total)",
+        "    total = total + len(w)",
+        "total = 0",
+        "for w in words:",
+        "words = [\"ab\", \"cde\"]"
+      ],
+      "answer": [
+        4,
+        2,
+        3,
+        1,
+        0
+      ],
+      "explanation": "List, start total, loop, add each length, print. 2 + 3 = 5."
+    },
+    {
+      "id": "u57l06e06",
+      "type": "trueFalse",
+      "prompt": "You can total a computed value (like len(w) or n * 2), not only the item straight from the list.",
+      "answer": true,
+      "explanation": "The accumulate line adds whatever expression you give it — raw value or computed."
+    },
+    {
+      "id": "u57l06e07",
+      "type": "multipleChoice",
+      "prompt": "prices = [10, 20, 30]\ntotal = 0\nfor price in prices:\n    total = total + (price - 5)\nprint(total)\n\nWhat prints (each item discounted 5 before adding)?",
+      "options": [
+        "45",
+        "60",
+        "15",
+        "5"
+      ],
+      "answer": 0,
+      "explanation": "5 + 15 + 25 = 45. Each discounted value is summed."
+    },
+    {
+      "id": "u57l06e08",
+      "type": "multipleChoice",
+      "prompt": "Why put the computed expression in parentheses, like total + (n * 2)?",
+      "options": [
+        "To make the 'add this amount' grouping clear",
+        "It is required by Python always",
+        "To run faster",
+        "To avoid an error"
+      ],
+      "answer": 0,
+      "explanation": "Parentheses make the intent obvious; with * before + it isn't strictly required, but clarity helps."
+    },
+    {
+      "id": "u57l06e09",
+      "type": "multipleChoice",
+      "prompt": "words = []\ntotal = 0\nfor w in words:\n    total = total + len(w)\nprint(total)\n\nWhat prints?",
+      "options": [
+        "0",
+        "an error",
+        "nothing",
+        "1"
+      ],
+      "answer": 0,
+      "explanation": "Empty list, body never runs, total stays 0."
+    },
+    {
+      "id": "u57l06e10",
+      "type": "multipleChoice",
+      "prompt": "The sum tool is flexible because...",
+      "options": [
+        "You choose what amount to add each pass",
+        "It only adds the raw item",
+        "It only works on numbers in the list",
+        "It sorts first"
+      ],
+      "answer": 0,
+      "explanation": "Same accumulator shape; the amount added is up to you."
+    }
+  ]
+}

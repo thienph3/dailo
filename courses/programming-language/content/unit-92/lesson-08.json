@@ -1,0 +1,142 @@
+{
+  "unitId": "u92",
+  "lessonId": "u92l08",
+  "title": "Design the weave before you code",
+  "idea": "TOOL: planning an integrated solution - deciding which parts become functions, which become loops, which become decisions.",
+  "exercises": [
+    {
+      "type": "multipleChoice",
+      "prompt": "Facing a multi-part problem, what should you decide BEFORE writing code?",
+      "options": [
+        "Which parts are repeats (loops), choices (decisions), and reusable sub-plans (functions)",
+        "The variable colours",
+        "How fast it runs",
+        "Nothing - just type"
+      ],
+      "answer": 0,
+      "explanation": "Map each part to a thread first. Seeing the shape up front makes the code almost write itself.",
+      "id": "u92l08e01"
+    },
+    {
+      "type": "matchPairs",
+      "prompt": "A problem says: 'For each student, if they passed, add their grade; use a shared passing rule.' Match each phrase to its thread.",
+      "pairs": [
+        {
+          "left": "For each student",
+          "right": "A loop"
+        },
+        {
+          "left": "If they passed",
+          "right": "A decision"
+        },
+        {
+          "left": "A shared passing rule",
+          "right": "A function"
+        }
+      ],
+      "explanation": "'For each' = loop, 'if' = decision, 'shared rule' = function. The words in the problem point at the tools.",
+      "id": "u92l08e02"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "'A shared rule used in several places' is a strong hint to use...",
+      "options": [
+        "A function (a named, reusable sub-plan)",
+        "A new loop",
+        "A longer if",
+        "More variables"
+      ],
+      "answer": 0,
+      "explanation": "Reuse across places is exactly what a function is for. 'Shared' and 'reusable' are function signals.",
+      "id": "u92l08e03"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "'Do this for every item in the list' is a hint to use...",
+      "options": [
+        "A loop",
+        "A single if",
+        "One function call",
+        "A print"
+      ],
+      "answer": 0,
+      "explanation": "'For every item' means repeat - a loop. Spotting the repeat word picks the tool.",
+      "id": "u92l08e04"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "'Only when the value qualifies' is a hint to use...",
+      "options": [
+        "A decision (if)",
+        "A loop",
+        "A function alone",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "'Only when' is a condition - an if. Conditional words point to decisions.",
+      "id": "u92l08e05"
+    },
+    {
+      "type": "orderBlocks",
+      "prompt": "Order the planning habit for an integrated problem.",
+      "blocks": [
+        "Read it and name the parts",
+        "Match each part to loop / decision / function",
+        "Sketch the order they combine, then code"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Name parts, match to tools, sketch the braid - then write it. Planning first prevents tangled code.",
+      "id": "u92l08e06"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Planning which thread each part needs is just decomposition applied to code structure.",
+      "answer": true,
+      "explanation": "True. You already decompose problems into steps; here you also decide which TOOL each step uses. Same skill, deeper.",
+      "id": "u92l08e07"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "A plan: 'function to test if an order is big; loop over orders; if big, add to total.' Which code shape matches?",
+      "options": [
+        "def is_big(...): ...  then  for order in orders: if is_big(order): total = total + order",
+        "Just one print",
+        "A list with no loop",
+        "Two functions, no loop"
+      ],
+      "answer": 0,
+      "explanation": "The plan maps straight to code: define the helper, loop, decide with it, accumulate. A clean plan becomes clean code.",
+      "id": "u92l08e08"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Why is naming the threads worth the extra moment?",
+      "options": [
+        "It turns a scary 'big problem' into a few familiar, combinable parts",
+        "It makes the program longer",
+        "It avoids testing",
+        "It changes the answer"
+      ],
+      "answer": 0,
+      "explanation": "Big problems shrink once you see them as a loop here, a decision there, a helper for the shared bit. That's the whole lap.",
+      "id": "u92l08e09"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "The lesson:",
+      "options": [
+        "Decide the weave (loops, decisions, functions) before coding it",
+        "Code first, plan never",
+        "Always use all three even if not needed",
+        "Avoid functions"
+      ],
+      "answer": 0,
+      "explanation": "Plan which thread each part needs; then the integration is just assembling familiar tools in order.",
+      "id": "u92l08e10"
+    }
+  ]
+}

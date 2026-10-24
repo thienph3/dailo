@@ -1,0 +1,136 @@
+{
+  "unitId": "u35",
+  "lessonId": "u35l06",
+  "title": "Tracing a repeat by hand",
+  "idea": "Before any code, you can trace a repetition on paper: list what happens on pass 1, pass 2, and so on. Tracing is how you check a loop later.",
+  "exercises": [
+    {
+      "id": "u35l06e01",
+      "type": "multipleChoice",
+      "prompt": "A repetition does 'print Hi' 3 times. Trace it: what shows on the screen?",
+      "options": [
+        "Hi\nHi\nHi",
+        "Hi",
+        "3",
+        "HiHiHi3"
+      ],
+      "answer": 0,
+      "explanation": "Pass 1 prints Hi, pass 2 prints Hi, pass 3 prints Hi — three lines. Tracing pass by pass predicts the output."
+    },
+    {
+      "id": "u35l06e02",
+      "type": "trueFalse",
+      "prompt": "Tracing means walking through each pass of a repetition one at a time.",
+      "answer": true,
+      "explanation": "Yes — you follow pass 1, then pass 2, writing down what happens each time. It is the Check step for loops."
+    },
+    {
+      "id": "u35l06e03",
+      "type": "multipleChoice",
+      "prompt": "A repetition runs 'print Go' 4 times. How many lines of output?",
+      "options": [
+        "4",
+        "1",
+        "3",
+        "8"
+      ],
+      "answer": 0,
+      "explanation": "One line per pass, four passes, four lines. Counting passes counts the output lines."
+    },
+    {
+      "id": "u35l06e04",
+      "type": "orderBlocks",
+      "prompt": "A repetition prints A twice then stops. Order the trace.",
+      "blocks": [
+        "Pass 1: print A",
+        "Pass 2: print A",
+        "Stop (count reached)"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Pass 1, pass 2, then stop because the count of 2 is done. A trace ends when the count runs out."
+    },
+    {
+      "id": "u35l06e05",
+      "type": "multipleChoice",
+      "prompt": "If a repetition is set to run 0 times, how many lines does it print?",
+      "options": [
+        "0 — the body never runs",
+        "1",
+        "It errors",
+        "Forever"
+      ],
+      "answer": 0,
+      "explanation": "A count of 0 means the body runs zero times — nothing prints. Edge cases like 0 are worth tracing."
+    },
+    {
+      "id": "u35l06e06",
+      "type": "multipleChoice",
+      "prompt": "Trace: 'print Beep' 5 times. On which pass does the LAST Beep print?",
+      "options": [
+        "Pass 5",
+        "Pass 1",
+        "Pass 4",
+        "Pass 6"
+      ],
+      "answer": 0,
+      "explanation": "Five passes, so the last one is pass 5. Tracking the final pass helps you check the count is right."
+    },
+    {
+      "id": "u35l06e07",
+      "type": "trueFalse",
+      "prompt": "Tracing a repetition is a way to CHECK it does what the problem asked.",
+      "answer": true,
+      "explanation": "Exactly. If the trace shows the right number of lines, your plan matches the goal. Trace = Check for loops."
+    },
+    {
+      "id": "u35l06e08",
+      "type": "matchPairs",
+      "prompt": "Match each repeat count to how many output lines its 'print X' body makes.",
+      "pairs": [
+        {
+          "left": "Repeat 2 times",
+          "right": "2 lines"
+        },
+        {
+          "left": "Repeat 6 times",
+          "right": "6 lines"
+        },
+        {
+          "left": "Repeat 1 time",
+          "right": "1 line"
+        }
+      ],
+      "explanation": "With a single-print body, output lines equal the repeat count. Simple, and easy to check."
+    },
+    {
+      "id": "u35l06e09",
+      "type": "multipleChoice",
+      "prompt": "A trace of 'print Hi 3 times' shows only 2 Hi lines. What does that tell you?",
+      "options": [
+        "Something is off — the count or body is wrong",
+        "The program is perfect",
+        "Hi is spelled wrong",
+        "Nothing, 2 is fine"
+      ],
+      "answer": 0,
+      "explanation": "Expected 3, got 2 — the trace caught a mismatch. That is exactly what tracing is for."
+    },
+    {
+      "id": "u35l06e10",
+      "type": "multipleChoice",
+      "prompt": "Why trace a repetition BEFORE trusting it?",
+      "options": [
+        "To confirm the right action happens the right number of times",
+        "To make it run faster",
+        "To skip writing it",
+        "To hide the output"
+      ],
+      "answer": 0,
+      "explanation": "A hand-trace proves the repetition matches the goal before you rely on it. You're building the loop-checking habit early."
+    }
+  ]
+}

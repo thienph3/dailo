@@ -1,0 +1,136 @@
+{
+  "unitId": "u81",
+  "lessonId": "u81l01",
+  "title": "When a good split still gives a wrong answer",
+  "idea": "Splitting a problem into helpers is a great habit, but the SPLIT itself can be buggy: a missing case, a wrong sub-result, or helpers wired together in the wrong order. This unit is about finding those bugs.",
+  "exercises": [
+    {
+      "type": "multipleChoice",
+      "prompt": "You split a big problem into small helper functions and the final answer is still wrong. What does that tell you?",
+      "options": [
+        "The bug is in the split itself — a helper, or how they're wired together",
+        "Splitting problems never works",
+        "The computer made a random mistake",
+        "You must delete all the helpers"
+      ],
+      "answer": 0,
+      "explanation": "Breaking a problem into helpers is good — but the split can still have a bug. Debugging means finding WHICH part is wrong.",
+      "id": "u81l01e01"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "If every helper is correct on its own, the whole solution is guaranteed correct no matter how you connect them.",
+      "answer": false,
+      "explanation": "Not guaranteed. Correct helpers can still be wired together in the wrong order or with the wrong value — the connection matters too.",
+      "id": "u81l01e02"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Which of these is a common bug when splitting a problem?",
+      "options": [
+        "Feeding one helper's result into the wrong next step",
+        "Using too many comments",
+        "Naming a helper clearly",
+        "Working an example by hand"
+      ],
+      "answer": 0,
+      "explanation": "A classic decomposition bug is wiring the wrong sub-result into the next step. The pieces are fine; the plumbing is wrong.",
+      "id": "u81l01e03"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "A helper handles normal inputs perfectly but crashes on an empty list. What kind of bug is this?",
+      "options": [
+        "A missing edge case",
+        "A spelling mistake",
+        "A faster algorithm",
+        "A print statement"
+      ],
+      "answer": 0,
+      "explanation": "A missing case (like the empty list) is one of the most common decomposition bugs. The 'normal' path works; the edge was forgotten.",
+      "id": "u81l01e04"
+    },
+    {
+      "type": "matchPairs",
+      "prompt": "Match each decomposition bug to a short description.",
+      "pairs": [
+        {
+          "left": "Missing case",
+          "right": "A possible input the split never handles"
+        },
+        {
+          "left": "Wrong sub-result",
+          "right": "The right step produces the wrong number"
+        },
+        {
+          "left": "Wrong wiring",
+          "right": "Helpers connected in the wrong order"
+        }
+      ],
+      "explanation": "Three bugs to hunt for: a case you forgot, a sub-answer that's wrong, or pieces connected the wrong way.",
+      "id": "u81l01e05"
+    },
+    {
+      "type": "trueFalse",
+      "prompt": "Checking each helper on its own, with a hand-worked example, helps you find WHICH piece is broken.",
+      "answer": true,
+      "explanation": "Yes. Testing each helper against a value you worked by hand narrows the bug down to one piece instead of the whole program.",
+      "id": "u81l01e06"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "The best FIRST move when a split-up solution gives a wrong answer is to...",
+      "options": [
+        "Check each helper alone against a hand example",
+        "Rewrite everything from scratch",
+        "Add random changes until it works",
+        "Give up on helpers"
+      ],
+      "answer": 0,
+      "explanation": "Isolate the bug: test each helper by itself. The one whose output doesn't match your hand example is where the problem lives.",
+      "id": "u81l01e07"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "Why is a problem split into small helpers EASIER to debug than one giant block of code?",
+      "options": [
+        "You can test each small piece on its own and find the broken one",
+        "Small helpers never have bugs",
+        "The computer prefers short functions",
+        "It isn't easier"
+      ],
+      "answer": 0,
+      "explanation": "Small pieces can be checked one at a time. A giant block forces you to search everywhere at once.",
+      "id": "u81l01e08"
+    },
+    {
+      "type": "orderBlocks",
+      "prompt": "Order the debugging habit for a broken split.",
+      "blocks": [
+        "Work the right answer by hand",
+        "Test each helper against that answer",
+        "Fix the one helper (or wiring) that's wrong"
+      ],
+      "answer": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Hand example first, then test each piece against it, then fix the one that's off. Thinking, not guessing.",
+      "id": "u81l01e09"
+    },
+    {
+      "type": "multipleChoice",
+      "prompt": "The big idea of this unit:",
+      "options": [
+        "A split-up solution can still be buggy — debug it piece by piece",
+        "Helpers are always wrong",
+        "You should never split a problem",
+        "Only big functions have bugs"
+      ],
+      "answer": 0,
+      "explanation": "Decomposition is powerful, but the split can hide bugs. You'll learn to find them one piece at a time.",
+      "id": "u81l01e10"
+    }
+  ]
+}

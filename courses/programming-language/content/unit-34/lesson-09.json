@@ -1,0 +1,132 @@
+{
+  "unitId": "u34",
+  "lessonId": "u34l09",
+  "title": "Loop back: debugging a wrong decision",
+  "idea": "LOOP. No new concept. Review the debugging skill from Unit 32 - name the decision bug and say how to fix it.",
+  "exercises": [
+    {
+      "id": "u34l09e01",
+      "type": "multipleChoice",
+      "prompt": "A grade chain checks 'score >= 80' before 'score >= 90', so a 95 gets 'B'. What is the bug?",
+      "options": [
+        "Branch order - the strict test should come first",
+        "A boundary bug",
+        "A missing case",
+        "No bug"
+      ],
+      "answer": 0,
+      "explanation": "Checking 90 first fixes it. (Review of order bugs.)"
+    },
+    {
+      "id": "u34l09e02",
+      "type": "multipleChoice",
+      "prompt": "Rule 'at least 21' coded as 'age > 21' rejects exactly 21. What is the bug and fix?",
+      "options": [
+        "Boundary bug - change > to >=",
+        "Order bug - reorder",
+        "Missing case - add else",
+        "No bug"
+      ],
+      "answer": 0,
+      "explanation": "'At least' includes the boundary, so >=. (Review of boundary bugs.)"
+    },
+    {
+      "id": "u34l09e03",
+      "type": "multipleChoice",
+      "prompt": "A chain handles only scores 50+ with no else, so a 30 prints nothing. The fix is...",
+      "options": [
+        "Add an else (or elif) for the lower scores",
+        "Remove the if",
+        "Change 50 to 100",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "The missing case needs its own branch. (Review of missing cases.)"
+    },
+    {
+      "id": "u34l09e04",
+      "type": "multipleChoice",
+      "prompt": "'accept y or yes' coded as 'answer == \"y\" and answer == \"yes\"' never accepts. The fix is...",
+      "options": [
+        "Change 'and' to 'or'",
+        "Change == to =",
+        "Add int()",
+        "Remove a branch"
+      ],
+      "answer": 0,
+      "explanation": "One value cannot be both, so 'or' is needed. (Review of the and/or swap.)"
+    },
+    {
+      "id": "u34l09e05",
+      "type": "multipleChoice",
+      "prompt": "A number check from input() always fails because 'if age == 18' compares text to a number. The fix is...",
+      "options": [
+        "Convert with int() so age is a number",
+        "Use = instead of ==",
+        "Remove the comparison",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "int(input(...)) makes the comparison numeric. (Review of the type bug.)"
+    },
+    {
+      "id": "u34l09e06",
+      "type": "trueFalse",
+      "prompt": "The wrong output tells you which branch ran, which helps you find the faulty condition.",
+      "answer": true,
+      "explanation": "Output is a clue pointing at the branch to inspect. (Review of reading output.)"
+    },
+    {
+      "id": "u34l09e07",
+      "type": "multipleChoice",
+      "prompt": "'Yes' is rejected by 'if answer == \"yes\"'. What is the cause?",
+      "options": [
+        "Case sensitivity - 'Yes' is not 'yes'",
+        "A boundary bug",
+        "A missing int()",
+        "No bug"
+      ],
+      "answer": 0,
+      "explanation": "== on strings is case-exact. Accept both forms with 'or'. (Review of case bugs.)"
+    },
+    {
+      "id": "u34l09e08",
+      "type": "multipleChoice",
+      "prompt": "A condition written with a single '=' instead of '==' is wrong because...",
+      "options": [
+        "= assigns, but a condition needs == to compare",
+        "= is faster",
+        "== assigns",
+        "They are the same"
+      ],
+      "answer": 0,
+      "explanation": "A test needs the comparison ==, not the assignment =. (Review of = vs ==.)"
+    },
+    {
+      "id": "u34l09e09",
+      "type": "orderBlocks",
+      "prompt": "Order the steps to debug a wrong decision.",
+      "blocks": [
+        "Pick an input with a known correct answer",
+        "Trace it through the conditions",
+        "See which branch ran",
+        "Fix the condition that is wrong"
+      ],
+      "answer": [0, 1, 2, 3],
+      "explanation": "Known input, trace, read the branch, fix. (Review of the debugging routine.)"
+    },
+    {
+      "id": "u34l09e10",
+      "type": "multipleChoice",
+      "prompt": "Two separate ifs both print a label for the same number. The fix for 'one label only' is...",
+      "options": [
+        "Chain them with elif so only one runs",
+        "Add a third if",
+        "Use larger numbers",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "elif makes the branches exclusive. (Review of separate-if vs elif.)"
+    }
+  ]
+}

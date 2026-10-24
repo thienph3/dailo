@@ -1,0 +1,106 @@
+{
+  "unitId": "u58",
+  "lessonId": "u58l10",
+  "title": "Wrap-up: how many fit a rule",
+  "idea": "Review-heavy close. Consolidate count-with-condition, contrast with sum and len, and look ahead to finding the biggest value.",
+  "exercises": [
+    {
+      "id": "u58l10e01",
+      "type": "multipleChoice",
+      "prompt": "Name the parts of the count-with-condition pattern.",
+      "options": [
+        "Start count at 0; walk; if the rule passes add 1; print after",
+        "Start at 1; add each value; print inside",
+        "len; append; index",
+        "Sort; reverse; print"
+      ],
+      "answer": 0,
+      "explanation": "Initialize to 0, walk with a for-item loop, add 1 inside an if, print once after. That's Unit 58's pattern."
+    },
+    {
+      "id": "u58l10e02",
+      "type": "multipleChoice",
+      "prompt": "Predict:\n\nnums = [12, 7, 20, 4]\ncount = 0\nfor n in nums:\n    if n > 10:\n        count = count + 1\nprint(count)",
+      "options": ["2", "4", "0", "43"],
+      "answer": 0,
+      "explanation": "Over 10 are 12 and 20 -> count 2. 7 and 4 fail the test."
+    },
+    {
+      "id": "u58l10e03",
+      "type": "multipleChoice",
+      "prompt": "Predict the empty-list result:\n\nnums = []\ncount = 0\nfor n in nums:\n    if n > 10:\n        count = count + 1\nprint(count)",
+      "options": ["0", "nothing", "an error", "1"],
+      "answer": 0,
+      "explanation": "No items means no matches, so count stays 0 - the correct answer for an empty list."
+    },
+    {
+      "id": "u58l10e04",
+      "type": "fillBlank",
+      "prompt": "Complete the pattern to count values at or above the mark:\n\ncount = 0\nfor score in scores:\n    if score >= mark:\n        count = count + ____\nprint(count)",
+      "answer": "1",
+      "acceptable": ["1"],
+      "explanation": "Add 1 per match. The if restricts counting to scores that reach the mark."
+    },
+    {
+      "id": "u58l10e05",
+      "type": "trueFalse",
+      "prompt": "The '+1' belongs inside the if, and 'count = 0' belongs before the loop.",
+      "answer": true,
+      "explanation": "True. Initialize before, add 1 only on a match (inside the if), print after. Misplacing any part breaks the count."
+    },
+    {
+      "id": "u58l10e06",
+      "type": "multipleChoice",
+      "prompt": "For [40, 80, 60, 30]: len is 4, sum is 210. What is the count of values >= 50?",
+      "options": ["2", "4", "210", "0"],
+      "answer": 0,
+      "explanation": "80 and 60 reach 50 -> count 2. len (all items) and sum (total) answer different questions on the same list."
+    },
+    {
+      "id": "u58l10e07",
+      "type": "multipleChoice",
+      "prompt": "'How many donations were over 100?' vs 'What is the total of donations over 100?'. How do the loop bodies differ?",
+      "options": [
+        "Count adds 1 on a match; total adds the donation on a match",
+        "They're identical",
+        "Count adds the donation; total adds 1",
+        "Neither uses an if"
+      ],
+      "answer": 0,
+      "explanation": "Same if (over 100), different step: +1 to count them, +value to total them. The question picks the step."
+    },
+    {
+      "id": "u58l10e08",
+      "type": "multipleChoice",
+      "prompt": "You've learned to total (Unit 57) and to count-with-a-rule (Unit 58). Both keep a value while walking. What's a NEXT kind of 'keep a value' problem?",
+      "options": [
+        "'Which value is the biggest?' - track the best so far",
+        "'Print each value'",
+        "'How many items total'",
+        "'Reverse the list'"
+      ],
+      "answer": 0,
+      "explanation": "Next you'll track the biggest value seen so far (max). Same walk-and-keep idea, but keeping a 'best' instead of a total or count."
+    },
+    {
+      "id": "u58l10e09",
+      "type": "multipleChoice",
+      "prompt": "Which real question is a count-with-condition problem?",
+      "options": [
+        "'How many players scored above 20?'",
+        "'What is the total score?'",
+        "'Which player scored most?'",
+        "'How many players are there?'"
+      ],
+      "answer": 0,
+      "explanation": "'How many scored above 20' counts items passing a rule. Total is a sum; most is max; 'how many players' is len."
+    },
+    {
+      "id": "u58l10e10",
+      "type": "trueFalse",
+      "prompt": "You can now say: I can count how many values in a list fit a rule.",
+      "answer": true,
+      "explanation": "Yes! You keep a counter, add 1 for each match, and print the result. That's the whole 'how many fit a rule' tool."
+    }
+  ]
+}

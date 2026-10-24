@@ -1,0 +1,133 @@
+{
+  "unitId": "u95",
+  "lessonId": "u95l01",
+  "title": "What 'making it clearer' means",
+  "idea": "MEET (thinking): refactoring is changing HOW code reads without changing WHAT it does. Same answers, friendlier code. No new syntax.",
+  "exercises": [
+    {
+      "id": "u95l01e01",
+      "type": "multipleChoice",
+      "prompt": "Your program already works and gives the right answers. 'Refactoring' means...",
+      "options": [
+        "Making the code clearer and tidier WITHOUT changing what it does",
+        "Adding brand-new features",
+        "Making it give different answers",
+        "Deleting the whole thing and starting over"
+      ],
+      "answer": 0,
+      "explanation": "Refactoring = improving how code reads while keeping the behavior identical. Same inputs, same outputs - just easier to understand."
+    },
+    {
+      "id": "u95l01e02",
+      "type": "trueFalse",
+      "prompt": "A good refactor can change the program's output.",
+      "answer": false,
+      "explanation": "No. If the output changed, you didn't refactor - you altered behavior. The golden rule: same answers before and after."
+    },
+    {
+      "id": "u95l01e03",
+      "type": "multipleChoice",
+      "prompt": "Why bother tidying code that already works?",
+      "options": [
+        "Clear code is easier to read, fix, and reuse later - including by future you",
+        "The computer runs clear code faster, always",
+        "It is a rule the computer enforces",
+        "It changes the answer to be more correct"
+      ],
+      "answer": 0,
+      "explanation": "The computer doesn't care how pretty the code is. PEOPLE do. Clear code saves you time every time you come back to it."
+    },
+    {
+      "id": "u95l01e04",
+      "type": "multiSelect",
+      "prompt": "Which of these count as refactoring (clarity, same behavior)? Pick ALL that apply.",
+      "options": [
+        "Renaming a variable from x to total_price",
+        "Replacing three copy-pasted lines with one loop",
+        "Changing the discount from 10% to 20%",
+        "Pulling a repeated calculation into a helper function"
+      ],
+      "answer": [0, 1, 3],
+      "explanation": "Rename, de-duplicate, and extract-a-helper all keep behavior the same. Changing 10% to 20% changes the ANSWER - that's a feature change, not a refactor."
+    },
+    {
+      "id": "u95l01e05",
+      "type": "multipleChoice",
+      "prompt": "Before you refactor, what should you already have?",
+      "options": [
+        "A correct, working solution you can re-check against",
+        "A brand-new problem to solve",
+        "An error you can't fix",
+        "Nothing - refactoring comes first"
+      ],
+      "answer": 0,
+      "explanation": "You tidy something that already works. The working version is your safety net: refactor, then re-run to prove the answers didn't change."
+    },
+    {
+      "id": "u95l01e06",
+      "type": "matchPairs",
+      "prompt": "Match each tidy-up move to what it improves.",
+      "pairs": [
+        {
+          "left": "Better name",
+          "right": "Code reads like plain English"
+        },
+        {
+          "left": "Remove repetition",
+          "right": "Fix a thing once, not in five places"
+        },
+        {
+          "left": "Extract a helper",
+          "right": "Give a chunk of logic a clear name"
+        }
+      ],
+      "explanation": "These are the three main refactoring moves this unit practices. All three keep behavior identical."
+    },
+    {
+      "id": "u95l01e07",
+      "type": "trueFalse",
+      "prompt": "Refactoring introduces new syntax you haven't learned yet.",
+      "answer": false,
+      "explanation": "No new syntax at all. You already know names, loops, and functions. Refactoring is about using them to make a solution READ better."
+    },
+    {
+      "id": "u95l01e08",
+      "type": "multipleChoice",
+      "prompt": "A friend reads your code and says 'what does p2 mean?' This is a sign that...",
+      "options": [
+        "A better name would make the code clearer",
+        "The code is broken",
+        "You should add more variables named p3, p4",
+        "You need a faster computer"
+      ],
+      "answer": 0,
+      "explanation": "If a reader has to guess what a name means, the name is doing a poor job. A clear name like second_price answers the question for them."
+    },
+    {
+      "id": "u95l01e09",
+      "type": "multipleChoice",
+      "prompt": "Which statement best captures the spirit of refactoring?",
+      "options": [
+        "Same result, clearer path",
+        "Different result, same path",
+        "More features, less testing",
+        "Faster to type, harder to read"
+      ],
+      "answer": 0,
+      "explanation": "Same result, clearer path. You keep the WHAT (the answers) and improve the HOW (the readability)."
+    },
+    {
+      "id": "u95l01e10",
+      "type": "multipleChoice",
+      "prompt": "This unit's focus is...",
+      "options": [
+        "Taking a correct solution and making it clearer without breaking it",
+        "Learning a new loop",
+        "Solving a brand-new kind of problem",
+        "Speeding up the computer"
+      ],
+      "answer": 0,
+      "explanation": "Your first taste of refactoring: rename, de-duplicate, and extract helpers - all while the answers stay exactly the same."
+    }
+  ]
+}

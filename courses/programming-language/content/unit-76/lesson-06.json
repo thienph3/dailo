@@ -1,0 +1,134 @@
+{
+  "unitId": "u76",
+  "lessonId": "u76l06",
+  "title": "Spot the mistake: composing a printer",
+  "idea": "Composing functions: the classic bug — feeding a sub-plan that PRINTS (returns None) into another call. Diagnose and fix.",
+  "exercises": [
+    {
+      "id": "u76l06e01",
+      "type": "multipleChoice",
+      "prompt": "What goes wrong?\n\ndef double(n):\n    print(n * 2)\n\ndef add_one(n):\n    return n + 1\n\nprint(add_one(double(5)))",
+      "options": [
+        "double returns None, so add_one(None) + 1 fails",
+        "it prints 11",
+        "it prints 10",
+        "nothing is wrong"
+      ],
+      "answer": 0,
+      "explanation": "double prints 10 but returns None. So add_one gets None, and None + 1 errors. The inner sub-plan must RETURN."
+    },
+    {
+      "id": "u76l06e02",
+      "type": "multipleChoice",
+      "prompt": "Which change fixes it?",
+      "options": [
+        "Change double's 'print(n * 2)' to 'return n * 2'",
+        "Change add_one to print",
+        "Remove add_one",
+        "Call double twice"
+      ],
+      "answer": 0,
+      "explanation": "The inner sub-plan must hand back a value, so use return. Then add_one(10) is 11."
+    },
+    {
+      "id": "u76l06e03",
+      "type": "trueFalse",
+      "prompt": "To compose, the INNER sub-plan must return a value — a printing one gives None.",
+      "answer": true,
+      "explanation": "Yes. The outer call needs a real argument. A printing inner call feeds None, which usually breaks the outer call."
+    },
+    {
+      "id": "u76l06e04",
+      "type": "fillBlank",
+      "prompt": "Apply the fix to the inner sub-plan:\n\ndef double(n):\n    ____ n * 2",
+      "answer": "return",
+      "acceptable": ["return"],
+      "explanation": "return n * 2 hands back the value so add_one(double(5)) becomes add_one(10) = 11."
+    },
+    {
+      "id": "u76l06e05",
+      "type": "multipleChoice",
+      "prompt": "After the fix, what prints?\n\ndef double(n):\n    return n * 2\n\ndef add_one(n):\n    return n + 1\n\nprint(add_one(double(5)))",
+      "options": [
+        "11",
+        "None",
+        "10",
+        "Nothing"
+      ],
+      "answer": 0,
+      "explanation": "Now double(5)=10 and add_one(10)=11. Both sub-plans return, so composing works."
+    },
+    {
+      "id": "u76l06e06",
+      "type": "multipleChoice",
+      "prompt": "Spot the bug:\n\ndef add(a, b):\n    return a + b\n\ndef show(n):\n    print(n)\n\nresult = add(2, show(3))",
+      "options": [
+        "show returns None, so add(2, None) fails",
+        "it works, result is 5",
+        "show returns 3",
+        "add needs three inputs"
+      ],
+      "answer": 0,
+      "explanation": "show prints 3 but returns None. add(2, None) tries 2 + None, which errors. show shouldn't feed add."
+    },
+    {
+      "id": "u76l06e07",
+      "type": "multipleChoice",
+      "prompt": "What's the clue that composing failed?",
+      "options": [
+        "A None shows up, or an error about adding None",
+        "the screen goes blank forever",
+        "the program speeds up",
+        "there is never a clue"
+      ],
+      "answer": 0,
+      "explanation": "None (or a 'None + number' error) signals that a composed inner call printed instead of returning."
+    },
+    {
+      "id": "u76l06e08",
+      "type": "multipleChoice",
+      "prompt": "REVIEW: which sub-plan is safe to feed into another call?",
+      "options": [
+        "def f(n):\n    return n * 2",
+        "def f(n):\n    print(n * 2)",
+        "def f(n):\n    n * 2",
+        "def f(n):\n    return"
+      ],
+      "answer": 0,
+      "explanation": "Only the one that returns a real value can be composed. The others give None."
+    },
+    {
+      "id": "u76l06e09",
+      "type": "orderBlocks",
+      "prompt": "Arrange a CORRECT composition: define double (returns), define add_one (returns), print add_one(double(6)).",
+      "blocks": [
+        "def double(n):",
+        "    return n * 2",
+        "def add_one(n):",
+        "    return n + 1",
+        "print(add_one(double(6)))"
+      ],
+      "answer": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "explanation": "Both sub-plans return, so double(6)=12 feeds add_one -> 13. No None in sight."
+    },
+    {
+      "id": "u76l06e10",
+      "type": "multipleChoice",
+      "prompt": "The warning of this lesson:",
+      "options": [
+        "Don't compose a sub-plan that prints — the inner call must return a value",
+        "always print inside",
+        "composing never fails",
+        "None is a valid input"
+      ],
+      "answer": 0,
+      "explanation": "Composing needs returned values. A printing inner call hands back None and breaks the chain."
+    }
+  ]
+}

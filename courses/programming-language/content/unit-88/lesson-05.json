@@ -1,0 +1,126 @@
+{
+  "unitId": "u88",
+  "lessonId": "u88l05",
+  "title": "Every pair within one list",
+  "idea": "TOOL: nesting a list against ITSELF compares each item with every other. Thinking-heavy.",
+  "exercises": [
+    {
+      "id": "u88l05e01",
+      "type": "multipleChoice",
+      "prompt": "To compare EVERY person with EVERY other person in one group, you nest...",
+      "options": [
+        "The same list against itself (outer and inner over the same list)",
+        "Two completely different lists",
+        "One loop only",
+        "A print on its own"
+      ],
+      "answer": 0,
+      "explanation": "Pairing a list with itself means looping over it on the outside AND the inside. Every item meets every item — including itself."
+    },
+    {
+      "id": "u88l05e02",
+      "type": "multipleChoice",
+      "prompt": "Predict how many pairs print:\n\npeople = [1, 2, 3]\nfor a in people:\n    for b in people:\n        print(a, b)",
+      "options": [
+        "9 (3 times 3)",
+        "6",
+        "3",
+        "1"
+      ],
+      "answer": 0,
+      "explanation": "A list of 3 against itself gives 3 times 3 = 9 pairs, including each item paired with itself (like 1 1)."
+    },
+    {
+      "id": "u88l05e03",
+      "type": "orderBlocks",
+      "prompt": "Order the pairs printed by:\n\nitems = [1, 2]\nfor a in items:\n    for b in items:\n        print(a, b)",
+      "blocks": [
+        "1 1",
+        "1 2",
+        "2 1",
+        "2 2"
+      ],
+      "answer": [0, 1, 2, 3],
+      "explanation": "a=1 pairs with 1 then 2, then a=2 pairs with 1 then 2. Pairing a list with itself includes self-pairs (1 1, 2 2)."
+    },
+    {
+      "id": "u88l05e04",
+      "type": "multipleChoice",
+      "prompt": "In that output, which pairs are an item paired with ITSELF?",
+      "options": [
+        "'1 1' and '2 2'",
+        "'1 2' and '2 1'",
+        "There are none",
+        "All of them"
+      ],
+      "answer": 0,
+      "explanation": "'1 1' and '2 2' pair an item with itself. Nesting a list against itself always produces these self-pairs unless you guard against them."
+    },
+    {
+      "id": "u88l05e05",
+      "type": "trueFalse",
+      "prompt": "Pairing a list with itself produces both 'a with b' AND 'b with a' as separate pairs.",
+      "answer": true,
+      "explanation": "Yes — '1 2' and '2 1' both appear. The order within a pair differs, so you get each ordering. That's a feature to be aware of."
+    },
+    {
+      "id": "u88l05e06",
+      "type": "multipleChoice",
+      "prompt": "Which real task is 'every pair within one list'?",
+      "options": [
+        "Check every pair of players to see who could play a match",
+        "Find the single tallest player",
+        "Count the players",
+        "Greet one player"
+      ],
+      "answer": 0,
+      "explanation": "Match-ups pair each player with every other — one list against itself. Handshakes, versus-games, and comparisons all fit."
+    },
+    {
+      "id": "u88l05e07",
+      "type": "multipleChoice",
+      "prompt": "Predict the printed sums:\n\nnums = [1, 2, 3]\nfor a in nums:\n    for b in nums:\n        print(a + b)\n\nWhat is the FIRST and LAST value?",
+      "options": [
+        "First 2 (1+1), last 6 (3+3)",
+        "First 1, last 9",
+        "First 0, last 6",
+        "First 3, last 3"
+      ],
+      "answer": 0,
+      "explanation": "First pair is a=1,b=1 -> 2. Last pair is a=3,b=3 -> 6. Self-pairs bookend the output when a list meets itself."
+    },
+    {
+      "id": "u88l05e08",
+      "type": "multipleChoice",
+      "prompt": "A list of 4 items paired with itself gives how many pairs?",
+      "options": [
+        "16 (4 times 4)",
+        "8",
+        "4",
+        "12"
+      ],
+      "answer": 0,
+      "explanation": "4 times 4 = 16 pairs, counting self-pairs and both orderings. Self-nesting squares the list length."
+    },
+    {
+      "id": "u88l05e09",
+      "type": "trueFalse",
+      "prompt": "If you don't want an item paired with itself, you can add an if-check inside the loop to skip when a equals b.",
+      "answer": true,
+      "explanation": "Yes — an if inside the inner loop (like 'if a != b') skips the self-pairs. You already know if-inside-a-loop; here it filters pairs."
+    },
+    {
+      "id": "u88l05e10",
+      "type": "multipleChoice",
+      "prompt": "What does nesting a list against itself let you do?",
+      "options": [
+        "Compare every item with every other item",
+        "Only look at the first item",
+        "Delete the list",
+        "Count without comparing"
+      ],
+      "answer": 0,
+      "explanation": "Self-nesting pairs each item with every other — the heart of 'each thing against each other thing' problems."
+    }
+  ]
+}

@@ -1,0 +1,129 @@
+{
+  "unitId": "u53",
+  "lessonId": "u53l10",
+  "title": "Counting, start to finish",
+  "idea": "Review-leaning finale. Recap len(), len-1 for last position, empty check, range(len(...)). Interleaves indexing and loops.",
+  "exercises": [
+    {
+      "id": "u53l10e01",
+      "type": "multipleChoice",
+      "prompt": "Recap: len(list) gives you...",
+      "options": [
+        "How many items the list has",
+        "The sum of the items",
+        "The first item",
+        "The biggest item"
+      ],
+      "answer": 0,
+      "explanation": "len is the item count — the heart of this unit."
+    },
+    {
+      "id": "u53l10e02",
+      "type": "multipleChoice",
+      "prompt": "Recap: for a list of len N, the last valid position is...",
+      "options": [
+        "N - 1",
+        "N",
+        "N + 1",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "Positions run 0 to N-1, so the last is N - 1. This is the bridge between len and indexing."
+    },
+    {
+      "id": "u53l10e03",
+      "type": "multipleChoice",
+      "prompt": "Predict:\n\nn = [4, 8, 15, 16]\nprint(len(n))\nprint(n[len(n) - 1])",
+      "options": [
+        "4 then 16",
+        "16 then 4",
+        "4 then 4",
+        "16 then 16"
+      ],
+      "answer": 0,
+      "explanation": "len(n) is 4 (first line). The last item is n[4 - 1] = n[3] = 16 (second line)."
+    },
+    {
+      "id": "u53l10e04",
+      "type": "multipleChoice",
+      "prompt": "Recap the empty check. Predict:\n\nbox = []\nprint(len(box) == 0)",
+      "options": [
+        "True",
+        "False",
+        "0",
+        "[]"
+      ],
+      "answer": 0,
+      "explanation": "An empty list has len 0, and 0 == 0 is True. len == 0 is the 'is it empty?' guard."
+    },
+    {
+      "id": "u53l10e05",
+      "type": "multipleChoice",
+      "prompt": "Predict:\n\nn = [5, 10, 15]\nfor i in range(len(n)):\n    print(n[i])",
+      "options": [
+        "5 then 10 then 15",
+        "0 then 1 then 2",
+        "3 three times",
+        "15 then 10 then 5"
+      ],
+      "answer": 0,
+      "explanation": "len(n) is 3, so i is 0, 1, 2 and n[i] prints 5, 10, 15. range(len(n)) walks every position."
+    },
+    {
+      "id": "u53l10e06",
+      "type": "trueFalse",
+      "prompt": "Recap: range(len(list)) produces exactly the valid positions of the list.",
+      "answer": true,
+      "explanation": "len gives the count; range turns it into 0, 1, ..., count-1 — every real position, no more."
+    },
+    {
+      "id": "u53l10e07",
+      "type": "matchPairs",
+      "prompt": "Match each list to its len.",
+      "pairs": [
+        { "left": "[]", "right": "0" },
+        { "left": "[7, 7]", "right": "2" },
+        { "left": "[\"a\", \"b\", \"c\"]", "right": "3" }
+      ],
+      "explanation": "Count the items, numbers or words, repeats included. Empty is 0."
+    },
+    {
+      "id": "u53l10e08",
+      "type": "multipleChoice",
+      "prompt": "Review a counter from Lap 3. Predict:\n\ntotal = 0\nfor i in range(3):\n    total = total + 1\nprint(total)",
+      "options": [
+        "3",
+        "0",
+        "6",
+        "2"
+      ],
+      "answer": 0,
+      "explanation": "The loop runs 3 times, adding 1 each time, so total is 3. Interesting: that's the same as len of a 3-item list — counting by looping and counting with len agree."
+    },
+    {
+      "id": "u53l10e09",
+      "type": "orderBlocks",
+      "prompt": "Goal: print how many items, then print the last item. Arrange the lines.",
+      "blocks": [
+        "marks = [60, 75, 90, 100]",
+        "print(len(marks))",
+        "print(marks[len(marks) - 1])"
+      ],
+      "answer": [0, 1, 2],
+      "explanation": "len(marks) is 4 (printed first), and marks[4 - 1] = marks[3] = 100 (the last item)."
+    },
+    {
+      "id": "u53l10e10",
+      "type": "multipleChoice",
+      "prompt": "You can make, index, and count a list. What's the next list power the course adds?",
+      "options": [
+        "Adding new items and changing existing ones",
+        "Counting items",
+        "Picking by position",
+        "Making a list"
+      ],
+      "answer": 0,
+      "explanation": "Next comes growing and changing a list — adding items and replacing values. Nicely done mastering len!"
+    }
+  ]
+}
